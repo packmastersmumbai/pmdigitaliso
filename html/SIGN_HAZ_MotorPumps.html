@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hazard Sign — Motor Pumps | Pack Masters</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d0d0d0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    overflow: hidden;
+  }
+
+  /* ── HAZARD STRIPES ── */
+  .hazard-stripes {
+    height: 28px;
+    background: repeating-linear-gradient(
+      45deg,
+      #f5c000 0px,
+      #f5c000 18px,
+      #1a1a1a 18px,
+      #1a1a1a 36px
+    );
+    flex-shrink: 0;
+  }
+
+  /* ── WARNING BANNER ── */
+  .warning-banner {
+    background: #e07b00;
+    padding: 10px 18px 8px;
+    text-align: center;
+    border-bottom: 4px solid #1a1a1a;
+    flex-shrink: 0;
+  }
+  .warning-banner .en {
+    font-size: 30px;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .warning-banner .hi {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+    margin-top: 2px;
+    line-height: 1;
+  }
+
+  /* ── EQUIPMENT TITLE ── */
+  .equipment-title {
+    background: #1a1a1a;
+    padding: 14px 18px 12px;
+    text-align: center;
+    border-bottom: 4px solid #e07b00;
+    flex-shrink: 0;
+  }
+  .equipment-title .en {
+    font-size: 42px;
+    font-weight: 900;
+    color: #f5c000;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .equipment-title .hi {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f5c000;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    line-height: 1;
+  }
+
+  /* ── BODY CONTENT ── */
+  .body-content {
+    flex: 1;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #1a1a1a;
+    padding: 5px 10px;
+    border-left: 5px solid #e07b00;
+  }
+
+  /* ── HAZARDS LIST ── */
+  .hazards-block {
+    border: 2px solid #1a1a1a;
+    background: #fffbf0;
+  }
+  .hazard-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #d8c880;
+    gap: 12px;
+  }
+  .hazard-item:last-child { border-bottom: none; }
+  .hazard-triangle {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hazard-triangle svg { width: 40px; height: 40px; }
+  .hazard-text { flex: 1; }
+  .hazard-text .h-en {
+    font-size: 15px;
+    font-weight: 900;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .hazard-text .h-sub {
+    font-size: 11px;
+    font-weight: 700;
+    color: #c04000;
+    margin-top: 1px;
+  }
+  .hazard-text .h-hi {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  /* ── SAFETY RULES ── */
+  .rules-block {
+    border: 2px solid #1a1a1a;
+    background: #f8f8f8;
+  }
+  .rule-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 6px 12px;
+    border-bottom: 1px solid #ccc;
+    gap: 10px;
+  }
+  .rule-item:last-child { border-bottom: none; }
+  .rule-num {
+    font-size: 14px;
+    font-weight: 900;
+    color: #ffffff;
+    background: #e07b00;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .rule-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.35;
+  }
+  .rule-text span.lockout {
+    color: #c00000;
+    font-weight: 900;
+  }
+
+  /* ── PPE SECTION ── */
+  .ppe-block {
+    border: 2px solid #1a1a1a;
+    background: #fff9e6;
+  }
+  .ppe-grid {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 8px;
+    gap: 8px;
+  }
+  .ppe-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 6px;
+    background: #ffffff;
+    border: 2px solid #e07b00;
+    border-radius: 4px;
+  }
+  .ppe-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ppe-icon svg { width: 52px; height: 52px; }
+  .ppe-label {
+    font-size: 11px;
+    font-weight: 900;
+    color: #1a1a1a;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  /* ── EMERGENCY STRIP ── */
+  .emergency-strip {
+    background: #c00000;
+    color: #ffffff;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border: 2px solid #1a1a1a;
+    flex-shrink: 0;
+  }
+  .emergency-label {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .emergency-contacts {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .emergency-contact {
+    text-align: right;
+  }
+  .emergency-contact .role {
+    font-size: 10px;
+    font-weight: 700;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .emergency-contact .phone {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #1a1a1a;
+    color: #f5c000;
+    padding: 7px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    border-top: 3px solid #e07b00;
+  }
+  .footer-company {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .footer-sub {
+    font-size: 10px;
+    font-weight: 600;
+    color: #ccaa00;
+    margin-top: 1px;
+  }
+  .footer-std {
+    font-size: 11px;
+    font-weight: 700;
+    color: #f5c000;
+    text-align: right;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── BOTTOM STRIPES ── */
+  .hazard-stripes-bottom {
+    height: 22px;
+    background: repeating-linear-gradient(
+      45deg,
+      #f5c000 0px,
+      #f5c000 14px,
+      #1a1a1a 14px,
+      #1a1a1a 28px
+    );
+    flex-shrink: 0;
+  }
+
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body { background: none; padding: 0; }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      box-shadow: none;
+      border: none;
+    }
+    @page { size: A4 portrait; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- TOP HAZARD STRIPES -->
+  <div class="hazard-stripes"></div>
+
+  <!-- WARNING BANNER -->
+  <div class="warning-banner">
+    <div class="en">&#9888; &nbsp; WARNING &nbsp; &#9888;</div>
+    <div class="hi">चेतावनी</div>
+  </div>
+
+  <!-- EQUIPMENT TITLE -->
+  <div class="equipment-title">
+    <div class="en">MOTOR PUMPS</div>
+    <div class="hi">मोटर पंप</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-content">
+
+    <!-- HAZARDS -->
+    <div>
+      <div class="section-header">Hazards &nbsp;/&nbsp; खतरे</div>
+      <div class="hazards-block">
+
+        <div class="hazard-item">
+          <div class="hazard-triangle">
+            <!-- Rotating parts triangle -->
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="20,2 38,36 2,36" fill="#f5c000" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+              <text x="20" y="30" text-anchor="middle" font-size="18" font-weight="900" fill="#1a1a1a">&#8635;</text>
+            </svg>
+          </div>
+          <div class="hazard-text">
+            <div class="h-en">ROTATING PARTS</div>
+            <div class="h-sub">Risk of Entanglement</div>
+            <div class="h-hi">बदन में फंसने का खतरा</div>
+          </div>
+        </div>
+
+        <div class="hazard-item">
+          <div class="hazard-triangle">
+            <!-- Electrical triangle -->
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="20,2 38,36 2,36" fill="#f5c000" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+              <text x="20" y="30" text-anchor="middle" font-size="18" font-weight="900" fill="#1a1a1a">&#9889;</text>
+            </svg>
+          </div>
+          <div class="hazard-text">
+            <div class="h-en">ELECTRICAL HAZARD</div>
+            <div class="h-sub">Risk of Electric Shock</div>
+            <div class="h-hi">बिजली का झटका</div>
+          </div>
+        </div>
+
+        <div class="hazard-item">
+          <div class="hazard-triangle">
+            <!-- Noise triangle -->
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="20,2 38,36 2,36" fill="#f5c000" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+              <text x="20" y="30" text-anchor="middle" font-size="15" font-weight="900" fill="#1a1a1a">&#128266;</text>
+            </svg>
+          </div>
+          <div class="hazard-text">
+            <div class="h-en">HIGH NOISE</div>
+            <div class="h-sub">Hearing Damage Risk</div>
+            <div class="h-hi">शोर से सुनने की क्षमता पर खतरा</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SAFETY RULES -->
+    <div>
+      <div class="section-header">Safety Rules &nbsp;/&nbsp; सुरक्षा नियम</div>
+      <div class="rules-block">
+
+        <div class="rule-item">
+          <div class="rule-num">1</div>
+          <div class="rule-text">Do <strong>NOT</strong> operate without guards in place.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">2</div>
+          <div class="rule-text">Keep loose clothing, hair, and jewelry <strong>away from rotating parts</strong>.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">3</div>
+          <div class="rule-text"><span class="lockout">LOCK OUT / TAG OUT</span> before any maintenance work.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">4</div>
+          <div class="rule-text">Do <strong>NOT</strong> touch electrical components with <strong>wet hands</strong>.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">5</div>
+          <div class="rule-text">Report any unusual <strong>noise or vibration</strong> to the Supervisor immediately.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MANDATORY PPE -->
+    <div>
+      <div class="section-header">Mandatory PPE &nbsp;/&nbsp; अनिवार्य सुरक्षा उपकरण</div>
+      <div class="ppe-block">
+        <div class="ppe-grid">
+
+          <!-- Safety Shoes -->
+          <div class="ppe-item">
+            <div class="ppe-icon">
+              <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="26" cy="26" r="24" fill="#1e7a1e" stroke="#1a1a1a" stroke-width="2"/>
+                <text x="26" y="34" text-anchor="middle" font-size="26" fill="white">&#128094;</text>
+              </svg>
+            </div>
+            <div class="ppe-label">Safety<br>Shoes</div>
+          </div>
+
+          <!-- Ear Protection -->
+          <div class="ppe-item">
+            <div class="ppe-icon">
+              <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="26" cy="26" r="24" fill="#1e7a1e" stroke="#1a1a1a" stroke-width="2"/>
+                <text x="26" y="34" text-anchor="middle" font-size="24" fill="white">&#127911;</text>
+              </svg>
+            </div>
+            <div class="ppe-label">Ear<br>Protection</div>
+          </div>
+
+          <!-- Safety Goggles -->
+          <div class="ppe-item">
+            <div class="ppe-icon">
+              <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="26" cy="26" r="24" fill="#1e7a1e" stroke="#1a1a1a" stroke-width="2"/>
+                <text x="26" y="34" text-anchor="middle" font-size="24" fill="white">&#128064;</text>
+              </svg>
+            </div>
+            <div class="ppe-label">Safety<br>Goggles</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end body-content -->
+
+  <!-- EMERGENCY STRIP -->
+  <div class="emergency-strip">
+    <div class="emergency-label">&#9888; Emergency</div>
+    <div class="emergency-contacts">
+      <div class="emergency-contact">
+        <div class="role">Floor Supervisor</div>
+        <div class="phone">9167095723</div>
+      </div>
+      <div class="emergency-contact">
+        <div class="role">Security</div>
+        <div class="phone">9136107773</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <div class="footer-company">Pack Masters</div>
+      <div class="footer-sub">Rabale MIDC, Navi Mumbai</div>
+    </div>
+    <div class="footer-std">ISO 45001:2018<br>Occupational Health &amp; Safety</div>
+  </div>
+
+  <!-- BOTTOM STRIPES -->
+  <div class="hazard-stripes-bottom"></div>
+
+</div>
+</body>
+</html>

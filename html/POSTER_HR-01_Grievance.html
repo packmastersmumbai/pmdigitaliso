@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grievance Redressal Mechanism — Pack Masters</title>
+<style>
+  /* ── Reset & Base ─────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:  #0D1B6E;
+    --amber: #E8A020;
+    --amber-light: #FFF3D6;
+    --light-blue: #E8EEFF;
+    --text:  #1A1A2E;
+    --grey:  #F5F5F5;
+    --border:#D0D0D0;
+    --white: #FFFFFF;
+    --step-circle: 44px;
+    --connector-w: 3px;
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, 'Helvetica Neue', sans-serif;
+    background: #CBD3E8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 24px;
+  }
+
+  /* ── A4 Sheet ─────────────────────────────────────────── */
+  .a4 {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.28);
+  }
+
+  /* ── Header Banner ────────────────────────────────────── */
+  .header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 18px 24px 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .header-logo-box {
+    width: 58px;
+    height: 58px;
+    background: var(--amber);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .header-logo-box .logo-pm {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--navy);
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .header-logo-box .logo-sub {
+    font-size: 6.5px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .header-text { flex: 1; }
+
+  .header-text .company {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--amber);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .header-text .title-en {
+    font-size: 21pt;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .header-text .title-hi {
+    font-size: 12pt;
+    font-weight: 500;
+    color: rgba(255,255,255,0.78);
+    margin-top: 3px;
+    letter-spacing: 0.5px;
+  }
+
+  .header-badge {
+    background: var(--amber);
+    color: var(--navy);
+    font-size: 8pt;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 1.3;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* amber accent bar below header */
+  .accent-bar {
+    height: 6px;
+    background: var(--amber);
+    flex-shrink: 0;
+  }
+
+  /* ── Body ─────────────────────────────────────────────── */
+  .body {
+    flex: 1;
+    padding: 14px 22px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ── Section Label ────────────────────────────────────── */
+  .section-label {
+    font-size: 8.5pt;
+    font-weight: 800;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-left: 4px solid var(--amber);
+    padding-left: 8px;
+    margin-bottom: 4px;
+  }
+
+  /* ── Steps Flow ───────────────────────────────────────── */
+  .steps-section { }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 18px;
+    position: relative;
+  }
+
+  /* column divider */
+  .steps-grid::after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .step-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    position: relative;
+  }
+
+  /* connector line downward from circle */
+  .step-row:not(:nth-child(2)):not(:nth-child(4)):not(:nth-child(6))::before {
+    content: '';
+    position: absolute;
+    left: 21px;
+    top: calc(44px + 7px);
+    width: var(--connector-w);
+    height: calc(100% - 44px + 7px);
+    background: linear-gradient(180deg, var(--amber) 0%, #ccc 100%);
+    z-index: 0;
+  }
+
+  /* for right column (steps 2,4,6) connector */
+  .step-row.right:not(:last-child)::before {
+    left: 21px;
+    background: linear-gradient(180deg, var(--amber) 0%, #ccc 100%);
+  }
+
+  .step-num {
+    width: var(--step-circle);
+    height: var(--step-circle);
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 17pt;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 3px solid var(--amber);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(13,27,110,0.25);
+  }
+
+  .step-content {
+    flex: 1;
+    padding-top: 2px;
+  }
+
+  .step-title {
+    font-size: 10.5pt;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+
+  .step-desc {
+    font-size: 9pt;
+    color: #444;
+    line-height: 1.35;
+  }
+
+  .step-badge {
+    display: inline-block;
+    background: var(--amber-light);
+    color: var(--amber);
+    border: 1px solid var(--amber);
+    font-size: 7.5pt;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-top: 3px;
+  }
+
+  /* arrow between columns (step 1→2, 3→4, 5→6) */
+  .cross-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / -1;
+    height: 18px;
+    position: relative;
+    z-index: 2;
+    margin: -2px 0;
+  }
+
+  .cross-arrow::before {
+    content: '▼';
+    font-size: 11pt;
+    color: var(--amber);
+    opacity: 0.6;
+  }
+
+  /* ── Two-column layout for lower sections ─────────────── */
+  .lower-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  /* ── Committee Table ──────────────────────────────────── */
+  .committee-section { }
+
+  .committee-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+  }
+
+  .committee-table thead tr {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .committee-table thead th {
+    padding: 5px 8px;
+    text-align: left;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .committee-table tbody tr:nth-child(odd) { background: var(--light-blue); }
+  .committee-table tbody tr:nth-child(even) { background: var(--white); }
+
+  .committee-table tbody td {
+    padding: 5px 8px;
+    color: var(--text);
+    vertical-align: top;
+    line-height: 1.3;
+  }
+
+  .committee-table tbody td:first-child {
+    font-weight: 700;
+    color: var(--navy);
+    white-space: nowrap;
+  }
+
+  .committee-table tbody td .role {
+    font-size: 7.5pt;
+    color: #777;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .placeholder { color: #999; font-style: italic; }
+
+  /* ── Key Rights Box ───────────────────────────────────── */
+  .rights-section { }
+
+  .rights-box {
+    background: var(--amber-light);
+    border: 2px solid var(--amber);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+
+  .rights-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .rights-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 9pt;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .rights-list li .icon {
+    width: 18px;
+    height: 18px;
+    background: var(--amber);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 9pt;
+    color: var(--navy);
+    font-weight: 900;
+    margin-top: 0px;
+  }
+
+  .rights-list li strong {
+    color: var(--navy);
+    font-weight: 700;
+    display: block;
+    line-height: 1.2;
+  }
+
+  .rights-list li span {
+    font-size: 8pt;
+    color: #666;
+  }
+
+  /* ── Contact Bar ──────────────────────────────────────── */
+  .contact-bar {
+    background: var(--light-blue);
+    border: 1.5px solid #B0BFEE;
+    border-radius: 6px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .contact-bar .contact-label {
+    font-size: 8.5pt;
+    font-weight: 800;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9pt;
+    color: var(--text);
+  }
+
+  .contact-item .ci-label {
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .contact-item .ci-val {
+    color: #555;
+    font-style: italic;
+  }
+
+  /* ── Footer Strip ─────────────────────────────────────── */
+  .footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.8);
+    padding: 7px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    font-size: 7.5pt;
+    letter-spacing: 0.3px;
+  }
+
+  .footer .doc-code {
+    font-weight: 800;
+    color: var(--amber);
+    font-size: 8pt;
+    letter-spacing: 1px;
+  }
+
+  .footer .standards {
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer .std-badge {
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.9);
+    font-size: 7pt;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+
+  .footer .location {
+    font-size: 7pt;
+    color: rgba(255,255,255,0.6);
+    text-align: right;
+  }
+
+  /* ── Print Styles ─────────────────────────────────────── */
+  @page {
+    size: A4 portrait;
+    margin: 8mm 8mm 8mm 8mm;
+  }
+
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .a4 {
+      width: 100%;
+      min-height: 100vh;
+      box-shadow: none;
+    }
+  }
+
+  @media screen and (max-width: 240mm) {
+    body { padding: 8px; }
+    .a4 { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="a4">
+
+  <!-- ── Header ──────────────────────────────────────────── -->
+  <div class="header">
+    <div class="header-logo-box">
+      <div class="logo-pm">PM</div>
+      <div class="logo-sub">Pack Masters</div>
+    </div>
+    <div class="header-text">
+      <div class="company">Pack Masters &nbsp;·&nbsp; Rabale MIDC, Navi Mumbai</div>
+      <div class="title-en">Grievance Redressal<br>Mechanism</div>
+      <div class="title-hi">शिकायत निवारण तंत्र</div>
+    </div>
+    <div class="header-badge">ISO 45001<br>2018<br>Compliant</div>
+  </div>
+  <div class="accent-bar"></div>
+
+  <!-- ── Body ────────────────────────────────────────────── -->
+  <div class="body">
+
+    <!-- Steps Section -->
+    <div class="steps-section">
+      <div class="section-label">Process Flow &nbsp;/&nbsp; प्रक्रिया प्रवाह</div>
+
+      <div class="steps-grid">
+
+        <!-- Step 1 -->
+        <div class="step-row">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Verbal Grievance to Supervisor</div>
+            <div class="step-desc">Raise your concern verbally with your immediate Supervisor or Line Manager.</div>
+            <div class="step-badge">Within 3 Working Days</div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-row right">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Written Submission to HR</div>
+            <div class="step-desc">If unresolved, submit a written grievance to the HR Department using the Grievance Form.</div>
+            <div class="step-badge">If Unresolved at Step 1</div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-row">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Committee Review</div>
+            <div class="step-desc">The Grievance Committee examines the written complaint and gathers information from all parties.</div>
+            <div class="step-badge">Within 7 Working Days</div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-row right">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Written Decision Communicated</div>
+            <div class="step-desc">The Committee communicates its findings and decision in writing to the employee.</div>
+            <div class="step-badge">After Committee Review</div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-row">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Appeal to Management Rep.</div>
+            <div class="step-desc">If dissatisfied with the Committee decision, appeal to the Management Representative.</div>
+            <div class="step-badge">Within 3 Days of Decision</div>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step-row right">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <div class="step-title">Final Appeal — Top Management</div>
+            <div class="step-desc">Final appeal to Top Management. The decision of Top Management is <strong>binding and conclusive</strong>.</div>
+            <div class="step-badge">Decision is Final &amp; Binding</div>
+          </div>
+        </div>
+
+      </div><!-- /steps-grid -->
+    </div><!-- /steps-section -->
+
+    <!-- Committee + Rights Row -->
+    <div class="lower-row">
+
+      <!-- Committee Table -->
+      <div class="committee-section">
+        <div class="section-label">Grievance Committee &nbsp;/&nbsp; शिकायत समिति</div>
+        <table class="committee-table">
+          <thead>
+            <tr>
+              <th>Designation</th>
+              <th>Name</th>
+              <th>Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Chairperson
+                <div class="role">Management Representative</div>
+              </td>
+              <td>Tarun Mishra</td>
+              <td>9167155573</td>
+            </tr>
+            <tr>
+              <td>
+                Secretary
+                <div class="role">HR / Admin</div>
+              </td>
+              <td>Khushi Paswan</td>
+              <td>9167095723</td>
+            </tr>
+            <tr>
+              <td>
+                Member
+                <div class="role">Worker Representative</div>
+              </td>
+              <td>ANUJ Pathak</td>
+              <td>9082217454</td>
+            </tr>
+            <tr>
+              <td>
+                Member
+                <div class="role">Department Head</div>
+              </td>
+              <td>AZAD Rajbhar</td>
+              <td>9136107774</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Key Rights -->
+      <div class="rights-section">
+        <div class="section-label">Your Rights &nbsp;/&nbsp; आपके अधिकार</div>
+        <div class="rights-box">
+          <ul class="rights-list">
+            <li>
+              <div class="icon">✓</div>
+              <div>
+                <strong>Right to Fair Hearing</strong>
+                <span>Every grievance will be heard impartially and in good faith.</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon">✓</div>
+              <div>
+                <strong>No Retaliation</strong>
+                <span>Filing a grievance will not result in any disciplinary action or victimisation.</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon">✓</div>
+              <div>
+                <strong>Confidentiality Maintained</strong>
+                <span>Your complaint and identity are kept strictly confidential throughout the process.</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon">✓</div>
+              <div>
+                <strong>Response Within Timelines</strong>
+                <span>Defined timelines are followed at every stage. Escalate if deadlines are missed.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /lower-row -->
+
+    <!-- Contact Bar -->
+    <div>
+      <div class="section-label" style="margin-bottom:6px;">Contact HR &nbsp;/&nbsp; HR से संपर्क करें</div>
+      <div class="contact-bar">
+        <div class="contact-label">HR Department</div>
+        <div class="contact-item">
+          <span class="ci-label">&#9990; Phone:</span>
+          <span class="ci-val">9167095723 (Khushi Paswan)</span>
+        </div>
+        <div class="contact-item">
+          <span class="ci-label">&#9993; Email:</span>
+          <span class="ci-val">packmasters.india@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="ci-label">&#9679; Location:</span>
+          <span class="ci-val">HR Office, Pack Masters, Rabale MIDC</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <div class="footer">
+    <div>
+      <span class="doc-code">PM_POL_HR-01</span>
+      &nbsp;&nbsp;Rev 1.0 &nbsp;·&nbsp; Issued: 2026
+    </div>
+    <div class="standards">
+      <span class="std-badge">ISO 45001:2018</span>
+      <span class="std-badge">Clause 10.2</span>
+    </div>
+    <div class="location">
+      Pack Masters &nbsp;·&nbsp; Rabale MIDC, Navi Mumbai<br>
+      Displayed for employee reference — Notice Board Copy
+    </div>
+  </div>
+
+</div><!-- /a4 -->
+
+</body>
+</html>

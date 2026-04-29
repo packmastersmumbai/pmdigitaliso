@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGER — Lid Press / Sealing Machine | Pack Masters</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #888;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .poster {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  /* ── 1. STRIPE TOP ── */
+  .stripe-top {
+    height: 10mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px, #FFD700 14px,
+      #1a1a1a 14px, #1a1a1a 28px
+    );
+    border-bottom: 3px solid #1a1a1a;
+    flex-shrink: 0;
+  }
+
+  /* ── 2. DANGER BANNER ── */
+  .danger-banner {
+    background: #CC0000;
+    padding: 7px 12px 6px;
+    text-align: center;
+    border-bottom: 4px solid #8B0000;
+    flex-shrink: 0;
+  }
+  .danger-banner .word-danger {
+    font-size: 32pt;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: 8px;
+    line-height: 1;
+    text-transform: uppercase;
+    display: block;
+  }
+  .danger-banner .word-hi {
+    font-size: 16pt;
+    font-weight: 700;
+    color: #FFECB3;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── 3. EQUIPMENT NAME ── */
+  .equipment-name {
+    background: #1a1a1a;
+    color: #FFD700;
+    text-align: center;
+    padding: 7px 12px 6px;
+    border-bottom: 3px solid #FFD700;
+    flex-shrink: 0;
+  }
+  .equipment-name .eq-en {
+    font-size: 22pt;
+    font-weight: 900;
+    letter-spacing: 3px;
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+  .equipment-name .eq-hi {
+    font-size: 12pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 3px;
+    color: #FFC200;
+  }
+
+  /* ── BODY ── */
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px 4px;
+    gap: 5px;
+    background: #fff;
+  }
+
+  /* ── SECTION TITLES ── */
+  .section-title {
+    font-size: 8.5pt;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+  }
+  .hazards-section .section-title { color: #CC0000; }
+  .rules-section   .section-title { color: #FFD700; background: #1a1a1a; padding: 3px 6px; border-radius: 2px; border-bottom: none; }
+  .before-section  .section-title { color: #E65100; }
+  .ppe-section     .section-title { color: #2E7D32; }
+
+  /* ── 4. HAZARDS 2x2 GRID ── */
+  .hazard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .hazard-card {
+    background: #CC0000;
+    border: 2px solid #8B0000;
+    border-radius: 4px;
+    padding: 5px 7px;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .haz-icon-box {
+    width: 28px;
+    height: 28px;
+    background: #FFD700;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 13pt;
+    font-weight: 900;
+    color: #8B0000;
+    line-height: 1;
+  }
+  .haz-body { flex: 1; }
+  .haz-title {
+    font-size: 8pt;
+    font-weight: 900;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    display: block;
+  }
+  .haz-sub {
+    font-size: 6.5pt;
+    color: #FFECB3;
+    line-height: 1.3;
+    display: block;
+    margin-top: 1px;
+  }
+  .haz-hi {
+    font-size: 6.5pt;
+    color: #FFDDDD;
+    line-height: 1.3;
+    display: block;
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  /* ── 5. OPERATING RULES ── */
+  .rules-section {
+    background: #1a1a1a;
+    border-radius: 4px;
+    padding: 6px 8px;
+    flex-shrink: 0;
+  }
+  .rules-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .rules-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 4px 7px;
+    background: #2a2a2a;
+    border-left: 3px solid #FFD700;
+    border-radius: 2px;
+  }
+  .rule-num {
+    background: #FFD700;
+    color: #1a1a1a;
+    font-size: 7.5pt;
+    font-weight: 900;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .rule-text { flex: 1; }
+  .rule-en {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.25;
+    display: block;
+  }
+  .rule-en strong { color: #FFD700; }
+  .rule-hi {
+    font-size: 7pt;
+    color: #AAAAAA;
+    display: block;
+    margin-top: 1px;
+    line-height: 1.2;
+  }
+
+  /* ── 6. BEFORE STARTING ── */
+  .before-box {
+    border: 2px solid #E65100;
+    border-radius: 4px;
+    background: #FFF8F2;
+    padding: 5px 8px;
+  }
+  .before-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 3px;
+  }
+  .before-list li {
+    font-size: 8pt;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    line-height: 1.3;
+  }
+  .chk {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #E65100;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    background: #fff;
+  }
+
+  /* ── 7. PPE ── */
+  .ppe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+  }
+  .ppe-card {
+    border: 2px solid #2E7D32;
+    border-radius: 4px;
+    background: #F1FBF1;
+    padding: 5px 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+  .ppe-icon-box {
+    width: 26px;
+    height: 26px;
+    background: #2E7D32;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 9pt;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+  }
+  .ppe-label {
+    font-size: 7.5pt;
+    font-weight: 900;
+    color: #1B5E20;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  /* ── 8. EMERGENCY BAR ── */
+  .emergency-bar {
+    background: #CC0000;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 3px solid #8B0000;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+  .em-badge {
+    background: #FFD700;
+    color: #8B0000;
+    font-size: 7.5pt;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .em-contacts {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+  }
+  .em-item {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .em-role {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: #FFECB3;
+    letter-spacing: 0.5px;
+  }
+  .em-phone {
+    font-size: 10pt;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+  }
+  .em-sep { color: #FFD700; font-size: 10pt; font-weight: 900; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #1a1a1a;
+    padding: 5px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .footer-left .co-name {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 1px;
+  }
+  .footer-left .co-addr {
+    font-size: 6pt;
+    color: #888;
+    margin-top: 1px;
+  }
+  .footer-right {
+    text-align: right;
+  }
+  .footer-right .doc-id {
+    font-size: 7pt;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 0.5px;
+  }
+  .footer-right .doc-ref {
+    font-size: 6pt;
+    color: #888;
+    margin-top: 1px;
+  }
+
+  /* ── STRIPE BOTTOM ── */
+  .stripe-bottom {
+    height: 8mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px, #FFD700 14px,
+      #1a1a1a 14px, #1a1a1a 28px
+    );
+    border-top: 3px solid #1a1a1a;
+    flex-shrink: 0;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body { background: none; padding: 0; margin: 0; }
+    .poster { width: 210mm; min-height: 297mm; box-shadow: none; }
+    @page { size: A4 portrait; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- 1. TOP STRIPE -->
+  <div class="stripe-top"></div>
+
+  <!-- 2. DANGER BANNER -->
+  <div class="danger-banner">
+    <span class="word-danger">DANGER</span>
+    <span class="word-hi">&#2326;&#2340;&#2352;&#2366; &nbsp;/&nbsp; KHATARA</span>
+  </div>
+
+  <!-- 3. EQUIPMENT NAME -->
+  <div class="equipment-name">
+    <div class="eq-en">LID PRESS &nbsp;/&nbsp; SEALING MACHINE</div>
+    <div class="eq-hi">&#2354;&#2367;&#2337; &#2346;&#2381;&#2352;&#2375;&#2360; &nbsp;/&nbsp; &#2360;&#2368;&#2354;&#2367;&#2306;&#2327; &#2350;&#2358;&#2368;&#2344;</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- 4. HAZARDS — 2x2 grid -->
+    <div class="hazards-section">
+      <div class="section-title">IDENTIFIED HAZARDS / &#2346;&#2361;&#2330;&#2366;&#2344;&#2375; &#2327;&#2319; &#2326;&#2340;&#2352;&#2375;</div>
+      <div class="hazard-grid">
+
+        <div class="hazard-card">
+          <div class="haz-icon-box">&#9995;</div>
+          <div class="haz-body">
+            <span class="haz-title">CRUSH HAZARD</span>
+            <span class="haz-sub">Press mechanism can crush hands and fingers. Keep hands CLEAR during operation.</span>
+            <span class="haz-hi">&#2346;&#2381;&#2352;&#2375;&#2360; &#2360;&#2375; &#2361;&#2366;&#2341;/&#2313;&#2306;&#2327;&#2354;&#2368; &#2342;&#2348;&#2344;&#2375; &#2325;&#2366; &#2326;&#2340;&#2352;&#2366; &#8212; &#2911;&#2346;&#2352;&#2375;&#2358;&#2344; &#2325;&#2375; &#2342;&#2380;&#2352;&#2366;&#2344; &#2361;&#2366;&#2341; &#2342;&#2370;&#2352; &#2352;&#2326;&#2375;&#2306;</span>
+          </div>
+        </div>
+
+        <div class="hazard-card">
+          <div class="haz-icon-box" style="color:#CC0000;background:#FFD700;">H</div>
+          <div class="haz-body">
+            <span class="haz-title">HOT SURFACES</span>
+            <span class="haz-sub">Sealing plates operate at HIGH TEMPERATURE. Risk of burns on contact.</span>
+            <span class="haz-hi">&#2327;&#2352;&#2381;&#2350; &#2360;&#2340;&#2361; &#8212; &#2360;&#2368;&#2354;&#2367;&#2306;&#2327; &#2346;&#2381;&#2354;&#2375;&#2335; &#2348;&#2361;&#2369;&#2340; &#2327;&#2352;&#2381;&#2350; &#2361;&#2379;&#2340;&#2368; &#2361;&#2376;&#2404; &#2331;&#2370;&#2344;&#2375; &#2360;&#2375; &#2332;&#2354;&#2344;&#2375; &#2325;&#2366; &#2326;&#2340;&#2352;&#2366;</span>
+          </div>
+        </div>
+
+        <div class="hazard-card">
+          <div class="haz-icon-box">&#9888;</div>
+          <div class="haz-body">
+            <span class="haz-title">PINCH POINTS</span>
+            <span class="haz-sub">Moving parts create pinch points. Loose clothing can get caught.</span>
+            <span class="haz-hi">&#2330;&#2354;&#2340;&#2375; &#2346;&#2366;&#2352;&#2381;&#2335;&#2381;&#2360; &#2350;&#2375;&#2306; &#2325;&#2346;&#2390;&#2375;/&#2348;&#2366;&#2354; &#2347;&#2306;&#2360;&#2344;&#2375; &#2325;&#2366; &#2326;&#2340;&#2352;&#2366;</span>
+          </div>
+        </div>
+
+        <div class="hazard-card">
+          <div class="haz-icon-box" style="font-size:11pt;">&#128266;</div>
+          <div class="haz-body">
+            <span class="haz-title">NOISE HAZARD</span>
+            <span class="haz-sub">Machine generates high noise levels. Use ear protection.</span>
+            <span class="haz-hi">&#2358;&#2379;&#2352; &#8212; &#2325;&#2366;&#2344; &#2325;&#2368; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366; &#2360;&#2352;&#2381;&#2357;&#2376;&#2342;&#2381;&#2351;&#2344;&#2367;&#2325; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366; &#2326;&#2340;&#2352;&#2366;</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 5. OPERATING RULES -->
+    <div class="rules-section">
+      <div class="section-title">OPERATING RULES / &#2360;&#2306;&#2330;&#2366;&#2354;&#2344; &#2344;&#2367;&#2351;&#2350;</div>
+      <ul class="rules-list">
+        <li>
+          <span class="rule-num">1</span>
+          <span class="rule-text">
+            <span class="rule-en"><strong>AUTHORIZED OPERATORS ONLY</strong> &#8212; only trained personnel may operate this machine</span>
+            <span class="rule-hi">&#2325;&#2375;&#2357;&#2354; &#2346;&#2381;&#2352;&#2358;&#2367;&#2325;&#2381;&#2359;&#2367;&#2340; &#2325;&#2352;&#2381;&#2350;&#2330;&#2366;&#2352;&#2368; &#2361;&#2368; &#2350;&#2358;&#2368;&#2344; &#2330;&#2354;&#2366; &#2360;&#2325;&#2340;&#2375; &#2361;&#2376;&#2306;</span>
+          </span>
+        </li>
+        <li>
+          <span class="rule-num">2</span>
+          <span class="rule-text">
+            <span class="rule-en"><strong>LINE CLEARANCE</strong> &#8212; complete clearance checklist before starting new batch</span>
+            <span class="rule-hi">&#2344;&#2351;&#2366; &#2348;&#2376;&#2330; &#2358;&#2369;&#2352;&#2370; &#2325;&#2352;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2354;&#2366;&#2311;&#2344; &#2325;&#2381;&#2354;&#2367;&#2351;&#2352;&#2375;&#2306;&#2360; &#2330;&#2375;&#2325;&#2354;&#2367;&#2360;&#2381;&#2335; &#2346;&#2370;&#2352;&#2366; &#2325;&#2352;&#2375;&#2306;</span>
+          </span>
+        </li>
+        <li>
+          <span class="rule-num">3</span>
+          <span class="rule-text">
+            <span class="rule-en"><strong>SET PARAMETERS</strong> &#8212; set temperature, pressure, dwell time per product spec card BEFORE starting</span>
+            <span class="rule-hi">&#2358;&#2369;&#2352;&#2370; &#2325;&#2352;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2340;&#2366;&#2346;&#2350;&#2366;&#2344;, &#2342;&#2348;&#2366;&#2357;, &#2338;&#2361;&#2352;&#2366;&#2357; &#2360;&#2350;&#2351; &#2360;&#2375;&#2335; &#2325;&#2352;&#2375;&#2306;</span>
+          </span>
+        </li>
+        <li>
+          <span class="rule-num">4</span>
+          <span class="rule-text">
+            <span class="rule-en"><strong>FIRST-OFF CHECK</strong> &#8212; run first samples, inspect seal quality before continuous production</span>
+            <span class="rule-hi">&#2344;&#2367;&#2352;&#2306;&#2340;&#2352; &#2313;&#2340;&#2381;&#2346;&#2366;&#2342;&#2344; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2346;&#2361;&#2354;&#2375; &#2344;&#2350;&#2369;&#2344;&#2375; &#2325;&#2368; &#2360;&#2368;&#2354; &#2327;&#2369;&#2339;&#2357;&#2340;&#2381;&#2340;&#2366; &#2332;&#2366;&#2306;&#2330;&#2375;&#2306;</span>
+          </span>
+        </li>
+        <li>
+          <span class="rule-num">5</span>
+          <span class="rule-text">
+            <span class="rule-en"><strong>GUARDS</strong> &#8212; NEVER bypass safety guards or interlocks. Report any guard damage immediately</span>
+            <span class="rule-hi">&#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366; &#2327;&#2366;&#2352;&#2381;&#2337; &#2351;&#2366; &#2311;&#2306;&#2335;&#2352;&#2354;&#2377;&#2325; &#2325;&#2360; &#2349;&#2368; &#2348;&#2366;&#2312;&#2346;&#2366;&#2360; &#2344; &#2325;&#2352;&#2375;&#2306;</span>
+          </span>
+        </li>
+        <li>
+          <span class="rule-num">6</span>
+          <span class="rule-text">
+            <span class="rule-en"><strong>LOTO</strong> &#8212; LOCK OUT / TAG OUT before ANY maintenance, cleaning, or jam clearance</span>
+            <span class="rule-hi">&#2325;&#2367;&#2360;&#2368; &#2349;&#2368; &#2352;&#2326;&#2352;&#2326;&#2366;&#2357; / &#2360;&#2347;&#2366;&#2312; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2354;&#2377;&#2325; &#2906;&#2313;&#2335; / &#2335;&#2376;&#2327; &#2906;&#2313;&#2335; &#2332;&#2364;&#2352;&#2370;&#2352;&#2368;</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 6. BEFORE STARTING CHECKLIST -->
+    <div class="before-section">
+      <div class="section-title">BEFORE STARTING / &#2358;&#2369;&#2352;&#2370; &#2325;&#2352;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2332;&#2366;&#2306;&#2330;&#2375;&#2306;</div>
+      <div class="before-box">
+        <ul class="before-list">
+          <li>
+            <span class="chk"></span>
+            Guards in place and interlocks functional &nbsp;/&nbsp; &#2327;&#2366;&#2352;&#2381;&#2337; &#2360;&#2361;&#2368; &#2332;&#2327;&#2361; &#2346;&#2352; &#2361;&#2376;&#2306;, &#2311;&#2306;&#2335;&#2352;&#2354;&#2377;&#2325; &#2330;&#2366;&#2354;&#2370; &#2361;&#2376;
+          </li>
+          <li>
+            <span class="chk"></span>
+            Emergency stop tested and working &nbsp;/&nbsp; &#2906;&#2310;&#2346;&#2366;&#2340;&#2325;&#2366;&#2354;&#2368;&#2344; &#2360;&#2381;&#2335;&#2377;&#2346; &#2351;&#2306;&#2340;&#2381;&#2352; &#2325;&#2366;&#2350; &#2325;&#2352; &#2352;&#2361;&#2366; &#2361;&#2376;
+          </li>
+          <li>
+            <span class="chk"></span>
+            Correct temperature/pressure set per product spec &nbsp;/&nbsp; &#2344;&#2367;&#2352;&#2381;&#2343;&#2366;&#2352;&#2367;&#2340; &#2340;&#2366;&#2346;&#2350;&#2366;&#2344;/&#2342;&#2348;&#2366;&#2357; &#2346;&#2381;&#2352;&#2379;&#2337;&#2325;&#2381;&#2335; &#2360;&#2381;&#2346;&#2375;&#2360;&#2367;&#2347;&#2367;&#2325;&#2375;&#2358;&#2344; &#2325;&#2375; &#2310;&#2343;&#2366;&#2352; &#2346;&#2352; &#2360;&#2375;&#2335; &#2361;&#2376;
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. MANDATORY PPE -->
+    <div class="ppe-section">
+      <div class="section-title">MANDATORY PPE / &#2309;&#2344;&#2367;&#2357;&#2366;&#2352;&#2381;&#2351; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366; &#2313;&#2346;&#2325;&#2352;&#2339;</div>
+      <div class="ppe-grid">
+        <div class="ppe-card">
+          <div class="ppe-icon-box">S</div>
+          <div class="ppe-label">Safety Shoes<br><span style="font-size:6.5pt;font-weight:400;color:#388E3C;">&#2360;&#2375;&#2347;&#2381;&#2335;&#2368; &#2358;&#2370;&#2332;&#2364;</span></div>
+        </div>
+        <div class="ppe-card">
+          <div class="ppe-icon-box">E</div>
+          <div class="ppe-label">Ear Protection<br><span style="font-size:6.5pt;font-weight:400;color:#388E3C;">&#2325;&#2366;&#2344; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366;</span></div>
+        </div>
+        <div class="ppe-card">
+          <div class="ppe-icon-box">G</div>
+          <div class="ppe-label">Heat-Resistant Gloves<br><span style="font-size:6.5pt;font-weight:400;color:#388E3C;">&#2327;&#2352;&#2381;&#2350;&#2368;&#2352;&#2379;&#2343;&#2368; &#2342;&#2360;&#2381;&#2340;&#2366;&#2344;&#2375;</span></div>
+        </div>
+        <div class="ppe-card">
+          <div class="ppe-icon-box">O</div>
+          <div class="ppe-label">Safety Goggles<br><span style="font-size:6.5pt;font-weight:400;color:#388E3C;">&#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366; &#2330;&#2358;&#2381;&#2350;&#2366;</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- 8. EMERGENCY CONTACTS BAR -->
+  <div class="emergency-bar">
+    <div class="em-badge">EMERGENCY</div>
+    <div class="em-contacts">
+      <div class="em-item">
+        <span class="em-role">Floor Supervisor</span>
+        <span class="em-phone">9167095723</span>
+      </div>
+      <span class="em-sep">|</span>
+      <div class="em-item">
+        <span class="em-role">Security</span>
+        <span class="em-phone">9136107773</span>
+      </div>
+      <span class="em-sep">|</span>
+      <div class="em-item">
+        <span class="em-role">Ambulance</span>
+        <span class="em-phone">102</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <div class="co-name">PACK MASTERS</div>
+      <div class="co-addr">Rabale MIDC, Navi Mumbai &nbsp;|&nbsp; Contract Packaging</div>
+    </div>
+    <div class="footer-right">
+      <div class="doc-id">SIGN-HAZ-LP-01 &nbsp;|&nbsp; ISO 45001:2018 &nbsp;|&nbsp; Ref: PM_WI_PRD-03</div>
+      <div class="doc-ref">Rev. 02 &nbsp;|&nbsp; Mar 2026</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM STRIPE -->
+  <div class="stripe-bottom"></div>
+
+</div>
+</body>
+</html>

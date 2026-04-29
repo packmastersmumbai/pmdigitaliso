@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM_OH-NTB-02 — Hazardous Substances Safety Poster</title>
+<style>
+  /* ── Reset & base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 16px;
+  }
+
+  /* ── A4 container ── */
+  .poster {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    page-break-inside: avoid;
+  }
+
+  /* ════════════════════════════════
+     HEADER
+  ════════════════════════════════ */
+  .header {
+    background: #0D1B6E;
+    color: #ffffff;
+    padding: 12px 16px 10px;
+    position: relative;
+    border-bottom: 5px solid #E8A020;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .header-logo-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .header-logo-icon {
+    width: 44px;
+    height: 44px;
+    background: #E8A020;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: #0D1B6E;
+    letter-spacing: -1px;
+  }
+
+  .header-company {
+    line-height: 1.2;
+  }
+
+  .header-company-name {
+    font-size: 14pt;
+    font-weight: 800;
+    color: #E8A020;
+    letter-spacing: 0.5px;
+  }
+
+  .header-company-sub {
+    font-size: 7.5pt;
+    color: #c8d0f0;
+    letter-spacing: 0.5px;
+  }
+
+  .header-title-block {
+    flex: 1;
+    text-align: center;
+  }
+
+  .header-main-title {
+    font-size: 21pt;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .header-main-title span {
+    color: #E8A020;
+  }
+
+  .header-hindi-title {
+    font-size: 13pt;
+    color: #c8d0f0;
+    margin-top: 3px;
+    font-weight: 600;
+  }
+
+  .header-ghs-badge {
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .ghs-badge-box {
+    background: #E8A020;
+    color: #0D1B6E;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 7pt;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+  }
+
+  .ghs-badge-box .ghs-big {
+    display: block;
+    font-size: 10pt;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  /* ════════════════════════════════
+     SECTION LABELS
+  ════════════════════════════════ */
+  .section {
+    padding: 8px 14px;
+  }
+
+  .section-label {
+    font-size: 9pt;
+    font-weight: 900;
+    color: #ffffff;
+    background: #0D1B6E;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .section-label.red {
+    background: #B83030;
+  }
+
+  .section-label.amber {
+    background: #E8A020;
+    color: #0D1B6E;
+  }
+
+  /* ════════════════════════════════
+     GHS HAZARD SYMBOLS SECTION
+  ════════════════════════════════ */
+  .hazards-section {
+    padding: 6px 14px 8px;
+    background: #fafafa;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .hazards-grid {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    margin-top: 6px;
+  }
+
+  .hazard-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  /* CSS Diamond (rotated square) */
+  .diamond-wrap {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .diamond {
+    width: 46px;
+    height: 46px;
+    background: #B83030;
+    border: 3px solid #8a1f1f;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+
+  .diamond-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .diamond-symbol {
+    font-size: 18pt;
+    line-height: 1;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    display: block;
+  }
+
+  .hazard-name {
+    font-size: 7pt;
+    font-weight: 900;
+    color: #B83030;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .hazard-chemical {
+    font-size: 6.5pt;
+    color: #444;
+    line-height: 1.3;
+    font-style: italic;
+  }
+
+  /* ════════════════════════════════
+     SAFETY RULES
+  ════════════════════════════════ */
+  .rules-section {
+    padding: 7px 14px 8px;
+  }
+
+  .rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 14px;
+    margin-top: 6px;
+  }
+
+  .rule-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+  }
+
+  .rule-num {
+    width: 20px;
+    height: 20px;
+    background: #0D1B6E;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 8.5pt;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .rule-text {
+    font-size: 8.5pt;
+    line-height: 1.4;
+    color: #111;
+  }
+
+  .rule-text strong {
+    color: #B83030;
+    font-size: 9pt;
+  }
+
+  .rule-text .hindi {
+    display: block;
+    color: #555;
+    font-size: 7.5pt;
+  }
+
+  .sds-location {
+    margin-top: 5px;
+    background: #e8f0ff;
+    border-left: 4px solid #0D1B6E;
+    padding: 5px 10px;
+    font-size: 8pt;
+    color: #0D1B6E;
+    font-weight: 700;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* ════════════════════════════════
+     FIRST AID
+  ════════════════════════════════ */
+  .firstaid-section {
+    padding: 7px 14px 8px;
+    background: #fff8f8;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .firstaid-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .firstaid-card {
+    border: 2px solid #B83030;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .firstaid-card-header {
+    background: #B83030;
+    color: #ffffff;
+    font-size: 7pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 4px;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+  }
+
+  .firstaid-card-header .fa-icon {
+    display: block;
+    font-size: 14pt;
+    margin-bottom: 1px;
+  }
+
+  .firstaid-card-body {
+    padding: 5px 6px;
+    font-size: 7.5pt;
+    color: #222;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .firstaid-card-body strong {
+    color: #B83030;
+  }
+
+  /* ════════════════════════════════
+     EMERGENCY CONTACTS
+  ════════════════════════════════ */
+  .emergency-section {
+    padding: 7px 14px 8px;
+    background: #fff2f2;
+  }
+
+  .emergency-section .section-label {
+    background: #B83030;
+  }
+
+  .emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .emergency-grid-wide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .emergency-card {
+    background: #B83030;
+    border-radius: 4px;
+    padding: 6px 7px;
+    text-align: center;
+  }
+
+  .emergency-icon {
+    font-size: 16pt;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .emergency-title {
+    font-size: 7pt;
+    font-weight: 900;
+    color: #E8A020;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+
+  .emergency-detail {
+    font-size: 7pt;
+    color: #fce8e8;
+    line-height: 1.35;
+  }
+
+  /* ════════════════════════════════
+     PPE REQUIRED
+  ════════════════════════════════ */
+  .ppe-section {
+    padding: 7px 14px 8px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .ppe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .ppe-card {
+    border: 2px solid #0D1B6E;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px 5px;
+    background: #f0f4ff;
+    text-align: center;
+    gap: 4px;
+  }
+
+  .ppe-icon {
+    font-size: 22pt;
+    line-height: 1;
+    display: block;
+  }
+
+  .ppe-name {
+    font-size: 8pt;
+    font-weight: 900;
+    color: #0D1B6E;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .ppe-hindi {
+    font-size: 7pt;
+    color: #555;
+    line-height: 1.2;
+  }
+
+  /* ════════════════════════════════
+     FOOTER
+  ════════════════════════════════ */
+  .footer {
+    background: #0D1B6E;
+    border-top: 4px solid #E8A020;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  .footer-left {
+    font-size: 7pt;
+    color: #c8d0f0;
+    line-height: 1.4;
+  }
+
+  .footer-left strong {
+    color: #E8A020;
+    font-size: 8pt;
+  }
+
+  .footer-center {
+    text-align: center;
+    font-size: 7pt;
+    color: #c8d0f0;
+    line-height: 1.4;
+  }
+
+  .footer-right {
+    text-align: right;
+    font-size: 7pt;
+    color: #c8d0f0;
+    line-height: 1.4;
+  }
+
+  .footer-right strong {
+    color: #E8A020;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    height: 3px;
+    background: linear-gradient(90deg, #0D1B6E 0%, #E8A020 50%, #B83030 100%);
+    margin: 0;
+  }
+
+  /* ════════════════════════════════
+     PRINT
+  ════════════════════════════════ */
+  @media print {
+    body {
+      background: #fff;
+      padding: 0;
+      margin: 0;
+    }
+
+    .poster {
+      width: 100%;
+      min-height: auto;
+      box-shadow: none;
+    }
+
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ══ HEADER ══ -->
+  <div class="header">
+    <div class="header-top">
+      <div class="header-logo-block">
+        <div class="header-logo-icon">PM</div>
+        <div class="header-company">
+          <div class="header-company-name">PACK MASTERS</div>
+          <div class="header-company-sub">Rabale MIDC, Navi Mumbai</div>
+          <div class="header-company-sub">Contract Packaging</div>
+        </div>
+      </div>
+      <div class="header-title-block">
+        <div class="header-main-title">HAZARDOUS <span>SUBSTANCES</span></div>
+        <div class="header-main-title" style="font-size:16pt; color:#E8A020;">AT THIS WORKPLACE</div>
+        <div class="header-hindi-title">इस कार्यस्थल पर खतरनाक पदार्थ — सुरक्षा जानकारी</div>
+      </div>
+      <div class="header-ghs-badge">
+        <div class="ghs-badge-box">
+          <span class="ghs-big">GHS</span>
+          Globally<br>Harmonized<br>System<br>
+          <span style="font-size:6pt;">UN GHS Rev.9</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ GHS HAZARD SYMBOLS ══ -->
+  <div class="hazards-section">
+    <span class="section-label red">⚠ GHS Hazard Pictograms Present at This Site &nbsp;|&nbsp; यहाँ मौजूद GHS खतरा चिन्ह</span>
+    <div class="hazards-grid">
+
+      <!-- 1. Flame -->
+      <div class="hazard-card">
+        <div class="diamond-wrap">
+          <div class="diamond"></div>
+          <div class="diamond-inner">
+            <span class="diamond-symbol">🔥</span>
+          </div>
+        </div>
+        <div class="hazard-name">FLAME<br>ज्वलनशील</div>
+        <div class="hazard-chemical">Solvents, Thinners<br>सॉल्वेंट, थिनर</div>
+      </div>
+
+      <!-- 2. Health Hazard -->
+      <div class="hazard-card">
+        <div class="diamond-wrap">
+          <div class="diamond"></div>
+          <div class="diamond-inner">
+            <span class="diamond-symbol" style="font-size:16pt;">&#x2621;</span>
+          </div>
+        </div>
+        <div class="hazard-name">HEALTH<br>HAZARD<br>स्वास्थ्य खतरा</div>
+        <div class="hazard-chemical">Adhesives — Isocyanates<br>आइसोसाइनेट चिपकने वाले</div>
+      </div>
+
+      <!-- 3. Corrosion -->
+      <div class="hazard-card">
+        <div class="diamond-wrap">
+          <div class="diamond"></div>
+          <div class="diamond-inner">
+            <span class="diamond-symbol">🧪</span>
+          </div>
+        </div>
+        <div class="hazard-name">CORROSION<br>संक्षारण</div>
+        <div class="hazard-chemical">Cleaning Chemicals<br>सफाई रसायन</div>
+      </div>
+
+      <!-- 4. Exclamation -->
+      <div class="hazard-card">
+        <div class="diamond-wrap">
+          <div class="diamond"></div>
+          <div class="diamond-inner">
+            <span class="diamond-symbol" style="font-size:22pt; font-weight:900; color:#fff;">!</span>
+          </div>
+        </div>
+        <div class="hazard-name">IRRITANT<br>उत्तेजक पदार्थ</div>
+        <div class="hazard-chemical">Irritant Chemicals<br>त्वचा / आँख जलन</div>
+      </div>
+
+      <!-- 5. Environment -->
+      <div class="hazard-card">
+        <div class="diamond-wrap">
+          <div class="diamond" style="background:#1a6b2a; border-color:#0e4018;"></div>
+          <div class="diamond-inner">
+            <span class="diamond-symbol">🐟</span>
+          </div>
+        </div>
+        <div class="hazard-name" style="color:#1a6b2a;">ENVIRONMENT<br>पर्यावरण</div>
+        <div class="hazard-chemical">Aquatic Toxicity<br>जलीय विषाक्तता</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SAFETY RULES ══ -->
+  <div class="rules-section">
+    <span class="section-label">📋 Safety Rules — सुरक्षा नियम</span>
+    <div class="rules-grid">
+
+      <div class="rule-item">
+        <div class="rule-num">1</div>
+        <div class="rule-text">
+          <strong>READ</strong> the Safety Data Sheet (SDS) <strong>BEFORE</strong> using any chemical.
+          <span class="hindi">किसी भी रसायन के उपयोग से पहले SDS पढ़ें।</span>
+        </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-num">2</div>
+        <div class="rule-text">
+          <strong>WEAR</strong> designated PPE as per SDS requirements — always.
+          <span class="hindi">SDS के अनुसार निर्धारित PPE हमेशा पहनें।</span>
+        </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-num">3</div>
+        <div class="rule-text">
+          <strong>NO</strong> eating, drinking, or smoking in chemical handling areas.
+          <span class="hindi">रसायन क्षेत्र में खाना, पीना या धूम्रपान नहीं।</span>
+        </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-num">4</div>
+        <div class="rule-text">
+          <strong>WASH</strong> hands thoroughly after handling any chemicals.
+          <span class="hindi">रसायन छूने के बाद हाथ अच्छी तरह धोएँ।</span>
+        </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-num">5</div>
+        <div class="rule-text">
+          <strong>USE</strong> chemicals only in well-ventilated areas.
+          <span class="hindi">केवल अच्छी हवादार जगह पर रसायन का उपयोग करें।</span>
+        </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-num">6</div>
+        <div class="rule-text">
+          <strong>REPORT</strong> any spill, leak, or exposure to supervisor immediately.
+          <span class="hindi">कोई भी रिसाव या संपर्क तुरंत सुपरवाइज़र को बताएँ।</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="sds-location">
+      📁 &nbsp;Safety Data Sheets (SDS) available at: &nbsp;<strong>Near Notice Board</strong>
+      &nbsp;&nbsp;|&nbsp;&nbsp; SDS की प्रतियाँ यहाँ उपलब्ध हैं
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ FIRST AID ══ -->
+  <div class="firstaid-section">
+    <span class="section-label red">🩹 First Aid Measures — प्राथमिक चिकित्सा</span>
+    <div class="firstaid-grid">
+
+      <div class="firstaid-card">
+        <div class="firstaid-card-header">
+          <span class="fa-icon">👁</span>
+          Eye Contact<br>आँख संपर्क
+        </div>
+        <div class="firstaid-card-body">
+          <strong>Flush</strong> with clean water for <strong>15 minutes.</strong><br>
+          Hold eyelids open.<br>
+          Seek medical attention.<br>
+          <span style="color:#666;">15 मिनट पानी से धोएँ</span>
+        </div>
+      </div>
+
+      <div class="firstaid-card">
+        <div class="firstaid-card-header">
+          <span class="fa-icon">🖐</span>
+          Skin Contact<br>त्वचा संपर्क
+        </div>
+        <div class="firstaid-card-body">
+          <strong>Remove</strong> contaminated clothing.<br>
+          <strong>Wash</strong> with soap &amp; water.<br>
+          If irritation persists — seek help.<br>
+          <span style="color:#666;">साबुन-पानी से धोएँ</span>
+        </div>
+      </div>
+
+      <div class="firstaid-card">
+        <div class="firstaid-card-header">
+          <span class="fa-icon">💨</span>
+          Inhalation<br>साँस में जाना
+        </div>
+        <div class="firstaid-card-body">
+          <strong>Move</strong> to fresh air immediately.<br>
+          If breathing difficulty — call emergency.<br>
+          Do NOT leave person alone.<br>
+          <span style="color:#666;">ताज़ी हवा में ले जाएँ</span>
+        </div>
+      </div>
+
+      <div class="firstaid-card">
+        <div class="firstaid-card-header">
+          <span class="fa-icon">⚠</span>
+          Ingestion<br>निगलना
+        </div>
+        <div class="firstaid-card-body">
+          <strong style="color:#B83030;">DO NOT</strong> induce vomiting.<br>
+          Rinse mouth with water.<br>
+          <strong>Seek medical help immediately.</strong><br>
+          <span style="color:#666;">उल्टी न करवाएँ — डॉक्टर बुलाएँ</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ EMERGENCY CONTACTS ══ -->
+  <div class="emergency-section">
+    <span class="section-label red">🚨 Emergency Contacts — आपातकालीन संपर्क</span>
+    <div class="emergency-grid">
+
+      <div class="emergency-card">
+        <span class="emergency-icon">🚔</span>
+        <div class="emergency-title">Police / पुलिस<br>Rabale Station</div>
+        <div class="emergency-detail">
+          <strong style="color:#E8A020; font-size:10pt;">100</strong><br>
+          022-27606162
+        </div>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon">🔥</span>
+        <div class="emergency-title">Fire / आग<br>Rabale MIDC</div>
+        <div class="emergency-detail">
+          <strong style="color:#E8A020;">022-27698101</strong><br>
+          Airoli: 022-27796600
+        </div>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon">🚑</span>
+        <div class="emergency-title">Ambulance<br>एम्बुलेंस</div>
+        <div class="emergency-detail">
+          <strong style="color:#E8A020; font-size:10pt;">102</strong><br>
+          022-27692296
+        </div>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon">🏥</span>
+        <div class="emergency-title">Nearest Hospital<br>नज़दीकी अस्पताल</div>
+        <div class="emergency-detail">
+          <strong style="color:#E8A020;">09322017001</strong>
+        </div>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon">👷</span>
+        <div class="emergency-title">Floor Supervisor<br>Khushi Paswan</div>
+        <div class="emergency-detail">
+          <strong style="color:#E8A020;">9167095723</strong>
+        </div>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon">🧯</span>
+        <div class="emergency-title">Fire Warden<br>अग्नि प्रभारी</div>
+        <div class="emergency-detail">
+          <strong style="color:#E8A020;">8655223426</strong>
+        </div>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon">👔</span>
+        <div class="emergency-title">Management Rep<br>Tarun Mishra</div>
+        <div class="emergency-detail">
+          <strong style="color:#E8A020;">9167155573</strong>
+        </div>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon">🔒</span>
+        <div class="emergency-title">Security Staff<br>सुरक्षा कर्मी</div>
+        <div class="emergency-detail">
+          <strong style="color:#E8A020;">9136107773</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ PPE REQUIRED ══ -->
+  <div class="ppe-section">
+    <span class="section-label amber">🦺 Required PPE — आवश्यक व्यक्तिगत सुरक्षा उपकरण</span>
+    <div class="ppe-grid">
+
+      <div class="ppe-card">
+        <span class="ppe-icon">🧤</span>
+        <div class="ppe-name">Chemical<br>Gloves</div>
+        <div class="ppe-hindi">रासायनिक दस्ताने</div>
+      </div>
+
+      <div class="ppe-card">
+        <span class="ppe-icon">🥽</span>
+        <div class="ppe-name">Safety<br>Goggles</div>
+        <div class="ppe-hindi">सुरक्षा चश्मा</div>
+      </div>
+
+      <div class="ppe-card">
+        <span class="ppe-icon">🥼</span>
+        <div class="ppe-name">Chemical<br>Apron</div>
+        <div class="ppe-hindi">रासायनिक एप्रन</div>
+      </div>
+
+      <div class="ppe-card">
+        <span class="ppe-icon">😷</span>
+        <div class="ppe-name">Respirator<br><span style="font-size:6.5pt; font-weight:400; text-transform:none;">(as per SDS requirement)</span></div>
+        <div class="ppe-hindi">श्वासयंत्र (SDS अनुसार)</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-left">
+      <strong>PM_OH-NTB-02</strong><br>
+      Rev 1.0 &nbsp;|&nbsp; 2026-03-28
+    </div>
+    <div class="footer-center">
+      Conforming to <strong style="color:#E8A020;">ISO 45001:2018</strong> &amp; <strong style="color:#E8A020;">GHS (UN Rev.9)</strong><br>
+      <span style="font-size:6.5pt; color:#8899cc;">Issued by: AZAD Rajbhar — QMR &nbsp;|&nbsp; Authorised by: Tarun Mishra — MR</span>
+    </div>
+    <div class="footer-right">
+      <strong>PACK MASTERS</strong><br>
+      Rabale MIDC, Navi Mumbai
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAUTION — Material Handling Area | Pack Masters</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── 1. Hazard Stripes ── */
+  .hazard-stripes {
+    height: 22mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px,
+      #FFD700 14px,
+      #111111 14px,
+      #111111 28px
+    );
+    border-bottom: 3px solid #111;
+  }
+
+  /* ── 2. CAUTION Banner ── */
+  .caution-banner {
+    background: #FFD700;
+    border-bottom: 4px solid #111;
+    padding: 10px 16px 8px;
+    text-align: center;
+  }
+
+  .caution-banner .caution-en {
+    font-size: 38pt;
+    font-weight: 900;
+    color: #111;
+    letter-spacing: 6px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .caution-banner .caution-hi {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+
+  /* ── 3. Area Title ── */
+  .area-title {
+    background: #111;
+    padding: 10px 16px 8px;
+    text-align: center;
+  }
+
+  .area-title .area-en {
+    font-size: 22pt;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .area-title .area-hi {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #FFE55C;
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+
+  /* ── 4. Hazards Section ── */
+  .section {
+    padding: 8px 14px 6px;
+    flex: none;
+  }
+
+  .section-heading {
+    font-size: 11pt;
+    font-weight: 900;
+    color: #111;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #FFD700;
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+  }
+
+  .hazards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .hazard-card {
+    background: #FFF8DC;
+    border: 2px solid #FFD700;
+    border-left: 6px solid #E65100;
+    border-radius: 4px;
+    padding: 6px 8px;
+  }
+
+  .hazard-icon {
+    font-size: 20pt;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .hazard-title-en {
+    font-size: 11pt;
+    font-weight: 900;
+    color: #B71C1C;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .hazard-title-hi {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #C62828;
+    line-height: 1.2;
+  }
+
+  .hazard-desc-en {
+    font-size: 8pt;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 1px;
+  }
+
+  .hazard-desc-hi {
+    font-size: 7.5pt;
+    color: #444;
+    line-height: 1.2;
+  }
+
+  /* ── 5. Safety Rules ── */
+  .rules-section {
+    padding: 6px 14px 4px;
+  }
+
+  .rules-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .rules-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #F5F5F5;
+    border: 1px solid #DDD;
+    border-left: 5px solid #388E3C;
+    border-radius: 3px;
+    padding: 4px 8px;
+  }
+
+  .rule-num {
+    font-size: 12pt;
+    font-weight: 900;
+    color: #388E3C;
+    min-width: 18px;
+    line-height: 1.2;
+  }
+
+  .rule-text {
+    flex: 1;
+  }
+
+  .rule-en {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.2;
+  }
+
+  .rule-en strong {
+    color: #1A237E;
+  }
+
+  .rule-hi {
+    font-size: 7.5pt;
+    color: #555;
+    line-height: 1.2;
+  }
+
+  /* ── 6. PPE Section ── */
+  .ppe-section {
+    padding: 6px 14px 4px;
+  }
+
+  .ppe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+
+  .ppe-box {
+    background: #1A237E;
+    border-radius: 5px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+
+  .ppe-icon {
+    font-size: 24pt;
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+
+  .ppe-label-en {
+    font-size: 8.5pt;
+    font-weight: 900;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  .ppe-label-hi {
+    font-size: 7.5pt;
+    color: #C5CAE9;
+    line-height: 1.2;
+  }
+
+  /* ── 7. Max Weight ── */
+  .weight-section {
+    padding: 4px 14px;
+  }
+
+  .weight-box {
+    background: #B71C1C;
+    border: 3px solid #7F0000;
+    border-radius: 6px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .weight-icon {
+    font-size: 26pt;
+    line-height: 1;
+  }
+
+  .weight-text {
+    text-align: center;
+  }
+
+  .weight-label-en {
+    font-size: 10pt;
+    font-weight: 900;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+
+  .weight-value {
+    font-size: 22pt;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .weight-label-hi {
+    font-size: 8pt;
+    color: #FFCDD2;
+    line-height: 1.2;
+  }
+
+  /* ── 8. Emergency ── */
+  .emergency-section {
+    padding: 4px 14px;
+  }
+
+  .emergency-box {
+    background: #E65100;
+    border-radius: 5px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .emergency-icon {
+    font-size: 22pt;
+    line-height: 1;
+    color: #fff;
+  }
+
+  .emergency-text {
+    flex: 1;
+  }
+
+  .emergency-label {
+    font-size: 9pt;
+    font-weight: 900;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .emergency-contact {
+    font-size: 13pt;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+
+  .emergency-role {
+    font-size: 7.5pt;
+    color: #FFE0B2;
+    line-height: 1.2;
+  }
+
+  /* ── 9. Footer ── */
+  .footer {
+    margin-top: auto;
+    background: #111;
+    border-top: 3px solid #FFD700;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-company {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .footer-address {
+    font-size: 7pt;
+    color: #AAA;
+    line-height: 1.4;
+  }
+
+  .footer-std {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 1px;
+    text-align: right;
+  }
+
+  .footer-code {
+    font-size: 7pt;
+    color: #888;
+    text-align: right;
+    font-family: 'Courier New', monospace;
+  }
+
+  /* ── Bottom Stripes ── */
+  .hazard-stripes-bottom {
+    height: 10mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px,
+      #FFD700 10px,
+      #111111 10px,
+      #111111 20px
+    );
+    border-top: 2px solid #111;
+  }
+
+  /* ── Print ── */
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      box-shadow: none;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 1. Top Hazard Stripes -->
+  <div class="hazard-stripes"></div>
+
+  <!-- 2. CAUTION Banner -->
+  <div class="caution-banner">
+    <div class="caution-en">&#9888; CAUTION</div>
+    <div class="caution-hi">सावधान</div>
+  </div>
+
+  <!-- 3. Area Title -->
+  <div class="area-title">
+    <div class="area-en">MATERIAL HANDLING AREA</div>
+    <div class="area-hi">मटेरियल हैंडलिंग एरिया</div>
+  </div>
+
+  <!-- 4. Hazards -->
+  <div class="section">
+    <div class="section-heading">&#9888; Hazards in This Area / इस क्षेत्र में खतरे</div>
+    <div class="hazards-grid">
+
+      <div class="hazard-card">
+        <div class="hazard-icon">&#128722;</div>
+        <div class="hazard-title-en">HEAVY LOADS</div>
+        <div class="hazard-title-hi">भारी वज़न</div>
+        <div class="hazard-desc-en">Back &amp; muscle injury risk</div>
+        <div class="hazard-desc-hi">पीठ दर्द / मांसपेशी चोट का खतरा</div>
+      </div>
+
+      <div class="hazard-card">
+        <div class="hazard-icon">&#128679;</div>
+        <div class="hazard-title-en">FALLING OBJECTS</div>
+        <div class="hazard-title-hi">गिरती वस्तुएं</div>
+        <div class="hazard-desc-en">Head injury risk</div>
+        <div class="hazard-desc-hi">सिर चोट का खतरा</div>
+      </div>
+
+      <div class="hazard-card">
+        <div class="hazard-icon">&#128119;</div>
+        <div class="hazard-title-en">SLIP &amp; TRIP</div>
+        <div class="hazard-title-hi">फिसलन</div>
+        <div class="hazard-desc-en">Wet / uneven floor</div>
+        <div class="hazard-desc-hi">गीला / असमतल फर्श</div>
+      </div>
+
+      <div class="hazard-card">
+        <div class="hazard-icon">&#9995;</div>
+        <div class="hazard-title-en">PINCH POINTS</div>
+        <div class="hazard-title-hi">दबने का खतरा</div>
+        <div class="hazard-desc-en">Hand / finger crush risk</div>
+        <div class="hazard-desc-hi">हाथ / उंगली कुचलने का खतरा</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. Safety Rules -->
+  <div class="rules-section">
+    <div class="section-heading">&#10003; Safety Rules / सुरक्षा नियम</div>
+    <ul class="rules-list">
+      <li>
+        <span class="rule-num">1</span>
+        <span class="rule-text">
+          <div class="rule-en">Use correct <strong>LIFTING TECHNIQUE</strong> — bend knees, keep back straight</div>
+          <div class="rule-hi">सही तरीके से उठाएं — घुटने मोड़ें, पीठ सीधी रखें</div>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">2</span>
+        <span class="rule-text">
+          <div class="rule-en">Do <strong>NOT</strong> carry loads that block your view</div>
+          <div class="rule-hi">दृष्टि को रोकने वाला बोझ न उठाएं</div>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">3</span>
+        <span class="rule-text">
+          <div class="rule-en">Use <strong>trolleys / hand trucks</strong> for loads over 15 kg</div>
+          <div class="rule-hi">15 किलो से अधिक वज़न के लिए ट्रॉली / हैंड ट्रक उपयोग करें</div>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">4</span>
+        <span class="rule-text">
+          <div class="rule-en">Stack materials on <strong>pallets</strong> — max height <strong>1.5 meters</strong></div>
+          <div class="rule-hi">सामग्री पैलेट पर रखें — अधिकतम ऊंचाई 1.5 मीटर</div>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">5</span>
+        <span class="rule-text">
+          <div class="rule-en">Keep walkways <strong>CLEAR</strong> at all times</div>
+          <div class="rule-hi">रास्ते हमेशा साफ और खाली रखें</div>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">6</span>
+        <span class="rule-text">
+          <div class="rule-en">Wear <strong>safety shoes</strong> — NO open footwear allowed</div>
+          <div class="rule-hi">सेफ्टी शू पहनें — खुले जूते / चप्पल नहीं</div>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 6. Mandatory PPE -->
+  <div class="ppe-section">
+    <div class="section-heading">&#128737; Mandatory PPE / अनिवार्य सुरक्षा उपकरण</div>
+    <div class="ppe-grid">
+
+      <div class="ppe-box">
+        <div class="ppe-icon">&#128095;</div>
+        <div class="ppe-label-en">Safety Shoes</div>
+        <div class="ppe-label-hi">सेफ्टी शू</div>
+      </div>
+
+      <div class="ppe-box">
+        <div class="ppe-icon">&#9937;</div>
+        <div class="ppe-label-en">Hard Hat</div>
+        <div class="ppe-label-hi">हेलमेट / हार्ड हैट</div>
+      </div>
+
+      <div class="ppe-box">
+        <div class="ppe-icon">&#129707;</div>
+        <div class="ppe-label-en">Safety Gloves</div>
+        <div class="ppe-label-hi">सेफ्टी दस्ताने</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 7. Max Lifting Weight -->
+  <div class="weight-section">
+    <div class="weight-box">
+      <div class="weight-icon">&#128722;</div>
+      <div class="weight-text">
+        <div class="weight-label-en">Max Lifting Weight Per Person</div>
+        <div class="weight-value">30 KG</div>
+        <div class="weight-label-hi">प्रति व्यक्ति अधिकतम उठाने का वज़न — 30 किलो</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Emergency Contact -->
+  <div class="emergency-section">
+    <div class="emergency-box">
+      <div class="emergency-icon">&#128222;</div>
+      <div class="emergency-text">
+        <div class="emergency-label">Emergency Contact / आपातकालीन संपर्क</div>
+        <div class="emergency-contact">9167095723</div>
+        <div class="emergency-role">Floor Supervisor / फ्लोर सुपरवाइज़र</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. Footer -->
+  <div class="footer">
+    <div>
+      <div class="footer-company">Pack Masters</div>
+      <div class="footer-address">Rabale MIDC, Navi Mumbai<br>Contract Packaging</div>
+    </div>
+    <div>
+      <div class="footer-std">ISO 45001:2018</div>
+      <div class="footer-code">SIGN-HAZ-MAT-001 | Rev.01 | Mar 2026</div>
+    </div>
+  </div>
+
+  <!-- Bottom Stripes -->
+  <div class="hazard-stripes-bottom"></div>
+
+</div>
+</body>
+</html>

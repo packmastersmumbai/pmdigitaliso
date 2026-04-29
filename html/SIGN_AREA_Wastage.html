@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WASTAGE AREA — Pack Masters</title>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 210mm; min-height: 297mm;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    border: 6px solid #EA580C;
+    display: flex; flex-direction: column;
+  }
+  .header {
+    background: #EA580C;
+    color: #fff;
+    text-align: center;
+    padding: 18mm 8mm 14mm;
+  }
+  .header .icon { font-size: 64pt; line-height: 1; }
+  .header h1 { font-size: 48pt; font-weight: 900; letter-spacing: 2px; margin-top: 4mm; }
+  .header h2 { font-size: 26pt; font-weight: 700; margin-top: 2mm; }
+  .header .subtitle { font-size: 14pt; margin-top: 2mm; opacity: 0.9; }
+  .company {
+    text-align: center; padding: 5mm 8mm;
+    font-size: 14pt; font-weight: 700; color: #EA580C;
+    border-bottom: 3px solid #EA580C;
+  }
+  .rules {
+    flex: 1; padding: 8mm 12mm;
+  }
+  .rules h3 {
+    font-size: 18pt; font-weight: 800; color: #EA580C;
+    margin-bottom: 5mm; text-transform: uppercase;
+    border-bottom: 2px solid #EA580C; padding-bottom: 2mm;
+  }
+  .rules ol {
+    list-style: none; counter-reset: r;
+    padding: 0;
+  }
+  .rules ol li {
+    counter-increment: r;
+    font-size: 15pt; line-height: 1.5;
+    padding: 3mm 0 3mm 12mm;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+  .rules ol li::before {
+    content: counter(r);
+    position: absolute; left: 0; top: 3mm;
+    background: #EA580C; color: #fff;
+    width: 8mm; height: 8mm; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12pt; font-weight: 700;
+  }
+  .tag-box {
+    margin: 6mm 12mm;
+    padding: 5mm 8mm;
+    background: #FFF7ED;
+    border-left: 6px solid #EA580C;
+    font-size: 16pt; font-weight: 700;
+  }
+  .tag-box span { color: #EA580C; }
+  .responsible {
+    padding: 4mm 12mm;
+    font-size: 13pt; color: #555;
+  }
+  .responsible strong { color: #222; }
+  .footer {
+    background: #F5F5F5;
+    border-top: 3px solid #EA580C;
+    padding: 5mm 12mm;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 10pt; color: #666;
+  }
+  .footer .ref { font-weight: 700; color: #EA580C; font-size: 12pt; }
+
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body { width: 210mm; height: 297mm; border-width: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="icon">&#9888;</div>
+  <h1>WASTAGE AREA</h1>
+  <h2>वेस्टेज एरिया &mdash; प्रोसेस वेस्ट</h2>
+  <div class="subtitle">Process waste from production &mdash; not hazardous</div>
+</div>
+
+<div class="company">PACK MASTERS &mdash; Rabale MIDC, Navi Mumbai</div>
+
+<div class="rules">
+  <h3>Area Rules / क्षेत्र नियम</h3>
+  <ol>
+    <li>Process waste only &mdash; NO hazardous waste here<br><em style="color:#888;">केवल प्रोसेस वेस्ट &mdash; खतरनाक अपशिष्ट यहाँ नहीं</em></li>
+    <li>Segregate: paper, plastic, corrugated, general<br><em style="color:#888;">अलग करें: कागज, प्लास्टिक, कोरुगेटेड, सामान्य</em></li>
+    <li>Daily clearance by housekeeping<br><em style="color:#888;">हाउसकीपिंग द्वारा दैनिक सफाई</em></li>
+    <li>Weigh and record for yield tracking (Ref: PM_QSP_QA-11)<br><em style="color:#888;">यील्ड ट्रैकिंग के लिए वजन करें और दर्ज करें</em></li>
+  </ol>
+</div>
+
+<div class="tag-box">
+  Status Tag: <span>&#9632; ORANGE TAG</span> = Process Waste / प्रोसेस वेस्ट
+</div>
+
+<div class="responsible">
+  <strong>Responsible:</strong> Production Supervisor / Housekeeping In-charge
+</div>
+
+<div class="footer">
+  <div>ISO 9001:2015 &bull; Pack Masters Digital ISO QMS</div>
+  <div class="ref">Ref: PM_QSP_QA-11</div>
+</div>
+
+</body>
+</html>

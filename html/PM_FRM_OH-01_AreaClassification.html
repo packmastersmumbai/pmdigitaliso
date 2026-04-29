@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classification of Areas — PM_FRM_OH-01</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:13px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+:root{
+  --navy-deep:#0F1720;--navy:#1A2332;
+  --teal:#2D8B8B;--teal-lt:#3AABAB;--teal-dim:#20616B;
+  --teal-pale:#EBF4F4;
+  --amber:#C08010;
+  --danger:#B83030;--danger-bg:#FEF0EF;
+  --green:#1A7040;--green-bg:#EEF7F2;
+  --ink:#1A2332;--mid:#3A5060;--lt:#6B7F90;--white:#FFFFFF;
+  --font-d:'Barlow Condensed',-apple-system,sans-serif;
+  --font-b:'Inter',-apple-system,sans-serif;
+  --font-m:'JetBrains Mono',monospace;
+  --r:4px;
+
+  --zone-red:#DC2626;--zone-red-bg:#FEE2E2;--zone-red-ink:#991B1B;
+  --zone-yellow:#D97706;--zone-yellow-bg:#FEF3C7;--zone-yellow-ink:#92400E;
+  --zone-green:#059669;--zone-green-bg:#D1FAE5;--zone-green-ink:#065F46;
+}
+
+body{font-family:var(--font-b);background:#E8EEF3;color:var(--ink);line-height:1.5;padding:24px 16px 48px;min-height:100vh}
+
+.document{max-width:960px;margin:0 auto;background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.08),0 12px 40px rgba(0,0,0,.10);border-radius:0 0 var(--r) var(--r);border-top:4px solid var(--teal)}
+
+/* BANNER */
+.banner{background:var(--navy-deep);color:#fff;padding:24px 32px 20px;position:relative;overflow:hidden}
+.banner::after{content:'';position:absolute;right:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--teal),var(--teal-dim))}
+.banner-inner{position:relative;z-index:1}
+.banner-eyebrow{font-family:var(--font-m);font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--teal-lt);margin-bottom:8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ey-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.25);display:inline-block}
+.banner-title{font-family:var(--font-d);font-size:clamp(22px,3vw,30px);font-weight:800;line-height:1.15;letter-spacing:-.3px;margin-bottom:4px}
+.banner-subtitle{font-size:13px;opacity:.7;margin-bottom:8px}
+.banner-meta{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px}
+.banner-org{font-size:11px;opacity:.65;font-style:italic}
+.doc-code-badge{font-family:var(--font-m);font-size:11px;font-weight:600;color:var(--amber);background:rgba(0,0,0,.28);padding:5px 13px;border-radius:3px;letter-spacing:.5px}
+
+/* CONTENT */
+.content{padding:24px 32px 20px}
+.section-head{font-family:var(--font-d);font-size:16px;font-weight:700;color:var(--navy);border-bottom:2px solid var(--teal);padding-bottom:5px;margin:20px 0 12px;text-transform:uppercase;letter-spacing:.5px}
+.section-head:first-child{margin-top:0}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:16px}
+th{background:var(--navy);color:#fff;font-weight:600;padding:7px 8px;text-align:left;font-size:11px;letter-spacing:.3px;text-transform:uppercase}
+td{padding:6px 8px;border-bottom:1px solid #E5E7EB;vertical-align:top}
+
+/* ZONE ROWS */
+.zone-header{font-weight:700;font-size:12px;padding:8px;letter-spacing:.5px;text-transform:uppercase}
+.zone-red{background:var(--zone-red-bg);color:var(--zone-red-ink)}
+.zone-yellow{background:var(--zone-yellow-bg);color:var(--zone-yellow-ink)}
+.zone-green{background:var(--zone-green-bg);color:var(--zone-green-ink)}
+
+.zone-red-row td{background:#FFF5F5}
+.zone-yellow-row td{background:#FFFDF5}
+.zone-green-row td{background:#F5FFF8}
+
+.area-name{font-weight:600}
+
+/* LEGEND */
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0;padding:12px 16px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:var(--r)}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500}
+.legend-swatch{width:20px;height:14px;border-radius:2px;border:1px solid rgba(0,0,0,.15)}
+
+/* RULES */
+.rules-box{background:#F0F7FF;border:1px solid #BFD7F0;border-radius:var(--r);padding:12px 16px;margin:16px 0}
+.rules-box h3{font-family:var(--font-d);font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.rules-box ol{padding-left:20px;font-size:12px;line-height:1.6}
+
+/* EMERGENCY BAR */
+.emergency-bar{background:var(--navy);color:#fff;padding:12px 20px;display:flex;flex-wrap:wrap;gap:12px 24px;font-size:11px;align-items:center}
+.emergency-bar .label{font-weight:700;color:var(--teal-lt);text-transform:uppercase;font-family:var(--font-m);font-size:10px;letter-spacing:.8px}
+.emergency-bar .contact{display:flex;align-items:center;gap:4px}
+.emergency-bar .contact span{font-weight:600}
+
+/* FOOTER */
+.footer{padding:16px 32px;border-top:1px solid #E5E7EB;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:10px;color:var(--lt)}
+.footer-approval{display:flex;gap:24px}
+.footer-approval div{text-align:center}
+.footer-approval .role{font-weight:600;color:var(--ink);font-size:10px}
+.footer-approval .line{border-top:1px solid #999;width:100px;margin:12px auto 2px}
+
+@media print{
+  body{background:#fff;padding:0}
+  .document{box-shadow:none;border-top:none}
+  @page{size:A4 portrait;margin:12mm}
+}
+</style>
+</head>
+<body>
+<div class="document">
+
+  <!-- BANNER -->
+  <div class="banner">
+    <div class="banner-inner">
+      <div class="banner-eyebrow">
+        Pack Masters <span class="ey-sep"></span> Rabale MIDC, Navi Mumbai
+        <span class="ey-sep"></span> ISO 45001:2018 Cl.8.1
+        <span class="ey-sep"></span> ISO 14001:2015 Cl.8.1
+      </div>
+      <div class="banner-title">Classification of Areas — Hazardous &amp; Non-Hazardous Zones</div>
+      <div class="banner-subtitle">क्षेत्र वर्गीकरण — खतरनाक और गैर-खतरनाक ज़ोन</div>
+      <div class="banner-meta">
+        <div class="banner-org">Pack Masters — Contract Packaging (Henkel CR/PU Adhesives, Solvents, Acetone Primers)</div>
+        <div class="doc-code-badge">PM_FRM_OH-01 Rev.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- LEGEND -->
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--zone-red-bg);border-color:var(--zone-red)"></div> Hazardous Zone (RED)</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--zone-yellow-bg);border-color:var(--zone-yellow)"></div> Controlled Zone (YELLOW)</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--zone-green-bg);border-color:var(--zone-green)"></div> Non-Hazardous Zone (GREEN)</div>
+    </div>
+
+    <!-- CLASSIFICATION TABLE -->
+    <h2 class="section-head">Area Classification Register</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:30px">Sr</th>
+          <th style="width:160px">Area</th>
+          <th style="width:60px">Zone</th>
+          <th style="width:160px">Hazard Type</th>
+          <th>Control Measures</th>
+          <th style="width:150px">PPE Required</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- HAZARDOUS RED -->
+        <tr><td colspan="6" class="zone-header zone-red">&#9632; HAZARDOUS ZONE — RED</td></tr>
+
+        <tr class="zone-red-row">
+          <td>1</td>
+          <td class="area-name">BULK RM<br><span style="font-size:10px;color:var(--lt)">(25 pallet positions)</span></td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-red);border-radius:2px;vertical-align:middle"></span> RED</td>
+          <td>Flammable liquids — adhesives, solvents, acetone primer (drums/pails)</td>
+          <td>Ventilation, no ignition sources, spill containment bund, earthing/bonding of all drums</td>
+          <td>Chemical gloves, goggles, apron, respirator</td>
+        </tr>
+
+        <tr class="zone-red-row">
+          <td>2</td>
+          <td class="area-name">PRODUCTION LINE #1</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-red);border-radius:2px;vertical-align:middle"></span> RED</td>
+          <td>Filling / downfilling of solvents &amp; adhesives</td>
+          <td>LEV (local exhaust ventilation), fire extinguisher, spill kit at station</td>
+          <td>Chemical gloves, goggles, apron</td>
+        </tr>
+
+        <tr class="zone-red-row">
+          <td>3</td>
+          <td class="area-name">PRODUCTION LINE #2</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-red);border-radius:2px;vertical-align:middle"></span> RED</td>
+          <td>Stirring / mixing of CR &amp; PU adhesives</td>
+          <td>LEV, earthing/bonding, fire extinguisher at station</td>
+          <td>Chemical gloves, goggles, apron, respirator</td>
+        </tr>
+
+        <tr class="zone-red-row">
+          <td>4</td>
+          <td class="area-name">PRODUCTION LINE #3</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-red);border-radius:2px;vertical-align:middle"></span> RED</td>
+          <td>Sealing / packing with lid press</td>
+          <td>Machine guards, LOTO (Lock-Out Tag-Out) procedure</td>
+          <td>Safety shoes, ear protection, heat-resistant gloves</td>
+        </tr>
+
+        <tr class="zone-red-row">
+          <td>5</td>
+          <td class="area-name">SCRAP AREA</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-red);border-radius:2px;vertical-align:middle"></span> RED</td>
+          <td>Contaminated packaging, adhesive residue</td>
+          <td>Segregation by waste type, closed containers only</td>
+          <td>Chemical gloves, goggles</td>
+        </tr>
+
+        <!-- CONTROLLED YELLOW -->
+        <tr><td colspan="6" class="zone-header zone-yellow">&#9632; CONTROLLED ZONE — YELLOW</td></tr>
+
+        <tr class="zone-yellow-row">
+          <td>6</td>
+          <td class="area-name">LAB / QUALITY ASSURANCE</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-yellow);border-radius:2px;vertical-align:middle"></span> YELLOW</td>
+          <td>Small chemical samples for testing</td>
+          <td>Fume hood, limited quantities, ventilation</td>
+          <td>Lab coat, gloves, goggles</td>
+        </tr>
+
+        <tr class="zone-yellow-row">
+          <td>7</td>
+          <td class="area-name">SAFETY SHOWER AREA</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-yellow);border-radius:2px;vertical-align:middle"></span> YELLOW</td>
+          <td>Emergency decontamination point</td>
+          <td>Weekly inspection, clear access at all times, eyewash station</td>
+          <td>—</td>
+        </tr>
+
+        <!-- NON-HAZARDOUS GREEN -->
+        <tr><td colspan="6" class="zone-header zone-green">&#9632; NON-HAZARDOUS ZONE — GREEN</td></tr>
+
+        <tr class="zone-green-row">
+          <td>8</td>
+          <td class="area-name">FINISHED GOODS<br><span style="font-size:10px;color:var(--lt)">(24 pallet positions)</span></td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-green);border-radius:2px;vertical-align:middle"></span> GREEN</td>
+          <td>Sealed, labelled products</td>
+          <td>Standard housekeeping, FIFO</td>
+          <td>Safety shoes</td>
+        </tr>
+
+        <tr class="zone-green-row">
+          <td>9</td>
+          <td class="area-name">BUFFER PALLETS</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-green);border-radius:2px;vertical-align:middle"></span> GREEN</td>
+          <td>Sealed products awaiting dispatch</td>
+          <td>Standard housekeeping, FIFO</td>
+          <td>Safety shoes</td>
+        </tr>
+
+        <tr class="zone-green-row">
+          <td>10</td>
+          <td class="area-name">PACKAGING MATERIAL<br><span style="font-size:10px;color:var(--lt)">(60 positions: 36+24)</span></td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-green);border-radius:2px;vertical-align:middle"></span> GREEN</td>
+          <td>Empty cans, cartons, labels — combustible but not chemically hazardous (fire risk only)</td>
+          <td>Standard housekeeping, no open flames</td>
+          <td>Safety shoes</td>
+        </tr>
+
+        <tr class="zone-green-row">
+          <td>11</td>
+          <td class="area-name">OFFICE</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:var(--zone-green);border-radius:2px;vertical-align:middle"></span> GREEN</td>
+          <td>Administrative — non-hazardous</td>
+          <td>Standard office safety</td>
+          <td>—</td>
+        </tr>
+
+        <tr class="zone-green-row">
+          <td>12</td>
+          <td class="area-name">GOODS LIFT 5MT / 2MT</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:#9CA3AF;border-radius:2px;vertical-align:middle"></span> GREEN</td>
+          <td>Material movement</td>
+          <td>Standard safety, load limits posted, certified operator only</td>
+          <td>Safety shoes</td>
+        </tr>
+
+        <tr class="zone-green-row">
+          <td>13</td>
+          <td class="area-name">STAIRS (2 locations)</td>
+          <td><span style="display:inline-block;width:14px;height:14px;background:#9CA3AF;border-radius:2px;vertical-align:middle"></span> GREEN</td>
+          <td>Standard safety</td>
+          <td>Anti-slip treads, handrails, adequate lighting</td>
+          <td>Safety shoes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- GENERAL RULES -->
+    <div class="rules-box">
+      <h3>General Safety Rules / सामान्य सुरक्षा नियम</h3>
+      <ol>
+        <li><strong>No smoking, open flames, or spark-producing equipment</strong> in RED and YELLOW zones.</li>
+        <li><strong>Mandatory PPE</strong> must be worn before entering any classified area as indicated above.</li>
+        <li><strong>SDS (Safety Data Sheets)</strong> must be available at each workstation handling chemicals.</li>
+        <li><strong>Spill kits and fire extinguishers</strong> must be checked monthly and kept unobstructed at all times.</li>
+      </ol>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- EMERGENCY BAR -->
+  <div class="emergency-bar">
+    <div class="label">Emergency Contacts / आपातकालीन संपर्क:</div>
+    <div class="contact">Floor Supervisor: <span>Khushi Paswan — 9167095723</span></div>
+    <div class="contact">Fire Warden: <span>8655223426</span></div>
+    <div class="contact">QMR: <span>AZAD Rajbhar — 9136107774</span></div>
+    <div class="contact">Management Rep: <span>Tarun Mishra — 9167155573</span></div>
+    <div class="contact">Security: <span>9136107773</span></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div style="font-size:10px;color:var(--lt)">PM_FRM_OH-01 Rev.00 &nbsp;|&nbsp; Pack Masters, Rabale MIDC, Navi Mumbai &nbsp;|&nbsp; ISO 45001:2018 Cl.8.1 / ISO 14001:2015 Cl.8.1</div>
+    <div class="footer-approval">
+      <div>
+        <div class="role">Prepared By</div>
+        <div class="line"></div>
+        <div>QMR</div>
+      </div>
+      <div>
+        <div class="role">Reviewed By</div>
+        <div class="line"></div>
+        <div>Floor Supervisor</div>
+      </div>
+      <div>
+        <div class="role">Approved By</div>
+        <div class="line"></div>
+        <div>Management Rep</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

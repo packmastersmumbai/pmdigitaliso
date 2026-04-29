@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGER — Electrical Panel Hazard Sign | Pack Masters</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #888;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .poster {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  /* ── 1. YELLOW/BLACK STRIPE TOP ── */
+  .stripe-top {
+    height: 18mm;
+    background: repeating-linear-gradient(
+      45deg,
+      #FFD700 0px,
+      #FFD700 14px,
+      #1a1a1a 14px,
+      #1a1a1a 28px
+    );
+    border-bottom: 3px solid #1a1a1a;
+    flex-shrink: 0;
+  }
+
+  /* ── 2. DANGER BANNER ── */
+  .danger-banner {
+    background: #CC0000;
+    padding: 10px 14px 8px;
+    text-align: center;
+    border-bottom: 4px solid #8B0000;
+    flex-shrink: 0;
+  }
+  .danger-banner .word-danger {
+    font-size: 38pt;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: 6px;
+    line-height: 1;
+    text-transform: uppercase;
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .danger-banner .sub-en {
+    font-size: 15pt;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 3px;
+    display: block;
+    margin-top: 2px;
+  }
+  .danger-banner .sub-hi {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #FFECB3;
+    display: block;
+    margin-top: 1px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 3. LIGHTNING BOLT SYMBOL ZONE ── */
+  .symbol-zone {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px 8px;
+    border-bottom: 3px solid #FFD700;
+    flex-shrink: 0;
+  }
+  .bolt-circle {
+    width: 80px;
+    height: 80px;
+    background: #1a1a1a;
+    border: 4px solid #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .bolt-svg {
+    width: 46px;
+    height: 56px;
+  }
+  .symbol-label-en {
+    color: #FFD700;
+    font-size: 11pt;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-top: 6px;
+    text-align: center;
+  }
+  .symbol-label-hi {
+    color: #CCCCCC;
+    font-size: 9pt;
+    font-weight: 700;
+    margin-top: 1px;
+    text-align: center;
+  }
+
+  /* ── 4. HAZARDS SECTION ── */
+  .hazards-section {
+    background: #FFF8E1;
+    border-bottom: 3px solid #1a1a1a;
+    padding: 8px 12px;
+    flex-shrink: 0;
+  }
+  .hazards-title {
+    font-size: 10pt;
+    font-weight: 900;
+    color: #CC0000;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 6px;
+    border-bottom: 2px solid #CC0000;
+    padding-bottom: 4px;
+  }
+  .hazard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+  .hazard-card {
+    background: #CC0000;
+    border: 2px solid #8B0000;
+    border-radius: 4px;
+    padding: 6px 5px;
+    text-align: center;
+  }
+  .hazard-icon {
+    font-size: 18pt;
+    line-height: 1;
+    display: block;
+    margin-bottom: 3px;
+  }
+  .hazard-en {
+    font-size: 7.5pt;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    display: block;
+  }
+  .hazard-sub-en {
+    font-size: 6pt;
+    font-weight: 700;
+    color: #FFECB3;
+    display: block;
+    margin-top: 1px;
+    line-height: 1.2;
+  }
+  .hazard-hi {
+    font-size: 6.5pt;
+    color: #FFDDDD;
+    display: block;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* ── 5. SAFETY RULES ── */
+  .rules-section {
+    background: #1a1a1a;
+    padding: 8px 12px;
+    border-bottom: 3px solid #FFD700;
+    flex-shrink: 0;
+  }
+  .rules-title {
+    font-size: 10pt;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 6px;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 4px;
+  }
+  .rules-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .rules-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 5px 8px;
+    background: #2a2a2a;
+    border-left: 4px solid #FFD700;
+    border-radius: 2px;
+  }
+  .rule-num {
+    background: #FFD700;
+    color: #1a1a1a;
+    font-size: 8pt;
+    font-weight: 900;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .rule-text {
+    flex: 1;
+  }
+  .rule-en {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.3;
+    display: block;
+  }
+  .rule-hi {
+    font-size: 7.5pt;
+    color: #AAAAAA;
+    display: block;
+    margin-top: 1px;
+  }
+
+  /* ── 6. EMERGENCY ELECTRIC SHOCK BOX ── */
+  .emergency-section {
+    background: #CC0000;
+    padding: 8px 12px;
+    border-bottom: 3px solid #1a1a1a;
+    border-top: 3px solid #1a1a1a;
+    flex-shrink: 0;
+  }
+  .emergency-title {
+    font-size: 10pt;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 6px;
+    background: #8B0000;
+    padding: 4px 8px;
+    border-radius: 3px;
+    border: 2px solid #FFD700;
+  }
+  .emerg-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .emerg-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: rgba(0,0,0,0.25);
+    padding: 5px 8px;
+    border-radius: 3px;
+    border-left: 4px solid #FFD700;
+  }
+  .emerg-icon {
+    font-size: 14pt;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .emerg-text-en {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.3;
+    display: block;
+  }
+  .emerg-text-hi {
+    font-size: 7.5pt;
+    color: #FFDDDD;
+    display: block;
+    margin-top: 1px;
+  }
+  .emerg-phones {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .emerg-phone-card {
+    flex: 1;
+    background: #8B0000;
+    border: 2px solid #FFD700;
+    border-radius: 4px;
+    padding: 5px 8px;
+    text-align: center;
+  }
+  .phone-label {
+    font-size: 7pt;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 1px;
+    display: block;
+  }
+  .phone-number {
+    font-size: 11pt;
+    font-weight: 900;
+    color: #FFFFFF;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── 7. KEEP CLEAR BOX ── */
+  .keep-clear {
+    background: #FFFFFF;
+    border: 4px solid #CC0000;
+    margin: 6px 12px;
+    padding: 7px 12px;
+    text-align: center;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .keep-clear-en {
+    font-size: 12pt;
+    font-weight: 900;
+    color: #CC0000;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    display: block;
+  }
+  .keep-clear-sub {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: block;
+    margin-top: 3px;
+  }
+
+  /* ── 8. EMERGENCY CONTACTS BAR ── */
+  .contacts-bar {
+    background: #FFD700;
+    padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-top: 3px solid #1a1a1a;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .contact-label {
+    font-size: 7pt;
+    font-weight: 900;
+    color: #8B0000;
+    letter-spacing: 1px;
+  }
+  .contact-number {
+    font-size: 9pt;
+    font-weight: 900;
+    color: #1a1a1a;
+  }
+  .contact-divider {
+    font-size: 10pt;
+    color: #8B0000;
+    font-weight: 900;
+  }
+
+  /* ── 9. FOOTER ── */
+  .footer {
+    background: #1a1a1a;
+    padding: 6px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .footer-company {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 1px;
+  }
+  .footer-address {
+    font-size: 6.5pt;
+    color: #AAAAAA;
+    text-align: right;
+  }
+  .footer-std {
+    font-size: 7pt;
+    font-weight: 700;
+    color: #FFD700;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+
+  /* ── BOTTOM STRIPE ── */
+  .stripe-bottom {
+    height: 10mm;
+    background: repeating-linear-gradient(
+      45deg,
+      #FFD700 0px,
+      #FFD700 14px,
+      #1a1a1a 14px,
+      #1a1a1a 28px
+    );
+    border-top: 3px solid #1a1a1a;
+    flex-shrink: 0;
+  }
+
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body { background: none; padding: 0; margin: 0; }
+    .poster {
+      width: 210mm;
+      min-height: 297mm;
+      box-shadow: none;
+    }
+    @page { size: A4 portrait; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- 1. TOP STRIPE -->
+  <div class="stripe-top"></div>
+
+  <!-- 2. DANGER BANNER -->
+  <div class="danger-banner">
+    <span class="word-danger">⚠ DANGER ⚠</span>
+    <span class="sub-en">HIGH VOLTAGE — ELECTRICAL PANEL</span>
+    <span class="sub-hi">खतरा — हाई वोल्टेज — इलेक्ट्रिकल पैनल</span>
+  </div>
+
+  <!-- 3. LIGHTNING BOLT SYMBOL -->
+  <div class="symbol-zone">
+    <div class="bolt-circle">
+      <svg class="bolt-svg" viewBox="0 0 46 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="28,2 10,30 22,30 18,54 36,24 24,24" fill="#FFD700" stroke="#FFA000" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="symbol-label-en">ELECTRIC SHOCK HAZARD</div>
+    <div class="symbol-label-hi">बिजली के झटके का खतरा</div>
+  </div>
+
+  <!-- 4. HAZARDS -->
+  <div class="hazards-section">
+    <div class="hazards-title">⚡ IDENTIFIED HAZARDS / पहचाने गए खतरे ⚡</div>
+    <div class="hazard-grid">
+      <div class="hazard-card">
+        <span class="hazard-icon">⚡</span>
+        <span class="hazard-en">ELECTRIC SHOCK</span>
+        <span class="hazard-sub-en">Risk of Death</span>
+        <span class="hazard-hi">बिजली का झटका<br>मृत्यु का खतरा</span>
+      </div>
+      <div class="hazard-card">
+        <span class="hazard-icon">🔥</span>
+        <span class="hazard-en">ARC FLASH</span>
+        <span class="hazard-sub-en">Severe Burns Risk</span>
+        <span class="hazard-hi">आर्क फ्लैश<br>जलने का खतरा</span>
+      </div>
+      <div class="hazard-card">
+        <span class="hazard-icon">🔥</span>
+        <span class="hazard-en">FIRE HAZARD</span>
+        <span class="hazard-sub-en">Electrical Fire Risk</span>
+        <span class="hazard-hi">आग का खतरा<br>विद्युत आग</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. SAFETY RULES -->
+  <div class="rules-section">
+    <div class="rules-title">⛔ SAFETY RULES — MANDATORY / अनिवार्य सुरक्षा नियम ⛔</div>
+    <ul class="rules-list">
+      <li>
+        <span class="rule-num">1</span>
+        <span class="rule-text">
+          <span class="rule-en">AUTHORIZED ELECTRICIANS ONLY — No unauthorized access permitted</span>
+          <span class="rule-hi">केवल अधिकृत इलेक्ट्रीशियन — अनधिकृत प्रवेश वर्जित है</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">2</span>
+        <span class="rule-text">
+          <span class="rule-en">LOCK OUT / TAG OUT (LOTO) before any maintenance or repair work</span>
+          <span class="rule-hi">किसी भी कार्य से पहले लॉक आउट / टैग आउट करें</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">3</span>
+        <span class="rule-text">
+          <span class="rule-en">Do NOT open panel doors without proper authorization and PPE</span>
+          <span class="rule-hi">बिना अनुमति और PPE के पैनल के दरवाजे न खोलें</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">4</span>
+        <span class="rule-text">
+          <span class="rule-en">Do NOT store materials near electrical panels — keep area clear</span>
+          <span class="rule-hi">पैनल के पास कोई सामान न रखें — क्षेत्र खाली रखें</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">5</span>
+        <span class="rule-text">
+          <span class="rule-en">Keep area DRY — No water or liquids permitted near panels</span>
+          <span class="rule-hi">क्षेत्र सूखा रखें — पानी या तरल पदार्थ न लाएं</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">6</span>
+        <span class="rule-text">
+          <span class="rule-en">Do NOT use metal ladders near electrical panels</span>
+          <span class="rule-hi">पैनल के पास धातु की सीढ़ी का उपयोग न करें</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 6. IN CASE OF ELECTRIC SHOCK -->
+  <div class="emergency-section">
+    <div class="emergency-title">🚨 IN CASE OF ELECTRIC SHOCK / बिजली का झटका लगने पर 🚨</div>
+    <div class="emerg-steps">
+      <div class="emerg-step">
+        <span class="emerg-icon">✋</span>
+        <span class="rule-text">
+          <span class="emerg-text-en">DO NOT touch the victim — Switch OFF the power supply FIRST</span>
+          <span class="emerg-text-hi">पीड़ित को हाथ न लगाएं — पहले बिजली बंद करें</span>
+        </span>
+      </div>
+      <div class="emerg-step">
+        <span class="emerg-icon">📢</span>
+        <span class="rule-text">
+          <span class="emerg-text-en">Call for immediate help — Dial Floor Supervisor: 9167095723</span>
+          <span class="emerg-text-hi">तुरंत मदद के लिए पुकारें — फ्लोर सुपरवाइजर: 9167095723</span>
+        </span>
+      </div>
+      <div class="emerg-step">
+        <span class="emerg-icon">🧤</span>
+        <span class="rule-text">
+          <span class="emerg-text-en">If safe, use dry insulating material (wood/rubber) to separate victim from source</span>
+          <span class="emerg-text-hi">सुरक्षित हो तो सूखी इंसुलेटिंग सामग्री से पीड़ित को अलग करें</span>
+        </span>
+      </div>
+      <div class="emerg-step">
+        <span class="emerg-icon">🚑</span>
+        <span class="rule-text">
+          <span class="emerg-text-en">Call Ambulance: 102 &nbsp;|&nbsp; Hospital: 022-27692296</span>
+          <span class="emerg-text-hi">एम्बुलेंस: 102 | अस्पताल: 022-27692296</span>
+        </span>
+      </div>
+    </div>
+    <div class="emerg-phones">
+      <div class="emerg-phone-card">
+        <span class="phone-label">FLOOR SUPERVISOR</span>
+        <span class="phone-number">9167095723</span>
+      </div>
+      <div class="emerg-phone-card">
+        <span class="phone-label">AMBULANCE</span>
+        <span class="phone-number">102</span>
+      </div>
+      <div class="emerg-phone-card">
+        <span class="phone-label">HOSPITAL</span>
+        <span class="phone-number">022-27692296</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. KEEP CLEAR -->
+  <div class="keep-clear">
+    <span class="keep-clear-en">⛔ KEEP CLEAR — 1 METER CLEARANCE REQUIRED ⛔</span>
+    <span class="keep-clear-sub">Maintain 1 metre clearance from electrical panels at all times &nbsp;|&nbsp; हमेशा 1 मीटर दूरी बनाए रखें</span>
+  </div>
+
+  <!-- 8. EMERGENCY CONTACTS BAR -->
+  <div class="contacts-bar">
+    <span style="font-size:8pt;font-weight:900;color:#8B0000;letter-spacing:2px;">EMERGENCY CONTACTS:</span>
+    <div class="contact-item">
+      <span class="contact-label">FLOOR SUPERVISOR</span>
+      <span class="contact-number">9167095723</span>
+    </div>
+    <span class="contact-divider">|</span>
+    <div class="contact-item">
+      <span class="contact-label">SECURITY</span>
+      <span class="contact-number">9136107773</span>
+    </div>
+    <span class="contact-divider">|</span>
+    <div class="contact-item">
+      <span class="contact-label">AMBULANCE</span>
+      <span class="contact-number">102</span>
+    </div>
+  </div>
+
+  <!-- 9. FOOTER -->
+  <div class="footer">
+    <div>
+      <div class="footer-company">PACK MASTERS</div>
+      <div style="font-size:6.5pt;color:#888888;margin-top:2px;">Rabale MIDC, Navi Mumbai</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="footer-std">ISO 45001:2018 — OHS MANAGEMENT</div>
+      <div style="font-size:6pt;color:#888888;margin-top:2px;">SIGN-HAZ-EP-01 &nbsp;|&nbsp; Rev. 01 &nbsp;|&nbsp; Mar 2026</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM STRIPE -->
+  <div class="stripe-bottom"></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAZARDOUS WASTE AREA — Pack Masters</title>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 210mm; min-height: 297mm;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    border: 6px solid #CC0000;
+    display: flex; flex-direction: column;
+  }
+  /* Hazard stripe top bar */
+  .hazard-stripe {
+    height: 12mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD600, #FFD600 14px,
+      #222 14px, #222 28px
+    );
+  }
+  .header {
+    background: #CC0000;
+    color: #fff;
+    text-align: center;
+    padding: 12mm 8mm 10mm;
+  }
+  .header .icon {
+    font-size: 56pt; line-height: 1;
+    display: inline-block;
+    background: #FFD600; color: #222;
+    width: 80px; height: 72px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto; padding-top: 14px;
+    font-weight: 900;
+  }
+  .header h1 { font-size: 44pt; font-weight: 900; letter-spacing: 2px; margin-top: 4mm; }
+  .header h2 { font-size: 22pt; font-weight: 700; margin-top: 2mm; }
+  .company {
+    text-align: center; padding: 4mm 8mm;
+    font-size: 14pt; font-weight: 700; color: #CC0000;
+    border-bottom: 3px solid #CC0000;
+  }
+  .waste-types {
+    text-align: center; padding: 5mm 8mm;
+    background: #FEF3C7;
+    font-size: 13pt; font-weight: 700;
+    border-bottom: 2px solid #FFD600;
+  }
+  .waste-types span {
+    display: inline-block; margin: 0 3mm;
+    padding: 1mm 4mm;
+    background: #CC0000; color: #fff; border-radius: 3px;
+    font-size: 11pt;
+  }
+  .rules {
+    flex: 1; padding: 6mm 12mm;
+  }
+  .rules h3 {
+    font-size: 16pt; font-weight: 800; color: #CC0000;
+    margin-bottom: 4mm; text-transform: uppercase;
+    border-bottom: 2px solid #CC0000; padding-bottom: 2mm;
+  }
+  .rules ol {
+    list-style: none; counter-reset: r;
+    padding: 0;
+  }
+  .rules ol li {
+    counter-increment: r;
+    font-size: 14pt; line-height: 1.45;
+    padding: 2.5mm 0 2.5mm 12mm;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+  .rules ol li::before {
+    content: counter(r);
+    position: absolute; left: 0; top: 2.5mm;
+    background: #CC0000; color: #fff;
+    width: 7mm; height: 7mm; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11pt; font-weight: 700;
+  }
+  .tag-box {
+    margin: 4mm 12mm;
+    padding: 4mm 8mm;
+    background: #FEE2E2;
+    border-left: 6px solid #CC0000;
+    font-size: 14pt; font-weight: 700;
+  }
+  .tag-box span { color: #CC0000; }
+  .emergency {
+    margin: 3mm 12mm;
+    padding: 4mm 8mm;
+    background: #FFD600; color: #222;
+    font-size: 14pt; font-weight: 800;
+    text-align: center;
+    border: 2px solid #222;
+  }
+  .emergency .label { font-size: 11pt; font-weight: 700; text-transform: uppercase; }
+  .footer {
+    background: #F5F5F5;
+    border-top: 3px solid #CC0000;
+    padding: 4mm 12mm;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 10pt; color: #666;
+  }
+  .footer .ref { font-weight: 700; color: #CC0000; font-size: 11pt; }
+  .hazard-stripe-bottom {
+    height: 8mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD600, #FFD600 14px,
+      #222 14px, #222 28px
+    );
+  }
+
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body { width: 210mm; height: 297mm; border-width: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hazard-stripe"></div>
+
+<div class="header">
+  <div class="icon">&#9888;</div>
+  <h1>HAZARDOUS WASTE</h1>
+  <h2>हैज़र्डस वेस्ट &mdash; खतरनाक अपशिष्ट</h2>
+</div>
+
+<div class="company">PACK MASTERS &mdash; Rabale MIDC, Navi Mumbai</div>
+
+<div class="waste-types">
+  Waste Types Stored:
+  <span>Adhesive Residue</span>
+  <span>Solvent Waste</span>
+  <span>Contaminated Packaging</span>
+</div>
+
+<div class="rules">
+  <h3>Area Rules / क्षेत्र नियम</h3>
+  <ol>
+    <li>AUTHORIZED PERSONNEL ONLY<br><em style="color:#888;">केवल अधिकृत कर्मचारी</em></li>
+    <li>Wear PPE: Gloves, Goggles, Apron, Safety Shoes<br><em style="color:#888;">PPE पहनें: दस्ताने, गॉगल, एप्रन, सेफ्टी शूज़</em></li>
+    <li>Keep containers CLOSED &mdash; store on spill pallets<br><em style="color:#888;">कंटेनर बंद रखें &mdash; स्पिल पैलेट पर रखें</em></li>
+    <li>NO SMOKING / NO FLAMES<br><em style="color:#888;">धूम्रपान निषेध / आग निषेध</em></li>
+    <li>Disposal only through MPCB-authorized recyclers<br><em style="color:#888;">केवल MPCB-अधिकृत रीसाइक्लर्स द्वारा निपटान</em></li>
+  </ol>
+</div>
+
+<div class="tag-box">
+  Status Label: <span>&#9632; RED + YELLOW</span> = Hazardous Waste / खतरनाक अपशिष्ट
+</div>
+
+<div class="emergency">
+  <div class="label">Emergency Contacts / आपातकालीन संपर्क</div>
+  Fire Warden: 8655223426 &nbsp;&bull;&nbsp; Supervisor: 9167095723
+</div>
+
+<div class="footer">
+  <div>ISO 14001:2015 &bull; HWMR 2016 &bull; Pack Masters Digital ISO QMS</div>
+  <div class="ref">Ref: PM_QSP_ENV-01</div>
+</div>
+
+<div class="hazard-stripe-bottom"></div>
+
+</body>
+</html>

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGER — Hazardous Waste Storage Area | Pack Masters</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 210mm;
+    min-height: 297mm;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #111;
+    overflow: hidden;
+  }
+
+  /* ── HAZARD STRIPE PATTERN ─────────────────────────────────── */
+  .hazard-stripe {
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px,
+      #FFD700 18px,
+      #111111 18px,
+      #111111 36px
+    );
+  }
+
+  /* ── TOP STRIPE BAR ────────────────────────────────────────── */
+  .top-stripe {
+    height: 14mm;
+  }
+
+  /* ── HEADER BLOCK ──────────────────────────────────────────── */
+  .header-block {
+    background: #B83030;
+    padding: 5mm 6mm 4mm;
+    display: flex;
+    align-items: center;
+    gap: 5mm;
+    border-bottom: 4px solid #FFD700;
+  }
+
+  /* CSS-only warning triangle */
+  .warn-triangle {
+    flex-shrink: 0;
+    width: 0;
+    height: 0;
+    border-left: 14mm solid transparent;
+    border-right: 14mm solid transparent;
+    border-bottom: 24mm solid #FFD700;
+    position: relative;
+    filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
+  }
+  .warn-triangle::after {
+    content: "!";
+    position: absolute;
+    top: 6mm;
+    left: -5mm;
+    font-size: 22pt;
+    font-weight: 900;
+    color: #111;
+    width: 10mm;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .header-text {
+    flex: 1;
+  }
+  .header-text .danger-label {
+    font-size: 11pt;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .header-text h1 {
+    font-size: 22pt;
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  }
+  .header-text .hindi-h1 {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #FFD700;
+    margin-top: 1mm;
+    line-height: 1.2;
+  }
+
+  .company-badge {
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .company-badge .co-name {
+    font-size: 10pt;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+  }
+  .company-badge .co-loc {
+    font-size: 7.5pt;
+    color: #FFD700;
+    margin-top: 1mm;
+  }
+
+  /* ── AUTHORIZED BANNER ─────────────────────────────────────── */
+  .auth-banner {
+    background: #111;
+    border-top: 4px solid #FFD700;
+    border-bottom: 4px solid #FFD700;
+    text-align: center;
+    padding: 3mm 4mm;
+  }
+  .auth-banner .auth-en {
+    font-size: 20pt;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  .auth-banner .auth-hi {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-top: 1mm;
+  }
+
+  /* ── MAIN CONTENT AREA ─────────────────────────────────────── */
+  .content {
+    padding: 4mm 5mm 3mm;
+    display: flex;
+    flex-direction: column;
+    gap: 4mm;
+  }
+
+  /* ── SECTION TITLES ────────────────────────────────────────── */
+  .section-title {
+    font-size: 10pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0D1B6E;
+    border-left: 4px solid #E8A020;
+    padding-left: 3mm;
+    margin-bottom: 2mm;
+  }
+
+  /* ── WASTE TYPES GRID ──────────────────────────────────────── */
+  .waste-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2mm;
+  }
+  .waste-card {
+    border: 2px solid #B83030;
+    border-radius: 2mm;
+    padding: 2mm 1mm;
+    text-align: center;
+    background: #FFF8F0;
+  }
+  .waste-card .waste-icon {
+    font-size: 16pt;
+    line-height: 1;
+    margin-bottom: 1mm;
+  }
+  .waste-card .waste-name {
+    font-size: 7pt;
+    font-weight: 700;
+    color: #B83030;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  .waste-card .waste-hindi {
+    font-size: 6.5pt;
+    color: #555;
+    margin-top: 0.5mm;
+    line-height: 1.2;
+  }
+
+  /* ── RULES & PPE TWO-COL ───────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    align-items: start;
+  }
+
+  /* ── MANDATORY RULES ───────────────────────────────────────── */
+  .rules-box {
+    border: 2.5px solid #0D1B6E;
+    border-radius: 2mm;
+    padding: 3mm;
+    background: #F5F7FF;
+  }
+  .rule-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2mm;
+    padding: 1.5mm 0;
+    border-bottom: 1px dashed #CCC;
+  }
+  .rule-item:last-child {
+    border-bottom: none;
+  }
+  .rule-num {
+    flex-shrink: 0;
+    width: 6mm;
+    height: 6mm;
+    background: #E8A020;
+    color: #111;
+    font-size: 8pt;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5mm;
+  }
+  .rule-text {
+    flex: 1;
+  }
+  .rule-text .rule-en {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.3;
+  }
+  .rule-text .rule-hi {
+    font-size: 7pt;
+    color: #555;
+    line-height: 1.2;
+    margin-top: 0.3mm;
+  }
+  .rule-text .rule-en strong {
+    color: #B83030;
+  }
+
+  /* ── PPE BOXES ─────────────────────────────────────────────── */
+  .ppe-section {}
+  .ppe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2mm;
+  }
+  .ppe-card {
+    border: 2.5px solid #0D1B6E;
+    border-radius: 2mm;
+    padding: 2.5mm 2mm;
+    text-align: center;
+    background: #F0F4FF;
+  }
+  .ppe-card .ppe-icon {
+    font-size: 20pt;
+    line-height: 1;
+    margin-bottom: 1mm;
+  }
+  .ppe-card .ppe-en {
+    font-size: 8pt;
+    font-weight: 900;
+    color: #0D1B6E;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  .ppe-card .ppe-hi {
+    font-size: 7pt;
+    color: #555;
+    margin-top: 0.5mm;
+  }
+  .ppe-card .ppe-mandatory {
+    display: inline-block;
+    margin-top: 1mm;
+    background: #B83030;
+    color: #fff;
+    font-size: 6.5pt;
+    font-weight: 700;
+    padding: 0.5mm 2mm;
+    border-radius: 1mm;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── SPILL RESPONSE ────────────────────────────────────────── */
+  .spill-box {
+    background: #B83030;
+    border-radius: 2mm;
+    padding: 3mm 4mm;
+    border: 3px solid #FFD700;
+  }
+  .spill-title {
+    font-size: 10pt;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+  .spill-title::before {
+    content: "⚠";
+    font-size: 13pt;
+  }
+  .spill-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2mm;
+  }
+  .spill-step {
+    background: rgba(0,0,0,0.35);
+    border-radius: 1.5mm;
+    padding: 2mm;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .spill-step .step-num {
+    font-size: 7pt;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .spill-step .step-icon {
+    font-size: 14pt;
+    line-height: 1.2;
+    margin: 0.5mm 0;
+  }
+  .spill-step .step-en {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #FFF;
+    line-height: 1.3;
+  }
+  .spill-step .step-hi {
+    font-size: 6.5pt;
+    color: #FFD;
+    margin-top: 0.5mm;
+    line-height: 1.2;
+  }
+
+  /* ── NO SMOKING / NO FLAME BAR ─────────────────────────────── */
+  .prohibit-bar {
+    background: #111;
+    border-radius: 2mm;
+    padding: 2.5mm 4mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8mm;
+    border: 2px solid #B83030;
+  }
+  .prohibit-item {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+  .prohibit-symbol {
+    font-size: 18pt;
+    line-height: 1;
+  }
+  .prohibit-text {
+    text-align: left;
+  }
+  .prohibit-text .p-en {
+    font-size: 9pt;
+    font-weight: 900;
+    color: #B83030;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .prohibit-text .p-hi {
+    font-size: 7.5pt;
+    color: #FFD700;
+  }
+  .prohibit-divider {
+    width: 0.5mm;
+    height: 10mm;
+    background: #444;
+  }
+
+  /* ── BOTTOM STRIPE ─────────────────────────────────────────── */
+  .bottom-stripe {
+    height: 8mm;
+  }
+
+  /* ── FOOTER ────────────────────────────────────────────────── */
+  .footer {
+    background: #0D1B6E;
+    padding: 2mm 5mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-left {
+    font-size: 7pt;
+    color: #AAC4FF;
+    line-height: 1.5;
+  }
+  .footer-left strong {
+    color: #FFD700;
+    font-size: 7.5pt;
+  }
+  .footer-right {
+    text-align: right;
+    font-size: 7pt;
+    color: #AAC4FF;
+    line-height: 1.5;
+  }
+  .footer-right strong {
+    color: #FFD700;
+  }
+
+  /* ── PRINT MEDIA ────────────────────────────────────────────── */
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body {
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+    }
+    .hazard-stripe {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP HAZARD STRIPE -->
+<div class="top-stripe hazard-stripe"></div>
+
+<!-- HEADER -->
+<div class="header-block">
+  <div class="warn-triangle"></div>
+  <div class="header-text">
+    <div class="danger-label">&#9888; DANGER &nbsp;&#9888;</div>
+    <h1>Hazardous Waste<br>Storage Area</h1>
+    <div class="hindi-h1">खतरा — हैज़र्डस वेस्ट स्टोरेज एरिया</div>
+  </div>
+  <div class="company-badge">
+    <div class="co-name">Pack Masters</div>
+    <div class="co-loc">Rabale MIDC, Navi Mumbai</div>
+    <div class="co-loc" style="margin-top:1.5mm; color:#FFECB3; font-size:7pt;">ISO 14001:2015 &nbsp;|&nbsp; HWMR 2016</div>
+  </div>
+</div>
+
+<!-- AUTHORIZED BANNER -->
+<div class="auth-banner">
+  <div class="auth-en">&#128274; AUTHORIZED PERSONNEL ONLY</div>
+  <div class="auth-hi">केवल अधिकृत कर्मचारी ही प्रवेश करें</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+
+  <!-- WASTE TYPES -->
+  <div>
+    <div class="section-title">Waste Types Stored / संग्रहीत अपशिष्ट के प्रकार</div>
+    <div class="waste-grid">
+      <div class="waste-card">
+        <div class="waste-icon">&#128718;</div>
+        <div class="waste-name">Adhesive Residue</div>
+        <div class="waste-hindi">चिपकने वाला अवशेष</div>
+      </div>
+      <div class="waste-card">
+        <div class="waste-icon">&#9881;</div>
+        <div class="waste-name">Solvent Waste</div>
+        <div class="waste-hindi">विलायक अपशिष्ट</div>
+      </div>
+      <div class="waste-card">
+        <div class="waste-icon">&#128230;</div>
+        <div class="waste-name">Contaminated Packaging</div>
+        <div class="waste-hindi">दूषित पैकेजिंग</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NO SMOKING BAR -->
+  <div class="prohibit-bar">
+    <div class="prohibit-item">
+      <div class="prohibit-symbol">&#128683;</div>
+      <div class="prohibit-text">
+        <div class="p-en">NO SMOKING</div>
+        <div class="p-hi">धूम्रपान निषेध</div>
+      </div>
+    </div>
+    <div class="prohibit-divider"></div>
+    <div class="prohibit-item">
+      <div class="prohibit-symbol">&#128293;</div>
+      <div class="prohibit-text">
+        <div class="p-en">NO OPEN FLAMES</div>
+        <div class="p-hi">खुली आग सख्त मना है</div>
+      </div>
+    </div>
+    <div class="prohibit-divider"></div>
+    <div class="prohibit-item">
+      <div class="prohibit-symbol">&#9889;</div>
+      <div class="prohibit-text">
+        <div class="p-en">NO SPARKS</div>
+        <div class="p-hi">चिंगारी वर्जित है</div>
+      </div>
+    </div>
+    <div class="prohibit-divider"></div>
+    <div class="prohibit-item">
+      <div class="prohibit-symbol">&#128242;</div>
+      <div class="prohibit-text">
+        <div class="p-en">NO MOBILE PHONES</div>
+        <div class="p-hi">मोबाइल फोन मना है</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RULES + PPE TWO COL -->
+  <div class="two-col">
+
+    <!-- MANDATORY RULES -->
+    <div>
+      <div class="section-title">Mandatory Rules / अनिवार्य नियम</div>
+      <div class="rules-box">
+        <div class="rule-item">
+          <div class="rule-num">1</div>
+          <div class="rule-text">
+            <div class="rule-en">Wear <strong>full PPE</strong> before entering — Gloves, Goggles, Safety Shoes, Apron</div>
+            <div class="rule-hi">प्रवेश से पहले पूर्ण PPE पहनें</div>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">2</div>
+          <div class="rule-text">
+            <div class="rule-en">Keep containers <strong>CLOSED</strong> when not in use</div>
+            <div class="rule-hi">उपयोग में न होने पर कंटेनर बंद रखें</div>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">3</div>
+          <div class="rule-text">
+            <div class="rule-en">Store <strong>only on spill containment pallets</strong></div>
+            <div class="rule-hi">केवल स्पिल कन्टेनमेंट पैलेट पर रखें</div>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">4</div>
+          <div class="rule-text">
+            <div class="rule-en">Maintain <strong>adequate ventilation</strong> at all times</div>
+            <div class="rule-hi">हमेशा पर्याप्त वेंटिलेशन सुनिश्चित करें</div>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">5</div>
+          <div class="rule-text">
+            <div class="rule-en"><strong>Label every container:</strong> Waste Type, Hazard Symbol, Date, Qty</div>
+            <div class="rule-hi">हर कंटेनर पर लेबल लगाएं: प्रकार, तारीख, मात्रा</div>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-num">6</div>
+          <div class="rule-text">
+            <div class="rule-en">Do <strong>NOT mix</strong> different waste categories</div>
+            <div class="rule-hi">विभिन्न अपशिष्ट श्रेणियों को मिश्रित न करें</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REQUIRED PPE -->
+    <div class="ppe-section">
+      <div class="section-title">Required PPE / आवश्यक सुरक्षा उपकरण</div>
+      <div class="ppe-grid">
+        <div class="ppe-card">
+          <div class="ppe-icon">&#129510;</div>
+          <div class="ppe-en">Chemical Gloves</div>
+          <div class="ppe-hi">केमिकल दस्ताने</div>
+          <div class="ppe-mandatory">MANDATORY</div>
+        </div>
+        <div class="ppe-card">
+          <div class="ppe-icon">&#128064;</div>
+          <div class="ppe-en">Safety Goggles</div>
+          <div class="ppe-hi">सुरक्षा चश्मा</div>
+          <div class="ppe-mandatory">MANDATORY</div>
+        </div>
+        <div class="ppe-card">
+          <div class="ppe-icon">&#128095;</div>
+          <div class="ppe-en">Safety Shoes</div>
+          <div class="ppe-hi">सुरक्षा जूते</div>
+          <div class="ppe-mandatory">MANDATORY</div>
+        </div>
+        <div class="ppe-card">
+          <div class="ppe-icon">&#129399;</div>
+          <div class="ppe-en">Chemical Apron</div>
+          <div class="ppe-hi">केमिकल एप्रन</div>
+          <div class="ppe-mandatory">MANDATORY</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SPILL RESPONSE -->
+  <div>
+    <div class="section-title">Spill Response Procedure / स्पिल रिस्पॉन्स प्रक्रिया</div>
+    <div class="spill-box">
+      <div class="spill-title">Emergency Spill Response — तुरंत यह करें</div>
+      <div class="spill-steps">
+        <div class="spill-step">
+          <div class="step-num">Step 1</div>
+          <div class="step-icon">&#128721;</div>
+          <div class="step-en">STOP all activity immediately</div>
+          <div class="step-hi">सभी काम तुरंत रोकें</div>
+        </div>
+        <div class="spill-step">
+          <div class="step-num">Step 2</div>
+          <div class="step-icon">&#128168;</div>
+          <div class="step-en">CONTAIN the spill — use absorbents</div>
+          <div class="step-hi">स्पिल को रोकें — अवशोषक उपयोग करें</div>
+        </div>
+        <div class="spill-step">
+          <div class="step-num">Step 3</div>
+          <div class="step-icon">&#129521;</div>
+          <div class="step-en">Locate nearest SPILL KIT</div>
+          <div class="step-hi">निकटतम स्पिल किट ढूंढें</div>
+        </div>
+        <div class="spill-step">
+          <div class="step-num">Step 4</div>
+          <div class="step-icon">&#128222;</div>
+          <div class="step-en">Alert SUPERVISOR immediately</div>
+          <div class="step-hi">सुपरवाइज़र को तुरंत सूचित करें</div>
+          <div style="margin-top:1.5mm; font-size:6.5pt; line-height:1.5; color:#FFD700; text-align:left;">
+            <strong style="color:#FFD; font-size:6pt; letter-spacing:0.5px;">FLOOR SUPERVISOR</strong><br>
+            Khushi Paswan: <strong style="color:#fff;">9167095723</strong><br>
+            <strong style="color:#FFD; font-size:6pt;">FIRE WARDEN</strong><br>
+            <strong style="color:#fff;">8655223426</strong><br>
+            <strong style="color:#FFD; font-size:6pt;">MGMT REP (Tarun Mishra)</strong><br>
+            <strong style="color:#fff;">9167155573</strong><br>
+            <strong style="color:#FFD; font-size:6pt;">SECURITY</strong><br>
+            <strong style="color:#fff;">9136107773</strong><br>
+            <hr style="border-color:rgba(255,255,255,0.25); margin:1mm 0;">
+            <strong style="color:#FFD; font-size:6pt;">POLICE:</strong> <strong style="color:#fff;">100 / 022-27606162</strong><br>
+            <strong style="color:#FFD; font-size:6pt;">FIRE:</strong> <strong style="color:#fff;">022-27698101</strong><br>
+            <strong style="color:#FFD; font-size:6pt;">AMBULANCE:</strong> <strong style="color:#fff;">102 / 022-27692296</strong><br>
+            <strong style="color:#FFD; font-size:6pt;">HOSPITAL:</strong> <strong style="color:#fff;">09322017001</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- BOTTOM HAZARD STRIPE -->
+<div class="bottom-stripe hazard-stripe"></div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-left">
+    <strong>PM_OH-NTB-01</strong> &nbsp;|&nbsp; Rev 1.0 &nbsp;|&nbsp; Effective: [TO BE ENTERED]<br>
+    Prepared by: EHS Officer &nbsp;|&nbsp; Approved by: QMR — AZAD Rajbhar
+  </div>
+  <div class="footer-right">
+    <strong>ISO 14001:2015</strong> &nbsp;|&nbsp; HWMR 2016<br>
+    Pack Masters, Rabale MIDC, Navi Mumbai
+  </div>
+</div>
+
+</body>
+</html>

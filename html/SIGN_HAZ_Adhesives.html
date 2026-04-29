@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGER — CR &amp; PU Adhesives Handling Area | Pack Masters</title>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    html, body { width: 210mm; height: 297mm; }
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hazard stripes */
+  .stripe-top {
+    height: 10mm;
+    background: repeating-linear-gradient(45deg, #FFD700 0px, #FFD700 20px, #000 20px, #000 40px);
+    flex-shrink: 0;
+  }
+  .stripe-bottom {
+    height: 8mm;
+    background: repeating-linear-gradient(45deg, #FFD700 0px, #FFD700 20px, #000 20px, #000 40px);
+    flex-shrink: 0;
+  }
+
+  /* DANGER Banner */
+  .danger-banner {
+    background: #CC0000;
+    color: #fff;
+    text-align: center;
+    padding: 3mm 4mm 2.5mm;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .danger-banner .eng {
+    font-size: 32pt;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    display: block;
+  }
+  .danger-banner .hin {
+    font-size: 17pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: block;
+    margin-top: 1mm;
+    opacity: 0.92;
+  }
+
+  /* Substance Block */
+  .substance-block {
+    background: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 3mm 4mm;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
+  .substance-block .eng {
+    font-size: 13.5pt;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+  }
+  .substance-block .hin {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #e8c800;
+    display: block;
+    margin-top: 1mm;
+  }
+
+  /* Main content area */
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 3mm 5mm 2mm;
+    gap: 2.5mm;
+    overflow: hidden;
+  }
+
+  /* Section headings */
+  .section-heading {
+    font-size: 8.5pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #CC0000;
+    border-bottom: 1.5px solid #CC0000;
+    padding-bottom: 0.5mm;
+    margin-bottom: 1.5mm;
+  }
+
+  /* Hazard Cards */
+  .hazard-row { display: flex; gap: 3mm; flex-shrink: 0; }
+  .hazard-card {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-top: 3.5px solid #CC0000;
+    padding: 2mm 2.5mm;
+    background: #fff9f9;
+  }
+  .hazard-card .hc-title {
+    font-size: 9pt;
+    font-weight: 900;
+    color: #CC0000;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1mm;
+  }
+  .hazard-card .hc-eng { font-size: 7.5pt; color: #222; line-height: 1.35; display: block; }
+  .hazard-card .hc-hin { font-size: 7pt; color: #666; line-height: 1.3; display: block; margin-top: 1mm; }
+
+  /* Mandatory Rules */
+  .rules-section { flex-shrink: 0; }
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5mm 3mm; }
+  .rule-item { display: flex; align-items: flex-start; gap: 1.5mm; font-size: 8pt; line-height: 1.35; color: #222; }
+  .rule-num {
+    background: #CC0000;
+    color: #fff;
+    font-weight: 900;
+    font-size: 7.5pt;
+    min-width: 5mm;
+    height: 5mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.2mm;
+  }
+  .rule-item .kw { font-weight: 900; color: #CC0000; }
+
+  /* PPE */
+  .ppe-section { flex-shrink: 0; }
+  .ppe-row { display: flex; gap: 2.5mm; }
+  .ppe-box {
+    flex: 1;
+    border: 2px solid #0D1B6E;
+    padding: 0;
+    text-align: center;
+    background: #f0f3fa;
+    overflow: hidden;
+  }
+  .ppe-box .ppe-icon-area {
+    width: 100%;
+    height: 9mm;
+    background: #0D1B6E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ppe-box .ppe-icon-area span {
+    color: #FFD700;
+    font-weight: 900;
+    font-size: 6.5pt;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    padding: 0 1.5mm;
+  }
+  .ppe-box .ppe-label {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #0D1B6E;
+    display: block;
+    line-height: 1.25;
+    padding: 1.5mm 1mm;
+  }
+
+  /* First Aid */
+  .fa-section { flex-shrink: 0; }
+  .fa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5mm; }
+  .fa-cell {
+    border: 1px solid #ccc;
+    border-left: 3px solid #0D1B6E;
+    padding: 1.5mm 2mm;
+    background: #f8f9ff;
+  }
+  .fa-cell .fa-type { font-size: 8pt; font-weight: 900; color: #0D1B6E; text-transform: uppercase; display: block; margin-bottom: 0.5mm; }
+  .fa-cell .fa-text { font-size: 7.5pt; color: #333; line-height: 1.35; display: block; }
+
+  /* SDS Bar */
+  .sds-bar {
+    background: #222;
+    color: #FFD700;
+    text-align: center;
+    padding: 1.5mm 4mm;
+    font-size: 7.5pt;
+    font-weight: 700;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+  }
+  .sds-bar .sep { color: #888; margin: 0 2mm; }
+
+  /* Footer */
+  .footer {
+    background: #0D1B6E;
+    color: #fff;
+    text-align: center;
+    padding: 1.5mm 4mm;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    flex-shrink: 0;
+  }
+  .footer .sep { color: #8899cc; margin: 0 2mm; }
+</style>
+</head>
+<body>
+
+<div class="stripe-top"></div>
+
+<div class="danger-banner">
+  <span class="eng">DANGER</span>
+  <span class="hin">खतरा</span>
+</div>
+
+<div class="substance-block">
+  <span class="eng">CR &amp; PU Based Adhesives Handling Area</span>
+  <span class="hin">CR और PU आधारित एडहेसिव हैंडलिंग एरिया</span>
+</div>
+
+<div class="content">
+
+  <!-- HAZARDS -->
+  <div>
+    <div class="section-heading">Hazards &mdash; खतरे</div>
+    <div class="hazard-row">
+      <div class="hazard-card">
+        <span class="hc-title">Flammable</span>
+        <span class="hc-eng">Solvents in CR adhesive are highly flammable. Keep away from all ignition sources.</span>
+        <span class="hc-hin">ज्वलनशील &mdash; CR एडहेसिव में सॉल्वेंट अत्यधिक ज्वलनशील हैं। इग्निशन स्रोतों से दूर रखें।</span>
+      </div>
+      <div class="hazard-card">
+        <span class="hc-title">Health Hazard</span>
+        <span class="hc-eng">PU adhesive contains isocyanates. Causes respiratory sensitization. Vapours are harmful if inhaled.</span>
+        <span class="hc-hin">स्वास्थ्य खतरा &mdash; PU एडहेसिव में आइसोसायनेट हैं। सांस की समस्या हो सकती है। वाष्प हानिकारक है।</span>
+      </div>
+      <div class="hazard-card">
+        <span class="hc-title">Irritant</span>
+        <span class="hc-eng">Skin and eye contact causes irritation and chemical burns. Avoid all direct contact.</span>
+        <span class="hc-hin">त्वचा और आंखों में जलन तथा केमिकल बर्न्स का खतरा। सीधे संपर्क से बचें।</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MANDATORY RULES -->
+  <div class="rules-section">
+    <div class="section-heading">Mandatory Rules &mdash; अनिवार्य नियम</div>
+    <div class="rules-grid">
+      <div class="rule-item">
+        <div class="rule-num">1</div>
+        <div><span class="kw">VENTILATION</span> &mdash; Ensure exhaust ventilation is ON before opening any container.</div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">2</div>
+        <div><span class="kw">PPE</span> &mdash; Wear chemical gloves, safety goggles, and chemical apron at ALL times.</div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">3</div>
+        <div><span class="kw">NO FLAMES</span> &mdash; No smoking, no open flames, no sparks within 5 metres.</div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">4</div>
+        <div><span class="kw">SEQUENCE</span> &mdash; Add materials in specified sequence only. Do NOT deviate from product spec.</div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">5</div>
+        <div><span class="kw">SPILLS</span> &mdash; Contain immediately. Use spill kit. Alert Supervisor without delay.</div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">6</div>
+        <div><span class="kw">WASH</span> &mdash; Wash hands and all exposed skin thoroughly after handling.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MANDATORY PPE -->
+  <div class="ppe-section">
+    <div class="section-heading">Mandatory PPE &mdash; अनिवार्य PPE</div>
+    <div class="ppe-row">
+      <div class="ppe-box">
+        <div class="ppe-icon-area"><span>CHEMICAL<br>GLOVES</span></div>
+        <span class="ppe-label">Chemical-Resistant<br>Gloves</span>
+      </div>
+      <div class="ppe-box">
+        <div class="ppe-icon-area"><span>SAFETY<br>GOGGLES</span></div>
+        <span class="ppe-label">Safety<br>Goggles</span>
+      </div>
+      <div class="ppe-box">
+        <div class="ppe-icon-area"><span>CHEMICAL<br>APRON</span></div>
+        <span class="ppe-label">Chemical<br>Apron</span>
+      </div>
+      <div class="ppe-box">
+        <div class="ppe-icon-area"><span>RESPIRATOR<br>(PU MIXING)</span></div>
+        <span class="ppe-label">Respirator<br>(for PU Mixing)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIRST AID -->
+  <div class="fa-section">
+    <div class="section-heading">First Aid &mdash; प्राथमिक उपचार</div>
+    <div class="fa-grid">
+      <div class="fa-cell">
+        <span class="fa-type">Eyes &mdash; आंखें</span>
+        <span class="fa-text">Flush with clean water for 15 minutes. Seek medical attention immediately.</span>
+      </div>
+      <div class="fa-cell">
+        <span class="fa-type">Skin &mdash; त्वचा</span>
+        <span class="fa-text">Remove contaminated clothing. Wash affected area with soap and water thoroughly.</span>
+      </div>
+      <div class="fa-cell">
+        <span class="fa-type">Inhalation &mdash; सांस</span>
+        <span class="fa-text">Move to fresh air immediately. If breathing difficulty persists, seek medical help.</span>
+      </div>
+      <div class="fa-cell">
+        <span class="fa-type">Ingestion &mdash; निगलना</span>
+        <span class="fa-text">Do NOT induce vomiting. Rinse mouth. Call doctor / poison control immediately.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SDS & EMERGENCY -->
+  <div class="sds-bar">
+    SDS Available: Near Notice Board
+    <span class="sep">|</span>
+    Floor Supervisor: <strong>9167095723</strong>
+    <span class="sep">|</span>
+    Fire Warden: <strong>8655223426</strong>
+  </div>
+
+</div><!-- /content -->
+
+<div class="stripe-bottom"></div>
+
+<div class="footer">
+  Pack Masters, Rabale MIDC, Navi Mumbai
+  <span class="sep">|</span>
+  PM_OH-NTB-02
+  <span class="sep">|</span>
+  ISO 45001:2018
+  <span class="sep">|</span>
+  Ref: PM_WI_PRD-02
+</div>
+
+</body>
+</html>

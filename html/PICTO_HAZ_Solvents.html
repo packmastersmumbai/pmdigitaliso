@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGER — SOLVENTS Hazard Poster | Pack Masters</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── 1. TOP HAZARD STRIPE ── */
+  .stripe-top {
+    width: 100%;
+    height: 10mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px,
+      #FFD700 8px,
+      #1a1a1a 8px,
+      #1a1a1a 16px
+    );
+    flex-shrink: 0;
+  }
+
+  /* ── 2. DANGER BANNER ── */
+  .danger-banner {
+    background: #CC0000;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4mm 6mm;
+    gap: 1mm;
+  }
+
+  .danger-banner .danger-word {
+    color: #ffffff;
+    font-size: 22pt;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .danger-banner .subtitle-en {
+    color: #ffffff;
+    font-size: 15pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .danger-banner .subtitle-hi {
+    color: #FFEE88;
+    font-size: 11pt;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* ── 3. PICTOGRAM SECTION ── */
+  .pictogram-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4mm 6mm;
+    gap: 3mm;
+    background: #f8f8f8;
+  }
+
+  .picto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5mm 8mm;
+    width: 100%;
+    max-width: 180mm;
+    align-items: start;
+    justify-items: center;
+  }
+
+  .picto-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2mm;
+  }
+
+  /* GHS Diamond container — outer space for rotated square */
+  .diamond-wrap {
+    width: 68mm;
+    height: 68mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .diamond {
+    width: 48mm;
+    height: 48mm;
+    transform: rotate(45deg);
+    border: 4px solid #CC0000;
+    background: #ffffff;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .diamond-content {
+    transform: rotate(-45deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    gap: 0;
+  }
+
+  /* Individual symbol sizes */
+  .sym-flame    { font-size: 36pt; color: #CC0000; }
+  .sym-skull    { font-size: 34pt; color: #333333; }
+  .sym-exclaim  { font-size: 42pt; font-weight: 900; color: #CC0000; font-style: italic; }
+  .sym-env      { font-size: 30pt; color: #1a6e1a; line-height: 1; }
+
+  /* Custom CSS flame — optional visual enhancement */
+  .flame-shape {
+    width: 20mm;
+    height: 26mm;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .picto-label {
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .picto-label .lbl-en {
+    display: block;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+  }
+
+  .picto-label .lbl-hi {
+    display: block;
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #444444;
+  }
+
+  /* ── 4. PPE STRIP ── */
+  .ppe-strip {
+    background: #0D1B6E;
+    flex-shrink: 0;
+    padding: 3mm 6mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2mm;
+  }
+
+  .ppe-heading {
+    color: #ffffff;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .ppe-icons {
+    display: flex;
+    gap: 6mm;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .ppe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5mm;
+  }
+
+  .ppe-circle {
+    width: 18mm;
+    height: 18mm;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid #7FAAFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+    line-height: 1;
+  }
+
+  .ppe-label {
+    color: #CCDDFF;
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 20mm;
+    line-height: 1.3;
+  }
+
+  /* ── 5. NO ZONE STRIP ── */
+  .no-strip {
+    background: #8B0000;
+    flex-shrink: 0;
+    padding: 3mm 6mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2mm;
+  }
+
+  .no-heading {
+    color: #ffffff;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .no-icons {
+    display: flex;
+    gap: 8mm;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .no-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5mm;
+  }
+
+  .no-circle-wrap {
+    position: relative;
+    width: 17mm;
+    height: 17mm;
+  }
+
+  .no-circle {
+    width: 17mm;
+    height: 17mm;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid #CC0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16pt;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Diagonal prohibition line */
+  .no-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: 3px;
+    background: #CC0000;
+    transform: rotate(-45deg);
+    transform-origin: center center;
+  }
+
+  .no-label {
+    color: #FFCCCC;
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 20mm;
+    line-height: 1.3;
+  }
+
+  /* ── 6. EMERGENCY LINE ── */
+  .emergency-bar {
+    background: #222222;
+    flex-shrink: 0;
+    padding: 2mm 6mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5mm;
+    flex-wrap: wrap;
+  }
+
+  .emergency-item {
+    color: #ffffff;
+    font-size: 6.5pt;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+
+  .emergency-item .e-icon {
+    font-size: 9pt;
+  }
+
+  .emergency-sep {
+    color: #666666;
+    font-size: 8pt;
+  }
+
+  /* ── 7. BOTTOM STRIPE + FOOTER ── */
+  .bottom-block {
+    flex-shrink: 0;
+  }
+
+  .footer-bar {
+    background: #1a1a1a;
+    padding: 1.5mm 6mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-text {
+    color: #888888;
+    font-size: 5.5pt;
+    letter-spacing: 0.5px;
+  }
+
+  .stripe-bottom {
+    width: 100%;
+    height: 10mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px,
+      #FFD700 8px,
+      #1a1a1a 8px,
+      #1a1a1a 16px
+    );
+  }
+
+  /* ── Print overrides ── */
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- 1. TOP HAZARD STRIPE -->
+  <div class="stripe-top"></div>
+
+  <!-- 2. DANGER BANNER -->
+  <div class="danger-banner">
+    <span class="danger-word">⚠ DANGER ⚠</span>
+    <span class="subtitle-en">SOLVENTS IN USE</span>
+    <span class="subtitle-hi">खतरा — सॉल्वेंट उपयोग में है</span>
+  </div>
+
+  <!-- 3. MAIN PICTOGRAM AREA -->
+  <div class="pictogram-section">
+    <div class="picto-grid">
+
+      <!-- FLAMMABLE -->
+      <div class="picto-cell">
+        <div class="diamond-wrap">
+          <div class="diamond">
+            <div class="diamond-content">
+              <span class="sym-flame">🔥</span>
+            </div>
+          </div>
+        </div>
+        <div class="picto-label">
+          <span class="lbl-en">FLAMMABLE</span>
+          <span class="lbl-hi">ज्वलनशील</span>
+        </div>
+      </div>
+
+      <!-- HEALTH HAZARD -->
+      <div class="picto-cell">
+        <div class="diamond-wrap">
+          <div class="diamond">
+            <div class="diamond-content">
+              <span class="sym-skull">☠</span>
+            </div>
+          </div>
+        </div>
+        <div class="picto-label">
+          <span class="lbl-en">HEALTH HAZARD</span>
+          <span class="lbl-hi">स्वास्थ्य खतरा</span>
+        </div>
+      </div>
+
+      <!-- IRRITANT -->
+      <div class="picto-cell">
+        <div class="diamond-wrap">
+          <div class="diamond">
+            <div class="diamond-content">
+              <span class="sym-exclaim">!</span>
+            </div>
+          </div>
+        </div>
+        <div class="picto-label">
+          <span class="lbl-en">IRRITANT</span>
+          <span class="lbl-hi">जलन / उत्तेजक</span>
+        </div>
+      </div>
+
+      <!-- ENVIRONMENT -->
+      <div class="picto-cell">
+        <div class="diamond-wrap">
+          <div class="diamond">
+            <div class="diamond-content">
+              <span class="sym-env">🐟<br>🌿</span>
+            </div>
+          </div>
+        </div>
+        <div class="picto-label">
+          <span class="lbl-en">ENVIRONMENTAL HAZARD</span>
+          <span class="lbl-hi">पर्यावरण खतरा</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. PPE REQUIRED STRIP -->
+  <div class="ppe-strip">
+    <div class="ppe-heading">▶ PPE REQUIRED / सुरक्षा उपकरण आवश्यक ◀</div>
+    <div class="ppe-icons">
+
+      <div class="ppe-item">
+        <div class="ppe-circle">🧤</div>
+        <div class="ppe-label">GLOVES<br>दस्ताने</div>
+      </div>
+
+      <div class="ppe-item">
+        <div class="ppe-circle">🥽</div>
+        <div class="ppe-label">GOGGLES<br>चश्मे</div>
+      </div>
+
+      <div class="ppe-item">
+        <div class="ppe-circle">🥼</div>
+        <div class="ppe-label">APRON<br>एप्रन</div>
+      </div>
+
+      <div class="ppe-item">
+        <div class="ppe-circle">😷</div>
+        <div class="ppe-label">RESPIRATOR<br>मास्क</div>
+      </div>
+
+      <div class="ppe-item">
+        <div class="ppe-circle">🥾</div>
+        <div class="ppe-label">SAFETY SHOES<br>जूते</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. NO ZONE STRIP -->
+  <div class="no-strip">
+    <div class="no-heading">✖ PROHIBITED / निषिद्ध ✖</div>
+    <div class="no-icons">
+
+      <div class="no-item">
+        <div class="no-circle-wrap">
+          <div class="no-circle">🚬</div>
+        </div>
+        <div class="no-label">NO SMOKING<br>धूम्रपान निषेध</div>
+      </div>
+
+      <div class="no-item">
+        <div class="no-circle-wrap">
+          <div class="no-circle">🔥</div>
+        </div>
+        <div class="no-label">NO OPEN FLAME<br>आग निषेध</div>
+      </div>
+
+      <div class="no-item">
+        <div class="no-circle-wrap">
+          <div class="no-circle">🍽</div>
+        </div>
+        <div class="no-label">NO FOOD/DRINK<br>खाना निषेध</div>
+      </div>
+
+      <div class="no-item">
+        <div class="no-circle-wrap">
+          <div class="no-circle">📱</div>
+        </div>
+        <div class="no-label">NO MOBILE<br>मोबाइल निषेध</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 6. EMERGENCY LINE -->
+  <div class="emergency-bar">
+    <div class="emergency-item">
+      <span class="e-icon">📋</span>
+      <span>SDS: Near Notice Board</span>
+    </div>
+    <span class="emergency-sep">|</span>
+    <div class="emergency-item">
+      <span class="e-icon">👷</span>
+      <span>Supervisor: <strong>9167095723</strong></span>
+    </div>
+    <span class="emergency-sep">|</span>
+    <div class="emergency-item">
+      <span class="e-icon">🔥</span>
+      <span>Fire Emergency: <strong>8655223426</strong></span>
+    </div>
+    <span class="emergency-sep">|</span>
+    <div class="emergency-item">
+      <span class="e-icon">🏥</span>
+      <span>First Aid: Fire Point — Floor 1</span>
+    </div>
+  </div>
+
+  <!-- 7. BOTTOM STRIPE + FOOTER -->
+  <div class="bottom-block">
+    <div class="footer-bar">
+      <span class="footer-text">PACK MASTERS · RABALE MIDC, NAVI MUMBAI · ISO 45001:2018 / ISO 14001:2015</span>
+      <span class="footer-text">REF: PM_HAZ_SOL-01 · Rev 00 · Mar 2026</span>
+    </div>
+    <div class="stripe-bottom"></div>
+  </div>
+
+</body>
+</html>

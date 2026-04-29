@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELECTRICAL HAZARD — Pack Masters</title>
+<style>
+  /* ── Reset & Base ─────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  /* ── A4 Page Shell ────────────────────────────── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  }
+
+  /* ── 1. TOP HAZARD STRIPE ─────────────────────── */
+  .hazard-stripe {
+    width: 100%;
+    height: 14mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px,
+      #FFD700 8px,
+      #1a1a1a 8px,
+      #1a1a1a 16px
+    );
+    flex-shrink: 0;
+  }
+
+  /* ── 2. DANGER BANNER ─────────────────────────── */
+  .danger-banner {
+    background: #CC0000;
+    color: #ffffff;
+    text-align: center;
+    padding: 5mm 4mm 4mm;
+    flex-shrink: 0;
+  }
+  .danger-banner .main-text {
+    font-size: 22pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  .danger-banner .sub-text {
+    font-size: 13pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 2mm;
+    opacity: 0.92;
+  }
+
+  /* ── 3. HERO PICTOGRAM ────────────────────────── */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff9e6;
+    padding: 6mm 4mm 5mm;
+    border-top: 3px solid #FFD700;
+    border-bottom: 3px solid #FFD700;
+    flex-shrink: 0;
+  }
+
+  /* Large warning triangle via clip-path */
+  .hero-triangle-wrap {
+    position: relative;
+    width: 110mm;
+    height: 95mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-triangle {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFD700;
+    clip-path: polygon(50% 2%, 2% 97%, 98% 97%);
+    /* thick black border effect via layered pseudo-elements */
+  }
+  .hero-triangle-border {
+    position: absolute;
+    top: -3mm; left: -3mm;
+    width: calc(100% + 6mm);
+    height: calc(100% + 6mm);
+    background: #1a1a1a;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 0;
+  }
+  .hero-triangle-fill {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFD700;
+    clip-path: polygon(50% 4%, 4% 94%, 96% 94%);
+    z-index: 1;
+  }
+  .hero-bolt {
+    position: relative;
+    z-index: 2;
+    font-size: 68pt;
+    line-height: 1;
+    color: #1a1a1a;
+    margin-top: 10mm;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    user-select: none;
+  }
+
+  .hero-label {
+    text-align: center;
+    margin-top: 4mm;
+  }
+  .hero-label .en {
+    font-size: 14pt;
+    font-weight: 900;
+    color: #CC0000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .hero-label .hi {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #333;
+    margin-top: 1mm;
+  }
+
+  /* ── 4. THREE WARNING TRIANGLES ROW ──────────── */
+  .warning-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 5mm 6mm 4mm;
+    background: #fffdf0;
+    border-bottom: 2px solid #e0c000;
+    flex-shrink: 0;
+  }
+  .warn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 52mm;
+  }
+  .warn-tri-wrap {
+    position: relative;
+    width: 48mm;
+    height: 42mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .warn-tri-border {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  .warn-tri-fill {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFD700;
+    clip-path: polygon(50% 6%, 5.5% 93%, 94.5% 93%);
+  }
+  .warn-symbol {
+    position: relative;
+    z-index: 2;
+    font-size: 26pt;
+    line-height: 1;
+    color: #1a1a1a;
+    margin-top: 8mm;
+    user-select: none;
+  }
+  .warn-label {
+    text-align: center;
+    margin-top: 2mm;
+  }
+  .warn-label .en {
+    font-size: 8.5pt;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .warn-label .hi {
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: #555;
+  }
+
+  /* ── 5. PROHIBITION STRIP ─────────────────────── */
+  .prohibition-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 4mm 6mm 3mm;
+    background: #fff5f5;
+    border-bottom: 2px solid #cc0000;
+    flex-shrink: 0;
+  }
+  .prohib-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 52mm;
+  }
+  .prohib-circle {
+    width: 22mm;
+    height: 22mm;
+    border-radius: 50%;
+    border: 4px solid #CC0000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .prohib-circle .inner-symbol {
+    font-size: 18pt;
+    line-height: 1;
+    user-select: none;
+    color: #333;
+  }
+  /* Red diagonal cross-out bar */
+  .prohib-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 120%;
+    height: 4px;
+    background: #CC0000;
+    transform: translateY(-50%) rotate(-45deg);
+    transform-origin: center;
+  }
+  .prohib-label {
+    text-align: center;
+    margin-top: 2mm;
+  }
+  .prohib-label .en {
+    font-size: 7pt;
+    font-weight: 800;
+    color: #CC0000;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+  }
+  .prohib-label .hi {
+    font-size: 7pt;
+    font-weight: 600;
+    color: #555;
+    margin-top: 0.5mm;
+  }
+
+  /* ── 6. MANDATORY PPE ─────────────────────────── */
+  .ppe-row {
+    display: flex;
+    justify-content: center;
+    gap: 15mm;
+    align-items: flex-start;
+    padding: 4mm 6mm 3mm;
+    background: #f0f4ff;
+    border-bottom: 2px solid #0055cc;
+    flex-shrink: 0;
+  }
+  .ppe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55mm;
+  }
+  .ppe-circle {
+    width: 22mm;
+    height: 22mm;
+    border-radius: 50%;
+    background: #0055CC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #003a8c;
+  }
+  .ppe-circle .inner-symbol {
+    font-size: 18pt;
+    line-height: 1;
+    user-select: none;
+    filter: brightness(0) invert(1);
+  }
+  .ppe-label {
+    text-align: center;
+    margin-top: 2mm;
+  }
+  .ppe-label .en {
+    font-size: 7.5pt;
+    font-weight: 800;
+    color: #0055CC;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .ppe-label .hi {
+    font-size: 7pt;
+    font-weight: 600;
+    color: #444;
+    margin-top: 0.5mm;
+  }
+
+  /* ── 7. KEEP CLEAR BOX ────────────────────────── */
+  .keep-clear {
+    margin: 4mm 6mm;
+    border: 5px solid #CC0000;
+    border-radius: 3mm;
+    padding: 4mm 5mm;
+    background: #fff8f8;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .keep-clear .kc-icon {
+    font-size: 24pt;
+    line-height: 1;
+    user-select: none;
+    display: block;
+    margin-bottom: 2mm;
+  }
+  .keep-clear .kc-en {
+    font-size: 13pt;
+    font-weight: 900;
+    color: #CC0000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .keep-clear .kc-hi {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #333;
+    margin-top: 1.5mm;
+  }
+
+  /* ── 8. EMERGENCY CONTACTS ────────────────────── */
+  .emergency {
+    margin: 2mm 6mm 0;
+    background: #1a1a1a;
+    color: #FFD700;
+    border-radius: 2mm;
+    padding: 3mm 5mm;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .emergency .em-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 1.5mm;
+  }
+  .emergency .em-contacts {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+  }
+
+  /* ── 9. FOOTER + BOTTOM STRIPE ───────────────── */
+  .footer {
+    margin: 2mm 6mm 2mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .footer .footer-left {
+    font-size: 6.5pt;
+    color: #666;
+    font-weight: 600;
+  }
+  .footer .footer-center {
+    font-size: 7pt;
+    color: #CC0000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .footer .footer-right {
+    font-size: 6.5pt;
+    color: #666;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .hazard-stripe-bottom {
+    width: 100%;
+    height: 10mm;
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFD700 0px,
+      #FFD700 8px,
+      #1a1a1a 8px,
+      #1a1a1a 16px
+    );
+    margin-top: auto;
+    flex-shrink: 0;
+  }
+
+  /* ── Print Styles ─────────────────────────────── */
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+    .page {
+      box-shadow: none;
+      width: 210mm;
+      min-height: 297mm;
+      page-break-inside: avoid;
+    }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 1. TOP HAZARD STRIPE -->
+  <div class="hazard-stripe"></div>
+
+  <!-- 2. DANGER BANNER -->
+  <div class="danger-banner">
+    <div class="main-text">⚡ DANGER — HIGH VOLTAGE ⚡</div>
+    <div class="sub-text">खतरा — हाई वोल्टेज | LIFE-THREATENING ELECTRICAL HAZARD</div>
+  </div>
+
+  <!-- 3. HERO PICTOGRAM -->
+  <div class="hero-section">
+    <div class="hero-triangle-wrap">
+      <div class="hero-triangle-border"></div>
+      <div class="hero-triangle-fill"></div>
+      <span class="hero-bolt">⚡</span>
+    </div>
+    <div class="hero-label">
+      <div class="en">ELECTRIC SHOCK RISK</div>
+      <div class="hi">बिजली का झटका — मृत्यु का खतरा</div>
+    </div>
+  </div>
+
+  <!-- 4. THREE WARNING TRIANGLES -->
+  <div class="warning-row">
+
+    <div class="warn-item">
+      <div class="warn-tri-wrap">
+        <div class="warn-tri-border"></div>
+        <div class="warn-tri-fill"></div>
+        <span class="warn-symbol">⚡</span>
+      </div>
+      <div class="warn-label">
+        <div class="en">SHOCK</div>
+        <div class="hi">झटका</div>
+      </div>
+    </div>
+
+    <div class="warn-item">
+      <div class="warn-tri-wrap">
+        <div class="warn-tri-border"></div>
+        <div class="warn-tri-fill"></div>
+        <span class="warn-symbol">🔥</span>
+      </div>
+      <div class="warn-label">
+        <div class="en">ARC FLASH</div>
+        <div class="hi">आर्क फ्लैश</div>
+      </div>
+    </div>
+
+    <div class="warn-item">
+      <div class="warn-tri-wrap">
+        <div class="warn-tri-border"></div>
+        <div class="warn-tri-fill"></div>
+        <span class="warn-symbol">☠</span>
+      </div>
+      <div class="warn-label">
+        <div class="en">FATAL</div>
+        <div class="hi">जानलेवा</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 5. PROHIBITION STRIP -->
+  <div class="prohibition-row">
+
+    <div class="prohib-item">
+      <div class="prohib-circle">
+        <span class="inner-symbol">🚶</span>
+      </div>
+      <div class="prohib-label">
+        <div class="en">NO UNAUTHORIZED<br>ACCESS</div>
+        <div class="hi">अनधिकृत प्रवेश निषेध</div>
+      </div>
+    </div>
+
+    <div class="prohib-item">
+      <div class="prohib-circle">
+        <span class="inner-symbol">💧</span>
+      </div>
+      <div class="prohib-label">
+        <div class="en">NO WATER<br>NEAR PANEL</div>
+        <div class="hi">पानी पास न लाएं</div>
+      </div>
+    </div>
+
+    <div class="prohib-item">
+      <div class="prohib-circle">
+        <!-- Metal ladder: simple text symbol -->
+        <span class="inner-symbol" style="font-size:14pt; font-weight:900; color:#333;">🪜</span>
+      </div>
+      <div class="prohib-label">
+        <div class="en">NO METAL<br>LADDERS</div>
+        <div class="hi">धातु सीढ़ी निषेध</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 6. MANDATORY PPE -->
+  <div class="ppe-row">
+
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <span class="inner-symbol">🧤</span>
+      </div>
+      <div class="ppe-label">
+        <div class="en">INSULATED GLOVES</div>
+        <div class="hi">इन्सुलेटेड दस्ताने पहनें</div>
+      </div>
+    </div>
+
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <span class="inner-symbol">👢</span>
+      </div>
+      <div class="ppe-label">
+        <div class="en">SAFETY SHOES</div>
+        <div class="hi">सुरक्षा जूते पहनें</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 7. KEEP CLEAR -->
+  <div class="keep-clear">
+    <span class="kc-icon">⛔</span>
+    <div class="kc-en">MAINTAIN 1 METER CLEARANCE AT ALL TIMES</div>
+    <div class="kc-hi">हर समय 1 मीटर दूरी बनाए रखें</div>
+  </div>
+
+  <!-- 8. EMERGENCY CONTACTS -->
+  <div class="emergency">
+    <div class="em-title">⚠ EMERGENCY CONTACTS — आपातकालीन संपर्क</div>
+    <div class="em-contacts">
+      Supervisor: 9167095723 &nbsp;|&nbsp; Security: 9136107773 &nbsp;|&nbsp; Ambulance: 102
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">Pack Masters · Rabale MIDC, Navi Mumbai<br>ISO 45001:2018 | OHS Safety Signage</div>
+    <div class="footer-center">PICTO_HAZ_Electrical</div>
+    <div class="footer-right">QMR: AZAD Rajbhar<br>Rev. 01 — 2026-03</div>
+  </div>
+
+  <!-- 9. BOTTOM STRIPE -->
+  <div class="hazard-stripe-bottom"></div>
+
+</div>
+
+</body>
+</html>

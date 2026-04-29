@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Aiders &amp; Fire Fighters — Pack Masters</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; background: #eee; display: flex; justify-content: center; padding: 10px; }
+  .page { width: 210mm; min-height: 297mm; background: #fff; padding: 7mm; display: flex; flex-direction: column; gap: 4px; }
+
+  /* ─── HEADER ─── */
+  .header { background: #1A7040; color: #fff; border-radius: 5px; padding: 8px 12px; display: flex; align-items: center; gap: 12px; }
+  .cross { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: #fff; position: relative; }
+  .cross::before, .cross::after { content: ''; position: absolute; background: #1A7040; border-radius: 2px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .cross::before { width: 12px; height: 34px; }
+  .cross::after { width: 34px; height: 12px; }
+  .htitle { font-size: 22pt; font-weight: 900; text-transform: uppercase; line-height: 1.1; }
+  .hhi { font-size: 13pt; font-weight: 700; color: #c8edda; margin-top: 1px; }
+  .hco { font-size: 9pt; font-weight: 600; color: #a0d4b8; margin-top: 2px; }
+  .badge { flex-shrink: 0; background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.35); border-radius: 5px; padding: 5px 8px; text-align: center; font-size: 8pt; font-weight: 700; line-height: 1.4; }
+
+  /* ─── SECTION LABELS ─── */
+  .slbl { font-size: 10pt; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; padding: 4px 10px; border-radius: 4px 4px 0 0; color: #fff; display: flex; align-items: center; gap: 6px; }
+  .slbl .hi { font-size: 8pt; font-weight: 600; opacity: .85; }
+  .sg { background: #1A7040; }
+  .sr { background: #B83030; }
+  .sa { background: #E8A020; }
+  .sn { background: #0D1B6E; }
+  .so { background: #EA580C; }
+
+  /* ─── TABLES ─── */
+  table { width: 100%; border-collapse: collapse; }
+  table thead tr { color: #fff; }
+  table thead th { padding: 5px 6px; font-size: 9pt; font-weight: 700; text-align: left; border: 1px solid rgba(0,0,0,.15); }
+  table thead th .hi { display: block; font-size: 7pt; font-weight: 600; opacity: .85; }
+  table tbody td { padding: 6px; font-size: 12pt; font-weight: 700; color: #111; border: 1px solid #ccc; vertical-align: middle; }
+  table tbody tr:nth-child(even) { background: #f5f5f5; }
+  .tg thead tr { background: #1A7040; }
+  .tg tbody td:first-child { font-size: 13pt; font-weight: 900; color: #1A7040; text-align: center; width: 28px; }
+  .to thead tr { background: #EA580C; }
+  .to tbody td:first-child { font-size: 13pt; font-weight: 900; color: #EA580C; text-align: center; width: 28px; }
+
+  /* ─── EMERGENCY CONTACTS ─── */
+  .ebox { border: 2px solid #B83030; border-radius: 0 0 4px 4px; padding: 6px 8px; background: #fff8f8; }
+  .egrid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 8px; }
+  .ei { display: flex; flex-direction: column; padding: 3px 0; border-bottom: 1px dotted #e0c0c0; }
+  .ei:last-child, .ei:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .el { font-size: 8pt; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: .3px; }
+  .en { font-size: 14pt; font-weight: 900; color: #B83030; letter-spacing: .5px; line-height: 1.2; }
+  .en small { font-size: 9pt; font-weight: 600; color: #888; }
+
+  /* ─── TWO COL ─── */
+  .two { display: flex; gap: 5px; }
+  .two > .c { flex: 1; display: flex; flex-direction: column; }
+
+  /* ─── LOCATIONS ─── */
+  .lbox { border: 2px solid #E8A020; border-radius: 0 0 4px 4px; padding: 8px 10px; background: #fffbf0; flex: 1; }
+  .loc { display: flex; align-items: center; gap: 8px; padding: 5px 0; font-size: 11pt; font-weight: 700; color: #333; }
+  .loc + .loc { border-top: 1px dashed #f0d090; }
+  .licon { width: 22px; height: 22px; background: #E8A020; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12pt; font-weight: 900; }
+
+  /* ─── STEPS ─── */
+  .sbox { border: 2px solid #0D1B6E; border-radius: 0 0 4px 4px; padding: 6px 8px; background: #f5f7ff; }
+  .st { display: flex; align-items: flex-start; gap: 8px; padding: 3px 0; font-size: 10pt; color: #222; }
+  .st + .st { border-top: 1px solid #d8ddf0; }
+  .snum { width: 22px; height: 22px; background: #0D1B6E; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11pt; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+  .st strong { font-size: 10pt; font-weight: 800; color: #0D1B6E; }
+  .st .hi { font-size: 8pt; color: #555; }
+
+  /* ─── FOOTER ─── */
+  .footer { background: #0D1B6E; color: #fff; border-radius: 4px; padding: 4px 10px; display: flex; justify-content: space-between; align-items: center; font-size: 8pt; font-weight: 600; margin-top: auto; flex-shrink: 0; }
+  .footer .dc { font-size: 9pt; font-weight: 800; color: #E8A020; }
+
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+ body { background: #fff; padding: 0; } .page { box-shadow: none; width: 100%; min-height: auto; padding: 5mm; } }
+  @media screen { .page { box-shadow: 0 4px 20px rgba(0,0,0,.15); } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="cross"></div>
+    <div style="flex:1;">
+      <div class="htitle">First-Aiders &amp; Fire Fighters</div>
+      <div class="hhi">फर्स्ट-एडर्स और फायर फाइटर्स</div>
+      <div class="hco">Pack Masters &nbsp;|&nbsp; Rabale MIDC, Navi Mumbai</div>
+    </div>
+    <div class="badge">ISO 45001<br>:2018<br>Cl. 8.1</div>
+  </div>
+
+  <!-- FIRST-AIDERS TABLE -->
+  <div>
+    <div class="slbl sg">&#10003; Trained First-Aiders <span class="hi">| प्रशिक्षित फर्स्ट-एडर्स</span></div>
+    <table class="tg">
+      <thead><tr>
+        <th>Sr</th>
+        <th>Name / नाम</th>
+        <th>Department / विभाग</th>
+        <th>Contact / संपर्क</th>
+        <th>Cert. Valid Until</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1</td><td>TARUN MISHRA</td><td>Management</td><td>9167155573</td><td>02 Mar 2027</td></tr>
+        <tr><td>2</td><td>AVINASH RATHAD</td><td>Production</td><td>9321057581</td><td>02 Mar 2027</td></tr>
+        <tr><td>3</td><td>ANUJ PATHAK</td><td>Production</td><td>9082217454</td><td>02 Mar 2027</td></tr>
+        <tr><td>4</td><td>DILIP MAHALE</td><td>Production</td><td>09136802133</td><td>02 Mar 2027</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:7pt;color:#888;padding:2px 6px;background:#eaf6ef;border:1px solid #b8d8c6;border-top:0;border-radius:0 0 4px 4px;">
+      Certified by Varad Life Care Pvt. Ltd. (DISH — Directorate of Industrial Safety &amp; Health, Govt. of Maharashtra) &nbsp;|&nbsp;
+      Training: Life Saving First-Aid &amp; CPR &nbsp;|&nbsp; Grade: A
+    </div>
+  </div>
+
+  <!-- FIRE FIGHTERS TABLE -->
+  <div>
+    <div class="slbl so">&#128293; Fire Fighters &amp; Fire Wardens <span class="hi">| फायर फाइटर्स और फायर वार्डन</span></div>
+    <table class="to">
+      <thead><tr>
+        <th>Sr</th>
+        <th>Name / नाम</th>
+        <th>Role / भूमिका</th>
+        <th>Contact / संपर्क</th>
+        <th>Area / क्षेत्र</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1</td><td>TARUN MISHRA</td><td>Chief Fire Warden</td><td>9167155573</td><td>All Areas</td></tr>
+        <tr><td>2</td><td>AZAD RAJBHAR</td><td>Fire Warden</td><td>8655223426</td><td>Production</td></tr>
+        <tr><td>3</td><td>ANUJ PATHAK</td><td>Fire Fighter</td><td>9082217454</td><td>Production</td></tr>
+        <tr><td>4</td><td>AVINASH RATHAD</td><td>Fire Fighter</td><td>9321057581</td><td>Warehouse</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TWO COLUMN: EMERGENCY + LOCATIONS -->
+  <div class="two">
+
+    <!-- Emergency Contacts -->
+    <div class="c">
+      <div class="slbl sr">&#9888; Emergency Contacts <span class="hi">| आपातकालीन नंबर</span></div>
+      <div class="ebox">
+        <div class="egrid">
+          <div class="ei">
+            <span class="el">Ambulance / एम्बुलेंस</span>
+            <span class="en">102 <small>/ 022-27692296</small></span>
+          </div>
+          <div class="ei">
+            <span class="el">Fire / अग्निशमन</span>
+            <span class="en">022-27698101 <small>Rabale</small><br>022-27796600 <small>Airoli</small></span>
+          </div>
+          <div class="ei">
+            <span class="el">Police / पुलिस (Rabale Stn)</span>
+            <span class="en">100 <small>/ 022-27606162</small></span>
+          </div>
+          <div class="ei">
+            <span class="el">Nearest Hospital / अस्पताल</span>
+            <span class="en">09322017001</span>
+          </div>
+          <div class="ei">
+            <span class="el">Floor Supervisor — Khushi Paswan</span>
+            <span class="en">9167095723</span>
+          </div>
+          <div class="ei">
+            <span class="el">Security / सुरक्षा</span>
+            <span class="en">9136107773</span>
+          </div>
+          <div class="ei">
+            <span class="el">Management Rep — Tarun Mishra</span>
+            <span class="en">9167155573</span>
+          </div>
+          <div class="ei">
+            <span class="el">Women Helpline</span>
+            <span class="en">1091</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Locations + Steps -->
+    <div class="c">
+      <div class="slbl sa">&#10010; First Aid Box Locations <span class="hi">| फर्स्ट-एड बॉक्स</span></div>
+      <div class="lbox" style="flex:0;">
+        <div class="loc">
+          <div class="licon">&#10010;</div>
+          <span>Security Gate <small style="font-weight:500;color:#777;">/ सुरक्षा गेट</small></span>
+        </div>
+        <div class="loc">
+          <div class="licon">&#10010;</div>
+          <span>Admin / Office Area <small style="font-weight:500;color:#777;">/ कार्यालय क्षेत्र</small></span>
+        </div>
+      </div>
+
+      <div class="slbl sn" style="margin-top:4px;">&#9658; What To Do / चोट लगने पर <span class="hi"></span></div>
+      <div class="sbox">
+        <div class="st">
+          <div class="snum">1</div>
+          <div><strong>Alert nearest First-Aider</strong><br><span class="hi">निकटतम फर्स्ट-एडर को बुलाएं</span></div>
+        </div>
+        <div class="st">
+          <div class="snum">2</div>
+          <div><strong>Do NOT move injured person</strong><br><span class="hi">घायल व्यक्ति को न हिलाएं</span></div>
+        </div>
+        <div class="st">
+          <div class="snum">3</div>
+          <div><strong>First-Aider gives initial treatment</strong><br><span class="hi">फर्स्ट-एडर प्रारंभिक उपचार करेगा</span></div>
+        </div>
+        <div class="st">
+          <div class="snum">4</div>
+          <div><strong>Call 102 if serious — inform Supervisor</strong><br><span class="hi">गंभीर हो तो 102 कॉल करें — सुपरवाइज़र को बताएं</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="dc">PM_OH-ERM-01</span>
+    <span>Rev 1.0 &nbsp;|&nbsp; 28/03/2026</span>
+    <span>ISO 45001:2018</span>
+    <span>Pack Masters, Rabale MIDC</span>
+  </div>
+
+</div>
+</body>
+</html>
