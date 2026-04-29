@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGER — Pneumatic Lid Press | Pack Masters</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    width: 210mm;
+    min-height: 297mm;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+  }
+
+  /* ─── HAZARD STRIPE TOP ─── */
+  .stripe-top {
+    height: 14mm;
+    background: repeating-linear-gradient(
+      45deg,
+      #FFD700 0px, #FFD700 16px,
+      #111 16px, #111 32px
+    );
+  }
+
+  /* ─── DANGER BANNER ─── */
+  .danger-banner {
+    background: #C0392B;
+    border-bottom: 4px solid #7B241C;
+    padding: 8px 12px 6px;
+    text-align: center;
+  }
+  .danger-banner .label-en {
+    font-size: 22pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  .danger-banner .label-hi {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #FFCDD2;
+    margin-top: 2px;
+  }
+
+  /* ─── SECTION TITLES ─── */
+  .section-title {
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #555;
+    text-align: center;
+    padding: 5px 0 3px;
+  }
+
+  /* ─── WARNING TRIANGLES (3-col row) ─── */
+  .warn-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #fff;
+  }
+
+  .warn-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+  }
+
+  .triangle-wrap {
+    position: relative;
+    width: 58mm;
+    height: 52mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .triangle-border {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #111;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+  .triangle-inner {
+    position: absolute;
+    top: 4%; left: 3.5%;
+    width: 93%; height: 93%;
+    background: #FFD700;
+    clip-path: polygon(50% 5%, 95% 94%, 5% 94%);
+    z-index: 1;
+  }
+
+  /* CRUSH HAZARD: hand being pressed */
+  .sym-crush {
+    position: relative; z-index: 2;
+    margin-top: 8mm;
+    display: flex; flex-direction: column;
+    align-items: center;
+  }
+  .crush-press-top {
+    width: 16mm; height: 5mm;
+    background: #111;
+    border-radius: 1mm;
+  }
+  .crush-arrows {
+    display: flex; gap: 3mm;
+    margin: 1mm 0;
+  }
+  .crush-arrow-dn {
+    width: 0; height: 0;
+    border-left: 2.5mm solid transparent;
+    border-right: 2.5mm solid transparent;
+    border-top: 4mm solid #111;
+  }
+  .crush-hand {
+    width: 12mm; height: 9mm;
+    background: #111;
+    border-radius: 2mm 2mm 1mm 1mm;
+    position: relative;
+  }
+  .crush-fingers {
+    display: flex; gap: 1px;
+    position: absolute; top: -4mm; left: 1mm;
+  }
+  .crush-finger {
+    width: 2.5mm; height: 5mm;
+    background: #111;
+    border-radius: 1.5mm 1.5mm 0 0;
+  }
+  .crush-press-bot {
+    width: 16mm; height: 3mm;
+    background: #111;
+    border-radius: 0 0 1mm 1mm;
+    margin-top: 1mm;
+  }
+
+  /* HOT SURFACE: wavy lines + thermometer */
+  .sym-hot {
+    position: relative; z-index: 2;
+    margin-top: 7mm;
+    display: flex; flex-direction: row;
+    align-items: flex-end;
+    gap: 3mm;
+  }
+  .thermo-wrap {
+    display: flex; flex-direction: column;
+    align-items: center;
+  }
+  .thermo-tube {
+    width: 5mm; height: 16mm;
+    background: #111;
+    border-radius: 2.5mm 2.5mm 0 0;
+    position: relative;
+  }
+  .thermo-tube::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 3mm; height: 60%;
+    background: #C0392B;
+    border-radius: 1mm 1mm 0 0;
+  }
+  .thermo-bulb {
+    width: 8mm; height: 8mm;
+    border-radius: 50%;
+    background: #C0392B;
+    border: 2mm solid #111;
+    margin-top: -1mm;
+  }
+  .heat-waves {
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: 2mm;
+    padding-bottom: 4mm;
+  }
+  .wave-line {
+    height: 2mm;
+    background: transparent;
+    border-bottom: 2.5px solid #111;
+  }
+  .wave-line:nth-child(1) { width: 8mm; border-radius: 50%; }
+  .wave-line:nth-child(2) { width: 10mm; border-radius: 50%; }
+  .wave-line:nth-child(3) { width: 7mm; border-radius: 50%; }
+
+  /* HIGH PRESSURE: pressure gauge */
+  .sym-pressure {
+    position: relative; z-index: 2;
+    margin-top: 7mm;
+    display: flex; flex-direction: column;
+    align-items: center;
+  }
+  .gauge-body {
+    width: 17mm; height: 17mm;
+    border-radius: 50%;
+    border: 3mm solid #111;
+    background: #FFD700;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .gauge-needle {
+    width: 1.5mm; height: 6mm;
+    background: #C0392B;
+    border-radius: 1mm;
+    transform-origin: bottom center;
+    transform: rotate(-50deg);
+    position: absolute;
+    bottom: 50%; left: calc(50% - 0.75mm);
+  }
+  .gauge-center-dot {
+    width: 3mm; height: 3mm;
+    border-radius: 50%;
+    background: #111;
+    position: absolute;
+  }
+  .gauge-label {
+    font-size: 5pt;
+    font-weight: 900;
+    color: #111;
+    position: absolute;
+    top: 2mm;
+    letter-spacing: 0.3px;
+  }
+  .gauge-pipe {
+    width: 4mm; height: 5mm;
+    background: #111;
+    border-radius: 0 0 1mm 1mm;
+    margin-top: 0;
+  }
+  .pressure-arrows {
+    display: flex; gap: 3mm; margin-top: 1mm;
+  }
+  .press-arrow-out {
+    width: 0; height: 0;
+    border-left: 2.5mm solid transparent;
+    border-right: 2.5mm solid transparent;
+    border-bottom: 4mm solid #111;
+  }
+
+  .warn-label-en {
+    font-size: 9.5pt;
+    font-weight: 800;
+    color: #111;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+  .warn-label-hi {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+  }
+
+  /* ─── PROHIBITION CIRCLES ─── */
+  .prohib-section {
+    background: #FFF3F3;
+    border-top: 2px solid #C0392B;
+    border-bottom: 2px solid #C0392B;
+    padding: 7px 12px;
+    margin: 4px 0;
+  }
+  .prohib-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .prohib-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+  }
+  .prohib-circle-wrap {
+    position: relative;
+    width: 26mm; height: 26mm;
+  }
+  /* Red ring: outer red disc, inner white disc, then symbol on top */
+  .prohib-ring {
+    width: 26mm; height: 26mm;
+    border-radius: 50%;
+    background: #C0392B;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .prohib-ring-inner {
+    width: 20mm; height: 20mm;
+    border-radius: 50%;
+    background: #fff;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  /* Diagonal strike-through */
+  .prohib-ring::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: -1mm;
+    width: 28mm; height: 3mm;
+    background: #C0392B;
+    transform: rotate(-45deg);
+    border-radius: 1mm;
+    z-index: 5;
+  }
+
+  /* No hands in press area symbol */
+  .sym-nohands {
+    display: flex; flex-direction: column;
+    align-items: center;
+    position: relative; z-index: 3;
+  }
+  .nh-hand {
+    width: 10mm; height: 8mm;
+    background: #111;
+    border-radius: 1mm 1mm 2mm 2mm;
+    position: relative;
+  }
+  .nh-fingers {
+    display: flex; gap: 0.5px;
+    position: absolute; top: -3.5mm; left: 0.5mm;
+  }
+  .nh-finger {
+    width: 2mm; height: 4mm;
+    background: #111;
+    border-radius: 1mm 1mm 0 0;
+  }
+  /* Press shape above hand */
+  .nh-press {
+    width: 14mm; height: 3mm;
+    background: #555;
+    border-radius: 1mm;
+    margin-bottom: 1mm;
+  }
+
+  /* No bypass symbol: shield */
+  .sym-noshield {
+    display: flex; align-items: center;
+    justify-content: center;
+    position: relative; z-index: 3;
+  }
+  .shield-body {
+    width: 10mm; height: 13mm;
+    background: #111;
+    clip-path: polygon(50% 100%, 0% 30%, 0% 0%, 100% 0%, 100% 30%);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .prohib-label-en {
+    font-size: 8pt;
+    font-weight: 800;
+    color: #C0392B;
+    text-align: center;
+  }
+  .prohib-label-hi {
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+  }
+
+  /* ─── MANDATORY: BOTH HANDS ─── */
+  .mandatory-box {
+    margin: 5px 12px;
+    background: #1565C0;
+    border-radius: 3mm;
+    padding: 9px 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hands-icon {
+    display: flex;
+    gap: 4mm;
+    flex-shrink: 0;
+  }
+  /* Hand symbol (CSS) */
+  .hand-shape {
+    position: relative;
+    width: 12mm; height: 16mm;
+  }
+  .h-palm {
+    position: absolute;
+    bottom: 0; left: 1mm;
+    width: 10mm; height: 9mm;
+    background: #fff;
+    border-radius: 1mm 1mm 2mm 2mm;
+  }
+  .h-fingers {
+    position: absolute;
+    top: 0; left: 0;
+    display: flex; gap: 1px;
+  }
+  .h-finger {
+    width: 2.3mm; height: 9mm;
+    background: #fff;
+    border-radius: 1.5mm 1.5mm 0 0;
+  }
+  .h-thumb {
+    position: absolute;
+    bottom: 3mm; left: -2.5mm;
+    width: 3mm; height: 6mm;
+    background: #fff;
+    border-radius: 2mm;
+    transform: rotate(20deg);
+  }
+
+  .control-btn {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 2mm;
+  }
+  .btn-body {
+    width: 10mm; height: 10mm;
+    border-radius: 50%;
+    background: #FFD700;
+    border: 2mm solid #fff;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .btn-body span {
+    font-size: 6pt;
+    font-weight: 900;
+    color: #111;
+  }
+  .btn-base {
+    width: 14mm; height: 4mm;
+    background: #fff;
+    border-radius: 1mm;
+  }
+
+  .mandatory-text {
+    color: #fff;
+    flex: 1;
+  }
+  .mandatory-text .main-en {
+    font-size: 14pt;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+  }
+  .mandatory-text .main-hi {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #BBDEFB;
+    margin-top: 3px;
+  }
+  .mandatory-text .sub {
+    font-size: 8.5pt;
+    color: #90CAF9;
+    margin-top: 4px;
+  }
+
+  /* ─── LOTO BOX ─── */
+  .loto-box {
+    margin: 5px 12px;
+    background: #FFF8E1;
+    border: 3px solid #F57F17;
+    border-radius: 3mm;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .loto-icon {
+    display: flex; flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .lock-body {
+    width: 13mm; height: 10mm;
+    background: #F57F17;
+    border-radius: 1mm 1mm 1.5mm 1.5mm;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lock-keyhole {
+    width: 3mm; height: 5mm;
+    background: #fff;
+    border-radius: 50% 50% 1mm 1mm;
+  }
+  .lock-shackle {
+    width: 11mm; height: 6mm;
+    border: 3mm solid #F57F17;
+    border-bottom: none;
+    border-radius: 6mm 6mm 0 0;
+    margin-bottom: 0;
+  }
+  .tag-shape {
+    width: 7mm; height: 10mm;
+    background: #F57F17;
+    border-radius: 1mm;
+    margin-left: 3mm;
+    display: flex; align-items: flex-start; justify-content: center;
+    padding-top: 1mm;
+  }
+  .tag-hole {
+    width: 2mm; height: 2mm;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .loto-icons-row {
+    display: flex; align-items: flex-end; gap: 2mm;
+  }
+  .loto-text .title {
+    font-size: 12pt;
+    font-weight: 900;
+    color: #E65100;
+    letter-spacing: 0.5px;
+  }
+  .loto-text .body {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #F57F17;
+    margin-top: 2px;
+  }
+  .loto-text .hi {
+    font-size: 8.5pt;
+    font-weight: 500;
+    color: #BF360C;
+    margin-top: 2px;
+  }
+
+  /* ─── PPE ROW ─── */
+  .ppe-section {
+    margin: 5px 12px;
+    background: #f5f5f5;
+    border: 2px solid #ccc;
+    border-radius: 3mm;
+    padding: 6px 10px;
+  }
+  .ppe-title {
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1565C0;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .ppe-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 4px;
+  }
+  .ppe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    flex: 1;
+  }
+  .ppe-circle {
+    width: 16mm; height: 16mm;
+    border-radius: 50%;
+    background: #1565C0;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Boot */
+  .sym-boot { display: flex; flex-direction: column; align-items: flex-start; }
+  .boot-top { width: 5mm; height: 7mm; background: #fff; border-radius: 1mm 1mm 0 0; margin-left: 1.5mm; }
+  .boot-sole { width: 9mm; height: 2.5mm; background: #fff; border-radius: 0 1mm 1mm 1mm; }
+
+  /* Ear protection */
+  .sym-ear {
+    display: flex; align-items: center;
+    gap: 2mm;
+  }
+  .ear-cup {
+    width: 4mm; height: 9mm;
+    background: #fff;
+    border-radius: 2mm;
+  }
+  .ear-band {
+    width: 6mm; height: 2mm;
+    background: #fff;
+    border-radius: 1mm;
+  }
+
+  /* Heat gloves */
+  .sym-hglove {
+    position: relative;
+    display: flex; flex-direction: column;
+    align-items: center;
+  }
+  .hg-cuff {
+    width: 9mm; height: 3mm;
+    background: #90CAF9;
+    border-radius: 0 0 1mm 1mm;
+  }
+  .hg-palm {
+    width: 8mm; height: 7mm;
+    background: #fff;
+    border-radius: 1mm 1mm 2mm 2mm;
+    position: relative;
+  }
+  .hg-fingers {
+    display: flex; gap: 0.5px;
+    position: absolute; top: -3mm; left: 0;
+  }
+  .hg-finger {
+    width: 2mm; height: 4mm;
+    background: #fff;
+    border-radius: 1mm 1mm 0 0;
+  }
+
+  /* Goggles */
+  .sym-goggles {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 0;
+  }
+  .goggle-band {
+    width: 13mm; height: 2mm;
+    background: #fff;
+    border-radius: 1mm;
+  }
+  .goggle-lenses {
+    display: flex; gap: 1mm; margin-top: 1px;
+  }
+  .goggle-lens {
+    width: 5mm; height: 4mm;
+    border-radius: 1mm;
+    background: #90CAF9;
+    border: 1.5px solid #fff;
+  }
+
+  .ppe-label-en {
+    font-size: 7.5pt;
+    font-weight: 800;
+    color: #1565C0;
+    text-align: center;
+  }
+  .ppe-label-hi {
+    font-size: 7pt;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
+  }
+
+  /* ─── EMERGENCY FOOTER ─── */
+  .emergency-bar {
+    margin: 5px 12px 0;
+    background: #C0392B;
+    border-radius: 2mm 2mm 0 0;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .emergency-bar .cross-icon {
+    width: 8mm; height: 8mm;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .cross-h, .cross-v {
+    position: absolute;
+    background: #fff;
+    border-radius: 0.5mm;
+  }
+  .cross-h {
+    width: 8mm; height: 2.5mm;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+  }
+  .cross-v {
+    width: 2.5mm; height: 8mm;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+  }
+  .emergency-text {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 700;
+    text-align: center;
+  }
+  .emergency-text .num {
+    font-size: 13pt;
+    font-weight: 900;
+    color: #FFD700;
+  }
+
+  .footer-bar {
+    background: #222;
+    padding: 5px 12px;
+    border-radius: 0 0 2mm 2mm;
+    margin: 0 12px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-bar span {
+    color: #ccc;
+    font-size: 7.5pt;
+  }
+  .footer-bar .company {
+    color: #FFD700;
+    font-weight: 700;
+    font-size: 8pt;
+  }
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HAZARD STRIPE TOP -->
+<div class="stripe-top"></div>
+
+<!-- DANGER BANNER -->
+<div class="danger-banner">
+  <div class="label-en">&#9888; DANGER &mdash; PNEUMATIC LID PRESS</div>
+  <div class="label-hi">खतरा &mdash; न्यूमैटिक लिड प्रेस</div>
+</div>
+
+<!-- SECTION: WARNING HAZARDS -->
+<div class="section-title">WARNING HAZARDS / चेतावनी खतरे</div>
+
+<div class="warn-row">
+
+  <!-- CRUSH HAZARD -->
+  <div class="warn-cell">
+    <div class="triangle-wrap">
+      <div class="triangle-border"></div>
+      <div class="triangle-inner"></div>
+      <div class="sym-crush">
+        <div class="crush-press-top"></div>
+        <div class="crush-arrows">
+          <div class="crush-arrow-dn"></div>
+          <div class="crush-arrow-dn"></div>
+          <div class="crush-arrow-dn"></div>
+        </div>
+        <div class="crush-hand">
+          <div class="crush-fingers">
+            <div class="crush-finger"></div>
+            <div class="crush-finger"></div>
+            <div class="crush-finger"></div>
+            <div class="crush-finger"></div>
+          </div>
+        </div>
+        <div class="crush-press-bot"></div>
+      </div>
+    </div>
+    <div class="warn-label-en">CRUSH HAZARD</div>
+    <div class="warn-label-hi">हाथ दबने का खतरा</div>
+  </div>
+
+  <!-- HOT SURFACE -->
+  <div class="warn-cell">
+    <div class="triangle-wrap">
+      <div class="triangle-border"></div>
+      <div class="triangle-inner"></div>
+      <div class="sym-hot">
+        <div class="heat-waves">
+          <div class="wave-line"></div>
+          <div class="wave-line"></div>
+          <div class="wave-line"></div>
+        </div>
+        <div class="thermo-wrap">
+          <div class="thermo-tube"></div>
+          <div class="thermo-bulb"></div>
+        </div>
+        <div class="heat-waves">
+          <div class="wave-line"></div>
+          <div class="wave-line"></div>
+          <div class="wave-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="warn-label-en">HOT SURFACE</div>
+    <div class="warn-label-hi">गर्म सतह</div>
+  </div>
+
+  <!-- HIGH PRESSURE -->
+  <div class="warn-cell">
+    <div class="triangle-wrap">
+      <div class="triangle-border"></div>
+      <div class="triangle-inner"></div>
+      <div class="sym-pressure">
+        <div class="gauge-body">
+          <div class="gauge-label">PSI</div>
+          <div class="gauge-needle"></div>
+          <div class="gauge-center-dot"></div>
+        </div>
+        <div class="gauge-pipe"></div>
+        <div class="pressure-arrows">
+          <div class="press-arrow-out"></div>
+          <div class="press-arrow-out"></div>
+          <div class="press-arrow-out"></div>
+        </div>
+      </div>
+    </div>
+    <div class="warn-label-en">HIGH PRESSURE</div>
+    <div class="warn-label-hi">हाई प्रेशर</div>
+  </div>
+
+</div>
+
+<!-- PROHIBITION -->
+<div class="section-title" style="color:#C0392B; padding-top:3px;">PROHIBITION / निषेध</div>
+<div class="prohib-section">
+  <div class="prohib-row">
+
+    <!-- NO HANDS IN PRESS AREA -->
+    <div class="prohib-cell">
+      <div class="prohib-ring">
+        <div class="prohib-ring-inner">
+          <div class="sym-nohands">
+            <div class="nh-press"></div>
+            <div class="nh-hand">
+              <div class="nh-fingers">
+                <div class="nh-finger"></div>
+                <div class="nh-finger"></div>
+                <div class="nh-finger"></div>
+                <div class="nh-finger"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prohib-label-en">NO HANDS IN<br>PRESS AREA</div>
+      <div class="prohib-label-hi">प्रेस क्षेत्र में<br>हाथ न डालें</div>
+    </div>
+
+    <!-- NO BYPASS OF GUARDS -->
+    <div class="prohib-cell">
+      <div class="prohib-ring">
+        <div class="prohib-ring-inner">
+          <div class="sym-noshield">
+            <div class="shield-body"></div>
+          </div>
+        </div>
+      </div>
+      <div class="prohib-label-en">NO BYPASS<br>OF GUARDS</div>
+      <div class="prohib-label-hi">सुरक्षा गार्ड<br>न हटाएं</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MANDATORY: BOTH HANDS ON CONTROLS -->
+<div class="mandatory-box">
+  <div class="hands-icon">
+    <!-- Left hand -->
+    <div style="display:flex; flex-direction:column; align-items:center; gap:3mm;">
+      <div class="hand-shape">
+        <div class="h-fingers">
+          <div class="h-finger"></div>
+          <div class="h-finger"></div>
+          <div class="h-finger"></div>
+          <div class="h-finger"></div>
+        </div>
+        <div class="h-palm"></div>
+        <div class="h-thumb"></div>
+      </div>
+      <div class="control-btn">
+        <div class="btn-body"><span>BTN</span></div>
+        <div class="btn-base"></div>
+      </div>
+    </div>
+    <!-- Right hand -->
+    <div style="display:flex; flex-direction:column; align-items:center; gap:3mm;">
+      <div class="hand-shape" style="transform: scaleX(-1);">
+        <div class="h-fingers">
+          <div class="h-finger"></div>
+          <div class="h-finger"></div>
+          <div class="h-finger"></div>
+          <div class="h-finger"></div>
+        </div>
+        <div class="h-palm"></div>
+        <div class="h-thumb"></div>
+      </div>
+      <div class="control-btn">
+        <div class="btn-body"><span>BTN</span></div>
+        <div class="btn-base"></div>
+      </div>
+    </div>
+  </div>
+  <div class="mandatory-text">
+    <div class="main-en">BOTH HANDS ON<br>CONTROLS AT ALL TIMES</div>
+    <div class="main-hi">दोनों हाथ हमेशा कंट्रोल पर रखें</div>
+    <div class="sub">Machine activates only with simultaneous two-hand operation</div>
+  </div>
+</div>
+
+<!-- LOTO -->
+<div class="loto-box">
+  <div class="loto-icon">
+    <div class="loto-icons-row">
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div class="lock-shackle"></div>
+        <div class="lock-body"><div class="lock-keyhole"></div></div>
+      </div>
+      <div class="tag-shape"><div class="tag-hole"></div></div>
+    </div>
+  </div>
+  <div class="loto-text">
+    <div class="title">LOCK OUT / TAG OUT</div>
+    <div class="body">BEFORE ANY MAINTENANCE OR REPAIR WORK</div>
+    <div class="hi">रखरखाव से पहले — लॉक आउट / टैग आउट करें</div>
+  </div>
+</div>
+
+<!-- PPE -->
+<div class="ppe-section">
+  <div class="ppe-title">&#9632; MANDATORY PPE — अनिवार्य सुरक्षा उपकरण</div>
+  <div class="ppe-row">
+
+    <!-- Safety Shoes -->
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <div class="sym-boot">
+          <div class="boot-top"></div>
+          <div class="boot-sole"></div>
+        </div>
+      </div>
+      <div class="ppe-label-en">SAFETY SHOES</div>
+      <div class="ppe-label-hi">सेफ्टी जूते</div>
+    </div>
+
+    <!-- Ear Protection -->
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <div class="sym-ear">
+          <div class="ear-cup"></div>
+          <div class="ear-band"></div>
+          <div class="ear-cup"></div>
+        </div>
+      </div>
+      <div class="ppe-label-en">EAR PROTECTION</div>
+      <div class="ppe-label-hi">कान की सुरक्षा</div>
+    </div>
+
+    <!-- Heat-Resistant Gloves -->
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <div class="sym-hglove">
+          <div class="hg-fingers">
+            <div class="hg-finger"></div>
+            <div class="hg-finger"></div>
+            <div class="hg-finger"></div>
+            <div class="hg-finger"></div>
+          </div>
+          <div class="hg-palm"></div>
+          <div class="hg-cuff"></div>
+        </div>
+      </div>
+      <div class="ppe-label-en">HEAT-RESIST.<br>GLOVES</div>
+      <div class="ppe-label-hi">हीट ग्लव्स</div>
+    </div>
+
+    <!-- Goggles -->
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <div class="sym-goggles">
+          <div class="goggle-band"></div>
+          <div class="goggle-lenses">
+            <div class="goggle-lens"></div>
+            <div class="goggle-lens"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ppe-label-en">GOGGLES</div>
+      <div class="ppe-label-hi">चश्मा</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- EMERGENCY BAR -->
+<div class="emergency-bar">
+  <div class="cross-icon">
+    <div class="cross-h"></div>
+    <div class="cross-v"></div>
+  </div>
+  <div class="emergency-text">
+    EMERGENCY &mdash; FIRST AID &nbsp;|&nbsp; <span class="num">&#9742; EXT: 100</span>
+    &nbsp;&nbsp;|&nbsp;&nbsp; आपातकालीन &mdash; प्राथमिक चिकित्सा
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-bar">
+  <span>Doc: PICTO-HAZ-LP-01 &nbsp;|&nbsp; Rev: 00 &nbsp;|&nbsp; Date: 2026-03-28</span>
+  <span class="company">PACK MASTERS &mdash; RABALE MIDC, NAVI MUMBAI</span>
+  <span>ISO 45001:2018</span>
+</div>
+
+</body>
+</html>

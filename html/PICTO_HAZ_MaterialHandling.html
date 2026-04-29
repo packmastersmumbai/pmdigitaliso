@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAUTION — Material Handling Area | Pack Masters</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    width: 210mm;
+    min-height: 297mm;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+  }
+
+  /* ─── HAZARD STRIPE TOP ─── */
+  .stripe-top {
+    height: 14mm;
+    background: repeating-linear-gradient(
+      45deg,
+      #FFD700 0px, #FFD700 16px,
+      #111 16px, #111 32px
+    );
+  }
+
+  /* ─── CAUTION BANNER ─── */
+  .caution-banner {
+    background: #FFD700;
+    border-bottom: 4px solid #111;
+    padding: 8px 12px 6px;
+    text-align: center;
+  }
+  .caution-banner .label-en {
+    font-size: 22pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #111;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  .caution-banner .label-hi {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #333;
+    margin-top: 2px;
+  }
+
+  /* ─── SECTION TITLES ─── */
+  .section-title {
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #555;
+    text-align: center;
+    padding: 5px 0 3px;
+  }
+
+  /* ─── WARNING TRIANGLES GRID ─── */
+  .warn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 8px 14px;
+    background: #fff;
+  }
+
+  .warn-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* ISO warning triangle via clip-path */
+  .triangle-wrap {
+    position: relative;
+    width: 62mm;
+    height: 55mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .triangle-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #FFD700;
+    clip-path: polygon(50% 2%, 98% 97%, 2% 97%);
+    border: none;
+    /* black outer triangle illusion via filter */
+    filter: drop-shadow(0 0 0 #111);
+  }
+  .triangle-border {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #111;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+  .triangle-inner {
+    position: absolute;
+    top: 4%; left: 3.5%;
+    width: 93%; height: 93%;
+    background: #FFD700;
+    clip-path: polygon(50% 5%, 95% 94%, 5% 94%);
+    z-index: 1;
+  }
+  .triangle-symbol {
+    position: relative;
+    z-index: 2;
+    font-size: 28pt;
+    font-weight: 900;
+    color: #111;
+    line-height: 1;
+    margin-top: 10mm;
+    user-select: none;
+  }
+
+  /* Custom SVG-like CSS symbols */
+  .sym-heavy {
+    width: 26mm; height: 20mm;
+    position: relative;
+    z-index: 2;
+    margin-top: 10mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .sym-heavy .box-body {
+    width: 20mm; height: 13mm;
+    background: #111;
+    border-radius: 1mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sym-heavy .box-body span {
+    color: #FFD700;
+    font-size: 11pt;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+  .sym-heavy .weight-lines {
+    display: flex; gap: 3px;
+  }
+  .sym-heavy .weight-lines div {
+    width: 4mm; height: 2mm;
+    background: #111;
+    border-radius: 1px;
+  }
+
+  .sym-fall {
+    position: relative; z-index: 2;
+    margin-top: 8mm;
+    display: flex; flex-direction: column;
+    align-items: center;
+  }
+  .sym-fall .arrow-shaft {
+    width: 4mm; height: 14mm;
+    background: #111;
+  }
+  .sym-fall .arrow-head {
+    width: 0; height: 0;
+    border-left: 7mm solid transparent;
+    border-right: 7mm solid transparent;
+    border-top: 9mm solid #111;
+  }
+  .sym-fall .item-box {
+    width: 12mm; height: 8mm;
+    background: #111;
+    border-radius: 1mm;
+    margin-bottom: 1mm;
+  }
+
+  .sym-fork {
+    position: relative; z-index: 2;
+    margin-top: 6mm;
+    display: flex; flex-direction: column;
+    align-items: center;
+  }
+  .sym-fork .truck-body {
+    width: 22mm; height: 11mm;
+    background: #111;
+    border-radius: 1.5mm 1.5mm 0 0;
+    position: relative;
+  }
+  .sym-fork .truck-cab {
+    position: absolute;
+    right: 0; top: -5mm;
+    width: 9mm; height: 5mm;
+    background: #111;
+    border-radius: 1mm 1mm 0 0;
+  }
+  .sym-fork .forks {
+    display: flex; gap: 3mm;
+    margin-top: 0;
+  }
+  .sym-fork .forks div {
+    width: 3mm; height: 8mm;
+    background: #111;
+  }
+  .sym-fork .wheels {
+    display: flex; justify-content: space-between;
+    width: 22mm; margin-top: 1mm;
+  }
+  .sym-fork .wheel {
+    width: 6mm; height: 6mm;
+    border-radius: 50%;
+    background: #111;
+  }
+
+  .sym-slip {
+    position: relative; z-index: 2;
+    margin-top: 6mm;
+    display: flex; flex-direction: column;
+    align-items: center;
+  }
+  .sym-slip .person-head {
+    width: 7mm; height: 7mm;
+    border-radius: 50%;
+    background: #111;
+    align-self: flex-start;
+    margin-left: 6mm;
+  }
+  .sym-slip .person-body {
+    width: 12mm; height: 2mm;
+    background: #111;
+    border-radius: 1mm;
+    transform: rotate(-30deg);
+    margin: 1mm 0;
+  }
+  .sym-slip .legs {
+    display: flex; gap: 5mm;
+    transform: rotate(20deg);
+  }
+  .sym-slip .leg {
+    width: 2mm; height: 9mm;
+    background: #111;
+    border-radius: 1mm;
+  }
+  .sym-slip .floor-line {
+    width: 20mm; height: 2mm;
+    background: #111;
+    border-radius: 1mm;
+    margin-top: 1mm;
+  }
+
+  .warn-label-en {
+    font-size: 10.5pt;
+    font-weight: 800;
+    color: #111;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  .warn-label-hi {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+  }
+
+  /* ─── MAX WEIGHT BOX ─── */
+  .max-weight {
+    margin: 6px 14px;
+    background: #C0392B;
+    border: 3px solid #7B241C;
+    border-radius: 3mm;
+    padding: 10px 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .max-weight .weight-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .max-weight .w-box {
+    width: 16mm; height: 12mm;
+    background: #fff;
+    border-radius: 1.5mm;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11pt; font-weight: 900; color: #C0392B;
+  }
+  .max-weight .w-arrow {
+    width: 0; height: 0;
+    border-left: 4mm solid transparent;
+    border-right: 4mm solid transparent;
+    border-top: 5mm solid #FFD700;
+    margin-top: 1mm;
+  }
+  .max-weight .weight-text {
+    color: #fff;
+  }
+  .max-weight .weight-text .num {
+    font-size: 32pt;
+    font-weight: 900;
+    line-height: 1;
+    color: #FFD700;
+  }
+  .max-weight .weight-text .en {
+    font-size: 13pt;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  .max-weight .weight-text .hi {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #FFCDD2;
+    margin-top: 2px;
+  }
+
+  /* ─── LIFTING TECHNIQUE ─── */
+  .lifting-box {
+    margin: 6px 14px;
+    background: #E8F5E9;
+    border: 3px solid #2E7D32;
+    border-radius: 3mm;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .lifting-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 22mm;
+  }
+  /* Lifting figure: knees bent, straight back */
+  .lift-head {
+    width: 8mm; height: 8mm;
+    border-radius: 50%;
+    background: #2E7D32;
+    align-self: center;
+  }
+  .lift-torso {
+    width: 3mm; height: 12mm;
+    background: #2E7D32;
+    border-radius: 1mm;
+    margin-top: 1mm;
+  }
+  .lift-legs {
+    display: flex; gap: 2mm;
+    margin-top: 0;
+  }
+  .lift-leg-upper {
+    width: 3mm; height: 7mm;
+    background: #2E7D32;
+    border-radius: 1mm;
+    transform: rotate(30deg);
+  }
+  .lift-leg-lower {
+    width: 3mm; height: 7mm;
+    background: #2E7D32;
+    border-radius: 1mm;
+    transform: rotate(-30deg);
+  }
+  .lift-box-item {
+    width: 14mm; height: 8mm;
+    background: #2E7D32;
+    border-radius: 1mm;
+    margin-top: 2mm;
+  }
+  .lifting-steps {
+    flex: 1;
+  }
+  .lifting-steps .title {
+    font-size: 10pt;
+    font-weight: 800;
+    color: #1B5E20;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .lifting-steps .step {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 3px;
+  }
+  .step-num {
+    width: 5mm; height: 5mm;
+    border-radius: 50%;
+    background: #2E7D32;
+    color: #fff;
+    font-size: 7.5pt;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-text {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1B5E20;
+  }
+  .step-text span {
+    font-size: 8.5pt;
+    font-weight: 500;
+    color: #388E3C;
+    display: block;
+  }
+
+  /* ─── PPE ROW ─── */
+  .ppe-section {
+    margin: 6px 14px;
+    background: #f5f5f5;
+    border: 2px solid #ccc;
+    border-radius: 3mm;
+    padding: 7px 10px;
+  }
+  .ppe-title {
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1565C0;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .ppe-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 6px;
+  }
+  .ppe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .ppe-circle {
+    width: 18mm; height: 18mm;
+    border-radius: 50%;
+    background: #1565C0;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  /* Boot symbol */
+  .sym-boot {
+    display: flex; flex-direction: column; align-items: flex-start;
+  }
+  .boot-top {
+    width: 6mm; height: 8mm;
+    background: #fff;
+    border-radius: 1mm 1mm 0 0;
+    margin-left: 2mm;
+  }
+  .boot-sole {
+    width: 11mm; height: 3mm;
+    background: #fff;
+    border-radius: 0 1mm 1mm 1mm;
+  }
+
+  /* Hard hat symbol */
+  .sym-hat {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .hat-dome {
+    width: 12mm; height: 6mm;
+    background: #fff;
+    border-radius: 6mm 6mm 0 0;
+  }
+  .hat-brim {
+    width: 14mm; height: 2mm;
+    background: #fff;
+    border-radius: 1mm;
+    margin-top: 1px;
+  }
+
+  /* Glove symbol */
+  .sym-glove {
+    position: relative;
+  }
+  .glove-palm {
+    width: 9mm; height: 10mm;
+    background: #fff;
+    border-radius: 1mm 1mm 2mm 2mm;
+    position: relative;
+  }
+  .glove-fingers {
+    display: flex; gap: 1px;
+    position: absolute;
+    top: -4mm; left: 0.5mm;
+  }
+  .glove-finger {
+    width: 2mm; height: 5mm;
+    background: #fff;
+    border-radius: 1mm 1mm 0 0;
+  }
+
+  .ppe-label-en {
+    font-size: 8pt;
+    font-weight: 800;
+    color: #1565C0;
+    text-align: center;
+  }
+  .ppe-label-hi {
+    font-size: 7.5pt;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
+  }
+
+  /* ─── EMERGENCY FOOTER ─── */
+  .emergency-bar {
+    margin: 6px 14px 0;
+    background: #C0392B;
+    border-radius: 2mm 2mm 0 0;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .emergency-bar .cross-icon {
+    width: 8mm; height: 8mm;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .cross-h, .cross-v {
+    position: absolute;
+    background: #fff;
+    border-radius: 0.5mm;
+  }
+  .cross-h {
+    width: 8mm; height: 2.5mm;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+  }
+  .cross-v {
+    width: 2.5mm; height: 8mm;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+  }
+  .emergency-text {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 700;
+    text-align: center;
+  }
+  .emergency-text .num {
+    font-size: 13pt;
+    font-weight: 900;
+    color: #FFD700;
+  }
+
+  .footer-bar {
+    background: #222;
+    padding: 5px 14px;
+    border-radius: 0 0 2mm 2mm;
+    margin: 0 14px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-bar span {
+    color: #ccc;
+    font-size: 7.5pt;
+  }
+  .footer-bar .company {
+    color: #FFD700;
+    font-weight: 700;
+    font-size: 8pt;
+  }
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HAZARD STRIPE TOP -->
+<div class="stripe-top"></div>
+
+<!-- CAUTION BANNER -->
+<div class="caution-banner">
+  <div class="label-en">&#9888; CAUTION &mdash; MATERIAL HANDLING AREA</div>
+  <div class="label-hi">सावधान &mdash; मटेरियल हैंडलिंग एरिया</div>
+</div>
+
+<!-- SECTION: WARNING TRIANGLES -->
+<div class="section-title">WARNING HAZARDS / चेतावनी खतरे</div>
+
+<div class="warn-grid">
+
+  <!-- HEAVY LOAD -->
+  <div class="warn-cell">
+    <div class="triangle-wrap">
+      <div class="triangle-border"></div>
+      <div class="triangle-inner"></div>
+      <div class="sym-heavy">
+        <div class="box-body"><span>30 KG</span></div>
+        <div class="weight-lines">
+          <div></div><div></div><div></div>
+        </div>
+      </div>
+    </div>
+    <div class="warn-label-en">HEAVY LOAD</div>
+    <div class="warn-label-hi">भारी वज़न</div>
+  </div>
+
+  <!-- FALLING OBJECTS -->
+  <div class="warn-cell">
+    <div class="triangle-wrap">
+      <div class="triangle-border"></div>
+      <div class="triangle-inner"></div>
+      <div class="sym-fall">
+        <div class="item-box"></div>
+        <div class="arrow-shaft"></div>
+        <div class="arrow-head"></div>
+      </div>
+    </div>
+    <div class="warn-label-en">FALLING OBJECTS</div>
+    <div class="warn-label-hi">गिरती वस्तुएं</div>
+  </div>
+
+  <!-- FORKLIFT / TROLLEY -->
+  <div class="warn-cell">
+    <div class="triangle-wrap">
+      <div class="triangle-border"></div>
+      <div class="triangle-inner"></div>
+      <div class="sym-fork">
+        <div class="truck-body">
+          <div class="truck-cab"></div>
+        </div>
+        <div class="forks"><div></div><div></div></div>
+        <div class="wheels">
+          <div class="wheel"></div>
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </div>
+    <div class="warn-label-en">FORKLIFT / TROLLEY</div>
+    <div class="warn-label-hi">ट्रॉली / फोर्कलिफ्ट</div>
+  </div>
+
+  <!-- SLIP HAZARD -->
+  <div class="warn-cell">
+    <div class="triangle-wrap">
+      <div class="triangle-border"></div>
+      <div class="triangle-inner"></div>
+      <div class="sym-slip">
+        <div class="person-head"></div>
+        <div class="person-body"></div>
+        <div class="legs">
+          <div class="leg"></div>
+          <div class="leg" style="transform: rotate(-40deg); margin-top: 4mm;"></div>
+        </div>
+        <div class="floor-line"></div>
+      </div>
+    </div>
+    <div class="warn-label-en">SLIP HAZARD</div>
+    <div class="warn-label-hi">फिसलन का खतरा</div>
+  </div>
+
+</div>
+
+<!-- MAX WEIGHT -->
+<div class="max-weight">
+  <div class="weight-icon">
+    <div class="w-box">MAX</div>
+    <div class="w-arrow"></div>
+  </div>
+  <div class="weight-text">
+    <div class="num">30 KG</div>
+    <div class="en">MAXIMUM PER PERSON</div>
+    <div class="hi">अधिकतम 30 किलो प्रति व्यक्ति</div>
+  </div>
+</div>
+
+<!-- CORRECT LIFTING -->
+<div class="lifting-box">
+  <div class="lifting-icon">
+    <div class="lift-head"></div>
+    <div class="lift-torso"></div>
+    <div class="lift-legs">
+      <div class="lift-leg-upper"></div>
+      <div class="lift-leg-lower"></div>
+    </div>
+    <div class="lift-box-item"></div>
+  </div>
+  <div class="lifting-steps">
+    <div class="title">&#10003; CORRECT LIFTING TECHNIQUE / सही उठाने का तरीका</div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">BEND KNEES <span>घुटने मोड़ें</span></div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">STRAIGHT BACK <span>पीठ सीधी रखें</span></div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">GRIP FIRMLY <span>मजबूत पकड़ बनाएं</span></div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">LIFT WITH LEGS <span>टांगों से उठाएं</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PPE -->
+<div class="ppe-section">
+  <div class="ppe-title">&#9632; MANDATORY PPE — अनिवार्य सुरक्षा उपकरण</div>
+  <div class="ppe-row">
+
+    <!-- Safety Shoes -->
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <div class="sym-boot">
+          <div class="boot-top"></div>
+          <div class="boot-sole"></div>
+        </div>
+      </div>
+      <div class="ppe-label-en">SAFETY SHOES</div>
+      <div class="ppe-label-hi">सेफ्टी जूते</div>
+    </div>
+
+    <!-- Hard Hat -->
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <div class="sym-hat">
+          <div class="hat-dome"></div>
+          <div class="hat-brim"></div>
+        </div>
+      </div>
+      <div class="ppe-label-en">HARD HAT</div>
+      <div class="ppe-label-hi">हेलमेट</div>
+    </div>
+
+    <!-- Gloves -->
+    <div class="ppe-item">
+      <div class="ppe-circle">
+        <div class="sym-glove">
+          <div class="glove-fingers">
+            <div class="glove-finger"></div>
+            <div class="glove-finger"></div>
+            <div class="glove-finger"></div>
+            <div class="glove-finger"></div>
+          </div>
+          <div class="glove-palm"></div>
+        </div>
+      </div>
+      <div class="ppe-label-en">GLOVES</div>
+      <div class="ppe-label-hi">दस्ताने</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- EMERGENCY BAR -->
+<div class="emergency-bar">
+  <div class="cross-icon">
+    <div class="cross-h"></div>
+    <div class="cross-v"></div>
+  </div>
+  <div class="emergency-text">
+    EMERGENCY &mdash; FIRST AID &nbsp;|&nbsp; <span class="num">&#9742; EXT: 100</span>
+    &nbsp;&nbsp;|&nbsp;&nbsp; आपातकालीन &mdash; प्राथमिक चिकित्सा
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-bar">
+  <span>Doc: PICTO-HAZ-MH-01 &nbsp;|&nbsp; Rev: 00 &nbsp;|&nbsp; Date: 2026-03-28</span>
+  <span class="company">PACK MASTERS &mdash; RABALE MIDC, NAVI MUMBAI</span>
+  <span>ISO 45001:2018</span>
+</div>
+
+</body>
+</html>

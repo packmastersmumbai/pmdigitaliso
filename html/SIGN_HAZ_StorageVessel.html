@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGER — Storage Vessel Hazard Sign | Pack Masters</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #888;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── 1. HAZARD STRIPES TOP ── */
+  .stripe-bar {
+    height: 28px;
+    background: repeating-linear-gradient(
+      45deg,
+      #FFD700 0px,
+      #FFD700 16px,
+      #1a1a1a 16px,
+      #1a1a1a 32px
+    );
+    flex-shrink: 0;
+  }
+
+  /* ── 2. DANGER BANNER ── */
+  .danger-banner {
+    background: #C8000A;
+    padding: 10px 16px;
+    text-align: center;
+    flex-shrink: 0;
+    border-bottom: 4px solid #8B0006;
+  }
+
+  .danger-banner .danger-text {
+    font-size: 42px;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: 6px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .danger-banner .danger-hindi {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 3px;
+    margin-top: 2px;
+  }
+
+  /* ── 3. EQUIPMENT TITLE ── */
+  .equipment-block {
+    background: #1a1a1a;
+    padding: 12px 16px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .equipment-block .eq-icon {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .equipment-block .eq-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .equipment-block .eq-title-hindi {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFA500;
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 4. HAZARDS SECTION ── */
+  .section-header {
+    background: #C8000A;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 5px 0;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .hazards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 2px solid #C8000A;
+    border-bottom: 2px solid #C8000A;
+    flex-shrink: 0;
+  }
+
+  .hazard-item {
+    padding: 10px 8px;
+    text-align: center;
+    background: #FFF8E1;
+    border-right: 2px solid #C8000A;
+  }
+
+  .hazard-item:last-child {
+    border-right: none;
+  }
+
+  .hazard-item .hz-icon {
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .hazard-item .hz-label {
+    font-size: 11px;
+    font-weight: 900;
+    color: #C8000A;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+
+  .hazard-item .hz-sub {
+    font-size: 10px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  .hazard-item .hz-hindi {
+    font-size: 10px;
+    color: #666;
+    margin-top: 3px;
+    font-style: italic;
+    line-height: 1.3;
+  }
+
+  /* ── 5. SAFETY RULES ── */
+  .rules-block {
+    padding: 8px 14px 6px;
+    background: #fff;
+    flex-shrink: 0;
+  }
+
+  .rules-list {
+    list-style: none;
+  }
+
+  .rules-list li {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px 0;
+    border-bottom: 1px solid #E0E0E0;
+    gap: 10px;
+  }
+
+  .rules-list li:last-child {
+    border-bottom: none;
+  }
+
+  .rule-num {
+    background: #C8000A;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .rule-text {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+  }
+
+  .rule-text .rule-hindi {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-top: 1px;
+  }
+
+  /* ── 6. PPE SECTION ── */
+  .ppe-block {
+    background: #1a3a5c;
+    padding: 8px 14px 10px;
+    flex-shrink: 0;
+  }
+
+  .ppe-header {
+    color: #FFD700;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .ppe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .ppe-item {
+    background: #fff;
+    border-radius: 4px;
+    padding: 8px 4px;
+    text-align: center;
+  }
+
+  .ppe-item .ppe-icon {
+    font-size: 26px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .ppe-item .ppe-label {
+    font-size: 9.5px;
+    font-weight: 900;
+    color: #1a3a5c;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+  }
+
+  .ppe-item .ppe-hindi {
+    font-size: 9px;
+    color: #555;
+    margin-top: 2px;
+    line-height: 1.2;
+  }
+
+  /* ── 7. FIRE EXTINGUISHER ── */
+  .fire-block {
+    background: #fff3cd;
+    border-top: 3px solid #e67e00;
+    border-bottom: 3px solid #e67e00;
+    padding: 7px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .fire-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+  }
+
+  .fire-text .fire-title {
+    font-size: 12px;
+    font-weight: 900;
+    color: #C8000A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .fire-text .fire-detail {
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 2px;
+  }
+
+  /* ── 8. EMERGENCY ── */
+  .emergency-block {
+    background: #C8000A;
+    padding: 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .emergency-block .emerg-header {
+    font-size: 13px;
+    font-weight: 900;
+    color: #FFD700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .emerg-contacts {
+    display: flex;
+    gap: 14px;
+  }
+
+  .emerg-contact {
+    text-align: center;
+  }
+
+  .emerg-contact .role {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .emerg-contact .number {
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: 1px;
+  }
+
+  /* ── 9. FOOTER ── */
+  .footer {
+    background: #1a1a1a;
+    color: #ccc;
+    font-size: 9px;
+    text-align: center;
+    padding: 5px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .footer .company {
+    font-weight: 700;
+    color: #FFD700;
+    font-size: 10px;
+  }
+
+  .footer .standards {
+    font-size: 9px;
+    color: #aaa;
+  }
+
+  .footer .doc-code {
+    font-size: 9px;
+    color: #aaa;
+  }
+
+  /* ── BOTTOM STRIPES ── */
+  .stripe-bar-bottom {
+    height: 22px;
+    background: repeating-linear-gradient(
+      45deg,
+      #FFD700 0px,
+      #FFD700 14px,
+      #1a1a1a 14px,
+      #1a1a1a 28px
+    );
+    flex-shrink: 0;
+    margin-top: auto;
+  }
+
+  @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+    body {
+      background: none;
+      padding: 0;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      box-shadow: none;
+    }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 1. TOP HAZARD STRIPES -->
+  <div class="stripe-bar"></div>
+
+  <!-- 2. DANGER BANNER -->
+  <div class="danger-banner">
+    <div class="danger-text">&#9888; DANGER</div>
+    <div class="danger-hindi">खतरा</div>
+  </div>
+
+  <!-- 3. EQUIPMENT TITLE -->
+  <div class="equipment-block">
+    <div class="eq-icon">&#128722;</div>
+    <div class="eq-title">STORAGE VESSEL — FLAMMABLE CONTENTS</div>
+    <div class="eq-title-hindi">स्टोरेज वेसल — ज्वलनशील सामग्री</div>
+  </div>
+
+  <!-- 4. HAZARDS -->
+  <div class="section-header">&#9888; HAZARDS PRESENT / मौजूद खतरे &#9888;</div>
+  <div class="hazards-grid">
+
+    <div class="hazard-item">
+      <div class="hz-icon">&#128293;</div>
+      <div class="hz-label">FLAMMABLE<br>CONTENTS</div>
+      <div class="hz-sub">Solvents &amp; Adhesives</div>
+      <div class="hz-hindi">ज्वलनशील सामग्री<br>सॉल्वेंट / एडहेसिव</div>
+    </div>
+
+    <div class="hazard-item">
+      <div class="hz-icon">&#129301;</div>
+      <div class="hz-label">CHEMICAL<br>EXPOSURE</div>
+      <div class="hz-sub">Vapour Inhalation Risk</div>
+      <div class="hz-hindi">केमिकल वाष्प<br>सांस का खतरा</div>
+    </div>
+
+    <div class="hazard-item">
+      <div class="hz-icon">&#128262;</div>
+      <div class="hz-label">PRESSURE<br>HAZARD</div>
+      <div class="hz-sub">Vessel Under Pressure</div>
+      <div class="hz-hindi">दबाव में वेसल<br>सावधानी बरतें</div>
+    </div>
+
+  </div>
+
+  <!-- 5. SAFETY RULES -->
+  <div class="section-header">SAFETY RULES / सुरक्षा नियम</div>
+  <div class="rules-block">
+    <ul class="rules-list">
+      <li>
+        <span class="rule-num">1</span>
+        <span class="rule-text">
+          NO SMOKING / NO OPEN FLAMES within 10 metres of this vessel
+          <span class="rule-hindi">इस वेसल के 10 मीटर के अंदर धूम्रपान / खुली लौ सख्त मना है</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">2</span>
+        <span class="rule-text">
+          CHECK pressure gauge before opening any valve — never exceed rated pressure
+          <span class="rule-hindi">कोई भी वाल्व खोलने से पहले प्रेशर गेज जांचें — रेटेड प्रेशर कभी न पार करें</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">3</span>
+        <span class="rule-text">
+          Ensure EARTHING / GROUNDING is connected before any transfer operation
+          <span class="rule-hindi">ट्रांसफर से पहले अर्थिंग / ग्राउंडिंग जुड़ी है यह सुनिश्चित करें</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">4</span>
+        <span class="rule-text">
+          Use ONLY approved containers for decanting — never use plastic buckets or open cans
+          <span class="rule-hindi">डिकैंटिंग के लिए केवल अनुमोदित कंटेनर उपयोग करें</span>
+        </span>
+      </li>
+      <li>
+        <span class="rule-num">5</span>
+        <span class="rule-text">
+          Report ANY leak, smell, or hissing sound IMMEDIATELY to Floor Supervisor
+          <span class="rule-hindi">कोई भी रिसाव, गंध या हिसिंग की आवाज़ तुरंत फ्लोर सुपरवाइज़र को बताएं</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 6. MANDATORY PPE -->
+  <div class="ppe-block">
+    <div class="ppe-header">&#9888; MANDATORY PPE — अनिवार्य सुरक्षा उपकरण &#9888;</div>
+    <div class="ppe-grid">
+      <div class="ppe-item">
+        <div class="ppe-icon">&#129330;</div>
+        <div class="ppe-label">Chemical<br>Gloves</div>
+        <div class="ppe-hindi">केमिकल<br>दस्ताने</div>
+      </div>
+      <div class="ppe-item">
+        <div class="ppe-icon">&#128064;</div>
+        <div class="ppe-label">Safety<br>Goggles</div>
+        <div class="ppe-hindi">सुरक्षा<br>चश्मा</div>
+      </div>
+      <div class="ppe-item">
+        <div class="ppe-icon">&#128567;</div>
+        <div class="ppe-label">Respirator /<br>Face Mask</div>
+        <div class="ppe-hindi">रेस्पिरेटर /<br>मास्क</div>
+      </div>
+      <div class="ppe-item">
+        <div class="ppe-icon">&#128094;</div>
+        <div class="ppe-label">Safety<br>Shoes</div>
+        <div class="ppe-hindi">सुरक्षा<br>जूते</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. FIRE EXTINGUISHER -->
+  <div class="fire-block">
+    <div class="fire-icon">&#128293;</div>
+    <div class="fire-text">
+      <div class="fire-title">&#9632; CO&#8322; FIRE EXTINGUISHER — Location Marked Nearby</div>
+      <div class="fire-detail">
+        Use CO&#8322; type extinguisher ONLY — DO NOT use water on chemical/solvent fires<br>
+        <span style="color:#666; font-size:10px;">कार्बन डाइऑक्साइड (CO&#8322;) अग्निशामक — पास में चिह्नित स्थान पर उपलब्ध | केमिकल आग पर पानी का उपयोग न करें</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. EMERGENCY CONTACTS -->
+  <div class="emergency-block">
+    <div class="emerg-header">&#128222; EMERGENCY</div>
+    <div class="emerg-contacts">
+      <div class="emerg-contact">
+        <div class="role">Fire Warden</div>
+        <span class="number">86552 23426</span>
+      </div>
+      <div class="emerg-contact">
+        <div class="role">Floor Supervisor</div>
+        <span class="number">91670 95723</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. FOOTER -->
+  <div class="footer">
+    <span class="company">PACK MASTERS — Rabale MIDC, Navi Mumbai</span>
+    <span class="standards">ISO 45001:2018 &nbsp;|&nbsp; ISO 14001:2015</span>
+    <span class="doc-code">SIGN-HAZ-SV-01 &nbsp;|&nbsp; Rev. 00 &nbsp;|&nbsp; Mar 2026</span>
+  </div>
+
+  <!-- BOTTOM HAZARD STRIPES -->
+  <div class="stripe-bar-bottom"></div>
+
+</div>
+
+</body>
+</html>

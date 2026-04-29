@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Environmental Objectives &amp; Targets Plan — YPP_PLN-ENV-01</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:14px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+:root{
+  --navy-deep:#0F1720;--navy:#1A2332;
+  --teal:#2D8B8B;--teal-lt:#3AABAB;--teal-dim:#20616B;
+  --teal-pale:#EBF4F4;--teal-rule:#B0D4D4;
+  --amber:#C08010;--amber-bg:#FFF8EE;--amber-bd:#E8C870;
+  --danger:#B83030;--danger-bg:#FEF0EF;--danger-bd:#E8B0AD;
+  --green:#1A7040;--green-bg:#EEF7F2;--green-bd:#A0C8B4;
+  --ice:#F4F8FB;--ice-mid:#E8F0F5;
+  --rule:#D8E6EE;--rule-lt:#EBF2F7;
+  --ink:#1A2332;--mid:#3A5060;--lt:#6B7F90;--white:#FFFFFF;
+  --font-d:'Barlow Condensed',-apple-system,sans-serif;
+  --font-b:'Inter',-apple-system,sans-serif;
+  --font-m:'JetBrains Mono',monospace;
+  --r:4px;--r2:6px;
+
+  /* ── ISO Domain Colors (v19.0) ── */
+  --iso-quality:#2563EB;--iso-quality-lt:#DBEAFE;
+  --iso-env:#059669;--iso-env-lt:#D1FAE5;
+  --iso-safety:#EA580C;--iso-safety-lt:#FFF7ED;
+  --iso-energy:#D97706;--iso-energy-lt:#FFFBEB;
+  --iso-food:#16A34A;--iso-food-lt:#F0FDF4;
+  --iso-infosec:#7C3AED;--iso-infosec-lt:#F5F3FF;
+  --iso-medical:#0D9488;--iso-medical-lt:#F0FDFA;
+  --iso-auto:#1E3A8A;--iso-auto-lt:#EFF6FF;
+  --iso-aero:#1E3A5F;--iso-aero-lt:#F8FAFC;
+
+  /* ── Document Lifecycle State Colors ── */
+  --state-draft:#6B7280;--state-draft-bg:#F3F4F6;
+  --state-review:#D97706;--state-review-bg:#FEF3C7;
+  --state-approved:#059669;--state-approved-bg:#D1FAE5;
+  --state-published:#2563EB;--state-published-bg:#DBEAFE;
+  --state-superseded:#EA580C;--state-superseded-bg:#FFF7ED;
+  --state-obsolete:#B91C1C;--state-obsolete-bg:#FEF2F2;
+
+  /* ── RAG Status Colors ── */
+  --rag-red:#DC2626;--rag-red-bg:#FEE2E2;--rag-red-ink:#991B1B;
+  --rag-amber:#D97706;--rag-amber-bg:#FEF3C7;--rag-amber-ink:#92400E;
+  --rag-green:#059669;--rag-green-bg:#D1FAE5;--rag-green-ink:#065F46;
+  --rag-blue:#2563EB;--rag-blue-bg:#DBEAFE;--rag-blue-ink:#1E40AF;
+  --rag-grey:#6B7280;--rag-grey-bg:#F3F4F6;--rag-grey-ink:#374151;
+
+  /* ── Neutral Scale ── */
+  --gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;
+  --gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-500:#6B7280;
+  --gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;
+
+  /* ── Accessibility ── */
+  --focus-ring:#2563EB;--focus-offset:2px;
+}
+
+body{font-family:var(--font-b);background:#E8EEF3;color:var(--ink);line-height:1.55;padding:32px 20px 64px;min-height:100vh}
+
+/* PAGE */
+.document{max-width:960px;margin:0 auto;background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.08),0 12px 40px rgba(0,0,0,.10);border-radius:0 0 var(--r) var(--r);border-top:4px solid var(--teal)}
+
+/* ── BANNER ── */
+.banner{background:var(--navy-deep);color:#fff;padding:28px 36px 24px;position:relative;overflow:hidden}
+.banner::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-55deg,rgba(45,139,139,.04) 0px,rgba(45,139,139,.04) 1px,transparent 1px,transparent 22px);pointer-events:none}
+.banner::after{content:'';position:absolute;right:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--teal),var(--teal-dim))}
+.banner-inner{position:relative;z-index:1}
+.banner-eyebrow{font-family:var(--font-m);font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--teal-lt);margin-bottom:9px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ey-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.25)}
+.banner-title{font-family:var(--font-d);font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.1;letter-spacing:-.3px;margin-bottom:6px}
+.banner-meta{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px}
+.banner-org{font-size:11px;opacity:.75;font-style:italic}
+.doc-code-badge{font-family:var(--font-m);font-size:11px;font-weight:600;color:var(--amber);background:rgba(0,0,0,.28);padding:5px 13px;border-radius:3px;letter-spacing:.5px}
+/* Banner layout: top-row (logo+eyebrow+badge), title, QR absolute right */
+.banner-header{display:flex;flex-direction:column;gap:6px}
+.banner-top-row{display:flex;align-items:center;gap:14px}
+.banner-logo-left{display:flex;align-items:center;flex-shrink:0}
+.co-logo{max-height:44px;max-width:130px;object-fit:contain;filter:brightness(1.1)}
+.banner-bottom-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.banner-qr-right{position:absolute;right:36px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;z-index:2}
+.banner-qr-img{width:86px;height:86px;border-radius:6px;border:2px solid rgba(255,255,255,.2);background:#fff;padding:3px;object-fit:contain;display:block}
+.banner-qr-lbl{font-family:var(--font-m);font-size:7px;color:rgba(255,255,255,.5);letter-spacing:.5px;text-align:center;word-break:break-all;max-width:86px}
+/* Confidential watermark — fixed overlay, pointer-events:none so it doesn't block clicks */
+.wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden}
+.wm-inner{position:absolute;inset:-50%;display:flex;flex-direction:column;gap:90px;transform:rotate(-35deg)}
+.wm-row{display:flex;gap:80px;white-space:nowrap;padding:0 40px}
+.wm-txt{font-family:Barlow Condensed,Arial,sans-serif;font-size:26px;font-weight:800;letter-spacing:8px;color:rgba(139,0,0,0.045);text-transform:uppercase;user-select:none}
+@media print{.wm-txt{color:rgba(139,0,0,0.055)}}
+
+/* ── CONTROL STRIP ── */
+.ctrl-strip{display:grid;grid-template-columns:repeat(5,1fr);background:var(--teal)}
+.ctrl-cell{padding:9px 14px;border-right:1px solid rgba(255,255,255,.22)}
+.ctrl-cell:last-child{border-right:none}
+.ctrl-lbl{font-family:var(--font-m);font-size:7px;text-transform:uppercase;letter-spacing:.7px;color:rgba(255,255,255,.72);margin-bottom:3px}
+.ctrl-val{font-family:var(--font-b);font-size:10.5px;font-weight:600;color:#fff}
+
+/* ── SECTION ── */
+.section{padding:0}
+.section+.section{border-top:1px solid var(--rule)}
+.sec-hdr{display:flex;align-items:center;gap:12px;padding:17px 36px 14px;background:var(--ice);border-bottom:1px solid var(--rule);user-select:none;position:relative}
+.sec-hdr:hover{background:var(--teal-pale)}
+.sec-hdr.amber{background:#FFFBF5}
+.sec-hdr.amber:hover{background:#FFF5E6}
+.sec-num{width:26px;height:26px;border-radius:50%;flex-shrink:0;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:12px;font-weight:700}
+.sec-num.amber{background:var(--amber)}
+.sec-title{font-family:var(--font-d);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--navy)}
+.sec-title.amber{color:var(--amber)}
+.sec-tag{margin-left:auto;flex-shrink:0;font-family:var(--font-m);font-size:8px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-rule);padding:3px 9px;border-radius:3px}
+.sec-tag.amber{color:var(--amber);background:var(--amber-bg);border-color:var(--amber-bd)}
+.sec-chevron{margin-left:auto;font-size:18px;color:var(--muted);transition:transform .3s ease}
+.sec-hdr .sec-tag+.sec-chevron{margin-left:12px}
+.sec-hdr.collapsed .sec-chevron{transform:rotate(-90deg)}
+.sec-collapse{overflow:hidden;max-height:9999px;transition:max-height .4s ease-in-out,opacity .3s ease}
+.sec-hdr.collapsed+.sec-collapse{max-height:0;opacity:0;padding:0}
+.sec-body{padding:24px 36px}
+
+/* ── TOC TABLE ── */
+.toc-table{width:100%;border-collapse:collapse;font-size:12.5px;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.toc-table th{background:var(--navy);color:#fff;font-family:var(--font-d);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px;text-align:left}
+.toc-table td{padding:9px 14px;border-bottom:1px solid var(--rule);transition:background .2s}
+.toc-table tr:nth-child(even) td{background:var(--ice)}
+.toc-table tr:nth-child(odd) td{background:#fff}
+.toc-table tr:hover td{background:var(--teal-pale)}
+.toc-table a{text-decoration:none;color:var(--navy);font-weight:500;display:block;transition:color .15s}
+.toc-table a:hover{color:var(--teal)}
+.toc-table .toc-sec-num{font-family:var(--font-d);font-size:12px;font-weight:700;color:var(--navy);text-align:center;width:40px}
+.toc-table .toc-tag{font-family:var(--font-d);font-size:10.5px;font-weight:700;color:var(--teal);text-align:right;white-space:nowrap}
+@keyframes tocFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.toc-table tr{animation:tocFadeIn .3s ease forwards;opacity:0}
+.toc-table tr:nth-child(1){animation-delay:.05s}
+.toc-table tr:nth-child(2){animation-delay:.08s}
+.toc-table tr:nth-child(3){animation-delay:.11s}
+.toc-table tr:nth-child(4){animation-delay:.14s}
+.toc-table tr:nth-child(5){animation-delay:.17s}
+.toc-table tr:nth-child(6){animation-delay:.2s}
+.toc-table tr:nth-child(7){animation-delay:.23s}
+.toc-table tr:nth-child(8){animation-delay:.26s}
+.toc-table tr:nth-child(9){animation-delay:.29s}
+.toc-table tr:nth-child(10){animation-delay:.32s}
+.toc-table tr:nth-child(n+11){animation-delay:.35s}
+
+/* ── FLOATING BACK-TO-TOC BUTTON ── */
+.fab-toc{position:fixed;bottom:32px;right:32px;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(15,23,32,.35);display:flex;align-items:center;justify-content:center;font-size:20px;z-index:999;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s,background .2s;pointer-events:none}
+.fab-toc.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.fab-toc:hover{background:var(--teal);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+
+/* ── SCOPE CARDS ── */
+.scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.scope-card{background:var(--ice);border:1px solid var(--rule);border-radius:var(--r);padding:15px 16px;border-top:3px solid var(--teal)}
+.scope-card-wide{grid-column:1/-1}
+.scope-card-wide .scope-txt{white-space:pre-line}
+.scope-lbl{font-family:var(--font-m);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--teal-dim);margin-bottom:7px}
+.scope-txt{font-size:13px;line-height:1.6;color:var(--mid)}
+
+/* ── BILINGUAL ── */
+/* ── Hindi Translation Styles (v19.0 redesign) ── */
+.hi-block{border-left:3px solid var(--amber);padding:8px 14px;margin:6px 0 10px;background:#FFFDF7;border-radius:0 var(--r) var(--r) 0}
+.hi-label{display:none}
+.hi-text{font-size:11.5px;line-height:1.7;color:#6B5B3E;margin-bottom:4px}
+.hi-text:last-child{margin-bottom:0}
+/* Inline Hindi blocks — only visible when HI toggle is active */
+.hi-inline{display:none}
+body.lang-hi .hi-inline{display:block}
+.hi-inline{font-size:11px;line-height:1.6;color:#8B7355;display:block;margin-top:2px}
+.manual-list .hi-inline{margin-top:1px;padding-left:0}
+.bilingual-pair{margin-bottom:12px}
+.bilingual-pair .manual-para{margin-bottom:2px}
+.bilingual-pair .hi-text{margin-bottom:0}
+.hi-bullets{padding-left:20px;margin:4px 0 0;list-style:disc}
+.hi-bullets li{font-size:11.5px;line-height:1.6;color:#6B5B3E;margin-bottom:2px}
+.hi-bullets li::marker{color:var(--amber)}
+.sec-title-hi{font-family:var(--font-b);font-size:11px;font-weight:600;color:var(--amber);margin-left:4px;text-transform:none;letter-spacing:0}
+.principle-text-hi{margin-top:5px;padding-top:5px;border-top:1px dashed var(--amber-bd);font-size:11px;line-height:1.55;color:var(--amber)}
+.scope-txt-hi{margin-top:5px;padding-top:5px;border-top:1px dashed var(--amber-bd);font-size:11px;line-height:1.5;color:var(--amber);white-space:pre-line}
+
+/* ── SAFETY BANNER ── */
+.safety-banner{display:grid;grid-template-columns:44px 1fr;border:1px solid var(--danger-bd);border-left:5px solid var(--danger);border-radius:0 var(--r) var(--r) 0;margin-bottom:18px;overflow:hidden}
+.safety-icon-cell{background:var(--danger-bg);display:flex;align-items:center;justify-content:center}
+.safety-icon-cell svg{width:20px;height:20px;color:var(--danger)}
+.safety-txt-cell{padding:10px 14px;background:var(--danger-bg)}
+.safety-txt{font-size:13px;line-height:1.6;color:var(--ink)}
+.safety-txt strong{color:var(--danger);font-weight:700}
+
+/* ── PPE GRID ── */
+.ppe-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.ppe-card{background:var(--ice);border:1px solid var(--rule);border-radius:var(--r2);padding:12px 6px 10px;display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;transition:border-color 180ms,box-shadow 180ms}
+.ppe-card:hover{border-color:var(--teal-rule);box-shadow:0 2px 8px rgba(45,139,139,.1)}
+.ppe-icon-wrap{width:52px;height:52px;display:flex;align-items:center;justify-content:center}
+.ppe-icon-wrap svg{width:52px;height:52px}
+.ppe-label{font-size:9.5px;font-weight:500;color:var(--mid);line-height:1.25}
+
+/* ── FLOWCHART ── */
+.flow-chain{position:relative;display:flex;flex-direction:column;max-width:820px;margin:0 auto}
+.flow-chain::before{content:'';position:absolute;left:22px;top:22px;height:calc(100% - 80px);width:2px;background:linear-gradient(180deg,var(--teal),var(--rule));z-index:0}
+/* GRID: col4 is the callout column — capped at 260px to prevent squeezing the step text.
+   DO NOT change minmax(0,260px) to 'auto' — auto expands to ~55% viewport width. */
+.flow-step{display:grid;grid-template-columns:44px 16px 1fr minmax(0,260px);align-items:start;gap:0;position:relative;z-index:1}
+.flow-num{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:16px;font-weight:700;background:var(--teal);color:#fff;flex-shrink:0;z-index:2;box-shadow:0 0 0 4px #fff}
+.flow-num.crit{background:var(--amber);box-shadow:0 0 0 4px #fff,0 0 0 5px var(--amber-bd)}
+.flow-conn{display:flex;align-items:flex-start;padding-top:21px}
+.flow-conn-line{width:100%;height:2px;background:var(--teal)}
+.flow-conn-line.crit{background:var(--amber)}
+.flow-box{background:var(--white);border:1.5px solid var(--rule);border-radius:var(--r);padding:10px 14px;min-height:44px;display:flex;flex-direction:column;justify-content:center;gap:4px;position:relative;box-shadow:0 1px 3px rgba(0,0,0,.05);transition:border-color 180ms,box-shadow 180ms}
+.flow-box:hover{border-color:var(--teal-rule);box-shadow:0 2px 8px rgba(45,139,139,.1)}
+.flow-box::before{content:'';position:absolute;left:-7px;top:18px;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid var(--rule)}
+.flow-box::after{content:'';position:absolute;left:-5.5px;top:19px;border-top:6px solid transparent;border-bottom:6px solid transparent;border-right:6px solid var(--white)}
+.flow-box.crit{border-color:var(--amber-bd);background:var(--amber-bg)}
+.flow-box.crit::before{border-right-color:var(--amber-bd)}
+.flow-box.crit::after{border-right-color:var(--amber-bg)}
+.crit-pill{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-m);font-size:8px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--amber);background:#FFF3D8;border:1px solid var(--amber-bd);padding:2px 8px;border-radius:3px;width:fit-content;margin-bottom:3px}
+.flow-step-text{font-size:13.5px;font-weight:500;color:var(--ink);line-height:1.5}
+/* .flow-step-note removed — callout shown exclusively in right-column callout_html */
+.flow-callout{align-self:flex-start;padding-top:2px;padding-left:12px;box-sizing:border-box}
+.callout-tag{background:var(--teal-pale);border:1px solid var(--teal-rule);border-radius:var(--r);padding:6px 10px;text-align:left}
+.callout-tag.crit{background:var(--amber-bg);border-color:var(--amber-bd)}
+.callout-txt{font-family:var(--font-m);font-size:8px;font-weight:600;color:var(--teal-dim);line-height:1.4;display:block}
+.callout-txt.crit{color:var(--amber)}
+.flow-arrow{display:grid;grid-template-columns:44px 16px 1fr minmax(0,260px);height:30px;position:relative;z-index:1}
+.arrow-spine{display:flex;align-items:center;justify-content:center;z-index:2}
+
+/* ── DECISION NODE ── */
+.flow-decision{display:grid;grid-template-columns:44px 16px 1fr auto;position:relative;z-index:1;margin-top:2px}
+.decision-wrapper{border:2px solid var(--teal);border-radius:var(--r2);overflow:hidden;box-shadow:0 1px 4px rgba(45,139,139,.12)}
+.decision-hdr{background:linear-gradient(90deg,var(--teal),var(--teal-dim));padding:12px 20px;display:flex;align-items:center;gap:12px}
+.diamond-icon{width:28px;height:28px;flex-shrink:0;background:rgba(255,255,255,.25);border-radius:3px;transform:rotate(45deg);display:flex;align-items:center;justify-content:center}
+.diamond-icon span{transform:rotate(-45deg);font-weight:800;font-size:13px;color:#fff}
+.decision-q{font-family:var(--font-d);font-size:15px;font-weight:700;color:#fff;letter-spacing:.2px}
+.decision-branches{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--rule)}
+.branch{padding:14px 16px;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:6px;transition:background 180ms}
+.branch:last-child{border-right:none}
+.branch-hdr{display:flex;align-items:center;gap:8px}
+.branch-icon{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.branch-icon svg{width:13px;height:13px}
+.branch-lbl{font-family:var(--font-d);font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.branch-action{font-size:13px;line-height:1.55;color:var(--mid)}
+.br-accept{background:var(--green-bg)}.br-accept:hover{background:#E2F4EB}.br-accept .branch-icon{background:rgba(26,112,64,.15);color:var(--green)}.br-accept .branch-lbl{color:var(--green)}
+.br-hold{background:var(--amber-bg)}.br-hold:hover{background:#FFF0D4}.br-hold .branch-icon{background:rgba(192,128,16,.15);color:var(--amber)}.br-hold .branch-lbl{color:var(--amber)}
+.br-reject{background:var(--danger-bg)}.br-reject:hover{background:#FEE8E7}.br-reject .branch-icon{background:rgba(184,48,48,.15);color:var(--danger)}.br-reject .branch-lbl{color:var(--danger)}
+
+/* ── TABLES ── */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+thead tr{background:var(--navy)}
+th{padding:9px 14px;text-align:left;font-family:var(--font-m);font-size:7.5px;font-weight:600;letter-spacing:.9px;text-transform:uppercase;color:rgba(255,255,255,.88);border-right:1px solid rgba(255,255,255,.1)}
+th:last-child{border-right:none}
+td{padding:10px 14px;border-bottom:1px solid var(--rule-lt);color:var(--mid);vertical-align:top;line-height:1.6;border-right:1px solid var(--rule-lt)}
+td:last-child{border-right:none}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(odd){background:var(--ice)}
+tbody tr:nth-child(even){background:var(--white)}
+tbody tr.crit-row{background:var(--amber-bg)!important}
+tbody tr.crit-row td:first-child{border-left:3px solid var(--amber);padding-left:11px}
+tbody tr:hover td{background:var(--teal-pale)!important}
+.col-num{width:38px;text-align:center;font-family:var(--font-m);font-size:11px;color:var(--lt);font-weight:500}
+.phase-chip{display:inline-block;font-family:var(--font-m);font-size:8.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;background:var(--teal-pale);color:var(--teal-dim);border:1px solid var(--teal-rule);padding:2px 8px;border-radius:3px;white-space:nowrap}
+.crit-marker{display:inline-flex;align-items:center;gap:3px;font-family:var(--font-m);font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--amber);background:#FFF3D8;border:1px solid var(--amber-bd);padding:2px 6px;border-radius:3px}
+.mono{font-family:var(--font-m);font-size:10.5px;color:var(--lt)}
+.doc-ref{font-family:var(--font-m);font-size:10px;font-weight:600;color:var(--teal-dim)}
+.ver-badge{display:inline-block;font-family:var(--font-m);font-size:10px;font-weight:600;color:var(--teal-dim);background:var(--teal-pale);border:1px solid var(--teal-rule);padding:2px 8px;border-radius:3px}
+
+/* ── RISK SCORE BADGES ── */
+.risk-low{color:var(--green);background:var(--green-bg);border:1px solid var(--green-bd)}
+.risk-med{color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-bd)}
+.risk-high{color:#C05010;background:#FFF3E0;border:1px solid #F0C090}
+.risk-extreme{color:var(--danger);background:var(--danger-bg);border:1px solid var(--danger-bd)}
+.risk-badge{display:inline-block;font-family:var(--font-m);font-size:9px;font-weight:700;padding:3px 9px;border-radius:4px}
+
+/* ── AUDIT CONFORMANCE ── */
+.conf-c{color:var(--green);background:var(--green-bg);border:1px solid var(--green-bd)}
+.conf-nc{color:var(--danger);background:var(--danger-bg);border:1px solid var(--danger-bd)}
+.conf-ofi{color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-bd)}
+.conf-na{color:var(--lt);background:var(--ice);border:1px solid var(--rule)}
+.conf-badge{display:inline-block;font-family:var(--font-m);font-size:8px;font-weight:700;padding:2px 7px;border-radius:3px;white-space:nowrap}
+
+/* ── COMPETENCE LEVELS ── */
+.comp-0{color:var(--lt);background:var(--ice);border:1px solid var(--rule)}
+.comp-1{color:#1E40AF;background:#EFF6FF;border:1px solid #BFDBFE}
+.comp-2{color:#0E7490;background:#ECFEFF;border:1px solid #A5F3FC}
+.comp-3{color:var(--green);background:var(--green-bg);border:1px solid var(--green-bd)}
+.comp-4{color:#fff;background:var(--green);border:1px solid var(--green)}
+.comp-badge{display:inline-block;font-family:var(--font-m);font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;min-width:28px;text-align:center}
+.comp-below{outline:2px solid var(--danger);outline-offset:1px}
+
+/* ── SCORING CARDS ── */
+.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.score-card{padding:16px;border-radius:var(--r);text-align:center;border:1px solid var(--rule)}
+.score-card-n{font-family:var(--font-d);font-size:30px;font-weight:800;line-height:1;margin-bottom:4px}
+.score-card-l{font-family:var(--font-m);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+
+/* ── POLICY PRINCIPLES ── */
+.principles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.principle-card{background:var(--ice);border:1px solid var(--rule);border-radius:var(--r);padding:16px;border-left:4px solid var(--teal)}
+.principle-title{font-family:var(--font-d);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;color:var(--navy);margin-bottom:6px}
+.principle-text{font-size:13px;line-height:1.6;color:var(--mid)}
+
+/* ── QUALITY MANUAL CLAUSE SECTIONS ── */
+.manual-clause{padding:6px 0}
+.manual-subsec{margin-bottom:16px;padding:16px 20px 14px;background:var(--white);border:1px solid var(--rule);border-radius:var(--r2);border-left:4px solid var(--teal);box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.manual-subsec-hdr{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule-lt);flex-wrap:wrap}
+.manual-clause-num{font-family:var(--font-m);font-size:10px;font-weight:700;color:#fff;background:var(--teal);padding:3px 10px;border-radius:3px;letter-spacing:.5px}
+.manual-subsec-title{font-family:var(--font-d);font-size:14px;font-weight:700;color:var(--navy);letter-spacing:.2px}
+.manual-para{font-size:13px;line-height:1.7;color:var(--ink);margin-bottom:10px}
+.manual-list{font-size:13px;line-height:1.7;color:var(--ink);padding-left:20px;margin:10px 0}
+.manual-list li{margin-bottom:6px;padding-left:2px}
+.manual-list li::marker{color:var(--teal)}
+.manual-list li strong{color:var(--navy);font-weight:600}
+
+/* ── NCR CONTENT BLOCKS ── */
+.ncr-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;margin-bottom:20px}
+.ncr-info-cell{display:grid;grid-template-columns:140px 1fr;border-bottom:1px solid var(--rule-lt)}
+.ncr-info-cell:last-child{border-bottom:none}
+.ncr-info-lbl{background:var(--ice);padding:10px 14px;font-family:var(--font-m);font-size:8.5px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--teal-dim);border-right:1px solid var(--rule-lt);display:flex;align-items:center}
+.ncr-info-val{padding:10px 14px;font-size:11.5px;color:var(--ink)}
+.ncr-block{background:var(--ice);border:1px solid var(--rule);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.ncr-block-lbl{font-family:var(--font-m);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:var(--mid);margin-bottom:3px}
+.ncr-block-sub{font-size:10px;color:var(--lt);font-style:italic;margin-bottom:8px}
+.ncr-block-text{font-size:12px;line-height:1.65;color:var(--ink)}
+.ncr-ca-row{background:var(--danger-bg);border-left:3px solid var(--danger)}
+.status-open{color:var(--danger);font-weight:600}
+.status-progress{color:var(--amber);font-weight:600}
+.status-closed{color:var(--green);font-weight:600}
+.sev-major{background:var(--danger);color:#fff;padding:2px 9px;border-radius:3px;font-family:var(--font-m);font-size:9px;font-weight:700}
+.sev-minor{background:var(--amber);color:#fff;padding:2px 9px;border-radius:3px;font-family:var(--font-m);font-size:9px;font-weight:700}
+.sev-obs{background:var(--teal);color:#fff;padding:2px 9px;border-radius:3px;font-family:var(--font-m);font-size:9px;font-weight:700}
+
+/* ── RELATED DOCS ── */
+.reldocs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.reldoc-card{display:flex;align-items:flex-start;gap:11px;background:var(--ice);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;transition:border-color 180ms,box-shadow 180ms}
+.reldoc-card:hover{border-color:var(--teal-rule);box-shadow:0 1px 4px rgba(45,139,139,.1)}
+.reldoc-icon{width:30px;height:30px;flex-shrink:0;background:var(--teal-pale);border:1px solid var(--teal-rule);border-radius:var(--r);display:flex;align-items:center;justify-content:center}
+.reldoc-icon svg{width:14px;height:14px;color:var(--teal-dim)}
+.reldoc-code{font-family:var(--font-m);font-size:9.5px;font-weight:600;color:var(--teal-dim);margin-bottom:3px}
+.reldoc-title{font-size:12px;font-weight:600;color:var(--ink)}
+.reldoc-meta{font-size:10.5px;color:var(--lt);margin-top:2px}
+
+/* ── SIGNATURE BLOCK ── */
+.sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.sig-card{border-top:2.5px solid var(--teal);padding-top:10px}
+.sig-role{font-family:var(--font-m);font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--navy);margin-bottom:12px}
+.sig-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sig-field-lbl{font-size:8px;text-transform:uppercase;color:var(--lt);font-weight:500;letter-spacing:.5px;margin-bottom:2px}
+.sig-line{border-bottom:1px solid var(--ink);height:20px}
+.sig-prefill{font-size:11px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--teal);height:20px;display:flex;align-items:flex-end;padding-bottom:2px}
+
+/* ── FOOTER ── */
+.doc-footer{border-top:2px solid var(--teal);padding:11px 36px;background:var(--ice);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:8.5px;color:var(--lt)}
+.footer-ref{font-family:var(--font-m);font-weight:600;color:var(--teal-dim)}
+
+/* ── EDIT TOOLBAR ── */
+.edit-toolbar{position:fixed;bottom:18px;right:18px;z-index:10000;display:flex;align-items:center;gap:8px;background:rgba(15,23,32,.94);border-radius:10px;padding:9px 14px;box-shadow:0 4px 20px rgba(0,0,0,.35);backdrop-filter:blur(6px)}
+.etb-btn{font-family:var(--font-m);font-size:11px;font-weight:600;letter-spacing:.4px;padding:6px 15px;border-radius:5px;border:none;cursor:pointer;transition:background 140ms}
+.etb-edit{background:var(--teal);color:#fff}.etb-edit:hover{background:var(--teal-dim)}
+.etb-save{background:#1A7040;color:#fff;display:none}.etb-save:hover{background:#155c35}
+.etb-cancel{background:rgba(255,255,255,.14);color:#fff;display:none}.etb-cancel:hover{background:rgba(255,255,255,.24)}
+.etb-audio{background:rgba(255,255,255,.12);color:#fff}.etb-audio:hover{background:rgba(255,255,255,.22)}.etb-audio.speaking{background:#1A5070;animation:etb-pulse 1.2s infinite}
+@keyframes etb-pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.etb-status{font-size:10px;color:rgba(255,255,255,.65);display:none;max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+[contenteditable]{outline:2px solid rgba(45,139,139,.45);border-radius:2px;min-width:20px;background:rgba(45,139,139,.05)}
+[contenteditable]:focus{outline:2px solid var(--teal);background:rgba(45,139,139,.1)}
+/* ── STATUS BADGES (v19.0) ── */
+.status-badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-m);font-size:9px;font-weight:700;padding:3px 10px;border-radius:var(--r);text-transform:uppercase;letter-spacing:.05em}
+.badge-draft{color:var(--state-draft);background:var(--state-draft-bg);border:1px solid #D1D5DB}
+.badge-review{color:#92400E;background:var(--state-review-bg);border:1px solid #F59E0B}
+.badge-approved{color:#065F46;background:var(--state-approved-bg);border:1px solid #34D399}
+.badge-published{color:#1E40AF;background:var(--state-published-bg);border:1px solid #60A5FA}
+.badge-superseded{color:#9A3412;background:var(--state-superseded-bg);border:1px solid #FB923C}
+.badge-obsolete{color:#991B1B;background:var(--state-obsolete-bg);border:1px solid #F87171}
+.badge-superseded+.sec-title,.badge-obsolete+.sec-title{text-decoration:line-through}
+/* ── DOC-LEVEL STATUS BADGES (header) ── */
+.doc-status-badge{display:inline-flex;align-items:center;font-family:var(--font-m);font-size:8px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:.06em;vertical-align:middle;margin-left:6px}
+.status-approved{background:#D1FAE5;color:#065F46;border:1px solid #34D399}
+.status-draft{background:#F3F4F6;color:#374151;border:1px solid #D1D5DB}
+.status-under-review{background:#fff3cd;color:#856404;border:1px solid #ffc107}
+.status-obsolete{background:#FEE2E2;color:#991B1B;border:1px solid #F87171}
+.status-superseded{background:#FFEDD5;color:#9A3412;border:1px solid #FB923C}
+
+/* ── RAG BADGES (v19.0) ── */
+.rag-badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-m);font-size:9px;font-weight:700;padding:3px 10px;border-radius:var(--r);text-transform:uppercase;letter-spacing:.05em}
+.rag-r{color:var(--rag-red-ink);background:var(--rag-red-bg);border:1px solid var(--rag-red)}
+.rag-a{color:var(--rag-amber-ink);background:var(--rag-amber-bg);border:1px solid var(--rag-amber)}
+.rag-g{color:var(--rag-green-ink);background:var(--rag-green-bg);border:1px solid var(--rag-green)}
+.rag-b{color:var(--rag-blue-ink);background:var(--rag-blue-bg);border:1px solid var(--rag-blue)}
+.rag-grey{color:var(--rag-grey-ink);background:var(--rag-grey-bg);border:1px solid var(--rag-grey)}
+
+/* ── DOMAIN ACCENT CLASSES (v19.0) ── */
+.iso-accent-quality{--accent:var(--iso-quality);--accent-lt:var(--iso-quality-lt)}
+.iso-accent-env{--accent:var(--iso-env);--accent-lt:var(--iso-env-lt)}
+.iso-accent-safety{--accent:var(--iso-safety);--accent-lt:var(--iso-safety-lt)}
+.iso-accent-energy{--accent:var(--iso-energy);--accent-lt:var(--iso-energy-lt)}
+.iso-accent-food{--accent:var(--iso-food);--accent-lt:var(--iso-food-lt)}
+.iso-accent-infosec{--accent:var(--iso-infosec);--accent-lt:var(--iso-infosec-lt)}
+.iso-accent-medical{--accent:var(--iso-medical);--accent-lt:var(--iso-medical-lt)}
+.iso-accent-auto{--accent:var(--iso-auto);--accent-lt:var(--iso-auto-lt)}
+.iso-accent-aero{--accent:var(--iso-aero);--accent-lt:var(--iso-aero-lt)}
+
+/* ── ACCESSIBILITY (v19.0) ── */
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:var(--focus-offset);border-radius:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* ── PAGE BREAK UTILITIES (v19.0) ── */
+.page-break{break-before:page;page-break-before:always}
+.no-break{break-inside:avoid;page-break-inside:avoid}
+
+/* ── PRINT ── */
+@page{size:A4 portrait;margin:15mm 12mm 12mm 15mm}
+@media print{
+  html{font-size:9px}
+  body{background:#fff!important;padding:0!important;margin:0!important}
+  .document{max-width:100%!important;box-shadow:none!important;border-radius:0!important;border-top:none!important;padding:0!important;margin:0!important}
+  .banner{padding:8px 12px 6px!important;break-inside:avoid}
+  .banner-title{font-size:16px!important;margin-bottom:1px!important}
+  .banner-sub{font-size:8px!important}
+  .banner-hi{font-size:10px!important}
+  .banner-qr-img{width:38px!important;height:38px!important}
+  .co-logo{max-height:28px!important}
+  .ctrl-strip{padding:3px 12px!important;gap:3px!important}
+  .ctrl-lbl{font-size:6px!important}.ctrl-val{font-size:8px!important}
+  .section{padding:0!important;break-inside:auto;page-break-inside:auto}
+  .section+.section{border-top:1px solid #ccc!important}
+  .sec-hdr{padding:6px 12px 4px!important;margin-bottom:0!important}
+  .sec-body{padding:8px 12px!important}
+  .sec-title{font-size:11px!important;margin-bottom:0!important}
+  .sec-badge{font-size:6.5px!important;padding:1px 3px!important}
+  .sec-num{width:20px!important;height:20px!important;font-size:10px!important}
+  .scope-grid{grid-template-columns:repeat(2,1fr)!important;gap:4px!important}
+  .scope-card{padding:4px 6px!important;margin-bottom:1px!important;border-radius:2px!important;border-top-width:2px!important}
+  .scope-card-wide{grid-column:1/-1!important}
+  .callout{padding:4px 6px!important;margin-bottom:2px!important;border-radius:2px!important}
+  .scope-lbl{font-size:6.5px!important;margin-bottom:1px!important}
+  .callout-txt,.scope-txt{font-size:8px!important;line-height:1.25!important}
+  .scope-txt-hi,.callout-txt-hi{font-size:7px!important;line-height:1.2!important}
+  .tbl-wrap{overflow:visible!important}
+  thead{display:table-header-group}
+  table{font-size:8px!important;page-break-inside:auto}
+  tr{page-break-inside:avoid;break-inside:avoid}
+  th{font-size:7.5px!important;padding:2px 4px!important}
+  td{padding:2px 4px!important}
+  .flow-chain{gap:3px!important}
+  .flow-step{padding:4px!important;min-height:auto!important}
+  .flow-step-text{font-size:8px!important}
+  .doc-footer{padding:4px 12px!important;font-size:6.5px!important}
+  .wm,.edit-toolbar{display:none!important}
+  .ver-badge{font-size:7px!important;padding:1px 3px!important}
+  a{text-decoration:none!important;color:inherit!important}
+  .scope-group{gap:2px!important}
+  .callout-group{gap:2px!important}
+  .manual-subsec{margin-bottom:4px!important;padding:6px 10px 4px!important;border-left-width:2px!important;box-shadow:none!important}
+  .manual-subsec-hdr{margin-bottom:2px!important;padding-bottom:2px!important;gap:4px!important}
+  .manual-subsec-title{font-size:10px!important}
+  .manual-subsec-clause{font-size:7px!important;padding:1px 3px!important}
+  .manual-subsec p,.manual-subsec .hi-block{margin-bottom:2px!important}
+  .hi-block{padding:3px 6px!important;margin:2px 0 3px!important}
+  .hi-text{font-size:7px!important;line-height:1.25!important}
+  .hi-inline{font-size:7px!important}
+  .principles-grid{gap:4px!important}
+  .principle-card{padding:4px 6px!important}
+  .principle-title{font-size:9px!important}
+  .principle-text{font-size:8px!important;line-height:1.25!important}
+  .principle-text-hi{font-size:7px!important;line-height:1.2!important}
+  .policy-box{padding:6px 10px!important;margin-bottom:4px!important}
+  .policy-box p{font-size:8.5px!important;line-height:1.3!important}
+  .obj-table{font-size:8px!important}
+  .obj-table th{font-size:7px!important;padding:2px 3px!important}
+  .obj-table td{padding:2px 3px!important;font-size:8px!important}
+  .sig-grid{gap:4px!important;grid-template-columns:repeat(3,1fr)!important}
+  .sig-card{padding:6px!important}
+  .sig-lbl{font-size:6px!important}
+  .sig-name{font-size:8px!important}
+  .sig-title{font-size:7px!important}
+  p{margin:0 0 2px!important}
+  ul,ol{margin:1px 0!important;padding-left:14px!important}
+  li{margin-bottom:1px!important;font-size:8px!important}
+}
+
+/* ── MOBILE RESPONSIVE ── */
+@media(max-width:768px){
+  .document{max-width:100%!important;padding:16px 12px!important;border-radius:0!important;margin:0!important}
+  /* Banner */
+  .banner{padding:16px!important}
+  .banner-top-row{gap:10px!important}
+  .co-logo{max-height:36px!important}
+  .banner-title{font-size:16px!important}
+  .banner-bottom-row{flex-direction:column!important;align-items:flex-start!important}
+  .banner-qr-right{flex-direction:row!important;gap:8px!important;align-items:center!important}
+  .banner-qr-img{width:36px!important;height:36px!important}
+  /* Control strip: 2 cols */
+  .ctrl-strip{grid-template-columns:repeat(2,1fr)!important}
+  /* Section padding */
+  .sec-hdr{padding:12px 16px 10px!important}
+  .sec-body{padding:14px 16px!important}
+  /* Grids: 1 col */
+  .scope-grid{grid-template-columns:1fr!important}
+  .principles-grid{grid-template-columns:1fr!important}
+  .sig-grid{grid-template-columns:1fr!important}
+  .reldocs-grid{grid-template-columns:1fr!important}
+  /* Tables: horizontal scroll */
+  .tbl-wrap{overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+  table{min-width:500px!important}
+  th,td{padding:8px 10px!important}
+  /* Flow steps, safety cards: 1 col */
+  .flow-grid{grid-template-columns:1fr!important}
+  .safety-grid{grid-template-columns:1fr!important}
+  .ppe-grid{grid-template-columns:repeat(2,1fr)!important}
+}
+</style>
+<style>
+/* ── Unified bottom toolbar ── */
+#bil-toolbar{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:10000;
+  display:flex;align-items:center;gap:6px;background:rgba(15,23,32,.94);
+  border-radius:12px;padding:8px 14px;box-shadow:0 4px 24px rgba(0,0,0,.4);
+  backdrop-filter:blur(8px);font-family:Inter,system-ui,sans-serif;font-size:12px}
+.tb-btn{padding:6px 14px;border-radius:7px;font-size:11px;font-weight:600;
+  cursor:pointer;border:none;transition:background .15s;letter-spacing:.3px}
+.tb-lang{background:rgba(255,255,255,.12);color:#fff}
+.tb-lang:hover{background:rgba(255,255,255,.22)}
+.tb-lang.active{background:#2D8B8B;color:#fff}
+.tb-audio{background:rgba(255,255,255,.10);color:#fff}
+.tb-audio:hover{background:rgba(255,255,255,.20)}
+.tb-audio.speaking{background:#1A5070;animation:tb-pulse 1.2s infinite}
+@keyframes tb-pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.tb-sep{width:1px;height:20px;background:rgba(255,255,255,.2);margin:0 2px}
+.tb-status{font-size:10px;color:rgba(255,255,255,.6);display:none}
+.lang-section{display:none}
+.lang-section.active{display:block}
+#bil-top{position:fixed;bottom:62px;left:50%;transform:translateX(-50%);z-index:9999;
+  width:40px;height:40px;border-radius:50%;background:#0F1720;color:#fff;border:none;
+  cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.3);display:none;align-items:center;
+  justify-content:center;font-size:18px;transition:opacity .3s,background .2s}
+#bil-top:hover{background:#2D8B8B}
+#bil-top.visible{display:flex}
+@media print{#bil-toolbar,#bil-top{display:none!important}}
+</style>
+</head>
+<body>
+<div class="lang-section active" data-lang="en">
+<div class="document" data-doc-code="YPP_PLN-ENV-01">
+  <div class="banner">
+    <div class="banner-inner">
+      <div class="banner-header">
+        <div class="banner-top-row">
+          <div class="banner-logo-left"></div>
+          <div class="banner-eyebrow"><span>ISO 14001:2015</span><span class="ey-sep"></span><span>Standard Operating Procedure</span><span class="ey-sep"></span><span>Clause 6.2 — Environmental Objectives and Planning to Achieve Them</span></div>
+        </div>
+        <div class="banner-title">Environmental Objectives &amp; Targets Plan</div>
+        <div class="banner-bottom-row">
+          <div class="banner-org">EHS / Quality</div>
+          <div class="doc-code-badge">YPP_PLN-ENV-01 &nbsp;|&nbsp; v1.1</div>
+        </div>
+      </div>
+      <div class="banner-qr-right"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAADXCAIAAAAGH1PiAAAFMklEQVR4nO3dMZLbOBAF0PHWHoCh073/oZxuyBuMcwaowgCND1DvpZYoSvMLZBsE+tf39/cXRP2T/XiQQrZgLCRPCsmTQvKkkDwpJE8KyZNC8qSQPCkkTwrJk0LypJC8f7teff3+72uJ+/8/P37v4yTbh6p7cZereeSuf33oevFEXT+OsZA8KSRPCsmTQk6rTh7qbs9HXtx1a98+8uPFXd+3ruC4er7+nn/BB2MheVJInhSSJ4UcXp2M3J/W3ekvu7XvKmW6zuoeKKFGJnjq/oJtxkLypJA8KSRPCnlXdZIycVqibeTGv+4kr7LnzZYxFpInheRJIXlSSN4bqpOH9u153TKUrrMaKUfu0OKYOsZC8qSQPCkkTwp5V3WSuhGeOA8xsuC8fVbLDnXiX9BYSJ4UkieF5Ekhh1cnyzaAmqiudumasxlZhnKVPRWWYiwkTwrJk0LypJC8X0f0ip94Ez1xR6+JpzGRJ7vgJ1yRyZNC8qSQw/ud1PXS6Fqlscmd/sSNxe6yImnPAstYSJ4UkieF5Ekhp82dTGz8V7dp7sQtdSee5ER3We2y7Hd+MBaSJ4XkSSF5Usirq5MuE5+wSnX4eEFH96tsf4E2YyF5UkieFJInhRxenUycLFlm4nzAxFmKLqmJpZGzajMWkieF5EkheVLIq3cUnthSsK4qWnaSI5/btmwLr7oJHmMheVJInhSSJ4V80pNdE//XPlWsbLKypG3kKyx7Nu/BWEieFJInheRJIafNnSzrcN5+b90kzYhN1src5k7gB1yRyZNC8qSQD95RuF1w1KkrRyZu9Hv3NHZsH2rZb2XPLs7mikyeFJInhbxrVXzXi+smAJbtNJXq/nKFdtaqW29vLCRPCsmTQvKkkE/qd7KsZ2L7rLre23WoPVu4X6Gn77oYC8mTQvKkkDwp5LTq5CG1/nziNMwmfeY3qTAmHsrcCYdxRSZPCsmTQvI23bOr7lGuutbxDvX109/KWEieFJInheRJIe+qTh7qugSmFn5vsilyW936nrp5JmMheVJInhSSJ4W8uhvjsjv9PbvQj2yKfK/a57j94vY3mnjOxkLypJA8KSRPCnlXdTLy3/R1Dc9TLRTbX7D93k26T3axZxdnc0UmTwrJk0LeVZ08THx2K9UzcaTg6DqNK/RIVdtI25UuxkLypJA8KSRPCnn1nl2b1C7LFqlsMsNxr1rCojrhVVyRyZNC8qSQd3VjPGIuoW5L3WW7INdJ7b5sLCRPCsmTQvKkkA/uFX/i0opNJoeuPR4D0++EV3FFJk8KyZNCXl2djLx3Wc+STeqee9VsUPtzl/19H4yF5EkheVJInhTy6lXxy56w6jryxHXvdS1brlULTTYpsIyF5EkheVJInhRy+Kr4Zfbs2d515FQ1dq86lLkTzuaKTJ4UkieFnDZ3klqevawcmThZsmzN/F3WQnHZ4nxjIXlSSJ4UkieFHP5kV93EQ9e/Tlw8Ubf+fFnf9bZlS3a6GAvJk0LypJA8KeSTesU/bPJI1UjDwfbn1tUuXY7Y5tlYSJ4UkieF5EkhH7wqfkTXUvaRB5/anzux/mirm7QY+SUfrDvhbK7I5EkheVJI3pHVSd1zUJusSukysWhIdY4xFpInheRJIXlSyLuqkyNWS3S9eNmhrlAjma7TqKtdjIXkSSF5UkieFHJ4dbJsC69Ul8C6JSwndoO/rYrnxVyRyZNC8qSQvDP6nfBuxkLypJA8KSRPCsmTQvKkkDwpJE8KyZNC8qSQPCkkTwrJk0LypJCvuL9TD9bEJpv03gAAAABJRU5ErkJggg==" class="banner-qr-img" alt="QR"><span class="banner-qr-lbl">YPP_PLN-ENV-01</span></div>
+    </div>
+  </div>
+  <div class="ctrl-strip"><div class="ctrl-cell"><div class="ctrl-lbl">Document Type</div><div class="ctrl-val">Standard Operating Procedure</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Document Owner</div><div class="ctrl-val">PL Pradhan</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Approved By</div><div class="ctrl-val">Tarun Mishra</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Effective Date</div><div class="ctrl-val">2026-04-24</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Next Review</div><div class="ctrl-val">Apr 2027</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Copy Status</div><div class="ctrl-val">Controlled</div></div></div>
+
+  <div class="section" id="sec-1">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">1</div>
+      <span class="sec-title">Scope &amp; Purpose</span>
+      <span class="sec-tag">ISO 14001:2015</span>
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="sec-body"><div class="scope-grid"><div class="scope-card scope-card-wide"><div class="scope-lbl">Purpose</div><p class="scope-txt">This plan establishes environmental objectives and targets for Yash Poly Plast in alignment with the Environmental Policy, significant environmental aspects, applicable legal requirements, and opportunities for continual improvement. It defines actions, resources, responsibilities, timelines, and performance indicators to achieve each objective.</p></div><div class="scope-card"><div class="scope-lbl">Applies To</div><p class="scope-txt">All departments at Yash Poly Plast including production (blow moulding, injection moulding), stores, maintenance, quality, and administration.</p></div><div class="scope-card"><div class="scope-lbl">Responsible Parties</div><p class="scope-txt">Management Representative (plan ownership and review), Department Heads (implementation of assigned actions), Director (approval and resource allocation)</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-2">
+    <div class="sec-hdr amber" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num amber">2</div>
+      <span class="sec-title amber">Safety &amp; PPE Requirements</span>
+      <span class="sec-tag amber">MANDATORY</span>
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="sec-body"><div class="safety-banner">
+      <div class="safety-icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <div class="safety-txt-cell"><p class="safety-txt"><strong>MANDATORY SAFETY REQUIREMENT:</strong> All actions defined in this plan must be implemented within the agreed timelines. Delays must be escalated to the Management Representative.</p></div>
+    </div><div class="ppe-grid"></div></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-3">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">3</div>
+      <span class="sec-title">Process Flowchart  —  FLW-ENV-PLN-01</span>
+      <span class="sec-tag">FLW-ENV-PLN-01</span>
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="sec-body"><div class="flow-chain"><div class="flow-step"><div class="flow-num">1</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Review significant environmental aspects (YPP_FRM-ENV-01) and legal compliance status (YPP_REG-LGL-01) to identify areas requiring objectives.</span></div><div class="flow-callout"><div class="callout-tag"><span class="callout-txt">Input</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">2</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Define SMART environmental objectives aligned with the Environmental Policy commitments.</span></div><div class="flow-callout"><div class="callout-tag  crit"><span class="callout-txt  crit">Objectives</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">3</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">For each objective, define measurable targets, action steps, responsible persons, required resources, and completion timelines.</span></div><div class="flow-callout"><div class="callout-tag  crit"><span class="callout-txt  crit">Targets</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">4</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Assign ownership to department heads and communicate plan to relevant personnel.</span></div><div class="flow-callout"><div class="callout-tag"><span class="callout-txt">Assign</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">5</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Monitor progress against targets at least quarterly; record progress in YPP_REG-OBJ-01.</span></div><div class="flow-callout"><div class="callout-tag  crit"><span class="callout-txt  crit">Monitor</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">6</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Review and update this plan at management review or when significant aspects change.</span></div><div class="flow-callout"><div class="callout-tag"><span class="callout-txt">Review</span></div></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-4">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">4</div>
+      <span class="sec-title">Procedure Steps</span>
+      
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="tbl-wrap"><table><thead><tr><th scope="col" style="width:38px">#</th><th scope="col" style="width:82px">Phase</th><th scope="col">Activity / Description</th><th scope="col" style="width:110px">Responsible</th><th scope="col" style="width:70px">Flag</th><th scope="col" style="width:82px">Record</th></tr></thead><tbody><tr><td class="col-num">1</td><td><span class="phase-chip">Execution</span></td><td>Review significant environmental aspects (YPP_FRM-ENV-01) and legal compliance status (YPP_REG-LGL-01) to identify areas requiring objectives.</td><td class="mono">Management Representative (plan ownership and review)</td><td></td><td class="doc-ref"></td></tr><tr  class="crit-row"><td class="col-num">2</td><td><span class="phase-chip">Critical Step</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>Define SMART environmental objectives aligned with the Environmental Policy commitments.</td><td class="mono">Management Representative (plan ownership and review)</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">Objectives</td></tr><tr  class="crit-row"><td class="col-num">3</td><td><span class="phase-chip">Critical Step</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>For each objective, define measurable targets, action steps, responsible persons, required resources, and completion timelines.</td><td class="mono">Management Representative (plan ownership and review)</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">Targets</td></tr><tr><td class="col-num">4</td><td><span class="phase-chip">Execution</span></td><td>Assign ownership to department heads and communicate plan to relevant personnel.</td><td class="mono">Management Representative (plan ownership and review)</td><td></td><td class="doc-ref"></td></tr><tr  class="crit-row"><td class="col-num">5</td><td><span class="phase-chip">Critical Step</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>Monitor progress against targets at least quarterly; record progress in YPP_REG-OBJ-01.</td><td class="mono">Management Representative (plan ownership and review)</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">Monitor</td></tr><tr><td class="col-num">6</td><td><span class="phase-chip">Execution</span></td><td>Review and update this plan at management review or when significant aspects change.</td><td class="mono">Management Representative (plan ownership and review)</td><td></td><td class="doc-ref"></td></tr></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-5">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">5</div>
+      <span class="sec-title">Approval &amp; Signatures</span>
+      
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="sec-body"><div class="sig-grid"><div class="sig-card"><div class="sig-role">Document Author</div><div class="sig-fields"><div><div class="sig-field-lbl">Printed Name</div><div class="sig-prefill">PL Pradhan</div></div><div><div class="sig-field-lbl">Signature</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">Job Title</div><div class="sig-prefill">Management Representative</div></div><div><div class="sig-field-lbl">Date</div><div class="sig-prefill">2026-04-24</div></div></div></div><div class="sig-card"><div class="sig-role">Document Approver</div><div class="sig-fields"><div><div class="sig-field-lbl">Printed Name</div><div class="sig-prefill">Tarun Mishra</div></div><div><div class="sig-field-lbl">Signature</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">Job Title</div><div class="sig-prefill">Director</div></div><div><div class="sig-field-lbl">Date</div><div class="sig-prefill">2026-04-24</div></div></div></div></div></div>
+    </div>
+  </div>
+  <div class="doc-footer">
+    <span class="footer-ref">YPP_PLN-ENV-01 &nbsp;·&nbsp; v1.1 &nbsp;·&nbsp; ISO 14001:2015</span>
+    <span>⚠ Uncontrolled when printed &nbsp;·&nbsp; Verify current revision before use</span>
+    <span>Generated 29 Apr 2026</span>
+  </div>
+</div>
+<div class="edit-toolbar" id="etb" style="display:none">
+  <button class="etb-btn etb-edit" id="etbEdit" onclick="etbToggleEdit()">✏ Edit</button>
+  <button class="etb-btn etb-save" id="etbSave" onclick="etbSave()" style="display:none">💾 Save</button>
+  <button class="etb-btn etb-cancel" id="etbCancel" onclick="etbCancelEdit()" style="display:none">✕ Cancel</button>
+  <span class="etb-status" id="etbStatus"></span>
+</div>
+<script>
+(function(){
+  var EDITABLE_SEL = 'td, th, p, li, .flow-step-text, .callout-txt, .sig-prefill, .ctrl-val, .banner-title, .banner-org';
+  var _origMap = {};
+  var _editing = false;
+  function etbStatus(msg, col){ var s=document.getElementById('etbStatus'); s.textContent=msg; s.style.color=col||'rgba(255,255,255,.65)'; }
+  window.etbToggleEdit = function(){
+    _editing = true;
+    var els = document.querySelectorAll(EDITABLE_SEL);
+    els.forEach(function(el){ _origMap[el] = el.innerHTML; el.setAttribute('contenteditable','true'); });
+    document.getElementById('etbEdit').style.display='none';
+    document.getElementById('etbSave').style.display='inline-flex';
+    document.getElementById('etbCancel').style.display='inline-flex';
+    document.getElementById('etbStatus').style.display='inline';
+    etbStatus('Editing — click any cell or text to modify','rgba(45,139,139,1)');
+  };
+  window.etbCancelEdit = function(){
+    var els = document.querySelectorAll('[contenteditable]');
+    els.forEach(function(el){ if(_origMap[el]!==undefined) el.innerHTML=_origMap[el]; el.removeAttribute('contenteditable'); });
+    _origMap = {}; _editing = false;
+    document.getElementById('etbEdit').style.display='';
+    document.getElementById('etbSave').style.display='none';
+    document.getElementById('etbCancel').style.display='none';
+    etbStatus('');
+    document.getElementById('etbStatus').style.display='none';
+  };
+  window.etbSave = function(){
+    if(window.location.protocol === 'file:'){
+      document.getElementById('etbStatus').style.display='inline';
+      etbStatus('Open via QMS server to save  http://localhost:8765','rgba(184,48,48,1)');
+      return;
+    }
+    var docCode = document.querySelector('.document').getAttribute('data-doc-code') || '';
+    var els = document.querySelectorAll('[contenteditable]');
+    els.forEach(function(el){ el.removeAttribute('contenteditable'); });
+    /* Reset toolbar to clean state BEFORE capturing outerHTML */
+    /* so the saved file always loads with only the Edit button visible */
+    document.getElementById('etbEdit').style.display='';
+    document.getElementById('etbSave').style.display='none';
+    document.getElementById('etbCancel').style.display='none';
+    document.getElementById('etbStatus').style.display='none';
+    document.getElementById('etbStatus').textContent='';
+    var html = '<!DOCTYPE html>' + document.documentElement.outerHTML;
+    /* NOW show Saving... in live DOM (not persisted to disk) */
+    document.getElementById('etbStatus').style.display='inline';
+    etbStatus('Saving…','rgba(255,220,80,1)');
+    fetch('/api/save-edited/' + docCode, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({html: html})
+    }).then(function(r){ return r.json(); }).then(function(d){
+      if(d.ok){
+        etbStatus('Saved — v' + (d.new_version||'') + ' ✓','rgba(26,112,64,1)');
+        setTimeout(function(){ window.location.reload(); }, 1500);
+      } else {
+        etbStatus('Error: ' + (d.error||'unknown'),'rgba(184,48,48,1)');
+        var els2 = document.querySelectorAll(EDITABLE_SEL);
+        els2.forEach(function(el){ el.setAttribute('contenteditable','true'); });
+      }
+    }).catch(function(err){
+      etbStatus('Network error','rgba(184,48,48,1)');
+      var els2 = document.querySelectorAll(EDITABLE_SEL);
+      els2.forEach(function(el){ el.setAttribute('contenteditable','true'); });
+    });
+    _origMap = {}; _editing = false;
+    document.getElementById('etbEdit').style.display='';
+    document.getElementById('etbSave').style.display='none';
+    document.getElementById('etbCancel').style.display='none';
+  };
+})();
+// Triple-click footer to toggle edit mode
+(function(){
+  var footer = document.querySelector('.doc-footer');
+  if(!footer) return;
+  footer.style.cursor = 'default';
+  footer.addEventListener('click', function(ev){
+    if(ev.detail === 3){
+      var btn = document.getElementById('etbEdit');
+      var on = btn.style.display !== 'none';
+      btn.style.display = on ? 'none' : 'inline-flex';
+      var t = document.createElement('div');
+      t.textContent = on ? 'Edit mode disabled' : 'Edit mode enabled';
+      t.style.cssText = 'position:fixed;bottom:70px;right:18px;z-index:10001;background:rgba(15,23,32,.92);color:#fff;padding:8px 18px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:.3px;opacity:1;transition:opacity .5s';
+      document.body.appendChild(t);
+      setTimeout(function(){ t.style.opacity='0'; }, 1500);
+      setTimeout(function(){ t.remove(); }, 2100);
+    }
+  });
+})();
+// Section collapse/expand toggle
+window.secToggle = function(hdr){
+  hdr.classList.toggle('collapsed');
+};
+// Floating back-to-TOC button
+(function(){
+  var fab = document.createElement('button');
+  fab.className = 'fab-toc';
+  fab.innerHTML = '&#9650;';
+  fab.title = 'Back to Table of Contents';
+  fab.onclick = function(){
+    var toc = document.getElementById('sec-2');
+    if(toc) toc.scrollIntoView({behavior:'smooth',block:'start'});
+    else window.scrollTo({top:0,behavior:'smooth'});
+  };
+  document.body.appendChild(fab);
+  var tocEl = document.getElementById('sec-2');
+  window.addEventListener('scroll', function(){
+    if(!tocEl) return;
+    var r = tocEl.getBoundingClientRect();
+    if(r.bottom < 0){
+      fab.classList.add('visible');
+    } else {
+      fab.classList.remove('visible');
+    }
+  }, {passive:true});
+})();
+</script>
+<div class="wm"><div class="wm-inner"><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div></div></div>
+</div>
+<div class="lang-section" data-lang="hi">
+<div class="document" data-doc-code="YPP_PLN-ENV-01">
+<div class="banner">
+<div class="banner-inner">
+<div class="banner-header">
+<div class="banner-top-row">
+<div class="banner-logo-left"></div>
+<div class="banner-eyebrow"><span>ISO 14001:2015</span><span class="ey-sep"></span><span>मानक संचालन प्रक्रिया</span><span class="ey-sep"></span><span>खंड 6.2 - पर्यावरणीय उद्देश्य और उन्हें प्राप्त करने की योजना</span></div>
+</div>
+<div class="banner-title">पर्यावरणीय उद्देश्य एवं लक्ष्य योजना</div>
+<div class="banner-bottom-row">
+<div class="banner-org">ईएचएस / गुणवत्ता</div>
+<div class="doc-code-badge">YPP_PLN-ENV-01 |  v1.1</div>
+</div>
+</div>
+<div class="banner-qr-right"><img alt="QR" class="banner-qr-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAADXCAIAAAAGH1PiAAAFMklEQVR4nO3dMZLbOBAF0PHWHoCh073/oZxuyBuMcwaowgCND1DvpZYoSvMLZBsE+tf39/cXRP2T/XiQQrZgLCRPCsmTQvKkkDwpJE8KyZNC8qSQPCkkTwrJk0LypJC8f7teff3+72uJ+/8/P37v4yTbh6p7cZereeSuf33oevFEXT+OsZA8KSRPCsmTQk6rTh7qbs9HXtx1a98+8uPFXd+3ruC4er7+nn/BB2MheVJInhSSJ4UcXp2M3J/W3ekvu7XvKmW6zuoeKKFGJnjq/oJtxkLypJA8KSRPCnlXdZIycVqibeTGv+4kr7LnzZYxFpInheRJIXlSSN4bqpOH9u153TKUrrMaKUfu0OKYOsZC8qSQPCkkTwp5V3WSuhGeOA8xsuC8fVbLDnXiX9BYSJ4UkieF5Ekhh1cnyzaAmqiudumasxlZhnKVPRWWYiwkTwrJk0LypJC8X0f0ip94Ez1xR6+JpzGRJ7vgJ1yRyZNC8qSQw/ud1PXS6Fqlscmd/sSNxe6yImnPAstYSJ4UkieF5Ekhp82dTGz8V7dp7sQtdSee5ER3We2y7Hd+MBaSJ4XkSSF5Usirq5MuE5+wSnX4eEFH96tsf4E2YyF5UkieFJInhRxenUycLFlm4nzAxFmKLqmJpZGzajMWkieF5EkheVLIq3cUnthSsK4qWnaSI5/btmwLr7oJHmMheVJInhSSJ4V80pNdE//XPlWsbLKypG3kKyx7Nu/BWEieFJInheRJIafNnSzrcN5+b90kzYhN1src5k7gB1yRyZNC8qSQD95RuF1w1KkrRyZu9Hv3NHZsH2rZb2XPLs7mikyeFJInhbxrVXzXi+smAJbtNJXq/nKFdtaqW29vLCRPCsmTQvKkkE/qd7KsZ2L7rLre23WoPVu4X6Gn77oYC8mTQvKkkDwp5LTq5CG1/nziNMwmfeY3qTAmHsrcCYdxRSZPCsmTQvI23bOr7lGuutbxDvX109/KWEieFJInheRJIe+qTh7qugSmFn5vsilyW936nrp5JmMheVJInhSSJ4W8uhvjsjv9PbvQj2yKfK/a57j94vY3mnjOxkLypJA8KSRPCnlXdTLy3/R1Dc9TLRTbX7D93k26T3axZxdnc0UmTwrJk0LeVZ08THx2K9UzcaTg6DqNK/RIVdtI25UuxkLypJA8KSRPCnn1nl2b1C7LFqlsMsNxr1rCojrhVVyRyZNC8qSQd3VjPGIuoW5L3WW7INdJ7b5sLCRPCsmTQvKkkA/uFX/i0opNJoeuPR4D0++EV3FFJk8KyZNCXl2djLx3Wc+STeqee9VsUPtzl/19H4yF5EkheVJInhTy6lXxy56w6jryxHXvdS1brlULTTYpsIyF5EkheVJInhRy+Kr4Zfbs2d515FQ1dq86lLkTzuaKTJ4UkieFnDZ3klqevawcmThZsmzN/F3WQnHZ4nxjIXlSSJ4UkieFHP5kV93EQ9e/Tlw8Ubf+fFnf9bZlS3a6GAvJk0LypJA8KeSTesU/bPJI1UjDwfbn1tUuXY7Y5tlYSJ4UkieF5EkhH7wqfkTXUvaRB5/anzux/mirm7QY+SUfrDvhbK7I5EkheVJI3pHVSd1zUJusSukysWhIdY4xFpInheRJIXlSyLuqkyNWS3S9eNmhrlAjma7TqKtdjIXkSSF5UkieFHJ4dbJsC69Ul8C6JSwndoO/rYrnxVyRyZNC8qSQvDP6nfBuxkLypJA8KSRPCsmTQvKkkDwpJE8KyZNC8qSQPCkkTwrJk0LypJCvuL9TD9bEJpv03gAAAABJRU5ErkJggg=="/><span class="banner-qr-lbl">YPP_PLN-ENV-01</span></div>
+</div>
+</div>
+<div class="ctrl-strip"><div class="ctrl-cell"><div class="ctrl-lbl">दस्तावेज़ प्रकार</div><div class="ctrl-val">मानक संचालन प्रक्रिया</div></div><div class="ctrl-cell"><div class="ctrl-lbl">दस्तावेज़ स्वामी</div><div class="ctrl-val">पीएल प्रधान</div></div><div class="ctrl-cell"><div class="ctrl-lbl">द्वारा स्वीकृत</div><div class="ctrl-val">तरूण मिश्रा</div></div><div class="ctrl-cell"><div class="ctrl-lbl">प्रभावी तिथि</div><div class="ctrl-val">2026-04-24</div></div><div class="ctrl-cell"><div class="ctrl-lbl">अगली समीक्षा</div><div class="ctrl-val">अप्रैल 2027</div></div><div class="ctrl-cell"><div class="ctrl-lbl">कॉपी स्थिति</div><div class="ctrl-val">नियंत्रित</div></div></div>
+<div class="section" id="sec-1">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">1</div>
+<span class="sec-title">दायरा एवं उद्देश्य</span>
+<span class="sec-tag">ISO 14001:2015</span>
+<span class="sec-chevron">▾</span>
+</div>
+<div class="sec-collapse">
+<div class="sec-body"><div class="scope-grid"><div class="scope-card scope-card-wide"><div class="scope-lbl">उद्देश्य</div><p class="scope-txt">यह योजना पर्यावरण नीति, महत्वपूर्ण पर्यावरणीय पहलुओं, लागू कानूनी आवश्यकताओं और निरंतर सुधार के अवसरों के अनुरूप यश पॉली प्लास्ट के लिए पर्यावरणीय उद्देश्यों और लक्ष्यों को स्थापित करती है। यह प्रत्येक उद्देश्य को प्राप्त करने के लिए कार्यों, संसाधनों, जिम्मेदारियों, समयसीमा और कार्य परिणाम संकेतकों को परिभाषित करता है।</p></div><div class="scope-card"><div class="scope-lbl">||| पर लागू होता है यश पॉली प्लास्ट के सभी विभाग जिनमें उत्पादन (ब्लो मोल्डिंग, इंजेक्शन मोल्डिंग), स्टोर, रखरखाव, गुणवत्ता और प्रशासन शामिल हैं।</div><p class="scope-txt">जिम्मेदार पार्टियाँ</p></div><div class="scope-card"><div class="scope-lbl">प्रबंधन प्रतिनिधि (योजना स्वामित्व और समीक्षा), विभाग प्रमुख (सौंपे गए कार्यों का निष्पादन), निदेशक (अनुमोदन और संसाधन आवंटन)</div><p class="scope-txt">सुरक्षा एवं पीपीई आवश्यकताएँ</p></div></div></div>
+</div>
+</div>
+<div class="section" id="sec-2">
+<div class="sec-hdr amber" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num amber">2</div>
+<span class="sec-title amber">अनिवार्य</span>
+<span class="sec-tag amber">▾</span>
+<span class="sec-chevron">अनिवार्य सुरक्षा आवश्यकता:</span>
+</div>
+<div class="sec-collapse">
+<div class="sec-body"><div class="safety-banner">
+<div class="safety-icon-cell"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></svg></div>
+<div class="safety-txt-cell"><p class="safety-txt"><strong>इस योजना में परिभाषित सभी कार्य सहमत समय-सीमा के भीतर किए जाने चाहिए। देरी के बारे में प्रबंधन प्रतिनिधि को सूचित किया जाना चाहिए।</strong> प्रक्रिया फ़्लोचार्ट - FLW-ENV-PLN-01</p></div>
+</div><div class="ppe-grid"></div></div>
+</div>
+</div>
+<div class="section" id="sec-3">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">3</div>
+<span class="sec-title">FLW-ENV-PLN-01</span>
+<span class="sec-tag">▾</span>
+<span class="sec-chevron">उद्देश्यों की आवश्यकता वाले क्षेत्रों की पहचान करने के लिए महत्वपूर्ण पर्यावरणीय पहलुओं (YPP_FRM-ENV-01) और कानूनी अनुपालन स्थिति (YPP_REG-LGL-01) की समीक्षा करें।</span>
+</div>
+<div class="sec-collapse">
+<div class="sec-body"><div class="flow-chain"><div class="flow-step"><div class="flow-num">1</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">इनपुट</span></div><div class="flow-callout"><div class="callout-tag"><span class="callout-txt">⚡ क्रिटिकल कंट्रोल पॉइंट</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">2</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">पर्यावरण नीति प्रतिबद्धताओं के अनुरूप स्मार्ट पर्यावरण उद्देश्यों को परिभाषित करें।</span><span class="flow-step-text">उद्देश्य</span></div><div class="flow-callout"><div class="callout-tag crit"><span class="callout-txt crit">⚡ क्रिटिकल कंट्रोल पॉइंट</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">3</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">प्रत्येक उद्देश्य के लिए, मापने योग्य लक्ष्य, कार्रवाई कदम, जिम्मेदार व्यक्ति, आवश्यक संसाधन और पूरा होने की समयसीमा परिभाषित करें।</span><span class="flow-step-text">लक्ष्य</span></div><div class="flow-callout"><div class="callout-tag crit"><span class="callout-txt crit">विभाग प्रमुखों को स्वामित्व सौंपें और संबंधित कर्मियों को योजना बताएं।</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">4</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">असाइन करें</span></div><div class="flow-callout"><div class="callout-tag"><span class="callout-txt">⚡ क्रिटिकल कंट्रोल पॉइंट</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">5</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">कम से कम त्रैमासिक लक्ष्य के विरुद्ध प्रगति की निगरानी करें; YPP_REG-OBJ-01 में प्रगति रिकॉर्ड करें।</span><span class="flow-step-text">मॉनिटर</span></div><div class="flow-callout"><div class="callout-tag crit"><span class="callout-txt crit">समीक्षा बैठक में या महत्वपूर्ण पहलुओं में परिवर्तन होने पर इस योजना की समीक्षा करें और अद्यतन करें।</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">6</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">समीक्षा</span></div><div class="flow-callout"><div class="callout-tag"><span class="callout-txt">प्रक्रिया चरण</span></div></div></div></div></div>
+</div>
+</div>
+<div class="section" id="sec-4">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">4</div>
+<span class="sec-title">▾</span>
+<span class="sec-chevron">#</span>
+</div>
+<div class="sec-collapse">
+<div class="tbl-wrap"><table><thead><tr><th scope="col" style="width:38px">चरण</th><th scope="col" style="width:82px">गतिविधि/विवरण</th><th scope="col">जिम्मेदार</th><th scope="col" style="width:110px">झंडा</th><th scope="col" style="width:70px">रिकार्ड</th><th scope="col" style="width:82px">निष्पादन</th></tr></thead><tbody><tr><td class="col-num">1</td><td><span class="phase-chip">उद्देश्यों की आवश्यकता वाले क्षेत्रों की पहचान करने के लिए महत्वपूर्ण पर्यावरणीय पहलुओं (YPP_FRM-ENV-01) और कानूनी अनुपालन स्थिति (YPP_REG-LGL-01) की समीक्षा करें।</span></td><td>प्रबंधन प्रतिनिधि (योजना स्वामित्व और समीक्षा)</td><td class="mono">महत्वपूर्ण कदम</td><td></td><td class="doc-ref"></td></tr><tr class="crit-row"><td class="col-num">2</td><td><span class="phase-chip">⚡ सीसीपी</span></td><td><span class="crit-marker">पर्यावरण नीति प्रतिबद्धताओं के अनुरूप स्मार्ट पर्यावरण उद्देश्यों को परिभाषित करें।  </span>प्रबंधन प्रतिनिधि (योजना स्वामित्व और समीक्षा)</td><td class="mono">⚡ सीसीपी</td><td><span class="crit-marker">उद्देश्य</span></td><td class="doc-ref">महत्वपूर्ण कदम</td></tr><tr class="crit-row"><td class="col-num">3</td><td><span class="phase-chip">⚡ सीसीपी</span></td><td><span class="crit-marker">प्रत्येक उद्देश्य के लिए, मापने योग्य लक्ष्य, कार्रवाई कदम, जिम्मेदार व्यक्ति, आवश्यक संसाधन और पूरा होने की समयसीमा परिभाषित करें।  </span>प्रबंधन प्रतिनिधि (योजना स्वामित्व और समीक्षा)</td><td class="mono">⚡ सीसीपी</td><td><span class="crit-marker">लक्ष्य</span></td><td class="doc-ref">निष्पादन</td></tr><tr><td class="col-num">4</td><td><span class="phase-chip">विभाग प्रमुखों को स्वामित्व सौंपें और संबंधित कर्मियों को योजना बताएं।</span></td><td>प्रबंधन प्रतिनिधि (योजना स्वामित्व और समीक्षा)</td><td class="mono">महत्वपूर्ण कदम</td><td></td><td class="doc-ref"></td></tr><tr class="crit-row"><td class="col-num">5</td><td><span class="phase-chip">⚡ सीसीपी</span></td><td><span class="crit-marker">कम से कम त्रैमासिक लक्ष्य के विरुद्ध प्रगति की निगरानी करें; YPP_REG-OBJ-01 में प्रगति रिकॉर्ड करें।  </span>प्रबंधन प्रतिनिधि (योजना स्वामित्व और समीक्षा)</td><td class="mono">⚡ सीसीपी</td><td><span class="crit-marker">मॉनिटर</span></td><td class="doc-ref">निष्पादन</td></tr><tr><td class="col-num">6</td><td><span class="phase-chip">समीक्षा बैठक में या महत्वपूर्ण पहलुओं में परिवर्तन होने पर इस योजना की समीक्षा करें और अद्यतन करें।</span></td><td>प्रबंधन प्रतिनिधि (योजना स्वामित्व और समीक्षा)</td><td class="mono">अनुमोदन एवं हस्ताक्षर</td><td></td><td class="doc-ref"></td></tr></tbody></table></div>
+</div>
+</div>
+<div class="section" id="sec-5">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">5</div>
+<span class="sec-title">▾</span>
+<span class="sec-chevron">दस्तावेज़ लेखक</span>
+</div>
+<div class="sec-collapse">
+<div class="sec-body"><div class="sig-grid"><div class="sig-card"><div class="sig-role">मुद्रित नाम</div><div class="sig-fields"><div><div class="sig-field-lbl">पीएल प्रधान</div><div class="sig-prefill">हस्ताक्षर</div></div><div><div class="sig-field-lbl">नौकरी का शीर्षक</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">प्रबंधन प्रतिनिधि</div><div class="sig-prefill">तारीख</div></div><div><div class="sig-field-lbl">दस्तावेज़ अनुमोदनकर्ता</div><div class="sig-prefill">2026-04-24</div></div></div></div><div class="sig-card"><div class="sig-role">मुद्रित नाम</div><div class="sig-fields"><div><div class="sig-field-lbl">तरूण मिश्रा</div><div class="sig-prefill">हस्ताक्षर</div></div><div><div class="sig-field-lbl">नौकरी का शीर्षक</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">निर्देशक</div><div class="sig-prefill">तारीख</div></div><div><div class="sig-field-lbl">YPP_PLN-ENV-01·· v1.1·· आईएसओ 14001:2015</div><div class="sig-prefill">2026-04-24</div></div></div></div></div></div>
+</div>
+</div>
+<div class="doc-footer">
+<span class="footer-ref">⚠ मुद्रित होने पर अनियंत्रित · उपयोग से पहले वर्तमान संशोधन सत्यापित करें</span>
+<span>29 अप्रैल 2026 को उत्पन्न</span>
+<span>गोपनीय</span>
+</div>
+</div>
+<div class="wm"><div class="wm-inner"><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div></div></div>
+</div>
+<div id="bil-toolbar">
+  <button class="tb-btn tb-lang active" id="tbEN" onclick="switchLang('en')">English</button>
+  <button class="tb-btn tb-lang" id="tbHI" onclick="switchLang('hi')">हिंदी</button>
+  <span class="tb-sep"></span>
+  <button class="tb-btn tb-audio" id="tbAudio" onclick="tbPlayAudio()">&#128266; Audio</button>
+  <button class="tb-btn tb-audio" id="tbAudioStop" onclick="tbStopAudio()" style="display:none">&#9209; Stop</button>
+</div>
+<button id="bil-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
+<script>
+(function(){
+  var _curLang='en';
+  var _readFromEl=null;
+  window.switchLang=function(lang){
+    _curLang=lang;
+    document.querySelectorAll('.lang-section').forEach(function(s){
+      s.classList.toggle('active',s.dataset.lang===lang);
+    });
+    document.body.classList.toggle('lang-hi',lang==='hi');
+    document.getElementById('tbEN').classList.toggle('active',lang==='en');
+    document.getElementById('tbHI').classList.toggle('active',lang==='hi');
+    window.speechSynthesis.cancel();
+    document.getElementById('tbAudio').textContent=lang==='hi'?'🔊 सुनēं':'🔊 Audio';
+  };
+  var _ttsTimer=null;
+  function tbAudioReset(){
+    if(_ttsTimer){clearInterval(_ttsTimer);_ttsTimer=null;}
+    var btn=document.getElementById('tbAudio'),stop=document.getElementById('tbAudioStop');
+    btn.style.display='';btn.classList.remove('speaking');stop.style.display='none';
+  }
+  window.tbPlayAudio=function(){
+    if(window.speechSynthesis.speaking){window.speechSynthesis.cancel();tbAudioReset();return;}
+    /* Priority: text selection > right-click pinned element > full active section */
+    var txt='';
+    var sel=window.getSelection?window.getSelection():null;
+    var selTxt=sel?sel.toString().trim():'';
+    if(selTxt.length>2){
+      txt=selTxt;
+    } else if(_readFromEl){
+      txt=_readFromEl.innerText||'';
+      _readFromEl=null;
+    } else {
+      var sec=document.querySelector('.lang-section.active');
+      txt=sec?(sec.innerText||''):'';
+    }
+    if(!txt.trim())return;
+    var u=new SpeechSynthesisUtterance(txt);
+    u.lang=_curLang==='hi'?'hi-IN':'en-IN';u.rate=0.92;u.pitch=1.0;
+    var btn=document.getElementById('tbAudio'),stop=document.getElementById('tbAudioStop');
+    btn.style.display='none';stop.style.display='';
+    btn.classList.add('speaking');
+    u.onend=u.onerror=function(){tbAudioReset();};
+    /* Chrome bug: speechSynthesis silently pauses on long text — resume every 10s */
+    _ttsTimer=setInterval(function(){
+      if(!window.speechSynthesis.speaking){tbAudioReset();return;}
+      window.speechSynthesis.pause();
+      window.speechSynthesis.resume();
+    },10000);
+    window.speechSynthesis.speak(u);
+  };
+  window.tbStopAudio=function(){window.speechSynthesis.cancel();tbAudioReset();};
+  /* Right-click / long-press any content element to pin start point */
+  var _ctx=(function(){
+    var m=document.createElement('div');
+    m.style.cssText='position:fixed;z-index:99999;background:#1A2332;color:#fff;border-radius:8px;padding:6px 0;box-shadow:0 4px 20px rgba(0,0,0,.5);display:none;min-width:170px;font-family:inherit;font-size:13px';
+    function row(id,label,lang){var d=document.createElement('div');d.id=id;d.style.cssText='padding:9px 16px;cursor:pointer';d.addEventListener('mouseenter',function(){this.style.background='rgba(45,139,139,.3)';});d.addEventListener('mouseleave',function(){this.style.background='';});d.textContent=label;d.addEventListener('click',function(){hide();_curLang=lang;tbPlayAudio();});return d;}
+    m.appendChild(row('ctxEN','🔊 Read from here','en'));
+    m.appendChild(row('ctxHI','🔊 यहाँ से सुनें','hi'));
+    document.body.appendChild(m);
+    function hide(){m.style.display='none';}
+    document.addEventListener('click',hide);
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
+    return m;
+  })();
+  var _lpTimer=null;
+  function showCtx(el,x,y){
+    _readFromEl=el;
+    _ctx.style.left=Math.min(x,window.innerWidth-185)+'px';
+    _ctx.style.top=Math.min(y,window.innerHeight-90)+'px';
+    _ctx.style.display='block';
+  }
+  document.addEventListener('contextmenu',function(ev){
+    var el=ev.target.closest('.section,.tt-step-body,.sec-body,p,td,li');
+    if(!el)return;
+    ev.preventDefault();showCtx(el,ev.clientX,ev.clientY);
+  });
+  document.addEventListener('touchstart',function(ev){
+    var el=ev.target.closest('.section,.tt-step-body,.sec-body,p,td,li');
+    if(!el)return;
+    _lpTimer=setTimeout(function(){var t=ev.touches[0];showCtx(el,t.clientX,t.clientY);},600);
+  },{passive:true});
+  document.addEventListener('touchend',function(){clearTimeout(_lpTimer);});
+  document.addEventListener('touchmove',function(){clearTimeout(_lpTimer);});
+  window.addEventListener('scroll',function(){
+    var btn=document.getElementById('bil-top');
+    if(btn)btn.classList.toggle('visible',window.scrollY>300);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Production Work Instructions - Dispatch &amp; Loading — PM/WI/PRD-04</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:14px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+:root{
+  --navy-deep:#0F1720;--navy:#1A2332;
+  --teal:#2D8B8B;--teal-lt:#3AABAB;--teal-dim:#20616B;
+  --teal-pale:#EBF4F4;--teal-rule:#B0D4D4;
+  --amber:#C08010;--amber-bg:#FFF8EE;--amber-bd:#E8C870;
+  --danger:#B83030;--danger-bg:#FEF0EF;--danger-bd:#E8B0AD;
+  --green:#1A7040;--green-bg:#EEF7F2;--green-bd:#A0C8B4;
+  --ice:#F4F8FB;--ice-mid:#E8F0F5;
+  --rule:#D8E6EE;--rule-lt:#EBF2F7;
+  --ink:#1A2332;--mid:#3A5060;--lt:#6B7F90;--white:#FFFFFF;
+  --font-d:'Barlow Condensed',-apple-system,sans-serif;
+  --font-b:'Inter',-apple-system,sans-serif;
+  --font-m:'JetBrains Mono',monospace;
+  --r:4px;--r2:6px;
+
+  /* ── ISO Domain Colors (v19.0) ── */
+  --iso-quality:#2563EB;--iso-quality-lt:#DBEAFE;
+  --iso-env:#059669;--iso-env-lt:#D1FAE5;
+  --iso-safety:#EA580C;--iso-safety-lt:#FFF7ED;
+  --iso-energy:#D97706;--iso-energy-lt:#FFFBEB;
+  --iso-food:#16A34A;--iso-food-lt:#F0FDF4;
+  --iso-infosec:#7C3AED;--iso-infosec-lt:#F5F3FF;
+  --iso-medical:#0D9488;--iso-medical-lt:#F0FDFA;
+  --iso-auto:#1E3A8A;--iso-auto-lt:#EFF6FF;
+  --iso-aero:#1E3A5F;--iso-aero-lt:#F8FAFC;
+
+  /* ── Document Lifecycle State Colors ── */
+  --state-draft:#6B7280;--state-draft-bg:#F3F4F6;
+  --state-review:#D97706;--state-review-bg:#FEF3C7;
+  --state-approved:#059669;--state-approved-bg:#D1FAE5;
+  --state-published:#2563EB;--state-published-bg:#DBEAFE;
+  --state-superseded:#EA580C;--state-superseded-bg:#FFF7ED;
+  --state-obsolete:#B91C1C;--state-obsolete-bg:#FEF2F2;
+
+  /* ── RAG Status Colors ── */
+  --rag-red:#DC2626;--rag-red-bg:#FEE2E2;--rag-red-ink:#991B1B;
+  --rag-amber:#D97706;--rag-amber-bg:#FEF3C7;--rag-amber-ink:#92400E;
+  --rag-green:#059669;--rag-green-bg:#D1FAE5;--rag-green-ink:#065F46;
+  --rag-blue:#2563EB;--rag-blue-bg:#DBEAFE;--rag-blue-ink:#1E40AF;
+  --rag-grey:#6B7280;--rag-grey-bg:#F3F4F6;--rag-grey-ink:#374151;
+
+  /* ── Neutral Scale ── */
+  --gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;
+  --gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-500:#6B7280;
+  --gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;
+
+  /* ── Accessibility ── */
+  --focus-ring:#2563EB;--focus-offset:2px;
+}
+
+body{font-family:var(--font-b);background:#E8EEF3;color:var(--ink);line-height:1.55;padding:32px 20px 64px;min-height:100vh}
+
+/* PAGE */
+.document{max-width:960px;margin:0 auto;background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.08),0 12px 40px rgba(0,0,0,.10);border-radius:0 0 var(--r) var(--r);border-top:4px solid var(--teal)}
+
+/* ── BANNER ── */
+.banner{background:var(--navy-deep);color:#fff;padding:28px 36px 24px;position:relative;overflow:hidden}
+.banner::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-55deg,rgba(45,139,139,.04) 0px,rgba(45,139,139,.04) 1px,transparent 1px,transparent 22px);pointer-events:none}
+.banner::after{content:'';position:absolute;right:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--teal),var(--teal-dim))}
+.banner-inner{position:relative;z-index:1}
+.banner-eyebrow{font-family:var(--font-m);font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--teal-lt);margin-bottom:9px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ey-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.25)}
+.banner-title{font-family:var(--font-d);font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.1;letter-spacing:-.3px;margin-bottom:6px}
+.banner-meta{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px}
+.banner-org{font-size:11px;opacity:.75;font-style:italic}
+.doc-code-badge{font-family:var(--font-m);font-size:11px;font-weight:600;color:var(--amber);background:rgba(0,0,0,.28);padding:5px 13px;border-radius:3px;letter-spacing:.5px}
+/* Banner layout: top-row (logo+eyebrow+badge), title, QR absolute right */
+.banner-header{display:flex;flex-direction:column;gap:6px}
+.banner-top-row{display:flex;align-items:center;gap:14px}
+.banner-logo-left{display:flex;align-items:center;flex-shrink:0}
+.co-logo{max-height:44px;max-width:130px;object-fit:contain;filter:brightness(1.1)}
+.banner-bottom-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.banner-qr-right{position:absolute;right:36px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;z-index:2}
+.banner-qr-img{width:86px;height:86px;border-radius:6px;border:2px solid rgba(255,255,255,.2);background:#fff;padding:3px;object-fit:contain;display:block}
+.banner-qr-lbl{font-family:var(--font-m);font-size:7px;color:rgba(255,255,255,.5);letter-spacing:.5px;text-align:center;word-break:break-all;max-width:86px}
+/* Confidential watermark — fixed overlay, pointer-events:none so it doesn't block clicks */
+.wm{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden}
+.wm-inner{position:absolute;inset:-50%;display:flex;flex-direction:column;gap:90px;transform:rotate(-35deg)}
+.wm-row{display:flex;gap:80px;white-space:nowrap;padding:0 40px}
+.wm-txt{font-family:Barlow Condensed,Arial,sans-serif;font-size:26px;font-weight:800;letter-spacing:8px;color:rgba(139,0,0,0.045);text-transform:uppercase;user-select:none}
+@media print{.wm-txt{color:rgba(139,0,0,0.055)}}
+
+/* ── CONTROL STRIP ── */
+.ctrl-strip{display:grid;grid-template-columns:repeat(5,1fr);background:var(--teal)}
+.ctrl-cell{padding:9px 14px;border-right:1px solid rgba(255,255,255,.22)}
+.ctrl-cell:last-child{border-right:none}
+.ctrl-lbl{font-family:var(--font-m);font-size:7px;text-transform:uppercase;letter-spacing:.7px;color:rgba(255,255,255,.72);margin-bottom:3px}
+.ctrl-val{font-family:var(--font-b);font-size:10.5px;font-weight:600;color:#fff}
+
+/* ── SECTION ── */
+.section{padding:0}
+.section+.section{border-top:1px solid var(--rule)}
+.sec-hdr{display:flex;align-items:center;gap:12px;padding:17px 36px 14px;background:var(--ice);border-bottom:1px solid var(--rule);user-select:none;position:relative}
+.sec-hdr:hover{background:var(--teal-pale)}
+.sec-hdr.amber{background:#FFFBF5}
+.sec-hdr.amber:hover{background:#FFF5E6}
+.sec-num{width:26px;height:26px;border-radius:50%;flex-shrink:0;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:12px;font-weight:700}
+.sec-num.amber{background:var(--amber)}
+.sec-title{font-family:var(--font-d);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--navy)}
+.sec-title.amber{color:var(--amber)}
+.sec-tag{margin-left:auto;flex-shrink:0;font-family:var(--font-m);font-size:8px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-rule);padding:3px 9px;border-radius:3px}
+.sec-tag.amber{color:var(--amber);background:var(--amber-bg);border-color:var(--amber-bd)}
+.sec-chevron{margin-left:auto;font-size:18px;color:var(--muted);transition:transform .3s ease}
+.sec-hdr .sec-tag+.sec-chevron{margin-left:12px}
+.sec-hdr.collapsed .sec-chevron{transform:rotate(-90deg)}
+.sec-collapse{overflow:hidden;max-height:9999px;transition:max-height .4s ease-in-out,opacity .3s ease}
+.sec-hdr.collapsed+.sec-collapse{max-height:0;opacity:0;padding:0}
+.sec-body{padding:24px 36px}
+
+/* ── TOC TABLE ── */
+.toc-table{width:100%;border-collapse:collapse;font-size:12.5px;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.toc-table th{background:var(--navy);color:#fff;font-family:var(--font-d);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px;text-align:left}
+.toc-table td{padding:9px 14px;border-bottom:1px solid var(--rule);transition:background .2s}
+.toc-table tr:nth-child(even) td{background:var(--ice)}
+.toc-table tr:nth-child(odd) td{background:#fff}
+.toc-table tr:hover td{background:var(--teal-pale)}
+.toc-table a{text-decoration:none;color:var(--navy);font-weight:500;display:block;transition:color .15s}
+.toc-table a:hover{color:var(--teal)}
+.toc-table .toc-sec-num{font-family:var(--font-d);font-size:12px;font-weight:700;color:var(--navy);text-align:center;width:40px}
+.toc-table .toc-tag{font-family:var(--font-d);font-size:10.5px;font-weight:700;color:var(--teal);text-align:right;white-space:nowrap}
+@keyframes tocFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.toc-table tr{animation:tocFadeIn .3s ease forwards;opacity:0}
+.toc-table tr:nth-child(1){animation-delay:.05s}
+.toc-table tr:nth-child(2){animation-delay:.08s}
+.toc-table tr:nth-child(3){animation-delay:.11s}
+.toc-table tr:nth-child(4){animation-delay:.14s}
+.toc-table tr:nth-child(5){animation-delay:.17s}
+.toc-table tr:nth-child(6){animation-delay:.2s}
+.toc-table tr:nth-child(7){animation-delay:.23s}
+.toc-table tr:nth-child(8){animation-delay:.26s}
+.toc-table tr:nth-child(9){animation-delay:.29s}
+.toc-table tr:nth-child(10){animation-delay:.32s}
+.toc-table tr:nth-child(n+11){animation-delay:.35s}
+
+/* ── FLOATING BACK-TO-TOC BUTTON ── */
+.fab-toc{position:fixed;bottom:32px;right:32px;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(15,23,32,.35);display:flex;align-items:center;justify-content:center;font-size:20px;z-index:999;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s,background .2s;pointer-events:none}
+.fab-toc.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.fab-toc:hover{background:var(--teal);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+
+/* ── SCOPE CARDS ── */
+.scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.scope-card{background:var(--ice);border:1px solid var(--rule);border-radius:var(--r);padding:15px 16px;border-top:3px solid var(--teal)}
+.scope-card-wide{grid-column:1/-1}
+.scope-card-wide .scope-txt{white-space:pre-line}
+.scope-lbl{font-family:var(--font-m);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--teal-dim);margin-bottom:7px}
+.scope-txt{font-size:13px;line-height:1.6;color:var(--mid)}
+
+/* ── BILINGUAL ── */
+/* ── Hindi Translation Styles (v19.0 redesign) ── */
+.hi-block{border-left:3px solid var(--amber);padding:8px 14px;margin:6px 0 10px;background:#FFFDF7;border-radius:0 var(--r) var(--r) 0}
+.hi-label{display:none}
+.hi-text{font-size:11.5px;line-height:1.7;color:#6B5B3E;margin-bottom:4px}
+.hi-text:last-child{margin-bottom:0}
+/* Inline Hindi blocks — only visible when HI toggle is active */
+.hi-inline{display:none!important;font-size:11px;line-height:1.6;color:#8B7355;margin-top:2px}
+body.lang-hi .hi-inline{display:block!important}
+.manual-list .hi-inline{margin-top:1px;padding-left:0}
+.bilingual-pair{margin-bottom:12px}
+.bilingual-pair .manual-para{margin-bottom:2px}
+.bilingual-pair .hi-text{margin-bottom:0}
+.hi-bullets{padding-left:20px;margin:4px 0 0;list-style:disc}
+.hi-bullets li{font-size:11.5px;line-height:1.6;color:#6B5B3E;margin-bottom:2px}
+.hi-bullets li::marker{color:var(--amber)}
+.sec-title-hi{font-family:var(--font-b);font-size:11px;font-weight:600;color:var(--amber);margin-left:4px;text-transform:none;letter-spacing:0}
+.principle-text-hi{margin-top:5px;padding-top:5px;border-top:1px dashed var(--amber-bd);font-size:11px;line-height:1.55;color:var(--amber)}
+.scope-txt-hi{margin-top:5px;padding-top:5px;border-top:1px dashed var(--amber-bd);font-size:11px;line-height:1.5;color:var(--amber);white-space:pre-line}
+
+/* ── SAFETY BANNER ── */
+.safety-banner{display:grid;grid-template-columns:44px 1fr;border:1px solid var(--danger-bd);border-left:5px solid var(--danger);border-radius:0 var(--r) var(--r) 0;margin-bottom:18px;overflow:hidden}
+.safety-icon-cell{background:var(--danger-bg);display:flex;align-items:center;justify-content:center}
+.safety-icon-cell svg{width:20px;height:20px;color:var(--danger)}
+.safety-txt-cell{padding:10px 14px;background:var(--danger-bg)}
+.safety-txt{font-size:13px;line-height:1.6;color:var(--ink)}
+.safety-txt strong{color:var(--danger);font-weight:700}
+
+/* ── PPE GRID ── */
+.ppe-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.ppe-card{background:var(--ice);border:1px solid var(--rule);border-radius:var(--r2);padding:12px 6px 10px;display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;transition:border-color 180ms,box-shadow 180ms}
+.ppe-card:hover{border-color:var(--teal-rule);box-shadow:0 2px 8px rgba(45,139,139,.1)}
+.ppe-icon-wrap{width:52px;height:52px;display:flex;align-items:center;justify-content:center}
+.ppe-icon-wrap svg{width:52px;height:52px}
+.ppe-label{font-size:9.5px;font-weight:500;color:var(--mid);line-height:1.25}
+
+/* ── FLOWCHART ── */
+.flow-chain{position:relative;display:flex;flex-direction:column;max-width:820px;margin:0 auto}
+.flow-chain::before{content:'';position:absolute;left:22px;top:22px;height:calc(100% - 80px);width:2px;background:linear-gradient(180deg,var(--teal),var(--rule));z-index:0}
+/* GRID: col4 is the callout column — capped at 260px to prevent squeezing the step text.
+   DO NOT change minmax(0,260px) to 'auto' — auto expands to ~55% viewport width. */
+.flow-step{display:grid;grid-template-columns:44px 16px 1fr minmax(0,260px);align-items:start;gap:0;position:relative;z-index:1}
+.flow-num{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:16px;font-weight:700;background:var(--teal);color:#fff;flex-shrink:0;z-index:2;box-shadow:0 0 0 4px #fff}
+.flow-num.crit{background:var(--amber);box-shadow:0 0 0 4px #fff,0 0 0 5px var(--amber-bd)}
+.flow-conn{display:flex;align-items:flex-start;padding-top:21px}
+.flow-conn-line{width:100%;height:2px;background:var(--teal)}
+.flow-conn-line.crit{background:var(--amber)}
+.flow-box{background:var(--white);border:1.5px solid var(--rule);border-radius:var(--r);padding:10px 14px;min-height:44px;display:flex;flex-direction:column;justify-content:center;gap:4px;position:relative;box-shadow:0 1px 3px rgba(0,0,0,.05);transition:border-color 180ms,box-shadow 180ms}
+.flow-box:hover{border-color:var(--teal-rule);box-shadow:0 2px 8px rgba(45,139,139,.1)}
+.flow-box::before{content:'';position:absolute;left:-7px;top:18px;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid var(--rule)}
+.flow-box::after{content:'';position:absolute;left:-5.5px;top:19px;border-top:6px solid transparent;border-bottom:6px solid transparent;border-right:6px solid var(--white)}
+.flow-box.crit{border-color:var(--amber-bd);background:var(--amber-bg)}
+.flow-box.crit::before{border-right-color:var(--amber-bd)}
+.flow-box.crit::after{border-right-color:var(--amber-bg)}
+.crit-pill{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-m);font-size:8px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--amber);background:#FFF3D8;border:1px solid var(--amber-bd);padding:2px 8px;border-radius:3px;width:fit-content;margin-bottom:3px}
+.flow-step-text{font-size:13.5px;font-weight:500;color:var(--ink);line-height:1.5}
+/* .flow-step-note removed — callout shown exclusively in right-column callout_html */
+.flow-callout{align-self:flex-start;padding-top:2px;padding-left:12px;box-sizing:border-box}
+.callout-tag{background:var(--teal-pale);border:1px solid var(--teal-rule);border-radius:var(--r);padding:6px 10px;text-align:left}
+.callout-tag.crit{background:var(--amber-bg);border-color:var(--amber-bd)}
+.callout-txt{font-family:var(--font-m);font-size:8px;font-weight:600;color:var(--teal-dim);line-height:1.4;display:block}
+.callout-txt.crit{color:var(--amber)}
+.flow-arrow{display:grid;grid-template-columns:44px 16px 1fr minmax(0,260px);height:30px;position:relative;z-index:1}
+.arrow-spine{display:flex;align-items:center;justify-content:center;z-index:2}
+
+/* ── DECISION NODE ── */
+.flow-decision{display:grid;grid-template-columns:44px 16px 1fr auto;position:relative;z-index:1;margin-top:2px}
+.decision-wrapper{border:2px solid var(--teal);border-radius:var(--r2);overflow:hidden;box-shadow:0 1px 4px rgba(45,139,139,.12)}
+.decision-hdr{background:linear-gradient(90deg,var(--teal),var(--teal-dim));padding:12px 20px;display:flex;align-items:center;gap:12px}
+.diamond-icon{width:28px;height:28px;flex-shrink:0;background:rgba(255,255,255,.25);border-radius:3px;transform:rotate(45deg);display:flex;align-items:center;justify-content:center}
+.diamond-icon span{transform:rotate(-45deg);font-weight:800;font-size:13px;color:#fff}
+.decision-q{font-family:var(--font-d);font-size:15px;font-weight:700;color:#fff;letter-spacing:.2px}
+.decision-branches{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--rule)}
+.branch{padding:14px 16px;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:6px;transition:background 180ms}
+.branch:last-child{border-right:none}
+.branch-hdr{display:flex;align-items:center;gap:8px}
+.branch-icon{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.branch-icon svg{width:13px;height:13px}
+.branch-lbl{font-family:var(--font-d);font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.branch-action{font-size:13px;line-height:1.55;color:var(--mid)}
+.br-accept{background:var(--green-bg)}.br-accept:hover{background:#E2F4EB}.br-accept .branch-icon{background:rgba(26,112,64,.15);color:var(--green)}.br-accept .branch-lbl{color:var(--green)}
+.br-hold{background:var(--amber-bg)}.br-hold:hover{background:#FFF0D4}.br-hold .branch-icon{background:rgba(192,128,16,.15);color:var(--amber)}.br-hold .branch-lbl{color:var(--amber)}
+.br-reject{background:var(--danger-bg)}.br-reject:hover{background:#FEE8E7}.br-reject .branch-icon{background:rgba(184,48,48,.15);color:var(--danger)}.br-reject .branch-lbl{color:var(--danger)}
+
+/* ── TABLES ── */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+thead tr{background:var(--navy)}
+th{padding:9px 14px;text-align:left;font-family:var(--font-m);font-size:7.5px;font-weight:600;letter-spacing:.9px;text-transform:uppercase;color:rgba(255,255,255,.88);border-right:1px solid rgba(255,255,255,.1)}
+th:last-child{border-right:none}
+td{padding:10px 14px;border-bottom:1px solid var(--rule-lt);color:var(--mid);vertical-align:top;line-height:1.6;border-right:1px solid var(--rule-lt)}
+td:last-child{border-right:none}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(odd){background:var(--ice)}
+tbody tr:nth-child(even){background:var(--white)}
+tbody tr.crit-row{background:var(--amber-bg)!important}
+tbody tr.crit-row td:first-child{border-left:3px solid var(--amber);padding-left:11px}
+tbody tr:hover td{background:var(--teal-pale)!important}
+.col-num{width:38px;text-align:center;font-family:var(--font-m);font-size:11px;color:var(--lt);font-weight:500}
+.phase-chip{display:inline-block;font-family:var(--font-m);font-size:8.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;background:var(--teal-pale);color:var(--teal-dim);border:1px solid var(--teal-rule);padding:2px 8px;border-radius:3px;white-space:nowrap}
+.crit-marker{display:inline-flex;align-items:center;gap:3px;font-family:var(--font-m);font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--amber);background:#FFF3D8;border:1px solid var(--amber-bd);padding:2px 6px;border-radius:3px}
+.mono{font-family:var(--font-m);font-size:10.5px;color:var(--lt)}
+.doc-ref{font-family:var(--font-m);font-size:10px;font-weight:600;color:var(--teal-dim)}
+.ver-badge{display:inline-block;font-family:var(--font-m);font-size:10px;font-weight:600;color:var(--teal-dim);background:var(--teal-pale);border:1px solid var(--teal-rule);padding:2px 8px;border-radius:3px}
+
+/* ── RISK SCORE BADGES ── */
+.risk-low{color:var(--green);background:var(--green-bg);border:1px solid var(--green-bd)}
+.risk-med{color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-bd)}
+.risk-high{color:#C05010;background:#FFF3E0;border:1px solid #F0C090}
+.risk-extreme{color:var(--danger);background:var(--danger-bg);border:1px solid var(--danger-bd)}
+.risk-badge{display:inline-block;font-family:var(--font-m);font-size:9px;font-weight:700;padding:3px 9px;border-radius:4px}
+
+/* ── AUDIT CONFORMANCE ── */
+.conf-c{color:var(--green);background:var(--green-bg);border:1px solid var(--green-bd)}
+.conf-nc{color:var(--danger);background:var(--danger-bg);border:1px solid var(--danger-bd)}
+.conf-ofi{color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-bd)}
+.conf-na{color:var(--lt);background:var(--ice);border:1px solid var(--rule)}
+.conf-badge{display:inline-block;font-family:var(--font-m);font-size:8px;font-weight:700;padding:2px 7px;border-radius:3px;white-space:nowrap}
+
+/* ── COMPETENCE LEVELS ── */
+.comp-0{color:var(--lt);background:var(--ice);border:1px solid var(--rule)}
+.comp-1{color:#1E40AF;background:#EFF6FF;border:1px solid #BFDBFE}
+.comp-2{color:#0E7490;background:#ECFEFF;border:1px solid #A5F3FC}
+.comp-3{color:var(--green);background:var(--green-bg);border:1px solid var(--green-bd)}
+.comp-4{color:#fff;background:var(--green);border:1px solid var(--green)}
+.comp-badge{display:inline-block;font-family:var(--font-m);font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;min-width:28px;text-align:center}
+.comp-below{outline:2px solid var(--danger);outline-offset:1px}
+
+/* ── SCORING CARDS ── */
+.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.score-card{padding:16px;border-radius:var(--r);text-align:center;border:1px solid var(--rule)}
+.score-card-n{font-family:var(--font-d);font-size:30px;font-weight:800;line-height:1;margin-bottom:4px}
+.score-card-l{font-family:var(--font-m);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+
+/* ── POLICY PRINCIPLES ── */
+.principles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.principle-card{background:var(--ice);border:1px solid var(--rule);border-radius:var(--r);padding:16px;border-left:4px solid var(--teal)}
+.principle-title{font-family:var(--font-d);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;color:var(--navy);margin-bottom:6px}
+.principle-text{font-size:13px;line-height:1.6;color:var(--mid)}
+
+/* ── QUALITY MANUAL CLAUSE SECTIONS ── */
+.manual-clause{padding:6px 0}
+.manual-subsec{margin-bottom:16px;padding:16px 20px 14px;background:var(--white);border:1px solid var(--rule);border-radius:var(--r2);border-left:4px solid var(--teal);box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.manual-subsec-hdr{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule-lt);flex-wrap:wrap}
+.manual-clause-num{font-family:var(--font-m);font-size:10px;font-weight:700;color:#fff;background:var(--teal);padding:3px 10px;border-radius:3px;letter-spacing:.5px}
+.manual-subsec-title{font-family:var(--font-d);font-size:14px;font-weight:700;color:var(--navy);letter-spacing:.2px}
+.manual-para{font-size:13px;line-height:1.7;color:var(--ink);margin-bottom:10px}
+.manual-list{font-size:13px;line-height:1.7;color:var(--ink);padding-left:20px;margin:10px 0}
+.manual-list li{margin-bottom:6px;padding-left:2px}
+.manual-list li::marker{color:var(--teal)}
+.manual-list li strong{color:var(--navy);font-weight:600}
+
+/* ── NCR CONTENT BLOCKS ── */
+.ncr-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;margin-bottom:20px}
+.ncr-info-cell{display:grid;grid-template-columns:140px 1fr;border-bottom:1px solid var(--rule-lt)}
+.ncr-info-cell:last-child{border-bottom:none}
+.ncr-info-lbl{background:var(--ice);padding:10px 14px;font-family:var(--font-m);font-size:8.5px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--teal-dim);border-right:1px solid var(--rule-lt);display:flex;align-items:center}
+.ncr-info-val{padding:10px 14px;font-size:11.5px;color:var(--ink)}
+.ncr-block{background:var(--ice);border:1px solid var(--rule);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.ncr-block-lbl{font-family:var(--font-m);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:var(--mid);margin-bottom:3px}
+.ncr-block-sub{font-size:10px;color:var(--lt);font-style:italic;margin-bottom:8px}
+.ncr-block-text{font-size:12px;line-height:1.65;color:var(--ink)}
+.ncr-ca-row{background:var(--danger-bg);border-left:3px solid var(--danger)}
+.status-open{color:var(--danger);font-weight:600}
+.status-progress{color:var(--amber);font-weight:600}
+.status-closed{color:var(--green);font-weight:600}
+.sev-major{background:var(--danger);color:#fff;padding:2px 9px;border-radius:3px;font-family:var(--font-m);font-size:9px;font-weight:700}
+.sev-minor{background:var(--amber);color:#fff;padding:2px 9px;border-radius:3px;font-family:var(--font-m);font-size:9px;font-weight:700}
+.sev-obs{background:var(--teal);color:#fff;padding:2px 9px;border-radius:3px;font-family:var(--font-m);font-size:9px;font-weight:700}
+
+/* ── RELATED DOCS ── */
+.reldocs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.reldoc-card{display:flex;align-items:flex-start;gap:11px;background:var(--ice);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;transition:border-color 180ms,box-shadow 180ms}
+.reldoc-card:hover{border-color:var(--teal-rule);box-shadow:0 1px 4px rgba(45,139,139,.1)}
+.reldoc-icon{width:30px;height:30px;flex-shrink:0;background:var(--teal-pale);border:1px solid var(--teal-rule);border-radius:var(--r);display:flex;align-items:center;justify-content:center}
+.reldoc-icon svg{width:14px;height:14px;color:var(--teal-dim)}
+.reldoc-code{font-family:var(--font-m);font-size:9.5px;font-weight:600;color:var(--teal-dim);margin-bottom:3px}
+.reldoc-title{font-size:12px;font-weight:600;color:var(--ink)}
+.reldoc-meta{font-size:10.5px;color:var(--lt);margin-top:2px}
+
+/* ── SIGNATURE BLOCK ── */
+.sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.sig-card{border-top:2.5px solid var(--teal);padding-top:10px}
+.sig-role{font-family:var(--font-m);font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--navy);margin-bottom:12px}
+.sig-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sig-field-lbl{font-size:8px;text-transform:uppercase;color:var(--lt);font-weight:500;letter-spacing:.5px;margin-bottom:2px}
+.sig-line{border-bottom:1px solid var(--ink);height:20px}
+.sig-prefill{font-size:11px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--teal);height:20px;display:flex;align-items:flex-end;padding-bottom:2px}
+
+/* ── FOOTER ── */
+.doc-footer{border-top:2px solid var(--teal);padding:11px 36px;background:var(--ice);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:8.5px;color:var(--lt)}
+.footer-ref{font-family:var(--font-m);font-weight:600;color:var(--teal-dim)}
+
+/* ── EDIT TOOLBAR ── */
+.edit-toolbar{position:fixed;bottom:18px;right:18px;z-index:10000;display:flex;align-items:center;gap:8px;background:rgba(15,23,32,.94);border-radius:10px;padding:9px 14px;box-shadow:0 4px 20px rgba(0,0,0,.35);backdrop-filter:blur(6px)}
+.etb-btn{font-family:var(--font-m);font-size:11px;font-weight:600;letter-spacing:.4px;padding:6px 15px;border-radius:5px;border:none;cursor:pointer;transition:background 140ms}
+.etb-edit{background:var(--teal);color:#fff}.etb-edit:hover{background:var(--teal-dim)}
+.etb-save{background:#1A7040;color:#fff;display:none}.etb-save:hover{background:#155c35}
+.etb-cancel{background:rgba(255,255,255,.14);color:#fff;display:none}.etb-cancel:hover{background:rgba(255,255,255,.24)}
+.etb-audio{background:rgba(255,255,255,.12);color:#fff}.etb-audio:hover{background:rgba(255,255,255,.22)}.etb-audio.speaking{background:#1A5070;animation:etb-pulse 1.2s infinite}
+@keyframes etb-pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.etb-status{font-size:10px;color:rgba(255,255,255,.65);display:none;max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+[contenteditable]{outline:2px solid rgba(45,139,139,.45);border-radius:2px;min-width:20px;background:rgba(45,139,139,.05)}
+[contenteditable]:focus{outline:2px solid var(--teal);background:rgba(45,139,139,.1)}
+/* ── STATUS BADGES (v19.0) ── */
+.status-badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-m);font-size:9px;font-weight:700;padding:3px 10px;border-radius:var(--r);text-transform:uppercase;letter-spacing:.05em}
+.badge-draft{color:var(--state-draft);background:var(--state-draft-bg);border:1px solid #D1D5DB}
+.badge-review{color:#92400E;background:var(--state-review-bg);border:1px solid #F59E0B}
+.badge-approved{color:#065F46;background:var(--state-approved-bg);border:1px solid #34D399}
+.badge-published{color:#1E40AF;background:var(--state-published-bg);border:1px solid #60A5FA}
+.badge-superseded{color:#9A3412;background:var(--state-superseded-bg);border:1px solid #FB923C}
+.badge-obsolete{color:#991B1B;background:var(--state-obsolete-bg);border:1px solid #F87171}
+.badge-superseded+.sec-title,.badge-obsolete+.sec-title{text-decoration:line-through}
+/* ── DOC-LEVEL STATUS BADGES (header) ── */
+.doc-status-badge{display:inline-flex;align-items:center;font-family:var(--font-m);font-size:8px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:.06em;vertical-align:middle;margin-left:6px}
+.status-approved{background:#D1FAE5;color:#065F46;border:1px solid #34D399}
+.status-draft{background:#F3F4F6;color:#374151;border:1px solid #D1D5DB}
+.status-under-review{background:#fff3cd;color:#856404;border:1px solid #ffc107}
+.status-obsolete{background:#FEE2E2;color:#991B1B;border:1px solid #F87171}
+.status-superseded{background:#FFEDD5;color:#9A3412;border:1px solid #FB923C}
+
+/* ── RAG BADGES (v19.0) ── */
+.rag-badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-m);font-size:9px;font-weight:700;padding:3px 10px;border-radius:var(--r);text-transform:uppercase;letter-spacing:.05em}
+.rag-r{color:var(--rag-red-ink);background:var(--rag-red-bg);border:1px solid var(--rag-red)}
+.rag-a{color:var(--rag-amber-ink);background:var(--rag-amber-bg);border:1px solid var(--rag-amber)}
+.rag-g{color:var(--rag-green-ink);background:var(--rag-green-bg);border:1px solid var(--rag-green)}
+.rag-b{color:var(--rag-blue-ink);background:var(--rag-blue-bg);border:1px solid var(--rag-blue)}
+.rag-grey{color:var(--rag-grey-ink);background:var(--rag-grey-bg);border:1px solid var(--rag-grey)}
+
+/* ── DOMAIN ACCENT CLASSES (v19.0) ── */
+.iso-accent-quality{--accent:var(--iso-quality);--accent-lt:var(--iso-quality-lt)}
+.iso-accent-env{--accent:var(--iso-env);--accent-lt:var(--iso-env-lt)}
+.iso-accent-safety{--accent:var(--iso-safety);--accent-lt:var(--iso-safety-lt)}
+.iso-accent-energy{--accent:var(--iso-energy);--accent-lt:var(--iso-energy-lt)}
+.iso-accent-food{--accent:var(--iso-food);--accent-lt:var(--iso-food-lt)}
+.iso-accent-infosec{--accent:var(--iso-infosec);--accent-lt:var(--iso-infosec-lt)}
+.iso-accent-medical{--accent:var(--iso-medical);--accent-lt:var(--iso-medical-lt)}
+.iso-accent-auto{--accent:var(--iso-auto);--accent-lt:var(--iso-auto-lt)}
+.iso-accent-aero{--accent:var(--iso-aero);--accent-lt:var(--iso-aero-lt)}
+
+/* ── ACCESSIBILITY (v19.0) ── */
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:var(--focus-offset);border-radius:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* ── PAGE BREAK UTILITIES (v19.0) ── */
+.page-break{break-before:page;page-break-before:always}
+.no-break{break-inside:avoid;page-break-inside:avoid}
+
+/* ── PRINT ── */
+@page{size:A4 portrait;margin:15mm 12mm 12mm 15mm}
+@media print{
+  html{font-size:9px}
+  body{background:#fff!important;padding:0!important;margin:0!important}
+  .document{max-width:100%!important;box-shadow:none!important;border-radius:0!important;border-top:none!important;padding:0!important;margin:0!important}
+  .banner{padding:8px 12px 6px!important;break-inside:avoid}
+  .banner-title{font-size:16px!important;margin-bottom:1px!important}
+  .banner-sub{font-size:8px!important}
+  .banner-hi{font-size:10px!important}
+  .banner-qr-img{width:38px!important;height:38px!important}
+  .co-logo{max-height:28px!important}
+  .ctrl-strip{padding:3px 12px!important;gap:3px!important}
+  .ctrl-lbl{font-size:6px!important}.ctrl-val{font-size:8px!important}
+  .section{padding:0!important;break-inside:auto;page-break-inside:auto}
+  .section+.section{border-top:1px solid #ccc!important}
+  .sec-hdr{padding:6px 12px 4px!important;margin-bottom:0!important}
+  .sec-body{padding:8px 12px!important}
+  .sec-title{font-size:11px!important;margin-bottom:0!important}
+  .sec-badge{font-size:6.5px!important;padding:1px 3px!important}
+  .sec-num{width:20px!important;height:20px!important;font-size:10px!important}
+  .scope-grid{grid-template-columns:repeat(2,1fr)!important;gap:4px!important}
+  .scope-card{padding:4px 6px!important;margin-bottom:1px!important;border-radius:2px!important;border-top-width:2px!important}
+  .scope-card-wide{grid-column:1/-1!important}
+  .callout{padding:4px 6px!important;margin-bottom:2px!important;border-radius:2px!important}
+  .scope-lbl{font-size:6.5px!important;margin-bottom:1px!important}
+  .callout-txt,.scope-txt{font-size:8px!important;line-height:1.25!important}
+  .scope-txt-hi,.callout-txt-hi{font-size:7px!important;line-height:1.2!important}
+  .tbl-wrap{overflow:visible!important}
+  thead{display:table-header-group}
+  table{font-size:8px!important;page-break-inside:auto}
+  tr{page-break-inside:avoid;break-inside:avoid}
+  th{font-size:7.5px!important;padding:2px 4px!important}
+  td{padding:2px 4px!important}
+  .flow-chain{gap:3px!important}
+  .flow-step{padding:4px!important;min-height:auto!important}
+  .flow-step-text{font-size:8px!important}
+  .doc-footer{padding:4px 12px!important;font-size:6.5px!important}
+  .wm,.edit-toolbar{display:none!important}
+  .ver-badge{font-size:7px!important;padding:1px 3px!important}
+  a{text-decoration:none!important;color:inherit!important}
+  .scope-group{gap:2px!important}
+  .callout-group{gap:2px!important}
+  .manual-subsec{margin-bottom:4px!important;padding:6px 10px 4px!important;border-left-width:2px!important;box-shadow:none!important}
+  .manual-subsec-hdr{margin-bottom:2px!important;padding-bottom:2px!important;gap:4px!important}
+  .manual-subsec-title{font-size:10px!important}
+  .manual-subsec-clause{font-size:7px!important;padding:1px 3px!important}
+  .manual-subsec p,.manual-subsec .hi-block{margin-bottom:2px!important}
+  .hi-block{padding:3px 6px!important;margin:2px 0 3px!important}
+  .hi-text{font-size:7px!important;line-height:1.25!important}
+  .hi-inline{font-size:7px!important}
+  .principles-grid{gap:4px!important}
+  .principle-card{padding:4px 6px!important}
+  .principle-title{font-size:9px!important}
+  .principle-text{font-size:8px!important;line-height:1.25!important}
+  .principle-text-hi{font-size:7px!important;line-height:1.2!important}
+  .policy-box{padding:6px 10px!important;margin-bottom:4px!important}
+  .policy-box p{font-size:8.5px!important;line-height:1.3!important}
+  .obj-table{font-size:8px!important}
+  .obj-table th{font-size:7px!important;padding:2px 3px!important}
+  .obj-table td{padding:2px 3px!important;font-size:8px!important}
+  .sig-grid{gap:4px!important;grid-template-columns:repeat(3,1fr)!important}
+  .sig-card{padding:6px!important}
+  .sig-lbl{font-size:6px!important}
+  .sig-name{font-size:8px!important}
+  .sig-title{font-size:7px!important}
+  p{margin:0 0 2px!important}
+  ul,ol{margin:1px 0!important;padding-left:14px!important}
+  li{margin-bottom:1px!important;font-size:8px!important}
+}
+
+/* ── MOBILE RESPONSIVE ── */
+@media(max-width:768px){
+  .document{max-width:100%!important;padding:16px 12px!important;border-radius:0!important;margin:0!important}
+  /* Banner */
+  .banner{padding:16px!important}
+  .banner-top-row{gap:10px!important}
+  .co-logo{max-height:36px!important}
+  .banner-title{font-size:16px!important}
+  .banner-bottom-row{flex-direction:column!important;align-items:flex-start!important}
+  .banner-qr-right{flex-direction:row!important;gap:8px!important;align-items:center!important}
+  .banner-qr-img{width:36px!important;height:36px!important}
+  /* Control strip: 2 cols */
+  .ctrl-strip{grid-template-columns:repeat(2,1fr)!important}
+  /* Section padding */
+  .sec-hdr{padding:12px 16px 10px!important}
+  .sec-body{padding:14px 16px!important}
+  /* Grids: 1 col */
+  .scope-grid{grid-template-columns:1fr!important}
+  .principles-grid{grid-template-columns:1fr!important}
+  .sig-grid{grid-template-columns:1fr!important}
+  .reldocs-grid{grid-template-columns:1fr!important}
+  /* Tables: horizontal scroll */
+  .tbl-wrap{overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+  table{min-width:500px!important}
+  th,td{padding:8px 10px!important}
+  /* Flow steps, safety cards: 1 col */
+  .flow-grid{grid-template-columns:1fr!important}
+  .safety-grid{grid-template-columns:1fr!important}
+  .ppe-grid{grid-template-columns:repeat(2,1fr)!important}
+}
+</style>
+<style>
+/* ── Unified bottom toolbar ── */
+#bil-toolbar{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:10000;
+  display:flex;align-items:center;gap:6px;background:rgba(15,23,32,.94);
+  border-radius:12px;padding:8px 14px;box-shadow:0 4px 24px rgba(0,0,0,.4);
+  backdrop-filter:blur(8px);font-family:Inter,system-ui,sans-serif;font-size:12px}
+.tb-btn{padding:6px 14px;border-radius:7px;font-size:11px;font-weight:600;
+  cursor:pointer;border:none;transition:background .15s;letter-spacing:.3px}
+.tb-lang{background:rgba(255,255,255,.12);color:#fff}
+.tb-lang:hover{background:rgba(255,255,255,.22)}
+.tb-lang.active{background:#2D8B8B;color:#fff}
+.tb-audio{background:rgba(255,255,255,.10);color:#fff}
+.tb-audio:hover{background:rgba(255,255,255,.20)}
+.tb-audio.speaking{background:#1A5070;animation:tb-pulse 1.2s infinite}
+@keyframes tb-pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.tb-sep{width:1px;height:20px;background:rgba(255,255,255,.2);margin:0 2px}
+.tb-status{font-size:10px;color:rgba(255,255,255,.6);display:none}
+.lang-section{display:none}
+.lang-section.active{display:block}
+#bil-top{position:fixed;bottom:62px;left:50%;transform:translateX(-50%);z-index:9999;
+  width:40px;height:40px;border-radius:50%;background:#0F1720;color:#fff;border:none;
+  cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.3);display:none;align-items:center;
+  justify-content:center;font-size:18px;transition:opacity .3s,background .2s}
+#bil-top:hover{background:#2D8B8B}
+#bil-top.visible{display:flex}
+@media print{#bil-toolbar,#bil-top{display:none!important}}
+</style>
+</head>
+<body>
+<div class="lang-section active" data-lang="en">
+<div class="document" data-doc-code="PM_WI_PRD-04">
+  <div class="banner">
+    <div class="banner-inner">
+      <div class="banner-header">
+        <div class="banner-top-row">
+          <div class="banner-logo-left"><img src="data:image/png;base64,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" alt="Company Logo" class="co-logo"></div>
+          <div class="banner-eyebrow"><span>ISO 9001:2015</span><span class="ey-sep"></span><span>Standard Operating Procedure</span><span class="ey-sep"></span><span>Clause 8.5.4</span></div>
+        </div>
+        <div class="banner-title">Production Work Instructions - Dispatch &amp; Loading</div>
+        <div class="banner-bottom-row">
+          <div class="banner-org"></div>
+          <div class="doc-code-badge">PM/WI/PRD-04 &nbsp;|&nbsp; v1.0</div>
+        </div>
+      </div>
+      <div class="banner-qr-right"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAAECCAIAAACaLU4HAAAFW0lEQVR4nO3dO47jRhQF0G7DC2Do1Ptf1KQOuQMNRpGBSgpP71NSnxMP2RK7Lwa8qHr1/Xg8vuBn+2v6A8A8MQAxADEAMQAxgCevyCAGIAYgBiAG8OQVGcQAxADEAMQAnrwiw9ffsWdw/fPv4MO7//uVcp/1W+zcufOqmJ2fFfs3q9hVdWJP1f8GIAYgBiAGIAbwSlO06uw9sq6K9Sc7P2u9KvZ8OjufK/TE3vFvY6UpAjEAMQAxADGA3KYo6y2+s1GZ7U9i/VLsM2f1XVfSyqjOv40dmiIQAxADEAMQA6huik5TtxpnR1bH0vktrsYdc7M0RSAGIAYgBiAG8NOaotVO79E5uWhH1rqjnTv/nO5IUwRiAGIAYgBiANVN0WkdQt3am6xZ0KvYjrm6O3/q34amCMQAxADEAMQAcpui2ROv6nS2SbE1TlmTi67GXWyn0RSBGIAYgBiAGMDT9+Px+Hp/dV1E3flo77g+57L7DD6VwhTEAMQAxABeWFPUOQs6a1bP+Y1K3QlunV3W9YadmFdkEAMQAxADEAN4ZU1RrJ2o6zSy9lLVnXcfu+q02UFX0ueZ/X2tNEUgBiAGIAYgBtDfFMXU7fbK6oV2dHZHs43TqnMmUux3qikCMQAxADEAMYDcpqhuBdGsurUudetzYq7DVmrtyPpZmiIQAxADEAMQA8g9+2xVd3JW3RqVuobn/MZpNXsaWufKKE0RiAGIAYgBiAGcsPusbv3Jad3R+TOIdmR909mdiStNEYgBiAGIAYgBvLKmqHOqTKyd6FzRlOX8+Uu3NUXwqRSmIAYgBiAG8EJT1DmReHaWUWcvVHdO/c63uEd3usWes7PPII2mCMQAxADEAIonWseu6lzZMnveVl3b9hnnkV2N07O9IoMYgBiAGIAYQP+cos6dXKvZidanTebJch226zBGUwRiAGIAYgBiAK80RavTpkPXrVaabbc6Z1Of1qTVdUeaIhADEAMQAxADeN+zzzr3mtXtnIpx5/+z+wzSKExBDEAMQAyguCmqWwv0jrOXZxuerKdxN86V6ly75RUZxADEAMQAxABeOfvsHRuV2Xk+O2L9yeyOuTvpzLKd7173vTRFIAYgBiAGIAZQ3RRlrTapWzMze/pY1tPYuc+qbrLTqu4Z2n0GaRSmIAYgBiAGUNwUrep2ls2umYm1LqftCJu183nqPrNXZBADEAMQAxAD6D/77Pw2aXa60fnrfO7RCUiaIiikMAUxADEAMYDUidbnT1GO6TzzPWvi987n6dxVd1ovtPKKDGIAYgBiAGIA1U1R51XnT9Q5f4XVdfyetbpPqCkCMQAxADEAMYD+pijrPnWNwWe0UrPrqTpXEJloDWkUpiAGIAYgBtA+0Xp2t1fsZ9VNq65bLxT7N6u6M+ZO68S8IoMYgBiAGIAYQO5E61l1U2465+fUTX+qa9Lu0TtbUwRpFKYgBiAGIAbwwpqi0+Yhz/ZCdSuIZqde36H7xJ7h7Mxtr8ggBiAGIAYgBpC7+6xzpU3s39RNy+mcDl3X1WSZnRAVoykCMQAxADEAMYDqOUWd+6ROm1adtXOqs006f+r1zlUxmiIQAxADEAMQAzhzonWW2NzprP1WO5+nrgXa0bli5076XazMKYI0ClMQAxADEAP46KaocwfW+bOMYu6yribriWXxigxiAGIAYgBiANVN0WfMxoldNXvnrO7oGv0WnW2SpgjEAMQAxADEAHKbotnT0Ga7kVXnBKTO+Ut1TLSGYQpTEAMQAxAD+OP78Xh4EvxwXpFBDEAMQAxADODJKzKIAYgBiAGIATx5RQYxADEAMQAxgCevyCAGfPH1G1fL1xqlChdoAAAAAElFTkSuQmCC" class="banner-qr-img" alt="QR"><span class="banner-qr-lbl">PM/WI/PRD-04</span></div>
+    </div>
+  </div>
+  <div class="ctrl-strip"><div class="ctrl-cell"><div class="ctrl-lbl">Document Type</div><div class="ctrl-val">Standard Operating Procedure</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Document Owner</div><div class="ctrl-val">Khushi Paswan</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Approved By</div><div class="ctrl-val">Tarun Mishra</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Effective Date</div><div class="ctrl-val">01/01/2024</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Next Review</div><div class="ctrl-val">01/01/2025</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Copy Status</div><div class="ctrl-val">Controlled</div></div></div>
+
+  <div class="section" id="sec-1">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">1</div>
+      <span class="sec-title">Scope &amp; Purpose</span>
+      <span class="sec-tag">ISO 9001:2015</span>
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="sec-body"><div class="scope-grid"><div class="scope-card"><div class="scope-lbl">Purpose</div><p class="scope-txt">To define procedures for dispatch planning, vehicle inspection, loading operations, and documentation to ensure products are delivered to customers in the correct quantity, condition, and on time.</p></div><div class="scope-card"><div class="scope-lbl">Scope</div><p class="scope-txt">Covers all dispatch activities: order picking, pre-dispatch inspection, vehicle loading, transport documentation, and delivery confirmation at Pack Masters.</p></div><div class="scope-card"><div class="scope-lbl">Responsible</div><p class="scope-txt">Dispatch Coordinator plans dispatches. Warehouse Supervisor manages loading. QC Inspector performs pre-dispatch checks.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-2">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">2</div>
+      <span class="sec-title">Process Flowchart</span>
+      
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="sec-body"><div class="flow-chain"><div class="flow-step"><div class="flow-num">1</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Receive dispatch instruction from sales/planning</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">2</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Pick and stage goods per dispatch order</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">3</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Pre-dispatch quality check: quantity, labelling, condition, batch numbers</span></div><div class="flow-callout"><div class="callout-tag  crit"><span class="callout-txt  crit">PM/FRM/FQC-01</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">4</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Inspect vehicle for cleanliness, condition, and suitability</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">5</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Load goods with proper stacking, securing, and segregation</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">6</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Prepare dispatch documents: invoice, delivery note, COA, e-way bill</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">7</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Verify loaded quantity against dispatch order</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">8</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Release vehicle and update dispatch register</span></div><div></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-3">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">3</div>
+      <span class="sec-title">Procedure Steps</span>
+      
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="tbl-wrap"><table><thead><tr><th scope="col" style="width:38px">#</th><th scope="col" style="width:82px">Phase</th><th scope="col">Activity / Description</th><th scope="col" style="width:110px">Responsible</th><th scope="col" style="width:70px">Flag</th><th scope="col" style="width:82px">Record</th></tr></thead><tbody><tr><td class="col-num">1</td><td><span class="phase-chip">Planning</span></td><td>Receive dispatch order. Verify stock availability, vehicle booking, and delivery schedule</td><td class="mono">Dispatch Coordinator</td><td></td><td class="doc-ref">Dispatch Order</td></tr><tr  class="crit-row"><td class="col-num">2</td><td><span class="phase-chip">Picking</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>Pick goods from warehouse per FIFO principle. Stage in dispatch area. Verify batch numbers and quantities</td><td class="mono">Warehouse Supervisor</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">Pick List</td></tr><tr  class="crit-row"><td class="col-num">3</td><td><span class="phase-chip">Quality Check</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>Pre-dispatch inspection: verify product, quantity, labelling, packaging integrity, and QC release status</td><td class="mono">QC Inspector</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">PM/FRM/FQC-01</td></tr><tr  class="crit-row"><td class="col-num">4</td><td><span class="phase-chip">Vehicle Inspection</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>Inspect transport vehicle: cleanliness, no contamination, no damage, adequate covering, temperature control if needed</td><td class="mono">Warehouse Supervisor</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">Vehicle Checklist</td></tr><tr  class="crit-row"><td class="col-num">5</td><td><span class="phase-chip">Loading</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>Load goods carefully. Ensure proper stacking (no crushing), securing (straps/dunnage), and segregation</td><td class="mono">Loading Team</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">Loading Record</td></tr><tr  class="crit-row"><td class="col-num">6</td><td><span class="phase-chip">Documentation</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>Prepare: commercial invoice, delivery challan, COA, weight slip, e-way bill, safety data sheet if applicable</td><td class="mono">Dispatch Coordinator</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">Dispatch File</td></tr><tr  class="crit-row"><td class="col-num">7</td><td><span class="phase-chip">Verification</span></td><td><span class="crit-marker">⚡ CCP &nbsp;</span>Final count verification: compare loaded quantity with dispatch order. Both parties sign gate pass</td><td class="mono">Dispatch Coordinator</td><td><span class="crit-marker">⚡ CCP</span></td><td class="doc-ref">Gate Pass</td></tr><tr><td class="col-num">8</td><td><span class="phase-chip">Release</span></td><td>Release vehicle. Update dispatch register with vehicle number, quantity, time. Share tracking details with customer</td><td class="mono">Dispatch Coordinator</td><td></td><td class="doc-ref">Dispatch Register</td></tr></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-4">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">4</div>
+      <span class="sec-title">Related Documents &amp; Cross-References</span>
+      
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="sec-body"><div class="reldocs-grid"><div class="reldoc-card"><div class="reldoc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div><div class="reldoc-code">PM/FRM/FQC-01</div><div class="reldoc-title">Final QC Release Form</div><div class="reldoc-meta">Cl. 8.6 &nbsp;·&nbsp; </div></div></div><div class="reldoc-card"><div class="reldoc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div><div class="reldoc-code">PM/FRM/COC-01</div><div class="reldoc-title">Certificate of Conformance</div><div class="reldoc-meta">Cl. 8.6 &nbsp;·&nbsp; </div></div></div><div class="reldoc-card"><div class="reldoc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div><div class="reldoc-code">PM/FRM/ORD-01</div><div class="reldoc-title">Customer Order Review</div><div class="reldoc-meta">Cl. 8.2.1 &nbsp;·&nbsp; </div></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-5">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">5</div>
+      <span class="sec-title">Approval &amp; Signatures</span>
+      
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="sec-body"><div class="sig-grid"><div class="sig-card"><div class="sig-role">Document Author</div><div class="sig-fields"><div><div class="sig-field-lbl">Printed Name</div><div class="sig-prefill">Khushi Paswan</div></div><div><div class="sig-field-lbl">Signature</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">Job Title</div><div class="sig-prefill">Document Controller</div></div><div><div class="sig-field-lbl">Date</div><div class="sig-prefill">12/03/2026</div></div></div></div><div class="sig-card"><div class="sig-role">Reviewed By</div><div class="sig-fields"><div><div class="sig-field-lbl">Printed Name</div><div class="sig-prefill">AZAD Rajbhar</div></div><div><div class="sig-field-lbl">Signature</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">Job Title</div><div class="sig-prefill">Quality Management Representative</div></div><div><div class="sig-field-lbl">Date</div><div class="sig-prefill">12/03/2026</div></div></div></div><div class="sig-card"><div class="sig-role">Document Approver</div><div class="sig-fields"><div><div class="sig-field-lbl">Printed Name</div><div class="sig-prefill">Tarun Mishra</div></div><div><div class="sig-field-lbl">Signature</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">Job Title</div><div class="sig-prefill">ISO Document Approval Authority</div></div><div><div class="sig-field-lbl">Date</div><div class="sig-prefill">12/03/2026</div></div></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-6">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">6</div>
+      <span class="sec-title">Revision History</span>
+      
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="tbl-wrap"><table><thead><tr><th scope="col" style="width:60px">Version</th><th scope="col" style="width:100px">Date</th><th scope="col">Description of Change</th><th scope="col" style="width:100px">Author</th><th scope="col" style="width:110px">Approved By</th></tr></thead><tbody><tr><td><span class="ver-badge">v1.0</span></td><td class="mono">01/03/2024</td><td>Initial issue</td><td>Khushi Paswan</td><td>Tarun Mishra</td></tr></tbody></table></div>
+    </div>
+  </div>
+  <div class="doc-footer">
+    <span class="footer-ref">PM/WI/PRD-04 &nbsp;·&nbsp; v1.0 &nbsp;·&nbsp; ISO 9001:2015</span>
+    <span>⚠ Uncontrolled when printed &nbsp;·&nbsp; Verify current revision before use</span>
+    <span>Generated 29 Apr 2026</span>
+  </div>
+</div>
+<div class="edit-toolbar" id="etb" style="display:none">
+  <button class="etb-btn etb-edit" id="etbEdit" onclick="etbToggleEdit()">✏ Edit</button>
+  <button class="etb-btn etb-save" id="etbSave" onclick="etbSave()" style="display:none">💾 Save</button>
+  <button class="etb-btn etb-cancel" id="etbCancel" onclick="etbCancelEdit()" style="display:none">✕ Cancel</button>
+  <span class="etb-status" id="etbStatus"></span>
+</div>
+<script>
+(function(){
+  var EDITABLE_SEL = 'td, th, p, li, .flow-step-text, .callout-txt, .sig-prefill, .ctrl-val, .banner-title, .banner-org';
+  var _origMap = {};
+  var _editing = false;
+  function etbStatus(msg, col){ var s=document.getElementById('etbStatus'); s.textContent=msg; s.style.color=col||'rgba(255,255,255,.65)'; }
+  window.etbToggleEdit = function(){
+    _editing = true;
+    var els = document.querySelectorAll(EDITABLE_SEL);
+    els.forEach(function(el){ _origMap[el] = el.innerHTML; el.setAttribute('contenteditable','true'); });
+    document.getElementById('etbEdit').style.display='none';
+    document.getElementById('etbSave').style.display='inline-flex';
+    document.getElementById('etbCancel').style.display='inline-flex';
+    document.getElementById('etbStatus').style.display='inline';
+    etbStatus('Editing — click any cell or text to modify','rgba(45,139,139,1)');
+  };
+  window.etbCancelEdit = function(){
+    var els = document.querySelectorAll('[contenteditable]');
+    els.forEach(function(el){ if(_origMap[el]!==undefined) el.innerHTML=_origMap[el]; el.removeAttribute('contenteditable'); });
+    _origMap = {}; _editing = false;
+    document.getElementById('etbEdit').style.display='';
+    document.getElementById('etbSave').style.display='none';
+    document.getElementById('etbCancel').style.display='none';
+    etbStatus('');
+    document.getElementById('etbStatus').style.display='none';
+  };
+  window.etbSave = function(){
+    if(window.location.protocol === 'file:'){
+      document.getElementById('etbStatus').style.display='inline';
+      etbStatus('Open via QMS server to save  http://localhost:8765','rgba(184,48,48,1)');
+      return;
+    }
+    var docCode = document.querySelector('.document').getAttribute('data-doc-code') || '';
+    var els = document.querySelectorAll('[contenteditable]');
+    els.forEach(function(el){ el.removeAttribute('contenteditable'); });
+    /* Reset toolbar to clean state BEFORE capturing outerHTML */
+    /* so the saved file always loads with only the Edit button visible */
+    document.getElementById('etbEdit').style.display='';
+    document.getElementById('etbSave').style.display='none';
+    document.getElementById('etbCancel').style.display='none';
+    document.getElementById('etbStatus').style.display='none';
+    document.getElementById('etbStatus').textContent='';
+    var html = '<!DOCTYPE html>' + document.documentElement.outerHTML;
+    /* NOW show Saving... in live DOM (not persisted to disk) */
+    document.getElementById('etbStatus').style.display='inline';
+    etbStatus('Saving…','rgba(255,220,80,1)');
+    fetch('/api/save-edited/' + docCode, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({html: html})
+    }).then(function(r){ return r.json(); }).then(function(d){
+      if(d.ok){
+        etbStatus('Saved — v' + (d.new_version||'') + ' ✓','rgba(26,112,64,1)');
+        setTimeout(function(){ window.location.reload(); }, 1500);
+      } else {
+        etbStatus('Error: ' + (d.error||'unknown'),'rgba(184,48,48,1)');
+        var els2 = document.querySelectorAll(EDITABLE_SEL);
+        els2.forEach(function(el){ el.setAttribute('contenteditable','true'); });
+      }
+    }).catch(function(err){
+      etbStatus('Network error','rgba(184,48,48,1)');
+      var els2 = document.querySelectorAll(EDITABLE_SEL);
+      els2.forEach(function(el){ el.setAttribute('contenteditable','true'); });
+    });
+    _origMap = {}; _editing = false;
+    document.getElementById('etbEdit').style.display='';
+    document.getElementById('etbSave').style.display='none';
+    document.getElementById('etbCancel').style.display='none';
+  };
+})();
+// Triple-click footer to toggle edit mode
+(function(){
+  var footer = document.querySelector('.doc-footer');
+  if(!footer) return;
+  footer.style.cursor = 'default';
+  footer.addEventListener('click', function(ev){
+    if(ev.detail === 3){
+      var btn = document.getElementById('etbEdit');
+      var on = btn.style.display !== 'none';
+      btn.style.display = on ? 'none' : 'inline-flex';
+      var t = document.createElement('div');
+      t.textContent = on ? 'Edit mode disabled' : 'Edit mode enabled';
+      t.style.cssText = 'position:fixed;bottom:70px;right:18px;z-index:10001;background:rgba(15,23,32,.92);color:#fff;padding:8px 18px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:.3px;opacity:1;transition:opacity .5s';
+      document.body.appendChild(t);
+      setTimeout(function(){ t.style.opacity='0'; }, 1500);
+      setTimeout(function(){ t.remove(); }, 2100);
+    }
+  });
+})();
+// Section collapse/expand toggle
+window.secToggle = function(hdr){
+  hdr.classList.toggle('collapsed');
+};
+// Floating back-to-TOC button
+(function(){
+  var fab = document.createElement('button');
+  fab.className = 'fab-toc';
+  fab.innerHTML = '&#9650;';
+  fab.title = 'Back to Table of Contents';
+  fab.onclick = function(){
+    var toc = document.getElementById('sec-2');
+    if(toc) toc.scrollIntoView({behavior:'smooth',block:'start'});
+    else window.scrollTo({top:0,behavior:'smooth'});
+  };
+  document.body.appendChild(fab);
+  var tocEl = document.getElementById('sec-2');
+  window.addEventListener('scroll', function(){
+    if(!tocEl) return;
+    var r = tocEl.getBoundingClientRect();
+    if(r.bottom < 0){
+      fab.classList.add('visible');
+    } else {
+      fab.classList.remove('visible');
+    }
+  }, {passive:true});
+})();
+</script>
+<div class="wm"><div class="wm-inner"><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div><div class="wm-row"><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span><span class="wm-txt">CONFIDENTIAL</span></div></div></div>
+</div>
+<div class="lang-section" data-lang="hi">
+<div class="document" data-doc-code="PM_WI_PRD-04">
+<div class="banner">
+<div class="banner-inner">
+<div class="banner-header">
+<div class="banner-top-row">
+<div class="banner-logo-left"><img alt="Company Logo" class="co-logo" src="data:image/png;base64,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"/></div>
+<div class="banner-eyebrow"><span>ISO 9001:2015</span><span class="ey-sep"></span><span>मानक संचालन प्रक्रिया</span><span class="ey-sep"></span><span>Clause 8.5.4</span></div>
+</div>
+<div class="banner-title">उत्पादन कार्य निर्देश - प्रेषण एवं लोडिंग</div>
+<div class="banner-bottom-row">
+<div class="banner-org"></div>
+<div class="doc-code-badge">PM/WI/PRD-04 |  v1.0</div>
+</div>
+</div>
+<div class="banner-qr-right"><img alt="QR" class="banner-qr-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAAECCAIAAACaLU4HAAAFW0lEQVR4nO3dO47jRhQF0G7DC2Do1Ptf1KQOuQMNRpGBSgpP71NSnxMP2RK7Lwa8qHr1/Xg8vuBn+2v6A8A8MQAxADEAMQAxgCevyCAGIAYgBiAG8OQVGcQAxADEAMQAnrwiw9ffsWdw/fPv4MO7//uVcp/1W+zcufOqmJ2fFfs3q9hVdWJP1f8GIAYgBiAGIAbwSlO06uw9sq6K9Sc7P2u9KvZ8OjufK/TE3vFvY6UpAjEAMQAxADGA3KYo6y2+s1GZ7U9i/VLsM2f1XVfSyqjOv40dmiIQAxADEAMQA6huik5TtxpnR1bH0vktrsYdc7M0RSAGIAYgBiAG8NOaotVO79E5uWhH1rqjnTv/nO5IUwRiAGIAYgBiANVN0WkdQt3am6xZ0KvYjrm6O3/q34amCMQAxADEAMQAcpui2ROv6nS2SbE1TlmTi67GXWyn0RSBGIAYgBiAGMDT9+Px+Hp/dV1E3flo77g+57L7DD6VwhTEAMQAxABeWFPUOQs6a1bP+Y1K3QlunV3W9YadmFdkEAMQAxADEAN4ZU1RrJ2o6zSy9lLVnXcfu+q02UFX0ueZ/X2tNEUgBiAGIAYgBtDfFMXU7fbK6oV2dHZHs43TqnMmUux3qikCMQAxADEAMYDcpqhuBdGsurUudetzYq7DVmrtyPpZmiIQAxADEAMQA8g9+2xVd3JW3RqVuobn/MZpNXsaWufKKE0RiAGIAYgBiAGcsPusbv3Jad3R+TOIdmR909mdiStNEYgBiAGIAYgBvLKmqHOqTKyd6FzRlOX8+Uu3NUXwqRSmIAYgBiAG8EJT1DmReHaWUWcvVHdO/c63uEd3usWes7PPII2mCMQAxADEAIonWseu6lzZMnveVl3b9hnnkV2N07O9IoMYgBiAGIAYQP+cos6dXKvZidanTebJch226zBGUwRiAGIAYgBiAK80RavTpkPXrVaabbc6Z1Of1qTVdUeaIhADEAMQAxADeN+zzzr3mtXtnIpx5/+z+wzSKExBDEAMQAyguCmqWwv0jrOXZxuerKdxN86V6ly75RUZxADEAMQAxABeOfvsHRuV2Xk+O2L9yeyOuTvpzLKd7173vTRFIAYgBiAGIAZQ3RRlrTapWzMze/pY1tPYuc+qbrLTqu4Z2n0GaRSmIAYgBiAGUNwUrep2ls2umYm1LqftCJu183nqPrNXZBADEAMQAxAD6D/77Pw2aXa60fnrfO7RCUiaIiikMAUxADEAMYDUidbnT1GO6TzzPWvi987n6dxVd1ovtPKKDGIAYgBiAGIA1U1R51XnT9Q5f4XVdfyetbpPqCkCMQAxADEAMYD+pijrPnWNwWe0UrPrqTpXEJloDWkUpiAGIAYgBtA+0Xp2t1fsZ9VNq65bLxT7N6u6M+ZO68S8IoMYgBiAGIAYQO5E61l1U2465+fUTX+qa9Lu0TtbUwRpFKYgBiAGIAbwwpqi0+Yhz/ZCdSuIZqde36H7xJ7h7Mxtr8ggBiAGIAYgBpC7+6xzpU3s39RNy+mcDl3X1WSZnRAVoykCMQAxADEAMYDqOUWd+6ROm1adtXOqs006f+r1zlUxmiIQAxADEAMQAzhzonWW2NzprP1WO5+nrgXa0bli5076XazMKYI0ClMQAxADEAP46KaocwfW+bOMYu6yribriWXxigxiAGIAYgBiANVN0WfMxoldNXvnrO7oGv0WnW2SpgjEAMQAxADEAHKbotnT0Ga7kVXnBKTO+Ut1TLSGYQpTEAMQAxAD+OP78Xh4EvxwXpFBDEAMQAxADODJKzKIAYgBiAGIATx5RQYxADEAMQAxgCevyCAGfPH1G1fL1xqlChdoAAAAAElFTkSuQmCC"/><span class="banner-qr-lbl">PM/WI/PRD-04</span></div>
+</div>
+</div>
+<div class="ctrl-strip"><div class="ctrl-cell"><div class="ctrl-lbl">दस्तावेज़ प्रकार</div><div class="ctrl-val">मानक संचालन प्रक्रिया</div></div><div class="ctrl-cell"><div class="ctrl-lbl">दस्तावेज़ स्वामी</div><div class="ctrl-val">ख़ुशी पासवान</div></div><div class="ctrl-cell"><div class="ctrl-lbl">द्वारा स्वीकृत</div><div class="ctrl-val">तरूण मिश्रा</div></div><div class="ctrl-cell"><div class="ctrl-lbl">प्रभावी तिथि</div><div class="ctrl-val">01/01/2024</div></div><div class="ctrl-cell"><div class="ctrl-lbl">अगली समीक्षा</div><div class="ctrl-val">01/01/2025</div></div><div class="ctrl-cell"><div class="ctrl-lbl">कॉपी स्थिति</div><div class="ctrl-val">नियंत्रित</div></div></div>
+<div class="section" id="sec-1">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">1</div>
+<span class="sec-title">दायरा एवं उद्देश्य</span>
+<span class="sec-tag">ISO 9001:2015</span>
+<span class="sec-chevron">▾</span>
+</div>
+<div class="sec-collapse">
+<div class="sec-body"><div class="scope-grid"><div class="scope-card"><div class="scope-lbl">उद्देश्य</div><p class="scope-txt">उत्पादों को सही मात्रा, स्थिति और समय पर ग्राहकों तक पहुंचाया जाना सुनिश्चित करने के लिए प्रेषण योजना, वाहन निरीक्षण, लोडिंग संचालन और दस्तावेज़ीकरण के लिए प्रक्रियाओं को परिभाषित करना।</p></div><div class="scope-card"><div class="scope-lbl">दायरा</div><p class="scope-txt">सभी प्रेषण गतिविधियों को कवर करता है: ऑर्डर चुनना, पूर्व-प्रेषण निरीक्षण, वाहन लोडिंग, परिवहन दस्तावेज़ीकरण, और पैक मास्टर्स पर डिलीवरी की पुष्टि।</p></div><div class="scope-card"><div class="scope-lbl">जिम्मेदार</div><p class="scope-txt">प्रेषण समन्वयक योजना प्रेषण. गोदाम पर्यवेक्षक लोडिंग का प्रबंधन करता है। क्यूसी इंस्पेक्टर प्रेषण-पूर्व जांच करता है।</p></div></div></div>
+</div>
+</div>
+<div class="section" id="sec-2">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">2</div>
+<span class="sec-title">प्रक्रिया फ़्लोचार्ट</span>
+<span class="sec-chevron">▾</span>
+</div>
+<div class="sec-collapse">
+<div class="sec-body"><div class="flow-chain"><div class="flow-step"><div class="flow-num">1</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">विक्रय/योजना से प्रेषण अनुदेश प्राप्त करें</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">2</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">प्रति डिस्पैच ऑर्डर के अनुसार सामान चुनें और व्यवस्थित करें</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">3</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">प्रेषण-पूर्व गुणवत्ता जांच: मात्रा, लेबलिंग, स्थिति, बैच संख्या</span></div><div class="flow-callout"><div class="callout-tag crit"><span class="callout-txt crit">PM/FRM/FQC-01</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">4</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">सफाई, स्थिति और उपयुक्तता के लिए वाहन का निरीक्षण करें</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">5</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">उचित स्टैकिंग, सुरक्षा और छँटाई के साथ सामान लोड करें</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">6</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">प्रेषण दस्तावेज़ तैयार करें: चालान, डिलीवरी नोट, सीओए, ई-वे बिल</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">7</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">प्रेषण आदेश के विरुद्ध लोड की गई मात्रा सत्यापित करें</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">8</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">वाहन रिलीज करें और डिस्पैच रजिस्टर अपडेट करें</span></div><div></div></div></div></div>
+</div>
+</div>
+<div class="section" id="sec-3">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">3</div>
+<span class="sec-title">प्रक्रिया चरण</span>
+<span class="sec-chevron">▾</span>
+</div>
+<div class="sec-collapse">
+<div class="tbl-wrap"><table><thead><tr><th scope="col" style="width:38px">#</th><th scope="col" style="width:82px">चरण</th><th scope="col">गतिविधि/विवरण</th><th scope="col" style="width:110px">जिम्मेदार</th><th scope="col" style="width:70px">झंडा</th><th scope="col" style="width:82px">रिकार्ड</th></tr></thead><tbody><tr><td class="col-num">1</td><td><span class="phase-chip">योजना</span></td><td>प्रेषण आदेश प्राप्त करें. स्टॉक उपलब्धता, वाहन बुकिंग और डिलीवरी शेड्यूल सत्यापित करें</td><td class="mono">प्रेषण समन्वयक</td><td></td><td class="doc-ref">प्रेषण आदेश</td></tr><tr class="crit-row"><td class="col-num">2</td><td><span class="phase-chip">चुनना</span></td><td><span class="crit-marker">⚡ सीसीपी  </span>फीफो सिद्धांत के अनुसार गोदाम से सामान चुनें। प्रेषण क्षेत्र में मंच. बैच संख्या और मात्रा सत्यापित करें</td><td class="mono">गोदाम पर्यवेक्षक</td><td><span class="crit-marker">⚡ सीसीपी</span></td><td class="doc-ref">सूची चुनें</td></tr><tr class="crit-row"><td class="col-num">3</td><td><span class="phase-chip">गुणवत्ता जांच</span></td><td><span class="crit-marker">⚡ सीसीपी  </span>प्रेषण-पूर्व निरीक्षण: उत्पाद, मात्रा, लेबलिंग, पैकेजिंग अखंडता और क्यूसी रिलीज़ स्थिति सत्यापित करें</td><td class="mono">क्यूसी इंस्पेक्टर</td><td><span class="crit-marker">⚡ सीसीपी</span></td><td class="doc-ref">PM/FRM/FQC-01</td></tr><tr class="crit-row"><td class="col-num">4</td><td><span class="phase-chip">वाहन निरीक्षण</span></td><td><span class="crit-marker">⚡ सीसीपी  </span>परिवहन वाहन का निरीक्षण करें: स्वच्छता, कोई संदूषण नहीं, कोई क्षति नहीं, पर्याप्त आवरण, यदि आवश्यक हो तो तापमान नियंत्रण</td><td class="mono">गोदाम पर्यवेक्षक</td><td><span class="crit-marker">⚡ सीसीपी</span></td><td class="doc-ref">वाहन चेकलिस्ट</td></tr><tr class="crit-row"><td class="col-num">5</td><td><span class="phase-chip">लोड हो रहा है</span></td><td><span class="crit-marker">⚡ सीसीपी  </span>सामान सावधानी से लोड करें. उचित स्टैकिंग (कोई क्रशिंग नहीं), सुरक्षित करना (पट्टियाँ/डनेज), और छँटाई सुनिश्चित करें</td><td class="mono">लोड हो रहा है टीम</td><td><span class="crit-marker">⚡ सीसीपी</span></td><td class="doc-ref">रिकार्ड लोड हो रहा है</td></tr><tr class="crit-row"><td class="col-num">6</td><td><span class="phase-chip">दस्तावेज़ीकरण</span></td><td><span class="crit-marker">⚡ सीसीपी  </span>तैयार करें: वाणिज्यिक चालान, डिलीवरी चालान, सीओए, वजन पर्ची, ई-वे बिल, सुरक्षा डेटा शीट यदि लागू हो</td><td class="mono">प्रेषण समन्वयक</td><td><span class="crit-marker">⚡ सीसीपी</span></td><td class="doc-ref">प्रेषण फ़ाइल</td></tr><tr class="crit-row"><td class="col-num">7</td><td><span class="phase-chip">सत्यापन</span></td><td><span class="crit-marker">⚡ सीसीपी  </span>अंतिम गणना सत्यापन: प्रेषण आदेश के साथ लोड की गई मात्रा की तुलना करें। दोनों पक्ष गेट पास पर हस्ताक्षर करते हैं</td><td class="mono">प्रेषण समन्वयक</td><td><span class="crit-marker">⚡ सीसीपी</span></td><td class="doc-ref">गेट पास</td></tr><tr><td class="col-num">8</td><td><span class="phase-chip">रिलीज़</span></td><td>वाहन छोड़ें. वाहन नंबर, मात्रा, समय के साथ डिस्पैच रजिस्टर अपडेट करें। ग्राहक के साथ ट्रैकिंग विवरण साझा करें</td><td class="mono">प्रेषण समन्वयक</td><td></td><td class="doc-ref">प्रेषण रजिस्टर</td></tr></tbody></table></div>
+</div>
+</div>
+<div class="section" id="sec-4">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">4</div>
+<span class="sec-title">संबंधित दस्तावेज़ और क्रॉस-रेफरेंस</span>
+<span class="sec-chevron">▾</span>
+</div>
+<div class="sec-collapse">
+<div class="sec-body"><div class="reldocs-grid"><div class="reldoc-card"><div class="reldoc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg></div><div><div class="reldoc-code">PM/FRM/FQC-01</div><div class="reldoc-title">अंतिम क्यूसी रिलीज फॉर्म</div><div class="reldoc-meta">सी.एल. 8.6··  </div></div></div><div class="reldoc-card"><div class="reldoc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg></div><div><div class="reldoc-code">PM/FRM/COC-01</div><div class="reldoc-title">अनुरूपता का प्रमाण पत्र</div><div class="reldoc-meta">सी.एल. 8.6··  </div></div></div><div class="reldoc-card"><div class="reldoc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg></div><div><div class="reldoc-code">PM/FRM/ORD-01</div><div class="reldoc-title">ग्राहक ऑर्डर समीक्षा</div><div class="reldoc-meta">सी.एल. 8.2.1··  </div></div></div></div></div>
+</div>
+</div>
+<div class="section" id="sec-5">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">5</div>
+<span class="sec-title">अनुमोदन एवं हस्ताक्षर</span>
+<span class="sec-chevron">▾</span>
+</div>
+<div class="sec-collapse">
+<div class="sec-body"><div class="sig-grid"><div class="sig-card"><div class="sig-role">दस्तावेज़ लेखक</div><div class="sig-fields"><div><div class="sig-field-lbl">मुद्रित नाम</div><div class="sig-prefill">ख़ुशी पासवान</div></div><div><div class="sig-field-lbl">हस्ताक्षर</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">नौकरी का शीर्षक</div><div class="sig-prefill">दस्तावेज़ नियंत्रक</div></div><div><div class="sig-field-lbl">तारीख</div><div class="sig-prefill">12/03/2026</div></div></div></div><div class="sig-card"><div class="sig-role">द्वारा समीक्षित</div><div class="sig-fields"><div><div class="sig-field-lbl">मुद्रित नाम</div><div class="sig-prefill">आज़ाद राजभर</div></div><div><div class="sig-field-lbl">हस्ताक्षर</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">नौकरी का शीर्षक</div><div class="sig-prefill">गुणवत्ता प्रबंधन प्रतिनिधि</div></div><div><div class="sig-field-lbl">तारीख</div><div class="sig-prefill">12/03/2026</div></div></div></div><div class="sig-card"><div class="sig-role">दस्तावेज़ अनुमोदनकर्ता</div><div class="sig-fields"><div><div class="sig-field-lbl">मुद्रित नाम</div><div class="sig-prefill">तरूण मिश्रा</div></div><div><div class="sig-field-lbl">हस्ताक्षर</div><div class="sig-line"></div></div><div><div class="sig-field-lbl">नौकरी का शीर्षक</div><div class="sig-prefill">आईएसओ दस्तावेज़ अनुमोदन प्राधिकरण</div></div><div><div class="sig-field-lbl">तारीख</div><div class="sig-prefill">12/03/2026</div></div></div></div></div></div>
+</div>
+</div>
+<div class="section" id="sec-6">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">6</div>
+<span class="sec-title">पुनरीक्षण इतिहास</span>
+<span class="sec-chevron">▾</span>
+</div>
+<div class="sec-collapse">
+<div class="tbl-wrap"><table><thead><tr><th scope="col" style="width:60px">संस्करण</th><th scope="col" style="width:100px">तारीख</th><th scope="col">परिवर्तन का वर्णन</th><th scope="col" style="width:100px">लेखक</th><th scope="col" style="width:110px">द्वारा स्वीकृत</th></tr></thead><tbody><tr><td><span class="ver-badge">v1.0</span></td><td class="mono">01/03/2024</td><td>प्रारंभिक अंक</td><td>ख़ुशी पासवान</td><td>तरूण मिश्रा</td></tr></tbody></table></div>
+</div>
+</div>
+<div class="doc-footer">
+<span class="footer-ref">PM/WI/PRD-04·· v1.0·· आईएसओ 9001:2015</span>
+<span>⚠ मुद्रित होने पर अनियंत्रित · उपयोग से पहले वर्तमान संशोधन सत्यापित करें</span>
+<span>29 अप्रैल 2026 को उत्पन्न</span>
+</div>
+</div>
+<div class="wm"><div class="wm-inner"><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div></div></div>
+</div>
+<div id="bil-toolbar">
+  <button class="tb-btn tb-lang active" id="tbEN" onclick="switchLang('en')">English</button>
+  <button class="tb-btn tb-lang" id="tbHI" onclick="switchLang('hi')">हिंदी</button>
+  <span class="tb-sep"></span>
+  <button class="tb-btn tb-audio" id="tbAudio" onclick="tbPlayAudio()">&#128266; Audio</button>
+  <button class="tb-btn tb-audio" id="tbAudioStop" onclick="tbStopAudio()" style="display:none">&#9209; Stop</button>
+</div>
+<button id="bil-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
+<script>
+(function(){
+  var _curLang='en';
+  var _readFromEl=null;
+  window.switchLang=function(lang){
+    _curLang=lang;
+    document.querySelectorAll('.lang-section').forEach(function(s){
+      s.classList.toggle('active',s.dataset.lang===lang);
+    });
+    document.body.classList.toggle('lang-hi',lang==='hi');
+    document.getElementById('tbEN').classList.toggle('active',lang==='en');
+    document.getElementById('tbHI').classList.toggle('active',lang==='hi');
+    window.speechSynthesis.cancel();
+    document.getElementById('tbAudio').textContent=lang==='hi'?'🔊 सुनēं':'🔊 Audio';
+  };
+  var _ttsTimer=null;
+  function tbAudioReset(){
+    if(_ttsTimer){clearInterval(_ttsTimer);_ttsTimer=null;}
+    var btn=document.getElementById('tbAudio'),stop=document.getElementById('tbAudioStop');
+    btn.style.display='';btn.classList.remove('speaking');stop.style.display='none';
+  }
+  window.tbPlayAudio=function(){
+    if(window.speechSynthesis.speaking){window.speechSynthesis.cancel();tbAudioReset();return;}
+    /* Priority: text selection > right-click pinned element > full active section */
+    var txt='';
+    var sel=window.getSelection?window.getSelection():null;
+    var selTxt=sel?sel.toString().trim():'';
+    if(selTxt.length>2){
+      txt=selTxt;
+    } else if(_readFromEl){
+      txt=_readFromEl.innerText||'';
+      _readFromEl=null;
+    } else {
+      var sec=document.querySelector('.lang-section.active');
+      txt=sec?(sec.innerText||''):'';
+    }
+    if(!txt.trim())return;
+    var u=new SpeechSynthesisUtterance(txt);
+    u.lang=_curLang==='hi'?'hi-IN':'en-IN';u.rate=0.92;u.pitch=1.0;
+    var btn=document.getElementById('tbAudio'),stop=document.getElementById('tbAudioStop');
+    btn.style.display='none';stop.style.display='';
+    btn.classList.add('speaking');
+    u.onend=u.onerror=function(){tbAudioReset();};
+    /* Chrome bug: speechSynthesis silently pauses on long text — resume every 10s */
+    _ttsTimer=setInterval(function(){
+      if(!window.speechSynthesis.speaking){tbAudioReset();return;}
+      window.speechSynthesis.pause();
+      window.speechSynthesis.resume();
+    },10000);
+    window.speechSynthesis.speak(u);
+  };
+  window.tbStopAudio=function(){window.speechSynthesis.cancel();tbAudioReset();};
+  /* Right-click / long-press any content element to pin start point */
+  var _ctx=(function(){
+    var m=document.createElement('div');
+    m.style.cssText='position:fixed;z-index:99999;background:#1A2332;color:#fff;border-radius:8px;padding:6px 0;box-shadow:0 4px 20px rgba(0,0,0,.5);display:none;min-width:170px;font-family:inherit;font-size:13px';
+    function row(id,label,lang){var d=document.createElement('div');d.id=id;d.style.cssText='padding:9px 16px;cursor:pointer';d.addEventListener('mouseenter',function(){this.style.background='rgba(45,139,139,.3)';});d.addEventListener('mouseleave',function(){this.style.background='';});d.textContent=label;d.addEventListener('click',function(){hide();_curLang=lang;tbPlayAudio();});return d;}
+    m.appendChild(row('ctxEN','🔊 Read from here','en'));
+    m.appendChild(row('ctxHI','🔊 यहाँ से सुनें','hi'));
+    document.body.appendChild(m);
+    function hide(){m.style.display='none';}
+    document.addEventListener('click',hide);
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
+    return m;
+  })();
+  var _lpTimer=null;
+  function showCtx(el,x,y){
+    _readFromEl=el;
+    _ctx.style.left=Math.min(x,window.innerWidth-185)+'px';
+    _ctx.style.top=Math.min(y,window.innerHeight-90)+'px';
+    _ctx.style.display='block';
+  }
+  document.addEventListener('contextmenu',function(ev){
+    var el=ev.target.closest('.section,.tt-step-body,.sec-body,p,td,li');
+    if(!el)return;
+    ev.preventDefault();showCtx(el,ev.clientX,ev.clientY);
+  });
+  document.addEventListener('touchstart',function(ev){
+    var el=ev.target.closest('.section,.tt-step-body,.sec-body,p,td,li');
+    if(!el)return;
+    _lpTimer=setTimeout(function(){var t=ev.touches[0];showCtx(el,t.clientX,t.clientY);},600);
+  },{passive:true});
+  document.addEventListener('touchend',function(){clearTimeout(_lpTimer);});
+  document.addEventListener('touchmove',function(){clearTimeout(_lpTimer);});
+  window.addEventListener('scroll',function(){
+    var btn=document.getElementById('bil-top');
+    if(btn)btn.classList.toggle('visible',window.scrollY>300);
+  });
+})();
+</script>
+</body>
+</html>
