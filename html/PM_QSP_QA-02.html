@@ -711,7 +711,9 @@ tbody tr:hover td{background:var(--teal-pale)!important}
   }
   function paint(){
     chain.classList.toggle('fp-on', i>=0);
+    chain.classList.toggle('fs-on', i>=0);
     if(svgMode){
+      // waiting / in play / done - a shape is in exactly one of the three
       var mark=function(g,k){
         g.classList.remove('fs-idle','fs-act','fs-done');
         g.classList.add(i<0?'fs-act':(k===i?'fs-act':(k<i?'fs-done':'fs-idle')));
@@ -719,7 +721,13 @@ tbody tr:hover td{background:var(--teal-pale)!important}
       nodes.forEach(function(g){ mark(g, idxOf(g,'data-step')); });
       decs.forEach(function(g){ mark(g, idxOf(g,'data-dec')); });
       noBoxes.forEach(function(g){ mark(g, idxOf(g,'data-no')); });
-      arrows.forEach(function(g){ g.classList.remove('fs-idle'); g.classList.add(i<0?'fs-act':'fs-done'); });
+      // an arrow is done once the step above it has been confirmed
+      arrows.forEach(function(g){
+        var k=g.hasAttribute('data-arr')?idxOf(g,'data-arr'):null;
+        g.classList.remove('fs-idle','fs-act','fs-done');
+        if(i<0){ g.classList.add('fs-act'); return; }
+        g.classList.add(k===null?(i>0?'fs-done':'fs-idle'):(k<=i?'fs-done':'fs-idle'));
+      });
     } else {
       nodes.forEach(function(nd,k){
         nd.classList.toggle('act',k===i);
@@ -752,15 +760,40 @@ tbody tr:hover td{background:var(--teal-pale)!important}
       say(i);
       var nd=nodes[i];
       if(nd){
-        if(svgMode){
-          var r=nd.getBoundingClientRect();
-          window.scrollTo({top:window.scrollY+r.top-window.innerHeight/2+r.height/2,behavior:'smooth'});
-        } else { nd.scrollIntoView({behavior:'smooth',block:'center'}); }
+        var r=nd.getBoundingClientRect();
+        var off=(r.top < 90) || (r.bottom > window.innerHeight - 60);
+        if(off){
+          if(svgMode){
+            window.scrollTo({top:window.scrollY+r.top-window.innerHeight/2+r.height/2,
+                             behavior:reduce?'auto':'smooth'});
+          } else { nd.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'}); }
+        }
       }
     }
   }
   $('fpStart').onclick=function(){ i=0; paint(); };
-  $('fpNext').onclick=function(){ if(i<STEPS.length){ i++; paint(); } };
+  var busy=false;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  $('fpNext').onclick=function(){
+    if(busy||i<0||i>=STEPS.length) return;
+    var from=i;
+    if(!svgMode||reduce){ i++; paint(); return; }
+    busy=true;
+    // beat 1: the step just finished is marked done
+    var g=nodes.filter(function(x){return idxOf(x,'data-step')===from;})[0];
+    if(g){ g.classList.remove('fs-act'); g.classList.add('fs-done'); }
+    // beat 2: the link to the next step draws itself
+    var arr=arrows.filter(function(x){return x.hasAttribute('data-arr')&&idxOf(x,'data-arr')===from+1;})[0];
+    if(arr){ arr.classList.remove('fs-idle'); arr.classList.add('fs-flow'); }
+    // beat 3: the next step arrives
+    setTimeout(function(){
+      if(arr){ arr.classList.remove('fs-flow'); }
+      i++; paint();
+      var nx=nodes.filter(function(x){return idxOf(x,'data-step')===i;})[0];
+      if(nx){ nx.classList.add('fs-enter'); setTimeout(function(){ nx.classList.remove('fs-enter'); },460); }
+      busy=false;
+    }, 420);
+  };
   $('fpPrev').onclick=function(){ if(i>0){ i--; paint(); } };
   $('fpAudio').onclick=function(){
     speakOn=!speakOn;
@@ -769,7 +802,9 @@ tbody tr:hover td{background:var(--teal-pale)!important}
   };
   window.addEventListener('beforeunload',stop);
   document.addEventListener('visibilitychange',function(){ if(document.hidden) stop(); });
-  $('fpReset').onclick=function(){ i=-1; speakOn=false; stop();
+  $('fpReset').onclick=function(){ i=-1; speakOn=false; stop(); busy=false;
+    [].concat(nodes,decs,noBoxes,arrows).forEach(function(g){
+      g.classList.remove('fs-idle','fs-act','fs-done','fs-flow','fs-enter'); });
     $('fpDetail').innerHTML='<div class="fp-empty">Press <b>Begin walkthrough</b> to step through this procedure.</div>';
     paint(); };
   nodes.forEach(function(nd,k){ nd.style.cursor='pointer';
@@ -1103,7 +1138,9 @@ window.secToggle = function(hdr){
   }
   function paint(){
     chain.classList.toggle('fp-on', i>=0);
+    chain.classList.toggle('fs-on', i>=0);
     if(svgMode){
+      // waiting / in play / done - a shape is in exactly one of the three
       var mark=function(g,k){
         g.classList.remove('fs-idle','fs-act','fs-done');
         g.classList.add(i<0?'fs-act':(k===i?'fs-act':(k<i?'fs-done':'fs-idle')));
@@ -1111,7 +1148,13 @@ window.secToggle = function(hdr){
       nodes.forEach(function(g){ mark(g, idxOf(g,'data-step')); });
       decs.forEach(function(g){ mark(g, idxOf(g,'data-dec')); });
       noBoxes.forEach(function(g){ mark(g, idxOf(g,'data-no')); });
-      arrows.forEach(function(g){ g.classList.remove('fs-idle'); g.classList.add(i<0?'fs-act':'fs-done'); });
+      // an arrow is done once the step above it has been confirmed
+      arrows.forEach(function(g){
+        var k=g.hasAttribute('data-arr')?idxOf(g,'data-arr'):null;
+        g.classList.remove('fs-idle','fs-act','fs-done');
+        if(i<0){ g.classList.add('fs-act'); return; }
+        g.classList.add(k===null?(i>0?'fs-done':'fs-idle'):(k<=i?'fs-done':'fs-idle'));
+      });
     } else {
       nodes.forEach(function(nd,k){
         nd.classList.toggle('act',k===i);
@@ -1144,15 +1187,40 @@ window.secToggle = function(hdr){
       say(i);
       var nd=nodes[i];
       if(nd){
-        if(svgMode){
-          var r=nd.getBoundingClientRect();
-          window.scrollTo({top:window.scrollY+r.top-window.innerHeight/2+r.height/2,behavior:'smooth'});
-        } else { nd.scrollIntoView({behavior:'smooth',block:'center'}); }
+        var r=nd.getBoundingClientRect();
+        var off=(r.top < 90) || (r.bottom > window.innerHeight - 60);
+        if(off){
+          if(svgMode){
+            window.scrollTo({top:window.scrollY+r.top-window.innerHeight/2+r.height/2,
+                             behavior:reduce?'auto':'smooth'});
+          } else { nd.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'}); }
+        }
       }
     }
   }
   $('fpStart').onclick=function(){ i=0; paint(); };
-  $('fpNext').onclick=function(){ if(i<STEPS.length){ i++; paint(); } };
+  var busy=false;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  $('fpNext').onclick=function(){
+    if(busy||i<0||i>=STEPS.length) return;
+    var from=i;
+    if(!svgMode||reduce){ i++; paint(); return; }
+    busy=true;
+    // beat 1: the step just finished is marked done
+    var g=nodes.filter(function(x){return idxOf(x,'data-step')===from;})[0];
+    if(g){ g.classList.remove('fs-act'); g.classList.add('fs-done'); }
+    // beat 2: the link to the next step draws itself
+    var arr=arrows.filter(function(x){return x.hasAttribute('data-arr')&&idxOf(x,'data-arr')===from+1;})[0];
+    if(arr){ arr.classList.remove('fs-idle'); arr.classList.add('fs-flow'); }
+    // beat 3: the next step arrives
+    setTimeout(function(){
+      if(arr){ arr.classList.remove('fs-flow'); }
+      i++; paint();
+      var nx=nodes.filter(function(x){return idxOf(x,'data-step')===i;})[0];
+      if(nx){ nx.classList.add('fs-enter'); setTimeout(function(){ nx.classList.remove('fs-enter'); },460); }
+      busy=false;
+    }, 420);
+  };
   $('fpPrev').onclick=function(){ if(i>0){ i--; paint(); } };
   $('fpAudio').onclick=function(){
     speakOn=!speakOn;
@@ -1161,7 +1229,9 @@ window.secToggle = function(hdr){
   };
   window.addEventListener('beforeunload',stop);
   document.addEventListener('visibilitychange',function(){ if(document.hidden) stop(); });
-  $('fpReset').onclick=function(){ i=-1; speakOn=false; stop();
+  $('fpReset').onclick=function(){ i=-1; speakOn=false; stop(); busy=false;
+    [].concat(nodes,decs,noBoxes,arrows).forEach(function(g){
+      g.classList.remove('fs-idle','fs-act','fs-done','fs-flow','fs-enter'); });
     $('fpDetail').innerHTML='<div class="fp-empty">Press <b>Begin walkthrough</b> to step through this procedure.</div>';
     paint(); };
   nodes.forEach(function(nd,k){ nd.style.cursor='pointer';
