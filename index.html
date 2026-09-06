@@ -241,6 +241,134 @@ td.clause-cell a:hover{text-decoration:underline}
 
 
 
+<style id="pf-css">
+:root{--pf-ink:#0b1524;--pf-mut:#64748b;--pf-line:#e4e9f0}
+body.pf-on .rbar,body.pf-on #main{display:none!important}
+body.aud-on #pf{display:none!important}
+#pf{max-width:1180px;margin:0 auto;padding:14px 16px 56px}
+.pf-sp{display:flex;gap:6px;height:112px}
+.pf-t{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;
+ justify-content:space-between;padding:10px 0;cursor:pointer;position:relative;z-index:1;
+ border-radius:12px;transition:transform .18s cubic-bezier(.2,.8,.3,1),background .2s,border-color .2s}
+.pf-t:hover{transform:translateY(-2px)}
+.pf-t .ic{font-size:16px}
+.pf-t .nm{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;font-weight:600;
+ white-space:nowrap;letter-spacing:.01em}
+.pf-t .ct{font-size:10px;font-weight:700;padding:1px 7px;border-radius:999px}
+.pf-t.on{z-index:2;border-bottom:0!important;border-radius:12px 12px 0 0;margin-bottom:-3px;padding-bottom:14px}
+.pf-sec{border-radius:0 12px 12px 12px;background:#fff;overflow:hidden;
+ animation:pfIn .28s cubic-bezier(.2,.8,.3,1)}
+@keyframes pfIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.pf-hd{display:flex;align-items:center;gap:9px;padding:9px 13px;flex-wrap:wrap}
+.pf-hd .ti{font-size:13px;font-weight:700}
+.pf-hd .pill{font-size:10.5px;font-weight:700;padding:1px 9px;border-radius:999px;background:#fff}
+.pf-fam{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;margin-left:auto;max-width:100%}
+.pf-fam::-webkit-scrollbar{display:none}
+.pf-fc{flex:0 0 auto;cursor:pointer;border-radius:999px;padding:4px 10px;font-size:11px;
+ font-weight:600;white-space:nowrap;background:rgba(255,255,255,.6);border:0.5px solid transparent;
+ transition:background .15s,border-color .15s}
+.pf-body{display:grid;grid-template-columns:1fr 272px;align-items:start}
+.pf-list{border-right:1px solid var(--pf-line);min-width:0}
+.pf-r{display:flex;align-items:center;gap:9px;padding:9px 12px;border-bottom:1px solid var(--pf-line);
+ cursor:pointer;position:relative;transition:background .12s}
+.pf-r:hover,.pf-r:focus-visible{background:#f6f9fc;outline:none}
+.pf-r.act{background:#eef4fb}
+.pf-r.act:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px}
+.pf-r code{font-size:10.5px;color:var(--pf-mut);flex:0 0 auto}
+.pf-r .tt{flex:1;min-width:0;font-size:12.5px;color:#243044;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-r .sd{flex:0 0 auto;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px}
+.pf-r .cl{flex:0 0 auto;font-size:10.5px;color:var(--pf-mut);min-width:36px;text-align:right}
+.pf-r .ax{flex:0 0 auto;font-size:15px;color:#9aa6b6;opacity:0;transition:opacity .12s,color .15s;
+ padding:2px;border-radius:5px}
+.pf-r:hover .ax,.pf-r:focus-visible .ax{opacity:1}
+.pf-r .ax:hover{color:var(--pf-ink);background:#e8eef6}
+.pf-pane{position:sticky;top:8px;background:#f8fafc;min-width:0}
+.pf-pane .in{padding:12px 13px}
+.pf-ttl{font-size:13px;font-weight:600;line-height:1.35;color:#12203a}
+.pf-qr{width:104px;height:104px;image-rendering:pixelated;padding:5px;background:#fff;border:1px solid var(--pf-line);border-radius:7px;display:block}
+.pf-cap{font-size:9.5px;color:var(--pf-mut);text-align:center;margin-top:4px}
+.pf-lbl{font-size:10px;font-weight:800;color:var(--pf-mut);letter-spacing:.07em;margin:12px 0 2px}
+.pf-m{display:flex;align-items:baseline;gap:10px;padding:5px 0;border-bottom:1px solid var(--pf-line)}
+.pf-m b{flex:0 0 78px;font-size:10.5px;font-weight:600;color:var(--pf-mut)}
+.pf-m span{font-size:11.5px;color:#243044;min-width:0;word-break:break-word}
+.pf-m .sub{color:var(--pf-mut);font-size:10.5px}
+.pf-lg{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid var(--pf-line)}
+.pf-lg .v{flex:0 0 30px;font-size:11px;font-weight:700}
+.pf-lg .d{flex:0 0 72px;font-size:11px;color:var(--pf-mut)}
+.pf-lg .x{flex:1;font-size:11.5px;line-height:1.5;color:#243044}
+.pf-act{display:flex;gap:6px;margin-top:11px;flex-wrap:wrap}
+.pf-b{display:inline-flex;align-items:center;gap:5px;border:1px solid #cbd5e1;background:#fff;
+ border-radius:8px;padding:6px 11px;font-size:11.5px;font-weight:700;color:#334155;cursor:pointer;
+ transition:.15s;text-decoration:none}
+.pf-b:hover{background:#f1f5f9;transform:translateY(-1px)}
+.pf-empty{padding:26px;text-align:center;color:var(--pf-mut);font-size:12.5px}
+@media (max-width:760px){
+  #pf{padding:10px 11px 44px}
+  .pf-sp{height:auto;gap:5px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .pf-sp::-webkit-scrollbar{display:none}
+  .pf-t{flex:0 0 auto;flex-direction:row;gap:6px;padding:8px 12px!important;margin-bottom:0!important;
+   border-radius:999px!important;border-bottom-width:1px!important}
+  .pf-t .nm{writing-mode:horizontal-tb;transform:none}
+  .pf-sec{border-radius:12px;margin-top:8px}
+  .pf-body{grid-template-columns:1fr}
+  .pf-list{border-right:0;border-bottom:1px solid var(--pf-line)}
+  .pf-pane{position:static}
+  .pf-r .ax{opacity:1}
+  .pf-hd .pf-fam{margin-left:0;width:100%;order:3}
+}
+@media print{.hdr,.toolbar,.chips,.stats,.pf-sp,.pf-fam,.pf-act{display:none!important}
+  .pf-body{grid-template-columns:1fr}.pf-pane{position:static}}
+</style>
+
+<style id="pf-compact">
+/* header: title | standard pills | counts | auditor toggle, all on one line */
+.hdr-n{display:flex;align-items:center;gap:9px;margin-left:14px}
+.hdr-n .hn{display:flex;align-items:baseline;gap:4px;font-size:10.5px;font-weight:600;
+ color:#94a3b8;letter-spacing:.02em;white-space:nowrap}
+.hdr-n .hn b{font-size:15px;font-weight:800;color:#0b1524;letter-spacing:-.02em}
+.hdr-n i{width:1px;height:14px;background:#e4e9f0}
+/* one control row: standards, search, clause, sort, reset */
+.ctrl{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);
+ backdrop-filter:saturate(1.4) blur(9px);border-bottom:1px solid #e9edf3}
+.ctrl-in{max-width:1320px;margin:0 auto;padding:9px 18px;display:flex;align-items:center;gap:8px}
+.ctrl .chip{flex:0 0 auto;border:1px solid #e4e9f0;background:var(--cbg,#f4f7fb);
+ color:var(--cfg,#64748b);border-radius:999px;padding:5px 11px;font:700 11px/1 inherit;
+ cursor:pointer;transition:.14s}
+.ctrl .chip:hover{transform:translateY(-1px)}
+.ctrl .chip.on{background:#0b1524;color:#fff;border-color:#0b1524}
+.ctrl .chip.all{background:#eef2f7;color:#334155}
+.ctrl .chip.all.on{background:#0b1524;color:#fff}
+.ctrl .sep{width:1px;height:20px;background:#e4e9f0;margin:0 3px}
+.ctrl .sw{flex:1 1 auto;min-width:150px;position:relative;display:flex;align-items:center}
+.ctrl .sw .si{position:absolute;left:10px;font-size:12px;color:#94a3b8;pointer-events:none}
+.ctrl .sw input{width:100%;height:32px;border:1px solid #e4e9f0;border-radius:8px;
+ padding:0 28px 0 27px;font:500 12.5px/1 inherit;background:#f8fafc;color:#0b1524}
+.ctrl .sw input:focus{outline:0;background:#fff;border-color:#185fa5;
+ box-shadow:0 0 0 3px rgba(24,95,165,.12)}
+.ctrl .sw .sx{position:absolute;right:6px;border:0;background:0;color:#94a3b8;cursor:pointer;
+ font-size:11px;padding:4px;display:none}
+.ctrl .sw input:not(:placeholder-shown)~.sx{display:block}
+.ctrl select,.ctrl .sort-btn,.ctrl .rst{flex:0 0 auto;height:32px;border:1px solid #e4e9f0;
+ border-radius:8px;background:#fff;font:600 11.5px/1 inherit;color:#334155;padding:0 10px;cursor:pointer}
+.ctrl select{max-width:130px}
+.ctrl .sort-btn:hover,.ctrl .rst:hover,.ctrl select:hover{border-color:#cbd5e1;background:#f8fafc}
+.ctrl .rst{background:#0b1524;color:#fff;border-color:#0b1524;font-weight:700}
+.ctrl .rst:hover{background:#1c2a3f;border-color:#1c2a3f}
+@media (max-width:860px){
+  .hdr-n .hn:nth-child(n+3){display:none}
+  .hdr-n i:nth-child(n+2){display:none}
+}
+@media (max-width:720px){
+  .hdr-n{display:none}
+  .ctrl-in{flex-wrap:wrap;gap:6px;padding:8px 12px}
+  .ctrl .sw{flex:1 0 100%;order:-1}
+  .ctrl .sep{display:none}
+  .ctrl select{max-width:none;flex:1 1 auto}
+  .ctrl .chip{padding:5px 9px;font-size:10.5px}
+}
+body.aud-on .ctrl{display:none}
+</style>
+
 <style id="aud-css">
 :root{--aud-ink:#0b1524;--aud-mut:#64748b;--aud-line:#e4e9f0;--aud-acc:#c8951f;
  --aud-ok:#14893f;--aud-nc:#cf2b2b;--aud-of:#c07a10;--aud-na:#7c8794;--aud-shadow:0 1px 2px rgba(11,21,36,.06),0 8px 24px -12px rgba(11,21,36,.18)}
@@ -343,32 +471,36 @@ body.aud-on{background:
    comment icon. Nothing expands except the remark box.                    */
 .aud-grp{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
  color:var(--aud-mut);margin:13px 2px 5px}
-.aud-r{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--aud-line);
- border-left:3px solid transparent;border-radius:9px;padding:5px 9px;margin-bottom:3px;
- box-shadow:var(--aud-shadow);transition:border-color .15s,box-shadow .15s}
+.aud-r{background:#fff;border:1px solid var(--aud-line);
+ border-left:3px solid transparent;border-radius:9px;padding:6px 9px 5px;margin-bottom:3px;
+ box-shadow:var(--aud-shadow);transition:border-color .15s,box-shadow .15s,background .15s}
+.aud-r1{display:flex;align-items:flex-start;gap:8px}
+.aud-r2{display:flex;align-items:center;gap:6px;margin-top:5px;flex-wrap:wrap}
 .aud-r:hover{border-color:#cfd8e3;box-shadow:0 2px 8px -3px rgba(11,21,36,.3)}
-.aud-r.mC{border-left-color:var(--aud-ok)}
-.aud-r.mNC{border-left-color:var(--aud-nc);background:rgba(207,43,43,.028)}
-.aud-r.mOFI{border-left-color:var(--aud-of)}
-.aud-r.mNA{border-left-color:var(--aud-na);opacity:.72}
+/* an answered question is tinted and edged in its result colour */
+.aud-r.mC{border-left-color:var(--aud-ok);background:rgba(20,137,63,.035);border-color:rgba(20,137,63,.28)}
+.aud-r.mNC{border-left-color:var(--aud-nc);background:rgba(207,43,43,.04);border-color:rgba(207,43,43,.3)}
+.aud-r.mOFI{border-left-color:var(--aud-of);background:rgba(192,122,16,.045);border-color:rgba(192,122,16,.3)}
+.aud-r.mNA{border-left-color:var(--aud-na);background:#f8fafc;opacity:.75}
 .aud-r.gap{background:rgba(207,43,43,.035)}
+.aud-r.gap.mC,.aud-r.gap.mNC,.aud-r.gap.mOFI,.aud-r.gap.mNA{background:inherit}
 .aud-r.open{border-color:#c9d3e0}
 .aud-cl{flex:0 0 auto;min-width:38px;text-align:center;
  font:800 10.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
  color:var(--aud-ink);background:#eef2f7;border-radius:5px;padding:4px 6px;letter-spacing:-.02em}
-.aud-sd{flex:0 0 auto;width:6px;height:6px;border-radius:50%}
-.aud-q{flex:1 1 auto;min-width:120px;font-size:12.2px;line-height:1.3;color:#243044;
- overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.aud-lens{flex:0 0 auto;display:flex;gap:2px}
+.aud-sd{flex:0 0 auto;width:6px;height:6px;border-radius:50%;margin-top:6px}
+/* the question wraps in full - an auditor should never have to hover to read it */
+.aud-q{flex:1 1 auto;min-width:120px;font-size:12.4px;line-height:1.4;color:#243044}
+.aud-lens{flex:0 0 auto;display:flex;gap:2px;margin-top:1px}
 .aud-tag{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;
  font-size:8.5px;font-weight:800;border-radius:4px;cursor:default}
 .aud-tag.sq{background:#edf4ff;color:#1d5fc4}
 .aud-tag.he{background:#eefaf1;color:#14893f}
-.aud-dl{flex:0 0 auto;display:flex;gap:3px;align-items:center;flex-wrap:wrap;
- max-width:290px;justify-content:flex-end}
+.aud-dl{flex:1 1 auto;display:flex;gap:3px;align-items:center;flex-wrap:wrap;
+ min-width:0;margin-left:46px}
 .aud-d{font:700 9.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#1d5fc4;
  background:#f2f6fc;border:1px solid #e2ebf8;border-radius:5px;padding:4px 5px;
- text-decoration:none;white-space:nowrap;transition:.13s}
+ text-decoration:none;transition:.13s}
 .aud-d:hover{background:#e6eefb;border-color:#c6d9f4}
 .aud-d.alt{background:#fff;border-style:dashed;color:#7c8794}
 .aud-more{font:800 9.5px/1 inherit;color:#7c8794;background:#fff;border:1px solid var(--aud-line);
@@ -376,15 +508,30 @@ body.aud-on{background:
 .aud-more:hover{background:#f4f7fb;color:var(--aud-ink)}
 .aud-none{font:800 9.5px/1 inherit;color:var(--aud-nc);background:rgba(207,43,43,.09);
  border-radius:5px;padding:4px 7px;text-transform:uppercase;letter-spacing:.05em}
-.aud-m{flex:0 0 auto;display:flex;gap:0;border:1px solid var(--aud-line);border-radius:7px;overflow:hidden}
-.aud-mb{border:0;border-right:1px solid var(--aud-line);background:#fff;padding:5px 8px;
- font:800 10px/1 inherit;color:#7c8794;cursor:pointer;transition:.12s;min-width:29px}
-.aud-mb:last-child{border-right:0}
-.aud-mb:hover{background:#f4f7fb;color:var(--aud-ink)}
-.aud-mb.on[data-v=C]{background:var(--aud-ok);color:#fff}
-.aud-mb.on[data-v=NC]{background:var(--aud-nc);color:#fff}
-.aud-mb.on[data-v=OFI]{background:var(--aud-of);color:#fff}
-.aud-mb.on[data-v=NA]{background:var(--aud-na);color:#fff}
+/* result buttons: an icon carries the meaning, the word confirms it.
+   Each has its own colour, so a filled row reads at a glance.            */
+.aud-m{flex:0 0 auto;display:flex;gap:4px;margin-left:auto}
+.aud-mb{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--aud-line);
+ background:#fff;border-radius:7px;padding:4px 9px 4px 6px;font:700 10px/1 inherit;
+ color:#8b96a5;cursor:pointer;transition:.13s}
+.aud-mb i{font-style:normal;font-size:11px;line-height:1;width:13px;text-align:center}
+.aud-mb:hover{background:#f6f8fb;color:var(--aud-ink);border-color:#cfd8e3}
+.aud-mb[data-v=C]:hover{color:var(--aud-ok);border-color:var(--aud-ok)}
+.aud-mb[data-v=NC]:hover{color:var(--aud-nc);border-color:var(--aud-nc)}
+.aud-mb[data-v=OFI]:hover{color:var(--aud-of);border-color:var(--aud-of)}
+.aud-mb.on{color:#fff}
+.aud-mb.on[data-v=C]{background:var(--aud-ok);border-color:var(--aud-ok);
+ box-shadow:0 2px 9px -3px rgba(20,137,63,.85)}
+.aud-mb.on[data-v=NC]{background:var(--aud-nc);border-color:var(--aud-nc);
+ box-shadow:0 2px 9px -3px rgba(207,43,43,.85)}
+.aud-mb.on[data-v=OFI]{background:var(--aud-of);border-color:var(--aud-of);
+ box-shadow:0 2px 9px -3px rgba(192,122,16,.85)}
+.aud-mb.on[data-v=NA]{background:var(--aud-na);border-color:var(--aud-na)}
+/* an answered row dims the options it did not choose, so the eye goes to the answer */
+.aud-r.mC .aud-mb:not(.on),.aud-r.mNC .aud-mb:not(.on),
+.aud-r.mOFI .aud-mb:not(.on),.aud-r.mNA .aud-mb:not(.on){opacity:.42}
+.aud-r.mC .aud-mb:not(.on):hover,.aud-r.mNC .aud-mb:not(.on):hover,
+.aud-r.mOFI .aud-mb:not(.on):hover,.aud-r.mNA .aud-mb:not(.on):hover{opacity:1}
 .aud-cm{flex:0 0 auto;border:1px solid var(--aud-line);background:#fff;border-radius:7px;
  width:27px;height:26px;font-size:11.5px;line-height:1;cursor:pointer;color:#a7b2c0;
  position:relative;transition:.13s;padding:0}
@@ -401,22 +548,20 @@ body.aud-on{background:
 .aud-ev:focus{outline:0;border-color:var(--aud-acc);background:#fff;box-shadow:0 0 0 3px rgba(200,149,31,.14)}
 .aud-empty{background:#fff;border:1px dashed var(--aud-line);border-radius:11px;padding:26px;
  text-align:center;color:var(--aud-mut);font-size:12.5px}
-@media (max-width:900px){
-  .aud-dl{max-width:150px}
-  .aud-lens{display:none}
-}
+@media (max-width:900px){ .aud-lens{display:none} }
 @media (max-width:640px){
   .aud-wrap{padding:10px 11px 46px}
   .aud-bar{margin:0 -11px 10px;padding:9px 11px}
   .aud-id{order:-1;width:100%;flex:1 0 100%}
-  .aud-r{flex-wrap:wrap;gap:6px}
-  .aud-q{flex:1 0 100%;order:3;white-space:normal;font-size:12px}
-  .aud-dl{order:4;max-width:none;justify-content:flex-start}
-  .aud-m{order:5;margin-left:auto}
-  .aud-cm{order:6}
+  .aud-q{font-size:12.6px}
+  .aud-dl{flex:1 0 100%;margin-left:0;order:1}
+  .aud-m{order:2;margin-left:0;flex:1 1 auto;justify-content:space-between}
+  .aud-mb{flex:1 1 0;justify-content:center;padding:7px 4px}
+  .aud-cm{order:3;width:32px;height:31px}
   .aud-k{min-width:76px;padding:7px 10px}
   .aud-k b{font-size:17px}
 }
+@media (max-width:380px){ .aud-mb span,.aud-mb{font-size:9.5px} }
 @media print{
   .hdr,.aud-bar,.aud-tabs,.aud-f,.aud-more{display:none!important}
   body.aud-on{background:#fff}
@@ -424,85 +569,6 @@ body.aud-on{background:
   .aud-q{white-space:normal!important}
   .aud-cw{grid-template-rows:1fr!important}
 }
-</style>
-
-<style id="pf-css">
-:root{--pf-ink:#0b1524;--pf-mut:#64748b;--pf-line:#e4e9f0}
-body.pf-on .rbar,body.pf-on #main{display:none!important}
-body.aud-on #pf{display:none!important}
-#pf{max-width:1180px;margin:0 auto;padding:14px 16px 56px}
-.pf-sp{display:flex;gap:6px;height:112px}
-.pf-t{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;
- justify-content:space-between;padding:10px 0;cursor:pointer;position:relative;z-index:1;
- border-radius:12px;transition:transform .18s cubic-bezier(.2,.8,.3,1),background .2s,border-color .2s}
-.pf-t:hover{transform:translateY(-2px)}
-.pf-t .ic{font-size:16px}
-.pf-t .nm{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;font-weight:600;
- white-space:nowrap;letter-spacing:.01em}
-.pf-t .ct{font-size:10px;font-weight:700;padding:1px 7px;border-radius:999px}
-.pf-t.on{z-index:2;border-bottom:0!important;border-radius:12px 12px 0 0;margin-bottom:-3px;padding-bottom:14px}
-.pf-sec{border-radius:0 12px 12px 12px;background:#fff;overflow:hidden;
- animation:pfIn .28s cubic-bezier(.2,.8,.3,1)}
-@keyframes pfIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
-.pf-hd{display:flex;align-items:center;gap:9px;padding:9px 13px;flex-wrap:wrap}
-.pf-hd .ti{font-size:13px;font-weight:700}
-.pf-hd .pill{font-size:10.5px;font-weight:700;padding:1px 9px;border-radius:999px;background:#fff}
-.pf-fam{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;margin-left:auto;max-width:100%}
-.pf-fam::-webkit-scrollbar{display:none}
-.pf-fc{flex:0 0 auto;cursor:pointer;border-radius:999px;padding:4px 10px;font-size:11px;
- font-weight:600;white-space:nowrap;background:rgba(255,255,255,.6);border:0.5px solid transparent;
- transition:background .15s,border-color .15s}
-.pf-body{display:grid;grid-template-columns:1fr 272px;align-items:start}
-.pf-list{border-right:1px solid var(--pf-line);min-width:0}
-.pf-r{display:flex;align-items:center;gap:9px;padding:9px 12px;border-bottom:1px solid var(--pf-line);
- cursor:pointer;position:relative;transition:background .12s}
-.pf-r:hover,.pf-r:focus-visible{background:#f6f9fc;outline:none}
-.pf-r.act{background:#eef4fb}
-.pf-r.act:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px}
-.pf-r code{font-size:10.5px;color:var(--pf-mut);flex:0 0 auto}
-.pf-r .tt{flex:1;min-width:0;font-size:12.5px;color:#243044;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.pf-r .sd{flex:0 0 auto;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px}
-.pf-r .cl{flex:0 0 auto;font-size:10.5px;color:var(--pf-mut);min-width:36px;text-align:right}
-.pf-r .ax{flex:0 0 auto;font-size:15px;color:#9aa6b6;opacity:0;transition:opacity .12s,color .15s;
- padding:2px;border-radius:5px}
-.pf-r:hover .ax,.pf-r:focus-visible .ax{opacity:1}
-.pf-r .ax:hover{color:var(--pf-ink);background:#e8eef6}
-.pf-pane{position:sticky;top:8px;background:#f8fafc;min-width:0}
-.pf-pane .in{padding:12px 13px}
-.pf-ttl{font-size:13px;font-weight:600;line-height:1.35;color:#12203a}
-.pf-qr{width:104px;height:104px;image-rendering:pixelated;padding:5px;background:#fff;border:1px solid var(--pf-line);border-radius:7px;display:block}
-.pf-cap{font-size:9.5px;color:var(--pf-mut);text-align:center;margin-top:4px}
-.pf-lbl{font-size:10px;font-weight:800;color:var(--pf-mut);letter-spacing:.07em;margin:12px 0 2px}
-.pf-m{display:flex;align-items:baseline;gap:10px;padding:5px 0;border-bottom:1px solid var(--pf-line)}
-.pf-m b{flex:0 0 78px;font-size:10.5px;font-weight:600;color:var(--pf-mut)}
-.pf-m span{font-size:11.5px;color:#243044;min-width:0;word-break:break-word}
-.pf-m .sub{color:var(--pf-mut);font-size:10.5px}
-.pf-lg{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid var(--pf-line)}
-.pf-lg .v{flex:0 0 30px;font-size:11px;font-weight:700}
-.pf-lg .d{flex:0 0 72px;font-size:11px;color:var(--pf-mut)}
-.pf-lg .x{flex:1;font-size:11.5px;line-height:1.5;color:#243044}
-.pf-act{display:flex;gap:6px;margin-top:11px;flex-wrap:wrap}
-.pf-b{display:inline-flex;align-items:center;gap:5px;border:1px solid #cbd5e1;background:#fff;
- border-radius:8px;padding:6px 11px;font-size:11.5px;font-weight:700;color:#334155;cursor:pointer;
- transition:.15s;text-decoration:none}
-.pf-b:hover{background:#f1f5f9;transform:translateY(-1px)}
-.pf-empty{padding:26px;text-align:center;color:var(--pf-mut);font-size:12.5px}
-@media (max-width:760px){
-  #pf{padding:10px 11px 44px}
-  .pf-sp{height:auto;gap:5px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-  .pf-sp::-webkit-scrollbar{display:none}
-  .pf-t{flex:0 0 auto;flex-direction:row;gap:6px;padding:8px 12px!important;margin-bottom:0!important;
-   border-radius:999px!important;border-bottom-width:1px!important}
-  .pf-t .nm{writing-mode:horizontal-tb;transform:none}
-  .pf-sec{border-radius:12px;margin-top:8px}
-  .pf-body{grid-template-columns:1fr}
-  .pf-list{border-right:0;border-bottom:1px solid var(--pf-line)}
-  .pf-pane{position:static}
-  .pf-r .ax{opacity:1}
-  .pf-hd .pf-fam{margin-left:0;width:100%;order:3}
-}
-@media print{.hdr,.toolbar,.chips,.stats,.pf-sp,.pf-fam,.pf-act{display:none!important}
-  .pf-body{grid-template-columns:1fr}.pf-pane{position:static}}
 </style>
 </head>
 <body>
@@ -532,45 +598,30 @@ body.aud-on #pf{display:none!important}
       <span class="hdr-std" style="background:#dcfce7;color:#166534">14001</span>
       <span class="hdr-std" style="background:#fef3c7;color:#92400e">45001</span>
     </div>
+    <div class="hdr-n">
+      <span class="hn"><b id="sn">182</b>docs</span><i></i>
+      <span class="hn"><b>13</b>categories</span><i></i>
+      <span class="hn"><b>39</b>clauses</span>
+    </div>
     <button class="aud-toggle" id="audBtn" onclick="audToggle()"><span class="ic">◉</span><span class="tx">Auditor Mode</span></button>
   </div>
 </div>
 
-<div class="stats">
-  <div class="stats-inner">
-    <div class="stat"><b id="sn">142</b><span>Documents</span></div>
-    <div class="stat"><b>3</b><span>Standards</span></div>
-    <div class="stat"><b>13</b><span>Categories</span></div>
-    <div class="stat"><b>39</b><span>Clauses</span></div>
-  </div>
-</div>
 
-<div class="chips" id="chips">
-  <button class="chip all on" data-s="">All Standards</button>
+
+<div class="ctrl"><div class="ctrl-in" id="chips"><button class="chip all on" data-s="">All Standards</button>
   <button class="chip" style="--cbg:#dcfce7;--cfg:#166534" data-s="14001">ISO 14001</button>
   <button class="chip" style="--cbg:#fef3c7;--cfg:#92400e" data-s="45001">ISO 45001</button>
   <button class="chip" style="--cbg:#dbeafe;--cfg:#1e40af" data-s="9001">ISO 9001</button>
-  <button class="chip" style="--cbg:#ede9fe;--cfg:#5b21b6" data-s="IMS">IMS</button>
-  
-</div>
-
-<div class="toolbar">
-  <div class="toolbar-inner">
-    <div class="sw">
+  <button class="chip" style="--cbg:#ede9fe;--cfg:#5b21b6" data-s="IMS">IMS</button><span class="sep"></span><div class="sw">
       <span class="si">⌕</span>
       <input id="q" type="search" placeholder="Search code, title, clause…" oninput="go()" autocomplete="off">
       <button class="sx" id="xbtn" onclick="clearQ()">✕</button>
-    </div>
-    <div class="frow">
-      <select id="fcl" onchange="go()">
+    </div><select id="fcl" onchange="go()">
         <option value="">All Clauses</option><option value="4.1-4.2">§ 4.1-4.2</option><option value="4.4">§ 4.4</option><option value="5.2">§ 5.2</option><option value="5.4">§ 5.4</option><option value="6.3">§ 6.3</option><option value="6.2">§ 6.2</option><option value="6.1.3">§ 6.1.3</option><option value="6.1">§ 6.1</option><option value="6.1.2">§ 6.1.2</option><option value="7.1.3">§ 7.1.3</option><option value="7.2">§ 7.2</option><option value="7.5">§ 7.5</option><option value="7.1.5">§ 7.1.5</option><option value="7.4">§ 7.4</option><option value="8.6">§ 8.6</option><option value="8.4.1">§ 8.4.1</option><option value="8.1.3">§ 8.1.3</option><option value="8.5.2">§ 8.5.2</option><option value="8.4.2">§ 8.4.2</option><option value="8.4">§ 8.4</option><option value="8.5.1">§ 8.5.1</option><option value="8.5.3">§ 8.5.3</option><option value="8.2.1">§ 8.2.1</option><option value="8.1">§ 8.1</option><option value="8.1.2">§ 8.1.2</option><option value="8.2.2">§ 8.2.2</option><option value="8.2.3">§ 8.2.3</option><option value="8.1.4">§ 8.1.4</option><option value="8.2">§ 8.2</option><option value="8.7">§ 8.7</option><option value="8.5.4">§ 8.5.4</option><option value="9.1.3">§ 9.1.3</option><option value="9.1.1">§ 9.1.1</option><option value="9.2">§ 9.2</option><option value="9.1.2">§ 9.1.2</option><option value="9.3.3">§ 9.3.3</option><option value="9.3">§ 9.3</option><option value="9.1">§ 9.1</option><option value="10.2">§ 10.2</option>
-      </select>
-      <button class="sort-btn" onclick="toggleSort()">
+      </select><button class="sort-btn" onclick="toggleSort()">
         <span id="sortLbl">Sort: Code</span> ↕
-      </button>
-      <button class="rst" onclick="reset()">Reset</button>
-    </div>
-  </div>
+      </button><button class="rst" onclick="reset()">Reset</button></div></div>
 </div>
 
 <div class="rbar">
@@ -700,327 +751,6 @@ go();
 
 
 
-
-
-<div id="aud">
-  <div class="aud-bar">
-    <div class="aud-bar-in">
-      <div class="aud-id">
-        <input class="aud-in" id="audName" placeholder="Auditor name" autocomplete="name">
-        <input class="aud-in" id="audDate" type="date" style="flex:0 0 138px">
-      </div>
-      <div class="aud-ring" title="Conformity of clauses assessed">
-        <svg width="34" height="34" viewBox="0 0 36 36">
-          <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="4"/>
-          <circle id="audArc" cx="18" cy="18" r="15" fill="none" stroke="#f0c14b" stroke-width="4"
-                  stroke-linecap="round" stroke-dasharray="0 94.2"
-                  transform="rotate(-90 18 18)" style="transition:stroke-dasharray .5s cubic-bezier(.2,.8,.3,1)"/>
-        </svg>
-        <div><b id="audPct">0%</b><span id="audDone">0 of 96</span></div>
-      </div>
-      <div class="aud-x">
-        <button class="aud-b gold" onclick="audXlsx()">Excel</button>
-        <button class="aud-b" onclick="audPdf()">PDF</button>
-        <button class="aud-b" onclick="audMail()">Email</button>
-        <button class="aud-b" onclick="audReset()" title="Clear all marks">Reset</button>
-        <button class="aud-b exit" onclick="audToggle()">Exit</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="aud-wrap">
-    <div class="aud-kpi" id="audKpi"></div>
-    <div class="aud-tabs" id="audTabs"></div>
-    <div class="aud-f" id="audF1"></div>
-    <div class="aud-f">
-      <span class="lb">Status</span>
-      <button class="aud-c on" data-f="st" data-v="">All</button>
-      <button class="aud-c" data-f="st" data-v="_">Open</button>
-      <button class="aud-c" data-f="st" data-v="C">C</button>
-      <button class="aud-c" data-f="st" data-v="NC">NC</button>
-      <button class="aud-c" data-f="st" data-v="OFI">OFI</button>
-      <button class="aud-c" data-f="st" data-v="NA">N/A</button>
-      <button class="aud-c" data-f="st" data-v="!">No doc</button>
-      <input class="aud-s" id="audQ" placeholder="Search clause, requirement or document...">
-    </div>
-    <div id="audList"></div>
-  </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
-<script id="aud-js">
-const AUD_ITEMS = [{"id": "9001-4.1", "std": "9001", "cl": "4.1", "req": "Are external and internal issues relevant to the QMS determined, monitored and reviewed?", "sq": "Q", "he": "Q", "sec": "4"}, {"id": "9001-4.2", "std": "9001", "cl": "4.2", "req": "Are interested parties and their relevant requirements determined and monitored?", "sq": "QD", "he": "Q", "sec": "4"}, {"id": "9001-4.3", "std": "9001", "cl": "4.3", "req": "Is the scope of the QMS documented, with any non-applicable clause justified?", "sq": "Q", "he": "Q", "sec": "4"}, {"id": "9001-4.4", "std": "9001", "cl": "4.4", "req": "Are the QMS processes, their sequence, interaction, criteria and measures defined?", "sq": "QD", "he": "Q", "sec": "4"}, {"id": "9001-5.1", "std": "9001", "cl": "5.1", "req": "Does top management demonstrate leadership - accountability, resources, promoting improvement?", "sq": "QP", "he": "Q", "sec": "5"}, {"id": "9001-5.2", "std": "9001", "cl": "5.2", "req": "Is the quality policy documented, communicated and available to interested parties?", "sq": "Q", "he": "Q", "sec": "5"}, {"id": "9001-5.3", "std": "9001", "cl": "5.3", "req": "Are roles, responsibilities and authorities assigned, communicated and understood?", "sq": "P", "he": "Q", "sec": "5"}, {"id": "9001-6.1", "std": "9001", "cl": "6.1", "req": "Are risks and opportunities determined, with actions planned and their effectiveness evaluated?", "sq": "QC", "he": "Q", "sec": "6"}, {"id": "9001-6.2", "std": "9001", "cl": "6.2", "req": "Are quality objectives measurable, monitored, communicated and updated, with plans to achieve them?", "sq": "QCD", "he": "Q", "sec": "6"}, {"id": "9001-6.3", "std": "9001", "cl": "6.3", "req": "Are changes to the QMS planned and carried out in a controlled manner?", "sq": "QD", "he": "Q", "sec": "6"}, {"id": "9001-7.1.1", "std": "9001", "cl": "7.1.1", "req": "Are the resources needed for the QMS determined and provided?", "sq": "CP", "he": "Q", "sec": "7"}, {"id": "9001-7.1.2", "std": "9001", "cl": "7.1.2", "req": "Are the persons necessary for effective operation of the QMS determined and provided?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.1.3", "std": "9001", "cl": "7.1.3", "req": "Is infrastructure determined, provided and maintained (buildings, equipment, utilities)?", "sq": "CD", "he": "Q", "sec": "7"}, {"id": "9001-7.1.4", "std": "9001", "cl": "7.1.4", "req": "Is the environment for the operation of processes determined, provided and maintained?", "sq": "SP", "he": "HSQ", "sec": "7"}, {"id": "9001-7.1.5", "std": "9001", "cl": "7.1.5", "req": "Are monitoring and measuring resources suitable, calibrated, identified and safeguarded?", "sq": "QC", "he": "Q", "sec": "7"}, {"id": "9001-7.1.6", "std": "9001", "cl": "7.1.6", "req": "Is the organisational knowledge needed for processes determined and maintained?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.2", "std": "9001", "cl": "7.2", "req": "Is competence determined, and are training and its effectiveness evaluated and recorded?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.3", "std": "9001", "cl": "7.3", "req": "Are persons aware of the policy, objectives, their contribution and the implications of nonconformity?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.4", "std": "9001", "cl": "7.4", "req": "Are internal and external communications on the QMS determined - what, when, with whom, how?", "sq": "PD", "he": "Q", "sec": "7"}, {"id": "9001-7.5", "std": "9001", "cl": "7.5", "req": "Is documented information controlled - identification, review, approval, version, distribution, retention?", "sq": "Q", "he": "Q", "sec": "7"}, {"id": "9001-8.1", "std": "9001", "cl": "8.1", "req": "Is operational planning and control implemented, including criteria, resources and retained records?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.1", "std": "9001", "cl": "8.2.1", "req": "Is customer communication defined, including enquiries, contracts, feedback and complaints?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.2", "std": "9001", "cl": "8.2.2", "req": "Are requirements for products and services determined, including statutory and regulatory?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.3", "std": "9001", "cl": "8.2.3", "req": "Are requirements reviewed before commitment to supply, with records of the review?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.4", "std": "9001", "cl": "8.2.4", "req": "Are changes to product requirements recorded and relevant persons made aware?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.4", "std": "9001", "cl": "8.4", "req": "Are externally provided processes, products and services controlled to specified requirements?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.4.1", "std": "9001", "cl": "8.4.1", "req": "Are external providers evaluated, selected, monitored and re-evaluated against defined criteria?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.4.2", "std": "9001", "cl": "8.4.2", "req": "Is the type and extent of control over external providers defined and verified?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-8.4.3", "std": "9001", "cl": "8.4.3", "req": "Is information communicated to external providers adequate before it is communicated?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.1", "std": "9001", "cl": "8.5.1", "req": "Is production carried out under controlled conditions - documented information, monitoring, suitable resources, competent persons?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.2", "std": "9001", "cl": "8.5.2", "req": "Are outputs identified and is traceability maintained where required?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.3", "std": "9001", "cl": "8.5.3", "req": "Is property belonging to customers or external providers identified, verified, protected and safeguarded?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-8.5.4", "std": "9001", "cl": "8.5.4", "req": "Are outputs preserved during production and delivery - handling, storage, packaging, protection?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.5", "std": "9001", "cl": "8.5.5", "req": "Are post-delivery activities addressed, including statutory requirements and customer feedback?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.6", "std": "9001", "cl": "8.5.6", "req": "Are changes to production reviewed and controlled, with records of the review and authorisation?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.6", "std": "9001", "cl": "8.6", "req": "Is release of products and services verified against acceptance criteria, with evidence and authorisation?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.7", "std": "9001", "cl": "8.7", "req": "Is nonconforming output identified, controlled and dispositioned, with records retained?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-9.1.1", "std": "9001", "cl": "9.1.1", "req": "Is monitoring and measurement determined - what, by what method, when, and when results are analysed?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-9.1.2", "std": "9001", "cl": "9.1.2", "req": "Is customer satisfaction monitored, with methods for obtaining and reviewing the information?", "sq": "QD", "he": "Q", "sec": "9"}, {"id": "9001-9.1.3", "std": "9001", "cl": "9.1.3", "req": "Are data analysed and evaluated to assess conformity, satisfaction, performance and external providers?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-9.2", "std": "9001", "cl": "9.2", "req": "Are internal audits conducted at planned intervals by objective auditors, with results reported?", "sq": "Q", "he": "Q", "sec": "9"}, {"id": "9001-9.3", "std": "9001", "cl": "9.3", "req": "Is management review conducted at planned intervals covering all required inputs and outputs?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-10.1", "std": "9001", "cl": "10.1", "req": "Are opportunities for improvement determined, selected and implemented?", "sq": "QCD", "he": "Q", "sec": "10"}, {"id": "9001-10.2", "std": "9001", "cl": "10.2", "req": "Are nonconformities reacted to, root causes evaluated, action taken and effectiveness reviewed?", "sq": "QC", "he": "Q", "sec": "10"}, {"id": "9001-10.3", "std": "9001", "cl": "10.3", "req": "Is the suitability, adequacy and effectiveness of the QMS continually improved?", "sq": "QCD", "he": "Q", "sec": "10"}, {"id": "14001-4.1", "std": "14001", "cl": "4.1", "req": "Are internal and external issues affecting environmental performance determined, including conditions?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-4.2", "std": "14001", "cl": "4.2", "req": "Are interested parties, their needs and which become compliance obligations determined?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-4.3", "std": "14001", "cl": "4.3", "req": "Is the EMS scope determined and available as documented information?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-5.2", "std": "14001", "cl": "5.2", "req": "Is the environmental policy appropriate, committing to protection, compliance and continual improvement?", "sq": "", "he": "E", "sec": "5"}, {"id": "14001-6.1.1", "std": "14001", "cl": "6.1.1", "req": "Are risks and opportunities relating to aspects, obligations and issues determined?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.1.2", "std": "14001", "cl": "6.1.2", "req": "Are environmental aspects and impacts determined, with criteria used to identify significant aspects?", "sq": "", "he": "E", "sec": "6"}, {"id": "14001-6.1.3", "std": "14001", "cl": "6.1.3", "req": "Are compliance obligations determined, accessible and taken into account in the EMS?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.1.4", "std": "14001", "cl": "6.1.4", "req": "Is action planned to address significant aspects, obligations, risks and opportunities?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.2", "std": "14001", "cl": "6.2", "req": "Are environmental objectives established at relevant functions, measurable and monitored?", "sq": "CD", "he": "E", "sec": "6"}, {"id": "14001-7.2", "std": "14001", "cl": "7.2", "req": "Is competence for persons affecting environmental performance determined and evidenced?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.3", "std": "14001", "cl": "7.3", "req": "Are persons aware of the policy, significant aspects and implications of not conforming?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.4", "std": "14001", "cl": "7.4", "req": "Are internal and external environmental communications planned and carried out?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.5", "std": "14001", "cl": "7.5", "req": "Is EMS documented information created, updated and controlled?", "sq": "", "he": "E", "sec": "7"}, {"id": "14001-8.1", "std": "14001", "cl": "8.1", "req": "Are processes needed to meet EMS requirements planned, implemented and controlled, including outsourced?", "sq": "CD", "he": "E", "sec": "8"}, {"id": "14001-8.2", "std": "14001", "cl": "8.2", "req": "Are emergency situations identified, with planned response, testing and periodic review?", "sq": "S", "he": "HES", "sec": "8"}, {"id": "14001-9.1.1", "std": "14001", "cl": "9.1.1", "req": "Is environmental performance monitored, measured, analysed and evaluated with calibrated equipment?", "sq": "C", "he": "E", "sec": "9"}, {"id": "14001-9.1.2", "std": "14001", "cl": "9.1.2", "req": "Is compliance with obligations evaluated at a determined frequency, with knowledge of status maintained?", "sq": "C", "he": "E", "sec": "9"}, {"id": "14001-9.2", "std": "14001", "cl": "9.2", "req": "Are internal EMS audits conducted at planned intervals with results reported to management?", "sq": "", "he": "E", "sec": "9"}, {"id": "14001-9.3", "std": "14001", "cl": "9.3", "req": "Does management review cover EMS status, aspects, obligations, objectives and performance?", "sq": "CD", "he": "E", "sec": "9"}, {"id": "14001-10.2", "std": "14001", "cl": "10.2", "req": "Are environmental nonconformities corrected, causes evaluated and the EMS updated?", "sq": "C", "he": "E", "sec": "10"}, {"id": "14001-10.3", "std": "14001", "cl": "10.3", "req": "Is the EMS continually improved to enhance environmental performance?", "sq": "C", "he": "E", "sec": "10"}, {"id": "45001-4.1", "std": "45001", "cl": "4.1", "req": "Are internal and external issues relevant to OH&S performance determined?", "sq": "S", "he": "HS", "sec": "4"}, {"id": "45001-4.2", "std": "45001", "cl": "4.2", "req": "Are workers and other interested parties and their needs determined, including legal requirements?", "sq": "SP", "he": "HS", "sec": "4"}, {"id": "45001-4.3", "std": "45001", "cl": "4.3", "req": "Is the OH&S management system scope determined and documented?", "sq": "S", "he": "HS", "sec": "4"}, {"id": "45001-5.1", "std": "45001", "cl": "5.1", "req": "Does top management take overall responsibility for preventing work-related injury and ill health?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.2", "std": "45001", "cl": "5.2", "req": "Does the OH&S policy commit to safe conditions, hazard elimination, consultation and improvement?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.3", "std": "45001", "cl": "5.3", "req": "Are OH&S roles, responsibilities and authorities assigned and communicated at all levels?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.4", "std": "45001", "cl": "5.4", "req": "Are workers consulted and participating at all applicable levels, with barriers removed?", "sq": "SP", "he": "HSQ", "sec": "5"}, {"id": "45001-6.1.1", "std": "45001", "cl": "6.1.1", "req": "Are risks and opportunities determined, taking account of hazards, legal requirements and workers?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.1.2", "std": "45001", "cl": "6.1.2", "req": "Is hazard identification ongoing and proactive, covering routine, non-routine and emergency situations?", "sq": "SP", "he": "HS", "sec": "6"}, {"id": "45001-6.1.2.2", "std": "45001", "cl": "6.1.2.2", "req": "Are OH&S risks assessed using defined methodology and criteria, and applied proactively?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.1.3", "std": "45001", "cl": "6.1.3", "req": "Are legal and other requirements determined, accessible, and kept up to date?", "sq": "SC", "he": "HS", "sec": "6"}, {"id": "45001-6.1.4", "std": "45001", "cl": "6.1.4", "req": "Is action planned to address hazards, risks, legal requirements and emergency preparedness?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.2", "std": "45001", "cl": "6.2", "req": "Are OH&S objectives established, measurable, monitored, communicated and updated?", "sq": "SCD", "he": "HS", "sec": "6"}, {"id": "45001-7.1", "std": "45001", "cl": "7.1", "req": "Are the resources needed for the OH&S management system determined and provided?", "sq": "SC", "he": "HS", "sec": "7"}, {"id": "45001-7.2", "std": "45001", "cl": "7.2", "req": "Is worker competence for hazard identification and safe work determined, provided and evaluated?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.3", "std": "45001", "cl": "7.3", "req": "Are workers aware of the policy, hazards, incidents and their right to remove themselves from danger?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.4", "std": "45001", "cl": "7.4", "req": "Is OH&S information communicated internally and externally, accounting for language and literacy?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.5", "std": "45001", "cl": "7.5", "req": "Is OH&S documented information created, updated and controlled?", "sq": "S", "he": "HS", "sec": "7"}, {"id": "45001-8.1.1", "std": "45001", "cl": "8.1.1", "req": "Are operational controls established, implemented and maintained to meet OH&S requirements?", "sq": "SD", "he": "HS", "sec": "8"}, {"id": "45001-8.1.2", "std": "45001", "cl": "8.1.2", "req": "Is the hierarchy of controls applied - eliminate, substitute, engineering, administrative, PPE?", "sq": "SP", "he": "HS", "sec": "8"}, {"id": "45001-8.1.3", "std": "45001", "cl": "8.1.3", "req": "Is change managed - new products, processes, equipment, legal changes and knowledge of hazards?", "sq": "SD", "he": "HS", "sec": "8"}, {"id": "45001-8.1.4", "std": "45001", "cl": "8.1.4", "req": "Is procurement controlled, including contractors and outsourced functions, to conform to the OH&SMS?", "sq": "SCD", "he": "HS", "sec": "8"}, {"id": "45001-8.2", "std": "45001", "cl": "8.2", "req": "Is emergency preparedness planned, with response, periodic testing, training and communication?", "sq": "SP", "he": "HES", "sec": "8"}, {"id": "45001-9.1.1", "std": "45001", "cl": "9.1.1", "req": "Is OH&S performance monitored and measured, with criteria and calibrated equipment?", "sq": "SC", "he": "HS", "sec": "9"}, {"id": "45001-9.1.2", "std": "45001", "cl": "9.1.2", "req": "Is compliance with legal and other requirements evaluated and its status maintained?", "sq": "SC", "he": "HS", "sec": "9"}, {"id": "45001-9.2", "std": "45001", "cl": "9.2", "req": "Are internal OH&S audits conducted at planned intervals, with results reported to workers?", "sq": "SP", "he": "HS", "sec": "9"}, {"id": "45001-9.3", "std": "45001", "cl": "9.3", "req": "Does management review cover incidents, participation, hazards, risks, and adequacy of resources?", "sq": "SCD", "he": "HS", "sec": "9"}, {"id": "45001-10.1", "std": "45001", "cl": "10.1", "req": "Are opportunities for improvement determined and improvement actions implemented?", "sq": "SCD", "he": "HS", "sec": "10"}, {"id": "45001-10.2", "std": "45001", "cl": "10.2", "req": "Are incidents and nonconformities investigated, root causes determined and controls reviewed?", "sq": "SP", "he": "HS", "sec": "10"}, {"id": "45001-10.3", "std": "45001", "cl": "10.3", "req": "Is the OH&S management system continually improved, with worker participation?", "sq": "SP", "he": "HS", "sec": "10"}];
-const SQ_NAME={S:'Safety',Q:'Quality',C:'Cost',D:'Delivery',P:'People'};
-const HE_NAME={H:'Health',E:'Environment',S:'Safety',Q:'Quality'};
-const STD_DOT={'9001':'#1d5fc4','14001':'#14893f','45001':'#c07a10'};
-const AUD_KEY='pm-audit-v2';
-let audState={}, audMeta={name:'',date:''};
-try{ const raw=JSON.parse(localStorage.getItem(AUD_KEY)||'{}');
-     audState=raw.marks||{}; audMeta=raw.meta||{name:'',date:''}; }catch(e){}
-let audF={tab:'', std:'', lens:'', st:'', q:''};
-let audOpen=null;      // clause whose remark box is open
-let audAllOf=null;     // clause showing its full document list
-const MARK_T={C:'Conforming',NC:'Non-conformity',OFI:'Opportunity for improvement',NA:'Not applicable'};
-const audEsc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
-  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-
-function audSave(){ try{localStorage.setItem(AUD_KEY,JSON.stringify({marks:audState,meta:audMeta}));}catch(e){} }
-
-function audClauseHit(cl,target){
-  if(!cl) return false;
-  const rng=cl.match(/^\s*(\d+)(?:\.\d+)*\s*[-–—]\s*(\d+)(?:\.\d+)*\s*$/);
-  if(rng){const top=parseInt(target,10); return top>=parseInt(rng[1],10)&&top<=parseInt(rng[2],10);}
-  return cl.split(/[^0-9.]+/).filter(Boolean).some(tok=>{
-    tok=tok.replace(/\.$/,'');
-    return tok===target||tok.indexOf(target+'.')===0||target.indexOf(tok+'.')===0;});
-}
-// a document's primary clause plus any it explicitly declares coverage of
-function audCovers(d,target){
-  if(audClauseHit(String(d.clause||''),target)) return true;
-  return (d.covers||[]).some(c=>audClauseHit(String(c),target));
-}
-function audDocs(it){
-  if(typeof D==='undefined') return {same:[],other:[]};
-  const same=[],other=[];
-  D.forEach(d=>{ if(!audCovers(d,it.cl)) return;
-    const s=String(d.standard||'');
-    (!s||s===it.std)?same.push(d):other.push(d); });
-  // the document written for this clause is more use to an auditor than the
-  // manual, which declares coverage of nearly all of them - so list it first
-  const rank=d=>audClauseHit(String(d.clause||''),it.cl)?0:1;
-  same.sort((a,b)=>rank(a)-rank(b)); other.sort((a,b)=>rank(a)-rank(b));
-  return {same,other};
-}
-// documents that no clause check reaches - shown in their own tab
-function audUnmapped(){
-  if(typeof D==='undefined') return [];
-  const seen=new Set();
-  AUD_ITEMS.forEach(it=>{const g=audDocs(it); g.same.concat(g.other).forEach(d=>seen.add(d.code));});
-  return D.filter(d=>!seen.has(d.code));
-}
-let AUD_UNMAPPED=[];
-
-function audLens(it){ return it.sq.split('').map(x=>SQ_NAME[x]).concat(
-    it.he.split('').map(x=>HE_NAME[x])).filter((v,i,a)=>a.indexOf(v)===i); }
-
-function audMatch(it,docs){
-  if(audF.tab && audF.tab!=='gap' && audF.tab!=='un' && it.sec!==audF.tab) return false;
-  if(audF.tab==='gap' && (docs.same.length||docs.other.length)) return false;
-  if(audF.std && it.std!==audF.std) return false;
-  if(audF.lens && audLens(it).indexOf(audF.lens)<0) return false;
-  const st=(audState[it.id]||{}).v||'';
-  if(audF.st==='_'&&st) return false;
-  if(audF.st==='!'&&(docs.same.length||docs.other.length)) return false;
-  if(audF.st&&audF.st!=='_'&&audF.st!=='!'&&st!==audF.st) return false;
-  if(audF.q){ const h=(it.cl+' '+it.req+' '+it.std+' '+docs.same.concat(docs.other).map(d=>d.code).join(' ')).toLowerCase();
-    if(h.indexOf(audF.q.toLowerCase())<0) return false; }
-  return true;
-}
-
-function audRender(){
-  const n={C:0,NC:0,OFI:0,NA:0,_:0}; let gaps=0;
-  const rows=[];
-  AUD_ITEMS.forEach(it=>{
-    const docs=audDocs(it);
-    if(!docs.same.length&&!docs.other.length) gaps++;
-    const st=(audState[it.id]||{}).v||'_'; n[st]=(n[st]||0)+1;
-    if(audMatch(it,docs)) rows.push([it,docs]);
-  });
-
-  // tabs
-  const secs=['4','5','6','7','8','9','10'];
-  const cnt=s=>AUD_ITEMS.filter(i=>i.sec===s).length;
-  document.getElementById('audTabs').innerHTML=
-    `<button class="aud-t${audF.tab===''?' on':''}" data-tab="">All<i>${AUD_ITEMS.length}</i></button>`+
-    secs.map(s=>`<button class="aud-t${audF.tab===s?' on':''}" data-tab="${s}">Clause ${s}<i>${cnt(s)}</i></button>`).join('')+
-    `<button class="aud-t${audF.tab==='gap'?' on':''}" data-tab="gap">Gaps<i>${gaps}</i></button>`+
-    `<button class="aud-t${audF.tab==='un'?' on':''}" data-tab="un">Unmapped<i>${AUD_UNMAPPED.length}</i></button>`;
-
-  // filter row 1
-  const chip=(f,v,l)=>`<button class="aud-c${audF[f]===v?' on':''}" data-f="${f}" data-v="${v}">${l}</button>`;
-  document.getElementById('audF1').innerHTML=
-    '<span class="lb">Std</span>'+chip('std','','All')+chip('std','9001','9001')+chip('std','14001','14001')+chip('std','45001','45001')+
-    '<span class="lb" style="margin-left:6px">Lens</span>'+chip('lens','','All')+
-    ['Safety','Quality','Cost','Delivery','People','Health','Environment'].map(x=>chip('lens',x,x)).join('');
-
-  // KPI
-  const done=n.C+n.NC+n.OFI+n.NA;
-  const pct=(n.C+n.NC+n.OFI)?Math.round(n.C*100/(n.C+n.NC+n.OFI)):0;
-  document.getElementById('audKpi').innerHTML=
-    `<div class="aud-k"><b>${AUD_ITEMS.length}</b><span>Clauses</span></div>
-     <div class="aud-k" style="--c:var(--aud-ok)"><b>${n.C}</b><span>Conforming</span></div>
-     <div class="aud-k" style="--c:var(--aud-nc)"><b>${n.NC}</b><span>Non-conf</span></div>
-     <div class="aud-k" style="--c:var(--aud-of)"><b>${n.OFI}</b><span>OFI</span></div>
-     <div class="aud-k" style="--c:var(--aud-na)"><b>${n.NA}</b><span>N/A</span></div>
-     <div class="aud-k"><b>${n._}</b><span>Open</span></div>
-     <div class="aud-k" style="--c:${gaps?'var(--aud-nc)':'var(--aud-ok)'}"><b>${gaps}</b><span>No document</span></div>`;
-  document.getElementById('audPct').textContent=pct+'%';
-  document.getElementById('audDone').textContent=done+' of '+AUD_ITEMS.length;
-  const arc=document.getElementById('audArc');
-  if(arc) arc.setAttribute('stroke-dasharray',(94.2*done/AUD_ITEMS.length).toFixed(1)+' 94.2');
-
-  const list=document.getElementById('audList');
-  if(audF.tab==='un'){
-    list.innerHTML='<div class="aud-grp">Documents no clause check reaches &mdash; signage, pictograms and samples carry no clause reference</div>'+
-      (AUD_UNMAPPED.length?AUD_UNMAPPED.map(d=>
-        `<div class="aud-r">
-          <span class="aud-cl">${d.cat_label||'Doc'}</span>
-          <span class="aud-q">${audEsc(d.title||d.code)}</span>
-          <span class="aud-dl"><a class="aud-d" href="html/${d.code}.html" target="_blank">${d.code}</a></span>
-         </div>`).join('')
-        :'<div class="aud-empty">Every document is reachable from a clause check.</div>');
-    return;
-  }
-  if(!rows.length){ list.innerHTML='<div class="aud-empty">No clause matches these filters.</div>'; return; }
-
-  const groups={};
-  rows.forEach(([it,docs])=>{ (groups[it.sec]=groups[it.sec]||[]).push([it,docs]); });
-  let html='';
-  Object.keys(groups).sort((a,b)=>(+a)-(+b)).forEach(sec=>{
-    html+=`<div class="aud-grp">Clause ${sec}</div>`;
-    groups[sec].forEach(([it,docs])=>{
-      const cur=audState[it.id]||{};
-      // document references, prefilled from the index: primary clause + declared coverage
-      const mk=(d,cls)=>`<a class="aud-d${cls}" href="html/${d.code}.html" target="_blank"
-        title="${audEsc(d.title||d.code)}${cls?' — other standard':''}">${d.code}</a>`;
-      const all=docs.same.map(d=>mk(d,'')).concat(docs.other.map(d=>mk(d,' alt')));
-      const SHOW=3;
-      let dl=all.length
-        ? all.slice(0,SHOW).join('')+(all.length>SHOW
-            ?`<button class="aud-more" onclick="audAll('${it.id}')" title="Show all ${all.length}">+${all.length-SHOW}</button>`:'')
-        : '<span class="aud-none" title="No controlled document declares this clause">none</span>';
-      if(audAllOf===it.id) dl=all.join('');
-      const marks=['C','NC','OFI','NA'].map(v=>
-        `<button class="aud-mb${cur.v===v?' on':''}" data-v="${v}" title="${MARK_T[v]}"
-          onclick="audMark('${it.id}','${v}')">${v==='NA'?'N/A':v}</button>`).join('');
-      const open=audOpen===it.id;
-      html+=`<div class="aud-r${cur.v?' m'+cur.v:''}${!all.length?' gap':''}${open?' open':''}" id="i-${it.id}">
-        <span class="aud-cl">${it.cl}</span>
-        <span class="aud-sd" style="background:${STD_DOT[it.std]}" title="ISO ${it.std}"></span>
-        <span class="aud-q" title="${audEsc(it.req)}">${it.req}</span>
-        <span class="aud-lens">${audLens(it).map(x=>
-          `<span class="aud-tag ${['Health','Environment'].indexOf(x)>=0?'he':'sq'}" title="${x}">${x[0]}</span>`).join('')}</span>
-        <span class="aud-dl">${dl}</span>
-        <span class="aud-m">${marks}</span>
-        <button class="aud-cm${cur.e?' has':''}${open?' on':''}" onclick="audFlip('${it.id}')"
-          title="${cur.e?'Remark: '+audEsc(cur.e).slice(0,120):'Add remark'}">&#128172;</button>
-      </div>
-      <div class="aud-cw${open?' on':''}"><div><textarea class="aud-ev" id="e-${it.id}"
-        placeholder="Objective evidence seen / finding — ${it.cl}"
-        oninput="audNote('${it.id}',this.value)">${audEsc(cur.e||'')}</textarea></div></div>`;
-    });
-  });
-  list.innerHTML=html;
-}
-
-function audFlip(id){ audOpen=(audOpen===id?null:id); audRender();
-  if(audOpen){const el=document.getElementById('e-'+id);
-    if(el){ el.focus(); el.scrollIntoView({block:'nearest',behavior:'smooth'}); }} }
-function audAll(id){ audAllOf=(audAllOf===id?null:id); audRender(); }
-function audMark(id,v){ const c=audState[id]||{}; c.v=(c.v===v?'':v); audState[id]=c; audSave(); audRender(); }
-function audNote(id,v){ const c=audState[id]||{}; c.e=v; audState[id]=c; audSave();
-  const r=document.getElementById('i-'+id);      // keep the icon in step without re-rendering
-  if(r){ const b=r.querySelector('.aud-cm'); if(b) b.classList.toggle('has',!!v); } }
-function audReset(){ if(!confirm('Clear all marks and notes in this browser?'))return;
-  audState={}; audSave(); audRender(); }
-
-function audRows(){
-  return AUD_ITEMS.map(it=>{ const c=audState[it.id]||{}, g=audDocs(it);
-    return {std:'ISO '+it.std, cl:it.cl, req:it.req, lens:audLens(it).join(' / '),
-      docs:g.same.map(d=>d.code).join(', '), other:g.other.map(d=>d.code).join(', '),
-      res:c.v||'', ev:c.e||''}; });
-}
-function audHdr(){
-  audMeta.name=document.getElementById('audName').value;
-  audMeta.date=document.getElementById('audDate').value;
-  audSave();
-  return {n:audMeta.name||'(auditor not named)', d:audMeta.date||new Date().toISOString().slice(0,10)};
-}
-function audXlsx(){
-  const h=audHdr(), r=audRows();
-  const aoa=[['Pack Masters — IMS Clause Conformity Audit'],
-             ['Auditor',h.n,'','Audit Date',h.d],
-             [],
-             ['Standard','Clause','Requirement / Audit Question','SQCDP / HESQ',
-              'Reference Documents','Other-standard Docs','Result','Objective Evidence / Finding']];
-  r.forEach(x=>aoa.push([x.std,x.cl,x.req,x.lens,x.docs,x.other,x.res,x.ev]));
-  const ws=XLSX.utils.aoa_to_sheet(aoa);
-  ws['!cols']=[{wch:10},{wch:9},{wch:70},{wch:26},{wch:30},{wch:22},{wch:8},{wch:46}];
-  ws['!freeze']={xSplit:0,ySplit:4};
-  const wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,ws,'Audit Checklist');
-  XLSX.writeFile(wb,`PackMasters-IMS-Audit-${h.d}.xlsx`);
-}
-function audPdf(){
-  const h=audHdr(), r=audRows();
-  const {jsPDF}=window.jspdf;
-  const doc=new jsPDF({orientation:'landscape',unit:'pt',format:'a4'});
-  doc.setFontSize(15); doc.setTextColor(11,21,36);
-  doc.text('Pack Masters — IMS Clause Conformity Audit',40,40);
-  doc.setFontSize(9.5); doc.setTextColor(90,100,115);
-  doc.text(`Auditor: ${h.n}          Audit Date: ${h.d}          ISO 9001:2015 / 14001:2015 / 45001:2018`,40,58);
-  doc.autoTable({
-    startY:72,
-    head:[['Std','Clause','Requirement / Audit Question','SQCDP / HESQ','Ref. Documents','Result','Evidence / Finding']],
-    body:r.map(x=>[x.std.replace('ISO ',''),x.cl,x.req,x.lens,x.docs||(x.other?'('+x.other+')':'NONE'),x.res,x.ev]),
-    styles:{fontSize:7,cellPadding:3,overflow:'linebreak',valign:'top',lineColor:[228,233,240],lineWidth:.5},
-    headStyles:{fillColor:[11,21,36],textColor:255,fontSize:7,fontStyle:'bold'},
-    alternateRowStyles:{fillColor:[248,250,252]},
-    columnStyles:{0:{cellWidth:32},1:{cellWidth:34},2:{cellWidth:250},3:{cellWidth:96},
-                  4:{cellWidth:120},5:{cellWidth:34,halign:'center',fontStyle:'bold'},6:{cellWidth:'auto'}},
-    didParseCell:d=>{ if(d.section==='body'&&d.column.index===5){
-        const v=d.cell.raw;
-        if(v==='C') d.cell.styles.textColor=[20,137,63];
-        else if(v==='NC') d.cell.styles.textColor=[207,43,43];
-        else if(v==='OFI') d.cell.styles.textColor=[192,122,16]; } },
-    margin:{left:40,right:40},
-  });
-  doc.save(`PackMasters-IMS-Audit-${h.d}.pdf`);
-}
-function audMail(){
-  const h=audHdr(), r=audRows();
-  const n={C:0,NC:0,OFI:0,NA:0};
-  r.forEach(x=>{ if(n[x.res]!==undefined) n[x.res]++; });
-  const nc=r.filter(x=>x.res==='NC'), ofi=r.filter(x=>x.res==='OFI');
-  const L=['Pack Masters — IMS Clause Conformity Audit','',
-    'Auditor    : '+h.n,'Audit Date : '+h.d,
-    'Standards  : ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018','',
-    `Result: ${n.C} conforming, ${n.NC} non-conforming, ${n.OFI} OFI, ${n.NA} not applicable`,
-    `Clauses assessed: ${n.C+n.NC+n.OFI+n.NA} of ${r.length}`,''];
-  if(nc.length){ L.push('NON-CONFORMITIES'); nc.forEach(x=>L.push(` - ${x.std} ${x.cl}: ${x.req}`,
-    `   Finding: ${x.ev||'(not recorded)'}`)); L.push(''); }
-  if(ofi.length){ L.push('OPPORTUNITIES FOR IMPROVEMENT'); ofi.forEach(x=>L.push(` - ${x.std} ${x.cl}: ${x.ev||x.req}`)); L.push(''); }
-  L.push('Full checklist attached as Excel/PDF export.');
-  const body=encodeURIComponent(L.join('\n')).slice(0,7500);
-  window.location.href=`mailto:?subject=${encodeURIComponent('IMS Audit — Pack Masters — '+h.d)}&body=${body}`;
-}
-
-function audToggle(){
-  const on=document.body.classList.toggle('aud-on');
-  const b=document.getElementById('audBtn');
-  b.classList.toggle('on',on);
-  b.querySelector('.tx').textContent=on?'Exit Auditor':'Auditor Mode';
-  if(on){
-    if(!AUD_UNMAPPED.length) AUD_UNMAPPED=audUnmapped();
-    document.getElementById('audName').value=audMeta.name||'';
-    document.getElementById('audDate').value=audMeta.date||new Date().toISOString().slice(0,10);
-    audRender();
-  }
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-document.addEventListener('click',e=>{
-  const t=e.target.closest('#aud .aud-t');
-  if(t){ audF.tab=t.dataset.tab; audOpen=null; audRender(); return; }
-  const c=e.target.closest('#aud .aud-c');
-  if(c){ audF[c.dataset.f]=c.dataset.v; audRender(); }
-});
-document.addEventListener('input',e=>{
-  if(e.target.id==='audQ'){ audF.q=e.target.value; audRender(); }
-  if(e.target.id==='audName'){ audMeta.name=e.target.value; audSave(); }
-  if(e.target.id==='audDate'){ audMeta.date=e.target.value; audSave(); }
-});
-</script>
 
 
 <script id="pf-js">
@@ -1177,6 +907,333 @@ window.go=function(){ _go.apply(this,arguments); render(); };
 if(document.readyState!=='loading') render();
 else document.addEventListener('DOMContentLoaded',render);
 })();
+</script>
+
+
+<div id="aud">
+  <div class="aud-bar">
+    <div class="aud-bar-in">
+      <div class="aud-id">
+        <input class="aud-in" id="audName" placeholder="Auditor name" autocomplete="name">
+        <input class="aud-in" id="audDate" type="date" style="flex:0 0 138px">
+      </div>
+      <div class="aud-ring" title="Conformity of clauses assessed">
+        <svg width="34" height="34" viewBox="0 0 36 36">
+          <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="4"/>
+          <circle id="audArc" cx="18" cy="18" r="15" fill="none" stroke="#f0c14b" stroke-width="4"
+                  stroke-linecap="round" stroke-dasharray="0 94.2"
+                  transform="rotate(-90 18 18)" style="transition:stroke-dasharray .5s cubic-bezier(.2,.8,.3,1)"/>
+        </svg>
+        <div><b id="audPct">0%</b><span id="audDone">0 of 96</span></div>
+      </div>
+      <div class="aud-x">
+        <button class="aud-b gold" onclick="audXlsx()">Excel</button>
+        <button class="aud-b" onclick="audPdf()">PDF</button>
+        <button class="aud-b" onclick="audMail()">Email</button>
+        <button class="aud-b" onclick="audReset()" title="Clear all marks">Reset</button>
+        <button class="aud-b exit" onclick="audToggle()">Exit</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="aud-wrap">
+    <div class="aud-kpi" id="audKpi"></div>
+    <div class="aud-tabs" id="audTabs"></div>
+    <div class="aud-f" id="audF1"></div>
+    <div class="aud-f">
+      <span class="lb">Status</span>
+      <button class="aud-c on" data-f="st" data-v="">All</button>
+      <button class="aud-c" data-f="st" data-v="_">Open</button>
+      <button class="aud-c" data-f="st" data-v="C">C</button>
+      <button class="aud-c" data-f="st" data-v="NC">NC</button>
+      <button class="aud-c" data-f="st" data-v="OFI">OFI</button>
+      <button class="aud-c" data-f="st" data-v="NA">N/A</button>
+      <button class="aud-c" data-f="st" data-v="!">No doc</button>
+      <input class="aud-s" id="audQ" placeholder="Search clause, requirement or document...">
+    </div>
+    <div id="audList"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script id="aud-js">
+const AUD_ITEMS = [{"id": "9001-4.1", "std": "9001", "cl": "4.1", "req": "Are external and internal issues relevant to the QMS determined, monitored and reviewed?", "sq": "Q", "he": "Q", "sec": "4"}, {"id": "9001-4.2", "std": "9001", "cl": "4.2", "req": "Are interested parties and their relevant requirements determined and monitored?", "sq": "QD", "he": "Q", "sec": "4"}, {"id": "9001-4.3", "std": "9001", "cl": "4.3", "req": "Is the scope of the QMS documented, with any non-applicable clause justified?", "sq": "Q", "he": "Q", "sec": "4"}, {"id": "9001-4.4", "std": "9001", "cl": "4.4", "req": "Are the QMS processes, their sequence, interaction, criteria and measures defined?", "sq": "QD", "he": "Q", "sec": "4"}, {"id": "9001-5.1", "std": "9001", "cl": "5.1", "req": "Does top management demonstrate leadership - accountability, resources, promoting improvement?", "sq": "QP", "he": "Q", "sec": "5"}, {"id": "9001-5.2", "std": "9001", "cl": "5.2", "req": "Is the quality policy documented, communicated and available to interested parties?", "sq": "Q", "he": "Q", "sec": "5"}, {"id": "9001-5.3", "std": "9001", "cl": "5.3", "req": "Are roles, responsibilities and authorities assigned, communicated and understood?", "sq": "P", "he": "Q", "sec": "5"}, {"id": "9001-6.1", "std": "9001", "cl": "6.1", "req": "Are risks and opportunities determined, with actions planned and their effectiveness evaluated?", "sq": "QC", "he": "Q", "sec": "6"}, {"id": "9001-6.2", "std": "9001", "cl": "6.2", "req": "Are quality objectives measurable, monitored, communicated and updated, with plans to achieve them?", "sq": "QCD", "he": "Q", "sec": "6"}, {"id": "9001-6.3", "std": "9001", "cl": "6.3", "req": "Are changes to the QMS planned and carried out in a controlled manner?", "sq": "QD", "he": "Q", "sec": "6"}, {"id": "9001-7.1.1", "std": "9001", "cl": "7.1.1", "req": "Are the resources needed for the QMS determined and provided?", "sq": "CP", "he": "Q", "sec": "7"}, {"id": "9001-7.1.2", "std": "9001", "cl": "7.1.2", "req": "Are the persons necessary for effective operation of the QMS determined and provided?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.1.3", "std": "9001", "cl": "7.1.3", "req": "Is infrastructure determined, provided and maintained (buildings, equipment, utilities)?", "sq": "CD", "he": "Q", "sec": "7"}, {"id": "9001-7.1.4", "std": "9001", "cl": "7.1.4", "req": "Is the environment for the operation of processes determined, provided and maintained?", "sq": "SP", "he": "HSQ", "sec": "7"}, {"id": "9001-7.1.5", "std": "9001", "cl": "7.1.5", "req": "Are monitoring and measuring resources suitable, calibrated, identified and safeguarded?", "sq": "QC", "he": "Q", "sec": "7"}, {"id": "9001-7.1.6", "std": "9001", "cl": "7.1.6", "req": "Is the organisational knowledge needed for processes determined and maintained?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.2", "std": "9001", "cl": "7.2", "req": "Is competence determined, and are training and its effectiveness evaluated and recorded?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.3", "std": "9001", "cl": "7.3", "req": "Are persons aware of the policy, objectives, their contribution and the implications of nonconformity?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.4", "std": "9001", "cl": "7.4", "req": "Are internal and external communications on the QMS determined - what, when, with whom, how?", "sq": "PD", "he": "Q", "sec": "7"}, {"id": "9001-7.5", "std": "9001", "cl": "7.5", "req": "Is documented information controlled - identification, review, approval, version, distribution, retention?", "sq": "Q", "he": "Q", "sec": "7"}, {"id": "9001-8.1", "std": "9001", "cl": "8.1", "req": "Is operational planning and control implemented, including criteria, resources and retained records?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.1", "std": "9001", "cl": "8.2.1", "req": "Is customer communication defined, including enquiries, contracts, feedback and complaints?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.2", "std": "9001", "cl": "8.2.2", "req": "Are requirements for products and services determined, including statutory and regulatory?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.3", "std": "9001", "cl": "8.2.3", "req": "Are requirements reviewed before commitment to supply, with records of the review?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.4", "std": "9001", "cl": "8.2.4", "req": "Are changes to product requirements recorded and relevant persons made aware?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.4", "std": "9001", "cl": "8.4", "req": "Are externally provided processes, products and services controlled to specified requirements?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.4.1", "std": "9001", "cl": "8.4.1", "req": "Are external providers evaluated, selected, monitored and re-evaluated against defined criteria?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.4.2", "std": "9001", "cl": "8.4.2", "req": "Is the type and extent of control over external providers defined and verified?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-8.4.3", "std": "9001", "cl": "8.4.3", "req": "Is information communicated to external providers adequate before it is communicated?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.1", "std": "9001", "cl": "8.5.1", "req": "Is production carried out under controlled conditions - documented information, monitoring, suitable resources, competent persons?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.2", "std": "9001", "cl": "8.5.2", "req": "Are outputs identified and is traceability maintained where required?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.3", "std": "9001", "cl": "8.5.3", "req": "Is property belonging to customers or external providers identified, verified, protected and safeguarded?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-8.5.4", "std": "9001", "cl": "8.5.4", "req": "Are outputs preserved during production and delivery - handling, storage, packaging, protection?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.5", "std": "9001", "cl": "8.5.5", "req": "Are post-delivery activities addressed, including statutory requirements and customer feedback?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.6", "std": "9001", "cl": "8.5.6", "req": "Are changes to production reviewed and controlled, with records of the review and authorisation?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.6", "std": "9001", "cl": "8.6", "req": "Is release of products and services verified against acceptance criteria, with evidence and authorisation?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.7", "std": "9001", "cl": "8.7", "req": "Is nonconforming output identified, controlled and dispositioned, with records retained?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-9.1.1", "std": "9001", "cl": "9.1.1", "req": "Is monitoring and measurement determined - what, by what method, when, and when results are analysed?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-9.1.2", "std": "9001", "cl": "9.1.2", "req": "Is customer satisfaction monitored, with methods for obtaining and reviewing the information?", "sq": "QD", "he": "Q", "sec": "9"}, {"id": "9001-9.1.3", "std": "9001", "cl": "9.1.3", "req": "Are data analysed and evaluated to assess conformity, satisfaction, performance and external providers?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-9.2", "std": "9001", "cl": "9.2", "req": "Are internal audits conducted at planned intervals by objective auditors, with results reported?", "sq": "Q", "he": "Q", "sec": "9"}, {"id": "9001-9.3", "std": "9001", "cl": "9.3", "req": "Is management review conducted at planned intervals covering all required inputs and outputs?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-10.1", "std": "9001", "cl": "10.1", "req": "Are opportunities for improvement determined, selected and implemented?", "sq": "QCD", "he": "Q", "sec": "10"}, {"id": "9001-10.2", "std": "9001", "cl": "10.2", "req": "Are nonconformities reacted to, root causes evaluated, action taken and effectiveness reviewed?", "sq": "QC", "he": "Q", "sec": "10"}, {"id": "9001-10.3", "std": "9001", "cl": "10.3", "req": "Is the suitability, adequacy and effectiveness of the QMS continually improved?", "sq": "QCD", "he": "Q", "sec": "10"}, {"id": "14001-4.1", "std": "14001", "cl": "4.1", "req": "Are internal and external issues affecting environmental performance determined, including conditions?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-4.2", "std": "14001", "cl": "4.2", "req": "Are interested parties, their needs and which become compliance obligations determined?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-4.3", "std": "14001", "cl": "4.3", "req": "Is the EMS scope determined and available as documented information?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-5.2", "std": "14001", "cl": "5.2", "req": "Is the environmental policy appropriate, committing to protection, compliance and continual improvement?", "sq": "", "he": "E", "sec": "5"}, {"id": "14001-6.1.1", "std": "14001", "cl": "6.1.1", "req": "Are risks and opportunities relating to aspects, obligations and issues determined?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.1.2", "std": "14001", "cl": "6.1.2", "req": "Are environmental aspects and impacts determined, with criteria used to identify significant aspects?", "sq": "", "he": "E", "sec": "6"}, {"id": "14001-6.1.3", "std": "14001", "cl": "6.1.3", "req": "Are compliance obligations determined, accessible and taken into account in the EMS?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.1.4", "std": "14001", "cl": "6.1.4", "req": "Is action planned to address significant aspects, obligations, risks and opportunities?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.2", "std": "14001", "cl": "6.2", "req": "Are environmental objectives established at relevant functions, measurable and monitored?", "sq": "CD", "he": "E", "sec": "6"}, {"id": "14001-7.2", "std": "14001", "cl": "7.2", "req": "Is competence for persons affecting environmental performance determined and evidenced?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.3", "std": "14001", "cl": "7.3", "req": "Are persons aware of the policy, significant aspects and implications of not conforming?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.4", "std": "14001", "cl": "7.4", "req": "Are internal and external environmental communications planned and carried out?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.5", "std": "14001", "cl": "7.5", "req": "Is EMS documented information created, updated and controlled?", "sq": "", "he": "E", "sec": "7"}, {"id": "14001-8.1", "std": "14001", "cl": "8.1", "req": "Are processes needed to meet EMS requirements planned, implemented and controlled, including outsourced?", "sq": "CD", "he": "E", "sec": "8"}, {"id": "14001-8.2", "std": "14001", "cl": "8.2", "req": "Are emergency situations identified, with planned response, testing and periodic review?", "sq": "S", "he": "HES", "sec": "8"}, {"id": "14001-9.1.1", "std": "14001", "cl": "9.1.1", "req": "Is environmental performance monitored, measured, analysed and evaluated with calibrated equipment?", "sq": "C", "he": "E", "sec": "9"}, {"id": "14001-9.1.2", "std": "14001", "cl": "9.1.2", "req": "Is compliance with obligations evaluated at a determined frequency, with knowledge of status maintained?", "sq": "C", "he": "E", "sec": "9"}, {"id": "14001-9.2", "std": "14001", "cl": "9.2", "req": "Are internal EMS audits conducted at planned intervals with results reported to management?", "sq": "", "he": "E", "sec": "9"}, {"id": "14001-9.3", "std": "14001", "cl": "9.3", "req": "Does management review cover EMS status, aspects, obligations, objectives and performance?", "sq": "CD", "he": "E", "sec": "9"}, {"id": "14001-10.2", "std": "14001", "cl": "10.2", "req": "Are environmental nonconformities corrected, causes evaluated and the EMS updated?", "sq": "C", "he": "E", "sec": "10"}, {"id": "14001-10.3", "std": "14001", "cl": "10.3", "req": "Is the EMS continually improved to enhance environmental performance?", "sq": "C", "he": "E", "sec": "10"}, {"id": "45001-4.1", "std": "45001", "cl": "4.1", "req": "Are internal and external issues relevant to OH&S performance determined?", "sq": "S", "he": "HS", "sec": "4"}, {"id": "45001-4.2", "std": "45001", "cl": "4.2", "req": "Are workers and other interested parties and their needs determined, including legal requirements?", "sq": "SP", "he": "HS", "sec": "4"}, {"id": "45001-4.3", "std": "45001", "cl": "4.3", "req": "Is the OH&S management system scope determined and documented?", "sq": "S", "he": "HS", "sec": "4"}, {"id": "45001-5.1", "std": "45001", "cl": "5.1", "req": "Does top management take overall responsibility for preventing work-related injury and ill health?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.2", "std": "45001", "cl": "5.2", "req": "Does the OH&S policy commit to safe conditions, hazard elimination, consultation and improvement?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.3", "std": "45001", "cl": "5.3", "req": "Are OH&S roles, responsibilities and authorities assigned and communicated at all levels?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.4", "std": "45001", "cl": "5.4", "req": "Are workers consulted and participating at all applicable levels, with barriers removed?", "sq": "SP", "he": "HSQ", "sec": "5"}, {"id": "45001-6.1.1", "std": "45001", "cl": "6.1.1", "req": "Are risks and opportunities determined, taking account of hazards, legal requirements and workers?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.1.2", "std": "45001", "cl": "6.1.2", "req": "Is hazard identification ongoing and proactive, covering routine, non-routine and emergency situations?", "sq": "SP", "he": "HS", "sec": "6"}, {"id": "45001-6.1.2.2", "std": "45001", "cl": "6.1.2.2", "req": "Are OH&S risks assessed using defined methodology and criteria, and applied proactively?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.1.3", "std": "45001", "cl": "6.1.3", "req": "Are legal and other requirements determined, accessible, and kept up to date?", "sq": "SC", "he": "HS", "sec": "6"}, {"id": "45001-6.1.4", "std": "45001", "cl": "6.1.4", "req": "Is action planned to address hazards, risks, legal requirements and emergency preparedness?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.2", "std": "45001", "cl": "6.2", "req": "Are OH&S objectives established, measurable, monitored, communicated and updated?", "sq": "SCD", "he": "HS", "sec": "6"}, {"id": "45001-7.1", "std": "45001", "cl": "7.1", "req": "Are the resources needed for the OH&S management system determined and provided?", "sq": "SC", "he": "HS", "sec": "7"}, {"id": "45001-7.2", "std": "45001", "cl": "7.2", "req": "Is worker competence for hazard identification and safe work determined, provided and evaluated?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.3", "std": "45001", "cl": "7.3", "req": "Are workers aware of the policy, hazards, incidents and their right to remove themselves from danger?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.4", "std": "45001", "cl": "7.4", "req": "Is OH&S information communicated internally and externally, accounting for language and literacy?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.5", "std": "45001", "cl": "7.5", "req": "Is OH&S documented information created, updated and controlled?", "sq": "S", "he": "HS", "sec": "7"}, {"id": "45001-8.1.1", "std": "45001", "cl": "8.1.1", "req": "Are operational controls established, implemented and maintained to meet OH&S requirements?", "sq": "SD", "he": "HS", "sec": "8"}, {"id": "45001-8.1.2", "std": "45001", "cl": "8.1.2", "req": "Is the hierarchy of controls applied - eliminate, substitute, engineering, administrative, PPE?", "sq": "SP", "he": "HS", "sec": "8"}, {"id": "45001-8.1.3", "std": "45001", "cl": "8.1.3", "req": "Is change managed - new products, processes, equipment, legal changes and knowledge of hazards?", "sq": "SD", "he": "HS", "sec": "8"}, {"id": "45001-8.1.4", "std": "45001", "cl": "8.1.4", "req": "Is procurement controlled, including contractors and outsourced functions, to conform to the OH&SMS?", "sq": "SCD", "he": "HS", "sec": "8"}, {"id": "45001-8.2", "std": "45001", "cl": "8.2", "req": "Is emergency preparedness planned, with response, periodic testing, training and communication?", "sq": "SP", "he": "HES", "sec": "8"}, {"id": "45001-9.1.1", "std": "45001", "cl": "9.1.1", "req": "Is OH&S performance monitored and measured, with criteria and calibrated equipment?", "sq": "SC", "he": "HS", "sec": "9"}, {"id": "45001-9.1.2", "std": "45001", "cl": "9.1.2", "req": "Is compliance with legal and other requirements evaluated and its status maintained?", "sq": "SC", "he": "HS", "sec": "9"}, {"id": "45001-9.2", "std": "45001", "cl": "9.2", "req": "Are internal OH&S audits conducted at planned intervals, with results reported to workers?", "sq": "SP", "he": "HS", "sec": "9"}, {"id": "45001-9.3", "std": "45001", "cl": "9.3", "req": "Does management review cover incidents, participation, hazards, risks, and adequacy of resources?", "sq": "SCD", "he": "HS", "sec": "9"}, {"id": "45001-10.1", "std": "45001", "cl": "10.1", "req": "Are opportunities for improvement determined and improvement actions implemented?", "sq": "SCD", "he": "HS", "sec": "10"}, {"id": "45001-10.2", "std": "45001", "cl": "10.2", "req": "Are incidents and nonconformities investigated, root causes determined and controls reviewed?", "sq": "SP", "he": "HS", "sec": "10"}, {"id": "45001-10.3", "std": "45001", "cl": "10.3", "req": "Is the OH&S management system continually improved, with worker participation?", "sq": "SP", "he": "HS", "sec": "10"}];
+const SQ_NAME={S:'Safety',Q:'Quality',C:'Cost',D:'Delivery',P:'People'};
+const HE_NAME={H:'Health',E:'Environment',S:'Safety',Q:'Quality'};
+const STD_DOT={'9001':'#1d5fc4','14001':'#14893f','45001':'#c07a10'};
+const AUD_KEY='pm-audit-v2';
+let audState={}, audMeta={name:'',date:''};
+try{ const raw=JSON.parse(localStorage.getItem(AUD_KEY)||'{}');
+     audState=raw.marks||{}; audMeta=raw.meta||{name:'',date:''}; }catch(e){}
+let audF={tab:'', std:'', lens:'', st:'', q:''};
+let audOpen=null;      // clause whose remark box is open
+let audAllOf=null;     // clause showing its full document list
+const MARK_T={C:'Conforming',NC:'Non-conformity',OFI:'Opportunity for improvement',NA:'Not applicable'};
+const MARK_I={C:'✓',NC:'✕',OFI:'△',NA:'–'};   // tick, cross, triangle, dash
+const MARK_S={C:'Conforms',NC:'Non-conf',OFI:'OFI',NA:'N/A'};
+const audEsc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function audSave(){ try{localStorage.setItem(AUD_KEY,JSON.stringify({marks:audState,meta:audMeta}));}catch(e){} }
+
+function audClauseHit(cl,target){
+  if(!cl) return false;
+  const rng=cl.match(/^\s*(\d+)(?:\.\d+)*\s*[-–—]\s*(\d+)(?:\.\d+)*\s*$/);
+  if(rng){const top=parseInt(target,10); return top>=parseInt(rng[1],10)&&top<=parseInt(rng[2],10);}
+  return cl.split(/[^0-9.]+/).filter(Boolean).some(tok=>{
+    tok=tok.replace(/\.$/,'');
+    return tok===target||tok.indexOf(target+'.')===0||target.indexOf(tok+'.')===0;});
+}
+// a document's primary clause plus any it explicitly declares coverage of
+function audCovers(d,target){
+  if(audClauseHit(String(d.clause||''),target)) return true;
+  return (d.covers||[]).some(c=>audClauseHit(String(c),target));
+}
+function audDocs(it){
+  if(typeof D==='undefined') return {same:[],other:[]};
+  const same=[],other=[];
+  D.forEach(d=>{ if(!audCovers(d,it.cl)) return;
+    const s=String(d.standard||'');
+    (!s||s===it.std)?same.push(d):other.push(d); });
+  // the document written for this clause is more use to an auditor than the
+  // manual, which declares coverage of nearly all of them - so list it first
+  const rank=d=>audClauseHit(String(d.clause||''),it.cl)?0:1;
+  same.sort((a,b)=>rank(a)-rank(b)); other.sort((a,b)=>rank(a)-rank(b));
+  return {same,other};
+}
+// documents that no clause check reaches - shown in their own tab
+function audUnmapped(){
+  if(typeof D==='undefined') return [];
+  const seen=new Set();
+  AUD_ITEMS.forEach(it=>{const g=audDocs(it); g.same.concat(g.other).forEach(d=>seen.add(d.code));});
+  return D.filter(d=>!seen.has(d.code));
+}
+let AUD_UNMAPPED=[];
+
+function audLens(it){ return it.sq.split('').map(x=>SQ_NAME[x]).concat(
+    it.he.split('').map(x=>HE_NAME[x])).filter((v,i,a)=>a.indexOf(v)===i); }
+
+function audMatch(it,docs){
+  if(audF.tab && audF.tab!=='gap' && audF.tab!=='un' && it.sec!==audF.tab) return false;
+  if(audF.tab==='gap' && (docs.same.length||docs.other.length)) return false;
+  if(audF.std && it.std!==audF.std) return false;
+  if(audF.lens && audLens(it).indexOf(audF.lens)<0) return false;
+  const st=(audState[it.id]||{}).v||'';
+  if(audF.st==='_'&&st) return false;
+  if(audF.st==='!'&&(docs.same.length||docs.other.length)) return false;
+  if(audF.st&&audF.st!=='_'&&audF.st!=='!'&&st!==audF.st) return false;
+  if(audF.q){ const h=(it.cl+' '+it.req+' '+it.std+' '+docs.same.concat(docs.other).map(d=>d.code).join(' ')).toLowerCase();
+    if(h.indexOf(audF.q.toLowerCase())<0) return false; }
+  return true;
+}
+
+function audRender(){
+  const n={C:0,NC:0,OFI:0,NA:0,_:0}; let gaps=0;
+  const rows=[];
+  AUD_ITEMS.forEach(it=>{
+    const docs=audDocs(it);
+    if(!docs.same.length&&!docs.other.length) gaps++;
+    const st=(audState[it.id]||{}).v||'_'; n[st]=(n[st]||0)+1;
+    if(audMatch(it,docs)) rows.push([it,docs]);
+  });
+
+  // tabs
+  const secs=['4','5','6','7','8','9','10'];
+  const cnt=s=>AUD_ITEMS.filter(i=>i.sec===s).length;
+  document.getElementById('audTabs').innerHTML=
+    `<button class="aud-t${audF.tab===''?' on':''}" data-tab="">All<i>${AUD_ITEMS.length}</i></button>`+
+    secs.map(s=>`<button class="aud-t${audF.tab===s?' on':''}" data-tab="${s}">Clause ${s}<i>${cnt(s)}</i></button>`).join('')+
+    `<button class="aud-t${audF.tab==='gap'?' on':''}" data-tab="gap">Gaps<i>${gaps}</i></button>`+
+    `<button class="aud-t${audF.tab==='un'?' on':''}" data-tab="un">Unmapped<i>${AUD_UNMAPPED.length}</i></button>`;
+
+  // filter row 1
+  const chip=(f,v,l)=>`<button class="aud-c${audF[f]===v?' on':''}" data-f="${f}" data-v="${v}">${l}</button>`;
+  document.getElementById('audF1').innerHTML=
+    '<span class="lb">Std</span>'+chip('std','','All')+chip('std','9001','9001')+chip('std','14001','14001')+chip('std','45001','45001')+
+    '<span class="lb" style="margin-left:6px">Lens</span>'+chip('lens','','All')+
+    ['Safety','Quality','Cost','Delivery','People','Health','Environment'].map(x=>chip('lens',x,x)).join('');
+
+  // KPI
+  const done=n.C+n.NC+n.OFI+n.NA;
+  const pct=(n.C+n.NC+n.OFI)?Math.round(n.C*100/(n.C+n.NC+n.OFI)):0;
+  document.getElementById('audKpi').innerHTML=
+    `<div class="aud-k"><b>${AUD_ITEMS.length}</b><span>Clauses</span></div>
+     <div class="aud-k" style="--c:var(--aud-ok)"><b>${n.C}</b><span>Conforming</span></div>
+     <div class="aud-k" style="--c:var(--aud-nc)"><b>${n.NC}</b><span>Non-conf</span></div>
+     <div class="aud-k" style="--c:var(--aud-of)"><b>${n.OFI}</b><span>OFI</span></div>
+     <div class="aud-k" style="--c:var(--aud-na)"><b>${n.NA}</b><span>N/A</span></div>
+     <div class="aud-k"><b>${n._}</b><span>Open</span></div>
+     <div class="aud-k" style="--c:${gaps?'var(--aud-nc)':'var(--aud-ok)'}"><b>${gaps}</b><span>No document</span></div>`;
+  document.getElementById('audPct').textContent=pct+'%';
+  document.getElementById('audDone').textContent=done+' of '+AUD_ITEMS.length;
+  const arc=document.getElementById('audArc');
+  if(arc) arc.setAttribute('stroke-dasharray',(94.2*done/AUD_ITEMS.length).toFixed(1)+' 94.2');
+
+  const list=document.getElementById('audList');
+  if(audF.tab==='un'){
+    list.innerHTML='<div class="aud-grp">Documents no clause check reaches &mdash; signage, pictograms and samples carry no clause reference</div>'+
+      (AUD_UNMAPPED.length?AUD_UNMAPPED.map(d=>
+        `<div class="aud-r">
+          <span class="aud-cl">${d.cat_label||'Doc'}</span>
+          <span class="aud-q">${audEsc(d.title||d.code)}</span>
+          <span class="aud-dl"><a class="aud-d" href="html/${d.code}.html" target="_blank">${d.code}</a></span>
+         </div>`).join('')
+        :'<div class="aud-empty">Every document is reachable from a clause check.</div>');
+    return;
+  }
+  if(!rows.length){ list.innerHTML='<div class="aud-empty">No clause matches these filters.</div>'; return; }
+
+  const groups={};
+  rows.forEach(([it,docs])=>{ (groups[it.sec]=groups[it.sec]||[]).push([it,docs]); });
+  let html='';
+  Object.keys(groups).sort((a,b)=>(+a)-(+b)).forEach(sec=>{
+    html+=`<div class="aud-grp">Clause ${sec}</div>`;
+    groups[sec].forEach(([it,docs])=>{
+      const cur=audState[it.id]||{};
+      // document references, prefilled from the index: primary clause + declared coverage
+      const mk=(d,cls)=>`<a class="aud-d${cls}" href="html/${d.code}.html" target="_blank"
+        title="${audEsc(d.title||d.code)}${cls?' — other standard':''}">${d.code}</a>`;
+      const all=docs.same.map(d=>mk(d,'')).concat(docs.other.map(d=>mk(d,' alt')));
+      const SHOW=3;
+      let dl=all.length
+        ? all.slice(0,SHOW).join('')+(all.length>SHOW
+            ?`<button class="aud-more" onclick="audAll('${it.id}')" title="Show all ${all.length}">+${all.length-SHOW}</button>`:'')
+        : '<span class="aud-none" title="No controlled document declares this clause">none</span>';
+      if(audAllOf===it.id) dl=all.join('');
+      const marks=['C','NC','OFI','NA'].map(v=>
+        `<button class="aud-mb${cur.v===v?' on':''}" data-v="${v}" title="${MARK_T[v]}"
+          onclick="audMark('${it.id}','${v}')"><i>${MARK_I[v]}</i>${MARK_S[v]}</button>`).join('');
+      const open=audOpen===it.id;
+      html+=`<div class="aud-r${cur.v?' m'+cur.v:''}${!all.length?' gap':''}${open?' open':''}" id="i-${it.id}">
+        <div class="aud-r1">
+          <span class="aud-cl">${it.cl}</span>
+          <span class="aud-sd" style="background:${STD_DOT[it.std]}" title="ISO ${it.std}"></span>
+          <span class="aud-q">${audEsc(it.req)}</span>
+          <span class="aud-lens">${audLens(it).map(x=>
+            `<span class="aud-tag ${['Health','Environment'].indexOf(x)>=0?'he':'sq'}" title="${x}">${x[0]}</span>`).join('')}</span>
+        </div>
+        <div class="aud-r2">
+          <span class="aud-dl">${dl}</span>
+          <span class="aud-m">${marks}</span>
+          <button class="aud-cm${cur.e?' has':''}${open?' on':''}" onclick="audFlip('${it.id}')"
+            title="${cur.e?'Remark: '+audEsc(cur.e).slice(0,120):'Add remark'}">&#128172;</button>
+        </div>
+      </div>
+      <div class="aud-cw${open?' on':''}"><div><textarea class="aud-ev" id="e-${it.id}"
+        placeholder="Objective evidence seen / finding — ${it.cl}"
+        oninput="audNote('${it.id}',this.value)">${audEsc(cur.e||'')}</textarea></div></div>`;
+    });
+  });
+  list.innerHTML=html;
+}
+
+function audFlip(id){ audOpen=(audOpen===id?null:id); audRender();
+  if(audOpen){const el=document.getElementById('e-'+id);
+    if(el){ el.focus(); el.scrollIntoView({block:'nearest',behavior:'smooth'}); }} }
+function audAll(id){ audAllOf=(audAllOf===id?null:id); audRender(); }
+function audMark(id,v){ const c=audState[id]||{}; c.v=(c.v===v?'':v); audState[id]=c; audSave(); audRender(); }
+function audNote(id,v){ const c=audState[id]||{}; c.e=v; audState[id]=c; audSave();
+  const r=document.getElementById('i-'+id);      // keep the icon in step without re-rendering
+  if(r){ const b=r.querySelector('.aud-cm'); if(b) b.classList.toggle('has',!!v); } }
+function audReset(){ if(!confirm('Clear all marks and notes in this browser?'))return;
+  audState={}; audSave(); audRender(); }
+
+function audRows(){
+  return AUD_ITEMS.map(it=>{ const c=audState[it.id]||{}, g=audDocs(it);
+    return {std:'ISO '+it.std, cl:it.cl, req:it.req, lens:audLens(it).join(' / '),
+      docs:g.same.map(d=>d.code).join(', '), other:g.other.map(d=>d.code).join(', '),
+      res:c.v||'', ev:c.e||''}; });
+}
+function audHdr(){
+  audMeta.name=document.getElementById('audName').value;
+  audMeta.date=document.getElementById('audDate').value;
+  audSave();
+  return {n:audMeta.name||'(auditor not named)', d:audMeta.date||new Date().toISOString().slice(0,10)};
+}
+function audXlsx(){
+  const h=audHdr(), r=audRows();
+  const aoa=[['Pack Masters — IMS Clause Conformity Audit'],
+             ['Auditor',h.n,'','Audit Date',h.d],
+             [],
+             ['Standard','Clause','Requirement / Audit Question','SQCDP / HESQ',
+              'Reference Documents','Other-standard Docs','Result','Objective Evidence / Finding']];
+  r.forEach(x=>aoa.push([x.std,x.cl,x.req,x.lens,x.docs,x.other,x.res,x.ev]));
+  const ws=XLSX.utils.aoa_to_sheet(aoa);
+  ws['!cols']=[{wch:10},{wch:9},{wch:70},{wch:26},{wch:30},{wch:22},{wch:8},{wch:46}];
+  ws['!freeze']={xSplit:0,ySplit:4};
+  const wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,ws,'Audit Checklist');
+  XLSX.writeFile(wb,`PackMasters-IMS-Audit-${h.d}.xlsx`);
+}
+function audPdf(){
+  const h=audHdr(), r=audRows();
+  const {jsPDF}=window.jspdf;
+  const doc=new jsPDF({orientation:'landscape',unit:'pt',format:'a4'});
+  doc.setFontSize(15); doc.setTextColor(11,21,36);
+  doc.text('Pack Masters — IMS Clause Conformity Audit',40,40);
+  doc.setFontSize(9.5); doc.setTextColor(90,100,115);
+  doc.text(`Auditor: ${h.n}          Audit Date: ${h.d}          ISO 9001:2015 / 14001:2015 / 45001:2018`,40,58);
+  doc.autoTable({
+    startY:72,
+    head:[['Std','Clause','Requirement / Audit Question','SQCDP / HESQ','Ref. Documents','Result','Evidence / Finding']],
+    body:r.map(x=>[x.std.replace('ISO ',''),x.cl,x.req,x.lens,x.docs||(x.other?'('+x.other+')':'NONE'),x.res,x.ev]),
+    styles:{fontSize:7,cellPadding:3,overflow:'linebreak',valign:'top',lineColor:[228,233,240],lineWidth:.5},
+    headStyles:{fillColor:[11,21,36],textColor:255,fontSize:7,fontStyle:'bold'},
+    alternateRowStyles:{fillColor:[248,250,252]},
+    columnStyles:{0:{cellWidth:32},1:{cellWidth:34},2:{cellWidth:250},3:{cellWidth:96},
+                  4:{cellWidth:120},5:{cellWidth:34,halign:'center',fontStyle:'bold'},6:{cellWidth:'auto'}},
+    didParseCell:d=>{ if(d.section==='body'&&d.column.index===5){
+        const v=d.cell.raw;
+        if(v==='C') d.cell.styles.textColor=[20,137,63];
+        else if(v==='NC') d.cell.styles.textColor=[207,43,43];
+        else if(v==='OFI') d.cell.styles.textColor=[192,122,16]; } },
+    margin:{left:40,right:40},
+  });
+  doc.save(`PackMasters-IMS-Audit-${h.d}.pdf`);
+}
+function audMail(){
+  const h=audHdr(), r=audRows();
+  const n={C:0,NC:0,OFI:0,NA:0};
+  r.forEach(x=>{ if(n[x.res]!==undefined) n[x.res]++; });
+  const nc=r.filter(x=>x.res==='NC'), ofi=r.filter(x=>x.res==='OFI');
+  const L=['Pack Masters — IMS Clause Conformity Audit','',
+    'Auditor    : '+h.n,'Audit Date : '+h.d,
+    'Standards  : ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018','',
+    `Result: ${n.C} conforming, ${n.NC} non-conforming, ${n.OFI} OFI, ${n.NA} not applicable`,
+    `Clauses assessed: ${n.C+n.NC+n.OFI+n.NA} of ${r.length}`,''];
+  if(nc.length){ L.push('NON-CONFORMITIES'); nc.forEach(x=>L.push(` - ${x.std} ${x.cl}: ${x.req}`,
+    `   Finding: ${x.ev||'(not recorded)'}`)); L.push(''); }
+  if(ofi.length){ L.push('OPPORTUNITIES FOR IMPROVEMENT'); ofi.forEach(x=>L.push(` - ${x.std} ${x.cl}: ${x.ev||x.req}`)); L.push(''); }
+  L.push('Full checklist attached as Excel/PDF export.');
+  const body=encodeURIComponent(L.join('\n')).slice(0,7500);
+  window.location.href=`mailto:?subject=${encodeURIComponent('IMS Audit — Pack Masters — '+h.d)}&body=${body}`;
+}
+
+function audToggle(){
+  const on=document.body.classList.toggle('aud-on');
+  const b=document.getElementById('audBtn');
+  b.classList.toggle('on',on);
+  b.querySelector('.tx').textContent=on?'Exit Auditor':'Auditor Mode';
+  if(on){
+    if(!AUD_UNMAPPED.length) AUD_UNMAPPED=audUnmapped();
+    document.getElementById('audName').value=audMeta.name||'';
+    document.getElementById('audDate').value=audMeta.date||new Date().toISOString().slice(0,10);
+    audRender();
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('#aud .aud-t');
+  if(t){ audF.tab=t.dataset.tab; audOpen=null; audRender(); return; }
+  const c=e.target.closest('#aud .aud-c');
+  if(c){ audF[c.dataset.f]=c.dataset.v; audRender(); }
+});
+document.addEventListener('input',e=>{
+  if(e.target.id==='audQ'){ audF.q=e.target.value; audRender(); }
+  if(e.target.id==='audName'){ audMeta.name=e.target.value; audSave(); }
+  if(e.target.id==='audDate'){ audMeta.date=e.target.value; audSave(); }
+});
 </script>
 
 </body>
