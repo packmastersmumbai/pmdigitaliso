@@ -241,6 +241,55 @@ td.clause-cell a:hover{text-decoration:underline}
 
 
 
+<style id="pf-compact">
+/* header: title | standard pills | counts | auditor toggle, all on one line */
+.hdr-n{display:flex;align-items:center;gap:9px;margin-left:14px}
+.hdr-n .hn{display:flex;align-items:baseline;gap:4px;font-size:10.5px;font-weight:600;
+ color:#94a3b8;letter-spacing:.02em;white-space:nowrap}
+.hdr-n .hn b{font-size:15px;font-weight:800;color:#0b1524;letter-spacing:-.02em}
+.hdr-n i{width:1px;height:14px;background:#e4e9f0}
+/* one control row: standards, search, clause, sort, reset */
+.ctrl{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);
+ backdrop-filter:saturate(1.4) blur(9px);border-bottom:1px solid #e9edf3}
+.ctrl-in{max-width:1320px;margin:0 auto;padding:9px 18px;display:flex;align-items:center;gap:8px}
+.ctrl .chip{flex:0 0 auto;border:1px solid #e4e9f0;background:var(--cbg,#f4f7fb);
+ color:var(--cfg,#64748b);border-radius:999px;padding:5px 11px;font:700 11px/1 inherit;
+ cursor:pointer;transition:.14s}
+.ctrl .chip:hover{transform:translateY(-1px)}
+.ctrl .chip.on{background:#0b1524;color:#fff;border-color:#0b1524}
+.ctrl .chip.all{background:#eef2f7;color:#334155}
+.ctrl .chip.all.on{background:#0b1524;color:#fff}
+.ctrl .sep{width:1px;height:20px;background:#e4e9f0;margin:0 3px}
+.ctrl .sw{flex:1 1 auto;min-width:150px;position:relative;display:flex;align-items:center}
+.ctrl .sw .si{position:absolute;left:10px;font-size:12px;color:#94a3b8;pointer-events:none}
+.ctrl .sw input{width:100%;height:32px;border:1px solid #e4e9f0;border-radius:8px;
+ padding:0 28px 0 27px;font:500 12.5px/1 inherit;background:#f8fafc;color:#0b1524}
+.ctrl .sw input:focus{outline:0;background:#fff;border-color:#185fa5;
+ box-shadow:0 0 0 3px rgba(24,95,165,.12)}
+.ctrl .sw .sx{position:absolute;right:6px;border:0;background:0;color:#94a3b8;cursor:pointer;
+ font-size:11px;padding:4px;display:none}
+.ctrl .sw input:not(:placeholder-shown)~.sx{display:block}
+.ctrl select,.ctrl .sort-btn,.ctrl .rst{flex:0 0 auto;height:32px;border:1px solid #e4e9f0;
+ border-radius:8px;background:#fff;font:600 11.5px/1 inherit;color:#334155;padding:0 10px;cursor:pointer}
+.ctrl select{max-width:130px}
+.ctrl .sort-btn:hover,.ctrl .rst:hover,.ctrl select:hover{border-color:#cbd5e1;background:#f8fafc}
+.ctrl .rst{background:#0b1524;color:#fff;border-color:#0b1524;font-weight:700}
+.ctrl .rst:hover{background:#1c2a3f;border-color:#1c2a3f}
+@media (max-width:860px){
+  .hdr-n .hn:nth-child(n+3){display:none}
+  .hdr-n i:nth-child(n+2){display:none}
+}
+@media (max-width:720px){
+  .hdr-n{display:none}
+  .ctrl-in{flex-wrap:wrap;gap:6px;padding:8px 12px}
+  .ctrl .sw{flex:1 0 100%;order:-1}
+  .ctrl .sep{display:none}
+  .ctrl select{max-width:none;flex:1 1 auto}
+  .ctrl .chip{padding:5px 9px;font-size:10.5px}
+}
+body.aud-on .ctrl{display:none}
+</style>
+
 <style id="pf-css">
 :root{--pf-ink:#0b1524;--pf-mut:#64748b;--pf-line:#e4e9f0}
 body.pf-on .rbar,body.pf-on #main{display:none!important}
@@ -318,55 +367,6 @@ body.aud-on #pf{display:none!important}
 }
 @media print{.hdr,.toolbar,.chips,.stats,.pf-sp,.pf-fam,.pf-act{display:none!important}
   .pf-body{grid-template-columns:1fr}.pf-pane{position:static}}
-</style>
-
-<style id="pf-compact">
-/* header: title | standard pills | counts | auditor toggle, all on one line */
-.hdr-n{display:flex;align-items:center;gap:9px;margin-left:14px}
-.hdr-n .hn{display:flex;align-items:baseline;gap:4px;font-size:10.5px;font-weight:600;
- color:#94a3b8;letter-spacing:.02em;white-space:nowrap}
-.hdr-n .hn b{font-size:15px;font-weight:800;color:#0b1524;letter-spacing:-.02em}
-.hdr-n i{width:1px;height:14px;background:#e4e9f0}
-/* one control row: standards, search, clause, sort, reset */
-.ctrl{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);
- backdrop-filter:saturate(1.4) blur(9px);border-bottom:1px solid #e9edf3}
-.ctrl-in{max-width:1320px;margin:0 auto;padding:9px 18px;display:flex;align-items:center;gap:8px}
-.ctrl .chip{flex:0 0 auto;border:1px solid #e4e9f0;background:var(--cbg,#f4f7fb);
- color:var(--cfg,#64748b);border-radius:999px;padding:5px 11px;font:700 11px/1 inherit;
- cursor:pointer;transition:.14s}
-.ctrl .chip:hover{transform:translateY(-1px)}
-.ctrl .chip.on{background:#0b1524;color:#fff;border-color:#0b1524}
-.ctrl .chip.all{background:#eef2f7;color:#334155}
-.ctrl .chip.all.on{background:#0b1524;color:#fff}
-.ctrl .sep{width:1px;height:20px;background:#e4e9f0;margin:0 3px}
-.ctrl .sw{flex:1 1 auto;min-width:150px;position:relative;display:flex;align-items:center}
-.ctrl .sw .si{position:absolute;left:10px;font-size:12px;color:#94a3b8;pointer-events:none}
-.ctrl .sw input{width:100%;height:32px;border:1px solid #e4e9f0;border-radius:8px;
- padding:0 28px 0 27px;font:500 12.5px/1 inherit;background:#f8fafc;color:#0b1524}
-.ctrl .sw input:focus{outline:0;background:#fff;border-color:#185fa5;
- box-shadow:0 0 0 3px rgba(24,95,165,.12)}
-.ctrl .sw .sx{position:absolute;right:6px;border:0;background:0;color:#94a3b8;cursor:pointer;
- font-size:11px;padding:4px;display:none}
-.ctrl .sw input:not(:placeholder-shown)~.sx{display:block}
-.ctrl select,.ctrl .sort-btn,.ctrl .rst{flex:0 0 auto;height:32px;border:1px solid #e4e9f0;
- border-radius:8px;background:#fff;font:600 11.5px/1 inherit;color:#334155;padding:0 10px;cursor:pointer}
-.ctrl select{max-width:130px}
-.ctrl .sort-btn:hover,.ctrl .rst:hover,.ctrl select:hover{border-color:#cbd5e1;background:#f8fafc}
-.ctrl .rst{background:#0b1524;color:#fff;border-color:#0b1524;font-weight:700}
-.ctrl .rst:hover{background:#1c2a3f;border-color:#1c2a3f}
-@media (max-width:860px){
-  .hdr-n .hn:nth-child(n+3){display:none}
-  .hdr-n i:nth-child(n+2){display:none}
-}
-@media (max-width:720px){
-  .hdr-n{display:none}
-  .ctrl-in{flex-wrap:wrap;gap:6px;padding:8px 12px}
-  .ctrl .sw{flex:1 0 100%;order:-1}
-  .ctrl .sep{display:none}
-  .ctrl select{max-width:none;flex:1 1 auto}
-  .ctrl .chip{padding:5px 9px;font-size:10.5px}
-}
-body.aud-on .ctrl{display:none}
 </style>
 
 <style id="aud-css">
@@ -511,14 +511,21 @@ body.aud-on{background:
 /* result buttons: an icon carries the meaning, the word confirms it.
    Each has its own colour, so a filled row reads at a glance.            */
 .aud-m{flex:0 0 auto;display:flex;gap:4px;margin-left:auto}
-.aud-mb{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--aud-line);
- background:#fff;border-radius:7px;padding:4px 9px 4px 6px;font:700 10px/1 inherit;
- color:#8b96a5;cursor:pointer;transition:.13s}
-.aud-mb i{font-style:normal;font-size:11px;line-height:1;width:13px;text-align:center}
-.aud-mb:hover{background:#f6f8fb;color:var(--aud-ink);border-color:#cfd8e3}
+/* icon only - the glyph and its colour carry the meaning; the word is in the
+   tooltip and in every export */
+.aud-mb{display:inline-flex;align-items:center;justify-content:center;
+ width:27px;height:26px;padding:0;border:1px solid var(--aud-line);
+ background:#fff;border-radius:7px;cursor:pointer;transition:.13s}
+.aud-mb i{font-style:normal;font-size:12.5px;line-height:1}
+.aud-mb[data-v=C]{color:#8fc0a3}
+.aud-mb[data-v=NC]{color:#dda0a0}
+.aud-mb[data-v=OFI]{color:#dcbe8a}
+.aud-mb[data-v=NA]{color:#b6bfcc}
+.aud-mb:hover{background:#f6f8fb;border-color:#cfd8e3;transform:translateY(-1px)}
 .aud-mb[data-v=C]:hover{color:var(--aud-ok);border-color:var(--aud-ok)}
 .aud-mb[data-v=NC]:hover{color:var(--aud-nc);border-color:var(--aud-nc)}
 .aud-mb[data-v=OFI]:hover{color:var(--aud-of);border-color:var(--aud-of)}
+.aud-mb[data-v=NA]:hover{color:var(--aud-na);border-color:var(--aud-na)}
 .aud-mb.on{color:#fff}
 .aud-mb.on[data-v=C]{background:var(--aud-ok);border-color:var(--aud-ok);
  box-shadow:0 2px 9px -3px rgba(20,137,63,.85)}
@@ -555,13 +562,13 @@ body.aud-on{background:
   .aud-id{order:-1;width:100%;flex:1 0 100%}
   .aud-q{font-size:12.6px}
   .aud-dl{flex:1 0 100%;margin-left:0;order:1}
-  .aud-m{order:2;margin-left:0;flex:1 1 auto;justify-content:space-between}
-  .aud-mb{flex:1 1 0;justify-content:center;padding:7px 4px}
+  .aud-m{order:2;margin-left:auto;gap:5px}
+  .aud-mb{width:32px;height:30px}
+  .aud-mb i{font-size:14px}
   .aud-cm{order:3;width:32px;height:31px}
   .aud-k{min-width:76px;padding:7px 10px}
   .aud-k b{font-size:17px}
 }
-@media (max-width:380px){ .aud-mb span,.aud-mb{font-size:9.5px} }
 @media print{
   .hdr,.aud-bar,.aud-tabs,.aud-f,.aud-more{display:none!important}
   body.aud-on{background:#fff}
@@ -800,8 +807,6 @@ function pane(d){
     <div class="pf-act">
       <a class="pf-b" href="${esc(d.url||('html/'+d.code+'.html'))}" target="_blank" rel="noopener">
         <i class="ti ti-external-link" aria-hidden="true"></i> Open</a>
-      ${qr?`<button class="pf-b" onclick="openQR('${esc(d.code)}',${JSON.stringify(d.title)},${JSON.stringify(d.url||'')})">
-        <i class="ti ti-qrcode" aria-hidden="true"></i> QR</button>`:''}
     </div></div>`;
 }
 
@@ -972,7 +977,6 @@ let audOpen=null;      // clause whose remark box is open
 let audAllOf=null;     // clause showing its full document list
 const MARK_T={C:'Conforming',NC:'Non-conformity',OFI:'Opportunity for improvement',NA:'Not applicable'};
 const MARK_I={C:'✓',NC:'✕',OFI:'△',NA:'–'};   // tick, cross, triangle, dash
-const MARK_S={C:'Conforms',NC:'Non-conf',OFI:'OFI',NA:'N/A'};
 const audEsc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
   .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 
@@ -1104,7 +1108,7 @@ function audRender(){
       if(audAllOf===it.id) dl=all.join('');
       const marks=['C','NC','OFI','NA'].map(v=>
         `<button class="aud-mb${cur.v===v?' on':''}" data-v="${v}" title="${MARK_T[v]}"
-          onclick="audMark('${it.id}','${v}')"><i>${MARK_I[v]}</i>${MARK_S[v]}</button>`).join('');
+          onclick="audMark('${it.id}','${v}')" aria-label="${MARK_T[v]}"><i>${MARK_I[v]}</i></button>`).join('');
       const open=audOpen===it.id;
       html+=`<div class="aud-r${cur.v?' m'+cur.v:''}${!all.length?' gap':''}${open?' open':''}" id="i-${it.id}">
         <div class="aud-r1">
