@@ -240,74 +240,174 @@ td.clause-cell a:hover{text-decoration:underline}
 
 
 
+
 <style id="aud-css">
-.aud-toggle{margin-left:auto;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:999px;padding:7px 15px;
-  font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.15s}
-.aud-toggle:hover{background:rgba(255,255,255,.24)}
-.aud-toggle.on{background:#fff;color:#0f2a44;border-color:#fff}
-.aud-toggle .dot{width:8px;height:8px;border-radius:50%;background:#94a3b8}
-.aud-toggle.on .dot{background:#16a34a}
-#aud{display:none;max-width:1240px;margin:0 auto;padding:18px 20px 60px}
-body.aud-on #aud{display:block}
+:root{--aud-ink:#0b1524;--aud-mut:#64748b;--aud-line:#e4e9f0;--aud-acc:#c8951f;
+ --aud-ok:#14893f;--aud-nc:#cf2b2b;--aud-of:#c07a10;--aud-na:#7c8794;--aud-shadow:0 1px 2px rgba(11,21,36,.06),0 8px 24px -12px rgba(11,21,36,.18)}
+
+/* ── toggle in the portal header ───────────────────────────── */
+.aud-toggle{margin-left:auto;display:inline-flex;align-items:center;gap:7px;
+ background:linear-gradient(180deg,#f0c14b 0%,#d9a01f 100%);
+ color:#2b1d00;border:0;border-radius:999px;padding:9px 17px;font:700 13px/1 inherit;
+ cursor:pointer;letter-spacing:.01em;box-shadow:0 2px 10px rgba(217,160,31,.45);
+ transition:transform .16s cubic-bezier(.2,.8,.3,1),box-shadow .16s,filter .16s;white-space:nowrap}
+.aud-toggle:hover{transform:translateY(-1px);box-shadow:0 5px 18px rgba(217,160,31,.55);filter:brightness(1.04)}
+.aud-toggle:active{transform:translateY(0)}
+.aud-toggle .ic{font-size:14px;line-height:1}
+.aud-toggle.on{background:linear-gradient(180deg,#1ec37a 0%,#12a163 100%);color:#04241a;
+ box-shadow:0 2px 10px rgba(18,161,99,.5)}
+
+/* ── shell ─────────────────────────────────────────────────── */
+#aud{display:none}
+body.aud-on #aud{display:block;animation:audIn .3s cubic-bezier(.2,.8,.3,1)}
 body.aud-on .stats,body.aud-on .chips,body.aud-on .rbar,body.aud-on #main,
 body.aud-on .toolbar{display:none!important}
-.aud-hd{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between;margin-bottom:14px}
-.aud-hd h2{margin:0;font-size:20px;font-weight:800;color:#0f2a44;letter-spacing:-.01em}
-.aud-hd p{margin:3px 0 0;font-size:12px;color:#64748b}
-.aud-acts{display:flex;gap:8px;flex-wrap:wrap}
-.aud-btn{border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:7px;padding:7px 13px;
-  font-size:12px;font-weight:600;cursor:pointer}
-.aud-btn:hover{background:#f1f5f9}
-.aud-btn.pri{background:#0f2a44;color:#fff;border-color:#0f2a44}
-.aud-sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin-bottom:12px}
-.aud-card{background:#fff;border:1px solid #e2e8f0;border-radius:9px;padding:9px 12px}
-.aud-card b{display:block;font-size:21px;font-weight:800;line-height:1.1}
-.aud-card span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#64748b}
-.aud-bar{height:9px;border-radius:5px;background:#e2e8f0;overflow:hidden;display:flex;margin-bottom:14px}
-.aud-bar i{display:block;height:100%}
-.aud-filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px;align-items:center}
-.aud-filters .lbl{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
-  color:#64748b;margin-right:2px}
-.aud-chip{border:1px solid #cbd5e1;background:#fff;border-radius:999px;padding:5px 12px;font-size:12px;
-  font-weight:600;color:#475569;cursor:pointer}
-.aud-chip.on{background:#0f2a44;color:#fff;border-color:#0f2a44}
-.aud-search{flex:1;min-width:180px;border:1px solid #cbd5e1;border-radius:7px;padding:7px 11px;font-size:13px}
-.aud-sec{margin-top:18px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;
-  color:#0f2a44;border-left:3px solid #0f2a44;padding-left:8px}
-.aud-row{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:11px 13px;margin-top:8px}
-.aud-row.s-C{border-left:4px solid #16a34a}
-.aud-row.s-NC{border-left:4px solid #dc2626}
-.aud-row.s-OFI{border-left:4px solid #d97706}
-.aud-row.s-NA{border-left:4px solid #94a3b8}
-.aud-r1{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
-.aud-cl{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;font-weight:800;color:#0f2a44;
-  background:#eef2f7;border-radius:5px;padding:3px 8px;white-space:nowrap}
-.aud-std{font-size:10px;font-weight:800;border-radius:4px;padding:3px 7px;white-space:nowrap}
-.aud-req{flex:1;min-width:230px;font-size:13.5px;line-height:1.45;color:#1e293b}
-.aud-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px}
-.aud-tag{font-size:9px;font-weight:800;letter-spacing:.04em;border-radius:4px;padding:2px 6px}
-.aud-tag.sq{background:#eff6ff;color:#1d4ed8}
-.aud-tag.he{background:#f0fdf4;color:#15803d}
-.aud-docs{margin-top:7px;display:flex;gap:5px;flex-wrap:wrap;align-items:center}
-.aud-docs .none{font-size:11px;color:#b91c1c;font-weight:700}
-.aud-doc{font-size:11px;font-weight:600;color:#1d4ed8;background:#f1f5f9;border-radius:5px;
-  padding:3px 8px;text-decoration:none}
-.aud-doc:hover{background:#e2e8f0}
-.aud-doc.alt{background:#fff;border:1px dashed #cbd5e1;color:#64748b}
-.aud-xs{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#94a3b8;margin-left:4px}
-.aud-mark{display:flex;gap:5px;margin-top:9px;flex-wrap:wrap;align-items:center}
-.aud-m{border:1px solid #cbd5e1;background:#fff;border-radius:6px;padding:5px 13px;font-size:12px;
-  font-weight:700;color:#475569;cursor:pointer}
-.aud-m[data-v=C].on{background:#16a34a;border-color:#16a34a;color:#fff}
-.aud-m[data-v=NC].on{background:#dc2626;border-color:#dc2626;color:#fff}
-.aud-m[data-v=OFI].on{background:#d97706;border-color:#d97706;color:#fff}
-.aud-m[data-v=NA].on{background:#64748b;border-color:#64748b;color:#fff}
-.aud-ev{flex:1;min-width:200px;border:1px solid #cbd5e1;border-radius:6px;padding:6px 10px;font-size:12px}
+body.aud-on{background:
+  radial-gradient(1100px 480px at 12% -12%,rgba(200,149,31,.10),transparent 60%),
+  radial-gradient(900px 420px at 92% -6%,rgba(27,108,168,.10),transparent 62%),
+  #f7f9fc}
+@keyframes audIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.aud-wrap{max-width:1180px;margin:0 auto;padding:14px 16px 56px}
+
+/* ── sticky command bar ────────────────────────────────────── */
+.aud-bar{position:sticky;top:0;z-index:40;margin:0 -16px 12px;padding:11px 16px;
+ background:rgba(11,21,36,.94);backdrop-filter:blur(14px) saturate(1.3);
+ border-bottom:1px solid rgba(255,255,255,.09);
+ box-shadow:0 8px 26px -18px rgba(0,0,0,.8)}
+.aud-bar-in{max-width:1180px;margin:0 auto;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.aud-id{display:flex;gap:7px;flex:1;min-width:210px}
+.aud-in{flex:1;min-width:0;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+ color:#fff;border-radius:9px;padding:8px 11px;font:600 12.5px/1.2 inherit;transition:.15s}
+.aud-in::placeholder{color:rgba(255,255,255,.42);font-weight:500}
+.aud-in:focus{outline:0;border-color:var(--aud-acc);background:rgba(255,255,255,.13);
+ box-shadow:0 0 0 3px rgba(200,149,31,.22)}
+.aud-in::-webkit-calendar-picker-indicator{filter:invert(1) opacity(.6)}
+.aud-ring{display:flex;align-items:center;gap:8px;padding:5px 12px 5px 6px;border-radius:999px;
+ background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+.aud-ring svg{display:block}
+.aud-ring b{color:#fff;font-size:14px;font-weight:800;line-height:1}
+.aud-ring span{display:block;color:rgba(255,255,255,.5);font-size:9px;font-weight:700;
+ text-transform:uppercase;letter-spacing:.06em;margin-top:1px}
+.aud-x{display:flex;gap:6px;flex-wrap:wrap}
+.aud-b{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.09);
+ border:1px solid rgba(255,255,255,.17);color:#e8eef6;border-radius:9px;padding:8px 12px;
+ font:700 12px/1 inherit;cursor:pointer;transition:.16s;white-space:nowrap}
+.aud-b:hover{background:rgba(255,255,255,.19);transform:translateY(-1px)}
+.aud-b.gold{background:linear-gradient(180deg,#f0c14b,#d9a01f);color:#2b1d00;border-color:transparent;
+ box-shadow:0 2px 10px rgba(217,160,31,.4)}
+.aud-b.exit{background:transparent;border-color:rgba(255,255,255,.28)}
+
+/* ── stat strip ────────────────────────────────────────────── */
+.aud-kpi{display:flex;gap:7px;overflow-x:auto;padding-bottom:3px;margin-bottom:11px;
+ scrollbar-width:none}
+.aud-kpi::-webkit-scrollbar{display:none}
+.aud-k{flex:1 0 auto;min-width:88px;background:#fff;border:1px solid var(--aud-line);
+ border-radius:11px;padding:8px 12px;box-shadow:var(--aud-shadow);position:relative;overflow:hidden}
+.aud-k:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--c,#cbd5e1)}
+.aud-k b{display:block;font-size:19px;font-weight:800;color:var(--c,var(--aud-ink));line-height:1.1;
+ font-variant-numeric:tabular-nums}
+.aud-k span{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--aud-mut)}
+
+/* ── one-row tab strip ─────────────────────────────────────── */
+.aud-tabs{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;padding:4px;
+ background:#eef2f7;border-radius:12px;margin-bottom:9px}
+.aud-tabs::-webkit-scrollbar{display:none}
+.aud-t{flex:0 0 auto;border:0;background:transparent;color:#54627a;border-radius:9px;
+ padding:8px 14px;font:700 12.5px/1 inherit;cursor:pointer;position:relative;
+ transition:color .18s,background .18s,box-shadow .18s;white-space:nowrap}
+.aud-t:hover{color:var(--aud-ink);background:rgba(255,255,255,.7)}
+.aud-t.on{background:#fff;color:var(--aud-ink);box-shadow:0 1px 2px rgba(11,21,36,.1),0 4px 14px -6px rgba(11,21,36,.35)}
+.aud-t.on:after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;border-radius:2px;
+ background:linear-gradient(90deg,var(--aud-acc),#e8c46a);box-shadow:0 0 9px rgba(200,149,31,.75)}
+.aud-t i{font-style:normal;font-size:10px;font-weight:800;margin-left:5px;padding:1px 6px;
+ border-radius:999px;background:rgba(11,21,36,.09);color:#475569}
+.aud-t.on i{background:rgba(200,149,31,.16);color:#8a6510}
+
+/* ── filter chips ──────────────────────────────────────────── */
+.aud-f{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;margin-bottom:10px;align-items:center}
+.aud-f::-webkit-scrollbar{display:none}
+.aud-f .lb{flex:0 0 auto;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;
+ color:var(--aud-mut);padding-right:2px}
+.aud-c{flex:0 0 auto;border:1px solid var(--aud-line);background:#fff;color:#54627a;border-radius:999px;
+ padding:6px 12px;font:600 11.5px/1 inherit;cursor:pointer;transition:.15s}
+.aud-c:hover{border-color:#c3ccd8}
+.aud-c.on{background:var(--aud-ink);border-color:var(--aud-ink);color:#fff;
+ box-shadow:0 3px 12px -4px rgba(11,21,36,.6)}
+.aud-s{flex:1 0 150px;border:1px solid var(--aud-line);border-radius:999px;padding:7px 13px;
+ font:500 12px/1 inherit;background:#fff}
+.aud-s:focus{outline:0;border-color:var(--aud-acc);box-shadow:0 0 0 3px rgba(200,149,31,.16)}
+
+/* ── accordion rows ────────────────────────────────────────── */
+.aud-grp{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
+ color:var(--aud-mut);margin:14px 2px 6px}
+.aud-i{background:#fff;border:1px solid var(--aud-line);border-radius:11px;margin-bottom:5px;
+ box-shadow:var(--aud-shadow);overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.aud-i:hover{border-color:#cfd8e3}
+.aud-i.open{border-color:#c9d3e0;box-shadow:0 2px 4px rgba(11,21,36,.07),0 16px 34px -18px rgba(11,21,36,.4)}
+.aud-h{display:flex;align-items:center;gap:9px;padding:9px 12px;cursor:pointer;user-select:none}
+.aud-cl{flex:0 0 auto;font:800 11px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+ color:var(--aud-ink);background:#eef2f7;border-radius:6px;padding:5px 7px;letter-spacing:-.02em}
+.aud-sd{flex:0 0 auto;width:7px;height:7px;border-radius:50%}
+.aud-q{flex:1;min-width:0;font-size:12.8px;line-height:1.35;color:#243044;
+ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.aud-i.open .aud-q{white-space:normal}
+.aud-p{flex:0 0 auto;font-size:9.5px;font-weight:800;border-radius:999px;padding:3px 8px;
+ background:#f1f5f9;color:#7c8794;letter-spacing:.03em}
+.aud-p.C{background:rgba(20,137,63,.13);color:var(--aud-ok)}
+.aud-p.NC{background:rgba(207,43,43,.13);color:var(--aud-nc)}
+.aud-p.OFI{background:rgba(192,122,16,.15);color:var(--aud-of)}
+.aud-p.NA{background:#eef1f5;color:var(--aud-na)}
+.aud-p.gap{background:rgba(207,43,43,.1);color:var(--aud-nc)}
+.aud-ch{flex:0 0 auto;color:#9aa6b6;transition:transform .25s cubic-bezier(.2,.8,.3,1);font-size:11px}
+.aud-i.open .aud-ch{transform:rotate(90deg)}
+.aud-i.open{border-left:3px solid var(--aud-acc)}
+.aud-i.open.mC{border-left-color:var(--aud-ok)}
+.aud-i.open.mNC{border-left-color:var(--aud-nc)}
+.aud-i.open.mOFI{border-left-color:var(--aud-of)}
+.aud-i.open.mNA{border-left-color:var(--aud-na)}
+.aud-bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s cubic-bezier(.2,.8,.3,1)}
+.aud-i.open .aud-bd{grid-template-rows:1fr}
+.aud-bd>div{overflow:hidden}
+.aud-in2{padding:2px 12px 12px;border-top:1px solid #f1f4f8;margin-top:2px}
+.aud-tag{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.03em;border-radius:5px;
+ padding:2px 7px;margin:6px 4px 0 0}
+.aud-tag.sq{background:#edf4ff;color:#1d5fc4}
+.aud-tag.he{background:#eefaf1;color:#14893f}
+.aud-dl{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.aud-d{font-size:10.5px;font-weight:700;color:#1d5fc4;background:#f2f6fc;border:1px solid #e2ebf8;
+ border-radius:7px;padding:4px 9px;text-decoration:none;transition:.15s}
+.aud-d:hover{background:#e6eefb;transform:translateY(-1px)}
+.aud-d.alt{background:#fff;border-style:dashed;color:#7c8794}
+.aud-none{font-size:10.5px;font-weight:700;color:var(--aud-nc);background:rgba(207,43,43,.07);
+ border-radius:7px;padding:4px 9px}
+.aud-lbl{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:#9aa6b6}
+.aud-m{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.aud-mb{border:1px solid var(--aud-line);background:#fff;border-radius:8px;padding:6px 14px;
+ font:800 11.5px/1 inherit;color:#54627a;cursor:pointer;transition:.15s}
+.aud-mb:hover{transform:translateY(-1px)}
+.aud-mb.on[data-v=C]{background:var(--aud-ok);border-color:var(--aud-ok);color:#fff;box-shadow:0 3px 12px -4px rgba(20,137,63,.8)}
+.aud-mb.on[data-v=NC]{background:var(--aud-nc);border-color:var(--aud-nc);color:#fff;box-shadow:0 3px 12px -4px rgba(207,43,43,.8)}
+.aud-mb.on[data-v=OFI]{background:var(--aud-of);border-color:var(--aud-of);color:#fff;box-shadow:0 3px 12px -4px rgba(192,122,16,.8)}
+.aud-mb.on[data-v=NA]{background:var(--aud-na);border-color:var(--aud-na);color:#fff}
+.aud-ev{width:100%;margin-top:8px;border:1px solid var(--aud-line);border-radius:9px;padding:8px 11px;
+ font:500 12px/1.45 inherit;resize:vertical;min-height:38px;background:#fbfcfe}
+.aud-ev:focus{outline:0;border-color:var(--aud-acc);background:#fff;box-shadow:0 0 0 3px rgba(200,149,31,.14)}
+.aud-empty{background:#fff;border:1px dashed var(--aud-line);border-radius:11px;padding:26px;
+ text-align:center;color:var(--aud-mut);font-size:12.5px}
+@media (max-width:640px){
+  .aud-wrap{padding:10px 11px 46px}
+  .aud-bar{margin:0 -11px 10px;padding:9px 11px}
+  .aud-id{order:-1;width:100%;flex:1 0 100%}
+  .aud-q{font-size:12.2px}
+  .aud-k{min-width:76px;padding:7px 10px}
+  .aud-k b{font-size:17px}
+}
 @media print{
-  .hdr,.aud-toggle,.aud-filters,.aud-acts{display:none!important}
-  #aud{padding:0} .aud-row{break-inside:avoid;border-radius:0;margin-top:4px}
-  .aud-ev{border:none;border-bottom:1px solid #999}
+  .hdr,.aud-bar,.aud-tabs,.aud-f,.aud-ch{display:none!important}
+  body.aud-on{background:#fff}
+  .aud-i{break-inside:avoid;box-shadow:none;margin-bottom:3px;border-radius:0}
+  .aud-bd{grid-template-rows:1fr!important}
+  .aud-q{white-space:normal!important}
 }
 </style>
 </head>
@@ -338,7 +438,7 @@ body.aud-on .toolbar{display:none!important}
       <span class="hdr-std" style="background:#dcfce7;color:#166534">14001</span>
       <span class="hdr-std" style="background:#fef3c7;color:#92400e">45001</span>
     </div>
-    <button class="aud-toggle" id="audBtn" onclick="audToggle()"><span class="dot"></span><span> Auditor Mode</span></button>
+    <button class="aud-toggle" id="audBtn" onclick="audToggle()"><span class="ic">◉</span><span class="tx">Auditor Mode</span></button>
   </div>
 </div>
 
@@ -506,208 +606,302 @@ go();
 
 
 
+
 <div id="aud">
-  <div class="aud-hd">
-    <div>
-      <h2>Auditor Mode &mdash; Clause Conformity Checklist</h2>
-      <p>ISO 9001:2015 &middot; ISO 14001:2015 &middot; ISO 45001:2018 &nbsp;|&nbsp;
-         Marks and notes are saved in this browser. Export before clearing site data.</p>
+  <div class="aud-bar">
+    <div class="aud-bar-in">
+      <div class="aud-id">
+        <input class="aud-in" id="audName" placeholder="Auditor name" autocomplete="name">
+        <input class="aud-in" id="audDate" type="date" style="flex:0 0 138px">
+      </div>
+      <div class="aud-ring" title="Conformity of clauses assessed">
+        <svg width="34" height="34" viewBox="0 0 36 36">
+          <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="4"/>
+          <circle id="audArc" cx="18" cy="18" r="15" fill="none" stroke="#f0c14b" stroke-width="4"
+                  stroke-linecap="round" stroke-dasharray="0 94.2"
+                  transform="rotate(-90 18 18)" style="transition:stroke-dasharray .5s cubic-bezier(.2,.8,.3,1)"/>
+        </svg>
+        <div><b id="audPct">0%</b><span id="audDone">0 of 96</span></div>
+      </div>
+      <div class="aud-x">
+        <button class="aud-b gold" onclick="audXlsx()">Excel</button>
+        <button class="aud-b" onclick="audPdf()">PDF</button>
+        <button class="aud-b" onclick="audMail()">Email</button>
+        <button class="aud-b" onclick="audReset()" title="Clear all marks">Reset</button>
+        <button class="aud-b exit" onclick="audToggle()">Exit</button>
+      </div>
     </div>
-    <div class="aud-acts">
-      <button class="aud-btn" onclick="audExport()">Export CSV</button>
-      <button class="aud-btn" onclick="window.print()">Print</button>
-      <button class="aud-btn" onclick="audReset()">Reset marks</button>
+  </div>
+
+  <div class="aud-wrap">
+    <div class="aud-kpi" id="audKpi"></div>
+    <div class="aud-tabs" id="audTabs"></div>
+    <div class="aud-f" id="audF1"></div>
+    <div class="aud-f">
+      <span class="lb">Status</span>
+      <button class="aud-c on" data-f="st" data-v="">All</button>
+      <button class="aud-c" data-f="st" data-v="_">Open</button>
+      <button class="aud-c" data-f="st" data-v="C">C</button>
+      <button class="aud-c" data-f="st" data-v="NC">NC</button>
+      <button class="aud-c" data-f="st" data-v="OFI">OFI</button>
+      <button class="aud-c" data-f="st" data-v="NA">N/A</button>
+      <button class="aud-c" data-f="st" data-v="!">No doc</button>
+      <input class="aud-s" id="audQ" placeholder="Search clause, requirement or document...">
     </div>
+    <div id="audList"></div>
   </div>
-  <div class="aud-sum" id="audSum"></div>
-  <div class="aud-bar" id="audBar"></div>
-  <div class="aud-filters">
-    <span class="lbl">Standard</span>
-    <button class="aud-chip on" data-f="std" data-v="">All</button>
-    <button class="aud-chip" data-f="std" data-v="9001">9001</button>
-    <button class="aud-chip" data-f="std" data-v="14001">14001</button>
-    <button class="aud-chip" data-f="std" data-v="45001">45001</button>
-  </div>
-  <div class="aud-filters">
-    <span class="lbl">SQCDP</span>
-    <button class="aud-chip on" data-f="sq" data-v="">All</button>
-    <button class="aud-chip" data-f="sq" data-v="S">Safety</button>
-    <button class="aud-chip" data-f="sq" data-v="Q">Quality</button>
-    <button class="aud-chip" data-f="sq" data-v="C">Cost</button>
-    <button class="aud-chip" data-f="sq" data-v="D">Delivery</button>
-    <button class="aud-chip" data-f="sq" data-v="P">People</button>
-  </div>
-  <div class="aud-filters">
-    <span class="lbl">HESQ</span>
-    <button class="aud-chip on" data-f="he" data-v="">All</button>
-    <button class="aud-chip" data-f="he" data-v="H">Health</button>
-    <button class="aud-chip" data-f="he" data-v="E">Environment</button>
-    <button class="aud-chip" data-f="he" data-v="S">Safety</button>
-    <button class="aud-chip" data-f="he" data-v="Q">Quality</button>
-  </div>
-  <div class="aud-filters">
-    <span class="lbl">Status</span>
-    <button class="aud-chip on" data-f="st" data-v="">All</button>
-    <button class="aud-chip" data-f="st" data-v="_">Not checked</button>
-    <button class="aud-chip" data-f="st" data-v="C">C</button>
-    <button class="aud-chip" data-f="st" data-v="NC">NC</button>
-    <button class="aud-chip" data-f="st" data-v="OFI">OFI</button>
-    <button class="aud-chip" data-f="st" data-v="NA">N/A</button>
-    <button class="aud-chip" data-f="st" data-v="!">No document</button>
-    <input class="aud-search" id="audQ" placeholder="Search clause or requirement...">
-  </div>
-  <div id="audList"></div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <script id="aud-js">
 const AUD_ITEMS = [{"id": "9001-4.1", "std": "9001", "cl": "4.1", "req": "Are external and internal issues relevant to the QMS determined, monitored and reviewed?", "sq": "Q", "he": "Q", "sec": "4"}, {"id": "9001-4.2", "std": "9001", "cl": "4.2", "req": "Are interested parties and their relevant requirements determined and monitored?", "sq": "QD", "he": "Q", "sec": "4"}, {"id": "9001-4.3", "std": "9001", "cl": "4.3", "req": "Is the scope of the QMS documented, with any non-applicable clause justified?", "sq": "Q", "he": "Q", "sec": "4"}, {"id": "9001-4.4", "std": "9001", "cl": "4.4", "req": "Are the QMS processes, their sequence, interaction, criteria and measures defined?", "sq": "QD", "he": "Q", "sec": "4"}, {"id": "9001-5.1", "std": "9001", "cl": "5.1", "req": "Does top management demonstrate leadership - accountability, resources, promoting improvement?", "sq": "QP", "he": "Q", "sec": "5"}, {"id": "9001-5.2", "std": "9001", "cl": "5.2", "req": "Is the quality policy documented, communicated and available to interested parties?", "sq": "Q", "he": "Q", "sec": "5"}, {"id": "9001-5.3", "std": "9001", "cl": "5.3", "req": "Are roles, responsibilities and authorities assigned, communicated and understood?", "sq": "P", "he": "Q", "sec": "5"}, {"id": "9001-6.1", "std": "9001", "cl": "6.1", "req": "Are risks and opportunities determined, with actions planned and their effectiveness evaluated?", "sq": "QC", "he": "Q", "sec": "6"}, {"id": "9001-6.2", "std": "9001", "cl": "6.2", "req": "Are quality objectives measurable, monitored, communicated and updated, with plans to achieve them?", "sq": "QCD", "he": "Q", "sec": "6"}, {"id": "9001-6.3", "std": "9001", "cl": "6.3", "req": "Are changes to the QMS planned and carried out in a controlled manner?", "sq": "QD", "he": "Q", "sec": "6"}, {"id": "9001-7.1.1", "std": "9001", "cl": "7.1.1", "req": "Are the resources needed for the QMS determined and provided?", "sq": "CP", "he": "Q", "sec": "7"}, {"id": "9001-7.1.2", "std": "9001", "cl": "7.1.2", "req": "Are the persons necessary for effective operation of the QMS determined and provided?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.1.3", "std": "9001", "cl": "7.1.3", "req": "Is infrastructure determined, provided and maintained (buildings, equipment, utilities)?", "sq": "CD", "he": "Q", "sec": "7"}, {"id": "9001-7.1.4", "std": "9001", "cl": "7.1.4", "req": "Is the environment for the operation of processes determined, provided and maintained?", "sq": "SP", "he": "HSQ", "sec": "7"}, {"id": "9001-7.1.5", "std": "9001", "cl": "7.1.5", "req": "Are monitoring and measuring resources suitable, calibrated, identified and safeguarded?", "sq": "QC", "he": "Q", "sec": "7"}, {"id": "9001-7.1.6", "std": "9001", "cl": "7.1.6", "req": "Is the organisational knowledge needed for processes determined and maintained?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.2", "std": "9001", "cl": "7.2", "req": "Is competence determined, and are training and its effectiveness evaluated and recorded?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.3", "std": "9001", "cl": "7.3", "req": "Are persons aware of the policy, objectives, their contribution and the implications of nonconformity?", "sq": "P", "he": "Q", "sec": "7"}, {"id": "9001-7.4", "std": "9001", "cl": "7.4", "req": "Are internal and external communications on the QMS determined - what, when, with whom, how?", "sq": "PD", "he": "Q", "sec": "7"}, {"id": "9001-7.5", "std": "9001", "cl": "7.5", "req": "Is documented information controlled - identification, review, approval, version, distribution, retention?", "sq": "Q", "he": "Q", "sec": "7"}, {"id": "9001-8.1", "std": "9001", "cl": "8.1", "req": "Is operational planning and control implemented, including criteria, resources and retained records?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.1", "std": "9001", "cl": "8.2.1", "req": "Is customer communication defined, including enquiries, contracts, feedback and complaints?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.2", "std": "9001", "cl": "8.2.2", "req": "Are requirements for products and services determined, including statutory and regulatory?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.3", "std": "9001", "cl": "8.2.3", "req": "Are requirements reviewed before commitment to supply, with records of the review?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.2.4", "std": "9001", "cl": "8.2.4", "req": "Are changes to product requirements recorded and relevant persons made aware?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.4", "std": "9001", "cl": "8.4", "req": "Are externally provided processes, products and services controlled to specified requirements?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.4.1", "std": "9001", "cl": "8.4.1", "req": "Are external providers evaluated, selected, monitored and re-evaluated against defined criteria?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.4.2", "std": "9001", "cl": "8.4.2", "req": "Is the type and extent of control over external providers defined and verified?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-8.4.3", "std": "9001", "cl": "8.4.3", "req": "Is information communicated to external providers adequate before it is communicated?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.1", "std": "9001", "cl": "8.5.1", "req": "Is production carried out under controlled conditions - documented information, monitoring, suitable resources, competent persons?", "sq": "QCD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.2", "std": "9001", "cl": "8.5.2", "req": "Are outputs identified and is traceability maintained where required?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.3", "std": "9001", "cl": "8.5.3", "req": "Is property belonging to customers or external providers identified, verified, protected and safeguarded?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-8.5.4", "std": "9001", "cl": "8.5.4", "req": "Are outputs preserved during production and delivery - handling, storage, packaging, protection?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.5", "std": "9001", "cl": "8.5.5", "req": "Are post-delivery activities addressed, including statutory requirements and customer feedback?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.5.6", "std": "9001", "cl": "8.5.6", "req": "Are changes to production reviewed and controlled, with records of the review and authorisation?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.6", "std": "9001", "cl": "8.6", "req": "Is release of products and services verified against acceptance criteria, with evidence and authorisation?", "sq": "QD", "he": "Q", "sec": "8"}, {"id": "9001-8.7", "std": "9001", "cl": "8.7", "req": "Is nonconforming output identified, controlled and dispositioned, with records retained?", "sq": "QC", "he": "Q", "sec": "8"}, {"id": "9001-9.1.1", "std": "9001", "cl": "9.1.1", "req": "Is monitoring and measurement determined - what, by what method, when, and when results are analysed?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-9.1.2", "std": "9001", "cl": "9.1.2", "req": "Is customer satisfaction monitored, with methods for obtaining and reviewing the information?", "sq": "QD", "he": "Q", "sec": "9"}, {"id": "9001-9.1.3", "std": "9001", "cl": "9.1.3", "req": "Are data analysed and evaluated to assess conformity, satisfaction, performance and external providers?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-9.2", "std": "9001", "cl": "9.2", "req": "Are internal audits conducted at planned intervals by objective auditors, with results reported?", "sq": "Q", "he": "Q", "sec": "9"}, {"id": "9001-9.3", "std": "9001", "cl": "9.3", "req": "Is management review conducted at planned intervals covering all required inputs and outputs?", "sq": "QCD", "he": "Q", "sec": "9"}, {"id": "9001-10.1", "std": "9001", "cl": "10.1", "req": "Are opportunities for improvement determined, selected and implemented?", "sq": "QCD", "he": "Q", "sec": "10"}, {"id": "9001-10.2", "std": "9001", "cl": "10.2", "req": "Are nonconformities reacted to, root causes evaluated, action taken and effectiveness reviewed?", "sq": "QC", "he": "Q", "sec": "10"}, {"id": "9001-10.3", "std": "9001", "cl": "10.3", "req": "Is the suitability, adequacy and effectiveness of the QMS continually improved?", "sq": "QCD", "he": "Q", "sec": "10"}, {"id": "14001-4.1", "std": "14001", "cl": "4.1", "req": "Are internal and external issues affecting environmental performance determined, including conditions?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-4.2", "std": "14001", "cl": "4.2", "req": "Are interested parties, their needs and which become compliance obligations determined?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-4.3", "std": "14001", "cl": "4.3", "req": "Is the EMS scope determined and available as documented information?", "sq": "", "he": "E", "sec": "4"}, {"id": "14001-5.2", "std": "14001", "cl": "5.2", "req": "Is the environmental policy appropriate, committing to protection, compliance and continual improvement?", "sq": "", "he": "E", "sec": "5"}, {"id": "14001-6.1.1", "std": "14001", "cl": "6.1.1", "req": "Are risks and opportunities relating to aspects, obligations and issues determined?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.1.2", "std": "14001", "cl": "6.1.2", "req": "Are environmental aspects and impacts determined, with criteria used to identify significant aspects?", "sq": "", "he": "E", "sec": "6"}, {"id": "14001-6.1.3", "std": "14001", "cl": "6.1.3", "req": "Are compliance obligations determined, accessible and taken into account in the EMS?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.1.4", "std": "14001", "cl": "6.1.4", "req": "Is action planned to address significant aspects, obligations, risks and opportunities?", "sq": "C", "he": "E", "sec": "6"}, {"id": "14001-6.2", "std": "14001", "cl": "6.2", "req": "Are environmental objectives established at relevant functions, measurable and monitored?", "sq": "CD", "he": "E", "sec": "6"}, {"id": "14001-7.2", "std": "14001", "cl": "7.2", "req": "Is competence for persons affecting environmental performance determined and evidenced?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.3", "std": "14001", "cl": "7.3", "req": "Are persons aware of the policy, significant aspects and implications of not conforming?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.4", "std": "14001", "cl": "7.4", "req": "Are internal and external environmental communications planned and carried out?", "sq": "P", "he": "E", "sec": "7"}, {"id": "14001-7.5", "std": "14001", "cl": "7.5", "req": "Is EMS documented information created, updated and controlled?", "sq": "", "he": "E", "sec": "7"}, {"id": "14001-8.1", "std": "14001", "cl": "8.1", "req": "Are processes needed to meet EMS requirements planned, implemented and controlled, including outsourced?", "sq": "CD", "he": "E", "sec": "8"}, {"id": "14001-8.2", "std": "14001", "cl": "8.2", "req": "Are emergency situations identified, with planned response, testing and periodic review?", "sq": "S", "he": "HES", "sec": "8"}, {"id": "14001-9.1.1", "std": "14001", "cl": "9.1.1", "req": "Is environmental performance monitored, measured, analysed and evaluated with calibrated equipment?", "sq": "C", "he": "E", "sec": "9"}, {"id": "14001-9.1.2", "std": "14001", "cl": "9.1.2", "req": "Is compliance with obligations evaluated at a determined frequency, with knowledge of status maintained?", "sq": "C", "he": "E", "sec": "9"}, {"id": "14001-9.2", "std": "14001", "cl": "9.2", "req": "Are internal EMS audits conducted at planned intervals with results reported to management?", "sq": "", "he": "E", "sec": "9"}, {"id": "14001-9.3", "std": "14001", "cl": "9.3", "req": "Does management review cover EMS status, aspects, obligations, objectives and performance?", "sq": "CD", "he": "E", "sec": "9"}, {"id": "14001-10.2", "std": "14001", "cl": "10.2", "req": "Are environmental nonconformities corrected, causes evaluated and the EMS updated?", "sq": "C", "he": "E", "sec": "10"}, {"id": "14001-10.3", "std": "14001", "cl": "10.3", "req": "Is the EMS continually improved to enhance environmental performance?", "sq": "C", "he": "E", "sec": "10"}, {"id": "45001-4.1", "std": "45001", "cl": "4.1", "req": "Are internal and external issues relevant to OH&S performance determined?", "sq": "S", "he": "HS", "sec": "4"}, {"id": "45001-4.2", "std": "45001", "cl": "4.2", "req": "Are workers and other interested parties and their needs determined, including legal requirements?", "sq": "SP", "he": "HS", "sec": "4"}, {"id": "45001-4.3", "std": "45001", "cl": "4.3", "req": "Is the OH&S management system scope determined and documented?", "sq": "S", "he": "HS", "sec": "4"}, {"id": "45001-5.1", "std": "45001", "cl": "5.1", "req": "Does top management take overall responsibility for preventing work-related injury and ill health?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.2", "std": "45001", "cl": "5.2", "req": "Does the OH&S policy commit to safe conditions, hazard elimination, consultation and improvement?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.3", "std": "45001", "cl": "5.3", "req": "Are OH&S roles, responsibilities and authorities assigned and communicated at all levels?", "sq": "SP", "he": "HS", "sec": "5"}, {"id": "45001-5.4", "std": "45001", "cl": "5.4", "req": "Are workers consulted and participating at all applicable levels, with barriers removed?", "sq": "SP", "he": "HSQ", "sec": "5"}, {"id": "45001-6.1.1", "std": "45001", "cl": "6.1.1", "req": "Are risks and opportunities determined, taking account of hazards, legal requirements and workers?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.1.2", "std": "45001", "cl": "6.1.2", "req": "Is hazard identification ongoing and proactive, covering routine, non-routine and emergency situations?", "sq": "SP", "he": "HS", "sec": "6"}, {"id": "45001-6.1.2.2", "std": "45001", "cl": "6.1.2.2", "req": "Are OH&S risks assessed using defined methodology and criteria, and applied proactively?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.1.3", "std": "45001", "cl": "6.1.3", "req": "Are legal and other requirements determined, accessible, and kept up to date?", "sq": "SC", "he": "HS", "sec": "6"}, {"id": "45001-6.1.4", "std": "45001", "cl": "6.1.4", "req": "Is action planned to address hazards, risks, legal requirements and emergency preparedness?", "sq": "S", "he": "HS", "sec": "6"}, {"id": "45001-6.2", "std": "45001", "cl": "6.2", "req": "Are OH&S objectives established, measurable, monitored, communicated and updated?", "sq": "SCD", "he": "HS", "sec": "6"}, {"id": "45001-7.1", "std": "45001", "cl": "7.1", "req": "Are the resources needed for the OH&S management system determined and provided?", "sq": "SC", "he": "HS", "sec": "7"}, {"id": "45001-7.2", "std": "45001", "cl": "7.2", "req": "Is worker competence for hazard identification and safe work determined, provided and evaluated?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.3", "std": "45001", "cl": "7.3", "req": "Are workers aware of the policy, hazards, incidents and their right to remove themselves from danger?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.4", "std": "45001", "cl": "7.4", "req": "Is OH&S information communicated internally and externally, accounting for language and literacy?", "sq": "SP", "he": "HS", "sec": "7"}, {"id": "45001-7.5", "std": "45001", "cl": "7.5", "req": "Is OH&S documented information created, updated and controlled?", "sq": "S", "he": "HS", "sec": "7"}, {"id": "45001-8.1.1", "std": "45001", "cl": "8.1.1", "req": "Are operational controls established, implemented and maintained to meet OH&S requirements?", "sq": "SD", "he": "HS", "sec": "8"}, {"id": "45001-8.1.2", "std": "45001", "cl": "8.1.2", "req": "Is the hierarchy of controls applied - eliminate, substitute, engineering, administrative, PPE?", "sq": "SP", "he": "HS", "sec": "8"}, {"id": "45001-8.1.3", "std": "45001", "cl": "8.1.3", "req": "Is change managed - new products, processes, equipment, legal changes and knowledge of hazards?", "sq": "SD", "he": "HS", "sec": "8"}, {"id": "45001-8.1.4", "std": "45001", "cl": "8.1.4", "req": "Is procurement controlled, including contractors and outsourced functions, to conform to the OH&SMS?", "sq": "SCD", "he": "HS", "sec": "8"}, {"id": "45001-8.2", "std": "45001", "cl": "8.2", "req": "Is emergency preparedness planned, with response, periodic testing, training and communication?", "sq": "SP", "he": "HES", "sec": "8"}, {"id": "45001-9.1.1", "std": "45001", "cl": "9.1.1", "req": "Is OH&S performance monitored and measured, with criteria and calibrated equipment?", "sq": "SC", "he": "HS", "sec": "9"}, {"id": "45001-9.1.2", "std": "45001", "cl": "9.1.2", "req": "Is compliance with legal and other requirements evaluated and its status maintained?", "sq": "SC", "he": "HS", "sec": "9"}, {"id": "45001-9.2", "std": "45001", "cl": "9.2", "req": "Are internal OH&S audits conducted at planned intervals, with results reported to workers?", "sq": "SP", "he": "HS", "sec": "9"}, {"id": "45001-9.3", "std": "45001", "cl": "9.3", "req": "Does management review cover incidents, participation, hazards, risks, and adequacy of resources?", "sq": "SCD", "he": "HS", "sec": "9"}, {"id": "45001-10.1", "std": "45001", "cl": "10.1", "req": "Are opportunities for improvement determined and improvement actions implemented?", "sq": "SCD", "he": "HS", "sec": "10"}, {"id": "45001-10.2", "std": "45001", "cl": "10.2", "req": "Are incidents and nonconformities investigated, root causes determined and controls reviewed?", "sq": "SP", "he": "HS", "sec": "10"}, {"id": "45001-10.3", "std": "45001", "cl": "10.3", "req": "Is the OH&S management system continually improved, with worker participation?", "sq": "SP", "he": "HS", "sec": "10"}];
-const SQ_NAME = {S:'Safety',Q:'Quality',C:'Cost',D:'Delivery',P:'People'};
-const HE_NAME = {H:'Health',E:'Environment',S:'Safety',Q:'Quality'};
-const STD_COL = {'9001':['#dbeafe','#1e40af'],'14001':['#dcfce7','#166534'],'45001':['#fef3c7','#92400e']};
-const AUD_KEY = 'pm-audit-v1';
-let audState = {};
-try { audState = JSON.parse(localStorage.getItem(AUD_KEY) || '{}'); } catch (e) { audState = {}; }
-let audF = {std:'', sq:'', he:'', st:'', q:''};
+const SQ_NAME={S:'Safety',Q:'Quality',C:'Cost',D:'Delivery',P:'People'};
+const HE_NAME={H:'Health',E:'Environment',S:'Safety',Q:'Quality'};
+const STD_DOT={'9001':'#1d5fc4','14001':'#14893f','45001':'#c07a10'};
+const AUD_KEY='pm-audit-v2';
+let audState={}, audMeta={name:'',date:''};
+try{ const raw=JSON.parse(localStorage.getItem(AUD_KEY)||'{}');
+     audState=raw.marks||{}; audMeta=raw.meta||{name:'',date:''}; }catch(e){}
+let audF={tab:'', std:'', lens:'', st:'', q:''};
+let audOpen=null;
 
-function audSave(){ try{ localStorage.setItem(AUD_KEY, JSON.stringify(audState)); }catch(e){} }
+function audSave(){ try{localStorage.setItem(AUD_KEY,JSON.stringify({marks:audState,meta:audMeta}));}catch(e){} }
 
-// documents covering a clause: same-standard first, cross-standard flagged
-function audClauseHit(cl, target){
-  if (!cl) return false;
-  // a stated range such as "4.0 - 10.0" covers every clause between the two ends
-  const rng = cl.match(/^\s*(\d+)(?:\.\d+)*\s*[-–—]\s*(\d+)(?:\.\d+)*\s*$/);
-  if (rng) {
-    const top = parseInt(target, 10);
-    return top >= parseInt(rng[1], 10) && top <= parseInt(rng[2], 10);
-  }
-  return cl.split(/[^0-9.]+/).filter(Boolean).some(tok => {
-    tok = tok.replace(/\.$/, '');
-    return tok === target || tok.indexOf(target + '.') === 0 || target.indexOf(tok + '.') === 0;
-  });
+function audClauseHit(cl,target){
+  if(!cl) return false;
+  const rng=cl.match(/^\s*(\d+)(?:\.\d+)*\s*[-–—]\s*(\d+)(?:\.\d+)*\s*$/);
+  if(rng){const top=parseInt(target,10); return top>=parseInt(rng[1],10)&&top<=parseInt(rng[2],10);}
+  return cl.split(/[^0-9.]+/).filter(Boolean).some(tok=>{
+    tok=tok.replace(/\.$/,'');
+    return tok===target||tok.indexOf(target+'.')===0||target.indexOf(tok+'.')===0;});
 }
 function audDocs(it){
-  if (typeof D === 'undefined') return {same:[], other:[]};
-  const same=[], other=[];
-  D.forEach(d => {
-    if (!audClauseHit(String(d.clause||''), it.cl)) return;
-    const std = String(d.standard||'');
-    if (!std || std === it.std) same.push(d); else other.push(d);
-  });
-  return {same, other};
+  if(typeof D==='undefined') return {same:[],other:[]};
+  const same=[],other=[];
+  D.forEach(d=>{ if(!audClauseHit(String(d.clause||''),it.cl)) return;
+    const s=String(d.standard||'');
+    (!s||s===it.std)?same.push(d):other.push(d); });
+  return {same,other};
 }
+// documents that no clause check reaches - shown in their own tab
+function audUnmapped(){
+  if(typeof D==='undefined') return [];
+  const seen=new Set();
+  AUD_ITEMS.forEach(it=>{const g=audDocs(it); g.same.concat(g.other).forEach(d=>seen.add(d.code));});
+  return D.filter(d=>!seen.has(d.code));
+}
+let AUD_UNMAPPED=[];
 
-function audMatch(it, docs){
-  if (audF.std && it.std !== audF.std) return false;
-  if (audF.sq && it.sq.indexOf(audF.sq) < 0) return false;
-  if (audF.he && it.he.indexOf(audF.he) < 0) return false;
-  const st = (audState[it.id]||{}).v || '';
-  if (audF.st === '_' && st) return false;
-  if (audF.st === '!' && (docs.same.length || docs.other.length)) return false;
-  if (audF.st && audF.st !== '_' && audF.st !== '!' && st !== audF.st) return false;
-  if (audF.q) { const h = (it.cl+' '+it.req+' '+it.std).toLowerCase();
-    if (h.indexOf(audF.q.toLowerCase()) < 0) return false; }
+function audLens(it){ return it.sq.split('').map(x=>SQ_NAME[x]).concat(
+    it.he.split('').map(x=>HE_NAME[x])).filter((v,i,a)=>a.indexOf(v)===i); }
+
+function audMatch(it,docs){
+  if(audF.tab && audF.tab!=='gap' && audF.tab!=='un' && it.sec!==audF.tab) return false;
+  if(audF.tab==='gap' && (docs.same.length||docs.other.length)) return false;
+  if(audF.std && it.std!==audF.std) return false;
+  if(audF.lens && audLens(it).indexOf(audF.lens)<0) return false;
+  const st=(audState[it.id]||{}).v||'';
+  if(audF.st==='_'&&st) return false;
+  if(audF.st==='!'&&(docs.same.length||docs.other.length)) return false;
+  if(audF.st&&audF.st!=='_'&&audF.st!=='!'&&st!==audF.st) return false;
+  if(audF.q){ const h=(it.cl+' '+it.req+' '+it.std+' '+docs.same.concat(docs.other).map(d=>d.code).join(' ')).toLowerCase();
+    if(h.indexOf(audF.q.toLowerCase())<0) return false; }
   return true;
 }
 
 function audRender(){
-  const list = document.getElementById('audList');
-  const secs = {};
-  let n = {C:0,NC:0,OFI:0,NA:0,_:0}, gaps = 0, shown = 0;
-  AUD_ITEMS.forEach(it => {
-    const docs = audDocs(it);
-    if (!docs.same.length && !docs.other.length) gaps++;
-    const st = (audState[it.id]||{}).v || '_';
-    n[st] = (n[st]||0) + 1;
-    if (!audMatch(it, docs)) return;
-    shown++;
-    (secs[it.sec] = secs[it.sec] || []).push([it, docs]);
+  const n={C:0,NC:0,OFI:0,NA:0,_:0}; let gaps=0;
+  const rows=[];
+  AUD_ITEMS.forEach(it=>{
+    const docs=audDocs(it);
+    if(!docs.same.length&&!docs.other.length) gaps++;
+    const st=(audState[it.id]||{}).v||'_'; n[st]=(n[st]||0)+1;
+    if(audMatch(it,docs)) rows.push([it,docs]);
   });
-  let html = '';
-  Object.keys(secs).sort((a,b)=>(+a)-(+b)).forEach(sec => {
-    html += `<div class="aud-sec">Clause ${sec}</div>`;
-    secs[sec].forEach(([it, docs]) => {
-      const cur = (audState[it.id]||{});
-      const col = STD_COL[it.std] || ['#e2e8f0','#334155'];
-      const sqN = it.sq.split('').map(x=>SQ_NAME[x]||x);
-      const heN = it.he.split('').map(x=>HE_NAME[x]||x).filter(x=>sqN.indexOf(x)<0);
-      const tags = sqN.map(x=>`<span class="aud-tag sq" title="SQCDP">${x}</span>`).join('')
-                 + heN.map(x=>`<span class="aud-tag he" title="HESQ">${x}</span>`).join('');
-      const mk = (arr, cls) => arr.slice(0,8)
-            .map(d=>`<a class="aud-doc${cls}" href="html/${d.code}.html" target="_blank" title="tagged ISO ${d.standard||'-'}">${d.code}</a>`).join('')
-          + (arr.length>8 ? `<span class="aud-doc${cls}">+${arr.length-8} more</span>` : '');
-      let dl = '';
-      if (docs.same.length) dl += mk(docs.same, '');
-      if (docs.other.length) dl += `<span class="aud-xs">also tagged other standard:</span>` + mk(docs.other, ' alt');
-      if (!dl) dl = '<span class="none">No controlled document references this clause</span>';
-      const marks = ['C','NC','OFI','NA'].map(v =>
-        `<button class="aud-m${cur.v===v?' on':''}" data-v="${v}" onclick="audMark('${it.id}','${v}')">${v==='NA'?'N/A':v}</button>`).join('');
-      html += `<div class="aud-row s-${cur.v||''}">
-        <div class="aud-r1">
+
+  // tabs
+  const secs=['4','5','6','7','8','9','10'];
+  const cnt=s=>AUD_ITEMS.filter(i=>i.sec===s).length;
+  document.getElementById('audTabs').innerHTML=
+    `<button class="aud-t${audF.tab===''?' on':''}" data-tab="">All<i>${AUD_ITEMS.length}</i></button>`+
+    secs.map(s=>`<button class="aud-t${audF.tab===s?' on':''}" data-tab="${s}">Clause ${s}<i>${cnt(s)}</i></button>`).join('')+
+    `<button class="aud-t${audF.tab==='gap'?' on':''}" data-tab="gap">Gaps<i>${gaps}</i></button>`+
+    `<button class="aud-t${audF.tab==='un'?' on':''}" data-tab="un">Unmapped<i>${AUD_UNMAPPED.length}</i></button>`;
+
+  // filter row 1
+  const chip=(f,v,l)=>`<button class="aud-c${audF[f]===v?' on':''}" data-f="${f}" data-v="${v}">${l}</button>`;
+  document.getElementById('audF1').innerHTML=
+    '<span class="lb">Std</span>'+chip('std','','All')+chip('std','9001','9001')+chip('std','14001','14001')+chip('std','45001','45001')+
+    '<span class="lb" style="margin-left:6px">Lens</span>'+chip('lens','','All')+
+    ['Safety','Quality','Cost','Delivery','People','Health','Environment'].map(x=>chip('lens',x,x)).join('');
+
+  // KPI
+  const done=n.C+n.NC+n.OFI+n.NA;
+  const pct=(n.C+n.NC+n.OFI)?Math.round(n.C*100/(n.C+n.NC+n.OFI)):0;
+  document.getElementById('audKpi').innerHTML=
+    `<div class="aud-k"><b>${AUD_ITEMS.length}</b><span>Clauses</span></div>
+     <div class="aud-k" style="--c:var(--aud-ok)"><b>${n.C}</b><span>Conforming</span></div>
+     <div class="aud-k" style="--c:var(--aud-nc)"><b>${n.NC}</b><span>Non-conf</span></div>
+     <div class="aud-k" style="--c:var(--aud-of)"><b>${n.OFI}</b><span>OFI</span></div>
+     <div class="aud-k" style="--c:var(--aud-na)"><b>${n.NA}</b><span>N/A</span></div>
+     <div class="aud-k"><b>${n._}</b><span>Open</span></div>
+     <div class="aud-k" style="--c:${gaps?'var(--aud-nc)':'var(--aud-ok)'}"><b>${gaps}</b><span>No document</span></div>`;
+  document.getElementById('audPct').textContent=pct+'%';
+  document.getElementById('audDone').textContent=done+' of '+AUD_ITEMS.length;
+  const arc=document.getElementById('audArc');
+  if(arc) arc.setAttribute('stroke-dasharray',(94.2*done/AUD_ITEMS.length).toFixed(1)+' 94.2');
+
+  const list=document.getElementById('audList');
+  if(audF.tab==='un'){
+    list.innerHTML='<div class="aud-grp">Documents no clause check reaches &mdash; signage, pictograms and samples carry no clause reference</div>'+
+      (AUD_UNMAPPED.length?AUD_UNMAPPED.map(d=>
+        `<div class="aud-i"><div class="aud-h" style="cursor:default">
+          <span class="aud-cl">${d.cat_label||'Doc'}</span>
+          <span class="aud-q">${d.title||d.code}</span>
+          <a class="aud-d" href="html/${d.code}.html" target="_blank">${d.code}</a></div></div>`).join('')
+        :'<div class="aud-empty">Every document is reachable from a clause check.</div>');
+    return;
+  }
+  if(!rows.length){ list.innerHTML='<div class="aud-empty">No clause matches these filters.</div>'; return; }
+
+  const groups={};
+  rows.forEach(([it,docs])=>{ (groups[it.sec]=groups[it.sec]||[]).push([it,docs]); });
+  let html='';
+  Object.keys(groups).sort((a,b)=>(+a)-(+b)).forEach(sec=>{
+    html+=`<div class="aud-grp">Clause ${sec}</div>`;
+    groups[sec].forEach(([it,docs])=>{
+      const cur=audState[it.id]||{};
+      const mk=(arr,cls)=>arr.map(d=>`<a class="aud-d${cls}" href="html/${d.code}.html" target="_blank" onclick="event.stopPropagation()">${d.code}</a>`).join('');
+      let dl=mk(docs.same,'');
+      if(docs.other.length) dl+=`<span class="aud-lbl">other std</span>`+mk(docs.other,' alt');
+      if(!dl) dl='<span class="aud-none">No controlled document declares this clause</span>';
+      const pill=cur.v?`<span class="aud-p ${cur.v}">${cur.v==='NA'?'N/A':cur.v}</span>`
+        :(!docs.same.length&&!docs.other.length?'<span class="aud-p gap">GAP</span>':'<span class="aud-p">Open</span>');
+      const open=audOpen===it.id;
+      html+=`<div class="aud-i${open?' open m'+(cur.v||''):''}" id="i-${it.id}">
+        <div class="aud-h" onclick="audFlip('${it.id}')">
           <span class="aud-cl">${it.cl}</span>
-          <span class="aud-std" style="background:${col[0]};color:${col[1]}">${it.std}</span>
-          <div class="aud-req">${it.req}<div class="aud-tags">${tags}</div></div>
+          <span class="aud-sd" style="background:${STD_DOT[it.std]}" title="ISO ${it.std}"></span>
+          <span class="aud-q">${it.req}</span>${pill}
+          <span class="aud-ch">&#9654;</span>
         </div>
-        <div class="aud-docs">${dl}</div>
-        <div class="aud-mark">${marks}
-          <input class="aud-ev" placeholder="Objective evidence seen / finding"
-                 value="${(cur.e||'').replace(/"/g,'&quot;')}"
-                 oninput="audNote('${it.id}',this.value)">
-        </div></div>`;
+        <div class="aud-bd"><div><div class="aud-in2">
+          <div>${audLens(it).map(x=>`<span class="aud-tag ${['Health','Environment'].indexOf(x)>=0?'he':'sq'}">${x}</span>`).join('')}</div>
+          <div class="aud-dl">${dl}</div>
+          <div class="aud-m">${['C','NC','OFI','NA'].map(v=>
+            `<button class="aud-mb${cur.v===v?' on':''}" data-v="${v}" onclick="event.stopPropagation();audMark('${it.id}','${v}')">${v==='NA'?'N/A':v}</button>`).join('')}</div>
+          <textarea class="aud-ev" placeholder="Objective evidence seen / finding"
+            onclick="event.stopPropagation()" oninput="audNote('${it.id}',this.value)">${(cur.e||'').replace(/</g,'&lt;')}</textarea>
+        </div></div></div></div>`;
     });
   });
-  list.innerHTML = html || '<div class="aud-row">No clauses match these filters.</div>';
-
-  const done = n.C + n.NC + n.OFI + n.NA;
-  const pct = done ? Math.round(n.C * 100 / Math.max(1, n.C + n.NC + n.OFI)) : 0;
-  document.getElementById('audSum').innerHTML =
-    `<div class="aud-card"><b>${AUD_ITEMS.length}</b><span>Clauses</span></div>
-     <div class="aud-card"><b style="color:#16a34a">${n.C}</b><span>Conforming</span></div>
-     <div class="aud-card"><b style="color:#dc2626">${n.NC}</b><span>Non-conform</span></div>
-     <div class="aud-card"><b style="color:#d97706">${n.OFI}</b><span>OFI</span></div>
-     <div class="aud-card"><b style="color:#64748b">${n.NA}</b><span>N/A</span></div>
-     <div class="aud-card"><b>${n._}</b><span>Not checked</span></div>
-     <div class="aud-card"><b style="color:${gaps?'#b91c1c':'#16a34a'}">${gaps}</b><span>No document</span></div>
-     <div class="aud-card"><b>${pct}%</b><span>Conformity</span></div>`;
-  const tot = AUD_ITEMS.length;
-  document.getElementById('audBar').innerHTML =
-    `<i style="width:${n.C*100/tot}%;background:#16a34a"></i>
-     <i style="width:${n.NC*100/tot}%;background:#dc2626"></i>
-     <i style="width:${n.OFI*100/tot}%;background:#d97706"></i>
-     <i style="width:${n.NA*100/tot}%;background:#94a3b8"></i>`;
+  list.innerHTML=html;
 }
 
+function audFlip(id){ audOpen=(audOpen===id?null:id); audRender();
+  if(audOpen){const el=document.getElementById('i-'+id);
+    if(el) el.scrollIntoView({block:'nearest',behavior:'smooth'});} }
 function audMark(id,v){ const c=audState[id]||{}; c.v=(c.v===v?'':v); audState[id]=c; audSave(); audRender(); }
 function audNote(id,v){ const c=audState[id]||{}; c.e=v; audState[id]=c; audSave(); }
-function audReset(){ if(!confirm('Clear all audit marks and notes in this browser?'))return;
+function audReset(){ if(!confirm('Clear all marks and notes in this browser?'))return;
   audState={}; audSave(); audRender(); }
-function audExport(){
-  const rows=[['Standard','Clause','Requirement','SQCDP','HESQ','Documents','Cross-standard docs','Result','Evidence / Finding']];
-  AUD_ITEMS.forEach(it=>{ const c=audState[it.id]||{};
-    rows.push([it.std,it.cl,it.req,
-      it.sq.split('').map(x=>SQ_NAME[x]||x).join(' '),
-      it.he.split('').map(x=>HE_NAME[x]||x).join(' '),
-      audDocs(it).same.map(d=>d.code).join(' '),
-      audDocs(it).other.map(d=>d.code).join(' '), c.v||'', c.e||'']); });
-  const csv=rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\r\n');
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));
-  a.download='PackMasters-audit-'+new Date().toISOString().slice(0,10)+'.csv';
-  document.body.appendChild(a); a.click(); a.remove();
+
+function audRows(){
+  return AUD_ITEMS.map(it=>{ const c=audState[it.id]||{}, g=audDocs(it);
+    return {std:'ISO '+it.std, cl:it.cl, req:it.req, lens:audLens(it).join(' / '),
+      docs:g.same.map(d=>d.code).join(', '), other:g.other.map(d=>d.code).join(', '),
+      res:c.v||'', ev:c.e||''}; });
 }
+function audHdr(){
+  audMeta.name=document.getElementById('audName').value;
+  audMeta.date=document.getElementById('audDate').value;
+  audSave();
+  return {n:audMeta.name||'(auditor not named)', d:audMeta.date||new Date().toISOString().slice(0,10)};
+}
+function audXlsx(){
+  const h=audHdr(), r=audRows();
+  const aoa=[['Pack Masters — IMS Clause Conformity Audit'],
+             ['Auditor',h.n,'','Audit Date',h.d],
+             [],
+             ['Standard','Clause','Requirement / Audit Question','SQCDP / HESQ',
+              'Reference Documents','Other-standard Docs','Result','Objective Evidence / Finding']];
+  r.forEach(x=>aoa.push([x.std,x.cl,x.req,x.lens,x.docs,x.other,x.res,x.ev]));
+  const ws=XLSX.utils.aoa_to_sheet(aoa);
+  ws['!cols']=[{wch:10},{wch:9},{wch:70},{wch:26},{wch:30},{wch:22},{wch:8},{wch:46}];
+  ws['!freeze']={xSplit:0,ySplit:4};
+  const wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,ws,'Audit Checklist');
+  XLSX.writeFile(wb,`PackMasters-IMS-Audit-${h.d}.xlsx`);
+}
+function audPdf(){
+  const h=audHdr(), r=audRows();
+  const {jsPDF}=window.jspdf;
+  const doc=new jsPDF({orientation:'landscape',unit:'pt',format:'a4'});
+  doc.setFontSize(15); doc.setTextColor(11,21,36);
+  doc.text('Pack Masters — IMS Clause Conformity Audit',40,40);
+  doc.setFontSize(9.5); doc.setTextColor(90,100,115);
+  doc.text(`Auditor: ${h.n}          Audit Date: ${h.d}          ISO 9001:2015 / 14001:2015 / 45001:2018`,40,58);
+  doc.autoTable({
+    startY:72,
+    head:[['Std','Clause','Requirement / Audit Question','SQCDP / HESQ','Ref. Documents','Result','Evidence / Finding']],
+    body:r.map(x=>[x.std.replace('ISO ',''),x.cl,x.req,x.lens,x.docs||(x.other?'('+x.other+')':'NONE'),x.res,x.ev]),
+    styles:{fontSize:7,cellPadding:3,overflow:'linebreak',valign:'top',lineColor:[228,233,240],lineWidth:.5},
+    headStyles:{fillColor:[11,21,36],textColor:255,fontSize:7,fontStyle:'bold'},
+    alternateRowStyles:{fillColor:[248,250,252]},
+    columnStyles:{0:{cellWidth:32},1:{cellWidth:34},2:{cellWidth:250},3:{cellWidth:96},
+                  4:{cellWidth:120},5:{cellWidth:34,halign:'center',fontStyle:'bold'},6:{cellWidth:'auto'}},
+    didParseCell:d=>{ if(d.section==='body'&&d.column.index===5){
+        const v=d.cell.raw;
+        if(v==='C') d.cell.styles.textColor=[20,137,63];
+        else if(v==='NC') d.cell.styles.textColor=[207,43,43];
+        else if(v==='OFI') d.cell.styles.textColor=[192,122,16]; } },
+    margin:{left:40,right:40},
+  });
+  doc.save(`PackMasters-IMS-Audit-${h.d}.pdf`);
+}
+function audMail(){
+  const h=audHdr(), r=audRows();
+  const n={C:0,NC:0,OFI:0,NA:0};
+  r.forEach(x=>{ if(n[x.res]!==undefined) n[x.res]++; });
+  const nc=r.filter(x=>x.res==='NC'), ofi=r.filter(x=>x.res==='OFI');
+  const L=['Pack Masters — IMS Clause Conformity Audit','',
+    'Auditor    : '+h.n,'Audit Date : '+h.d,
+    'Standards  : ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018','',
+    `Result: ${n.C} conforming, ${n.NC} non-conforming, ${n.OFI} OFI, ${n.NA} not applicable`,
+    `Clauses assessed: ${n.C+n.NC+n.OFI+n.NA} of ${r.length}`,''];
+  if(nc.length){ L.push('NON-CONFORMITIES'); nc.forEach(x=>L.push(` - ${x.std} ${x.cl}: ${x.req}`,
+    `   Finding: ${x.ev||'(not recorded)'}`)); L.push(''); }
+  if(ofi.length){ L.push('OPPORTUNITIES FOR IMPROVEMENT'); ofi.forEach(x=>L.push(` - ${x.std} ${x.cl}: ${x.ev||x.req}`)); L.push(''); }
+  L.push('Full checklist attached as Excel/PDF export.');
+  const body=encodeURIComponent(L.join('\n')).slice(0,7500);
+  window.location.href=`mailto:?subject=${encodeURIComponent('IMS Audit — Pack Masters — '+h.d)}&body=${body}`;
+}
+
 function audToggle(){
   const on=document.body.classList.toggle('aud-on');
-  document.getElementById('audBtn').classList.toggle('on',on);
-  document.getElementById('audBtn').lastChild.textContent = on?' Auditor Mode: ON':' Auditor Mode';
-  if(on) audRender();
-  window.scrollTo(0,0);
+  const b=document.getElementById('audBtn');
+  b.classList.toggle('on',on);
+  b.querySelector('.tx').textContent=on?'Exit Auditor':'Auditor Mode';
+  if(on){
+    if(!AUD_UNMAPPED.length) AUD_UNMAPPED=audUnmapped();
+    document.getElementById('audName').value=audMeta.name||'';
+    document.getElementById('audDate').value=audMeta.date||new Date().toISOString().slice(0,10);
+    audRender();
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 document.addEventListener('click',e=>{
-  const c=e.target.closest('#aud .aud-chip'); if(!c)return;
-  const f=c.dataset.f;
-  document.querySelectorAll(`#aud .aud-chip[data-f="${f}"]`).forEach(x=>x.classList.remove('on'));
-  c.classList.add('on'); audF[f]=c.dataset.v; audRender();
+  const t=e.target.closest('#aud .aud-t');
+  if(t){ audF.tab=t.dataset.tab; audOpen=null; audRender(); return; }
+  const c=e.target.closest('#aud .aud-c');
+  if(c){ audF[c.dataset.f]=c.dataset.v; audRender(); }
 });
-document.addEventListener('input',e=>{ if(e.target.id==='audQ'){ audF.q=e.target.value; audRender(); }});
+document.addEventListener('input',e=>{
+  if(e.target.id==='audQ'){ audF.q=e.target.value; audRender(); }
+  if(e.target.id==='audName'){ audMeta.name=e.target.value; audSave(); }
+  if(e.target.id==='audDate'){ audMeta.date=e.target.value; audSave(); }
+});
 </script>
 
 </body>
