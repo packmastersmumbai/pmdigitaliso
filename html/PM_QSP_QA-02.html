@@ -599,48 +599,65 @@ tbody tr:hover td{background:var(--teal-pale)!important}
     </div>
   </div>
 <style id="flow-player-css">
-.fp-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px;padding:10px 12px;
- background:var(--teal-pale);border:1px solid var(--teal-rule);border-radius:var(--r2)}
-.fp-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--teal-rule);
- background:#fff;color:var(--teal-dim);border-radius:var(--r);padding:7px 14px;
- font-family:var(--font-b);font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s}
-.fp-btn:hover:not(:disabled){background:var(--teal);color:#fff;border-color:var(--teal)}
+/* walkthrough bar: one primary action, quiet secondaries, progress underneath */
+.fp-bar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 14px;padding:11px 13px 9px;
+ background:#FBFAF7;border:1px solid #E3E0D8;border-radius:10px}
+.fp-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:32px;
+ padding:0 13px;border:1px solid #DDD8CD;background:#fff;color:#4A4740;border-radius:7px;
+ font:500 12px/1 "Inter","Segoe UI",system-ui,sans-serif;letter-spacing:.01em;cursor:pointer;
+ transition:background .14s,border-color .14s,color .14s,transform .1s}
+.fp-btn:hover:not(:disabled){border-color:#0F6E56;color:#0F6E56;background:#F2F8F5}
 .fp-btn:active:not(:disabled){transform:translateY(1px)}
-.fp-btn:disabled{opacity:.4;cursor:default}
-.fp-btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
-.fp-btn.primary:hover{filter:brightness(1.08)}
-.fp-count{margin-left:auto;font-family:var(--font-m);font-size:11px;color:var(--teal-dim);
- letter-spacing:.04em;white-space:nowrap}
-.fp-prog{height:3px;background:var(--rule);border-radius:2px;overflow:hidden;flex:1 0 100%;margin-top:2px}
-.fp-prog i{display:block;height:100%;width:0;background:var(--teal);transition:width .35s cubic-bezier(.25,.9,.3,1)}
+.fp-btn:disabled{opacity:.38;cursor:default}
+.fp-btn.primary{background:#0F6E56;border-color:#0F6E56;color:#fff;font-weight:500;padding:0 15px}
+.fp-btn.primary:hover{background:#0C5A47;border-color:#0C5A47;color:#fff}
+.fp-btn.audio.on{background:#FBF2DF;border-color:#C79A4B;color:#7A5A14}
+.fp-sep{width:1px;height:20px;background:#E3E0D8;margin:0 3px}
+.fp-count{margin-left:auto;font:500 10.5px/1 ui-monospace,Menlo,Consolas,monospace;
+ color:#8C877D;letter-spacing:.04em;white-space:nowrap}
+.fp-prog{flex:1 0 100%;height:3px;background:#EDEAE2;border-radius:2px;overflow:hidden;margin-top:9px}
+.fp-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#0F6E56,#3E9C82);
+ transition:width .35s cubic-bezier(.25,.9,.3,1)}
+/* the chain dims to put the current step forward */
 .fp-on .flow-step{opacity:.34;transition:opacity .3s ease}
 .fp-on .flow-step.act{opacity:1}
-.fp-on .flow-step.done{opacity:.72}
-.fp-on .flow-step.act .flow-box{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-pale),0 4px 14px rgba(45,139,139,.18)}
-.fp-on .flow-step.act .flow-num{transform:scale(1.1)}
+.fp-on .flow-step.done{opacity:.7}
+.fp-on .flow-step.act .flow-box{border-color:#0F6E56;box-shadow:0 0 0 3px #E4F1EC}
+.fp-on .flow-step.act .flow-num{transform:scale(1.08)}
 .flow-num{transition:transform .25s cubic-bezier(.3,.9,.4,1);position:relative}
-.fp-detail{margin-top:12px;border:1px solid var(--rule);border-radius:var(--r2);overflow:hidden;background:#fff}
-.fp-detail-hd{background:var(--teal-pale);border-bottom:1px solid var(--teal-rule);padding:8px 14px;
- display:flex;align-items:center;gap:10px}
-.fp-detail-num{width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;
- display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:12px;font-weight:700}
-.fp-detail-t{font-family:var(--font-d);font-size:13.5px;font-weight:700;color:var(--teal-dim)}
-.fp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.fp-cell{padding:11px 14px;border-right:1px solid var(--rule)}
+/* detail card for the step in play */
+.fp-detail{margin-top:13px;border:1px solid #E3E0D8;border-radius:10px;overflow:hidden;background:#fff}
+.fp-detail-hd{display:flex;align-items:center;gap:9px;padding:9px 13px;
+ background:#F4F8F6;border-bottom:1px solid #E3E0D8}
+.fp-detail-num{width:22px;height:22px;border-radius:50%;background:#0F6E56;color:#fff;flex:0 0 auto;
+ display:flex;align-items:center;justify-content:center;
+ font:600 11px/1 ui-monospace,Menlo,Consolas,monospace}
+.fp-detail-t{font:500 12.5px/1.3 "Inter","Segoe UI",system-ui,sans-serif;color:#0A4A3A;
+ letter-spacing:.01em}
+.fp-crit{margin-left:auto;font:700 8px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.09em;
+ text-transform:uppercase;color:#8A5A12;background:#FBF2DF;border:1px solid #E3C88A;
+ padding:4px 8px;border-radius:4px;white-space:nowrap}
+.fp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.fp-cell{padding:11px 13px;border-right:1px solid #EFEDE6}
 .fp-cell:last-child{border-right:none}
-.fp-lbl{font-family:var(--font-m);font-size:8px;font-weight:700;letter-spacing:.08em;
- text-transform:uppercase;color:var(--mid);margin-bottom:4px}
-.fp-val{font-size:12.5px;line-height:1.5;color:var(--ink)}
-.fp-empty{padding:14px;font-size:12.5px;color:var(--mid);text-align:center}
-.fp-done{margin-top:12px;padding:12px 16px;border-radius:var(--r2);background:#EAF6F0;
- border:1px solid #9FCFBF;color:#0A4A3A;font-size:13px;display:none;align-items:center;gap:10px}
+.fp-lbl{font:600 8px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.09em;
+ text-transform:uppercase;color:#A29C90;margin-bottom:5px}
+.fp-val{font:400 12px/1.5 "Inter","Segoe UI",system-ui,sans-serif;color:#23211E}
+.fp-empty{padding:15px 14px;font:400 12px/1.55 "Inter","Segoe UI",system-ui,sans-serif;
+ color:#8C877D;text-align:center}
+.fp-empty b{color:#4A4740;font-weight:500}
+.fp-done{display:none;align-items:center;gap:9px;margin-top:11px;padding:11px 14px;
+ background:#EAF6F0;border:1px solid #9FCFBF;border-radius:10px;
+ font:400 12.5px/1.4 "Inter","Segoe UI",system-ui,sans-serif;color:#0A4A3A}
 .fp-done.on{display:flex}
+.fp-done b{font-weight:500}
 @media(max-width:768px){
   .fp-grid{grid-template-columns:1fr}
-  .fp-cell{border-right:none;border-bottom:1px solid var(--rule)}
+  .fp-cell{border-right:none;border-bottom:1px solid #EFEDE6}
   .fp-cell:last-child{border-bottom:none}
-  .fp-btn{padding:8px 12px;font-size:12px;flex:1 1 auto;justify-content:center}
-  .fp-count{flex:1 0 100%;margin-left:0;text-align:right}
+  .fp-btn{flex:1 1 auto;padding:0 10px}
+  .fp-sep{display:none}
+  .fp-count{flex:1 0 100%;margin:6px 0 0;text-align:right}
 }
 @media print{.fp-bar,.fp-detail,.fp-done{display:none!important}
   .fp-on .flow-step{opacity:1!important}}
@@ -653,7 +670,7 @@ tbody tr:hover td{background:var(--teal-pale)!important}
       <span class="sec-chevron">▾</span>
     </div>
     <div class="sec-collapse">
-    <div class="sec-body"><div class="fp-bar" id="fpBar"><button class="fp-btn primary" id="fpStart">&#9654; Begin walkthrough</button><button class="fp-btn" id="fpPrev" disabled>&#9664; Back</button><button class="fp-btn" id="fpNext" disabled>&#10003; Confirm step</button><button class="fp-btn" id="fpReset" disabled>&#8635; Reset</button><button class="fp-btn" id="fpAudio" disabled>&#128266; Read step</button><span class="fp-count" id="fpCount">Not started</span><span class="fp-prog"><i id="fpProg"></i></span></div><div class="flow-chain"><div class="flow-step"><div class="flow-num  crit">1</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Identify and document nonconformity on NCR form</span></div><div class="flow-callout"><div class="callout-tag  crit"><span class="callout-txt  crit"><a href="PM_FRM_NCR-01.html" class="xref" title="Open PM/FRM/NCR-01">PM/FRM/NCR-01</a></span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">2</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Immediate containment: segregate, quarantine, or stop process</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">3</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Classify severity: Minor / Major / Critical</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">4</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Root cause analysis using 5-Why, Fishbone, or 8D method</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">5</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Define corrective actions addressing root cause</span></div><div class="flow-callout"><div class="callout-tag  crit"><span class="callout-txt  crit"><a href="PM_FRM_CAPA-01.html" class="xref" title="Open PM/FRM/CAPA-01">PM/FRM/CAPA-01</a></span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">6</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Implement corrective actions within agreed timeline</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">7</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Verify effectiveness of actions (30-90 day check)</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">8</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Close NCR/CAPA after verified effectiveness. Update risk register</span></div><div></div></div></div></div>
+    <div class="sec-body"><div class="fp-bar" id="fpBar"><button class="fp-btn primary" id="fpStart">&#9654;&nbsp; Begin walkthrough</button><button class="fp-btn" id="fpPrev" disabled>&#9664; Back</button><button class="fp-btn" id="fpNext" disabled>Confirm step &#10003;</button><span class="fp-sep"></span><button class="fp-btn audio" id="fpAudio" disabled>&#128266; Read aloud</button><button class="fp-btn" id="fpReset" disabled>&#8635; Reset</button><span class="fp-count" id="fpCount">Not started</span><span class="fp-prog"><i id="fpProg"></i></span></div><div class="flow-chain"><div class="flow-step"><div class="flow-num  crit">1</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Identify and document nonconformity on NCR form</span></div><div class="flow-callout"><div class="callout-tag  crit"><span class="callout-txt  crit"><a href="PM_FRM_NCR-01.html" class="xref" title="Open PM/FRM/NCR-01">PM/FRM/NCR-01</a></span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">2</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Immediate containment: segregate, quarantine, or stop process</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">3</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Classify severity: Minor / Major / Critical</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">4</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Root cause analysis using 5-Why, Fishbone, or 8D method</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">5</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Define corrective actions addressing root cause</span></div><div class="flow-callout"><div class="callout-tag  crit"><span class="callout-txt  crit"><a href="PM_FRM_CAPA-01.html" class="xref" title="Open PM/FRM/CAPA-01">PM/FRM/CAPA-01</a></span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">6</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Implement corrective actions within agreed timeline</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num  crit">7</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box  crit"><span class="crit-pill">⚡ Critical Control Point</span><span class="flow-step-text">Verify effectiveness of actions (30-90 day check)</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg width="20" height="30" viewBox="0 0 20 30"><polygon points="4,18 16,18 10,28" fill="#2D8B8B"/></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">8</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">Close NCR/CAPA after verified effectiveness. Update risk register</span></div><div></div></div></div></div>
     </div>
   <div class="fp-detail" id="fpDetail"><div class="fp-empty">Press <b>Begin walkthrough</b> to step through this procedure. Each step shows the action, who is responsible and the record it produces.</div></div><div class="fp-done" id="fpDone"><b>&#10003; Procedure complete.</b><span>All steps confirmed. File the records listed above.</span></div></div><script id="flow-player-js">
 (function(){
@@ -720,8 +737,8 @@ tbody tr:hover td{background:var(--teal-pale)!important}
     $('fpNext').disabled=(i<0||i>=STEPS.length);
     $('fpDone').classList.toggle('on', i>=STEPS.length);
     var ab=$('fpAudio');
-    if(ab){ ab.disabled=(i<0);
-      ab.innerHTML=(speakOn?'\u23F8 Pause audio':'\uD83D\uDD0A Read step'); }
+    if(ab){ ab.disabled=(i<0); ab.classList.toggle('on',speakOn);
+      ab.innerHTML=(speakOn?'&#9208; Pause':'&#128266; Read aloud'); }
     if(i>=STEPS.length) stop();
     if(i>=0&&i<STEPS.length){
       var s=STEPS[i];
@@ -729,7 +746,7 @@ tbody tr:hover td{background:var(--teal-pale)!important}
         +'<div class="fp-val">'+v.replace(/</g,'&lt;')+'</div></div>':''; };
       $('fpDetail').innerHTML='<div class="fp-detail-hd"><span class="fp-detail-num">'+s.num+'</span>'
         +'<span class="fp-detail-t">'+(s.phase||'Step '+s.num).replace(/</g,'&lt;')+'</span>'
-        +(s.crit?'<span class="crit-pill" style="margin:0 0 0 auto">Critical control point</span>':'')+'</div>'
+        +(s.crit?'<span class="fp-crit">Critical control point</span>':'')+'</div>'
         +'<div class="fp-grid">'+cell('Desired action',s.action)+cell('Responsible person',s.who)
         +cell('Record required',s.record)+'</div>';
       say(i);
@@ -975,48 +992,65 @@ window.secToggle = function(hdr){
 </div>
 </div>
 <style id="flow-player-css">
-.fp-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px;padding:10px 12px;
- background:var(--teal-pale);border:1px solid var(--teal-rule);border-radius:var(--r2)}
-.fp-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--teal-rule);
- background:#fff;color:var(--teal-dim);border-radius:var(--r);padding:7px 14px;
- font-family:var(--font-b);font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s}
-.fp-btn:hover:not(:disabled){background:var(--teal);color:#fff;border-color:var(--teal)}
+/* walkthrough bar: one primary action, quiet secondaries, progress underneath */
+.fp-bar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 14px;padding:11px 13px 9px;
+ background:#FBFAF7;border:1px solid #E3E0D8;border-radius:10px}
+.fp-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:32px;
+ padding:0 13px;border:1px solid #DDD8CD;background:#fff;color:#4A4740;border-radius:7px;
+ font:500 12px/1 "Inter","Segoe UI",system-ui,sans-serif;letter-spacing:.01em;cursor:pointer;
+ transition:background .14s,border-color .14s,color .14s,transform .1s}
+.fp-btn:hover:not(:disabled){border-color:#0F6E56;color:#0F6E56;background:#F2F8F5}
 .fp-btn:active:not(:disabled){transform:translateY(1px)}
-.fp-btn:disabled{opacity:.4;cursor:default}
-.fp-btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
-.fp-btn.primary:hover{filter:brightness(1.08)}
-.fp-count{margin-left:auto;font-family:var(--font-m);font-size:11px;color:var(--teal-dim);
- letter-spacing:.04em;white-space:nowrap}
-.fp-prog{height:3px;background:var(--rule);border-radius:2px;overflow:hidden;flex:1 0 100%;margin-top:2px}
-.fp-prog i{display:block;height:100%;width:0;background:var(--teal);transition:width .35s cubic-bezier(.25,.9,.3,1)}
+.fp-btn:disabled{opacity:.38;cursor:default}
+.fp-btn.primary{background:#0F6E56;border-color:#0F6E56;color:#fff;font-weight:500;padding:0 15px}
+.fp-btn.primary:hover{background:#0C5A47;border-color:#0C5A47;color:#fff}
+.fp-btn.audio.on{background:#FBF2DF;border-color:#C79A4B;color:#7A5A14}
+.fp-sep{width:1px;height:20px;background:#E3E0D8;margin:0 3px}
+.fp-count{margin-left:auto;font:500 10.5px/1 ui-monospace,Menlo,Consolas,monospace;
+ color:#8C877D;letter-spacing:.04em;white-space:nowrap}
+.fp-prog{flex:1 0 100%;height:3px;background:#EDEAE2;border-radius:2px;overflow:hidden;margin-top:9px}
+.fp-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#0F6E56,#3E9C82);
+ transition:width .35s cubic-bezier(.25,.9,.3,1)}
+/* the chain dims to put the current step forward */
 .fp-on .flow-step{opacity:.34;transition:opacity .3s ease}
 .fp-on .flow-step.act{opacity:1}
-.fp-on .flow-step.done{opacity:.72}
-.fp-on .flow-step.act .flow-box{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-pale),0 4px 14px rgba(45,139,139,.18)}
-.fp-on .flow-step.act .flow-num{transform:scale(1.1)}
+.fp-on .flow-step.done{opacity:.7}
+.fp-on .flow-step.act .flow-box{border-color:#0F6E56;box-shadow:0 0 0 3px #E4F1EC}
+.fp-on .flow-step.act .flow-num{transform:scale(1.08)}
 .flow-num{transition:transform .25s cubic-bezier(.3,.9,.4,1);position:relative}
-.fp-detail{margin-top:12px;border:1px solid var(--rule);border-radius:var(--r2);overflow:hidden;background:#fff}
-.fp-detail-hd{background:var(--teal-pale);border-bottom:1px solid var(--teal-rule);padding:8px 14px;
- display:flex;align-items:center;gap:10px}
-.fp-detail-num{width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;
- display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:12px;font-weight:700}
-.fp-detail-t{font-family:var(--font-d);font-size:13.5px;font-weight:700;color:var(--teal-dim)}
-.fp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.fp-cell{padding:11px 14px;border-right:1px solid var(--rule)}
+/* detail card for the step in play */
+.fp-detail{margin-top:13px;border:1px solid #E3E0D8;border-radius:10px;overflow:hidden;background:#fff}
+.fp-detail-hd{display:flex;align-items:center;gap:9px;padding:9px 13px;
+ background:#F4F8F6;border-bottom:1px solid #E3E0D8}
+.fp-detail-num{width:22px;height:22px;border-radius:50%;background:#0F6E56;color:#fff;flex:0 0 auto;
+ display:flex;align-items:center;justify-content:center;
+ font:600 11px/1 ui-monospace,Menlo,Consolas,monospace}
+.fp-detail-t{font:500 12.5px/1.3 "Inter","Segoe UI",system-ui,sans-serif;color:#0A4A3A;
+ letter-spacing:.01em}
+.fp-crit{margin-left:auto;font:700 8px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.09em;
+ text-transform:uppercase;color:#8A5A12;background:#FBF2DF;border:1px solid #E3C88A;
+ padding:4px 8px;border-radius:4px;white-space:nowrap}
+.fp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.fp-cell{padding:11px 13px;border-right:1px solid #EFEDE6}
 .fp-cell:last-child{border-right:none}
-.fp-lbl{font-family:var(--font-m);font-size:8px;font-weight:700;letter-spacing:.08em;
- text-transform:uppercase;color:var(--mid);margin-bottom:4px}
-.fp-val{font-size:12.5px;line-height:1.5;color:var(--ink)}
-.fp-empty{padding:14px;font-size:12.5px;color:var(--mid);text-align:center}
-.fp-done{margin-top:12px;padding:12px 16px;border-radius:var(--r2);background:#EAF6F0;
- border:1px solid #9FCFBF;color:#0A4A3A;font-size:13px;display:none;align-items:center;gap:10px}
+.fp-lbl{font:600 8px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.09em;
+ text-transform:uppercase;color:#A29C90;margin-bottom:5px}
+.fp-val{font:400 12px/1.5 "Inter","Segoe UI",system-ui,sans-serif;color:#23211E}
+.fp-empty{padding:15px 14px;font:400 12px/1.55 "Inter","Segoe UI",system-ui,sans-serif;
+ color:#8C877D;text-align:center}
+.fp-empty b{color:#4A4740;font-weight:500}
+.fp-done{display:none;align-items:center;gap:9px;margin-top:11px;padding:11px 14px;
+ background:#EAF6F0;border:1px solid #9FCFBF;border-radius:10px;
+ font:400 12.5px/1.4 "Inter","Segoe UI",system-ui,sans-serif;color:#0A4A3A}
 .fp-done.on{display:flex}
+.fp-done b{font-weight:500}
 @media(max-width:768px){
   .fp-grid{grid-template-columns:1fr}
-  .fp-cell{border-right:none;border-bottom:1px solid var(--rule)}
+  .fp-cell{border-right:none;border-bottom:1px solid #EFEDE6}
   .fp-cell:last-child{border-bottom:none}
-  .fp-btn{padding:8px 12px;font-size:12px;flex:1 1 auto;justify-content:center}
-  .fp-count{flex:1 0 100%;margin-left:0;text-align:right}
+  .fp-btn{flex:1 1 auto;padding:0 10px}
+  .fp-sep{display:none}
+  .fp-count{flex:1 0 100%;margin:6px 0 0;text-align:right}
 }
 @media print{.fp-bar,.fp-detail,.fp-done{display:none!important}
   .fp-on .flow-step{opacity:1!important}}
@@ -1028,7 +1062,7 @@ window.secToggle = function(hdr){
 <span class="sec-chevron">▾</span>
 </div>
 <div class="sec-collapse">
-<div class="sec-body"><div class="fp-bar" id="fpBar"><button class="fp-btn primary" id="fpStart">▶ वॉकथ्रू शुरू करें</button><button class="fp-btn" disabled="" id="fpPrev">◀ वापस</button><button class="fp-btn" disabled="" id="fpNext">✓ चरण की पुष्टि करें</button><button class="fp-btn" disabled="" id="fpReset">↻ रीसेट करें</button><button class="fp-btn" disabled="" id="fpAudio">🔊 चरण पढ़ें</button><span class="fp-count" id="fpCount">प्रारंभ नहीं</span><span class="fp-prog"><i id="fpProg"></i></span></div><div class="flow-chain"><div class="flow-step"><div class="flow-num crit">1</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">एनसीआर फॉर्म पर गैर-अनुरूपता की पहचान करें और उसका दस्तावेजीकरण करें</span></div><div class="flow-callout"><div class="callout-tag crit"><span class="callout-txt crit">PM/FRM/NCR-01</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">2</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">तत्काल रोकथाम: अलग करना, संगरोध करना, या प्रक्रिया को रोकना</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">3</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">गंभीरता को वर्गीकृत करें: मामूली / प्रमुख / गंभीर</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">4</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">5-क्यों, फिशबोन, या 8डी विधि</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">5</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">का उपयोग करके मूल कारण विश्लेषण ⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">मूल कारण को संबोधित करने वाली सुधारात्मक कार्रवाइयों को परिभाषित करें</span></div><div class="flow-callout"><div class="callout-tag crit"><span class="callout-txt crit">PM/FRM/CAPA-01</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">6</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">सहमत समयसीमा के भीतर सुधारात्मक कार्रवाई करें</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">7</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">कार्यों की प्रभावशीलता सत्यापित करें (30-90 दिन की जाँच)</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">8</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">सत्यापित प्रभावशीलता के बाद एनसीआर/सीएपीए बंद करें। जोखिम रजिस्टर अद्यतन करें</span></div><div></div></div></div></div>
+<div class="sec-body"><div class="fp-bar" id="fpBar"><button class="fp-btn primary" id="fpStart">▶  वॉकथ्रू शुरू करें</button><button class="fp-btn" disabled="" id="fpPrev">◀ वापस</button><button class="fp-btn" disabled="" id="fpNext">चरण की पुष्टि करें ✓</button><span class="fp-sep"></span><button class="fp-btn audio" disabled="" id="fpAudio">🔊 जोर से पढ़ें</button><button class="fp-btn" disabled="" id="fpReset">↻ रीसेट करें</button><span class="fp-count" id="fpCount">प्रारंभ नहीं</span><span class="fp-prog"><i id="fpProg"></i></span></div><div class="flow-chain"><div class="flow-step"><div class="flow-num crit">1</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">एनसीआर फॉर्म पर गैर-अनुरूपता की पहचान करें और उसका दस्तावेजीकरण करें</span></div><div class="flow-callout"><div class="callout-tag crit"><span class="callout-txt crit">PM/FRM/NCR-01</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">2</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">तत्काल रोकथाम: अलग करना, संगरोध करना, या प्रक्रिया को रोकना</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">3</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">गंभीरता को वर्गीकृत करें: मामूली / प्रमुख / गंभीर</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">4</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">5-क्यों, फिशबोन, या 8डी विधि</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">5</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">का उपयोग करके मूल कारण विश्लेषण ⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">मूल कारण को संबोधित करने वाली सुधारात्मक कार्रवाइयों को परिभाषित करें</span></div><div class="flow-callout"><div class="callout-tag crit"><span class="callout-txt crit">PM/FRM/CAPA-01</span></div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">6</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">सहमत समयसीमा के भीतर सुधारात्मक कार्रवाई करें</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num crit">7</div><div class="flow-conn"><div class="flow-conn-line crit"></div></div><div class="flow-box crit"><span class="crit-pill">⚡ क्रिटिकल कंट्रोल पॉइंट</span><span class="flow-step-text">कार्यों की प्रभावशीलता सत्यापित करें (30-90 दिन की जाँच)</span></div><div></div></div><div class="flow-arrow"><div class="arrow-spine"><svg height="30" viewbox="0 0 20 30" width="20"><polygon fill="#2D8B8B" points="4,18 16,18 10,28"></polygon></svg></div><div></div><div></div><div></div></div><div class="flow-step"><div class="flow-num">8</div><div class="flow-conn"><div class="flow-conn-line"></div></div><div class="flow-box"><span class="flow-step-text">सत्यापित प्रभावशीलता के बाद एनसीआर/सीएपीए बंद करें। जोखिम रजिस्टर अद्यतन करें</span></div><div></div></div></div></div>
 </div>
 <div class="fp-detail" id="fpDetail"><div class="fp-empty">दबाएँ <b>वॉकथ्रू शुरू करें</b> इस प्रक्रिया से गुज़रने के लिए. प्रत्येक चरण कार्रवाई को दर्शाता है, कौन जिम्मेदार है और इससे क्या रिकॉर्ड बनता है।</div></div><div class="fp-done" id="fpDone"><b>✓ प्रक्रिया पूर्ण।</b><span>सभी चरणों की पुष्टि की गई. ऊपर सूचीबद्ध रिकॉर्ड दर्ज करें।</span></div></div><script id="flow-player-js">
 (function(){
@@ -1095,8 +1129,8 @@ window.secToggle = function(hdr){
     $('fpNext').disabled=(i<0||i>=STEPS.length);
     $('fpDone').classList.toggle('on', i>=STEPS.length);
     var ab=$('fpAudio');
-    if(ab){ ab.disabled=(i<0);
-      ab.innerHTML=(speakOn?'\u23F8 Pause audio':'\uD83D\uDD0A Read step'); }
+    if(ab){ ab.disabled=(i<0); ab.classList.toggle('on',speakOn);
+      ab.innerHTML=(speakOn?'&#9208; Pause':'&#128266; Read aloud'); }
     if(i>=STEPS.length) stop();
     if(i>=0&&i<STEPS.length){
       var s=STEPS[i];
@@ -1104,7 +1138,7 @@ window.secToggle = function(hdr){
         +'<div class="fp-val">'+v.replace(/</g,'&lt;')+'</div></div>':''; };
       $('fpDetail').innerHTML='<div class="fp-detail-hd"><span class="fp-detail-num">'+s.num+'</span>'
         +'<span class="fp-detail-t">'+(s.phase||'Step '+s.num).replace(/</g,'&lt;')+'</span>'
-        +(s.crit?'<span class="crit-pill" style="margin:0 0 0 auto">Critical control point</span>':'')+'</div>'
+        +(s.crit?'<span class="fp-crit">Critical control point</span>':'')+'</div>'
         +'<div class="fp-grid">'+cell('Desired action',s.action)+cell('Responsible person',s.who)
         +cell('Record required',s.record)+'</div>';
       say(i);
