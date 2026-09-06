@@ -163,9 +163,8 @@ body{font-family:var(--font-b);background:#E8EEF3;color:var(--ink);line-height:1
 .hi-text{font-size:11.5px;line-height:1.7;color:#6B5B3E;margin-bottom:4px}
 .hi-text:last-child{margin-bottom:0}
 /* Inline Hindi blocks — only visible when HI toggle is active */
-.hi-inline{display:none}
-body.lang-hi .hi-inline{display:block}
-.hi-inline{font-size:11px;line-height:1.6;color:#8B7355;display:block;margin-top:2px}
+.hi-inline{display:none!important;font-size:11px;line-height:1.6;color:#8B7355;margin-top:2px}
+body.lang-hi .hi-inline{display:block!important}
 .manual-list .hi-inline{margin-top:1px;padding-left:0}
 .bilingual-pair{margin-bottom:12px}
 .bilingual-pair .manual-para{margin-bottom:2px}
@@ -555,7 +554,7 @@ tbody tr:hover td{background:var(--teal-pale)!important}
       <div class="banner-qr-right"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAADXCAIAAAAGH1PiAAAFMklEQVR4nO3dMZLbOBAF0PHWHoCh073/oZxuyBuMcwaowgCND1DvpZYoSvMLZBsE+tf39/cXRP2T/XiQQrZgLCRPCsmTQvKkkDwpJE8KyZNC8qSQPCkkTwrJk0LypJC8f7teff3+72uJ+/8/P37v4yTbh6p7cZereeSuf33oevFEXT+OsZA8KSRPCsmTQk6rTh7qbs9HXtx1a98+8uPFXd+3ruC4er7+nn/BB2MheVJInhSSJ4UcXp2M3J/W3ekvu7XvKmW6zuoeKKFGJnjq/oJtxkLypJA8KSRPCnlXdZIycVqibeTGv+4kr7LnzZYxFpInheRJIXlSSN4bqpOH9u153TKUrrMaKUfu0OKYOsZC8qSQPCkkTwp5V3WSuhGeOA8xsuC8fVbLDnXiX9BYSJ4UkieF5Ekhh1cnyzaAmqiudumasxlZhnKVPRWWYiwkTwrJk0LypJC8X0f0ip94Ez1xR6+JpzGRJ7vgJ1yRyZNC8qSQw/ud1PXS6Fqlscmd/sSNxe6yImnPAstYSJ4UkieF5Ekhp82dTGz8V7dp7sQtdSee5ER3We2y7Hd+MBaSJ4XkSSF5Usirq5MuE5+wSnX4eEFH96tsf4E2YyF5UkieFJInhRxenUycLFlm4nzAxFmKLqmJpZGzajMWkieF5EkheVLIq3cUnthSsK4qWnaSI5/btmwLr7oJHmMheVJInhSSJ4V80pNdE//XPlWsbLKypG3kKyx7Nu/BWEieFJInheRJIafNnSzrcN5+b90kzYhN1src5k7gB1yRyZNC8qSQD95RuF1w1KkrRyZu9Hv3NHZsH2rZb2XPLs7mikyeFJInhbxrVXzXi+smAJbtNJXq/nKFdtaqW29vLCRPCsmTQvKkkE/qd7KsZ2L7rLre23WoPVu4X6Gn77oYC8mTQvKkkDwp5LTq5CG1/nziNMwmfeY3qTAmHsrcCYdxRSZPCsmTQvI23bOr7lGuutbxDvX109/KWEieFJInheRJIe+qTh7qugSmFn5vsilyW936nrp5JmMheVJInhSSJ4W8uhvjsjv9PbvQj2yKfK/a57j94vY3mnjOxkLypJA8KSRPCnlXdTLy3/R1Dc9TLRTbX7D93k26T3axZxdnc0UmTwrJk0LeVZ08THx2K9UzcaTg6DqNK/RIVdtI25UuxkLypJA8KSRPCnn1nl2b1C7LFqlsMsNxr1rCojrhVVyRyZNC8qSQd3VjPGIuoW5L3WW7INdJ7b5sLCRPCsmTQvKkkA/uFX/i0opNJoeuPR4D0++EV3FFJk8KyZNCXl2djLx3Wc+STeqee9VsUPtzl/19H4yF5EkheVJInhTy6lXxy56w6jryxHXvdS1brlULTTYpsIyF5EkheVJInhRy+Kr4Zfbs2d515FQ1dq86lLkTzuaKTJ4UkieFnDZ3klqevawcmThZsmzN/F3WQnHZ4nxjIXlSSJ4UkieFHP5kV93EQ9e/Tlw8Ubf+fFnf9bZlS3a6GAvJk0LypJA8KeSTesU/bPJI1UjDwfbn1tUuXY7Y5tlYSJ4UkieF5EkhH7wqfkTXUvaRB5/anzux/mirm7QY+SUfrDvhbK7I5EkheVJI3pHVSd1zUJusSukysWhIdY4xFpInheRJIXlSyLuqkyNWS3S9eNmhrlAjma7TqKtdjIXkSSF5UkieFHJ4dbJsC69Ul8C6JSwndoO/rYrnxVyRyZNC8qSQvDP6nfBuxkLypJA8KSRPCsmTQvKkkDwpJE8KyZNC8qSQPCkkTwrJk0LypJCvuL9TD9bEJpv03gAAAABJRU5ErkJggg==" class="banner-qr-img" alt="QR"><span class="banner-qr-lbl">YPP_REG_PM-01</span></div>
     </div>
   </div>
-  <div class="ctrl-strip"><div class="ctrl-cell"><div class="ctrl-lbl">Document Type</div><div class="ctrl-val">Register</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Document Owner</div><div class="ctrl-val">PL Pradhan</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Approved By</div><div class="ctrl-val">Tarun Mishra</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Effective Date</div><div class="ctrl-val">2026-04-23</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Next Review</div><div class="ctrl-val">Apr 2027</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Copy Status</div><div class="ctrl-val">Controlled</div></div></div>
+  <div class="ctrl-strip"><div class="ctrl-cell"><div class="ctrl-lbl">Document Type</div><div class="ctrl-val">Register</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Document Owner</div><div class="ctrl-val">PL Pradhan</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Approved By</div><div class="ctrl-val">Tarun Mishra</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Revision No.</div><div class="ctrl-val">1.1</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Revision Date</div><div class="ctrl-val">2026-04-23</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Effective Date</div><div class="ctrl-val">2026-04-23</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Next Review</div><div class="ctrl-val">Apr 2027</div></div><div class="ctrl-cell"><div class="ctrl-lbl">Copy Status</div><div class="ctrl-val">Controlled</div></div></div>
 
   <div class="section" id="sec-1">
     <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
@@ -584,6 +583,18 @@ tbody tr:hover td{background:var(--teal-pale)!important}
   <div class="section" id="sec-3">
     <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
       <div class="sec-num">3</div>
+      <span class="sec-title">Revision History</span>
+      
+      <span class="sec-chevron">▾</span>
+    </div>
+    <div class="sec-collapse">
+    <div class="tbl-wrap"><table><thead><tr><th scope="col" style="width:60px">Version</th><th scope="col" style="width:100px">Date</th><th scope="col">Description of Change</th><th scope="col" style="width:100px">Author</th><th scope="col" style="width:110px">Approved By</th></tr></thead><tbody><tr><td><span class="ver-badge">v1.1</span></td><td class="mono">2026-04-23</td><td>Initial issue</td><td>PL Pradhan</td><td>Tarun Mishra</td></tr></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-4">
+    <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+      <div class="sec-num">4</div>
       <span class="sec-title">Approval &amp; Signatures</span>
       
       <span class="sec-chevron">▾</span>
@@ -595,7 +606,7 @@ tbody tr:hover td{background:var(--teal-pale)!important}
   <div class="doc-footer">
     <span class="footer-ref">YPP_REG_PM-01 &nbsp;·&nbsp; v1.1 &nbsp;·&nbsp; ISO 9001:2015</span>
     <span>⚠ Uncontrolled when printed &nbsp;·&nbsp; Verify current revision before use</span>
-    <span>Generated 29 Apr 2026</span>
+    <span>Generated 06 Sep 2026</span>
   </div>
 </div>
 <div class="edit-toolbar" id="etb" style="display:none">
@@ -741,7 +752,7 @@ window.secToggle = function(hdr){
 <div class="banner-qr-right"><img alt="QR" class="banner-qr-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAADXCAIAAAAGH1PiAAAFMklEQVR4nO3dMZLbOBAF0PHWHoCh073/oZxuyBuMcwaowgCND1DvpZYoSvMLZBsE+tf39/cXRP2T/XiQQrZgLCRPCsmTQvKkkDwpJE8KyZNC8qSQPCkkTwrJk0LypJC8f7teff3+72uJ+/8/P37v4yTbh6p7cZereeSuf33oevFEXT+OsZA8KSRPCsmTQk6rTh7qbs9HXtx1a98+8uPFXd+3ruC4er7+nn/BB2MheVJInhSSJ4UcXp2M3J/W3ekvu7XvKmW6zuoeKKFGJnjq/oJtxkLypJA8KSRPCnlXdZIycVqibeTGv+4kr7LnzZYxFpInheRJIXlSSN4bqpOH9u153TKUrrMaKUfu0OKYOsZC8qSQPCkkTwp5V3WSuhGeOA8xsuC8fVbLDnXiX9BYSJ4UkieF5Ekhh1cnyzaAmqiudumasxlZhnKVPRWWYiwkTwrJk0LypJC8X0f0ip94Ez1xR6+JpzGRJ7vgJ1yRyZNC8qSQw/ud1PXS6Fqlscmd/sSNxe6yImnPAstYSJ4UkieF5Ekhp82dTGz8V7dp7sQtdSee5ER3We2y7Hd+MBaSJ4XkSSF5Usirq5MuE5+wSnX4eEFH96tsf4E2YyF5UkieFJInhRxenUycLFlm4nzAxFmKLqmJpZGzajMWkieF5EkheVLIq3cUnthSsK4qWnaSI5/btmwLr7oJHmMheVJInhSSJ4V80pNdE//XPlWsbLKypG3kKyx7Nu/BWEieFJInheRJIafNnSzrcN5+b90kzYhN1src5k7gB1yRyZNC8qSQD95RuF1w1KkrRyZu9Hv3NHZsH2rZb2XPLs7mikyeFJInhbxrVXzXi+smAJbtNJXq/nKFdtaqW29vLCRPCsmTQvKkkE/qd7KsZ2L7rLre23WoPVu4X6Gn77oYC8mTQvKkkDwp5LTq5CG1/nziNMwmfeY3qTAmHsrcCYdxRSZPCsmTQvI23bOr7lGuutbxDvX109/KWEieFJInheRJIe+qTh7qugSmFn5vsilyW936nrp5JmMheVJInhSSJ4W8uhvjsjv9PbvQj2yKfK/a57j94vY3mnjOxkLypJA8KSRPCnlXdTLy3/R1Dc9TLRTbX7D93k26T3axZxdnc0UmTwrJk0LeVZ08THx2K9UzcaTg6DqNK/RIVdtI25UuxkLypJA8KSRPCnn1nl2b1C7LFqlsMsNxr1rCojrhVVyRyZNC8qSQd3VjPGIuoW5L3WW7INdJ7b5sLCRPCsmTQvKkkA/uFX/i0opNJoeuPR4D0++EV3FFJk8KyZNCXl2djLx3Wc+STeqee9VsUPtzl/19H4yF5EkheVJInhTy6lXxy56w6jryxHXvdS1brlULTTYpsIyF5EkheVJInhRy+Kr4Zfbs2d515FQ1dq86lLkTzuaKTJ4UkieFnDZ3klqevawcmThZsmzN/F3WQnHZ4nxjIXlSSJ4UkieFHP5kV93EQ9e/Tlw8Ubf+fFnf9bZlS3a6GAvJk0LypJA8KeSTesU/bPJI1UjDwfbn1tUuXY7Y5tlYSJ4UkieF5EkhH7wqfkTXUvaRB5/anzux/mirm7QY+SUfrDvhbK7I5EkheVJI3pHVSd1zUJusSukysWhIdY4xFpInheRJIXlSyLuqkyNWS3S9eNmhrlAjma7TqKtdjIXkSSF5UkieFHJ4dbJsC69Ul8C6JSwndoO/rYrnxVyRyZNC8qSQvDP6nfBuxkLypJA8KSRPCsmTQvKkkDwpJE8KyZNC8qSQPCkkTwrJk0LypJCvuL9TD9bEJpv03gAAAABJRU5ErkJggg=="/><span class="banner-qr-lbl">YPP_REG_PM-01</span></div>
 </div>
 </div>
-<div class="ctrl-strip"><div class="ctrl-cell"><div class="ctrl-lbl">दस्तावेज़ प्रकार</div><div class="ctrl-val">रजिस्टर करें</div></div><div class="ctrl-cell"><div class="ctrl-lbl">दस्तावेज़ स्वामी</div><div class="ctrl-val">पीएल प्रधान</div></div><div class="ctrl-cell"><div class="ctrl-lbl">द्वारा स्वीकृत</div><div class="ctrl-val">तरूण मिश्रा</div></div><div class="ctrl-cell"><div class="ctrl-lbl">प्रभावी तिथि</div><div class="ctrl-val">2026-04-23</div></div><div class="ctrl-cell"><div class="ctrl-lbl">अगली समीक्षा</div><div class="ctrl-val">अप्रैल 2027</div></div><div class="ctrl-cell"><div class="ctrl-lbl">कॉपी स्थिति</div><div class="ctrl-val">नियंत्रित</div></div></div>
+<div class="ctrl-strip"><div class="ctrl-cell"><div class="ctrl-lbl">दस्तावेज़ प्रकार</div><div class="ctrl-val">रजिस्टर करें</div></div><div class="ctrl-cell"><div class="ctrl-lbl">दस्तावेज़ स्वामी</div><div class="ctrl-val">पीएल प्रधान</div></div><div class="ctrl-cell"><div class="ctrl-lbl">द्वारा स्वीकृत</div><div class="ctrl-val">तरूण मिश्रा</div></div><div class="ctrl-cell"><div class="ctrl-lbl">संशोधन संख्या</div><div class="ctrl-val">1.1</div></div><div class="ctrl-cell"><div class="ctrl-lbl">पुनरीक्षण तिथि</div><div class="ctrl-val">2026-04-23</div></div><div class="ctrl-cell"><div class="ctrl-lbl">प्रभावी तिथि</div><div class="ctrl-val">2026-04-23</div></div><div class="ctrl-cell"><div class="ctrl-lbl">अगली समीक्षा</div><div class="ctrl-val">अप्रैल 2027</div></div><div class="ctrl-cell"><div class="ctrl-lbl">कॉपी स्थिति</div><div class="ctrl-val">नियंत्रित</div></div></div>
 <div class="section" id="sec-1">
 <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
 <div class="sec-num">1</div>
@@ -765,6 +776,16 @@ window.secToggle = function(hdr){
 <div class="section" id="sec-3">
 <div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
 <div class="sec-num">3</div>
+<span class="sec-title">पुनरीक्षण इतिहास</span>
+<span class="sec-chevron">▾</span>
+</div>
+<div class="sec-collapse">
+<div class="tbl-wrap"><table><thead><tr><th scope="col" style="width:60px">संस्करण</th><th scope="col" style="width:100px">तारीख</th><th scope="col">परिवर्तन का वर्णन</th><th scope="col" style="width:100px">लेखक</th><th scope="col" style="width:110px">द्वारा स्वीकृत</th></tr></thead><tbody><tr><td><span class="ver-badge">v1.1</span></td><td class="mono">2026-04-23</td><td>प्रारंभिक अंक</td><td>पीएल प्रधान</td><td>तरूण मिश्रा</td></tr></tbody></table></div>
+</div>
+</div>
+<div class="section" id="sec-4">
+<div class="sec-hdr" onclick="secToggle(this)" style="cursor:pointer">
+<div class="sec-num">4</div>
 <span class="sec-title">अनुमोदन एवं हस्ताक्षर</span>
 <span class="sec-chevron">▾</span>
 </div>
@@ -775,7 +796,7 @@ window.secToggle = function(hdr){
 <div class="doc-footer">
 <span class="footer-ref">YPP_REG_PM-01·· v1.1·· आईएसओ 9001:2015</span>
 <span>⚠ मुद्रित होने पर अनियंत्रित · उपयोग से पहले वर्तमान संशोधन सत्यापित करें</span>
-<span>29 अप्रैल 2026 को उत्पन्न</span>
+<span>06 सितम्बर 2026 को उत्पन्न</span>
 </div>
 </div>
 <div class="wm"><div class="wm-inner"><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div><div class="wm-row"><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span><span class="wm-txt">गोपनीय</span></div></div></div>

@@ -25,7 +25,7 @@
 #bil-top.visible{display:flex}
 @media print{#bil-toolbar,#bil-top{display:none!important}}
 </style>
-</head><body>
+<style>a.xref{color:#1b6ca8;text-decoration:none;border-bottom:1px dotted currentColor;font-weight:600}a.xref:hover{background:#e8f1f8}@media print{a.xref{color:inherit;border-bottom:none;font-weight:inherit}}</style></head><body>
 <div class="lang-section active" data-lang="en"><style>
     @page { size: A4 portrait; margin: 10mm 10mm 10mm 15mm; }
     .ir { font-family: "Inter","Segoe UI",Arial,sans-serif; font-size: 8.5pt; color: #222; max-width: 190mm; margin: 0 auto; line-height: 1.3; padding: 5mm 8mm; }
@@ -48,7 +48,7 @@
     /* Inspection table */
     .ir-t { width: 100%; border-collapse: collapse; margin-top: 2px; }
     .ir-t th { background: #eef3f5; color: #1a3a4a; font-size: 6pt; font-weight: 700; text-transform: uppercase; padding: 2px 3px; border: 1px solid #aaa; text-align: center; }
-    .ir-t td { padding: 2px 3px; border: 1px solid #bbb; font-size: 7.5pt; vertical-align: top; }
+    .ir-t td { padding: 2px 3px; border: 1px solid #bbb; font-size: 7.5pt; vertical-align: top; line-height: 1.25; }
     .ir-t td.n { text-align: center; width: 18px; color: #777; font-size: 7pt; }
     .ir-t td.c { text-align: center; }
     .ir-t tr:nth-child(even) { background: #f9fafb; }
@@ -109,7 +109,7 @@
 </div>
 <div class="ir-lbl">Inspection Parameters</div>
 <table class="ir-t"><thead><tr><th style="width:24px">#</th><th>Parameter</th><th style="width:100px">Specification</th><th style="width:120px">Actual</th><th style="width:32px">P/F</th><th style="width:140px">Remarks</th></tr></thead><tbody>
-<tr><td class="n">1</td><td><div class="ir-param">FQC Passed &amp; Form Signed<span class="ir-ccp">CCP</span></div><div class="ir-helper">Ref: PM/FRM/FQC-01 — Final QC Release</div></td><td class="c">Approved</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
+<tr><td class="n">1</td><td><div class="ir-param">FQC Passed &amp; Form Signed<span class="ir-ccp">CCP</span></div><div class="ir-helper">Ref: <a href="PM_FRM_FQC-01.html" class="xref" title="Open PM/FRM/FQC-01">PM/FRM/FQC-01</a> — Final QC Release</div></td><td class="c">Approved</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">2</td><td><div class="ir-param">Quantity Matches Order<span class="ir-ccp">CCP</span></div><div class="ir-helper">Cross-check with Delivery Order / Customer PO</div></td><td class="c">As per PO / DO</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">3</td><td><div class="ir-param">Colour Matches Approved Sample<span class="ir-ccp">CCP</span></div><div class="ir-helper">Compare against customer-approved master sample</div></td><td class="c">Per customer sample</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">4</td><td><div class="ir-param">Shape / Dimensions Within Spec</div><div class="ir-helper">Ref: Product specification / drawing</div></td><td class="c">Per specification</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
@@ -117,8 +117,8 @@
 <tr><td class="n">6</td><td><div class="ir-param">Label Correct (Product, Batch, Expiry, Hazard)<span class="ir-ccp">CCP</span></div><div class="ir-helper">Verify all mandatory markings per customer / regulatory req.</div></td><td class="c">Matches spec</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">7</td><td><div class="ir-param">Packaging Intact &amp; Sealed<span class="ir-ccp">CCP</span></div><div class="ir-helper">Visual check; ensure tamper-evident seals intact</div></td><td class="c">No damage / leaks</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">8</td><td><div class="ir-param">Cleanliness - No Contamination<span class="ir-ccp">CCP</span></div><div class="ir-helper">Visual check for foreign matter / stains</div></td><td class="c">Clean</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
-<tr><td class="n">9</td><td><div class="ir-param">Weight Verification (Random)</div><div class="ir-helper">Random sample; use calibrated balance (PM/FRM/CAL-01)</div></td><td class="c"></td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
-<tr><td class="n">10</td><td><div class="ir-param">COC / COA Attached<span class="ir-ccp">CCP</span></div><div class="ir-helper">Ref: PM/FRM/COC-01 — Certificate of Conformance</div></td><td class="c">Enclosed</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
+<tr><td class="n">9</td><td><div class="ir-param">Weight Verification (Random)</div><div class="ir-helper">Random sample; use calibrated balance (<a href="PM_FRM_CAL-01.html" class="xref" title="Open PM/FRM/CAL-01">PM/FRM/CAL-01</a>)</div></td><td class="c"></td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
+<tr><td class="n">10</td><td><div class="ir-param">COC / COA Attached<span class="ir-ccp">CCP</span></div><div class="ir-helper">Ref: <a href="PM_FRM_COC-01.html" class="xref" title="Open PM/FRM/COC-01">PM/FRM/COC-01</a> — Certificate of Conformance</div></td><td class="c">Enclosed</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">11</td><td><div class="ir-param">MSDS Enclosed (if hazmat)</div><div class="ir-helper">Required for hazardous / regulated materials</div></td><td class="c">If applicable</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">12</td><td><div class="ir-param">Customer-Specific Requirements<span class="ir-ccp">CCP</span></div><div class="ir-helper">Check customer SOW / special instructions on PO</div></td><td class="c">Per SOW / PO</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">13</td><td><div class="ir-param">Storage Conditions Maintained</div><div class="ir-helper">Verify temp/humidity conditions met until dispatch</div></td><td class="c">Per label</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
@@ -164,7 +164,7 @@
     /* Inspection table */
     .ir-t { width: 100%; border-collapse: collapse; margin-top: 2px; }
     .ir-t th { background: #eef3f5; color: #1a3a4a; font-size: 6pt; font-weight: 700; text-transform: uppercase; padding: 2px 3px; border: 1px solid #aaa; text-align: center; }
-    .ir-t td { padding: 2px 3px; border: 1px solid #bbb; font-size: 7.5pt; vertical-align: top; }
+    .ir-t td { padding: 2px 3px; border: 1px solid #bbb; font-size: 7.5pt; vertical-align: top; line-height: 1.25; }
     .ir-t td.n { text-align: center; width: 18px; color: #777; font-size: 7pt; }
     .ir-t td.c { text-align: center; }
     .ir-t tr:nth-child(even) { background: #f9fafb; }
@@ -225,16 +225,16 @@
 </div>
 <div class="ir-lbl">निरीक्षण पैरामीटर्स</div>
 <table class="ir-t"><thead><tr><th style="width:24px">#</th><th>पैरामीटर</th><th style="width:100px">विशिष्टता</th><th style="width:120px">वास्तविक</th><th style="width:32px">पी/एफ</th><th style="width:140px">टिप्पणियाँ</th></tr></thead><tbody>
-<tr><td class="n">1</td><td><div class="ir-param">एफक्यूसी उत्तीर्ण और फॉर्म पर हस्ताक्षर<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">संदर्भ: PM/FRM/FQC-01 - अंतिम QC रिलीज</div></td><td class="c">स्वीकृत</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
-<tr><td class="n">2</td><td><div class="ir-param">मात्रा क्रम से मेल खाती है<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">डिलीवरी ऑर्डर/ग्राहक पीओ</div></td><td class="c">के साथ क्रॉस-चेक करें पीओ/डीओ के अनुसार</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
+<tr><td class="n">1</td><td><div class="ir-param">एफक्यूसी उत्तीर्ण और फॉर्म पर हस्ताक्षर<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">संदर्भ: <a href="PM_FRM_FQC-01.html" class="xref" title="Open PM/FRM/FQC-01">PM/FRM/FQC-01</a> - अंतिम QC रिलीज</div></td><td class="c">स्वीकृत</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
+<tr><td class="n">2</td><td><div class="ir-param">मात्रा क्रम से मेल खाती है<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">डिलिवरी ऑर्डर/ग्राहक पीओ</div></td><td class="c">के साथ क्रॉस-चेक करें पीओ/डीओ के अनुसार</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">3</td><td><div class="ir-param">रंग स्वीकृत नमूने से मेल खाता है<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">ग्राहक-अनुमोदित मास्टर नमूने से तुलना करें</div></td><td class="c">प्रति ग्राहक नमूना</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">4</td><td><div class="ir-param">विशिष्टता के भीतर आकार/आयाम</div><div class="ir-helper">संदर्भ: उत्पाद विशिष्टता/ड्राइंग</div></td><td class="c">प्रति विशिष्टता</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">5</td><td><div class="ir-param">साइज़ विशिष्टता से मेल खाता है</div><div class="ir-helper">संदर्भ: उत्पाद विशिष्टता/ड्राइंग</div></td><td class="c">प्रति विशिष्टता</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">6</td><td><div class="ir-param">लेबल सही (उत्पाद, बैच, समाप्ति, खतरा)<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">प्रति ग्राहक/नियामक अनुरोध के अनुसार सभी अनिवार्य चिह्नों को सत्यापित करें।</div></td><td class="c">विशिष्टता से मेल खाता है</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">7</td><td><div class="ir-param">पैकेजिंग बरकरार एवं सीलबंद<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">दृश्य जांच; सुनिश्चित करें कि छेड़छाड़-स्पष्ट सीलें बरकरार रहें</div></td><td class="c">कोई क्षति/रिसाव नहीं</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">8</td><td><div class="ir-param">स्वच्छता - कोई संदूषण नहीं<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">विदेशी पदार्थ/दागों के लिए दृश्य जांच</div></td><td class="c">साफ़</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
-<tr><td class="n">9</td><td><div class="ir-param">वजन सत्यापन (यादृच्छिक)</div><div class="ir-helper">यादृच्छिक नमूना; कैलिब्रेटेड बैलेंस (PM/FRM/CAL-01) का उपयोग करें</div></td><td class="c"></td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
-<tr><td class="n">10</td><td><div class="ir-param">सीओसी/सीओए संलग्न<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">संदर्भ: PM/FRM/COC-01 - अनुरूपता का प्रमाणपत्र</div></td><td class="c">संलग्न</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
+<tr><td class="n">9</td><td><div class="ir-param">वजन सत्यापन (यादृच्छिक)</div><div class="ir-helper">यादृच्छिक नमूना; कैलिब्रेटेड बैलेंस (<a href="PM_FRM_CAL-01.html" class="xref" title="Open PM/FRM/CAL-01">PM/FRM/CAL-01</a>) का उपयोग करें</div></td><td class="c"></td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
+<tr><td class="n">10</td><td><div class="ir-param">सीओसी/सीओए संलग्न<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">संदर्भ: <a href="PM_FRM_COC-01.html" class="xref" title="Open PM/FRM/COC-01">PM/FRM/COC-01</a> - अनुरूपता का प्रमाणपत्र</div></td><td class="c">संलग्न</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">11</td><td><div class="ir-param">एमएसडीएस संलग्न (यदि खतरनाक हो)</div><div class="ir-helper">खतरनाक/विनियमित सामग्रियों के लिए आवश्यक</div></td><td class="c">यदि लागू हो</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">12</td><td><div class="ir-param">ग्राहक-विशिष्ट आवश्यकताएँ<span class="ir-ccp">सीसीपी</span></div><div class="ir-helper">ग्राहक SOW/पीओ पर विशेष निर्देश जांचें</div></td><td class="c">प्रति बोना/पीओ</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
 <tr><td class="n">13</td><td><div class="ir-param">भंडारण की स्थिति बनाए रखी गई</div><div class="ir-helper">प्रेषण तक तापमान/आर्द्रता की स्थिति की पुष्टि करें</div></td><td class="c">प्रति लेबल</td><td class="c"></td><td class="c"><span class="ir-chk"></span></td><td></td></tr>
