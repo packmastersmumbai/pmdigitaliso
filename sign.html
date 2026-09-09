@@ -64,6 +64,15 @@ in a signature box with one click.</div>
   </div>
 </div>
 
+<div class="card">
+  <div class="lb">Or use a photo of a signature you have already signed</div>
+  <div class="sub" style="margin:0 0 10px">Sign a blank sheet of paper, photograph
+  or scan it, and choose the file. The paper is removed automatically and only the
+  ink is kept, so it sits on the signature line like a drawn one.</div>
+  <input type="file" id="file" accept="image/*">
+  <div class="row"><span class="msg" id="fileMsg"></span></div>
+</div>
+
 <div class="card" id="curCard" style="display:none">
   <div class="lb">Saved in this browser</div>
   <div class="cur"><img id="curImg" alt="Saved signature"><div id="curWho"></div></div>
@@ -164,6 +173,73 @@ document.getElementById('save').onclick=function(){
   me=who.value; showSaved();
   say('msg','Saved. Open any document and use the sign button.','ok');
 };
+/* A photographed signature arrives on a sheet of paper: white all round, grey
+   where the camera saw shadow, and ink somewhere in the middle. Pasting that
+   straight onto a form leaves a white card sitting over the ruled line.
+
+   So the paper is knocked out by lightness rather than by an exact colour —
+   the darker a pixel, the more opaque it stays, which keeps the soft edges of
+   the strokes instead of leaving them jagged — and the result is cropped to
+   the ink that remains. The pen's own colour is kept. */
+function cleanUp(img){
+  var w=img.naturalWidth, h=img.naturalHeight;
+  var max=1600, sc=Math.min(1,max/Math.max(w,h));
+  w=Math.round(w*sc); h=Math.round(h*sc);
+  var c=document.createElement('canvas'); c.width=w; c.height=h;
+  var x=c.getContext('2d'); x.drawImage(img,0,0,w,h);
+  var d=x.getImageData(0,0,w,h), p=d.data;
+  var PAPER=235, INK=120;          // lighter than PAPER is paper, darker than INK is solid
+  var minX=w, minY=h, maxX=-1, maxY=-1;
+  for(var i=0;i<p.length;i+=4){
+    var lum=0.299*p[i]+0.587*p[i+1]+0.114*p[i+2];
+    var a= lum>=PAPER ? 0
+         : lum<=INK   ? 255
+         : Math.round(255*(PAPER-lum)/(PAPER-INK));
+    p[i+3]=a;
+    if(a>24){
+      var px=(i/4)%w, py=Math.floor((i/4)/w);
+      if(px<minX)minX=px; if(px>maxX)maxX=px;
+      if(py<minY)minY=py; if(py>maxY)maxY=py;
+    }
+  }
+  x.putImageData(d,0,0);
+  if(maxX<0) return null;                       // nothing but paper
+  var pad=Math.round(Math.max(w,h)*0.01);
+  minX=Math.max(0,minX-pad); minY=Math.max(0,minY-pad);
+  maxX=Math.min(w-1,maxX+pad); maxY=Math.min(h-1,maxY+pad);
+  var cw=maxX-minX+1, ch=maxY-minY+1;
+  var out=document.createElement('canvas');
+  var oh=Math.min(ch,220), os=oh/ch;            // a signature never needs to be huge
+  out.width=Math.round(cw*os); out.height=Math.round(oh);
+  out.getContext('2d').drawImage(c,minX,minY,cw,ch,0,0,out.width,out.height);
+  return out;
+}
+
+document.getElementById('file').onchange=function(ev){
+  var f=ev.target.files&&ev.target.files[0];
+  if(!f) return;
+  if(!who.value){ say('fileMsg','Pick your name first.','warn');
+    ev.target.value=''; return; }
+  var img=new Image();
+  img.onload=function(){
+    var out=cleanUp(img);
+    if(!out){ say('fileMsg','That image looks blank — nothing dark enough to '+
+      'be ink.','warn'); return; }
+    var data=out.toDataURL('image/png');
+    if(!set('pm.sig.'+slug(who.value),data)||!set('pm.sig.me',who.value)){
+      say('fileMsg','This browser refused to store it — private window?','warn');
+      return; }
+    me=who.value; drawn=false;
+    ctx.clearRect(0,0,pad.width,pad.height);
+    showSaved();
+    say('fileMsg','Saved from '+f.name+' ('+out.width+'×'+out.height+
+        '). Open any document and use the sign button.','ok');
+  };
+  img.onerror=function(){ say('fileMsg','That file could not be read as an '+
+    'image.','warn'); };
+  img.src=URL.createObjectURL(f);
+};
+
 document.getElementById('remove').onclick=function(){
   if(!who.value){ say('msg','Pick your name first.','warn'); return; }
   try{ localStorage.removeItem('pm.sig.'+slug(who.value)); }catch(e){}
