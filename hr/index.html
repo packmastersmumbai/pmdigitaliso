@@ -1,52 +1,196 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Roles and KRA — Pack Masters ISO Portal</title>
+<title>Actual Data — Pack Masters ISO Portal</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font:400 14px/1.5 Inter,system-ui,sans-serif;background:#f8fafc;color:#0f172a}
-.hdr{background:#fff;border-bottom:1px solid #e2e8f0;padding:0 24px;position:sticky;top:0;z-index:10}
-.hi{max-width:1300px;margin:0 auto;height:56px;display:flex;align-items:center;gap:14px}
-.mark{width:34px;height:34px;border-radius:8px;background:#2563eb;color:#fff;display:flex;
- align-items:center;justify-content:center;font-weight:600;font-size:13px}
-.hn{font-weight:600}.ht{font-size:11px;color:#64748b}
-.back{margin-left:auto;font-size:12px;color:#2563eb;text-decoration:none;border:1px solid #e2e8f0;
- padding:6px 12px;border-radius:8px}
-.wrap{max-width:1300px;margin:0 auto;padding:22px 24px 60px}
-h1{font-size:19px;font-weight:600}
-.sub{font-size:13px;color:#64748b;margin:3px 0 18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px}
-.ch{display:flex;align-items:center;gap:10px;margin-bottom:9px}
-.av{width:36px;height:36px;border-radius:50%;background:#eff6ff;color:#1d4ed8;display:flex;
- align-items:center;justify-content:center;font-weight:600;font-size:12px}
-.cn{font-weight:500}.cd{font-size:12px;color:#475569}
-.cm{font-size:11px;color:#94a3b8;margin-bottom:11px}
-.ca{display:flex;gap:7px}
-.btn{font-size:12px;border:1px solid #cbd5e1;border-radius:8px;padding:5px 11px;
- text-decoration:none;color:#0f172a}
-.btn:hover{background:#f1f5f9}
-h2{font-size:14px;font-weight:600;margin:26px 0 10px}
-.pills{display:flex;flex-wrap:wrap;gap:7px}
-.pill{font-size:12px;background:#eff6ff;color:#1d4ed8;border-radius:8px;padding:5px 11px;
- text-decoration:none}
-.pill:hover{background:#dbeafe}
-.note{margin-top:26px;font-size:12px;color:#64748b;border-top:1px dashed #cbd5e1;padding-top:12px}
+body{font:400 14px/1.5 Inter,system-ui,sans-serif;background:#f8fafc;color:#0f172a;height:100vh;display:flex;flex-direction:column}
+.hdr{background:#fff;border-bottom:1px solid #e2e8f0;padding:0 20px;flex:0 0 auto}
+.hi{max-width:1600px;margin:0 auto;height:54px;display:flex;align-items:center;gap:14px}
+.mark{width:32px;height:32px;border-radius:8px;background:#2563eb;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px}
+.hn{font-weight:600;font-size:14px}.ht{font-size:11px;color:#64748b}
+.back{margin-left:auto;font-size:12px;color:#2563eb;text-decoration:none;border:1px solid #e2e8f0;padding:6px 12px;border-radius:8px}
+.wrap{flex:1 1 auto;display:flex;min-height:0;max-width:1600px;width:100%;margin:0 auto}
+.side{flex:0 0 340px;overflow-y:auto;border-right:1px solid #e2e8f0;background:#fff;padding:14px 0}
+.setrow{display:flex;align-items:center;border-left:3px solid transparent}
+.setrow:hover{background:#f1f5f9}
+.setrow.on{background:#eff6ff;border-left-color:#2563eb}
+.setbtn{flex:1 1 auto;text-align:left;border:0;background:none;padding:9px 4px 9px 12px;cursor:pointer;font:inherit;color:#0f172a;min-width:0;display:flex;gap:7px;align-items:baseline;flex-wrap:wrap}
+.caret{flex:0 0 auto;color:#94a3b8;font-size:10px;width:9px}
+.setname{flex:1 1 auto;min-width:0}
+.setbtn small{flex:1 0 100%;padding-left:16px;display:block;color:#94a3b8;font-size:11px;margin-top:1px}
+.setrow.on .setbtn{font-weight:500}
+.dl{flex:0 0 auto;margin-right:12px;border:1px solid #e2e8f0;background:#fff;border-radius:7px;
+ width:30px;height:26px;display:flex;align-items:center;justify-content:center;cursor:pointer;
+ color:#475569;font-size:14px;line-height:1}
+.dl:hover{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
+.dl[disabled]{opacity:.55;cursor:default}
+.dl.busy{font-size:10px;width:44px;color:#1d4ed8}
+.dl.pdf{font-size:9.5px;font-weight:600;letter-spacing:.02em;width:34px;margin-right:6px}
+.doclist{padding:6px 0 14px}
+.doc{display:block;padding:8px 18px 8px 26px;cursor:pointer;border-left:3px solid transparent;text-decoration:none;color:inherit}
+.doc:hover{background:#f8fafc}
+.doc.on{background:#eff6ff;border-left-color:#2563eb}
+.dc{font-family:ui-monospace,monospace;font-size:11px;color:#1d4ed8}
+.dt{font-size:12.5px;font-weight:500;margin:1px 0}
+.dw{font-size:11px;color:#64748b}
+.pane{flex:1 1 auto;display:flex;flex-direction:column;min-width:0;background:#fff}
+.pbar{flex:0 0 auto;border-bottom:1px solid #e2e8f0;padding:9px 16px;display:flex;align-items:center;gap:12px;font-size:12px}
+.pbar b{font-size:13px}
+.pbar a{margin-left:auto;color:#2563eb;text-decoration:none;border:1px solid #e2e8f0;padding:5px 11px;border-radius:8px}
+iframe{flex:1 1 auto;width:100%;border:0;background:#f1f5f9}
+.empty{padding:40px;color:#64748b;font-size:13px}
+.hint{padding:10px 18px;font-size:11px;color:#94a3b8;border-top:1px solid #f1f5f9;margin-top:6px}
+@media(max-width:900px){.wrap{flex-direction:column}.side{flex:0 0 auto;max-height:44vh;border-right:0;border-bottom:1px solid #e2e8f0}}
 </style></head><body>
 <div class="hdr"><div class="hi"><div class="mark">PM</div>
-<div><div class="hn">Pack Masters ISO Portal</div>
-<div class="ht">Roles and KRA</div></div>
+<div><div class="hn">Actual data</div><div class="ht">28 filled records · the blank formats live in the register</div></div>
 <a class="back" href="../index.html">&larr; Document register</a></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <div class="wrap">
-<h1>Roles and KRA</h1>
-<div class="sub">10 people · 13 job descriptions · FY 2026-27 ·
-filled on format <a href="../html/PM_FRM_MR-27.html">PM/FRM/MR-27</a> rev 02</div>
-<div class="grid"><div class="card"><div class="ch"><div class="av">BM</div><div><div class="cn">Balkrishna Mishra</div><div class="cd">Management</div></div></div><div class="cm">Emp 007 · proprietor · 1 zones</div><div class="ca"><a class="btn" href="KRA_007.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-01.html">JD-01</a></div></div><div class="card"><div class="ch"><div class="av">TM</div><div><div class="cn">Tarun Mishra</div><div class="cd">Management</div></div></div><div class="cm">Emp 004 · plant in-charge · 4 zones</div><div class="ca"><a class="btn" href="KRA_004.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-02.html">JD-02</a></div></div><div class="card"><div class="ch"><div class="av">AP</div><div><div class="cn">Anuj Pathak</div><div class="cd">Management</div></div></div><div class="cm">Emp 687 · manager · 15 zones</div><div class="ca"><a class="btn" href="KRA_687.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-03.html">JD-03</a></div></div><div class="card"><div class="ch"><div class="av">DN</div><div><div class="cn">Deepak Nishad</div><div class="cd">Production & Operations</div></div></div><div class="cm">Emp 235 · department in-charge · 10 zones</div><div class="ca"><a class="btn" href="KRA_235.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-04.html">JD-04</a></div></div><div class="card"><div class="ch"><div class="av">DM</div><div><div class="cn">Dilip Mahale</div><div class="cd">Stores</div></div></div><div class="cm">Emp 579 · department in-charge · 6 zones</div><div class="ca"><a class="btn" href="KRA_579.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-05.html">JD-05</a></div></div><div class="card"><div class="ch"><div class="av">HS</div><div><div class="cn">Harish Singh</div><div class="cd">Dispatch & Logistics</div></div></div><div class="cm">Emp 825 · department in-charge · 5 zones</div><div class="ca"><a class="btn" href="KRA_825.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-06.html">JD-06</a></div></div><div class="card"><div class="ch"><div class="av">SM</div><div><div class="cn">Santosh Maurya</div><div class="cd">Maintenance</div></div></div><div class="cm">Emp 557 · department in-charge · 3 zones</div><div class="ca"><a class="btn" href="KRA_557.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-07.html">JD-07</a></div></div><div class="card"><div class="ch"><div class="av">KP</div><div><div class="cn">Khushi Paswan</div><div class="cd">Office, HR & Purchase</div></div></div><div class="cm">Emp 206 · department in-charge · 7 zones</div><div class="ca"><a class="btn" href="KRA_206.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-08.html">JD-08</a></div></div><div class="card"><div class="ch"><div class="av">SK</div><div><div class="cn">Shikha Kumar</div><div class="cd">Quality Assurance & Admin</div></div></div><div class="cm">Emp 278 · department in-charge · 4 zones</div><div class="ca"><a class="btn" href="KRA_278.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-09.html">JD-09</a></div></div><div class="card"><div class="ch"><div class="av">RD</div><div><div class="cn">Rajesh Dubey</div><div class="cd">Security</div></div></div><div class="cm">Emp 355 · security guard · 1 zone</div><div class="ca"><a class="btn" href="KRA_355.html">KRA</a><a class="btn" href="../html/PM_FRM_HR-JD-13.html">JD-13</a></div></div></div>
-<h2>Job descriptions by role</h2>
-<div class="pills"><a class="pill" href="../html/PM_FRM_HR-JD-01.html">JD-01 proprietor</a><a class="pill" href="../html/PM_FRM_HR-JD-02.html">JD-02 plant in-charge</a><a class="pill" href="../html/PM_FRM_HR-JD-03.html">JD-03 manager / management representative</a><a class="pill" href="../html/PM_FRM_HR-JD-04.html">JD-04 department in-charge — production & operations</a><a class="pill" href="../html/PM_FRM_HR-JD-05.html">JD-05 department in-charge — stores</a><a class="pill" href="../html/PM_FRM_HR-JD-06.html">JD-06 department in-charge — dispatch & logistics</a><a class="pill" href="../html/PM_FRM_HR-JD-07.html">JD-07 department in-charge — maintenance</a><a class="pill" href="../html/PM_FRM_HR-JD-08.html">JD-08 department in-charge — office, hr & purchase</a><a class="pill" href="../html/PM_FRM_HR-JD-09.html">JD-09 department in-charge — quality assurance & admin</a><a class="pill" href="../html/PM_FRM_HR-JD-10.html">JD-10 machine operator</a><a class="pill" href="../html/PM_FRM_HR-JD-11.html">JD-11 worker</a><a class="pill" href="../html/PM_FRM_HR-JD-12.html">JD-12 helper</a><a class="pill" href="../html/PM_FRM_HR-JD-13.html">JD-13 security guard</a></div>
-<div class="note">Job descriptions and the KRA and KPI formats are controlled documents and
-live in the document register. The KRA pages above are records against those formats —
-they change monthly and carry no revision number. Departments, designations and zone
-appointments are taken from the employee master.</div>
-</div></body></html>
+  <div class="side" id="side"></div>
+  <div class="pane">
+    <div class="pbar" id="pbar"><b>Select a record</b></div>
+    <div class="empty" id="empty">Pick a section on the left, then a record. It opens here — no new tab.</div>
+    <iframe id="fr" title="Record" style="display:none"></iframe>
+  </div>
+</div>
+<script>
+/* Sections start closed, matching the document-sets view: the page opens as a
+   contents list rather than a wall of names. Each doc carries its own path
+   because the KRA records sit here and everything else in ../html/. */
+var SETS=[{"name": "People — KRA records, FY 2026-27", "blurb": "One scored record per person on the org chart", "docs": [{"code": "Emp 007", "t": "Balkrishna Mishra", "why": "Proprietor · Management · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_007.html"}, {"code": "Emp 004", "t": "Tarun Mishra", "why": "Plant In-charge · Management · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_004.html"}, {"code": "Emp 687", "t": "Anuj Pathak", "why": "Manager / Management Representative · Management · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_687.html"}, {"code": "Emp 235", "t": "Deepak Nishad", "why": "Department In-charge · Production & Operations · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_235.html"}, {"code": "Emp 579", "t": "Dilip Mahale", "why": "Department In-charge · Stores · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_579.html"}, {"code": "Emp 825", "t": "Harish Singh", "why": "Department In-charge · Dispatch & Logistics · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_825.html"}, {"code": "Emp 557", "t": "Santosh Maurya", "why": "Department In-charge · Maintenance · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_557.html"}, {"code": "Emp 206", "t": "Khushi Paswan", "why": "Department In-charge · Office, HR & Purchase · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_206.html"}, {"code": "Emp 278", "t": "Shikha Kumar", "why": "Department In-charge · Quality Assurance & Admin · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_278.html"}, {"code": "Emp 355", "t": "Rajesh Dubey", "why": "Security Guard · Security · KRA FY 2026-27 on PM/FRM/MR-27", "v": "", "f": "KRA_355.html"}]}, {"name": "Job descriptions by role", "blurb": "The JD each record is scored against", "docs": [{"code": "PM/FRM/HR-JD-01", "t": "Proprietor", "why": "Held by Balkrishna Mishra", "v": "", "f": "../html/PM_FRM_HR-JD-01.html"}, {"code": "PM/FRM/HR-JD-02", "t": "Plant In-charge", "why": "Held by Tarun Mishra", "v": "", "f": "../html/PM_FRM_HR-JD-02.html"}, {"code": "PM/FRM/HR-JD-03", "t": "Manager / Management Representative", "why": "Held by Anuj Pathak", "v": "", "f": "../html/PM_FRM_HR-JD-03.html"}, {"code": "PM/FRM/HR-JD-04", "t": "Department In-charge — Production & Operations", "why": "Held by Deepak Nishad", "v": "", "f": "../html/PM_FRM_HR-JD-04.html"}, {"code": "PM/FRM/HR-JD-05", "t": "Department In-charge — Stores", "why": "Held by Dilip Mahale", "v": "", "f": "../html/PM_FRM_HR-JD-05.html"}, {"code": "PM/FRM/HR-JD-06", "t": "Department In-charge — Dispatch & Logistics", "why": "Held by Harish Singh", "v": "", "f": "../html/PM_FRM_HR-JD-06.html"}, {"code": "PM/FRM/HR-JD-07", "t": "Department In-charge — Maintenance", "why": "Held by Santosh Maurya", "v": "", "f": "../html/PM_FRM_HR-JD-07.html"}, {"code": "PM/FRM/HR-JD-08", "t": "Department In-charge — Office, HR & Purchase", "why": "Held by Khushi Paswan", "v": "", "f": "../html/PM_FRM_HR-JD-08.html"}, {"code": "PM/FRM/HR-JD-09", "t": "Department In-charge — Quality Assurance & Admin", "why": "Held by Shikha Kumar", "v": "", "f": "../html/PM_FRM_HR-JD-09.html"}, {"code": "PM/FRM/HR-JD-10", "t": "Machine Operator", "why": "No current holder named", "v": "", "f": "../html/PM_FRM_HR-JD-10.html"}, {"code": "PM/FRM/HR-JD-11", "t": "Worker", "why": "No current holder named", "v": "", "f": "../html/PM_FRM_HR-JD-11.html"}, {"code": "PM/FRM/HR-JD-12", "t": "Helper", "why": "No current holder named", "v": "", "f": "../html/PM_FRM_HR-JD-12.html"}, {"code": "PM/FRM/HR-JD-13", "t": "Security Guard", "why": "Held by Rajesh Dubey", "v": "", "f": "../html/PM_FRM_HR-JD-13.html"}]}, {"name": "Filled registers", "blurb": "Registers carrying named people and measured figures", "docs": [{"code": "PM/REG/HR-01", "t": "Skill matrix", "why": "52 people × 9 skills, actual level against target", "v": "", "f": "../html/PM_REG_HR-01.html"}, {"code": "PM/REG/HR-02", "t": "Job description issue register", "why": "Who holds which JD, and whether they signed for it", "v": "", "f": "../html/PM_REG_HR-02.html"}, {"code": "PM/FRM/HR-04", "t": "Annual training plan", "why": "Built from the skill-matrix gaps", "v": "", "f": "../html/PM_FRM_HR-04.html"}, {"code": "PM/FRM/5S-01", "t": "Zone ownership register", "why": "All 28 zones, with the person appointed to each", "v": "", "f": "../html/PM_FRM_5S-01.html"}, {"code": "PM/FRM/MR-14", "t": "KPI register", "why": "The measures each in-charge is reviewed against", "v": "", "f": "../html/PM_FRM_MR-14.html"}]}], cur=-1, curDoc=null;
+var side=document.getElementById('side'), fr=document.getElementById('fr'),
+    pbar=document.getElementById('pbar'), empty=document.getElementById('empty');
+function render(){
+  side.innerHTML='';
+  SETS.forEach(function(s,i){
+    var row=document.createElement('div');
+    row.className='setrow'+(i===cur?' on':'');
+    var b=document.createElement('button');
+    b.className='setbtn';
+    b.setAttribute('aria-expanded', i===cur ? 'true' : 'false');
+    b.innerHTML='<span class="caret">'+(i===cur?'▾':'▸')+'</span>'+
+                '<span class="setname">'+s.name+'</span><small>'+s.docs.length+
+                ' records'+(s.blurb?' · '+s.blurb:'')+'</small>';
+    b.onclick=function(){cur=(cur===i?-1:i);render();};   // click again to close
+    var dl=document.createElement('button');
+    dl.className='dl'; dl.textContent='⤓';
+    dl.title='Download all '+s.docs.length+' records in this section as one ZIP of HTML';
+    dl.setAttribute('aria-label','Download '+s.name+' as a ZIP of HTML');
+    dl.onclick=function(e){e.stopPropagation();zipSet(s,dl);};
+    var pd=document.createElement('button');
+    pd.className='dl pdf'; pd.textContent='PDF';
+    pd.title='Open all '+s.docs.length+' records as one print view — save as a single PDF';
+    pd.setAttribute('aria-label','Print or save '+s.name+' as one PDF');
+    pd.onclick=function(e){e.stopPropagation();pdfSet(s,pd);};
+    row.appendChild(b); row.appendChild(pd); row.appendChild(dl);
+    side.appendChild(row);
+    if(i===cur){
+      var box=document.createElement('div'); box.className='doclist';
+      s.docs.forEach(function(d){
+        var a=document.createElement('a');
+        a.className='doc'+(curDoc===d.f?' on':''); a.href='#';
+        a.innerHTML='<div class="dc">'+d.code+(d.v?'  ·  Rev '+d.v:'')+'</div>'+
+                    '<div class="dt">'+d.t+'</div>'+(d.why?'<div class="dw">'+d.why+'</div>':'');
+        a.onclick=function(e){e.preventDefault();openDoc(d);};
+        box.appendChild(a);
+      });
+      var h=document.createElement('div'); h.className='hint';
+      h.textContent='These are records, not controlled formats: they change as the '+
+        'month closes and carry no revision number. PDF opens the section as one '+
+        'print view; ⤓ downloads it as a ZIP of HTML.';
+      box.appendChild(h);
+      side.appendChild(box);
+    }
+  });
+}
+function zipSet(s,btn){
+  if(btn.dataset.busy) return;
+  btn.dataset.busy='1'; btn.classList.add('busy'); btn.disabled=true;
+  var done=0, zip=new JSZip(), folder=zip.folder(s.name.replace(/[\\/:*?"<>|]/g,'-'));
+  var tick=function(){ done++; btn.textContent=done+'/'+s.docs.length; };
+  var queue=s.docs.slice(), active=0, failed=[];
+  function next(){
+    if(!queue.length && active===0) return finish();
+    while(active<4 && queue.length){
+      (function(d){
+        active++;
+        fetch(d.f).then(function(r){
+          if(!r.ok) throw new Error(r.status);
+          return r.text();
+        }).then(function(txt){
+          folder.file(d.code.replace(/[\/ ]/g,'_')+'.html', txt); tick();
+        }).catch(function(){ failed.push(d.code); tick(); })
+        .then(function(){ active--; next(); });
+      })(queue.shift());
+    }
+  }
+  function finish(){
+    btn.textContent='zip…';
+    zip.generateAsync({type:'blob'}).then(function(blob){
+      var a=document.createElement('a');
+      a.href=URL.createObjectURL(blob);
+      a.download='PackMasters — '+s.name+'.zip';
+      document.body.appendChild(a); a.click();
+      setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1500);
+      btn.classList.remove('busy'); btn.textContent='⤓';
+      btn.disabled=false; delete btn.dataset.busy;
+      if(failed.length) alert('Could not fetch: '+failed.join(', '));
+    });
+  }
+  next();
+}
+function pdfSet(s,btn){
+  if(btn.dataset.busy) return;
+  btn.dataset.busy='1'; btn.classList.add('busy'); btn.disabled=true;
+  var done=0, parts=new Array(s.docs.length), styles=null, failed=[];
+  var tick=function(){ done++; btn.textContent=done+'/'+s.docs.length; };
+  Promise.all(s.docs.map(function(d,i){
+    return fetch(d.f).then(function(r){ if(!r.ok) throw 0; return r.text(); })
+      .then(function(txt){
+        var doc=new DOMParser().parseFromString(txt,'text/html');
+        doc.querySelectorAll('script,#bil-toolbar,#bil-top').forEach(function(n){n.remove();});
+        if(styles===null){
+          styles=Array.prototype.map.call(doc.querySelectorAll('style'),
+            function(n){return n.outerHTML;}).join('\n');
+        }
+        parts[i]='<section class="pgset"><div class="pghdr">'+d.code+
+                 (d.v?'  ·  Rev '+d.v:'')+'  —  '+d.t+'</div>'+doc.body.innerHTML+'</section>';
+        tick();
+      }).catch(function(){ failed.push(d.code); parts[i]=''; tick(); });
+  })).then(function(){
+    var w=window.open('','_blank');
+    if(!w){ alert('Allow pop-ups for this site to use the PDF view.'); reset(); return; }
+    w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>'+
+      'Pack Masters — '+s.name+'</title>'+(styles||'')+
+      '<style>.pgset{break-after:page;page-break-after:always}'+
+      '.pgset:last-child{break-after:auto;page-break-after:auto}'+
+      '.pghdr{font:600 8pt Inter,Arial,sans-serif;color:#64748b;margin:0 0 4mm;'+
+      'border-bottom:1px solid #cbd5e1;padding-bottom:2mm}'+
+      '.cover{font:400 11pt/1.6 Inter,Arial,sans-serif;padding:24mm 18mm;break-after:page;page-break-after:always}'+
+      '.cover h1{font-size:20pt;margin:0 0 4mm}.cover ol{margin:6mm 0 0 6mm}'+
+      '.cover li{margin-bottom:2mm;font-size:10pt}</style></head><body>'+
+      '<div class="cover"><h1>Pack Masters</h1><div style="font-size:13pt;font-weight:500">'+
+      s.name+'</div><div style="color:#64748b;margin-top:2mm">'+s.docs.length+
+      ' records · printed '+new Date().toLocaleDateString('en-GB')+'</div><ol>'+
+      s.docs.map(function(d){return '<li>'+d.code+(d.v?' · Rev '+d.v:'')+' — '+d.t+'</li>';}).join('')+
+      '</ol></div>'+parts.join('')+'</body></html>');
+    w.document.close();
+    setTimeout(function(){ w.focus(); w.print(); },600);
+    reset();
+    if(failed.length) alert('Could not fetch: '+failed.join(', '));
+  });
+  function reset(){ btn.classList.remove('busy'); btn.textContent='PDF';
+    btn.disabled=false; delete btn.dataset.busy; }
+}
+function openDoc(d){
+  curDoc=d.f;
+  fr.src=d.f; fr.style.display='block'; empty.style.display='none';
+  pbar.innerHTML='<b>'+d.t+'</b><span style="color:#64748b">'+d.code+(d.v?' · Rev '+d.v:'')+'</span>'+
+                 '<a href="'+d.f+'" target="_blank">Open in new tab &nearr;</a>';
+  render();
+}
+render();
+</script></body></html>
