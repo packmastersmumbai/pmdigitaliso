@@ -329,11 +329,20 @@
     groups.forEach(function(g){
       g.forEach(function(el,i){
         var key='pm.field.'+DOC+'.'+i, was=get(key);
-        if(was!==null&&was!==undefined) el.value=was;
+        /* A dropdown's options are themselves translated, so the Hindi copy
+           of a control does not hold the English value. Selects therefore
+           travel as a position and everything else as its text. */
+        var sel=el.tagName==='SELECT';
+        var put=function(t,v){
+          if(sel){ var n=parseInt(v,10); if(!isNaN(n)) t.selectedIndex=n; }
+          else t.value=v;
+        };
+        if(was!==null&&was!==undefined) put(el,was);
         var on=function(){
-          set(key,el.value);
+          var v=sel?String(el.selectedIndex):el.value;
+          set(key,v);
           groups.forEach(function(other){
-            if(other[i]&&other[i]!==el) other[i].value=el.value;
+            if(other[i]&&other[i]!==el) put(other[i],v);
           });
           flash('Saved');
         };
@@ -637,11 +646,20 @@
     groups.forEach(function(g){
       g.forEach(function(el,i){
         var key='pm.field.'+DOC+'.'+i, was=get(key);
-        if(was!==null&&was!==undefined) el.value=was;
+        /* A dropdown's options are themselves translated, so the Hindi copy
+           of a control does not hold the English value. Selects therefore
+           travel as a position and everything else as its text. */
+        var sel=el.tagName==='SELECT';
+        var put=function(t,v){
+          if(sel){ var n=parseInt(v,10); if(!isNaN(n)) t.selectedIndex=n; }
+          else t.value=v;
+        };
+        if(was!==null&&was!==undefined) put(el,was);
         var on=function(){
-          set(key,el.value);
+          var v=sel?String(el.selectedIndex):el.value;
+          set(key,v);
           groups.forEach(function(other){
-            if(other[i]&&other[i]!==el) other[i].value=el.value;
+            if(other[i]&&other[i]!==el) put(other[i],v);
           });
           flash('Saved');
         };
