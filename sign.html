@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Signature setup — Pack Masters ISO Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 14px/1.55 Inter,system-ui,sans-serif;background:#f8fafc;color:#0f172a}
+.hdr{background:#fff;border-bottom:1px solid #e2e8f0;padding:0 20px}
+.hi{max-width:900px;margin:0 auto;height:54px;display:flex;align-items:center;gap:14px}
+.mark{width:32px;height:32px;border-radius:8px;background:#2563eb;color:#fff;display:flex;
+ align-items:center;justify-content:center;font-weight:600;font-size:12px}
+.hn{font-weight:600;font-size:14px}.ht{font-size:11px;color:#64748b}
+.back{margin-left:auto;font-size:12px;color:#2563eb;text-decoration:none;border:1px solid #e2e8f0;
+ padding:6px 12px;border-radius:8px}
+.wrap{max-width:900px;margin:0 auto;padding:22px 20px 60px}
+h1{font-size:19px;font-weight:600}
+.sub{font-size:13px;color:#64748b;margin:3px 0 20px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px;margin-bottom:16px}
+.lb{font-size:11px;font-weight:700;letter-spacing:.06em;color:#64748b;text-transform:uppercase;
+ margin-bottom:7px}
+select,input[type=text]{width:100%;font:inherit;padding:9px 11px;border:1px solid #cbd5e1;
+ border-radius:9px;background:#fff}
+.pad{border:1px dashed #cbd5e1;border-radius:10px;background:#fffdf3;touch-action:none;
+ width:100%;height:190px;display:block;cursor:crosshair}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px;align-items:center}
+button{font:inherit;font-size:13px;font-weight:600;border:1px solid #cbd5e1;background:#fff;
+ color:#334155;border-radius:9px;padding:8px 14px;cursor:pointer}
+button:hover{background:#f1f5f9}
+button.pri{background:#2563eb;border-color:#2563eb;color:#fff}
+button.pri:hover{background:#1d4ed8}
+button[disabled]{opacity:.5;cursor:default}
+.msg{font-size:12.5px;margin-left:auto}
+.ok{color:#15803d}.warn{color:#b45309}
+.cur{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.cur img{max-height:60px;max-width:260px;border:1px solid #e2e8f0;border-radius:8px;
+ background:#fff;padding:5px}
+.note{font-size:12px;color:#64748b;border-top:1px dashed #cbd5e1;padding-top:12px;margin-top:6px}
+.note b{color:#334155}
+ol{margin:8px 0 0 18px}li{margin-bottom:4px;font-size:13px}
+</style></head><body>
+<div class="hdr"><div class="hi"><div class="mark">PM</div>
+<div><div class="hn">Signature setup</div><div class="ht">Draw once — used on every document</div></div>
+<a class="back" href="index.html">&larr; Document register</a></div></div>
+<div class="wrap">
+<h1>Your signature</h1>
+<div class="sub">Draw it once here. Every document on the portal can then place it
+in a signature box with one click.</div>
+
+<div class="card">
+  <div class="lb">Who are you</div>
+  <select id="who"></select>
+  <div class="row"><span class="msg" id="whoMsg"></span></div>
+</div>
+
+<div class="card">
+  <div class="lb">Draw your signature</div>
+  <canvas class="pad" id="pad"></canvas>
+  <div class="row">
+    <button class="pri" id="save">Save signature</button>
+    <button id="clear">Clear</button>
+    <button id="remove">Remove saved</button>
+    <span class="msg" id="msg"></span>
+  </div>
+</div>
+
+<div class="card" id="curCard" style="display:none">
+  <div class="lb">Saved in this browser</div>
+  <div class="cur"><img id="curImg" alt="Saved signature"><div id="curWho"></div></div>
+</div>
+
+<div class="card">
+  <div class="lb">How it works</div>
+  <ol>
+    <li>Pick your name and draw your signature, then save.</li>
+    <li>Open any document. Each signature box shows a small <b>sign</b> button.</li>
+    <li>Clicking it places your signature and today's date in that box.</li>
+    <li>Print or save as PDF — the buttons do not print, the signature does.</li>
+  </ol>
+  <div class="note">
+    <b>It stays on this device.</b> The signature is held in this browser only.
+    It is not uploaded, it is not visible to anyone else, and using a different
+    browser or computer means drawing it again. Clearing your browsing data
+    removes it.<br><br>
+    <b>A box that names someone else will not accept your signature</b> — the
+    button is disabled and says whose box it is. Nothing is ever signed
+    automatically when a page opens.<br><br>
+    <b>This is a convenience for the electronic copy</b>, to save retyping a name
+    and a date. It is not a qualified electronic signature and does not replace
+    the wet signature on the printed and issued copy.
+  </div>
+</div>
+</div>
+<script>
+var ROSTER=[{"emp": "007", "name": "Balkrishna Mishra", "role": "Proprietor", "dept": "Management"}, {"emp": "004", "name": "Tarun Mishra", "role": "Plant In-charge", "dept": "Management"}, {"emp": "687", "name": "Anuj Pathak", "role": "Manager / Management Representative", "dept": "Management"}, {"emp": "235", "name": "Deepak Nishad", "role": "Department In-charge", "dept": "Production & Operations"}, {"emp": "579", "name": "Dilip Mahale", "role": "Department In-charge", "dept": "Stores"}, {"emp": "825", "name": "Harish Singh", "role": "Department In-charge", "dept": "Dispatch & Logistics"}, {"emp": "557", "name": "Santosh Maurya", "role": "Department In-charge", "dept": "Maintenance"}, {"emp": "206", "name": "Khushi Paswan", "role": "Department In-charge", "dept": "Office, HR & Purchase"}, {"emp": "278", "name": "Shikha Kumar", "role": "Department In-charge", "dept": "Quality Assurance & Admin"}, {"emp": "355", "name": "Rajesh Dubey", "role": "Security Guard", "dept": "Security"}];
+var slug=function(n){return String(n||'').toLowerCase()
+  .replace(/^(mr|mrs|ms|dr)\.?\s+/,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');};
+function get(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
+function set(k,v){ try{localStorage.setItem(k,v);return true;}catch(e){return false;} }
+
+var who=document.getElementById('who');
+who.innerHTML='<option value="">— select your name —</option>'+
+  ROSTER.map(function(p){return '<option value="'+p.name+'">'+p.name+
+    ' &middot; '+p.role+'</option>';}).join('');
+var me=get('pm.sig.me')||'';
+if(me) who.value=me;
+
+/* A canvas sized in CSS pixels draws blurred on a high-density screen, and a
+   signature is the one thing on the page where that shows. */
+var pad=document.getElementById('pad'), ctx=pad.getContext('2d'), drawn=false;
+function fit(){
+  var r=pad.getBoundingClientRect(), d=window.devicePixelRatio||1;
+  var keep=drawn?pad.toDataURL():null;
+  pad.width=Math.round(r.width*d); pad.height=Math.round(r.height*d);
+  ctx.setTransform(d,0,0,d,0,0);
+  ctx.lineWidth=2.2; ctx.lineCap='round'; ctx.lineJoin='round'; ctx.strokeStyle='#0f172a';
+  if(keep){ var i=new Image(); i.onload=function(){ctx.drawImage(i,0,0,r.width,r.height);};
+    i.src=keep; }
+}
+window.addEventListener('resize',fit); fit();
+
+var down=false;
+function pt(e){ var r=pad.getBoundingClientRect();
+  var t=e.touches?e.touches[0]:e; return {x:t.clientX-r.left,y:t.clientY-r.top}; }
+function start(e){ e.preventDefault(); down=true; drawn=true;
+  var p=pt(e); ctx.beginPath(); ctx.moveTo(p.x,p.y); }
+function move(e){ if(!down) return; e.preventDefault();
+  var p=pt(e); ctx.lineTo(p.x,p.y); ctx.stroke(); }
+function end(){ down=false; }
+pad.addEventListener('pointerdown',start); pad.addEventListener('pointermove',move);
+window.addEventListener('pointerup',end);
+pad.addEventListener('touchstart',start,{passive:false});
+pad.addEventListener('touchmove',move,{passive:false});
+window.addEventListener('touchend',end);
+
+function say(el,text,cls){ var e=document.getElementById(el);
+  e.textContent=text; e.className='msg '+(cls||''); }
+
+function showSaved(){
+  var n=who.value; var card=document.getElementById('curCard');
+  var img=n?get('pm.sig.'+slug(n)):null;
+  if(img){ document.getElementById('curImg').src=img;
+    document.getElementById('curWho').textContent=n;
+    card.style.display=''; }
+  else card.style.display='none';
+}
+who.onchange=function(){
+  if(who.value){ set('pm.sig.me',who.value); me=who.value;
+    say('whoMsg','Documents will offer to sign as '+who.value+'.','ok'); }
+  else say('whoMsg','','');
+  showSaved();
+};
+if(me){ say('whoMsg','Documents will offer to sign as '+me+'.','ok'); showSaved(); }
+
+document.getElementById('clear').onclick=function(){
+  ctx.clearRect(0,0,pad.width,pad.height); drawn=false; say('msg','','');
+};
+document.getElementById('save').onclick=function(){
+  if(!who.value){ say('msg','Pick your name first.','warn'); return; }
+  if(!drawn){ say('msg','Draw your signature in the box first.','warn'); return; }
+  var data=pad.toDataURL('image/png');
+  if(!set('pm.sig.'+slug(who.value),data)||!set('pm.sig.me',who.value)){
+    say('msg','This browser refused to store it — private window?','warn'); return; }
+  me=who.value; showSaved();
+  say('msg','Saved. Open any document and use the sign button.','ok');
+};
+document.getElementById('remove').onclick=function(){
+  if(!who.value){ say('msg','Pick your name first.','warn'); return; }
+  try{ localStorage.removeItem('pm.sig.'+slug(who.value)); }catch(e){}
+  ctx.clearRect(0,0,pad.width,pad.height); drawn=false; showSaved();
+  say('msg','Removed from this browser.','ok');
+};
+</script></body></html>
