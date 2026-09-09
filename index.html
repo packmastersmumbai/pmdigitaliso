@@ -682,11 +682,12 @@ body.map-on{background:#F4F2ED}
     </div>
     <div class="hdr-n">
       <span class="hn"><b id="sn">182</b>docs</span><i></i>
-      <span class="hn"><b>13</b>categories</span><i></i>
-      <span class="hn"><b>39</b>clauses</span>
+      <span class="hn"><b id="sc">13</b>categories</span><i></i>
+      <span class="hn"><b id="scl">39</b>clauses</span>
     </div>
     <button class="aud-toggle" id="audBtn" onclick="audToggle()"><span class="ic">◉</span><span class="tx">Auditor Mode</span></button>
     <button class="map-toggle" id="mapBtn" onclick="mapToggle()"><span class="ic">◱</span><span class="tx">Document Map</span></button>
+    <a class="map-toggle" href="sets/index.html" style="text-decoration:none"><span class="ic">☷</span><span class="tx">Document Sets</span></a>
     <a class="map-toggle" href="hr/index.html" style="text-decoration:none"><span class="ic">▤</span><span class="tx">Roles &amp; KRA</span></a>
   </div>
 </div>
@@ -779,6 +780,13 @@ function go(){
   });
   document.getElementById("rbar").textContent=r.length+" document"+(r.length!==1?"s":"");
   document.getElementById("sn").textContent=r.length;
+  /* categories and clauses were hardcoded and had gone stale: 13 and 39
+     against 8 groups and 44 clauses. Computed from the same array as the
+     document count so they cannot drift again. */
+  var _sc=document.getElementById('sc');
+  if(_sc)_sc.textContent=new Set(D.map(function(d){return d.grp;}).filter(Boolean)).size;
+  var _scl=document.getElementById('scl');
+  if(_scl)_scl.textContent=new Set(D.map(function(d){return d.clause;}).filter(Boolean)).size;
   const groups={};
   r.forEach(d=>{(groups[d.cat_label]||(groups[d.cat_label]=[])).push(d);});
   const main=document.getElementById("main");
