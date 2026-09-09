@@ -196,7 +196,16 @@
  padding:1px 6px;cursor:pointer;line-height:1.5}
 .pm-sg:hover{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
 .pm-sg[disabled]{opacity:.45;cursor:default}
-@media print{.pm-sg{display:none!important}}
+#pm-save{position:fixed;left:14px;bottom:14px;z-index:9999;display:flex;
+ align-items:center;gap:9px;background:#fff;border:1px solid #e2e8f0;
+ border-radius:999px;padding:6px 8px 6px 14px;
+ font:600 8pt Inter,Arial,sans-serif;color:#64748b;
+ box-shadow:0 2px 10px rgba(15,23,42,.10);transition:color .2s,border-color .2s}
+#pm-save.on{color:#15803d;border-color:#86efac}
+#pm-save .x{font:inherit;border:1px solid #cbd5e1;background:#fff;color:#475569;
+ border-radius:999px;padding:3px 10px;cursor:pointer}
+#pm-save .x:hover{background:#fef2f2;border-color:#fecaca;color:#b91c1c}
+@media print{.pm-sg,#pm-save{display:none!important}}
 </style><script id="pm-sign-js" data-doc="MRM_2026-27_1_MINUTES">
 /* Signatures are drawn once on the portal's signature page and kept in this
    browser. Every document is served from the same origin, so one saved
@@ -258,7 +267,10 @@
       b.onclick=function(){
         var rec={name:me,img:mySig,
                  date:new Date().toLocaleDateString('en-GB')};
-        set(key,JSON.stringify(rec)); paint(box,rec);
+        set(key,JSON.stringify(rec));
+        /* the same box exists in the English and the Hindi rendering */
+        document.querySelectorAll('.fm-sc[data-sig="'+box.dataset.sig+'"]')
+          .forEach(function(twin){ paint(twin,rec); });
         b.textContent='clear';
         b.onclick=function(){ try{localStorage.removeItem(key);}catch(e){}
           location.reload(); };
@@ -266,6 +278,70 @@
     }
     box.appendChild(b);
   });
+
+  /* ---- entries -------------------------------------------------------
+     The controls used to be fill-and-print: a reload lost the lot and
+     nothing said so. They now save as you type, into this browser only.
+
+     Each document is rendered twice, English and Hindi, so every control
+     exists twice. Entries are keyed by position within a language section
+     and written to both copies, so switching language does not look like
+     losing your work. The count of controls is stored alongside: if the
+     document is revised into a different shape, the old entries are
+     dropped rather than restored into the wrong boxes. */
+  var secs=[].slice.call(document.querySelectorAll('.lang-section'));
+  if(!secs.length) secs=[document.body];
+  var groups=secs.map(function(sec){
+    return [].slice.call(sec.querySelectorAll('.ed'));
+  }).filter(function(g){ return g.length; });
+  if(groups.length){
+    var n=groups[0].length, shapeKey='pm.shape.'+DOC;
+    if(get(shapeKey)!==String(n)){
+      Object.keys(localStorage||{}).forEach(function(k){
+        if(k.indexOf('pm.field.'+DOC+'.')===0){
+          try{localStorage.removeItem(k);}catch(e){}
+        }
+      });
+      set(shapeKey,String(n));
+    }
+    var chip=document.createElement('div');
+    chip.id='pm-save';
+    chip.innerHTML='<span class="t">Entries save in this browser</span>'+
+                   '<button type="button" class="x">clear form</button>';
+    document.body.appendChild(chip);
+    var label=chip.querySelector('.t'), timer=null;
+    function flash(msg){
+      label.textContent=msg; chip.classList.add('on');
+      clearTimeout(timer);
+      timer=setTimeout(function(){ chip.classList.remove('on');
+        label.textContent='Entries save in this browser'; },1600);
+    }
+    chip.querySelector('.x').onclick=function(){
+      if(!confirm('Clear every entry you have made on this form?')) return;
+      Object.keys(localStorage||{}).forEach(function(k){
+        if(k.indexOf('pm.field.'+DOC+'.')===0||
+           k.indexOf('pm.signed.'+DOC+'.')===0){
+          try{localStorage.removeItem(k);}catch(e){}
+        }
+      });
+      location.reload();
+    };
+    groups.forEach(function(g){
+      g.forEach(function(el,i){
+        var key='pm.field.'+DOC+'.'+i, was=get(key);
+        if(was!==null&&was!==undefined) el.value=was;
+        var on=function(){
+          set(key,el.value);
+          groups.forEach(function(other){
+            if(other[i]&&other[i]!==el) other[i].value=el.value;
+          });
+          flash('Saved');
+        };
+        el.addEventListener('change',on);
+        el.addEventListener('input',on);
+      });
+    });
+  }
 })();
 </script><div class="fm-foot"><span>MRM/2026-27/1 | Rev record | 2026-04-01</span><span></span></div></div></div>
 <div class="lang-section" data-lang="hi"><style>
@@ -428,7 +504,16 @@
  padding:1px 6px;cursor:pointer;line-height:1.5}
 .pm-sg:hover{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
 .pm-sg[disabled]{opacity:.45;cursor:default}
-@media print{.pm-sg{display:none!important}}
+#pm-save{position:fixed;left:14px;bottom:14px;z-index:9999;display:flex;
+ align-items:center;gap:9px;background:#fff;border:1px solid #e2e8f0;
+ border-radius:999px;padding:6px 8px 6px 14px;
+ font:600 8pt Inter,Arial,sans-serif;color:#64748b;
+ box-shadow:0 2px 10px rgba(15,23,42,.10);transition:color .2s,border-color .2s}
+#pm-save.on{color:#15803d;border-color:#86efac}
+#pm-save .x{font:inherit;border:1px solid #cbd5e1;background:#fff;color:#475569;
+ border-radius:999px;padding:3px 10px;cursor:pointer}
+#pm-save .x:hover{background:#fef2f2;border-color:#fecaca;color:#b91c1c}
+@media print{.pm-sg,#pm-save{display:none!important}}
 </style><script data-doc="MRM_2026-27_1_MINUTES" id="pm-sign-js">
 /* Signatures are drawn once on the portal's signature page and kept in this
    browser. Every document is served from the same origin, so one saved
@@ -490,7 +575,10 @@
       b.onclick=function(){
         var rec={name:me,img:mySig,
                  date:new Date().toLocaleDateString('en-GB')};
-        set(key,JSON.stringify(rec)); paint(box,rec);
+        set(key,JSON.stringify(rec));
+        /* the same box exists in the English and the Hindi rendering */
+        document.querySelectorAll('.fm-sc[data-sig="'+box.dataset.sig+'"]')
+          .forEach(function(twin){ paint(twin,rec); });
         b.textContent='clear';
         b.onclick=function(){ try{localStorage.removeItem(key);}catch(e){}
           location.reload(); };
@@ -498,6 +586,70 @@
     }
     box.appendChild(b);
   });
+
+  /* ---- entries -------------------------------------------------------
+     The controls used to be fill-and-print: a reload lost the lot and
+     nothing said so. They now save as you type, into this browser only.
+
+     Each document is rendered twice, English and Hindi, so every control
+     exists twice. Entries are keyed by position within a language section
+     and written to both copies, so switching language does not look like
+     losing your work. The count of controls is stored alongside: if the
+     document is revised into a different shape, the old entries are
+     dropped rather than restored into the wrong boxes. */
+  var secs=[].slice.call(document.querySelectorAll('.lang-section'));
+  if(!secs.length) secs=[document.body];
+  var groups=secs.map(function(sec){
+    return [].slice.call(sec.querySelectorAll('.ed'));
+  }).filter(function(g){ return g.length; });
+  if(groups.length){
+    var n=groups[0].length, shapeKey='pm.shape.'+DOC;
+    if(get(shapeKey)!==String(n)){
+      Object.keys(localStorage||{}).forEach(function(k){
+        if(k.indexOf('pm.field.'+DOC+'.')===0){
+          try{localStorage.removeItem(k);}catch(e){}
+        }
+      });
+      set(shapeKey,String(n));
+    }
+    var chip=document.createElement('div');
+    chip.id='pm-save';
+    chip.innerHTML='<span class="t">Entries save in this browser</span>'+
+                   '<button type="button" class="x">clear form</button>';
+    document.body.appendChild(chip);
+    var label=chip.querySelector('.t'), timer=null;
+    function flash(msg){
+      label.textContent=msg; chip.classList.add('on');
+      clearTimeout(timer);
+      timer=setTimeout(function(){ chip.classList.remove('on');
+        label.textContent='Entries save in this browser'; },1600);
+    }
+    chip.querySelector('.x').onclick=function(){
+      if(!confirm('Clear every entry you have made on this form?')) return;
+      Object.keys(localStorage||{}).forEach(function(k){
+        if(k.indexOf('pm.field.'+DOC+'.')===0||
+           k.indexOf('pm.signed.'+DOC+'.')===0){
+          try{localStorage.removeItem(k);}catch(e){}
+        }
+      });
+      location.reload();
+    };
+    groups.forEach(function(g){
+      g.forEach(function(el,i){
+        var key='pm.field.'+DOC+'.'+i, was=get(key);
+        if(was!==null&&was!==undefined) el.value=was;
+        var on=function(){
+          set(key,el.value);
+          groups.forEach(function(other){
+            if(other[i]&&other[i]!==el) other[i].value=el.value;
+          });
+          flash('Saved');
+        };
+        el.addEventListener('change',on);
+        el.addEventListener('input',on);
+      });
+    });
+  }
 })();
 </script><div class="fm-foot"><span>MRM/2026-27/1 | रेव रिकॉर्ड | 2026-04-01</span><span></span></div></div></div>
 <div id="bil-toolbar">
