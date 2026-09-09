@@ -373,6 +373,29 @@ body.aud-on #pf{display:none!important}
   .pf-body{grid-template-columns:1fr}.pf-pane{position:static}}
 </style>
 
+<style id="pf-sets-css">
+/* The set filters sit under the group tabs and read as one control strip. */
+.pf-sets{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 9px}
+.pf-sets .lb{font-size:10.5px;font-weight:800;color:#64748b;letter-spacing:.06em;
+ margin-right:2px}
+.pf-sc{cursor:pointer;border:1px solid #dbe3ec;background:#fff;border-radius:999px;
+ padding:5px 11px;font-size:11.5px;font-weight:600;color:#475569;white-space:nowrap;
+ transition:background .15s,border-color .15s,color .15s}
+.pf-sc:hover{background:#f1f5f9}
+.pf-sc.on{background:#eef4fb;border-color:#2563eb;color:#1d4ed8}
+.pf-sc .n{font-variant-numeric:tabular-nums;opacity:.65;margin-left:5px}
+.pf-dl{display:inline-flex;align-items:center;gap:5px;margin-left:auto}
+.pf-db{cursor:pointer;border:1px solid #cbd5e1;background:#fff;border-radius:8px;
+ padding:5px 10px;font-size:11px;font-weight:700;color:#334155;transition:.15s}
+.pf-db:hover{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
+.pf-db[disabled]{opacity:.55;cursor:default}
+.pf-note{font-size:11px;color:#64748b;padding:7px 13px;border-bottom:1px solid var(--pf-line);
+ background:#f8fafc}
+.pf-r .wy{flex:0 0 auto;font-size:10.5px;color:#94a3b8;max-width:38%;overflow:hidden;
+ text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:760px){.pf-dl{margin-left:0;width:100%}.pf-r .wy{display:none}}
+@media print{.pf-sets{display:none!important}}
+</style>
 <style id="aud-css">
 :root{--aud-ink:#0b1524;--aud-mut:#64748b;--aud-line:#e4e9f0;--aud-acc:#c8951f;
  --aud-ok:#14893f;--aud-nc:#cf2b2b;--aud-of:#c07a10;--aud-na:#7c8794;--aud-shadow:0 1px 2px rgba(11,21,36,.06),0 8px 24px -12px rgba(11,21,36,.18)}
@@ -687,7 +710,6 @@ body.map-on{background:#F4F2ED}
     </div>
     <button class="aud-toggle" id="audBtn" onclick="audToggle()"><span class="ic">◉</span><span class="tx">Auditor Mode</span></button>
     <button class="map-toggle" id="mapBtn" onclick="mapToggle()"><span class="ic">◱</span><span class="tx">Document Map</span></button>
-    <a class="map-toggle" href="sets/index.html" style="text-decoration:none"><span class="ic">☷</span><span class="tx">Document Sets</span></a>
     <a class="map-toggle" href="hr/index.html" style="text-decoration:none"><span class="ic">▤</span><span class="tx">Actual data</span></a>
   </div>
 </div>
@@ -854,6 +876,7 @@ go();
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script id="pf-js">
 (function(){
 const GRP=[
@@ -865,9 +888,19 @@ const GRP=[
  ['Signage','ti-alert-triangle',['#FCEBEB','#F7C1C1','#A32D2D','#791F1F']],
  ['Plans','ti-calendar',['#EAF3DE','#C0DD97','#3B6D11','#27500A']],
  ['Policies','ti-award',['#FBEAF0','#F4C0D1','#993556','#72243E']]];
+/* Index 0 is every record, and it is where the page opens: the register's job
+   is to show what exists, not to pick a category on the reader's behalf. */
+const ALL=['All records','ti-stack-2',['#EEF2F7','#CBD5E1','#334155','#0F172A']];
+const TABS=[ALL].concat(GRP);
+const SETS=[{"name": "Management review & internal audit", "blurb": "The full review cycle, in the order it runs.", "codes": ["PM/PLN/MR-01", "PM/FRM/MR-07", "PM/FRM/MR-14", "PM/FRM/QA-01", "PM/FRM/QA-03", "PM/QSP/QA-04", "PM/PLN/QA-01", "PM/FRM/AUD-05", "PM/FRM/AUD-02", "PM/FRM/QA-04", "PM/IAC-001", "PM/FRM/AUD-04", "PM/REG/AUD-01", "PM/FRM/CAPA-01"], "why": {"PM/PLN/MR-01": "Plans which agenda point is taken in which meeting", "PM/FRM/MR-07": "Convenes the meeting — notice, participants, agenda", "PM/FRM/MR-14": "KPI register — the figures the meeting reviews", "PM/FRM/QA-01": "Minutes of the meeting", "PM/FRM/QA-03": "Action tracker — what was decided, who owns it", "PM/QSP/QA-04": "Internal audit procedure", "PM/PLN/QA-01": "Annual audit programme", "PM/FRM/AUD-05": "Audit schedule 2026-27 — processes, cycles, auditors", "PM/FRM/AUD-02": "Audit plan for a single audit", "PM/FRM/QA-04": "Auditor's checklist", "PM/IAC-001": "IMS internal audit checklist", "PM/FRM/AUD-04": "Audit report", "PM/REG/AUD-01": "Non-conformity register — findings until closed", "PM/FRM/CAPA-01": "Corrective and preventive action"}}, {"name": "Roles, competence & training", "blurb": "From what a role is, to who holds it, to whether they can do it.", "codes": ["PM/REG/HR-02", "PM/FRM/HR-JD-01", "PM/FRM/HR-JD-02", "PM/FRM/HR-JD-03", "PM/FRM/HR-JD-04", "PM/FRM/HR-JD-05", "PM/FRM/HR-JD-06", "PM/FRM/HR-JD-07", "PM/FRM/HR-JD-08", "PM/FRM/HR-JD-09", "PM/FRM/HR-JD-10", "PM/FRM/HR-JD-11", "PM/FRM/HR-JD-12", "PM/FRM/HR-JD-13", "PM/FRM/MR-27", "PM/QSP/IMS-01", "PM/REG/HR-01", "PM/FRM/HR-04", "PM/FRM/HR-05", "PM/FRM/HR-06", "PM/FRM/HR-07", "PM/FRM/HR-08", "PM/FRM/HR-03", "PM/QSP/HR-01", "PM/POL/HR-01", "PM/POL/HR-02"], "why": {"PM/REG/HR-02": "Who holds which job description, and did they sign", "PM/FRM/HR-JD-01": "JD — Proprietor", "PM/FRM/HR-JD-02": "JD — Plant In-charge", "PM/FRM/HR-JD-03": "JD — Manager / Management Representative", "PM/FRM/HR-JD-04": "JD — Dept In-charge, Production & Operations", "PM/FRM/HR-JD-05": "JD — Dept In-charge, Stores", "PM/FRM/HR-JD-06": "JD — Dept In-charge, Dispatch & Logistics", "PM/FRM/HR-JD-07": "JD — Dept In-charge, Maintenance", "PM/FRM/HR-JD-08": "JD — Dept In-charge, Office, HR & Purchase", "PM/FRM/HR-JD-09": "JD — Dept In-charge, Quality Assurance & Admin", "PM/FRM/HR-JD-10": "JD — Machine Operator", "PM/FRM/HR-JD-11": "JD — Worker", "PM/FRM/HR-JD-12": "JD — Helper", "PM/FRM/HR-JD-13": "JD — Security Guard", "PM/FRM/MR-27": "KRA format — how accountability is scored monthly", "PM/QSP/IMS-01": "Competence, training and awareness procedure", "PM/REG/HR-01": "Skill matrix — target and actual level per person", "PM/FRM/HR-04": "Annual training plan, built from the gaps", "PM/FRM/HR-05": "Training attendance", "PM/FRM/HR-06": "Training effectiveness record", "PM/FRM/HR-07": "Training effectiveness test paper", "PM/FRM/HR-08": "Induction programme for a new joiner", "PM/FRM/HR-03": "POSH awareness training record", "PM/QSP/HR-01": "POSH awareness training procedure", "PM/POL/HR-01": "Grievance redressal", "PM/POL/HR-02": "POSH policy"}}, {"name": "5S & Swachh workplace", "blurb": "Zones, daily checks, audit scoring, and what the scores add up to.", "codes": ["PM/QSP/5S-01", "PM/FRM/5S-01", "PM/FRM/5S-02", "PM/FRM/5S-05", "PM/FRM/5S-03", "PM/FRM/5S-04", "PM/REG/5S-01", "PM/SOP/PD-07"], "why": {"PM/QSP/5S-01": "5S procedure — pillars, cadence, scoring", "PM/FRM/5S-01": "Zone ownership register — all 28 zones", "PM/FRM/5S-02": "Daily 5S and safety check sheet", "PM/FRM/5S-05": "Housekeeping daily log — 11 activities, 53 parameters", "PM/FRM/5S-03": "Zone audit score sheet", "PM/FRM/5S-04": "Red tag register", "PM/REG/5S-01": "Monthly score summary — 28 zones × 12 months", "PM/SOP/PD-07": "Cleaning SOP — CR, PU, primer, water-based"}}, {"name": "Daily work management", "blurb": "How the day is planned, done, checked and improved.", "codes": ["PM/QSP/DWM-01", "PM/FRM/DWM-01", "PM/FRM/DWM-02", "PM/REG/DWM-01", "PM/WI/4M-02", "PM/SOP/4M-001", "PM/WI/4M-01"], "why": {"PM/QSP/DWM-01": "DWM procedure — the PDCA states", "PM/FRM/DWM-01": "DWM sheet — person × 31 days (paper fallback)", "PM/FRM/DWM-02": "Daily shift report — output, rejection, abnormality", "PM/REG/DWM-01": "Kaizen register — before, after, measured benefit", "PM/WI/4M-02": "Abnormal situation reaction plan", "PM/SOP/4M-001": "4M change management procedure", "PM/WI/4M-01": "4M change decision matrix"}}, {"name": "Energy, water & resource", "blurb": "Every input the site consumes, and what reduces it.", "codes": ["PM/QSP/ENV-05", "PM/FRM/ENV-10", "PM/REG/ENV-04", "PM/REG/ENV-05", "PM/REG/ENV-06", "PM/FRM/ENV-11", "PM/REG/MNT-02", "PM/PLN/ENV-01", "PM/POL/ENV-01"], "why": {"PM/QSP/ENV-05": "Energy, water and resource procedure", "PM/FRM/ENV-10": "Daily electricity meter reading", "PM/REG/ENV-04": "Energy monitoring register", "PM/REG/ENV-05": "Water consumption register", "PM/REG/ENV-06": "Solar generation register — 30 kWp", "PM/FRM/ENV-11": "Energy saving project evaluation", "PM/REG/MNT-02": "Earthing pit resistance register", "PM/PLN/ENV-01": "Environmental objectives and targets", "PM/POL/ENV-01": "Environmental policy"}}, {"name": "ZED — technology, CSR & compliance", "blurb": "The parameters that had no evidence until this year.", "codes": ["PM/PLN/TEC-01", "PM/REG/TEC-01", "PM/POL/CSR-01", "PM/PLN/CSR-01", "PM/REG/CSR-01", "PM/REG/ENV-03", "PM/QP-001"], "why": {"PM/PLN/TEC-01": "Technology selection and upgradation plan", "PM/REG/TEC-01": "Technology adoption register", "PM/POL/CSR-01": "CSR policy", "PM/PLN/CSR-01": "Annual CSR plan", "PM/REG/CSR-01": "CSR activity register", "PM/REG/ENV-03": "Environmental KPI register", "PM/QP-001": "IMS policy statement"}}, {"name": "Quality — inspection & control", "blurb": "Incoming to outgoing, and what happens when it fails.", "codes": ["PM/QSP/QA-10", "PM/FRM/IQC-01", "PM/FRM/IPQC-01", "PM/FRM/IPQC-02", "PM/FRM/OQC-01", "PM/FRM/NCR-01", "PM/FRM/CAPA-01", "PM/QSP/QA-05", "PM/FRM/CST-02", "PM/QSP/QA-03", "PM/FRM/CAL-01", "PM/FRM/CAL-02"], "why": {"PM/QSP/QA-10": "Control of incoming, in-process and final inspection", "PM/FRM/IQC-01": "Incoming inspection record", "PM/FRM/IPQC-01": "In-process check sheet", "PM/FRM/IPQC-02": "In-process inspection record", "PM/FRM/OQC-01": "Outgoing / dispatch inspection record", "PM/FRM/NCR-01": "Non-conforming product report", "PM/FRM/CAPA-01": "Corrective and preventive action", "PM/QSP/QA-05": "Customer complaint procedure", "PM/FRM/CST-02": "Customer complaint register", "PM/QSP/QA-03": "Calibration and measurement procedure", "PM/FRM/CAL-01": "Instrument master list", "PM/FRM/CAL-02": "Calibration schedule"}}, {"name": "Stores, purchase & supplier", "blurb": "Material in, supplier performance, material out.", "codes": ["PM/WI/STR-01", "PM/QSP/QA-06", "PM/FRM/SUP-01", "PM/FRM/SUP-02", "PM/FRM/SUP-03", "PM/FRM/SUP-04", "PM/WI/PRD-04"], "why": {"PM/WI/STR-01": "Stores receiving, storage and issue", "PM/QSP/QA-06": "Supplier evaluation and approval", "PM/FRM/SUP-01": "New supplier registration", "PM/FRM/SUP-02": "Supplier evaluation", "PM/FRM/SUP-03": "Approved supplier list", "PM/FRM/SUP-04": "Supplier performance scorecard", "PM/WI/PRD-04": "Dispatch and loading"}}, {"name": "Safety & emergency", "blurb": "Hazards, permits, drills and what happens after an incident.", "codes": ["PM/OH-POL-001", "PM/OH-PRO-001", "PM/OH-REC-001", "PM/OH-PRO-003", "PM/EP-001", "PM/OH-REC-008", "PM/OH-REC-007", "PM/OH-PRO-004", "PM/OH-REC-003", "PM/OH-PRO-006", "PM/OH-PRO-007", "PM/OH-PRO-008", "PM/REG/OHS-01"], "why": {"PM/OH-POL-001": "OH&S and environmental policy", "PM/OH-PRO-001": "Hazard identification and risk assessment", "PM/OH-REC-001": "HIRA register", "PM/OH-PRO-003": "Emergency preparedness and response", "PM/EP-001": "Emergency plan", "PM/OH-REC-008": "Mock drill schedule and log", "PM/OH-REC-007": "Mock drill report", "PM/OH-PRO-004": "Incident investigation and corrective action", "PM/OH-REC-003": "Incident and near-miss report", "PM/OH-PRO-006": "Personal protective equipment", "PM/OH-PRO-007": "Permit to work", "PM/OH-PRO-008": "Toolbox talk and safety communication", "PM/REG/OHS-01": "Toolbox talk and safety training register"}}];
 const SC={'9001':['#E6F1FB','#0C447C'],'14001':['#E1F5EE','#085041'],'45001':['#FAEEDA','#633806']};
-let sel=0, fam='', act=null;
+let sel=0, fam='', act=null, setIdx=-1;
 const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const key=c=>String(c||'').replace(/_/g,'/').toUpperCase();
+/* The published url is absolute; the download code needs a path relative to
+   this page so it works on any host the site is served from. */
+function rel(d){ const u=String(d.url||''); const i=u.indexOf('/html/');
+  return i<0?('html/'+String(d.code).replace(/\//g,'_')+'.html'):u.slice(i+1); }
 
 function base(){
   const q=(document.getElementById('q').value||'').toLowerCase().trim();
@@ -876,10 +909,16 @@ function base(){
     (!q||(d.code.toLowerCase().includes(q)||d.title.toLowerCase().includes(q)||String(d.clause).includes(q))));
 }
 function inGrp(list,g){ return list.filter(d=>d.grp===g); }
+/* A set keeps its own order — it is a cycle, read top to bottom — so it is
+   built by walking the set's codes, not by filtering the register. */
+function inSet(list,s){
+  const have={}; list.forEach(d=>{have[key(d.code)]=d;});
+  return s.codes.map(c=>have[c]).filter(Boolean);
+}
 
 function pane(d){
   if(!d) return '<div class="pf-empty">Hover a document to see its detail.<br>Click to open it.</div>';
-  const r=GRP[sel][2], qr=(typeof QR!=='undefined')&&QR[d.code];
+  const r=TABS[sel][2], qr=(typeof QR!=='undefined')&&QR[d.code];
   const log=(d.log&&d.log.length)?d.log:[['—','','No revision history recorded','']];
   const m=(l,v,sub)=>v?`<div class="pf-m"><b>${l}</b><span>${esc(v)}${sub?' <span class="sub">'+esc(sub)+'</span>':''}</span></div>`:'';
   return `<div class="in">
@@ -907,28 +946,41 @@ function pane(d){
 function render(){
   const list=base();
   const host=document.getElementById('pf'); if(!host) return;
-  const counts=GRP.map(g=>inGrp(list,g[0]).length);
-  if(counts[sel]===0){ const f=counts.findIndex(c=>c>0); if(f>=0) sel=f; }
-  const items=inGrp(list,GRP[sel][0]);
-  const fams=[...new Set(items.map(d=>d.fam))].sort();
+  const counts=TABS.map((t,i)=>i===0?list.length:inGrp(list,t[0]).length);
+  if(setIdx<0&&counts[sel]===0){ const f=counts.findIndex(c=>c>0); if(f>=0) sel=f; }
+  const cur_set=setIdx>=0?SETS[setIdx]:null;
+  const items=cur_set?inSet(list,cur_set)
+                     :(sel===0?list:inGrp(list,TABS[sel][0]));
+  const fams=cur_set?[]:[...new Set(items.map(d=>d.fam))].filter(Boolean).sort();
   if(fam&&fams.indexOf(fam)<0) fam='';
   const shown=fam?items.filter(d=>d.fam===fam):items;
   if(!shown.some(d=>d.code===act)) act=null;
   const cur=shown.find(d=>d.code===act)||null;
-  const r=GRP[sel][2];
+  const r=cur_set?ALL[2]:TABS[sel][2];
 
-  host.innerHTML=
-   `<div class="pf-sp" role="tablist">${GRP.map((g,i)=>{const on=i===sel,c=g[2];
+  const tabs=`<div class="pf-sp" role="tablist">${TABS.map((g,i)=>{
+     const on=(i===sel&&setIdx<0),c=g[2];
      return `<button class="pf-t${on?' on':''}" role="tab" aria-selected="${on}" data-i="${i}"
        style="background:${on?c[0]:'#fff'};border:1px solid ${on?c[2]:c[1]};box-shadow:${on?'0 0 0 3px '+c[0]:'none'}">
        <i class="ti ${g[1]} ic" aria-hidden="true" style="color:${on?c[2]:'#94a3b8'}"></i>
        <span class="nm" style="color:${on?c[3]:'#64748b'}">${g[0]}</span>
        <span class="ct" style="background:${on?'#fff':'#f1f5f9'};color:${on?c[2]:'#94a3b8'}">${counts[i]}</span>
-     </button>`}).join('')}</div>
-    <div class="pf-sec" style="border:1px solid ${r[2]}">
+     </button>`}).join('')}</div>`;
+
+  const chips=`<div class="pf-sets"><span class="lb">DOCUMENT SETS</span>
+    <button class="pf-sc${setIdx<0?' on':''}" data-set="-1">All documents</button>
+    ${SETS.map((s,i)=>`<button class="pf-sc${i===setIdx?' on':''}" data-set="${i}"
+      title="${esc(s.blurb)}">${esc(s.name)}<span class="n">${inSet(list,s).length}</span></button>`).join('')}
+    ${cur_set?`<span class="pf-dl">
+      <button class="pf-db" data-dl="pdf" title="Open all ${shown.length} documents as one print view — save as a single PDF">PDF</button>
+      <button class="pf-db" data-dl="zip" title="Download all ${shown.length} documents as one ZIP of HTML">ZIP of HTML</button>
+    </span>`:''}</div>`;
+
+  host.innerHTML=tabs+chips+
+    `<div class="pf-sec" style="border:1px solid ${r[2]}">
       <div class="pf-hd" style="background:${r[0]}">
-        <i class="ti ${GRP[sel][1]}" aria-hidden="true" style="font-size:15px;color:${r[2]}"></i>
-        <span class="ti" style="color:${r[3]}">${GRP[sel][0]}</span>
+        <i class="ti ${cur_set?'ti-layout-list':TABS[sel][1]}" aria-hidden="true" style="font-size:15px;color:${r[2]}"></i>
+        <span class="ti" style="color:${r[3]}">${esc(cur_set?cur_set.name:TABS[sel][0])}</span>
         <span class="pill" style="color:${r[2]}">${items.length}</span>
         ${fams.length>1?`<div class="pf-fam">${[''].concat(fams).map(f=>{
           const n=f?items.filter(d=>d.fam===f).length:items.length, on=fam===f;
@@ -936,12 +988,15 @@ function render(){
             background:${on?'#fff':'rgba(255,255,255,.6)'};border-color:${on?r[2]:'transparent'}">${f||'All'} ${n}</button>`;
         }).join('')}</div>`:''}
       </div>
+      ${cur_set?`<div class="pf-note">${esc(cur_set.blurb)} — listed in the order the cycle uses them.</div>`:''}
       <div class="pf-body">
         <div class="pf-list">${shown.length?shown.map(d=>{
           const sc=SC[d.standard]||['#f1f5f9','#475569'], on=d.code===act;
+          const wy=cur_set?(cur_set.why[key(d.code)]||''):'';
           return `<div class="pf-r${on?' act':''}" data-code="${esc(d.code)}" tabindex="0" role="button"
              ><code>${esc(d.code.replace(/^PM_/,''))}</code>
             <span class="tt">${esc(d.title)}</span>
+            ${wy?`<span class="wy">${esc(wy)}</span>`:''}
             <span class="sd" style="background:${sc[0]};color:${sc[1]}">${esc(d.standard||'—')}</span>
             <span class="cl">${d.clause?'§'+esc(d.clause):''}</span>
             <i class="ti ti-info-circle ax pf-i" aria-hidden="true" title="Show detail"></i>
@@ -955,7 +1010,7 @@ function render(){
 }
 
 // Update only what changed: the previously active row, the new row, and the
-// panel. A full render() rebuilds 73 rows and is far too slow to sit on hover.
+// panel. A full render() rebuilds every row and is far too slow to sit on hover.
 function setAct(code){
   if(act===code) return;
   const host=document.getElementById('pf'); if(!host) return;
@@ -963,9 +1018,95 @@ function setAct(code){
   if(prev){ prev.classList.remove('act'); prev.style.boxShadow=''; }
   act=code;
   const row=host.querySelector('.pf-r[data-code="'+(window.CSS&&CSS.escape?CSS.escape(code):code)+'"]');
-  if(row){ row.classList.add('act'); row.style.boxShadow='inset 3px 0 0 '+GRP[sel][2][2]; }
+  const r=setIdx>=0?ALL[2]:TABS[sel][2];
+  if(row){ row.classList.add('act'); row.style.boxShadow='inset 3px 0 0 '+r[2]; }
   const p=host.querySelector('.pf-pane');
   if(p) p.innerHTML=pane(D.find(x=>x.code===code)||null);
+}
+
+/* Download every document in the selected set as one ZIP. The pages are
+   self-contained — logo, QR and styles are inlined — so a zipped copy opens
+   offline exactly as it does here. Fetched a few at a time so a 27-document
+   set does not open 27 connections at once. */
+function zipSet(s,docs,btn){
+  if(btn.dataset.busy) return;
+  btn.dataset.busy='1'; btn.disabled=true;
+  const label=btn.textContent;
+  let done=0; const zip=new JSZip(), folder=zip.folder(s.name.replace(/[\\/:*?"<>|]/g,'-'));
+  const tick=()=>{ done++; btn.textContent=done+'/'+docs.length; };
+  const queue=docs.slice(), failed=[]; let active=0;
+  function next(){
+    if(!queue.length&&active===0) return finish();
+    while(active<4&&queue.length){
+      (function(d){
+        active++;
+        fetch(rel(d)).then(r=>{ if(!r.ok) throw new Error(r.status); return r.text(); })
+          .then(t=>{ folder.file(String(d.code).replace(/\//g,'_')+'.html',t); tick(); })
+          .catch(()=>{ failed.push(d.code); tick(); })
+          .then(()=>{ active--; next(); });
+      })(queue.shift());
+    }
+  }
+  function finish(){
+    btn.textContent='zip…';
+    zip.generateAsync({type:'blob'}).then(blob=>{
+      const a=document.createElement('a');
+      a.href=URL.createObjectURL(blob);
+      a.download='PackMasters — '+s.name+'.zip';
+      document.body.appendChild(a); a.click();
+      setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);
+      btn.textContent=label; btn.disabled=false; delete btn.dataset.busy;
+      if(failed.length) alert('Could not fetch: '+failed.join(', '));
+    });
+  }
+  next();
+}
+
+/* One print view for a whole set, saved as a single PDF by the browser.
+   Every document comes from the same generator, so their <style> blocks are the
+   same: taking the styles once and then each document's <body> gives one A4
+   document that prints with the real letterhead rather than a screenshot of it. */
+function pdfSet(s,docs,btn){
+  if(btn.dataset.busy) return;
+  btn.dataset.busy='1'; btn.disabled=true;
+  const label=btn.textContent;
+  let done=0, styles=null; const parts=new Array(docs.length), failed=[];
+  const tick=()=>{ done++; btn.textContent=done+'/'+docs.length; };
+  const reset=()=>{ btn.textContent=label; btn.disabled=false; delete btn.dataset.busy; };
+  Promise.all(docs.map((d,i)=>
+    fetch(rel(d)).then(r=>{ if(!r.ok) throw 0; return r.text(); })
+      .then(txt=>{
+        const doc=new DOMParser().parseFromString(txt,'text/html');
+        doc.querySelectorAll('script,#bil-toolbar,#bil-top').forEach(n=>n.remove());
+        if(styles===null){
+          styles=Array.prototype.map.call(doc.querySelectorAll('style'),n=>n.outerHTML).join('\n');
+        }
+        parts[i]='<section class="pgset"><div class="pghdr">'+d.code+
+                 (d.ver?'  ·  Rev '+d.ver:'')+'  —  '+d.title+'</div>'+doc.body.innerHTML+'</section>';
+        tick();
+      }).catch(()=>{ failed.push(d.code); parts[i]=''; tick(); })
+  )).then(()=>{
+    const w=window.open('','_blank');
+    if(!w){ alert('Allow pop-ups for this site to use the PDF view.'); reset(); return; }
+    w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>'+
+      'Pack Masters — '+s.name+'</title>'+(styles||'')+
+      '<style>.pgset{break-after:page;page-break-after:always}'+
+      '.pgset:last-child{break-after:auto;page-break-after:auto}'+
+      '.pghdr{font:600 8pt Inter,Arial,sans-serif;color:#64748b;margin:0 0 4mm;'+
+      'border-bottom:1px solid #cbd5e1;padding-bottom:2mm}'+
+      '.cover{font:400 11pt/1.6 Inter,Arial,sans-serif;padding:24mm 18mm;break-after:page;page-break-after:always}'+
+      '.cover h1{font-size:20pt;margin:0 0 4mm}.cover ol{margin:6mm 0 0 6mm}'+
+      '.cover li{margin-bottom:2mm;font-size:10pt}</style></head><body>'+
+      '<div class="cover"><h1>Pack Masters</h1><div style="font-size:13pt;font-weight:500">'+
+      s.name+'</div><div style="color:#64748b;margin-top:2mm">'+docs.length+
+      ' documents · printed '+new Date().toLocaleDateString('en-GB')+'</div><ol>'+
+      docs.map(d=>'<li>'+d.code+(d.ver?' · Rev '+d.ver:'')+' — '+d.title+'</li>').join('')+
+      '</ol></div>'+parts.join('')+'</body></html>');
+    w.document.close();
+    setTimeout(()=>{ w.focus(); w.print(); },600);
+    reset();
+    if(failed.length) alert('Could not fetch: '+failed.join(', '));
+  });
 }
 
 document.addEventListener('mouseover',e=>{
@@ -979,8 +1120,15 @@ document.addEventListener('focusin',e=>{
   const rw=e.target.closest('#pf .pf-r'); if(rw) setAct(rw.dataset.code);
 });
 document.addEventListener('click',e=>{
+  const dl=e.target.closest('#pf .pf-db');
+  if(dl){ if(setIdx<0) return;
+    const s=SETS[setIdx], docs=inSet(base(),s);
+    if(!docs.length) return;
+    (dl.dataset.dl==='zip'?zipSet:pdfSet)(s,docs,dl); return; }
+  const sc=e.target.closest('#pf .pf-sc');
+  if(sc){ setIdx=+sc.dataset.set; fam=''; act=null; if(setIdx>=0) sel=0; render(); return; }
   const t=e.target.closest('#pf .pf-t');
-  if(t){ sel=+t.dataset.i; fam=''; act=null; render(); return; }
+  if(t){ sel=+t.dataset.i; setIdx=-1; fam=''; act=null; render(); return; }
   const f=e.target.closest('#pf .pf-fc');
   if(f){ fam=f.dataset.f; act=null; render(); return; }
   const i=e.target.closest('#pf .pf-i');
