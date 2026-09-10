@@ -196,6 +196,16 @@
  padding:1px 6px;cursor:pointer;line-height:1.5}
 .pm-sg:hover{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
 .pm-sg[disabled]{opacity:.45;cursor:default}
+.fm-sc-sig.signed{border-bottom:0}
+/* A text input cannot wrap: on paper anything past the width of the box is
+   simply cut off, which is how a whole column of actions printed as half
+   sentences. Each control gets a shadow span carrying the same value, hidden
+   on screen and printed in its place, because a span wraps. */
+.ed-p{display:none}
+@media print{
+  .ed{display:none!important}
+  .ed-p{display:block;white-space:pre-wrap;overflow-wrap:anywhere}
+}
 #pm-save{position:fixed;left:14px;bottom:14px;z-index:9999;display:flex;
  align-items:center;gap:9px;background:#fff;border:1px solid #e2e8f0;
  border-radius:999px;padding:6px 8px 6px 14px;
@@ -218,6 +228,11 @@
   var DOC=document.currentScript&&document.currentScript.dataset.doc||'';
   function get(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
   function set(k,v){ try{localStorage.setItem(k,v);}catch(e){} }
+  /* Object.keys(localStorage) throws where storage is denied — a file:// page,
+     a private window — and an uncaught throw here took the printable text down
+     with it. Reading is optional; printing is not. */
+  function keys(){ try{ return Object.keys(localStorage||{}); }catch(e){ return []; } }
+  function drop(k){ try{ localStorage.removeItem(k); }catch(e){} }
   var slug=function(n){return String(n||'').toLowerCase()
       .replace(/^(mr|mrs|ms|dr)\.?\s+/,'').replace(/[^a-z0-9]+/g,'-')
       .replace(/^-|-$/g,'');};
@@ -236,6 +251,7 @@
   function paint(box,rec){
     var slot=box.querySelector('.fm-sc-sig'); if(!slot) return;
     slot.innerHTML='<img alt="signature of '+rec.name+'" src="'+rec.img+'">';
+    slot.classList.add('signed');
     var d=box.querySelector('.fm-sc-d span'); if(d) d.textContent=' '+rec.date;
     var nm=box.querySelector('.fm-sc-n');
     if(nm&&!nm.textContent.trim()) nm.textContent=rec.name;
@@ -244,6 +260,9 @@
     var key='pm.signed.'+DOC+'.'+box.dataset.sig;
     var saved=get(key);
     if(saved){ try{ paint(box,JSON.parse(saved)); }catch(e){} }
+    /* A signature embedded in the document at build time is the record; the
+       browser must not offer to sign over the top of it. */
+    if(box.querySelector('.fm-sc-sig img')&&!saved) return;
 
     var b=document.createElement('button');
     b.className='pm-sg'; b.type='button';
@@ -251,8 +270,7 @@
     if(saved){
       b.textContent='clear';
       b.title='Remove the signature from this box';
-      b.onclick=function(){ try{localStorage.removeItem(key);}catch(e){}
-        location.reload(); };
+      b.onclick=function(){ drop(key); location.reload(); };
     }else if(!mySig){
       b.textContent='sign'; b.disabled=true;
       b.title='No signature saved in this browser yet - set one on the '+
@@ -272,8 +290,7 @@
         document.querySelectorAll('.fm-sc[data-sig="'+box.dataset.sig+'"]')
           .forEach(function(twin){ paint(twin,rec); });
         b.textContent='clear';
-        b.onclick=function(){ try{localStorage.removeItem(key);}catch(e){}
-          location.reload(); };
+        b.onclick=function(){ drop(key); location.reload(); };
       };
     }
     box.appendChild(b);
@@ -289,18 +306,40 @@
      losing your work. The count of controls is stored alongside: if the
      document is revised into a different shape, the old entries are
      dropped rather than restored into the wrong boxes. */
+  /* Keep a printable twin of every control in step with it. */
+  function shadow(el){
+    var sp=el.nextElementSibling;
+    if(!sp||!sp.classList.contains('ed-p')){
+      sp=document.createElement('span'); sp.className='ed-p';
+      el.parentNode.insertBefore(sp,el.nextSibling);
+    }
+    var v=el.value;
+    if(el.tagName==='SELECT'){
+      v=el.selectedIndex>=0?el.options[el.selectedIndex].text:'';
+    }else if(el.type==='date'&&v){
+      var b=v.split('-'); if(b.length===3) v=b[2]+'-'+b[1]+'-'+b[0];
+    }
+    sp.textContent=v;
+  }
+  function shadowAll(){ document.querySelectorAll('.ed').forEach(shadow); }
+  window.addEventListener('beforeprint',shadowAll);
+  if(window.matchMedia) try{
+    window.matchMedia('print').addEventListener('change',function(e){
+      if(e.matches) shadowAll();
+    });
+  }catch(e){}
+
   var secs=[].slice.call(document.querySelectorAll('.lang-section'));
   if(!secs.length) secs=[document.body];
   var groups=secs.map(function(sec){
     return [].slice.call(sec.querySelectorAll('.ed'));
   }).filter(function(g){ return g.length; });
+  shadowAll();                    // printable text first: it must not depend on storage
   if(groups.length){
     var n=groups[0].length, shapeKey='pm.shape.'+DOC;
     if(get(shapeKey)!==String(n)){
-      Object.keys(localStorage||{}).forEach(function(k){
-        if(k.indexOf('pm.field.'+DOC+'.')===0){
-          try{localStorage.removeItem(k);}catch(e){}
-        }
+      keys().forEach(function(k){
+        if(k.indexOf('pm.field.'+DOC+'.')===0) drop(k);
       });
       set(shapeKey,String(n));
     }
@@ -318,11 +357,9 @@
     }
     chip.querySelector('.x').onclick=function(){
       if(!confirm('Clear every entry you have made on this form?')) return;
-      Object.keys(localStorage||{}).forEach(function(k){
+      keys().forEach(function(k){
         if(k.indexOf('pm.field.'+DOC+'.')===0||
-           k.indexOf('pm.signed.'+DOC+'.')===0){
-          try{localStorage.removeItem(k);}catch(e){}
-        }
+           k.indexOf('pm.signed.'+DOC+'.')===0) drop(k);
       });
       location.reload();
     };
@@ -344,6 +381,8 @@
           groups.forEach(function(other){
             if(other[i]&&other[i]!==el) put(other[i],v);
           });
+          shadow(el);
+          groups.forEach(function(other){ if(other[i]) shadow(other[i]); });
           flash('Saved');
         };
         el.addEventListener('change',on);
@@ -513,6 +552,16 @@
  padding:1px 6px;cursor:pointer;line-height:1.5}
 .pm-sg:hover{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
 .pm-sg[disabled]{opacity:.45;cursor:default}
+.fm-sc-sig.signed{border-bottom:0}
+/* A text input cannot wrap: on paper anything past the width of the box is
+   simply cut off, which is how a whole column of actions printed as half
+   sentences. Each control gets a shadow span carrying the same value, hidden
+   on screen and printed in its place, because a span wraps. */
+.ed-p{display:none}
+@media print{
+  .ed{display:none!important}
+  .ed-p{display:block;white-space:pre-wrap;overflow-wrap:anywhere}
+}
 #pm-save{position:fixed;left:14px;bottom:14px;z-index:9999;display:flex;
  align-items:center;gap:9px;background:#fff;border:1px solid #e2e8f0;
  border-radius:999px;padding:6px 8px 6px 14px;
@@ -535,6 +584,11 @@
   var DOC=document.currentScript&&document.currentScript.dataset.doc||'';
   function get(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
   function set(k,v){ try{localStorage.setItem(k,v);}catch(e){} }
+  /* Object.keys(localStorage) throws where storage is denied — a file:// page,
+     a private window — and an uncaught throw here took the printable text down
+     with it. Reading is optional; printing is not. */
+  function keys(){ try{ return Object.keys(localStorage||{}); }catch(e){ return []; } }
+  function drop(k){ try{ localStorage.removeItem(k); }catch(e){} }
   var slug=function(n){return String(n||'').toLowerCase()
       .replace(/^(mr|mrs|ms|dr)\.?\s+/,'').replace(/[^a-z0-9]+/g,'-')
       .replace(/^-|-$/g,'');};
@@ -553,6 +607,7 @@
   function paint(box,rec){
     var slot=box.querySelector('.fm-sc-sig'); if(!slot) return;
     slot.innerHTML='<img alt="signature of '+rec.name+'" src="'+rec.img+'">';
+    slot.classList.add('signed');
     var d=box.querySelector('.fm-sc-d span'); if(d) d.textContent=' '+rec.date;
     var nm=box.querySelector('.fm-sc-n');
     if(nm&&!nm.textContent.trim()) nm.textContent=rec.name;
@@ -561,6 +616,9 @@
     var key='pm.signed.'+DOC+'.'+box.dataset.sig;
     var saved=get(key);
     if(saved){ try{ paint(box,JSON.parse(saved)); }catch(e){} }
+    /* A signature embedded in the document at build time is the record; the
+       browser must not offer to sign over the top of it. */
+    if(box.querySelector('.fm-sc-sig img')&&!saved) return;
 
     var b=document.createElement('button');
     b.className='pm-sg'; b.type='button';
@@ -568,8 +626,7 @@
     if(saved){
       b.textContent='clear';
       b.title='Remove the signature from this box';
-      b.onclick=function(){ try{localStorage.removeItem(key);}catch(e){}
-        location.reload(); };
+      b.onclick=function(){ drop(key); location.reload(); };
     }else if(!mySig){
       b.textContent='sign'; b.disabled=true;
       b.title='No signature saved in this browser yet - set one on the '+
@@ -589,8 +646,7 @@
         document.querySelectorAll('.fm-sc[data-sig="'+box.dataset.sig+'"]')
           .forEach(function(twin){ paint(twin,rec); });
         b.textContent='clear';
-        b.onclick=function(){ try{localStorage.removeItem(key);}catch(e){}
-          location.reload(); };
+        b.onclick=function(){ drop(key); location.reload(); };
       };
     }
     box.appendChild(b);
@@ -606,18 +662,40 @@
      losing your work. The count of controls is stored alongside: if the
      document is revised into a different shape, the old entries are
      dropped rather than restored into the wrong boxes. */
+  /* Keep a printable twin of every control in step with it. */
+  function shadow(el){
+    var sp=el.nextElementSibling;
+    if(!sp||!sp.classList.contains('ed-p')){
+      sp=document.createElement('span'); sp.className='ed-p';
+      el.parentNode.insertBefore(sp,el.nextSibling);
+    }
+    var v=el.value;
+    if(el.tagName==='SELECT'){
+      v=el.selectedIndex>=0?el.options[el.selectedIndex].text:'';
+    }else if(el.type==='date'&&v){
+      var b=v.split('-'); if(b.length===3) v=b[2]+'-'+b[1]+'-'+b[0];
+    }
+    sp.textContent=v;
+  }
+  function shadowAll(){ document.querySelectorAll('.ed').forEach(shadow); }
+  window.addEventListener('beforeprint',shadowAll);
+  if(window.matchMedia) try{
+    window.matchMedia('print').addEventListener('change',function(e){
+      if(e.matches) shadowAll();
+    });
+  }catch(e){}
+
   var secs=[].slice.call(document.querySelectorAll('.lang-section'));
   if(!secs.length) secs=[document.body];
   var groups=secs.map(function(sec){
     return [].slice.call(sec.querySelectorAll('.ed'));
   }).filter(function(g){ return g.length; });
+  shadowAll();                    // printable text first: it must not depend on storage
   if(groups.length){
     var n=groups[0].length, shapeKey='pm.shape.'+DOC;
     if(get(shapeKey)!==String(n)){
-      Object.keys(localStorage||{}).forEach(function(k){
-        if(k.indexOf('pm.field.'+DOC+'.')===0){
-          try{localStorage.removeItem(k);}catch(e){}
-        }
+      keys().forEach(function(k){
+        if(k.indexOf('pm.field.'+DOC+'.')===0) drop(k);
       });
       set(shapeKey,String(n));
     }
@@ -635,11 +713,9 @@
     }
     chip.querySelector('.x').onclick=function(){
       if(!confirm('Clear every entry you have made on this form?')) return;
-      Object.keys(localStorage||{}).forEach(function(k){
+      keys().forEach(function(k){
         if(k.indexOf('pm.field.'+DOC+'.')===0||
-           k.indexOf('pm.signed.'+DOC+'.')===0){
-          try{localStorage.removeItem(k);}catch(e){}
-        }
+           k.indexOf('pm.signed.'+DOC+'.')===0) drop(k);
       });
       location.reload();
     };
@@ -661,6 +737,8 @@
           groups.forEach(function(other){
             if(other[i]&&other[i]!==el) put(other[i],v);
           });
+          shadow(el);
+          groups.forEach(function(other){ if(other[i]) shadow(other[i]); });
           flash('Saved');
         };
         el.addEventListener('change',on);
