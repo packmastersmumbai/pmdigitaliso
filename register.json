@@ -1,6 +1,6 @@
 {
- "published_at": "2026-09-10T06:52:55.786986+00:00",
- "count": 241,
+ "published_at": "2026-09-10T18:14:16.073839+00:00",
+ "count": 245,
  "documents": [
   {
    "code": "PICTO_HAZ_Electrical",
@@ -639,6 +639,18 @@
    "url": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_FRM_FQC-03.html"
   },
   {
+   "code": "PM/FRM/HR-017",
+   "title": "Organisation chart",
+   "version": "1.0",
+   "effective": "",
+   "clause": "5.3",
+   "standard": "ISO 9001:2015",
+   "department": "Management",
+   "owner": "Khushi Paswan",
+   "state": "published",
+   "url": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_FRM_HR-017.html"
+  },
+  {
    "code": "PM/FRM/HR-03",
    "title": "POSH Awareness Training — Completion Record",
    "version": "2.0",
@@ -709,6 +721,18 @@
    "owner": "",
    "state": "published",
    "url": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_FRM_HR-08.html"
+  },
+  {
+   "code": "PM/FRM/HR-JC-01",
+   "title": "Job Clarity and Accountability Agreement",
+   "version": "1.0",
+   "effective": "",
+   "clause": "5.3, 7.2",
+   "standard": "ISO 9001:2015",
+   "department": "Office, HR & Purchase",
+   "owner": "Khushi Paswan",
+   "state": "published",
+   "url": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_FRM_HR-JC-01.html"
   },
   {
    "code": "PM/FRM/HR-JD-01",
@@ -2377,6 +2401,30 @@
    "owner": "",
    "state": "published",
    "url": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_REG_HR-03.html"
+  },
+  {
+   "code": "PM/REG/HR-04",
+   "title": "Competency dictionary",
+   "version": "1.0",
+   "effective": "",
+   "clause": "7.2",
+   "standard": "ISO 9001:2015",
+   "department": "Office, HR & Purchase",
+   "owner": "Khushi Paswan",
+   "state": "published",
+   "url": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_REG_HR-04.html"
+  },
+  {
+   "code": "PM/REG/HR-05",
+   "title": "Skills required — derived from competencies and key result areas",
+   "version": "1.0",
+   "effective": "",
+   "clause": "7.2",
+   "standard": "ISO 9001:2015",
+   "department": "Office, HR & Purchase",
+   "owner": "Khushi Paswan",
+   "state": "published",
+   "url": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_REG_HR-05.html"
   },
   {
    "code": "PM/REG/MNT-01",
