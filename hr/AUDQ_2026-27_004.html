@@ -110,7 +110,10 @@
 .fm-rule div:last-child { border-bottom: none; }
 
 /* ── tables ─────────────────────────────────────────────── */
-.fm-t { width: 100%; border-collapse: collapse; }
+.fm-t { width: 100%; border-collapse: collapse; table-layout: fixed; }
+/* Fixed layout so the declared column widths are obeyed. Under auto layout a
+   long cell could widen the table past .fm max-width. */
+.fm-t th, .fm-t td { overflow-wrap: anywhere; word-break: break-word; }
 .fm-t th { background: var(--tint); color: var(--ac); font-size: 5.6pt;
            font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
            padding: 4px 4px; border: 1px solid var(--ln2); text-align: center;
@@ -466,7 +469,10 @@
 .fm-rule div:last-child { border-bottom: none; }
 
 /* ── tables ─────────────────────────────────────────────── */
-.fm-t { width: 100%; border-collapse: collapse; }
+.fm-t { width: 100%; border-collapse: collapse; table-layout: fixed; }
+/* Fixed layout so the declared column widths are obeyed. Under auto layout a
+   long cell could widen the table past .fm max-width. */
+.fm-t th, .fm-t td { overflow-wrap: anywhere; word-break: break-word; }
 .fm-t th { background: var(--tint); color: var(--ac); font-size: 5.6pt;
            font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
            padding: 4px 4px; border: 1px solid var(--ln2); text-align: center;
