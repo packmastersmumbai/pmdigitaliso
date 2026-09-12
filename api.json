@@ -1,5 +1,5 @@
 {
-  "published_at": "2026-09-12T15:26:17+00:00",
+  "published_at": "2026-09-12T16:20:07+00:00",
   "site": "https://packmastersmumbai.github.io/pmdigitaliso",
   "start_here": "https://packmastersmumbai.github.io/pmdigitaliso/register.json",
   "endpoints": {
@@ -210,6 +210,14 @@
           "fields": []
         }
       }
+    },
+    "guide": {
+      "url": "https://packmastersmumbai.github.io/pmdigitaliso/SHARE.md",
+      "what": "the contract in prose - read this first if you are a person or an agent rather than a script",
+      "also": [
+        "https://packmastersmumbai.github.io/pmdigitaliso/INTEGRATION.md",
+        "https://packmastersmumbai.github.io/pmdigitaliso/DWM_CONTRACT.md"
+      ]
     },
     "consumers": {
       "url": "https://packmastersmumbai.github.io/pmdigitaliso/consumers.json",
