@@ -1,16 +1,17 @@
 {
-  "published_at": "2026-09-12T15:09:14+00:00",
+  "published_at": "2026-09-12T15:26:29+00:00",
   "count": 2,
   "stale": 0,
   "unresolved": 0,
   "apps": [
     {
+      "documents": 5,
+      "degraded": false,
       "unresolved": [],
       "last_seen": "2026-09-12T06:38:52.288Z",
-      "registry_published_at": "2026-09-10T18:37:54.438789+00:00",
       "library_version": 2,
-      "documents": 5,
-      "app": "taskflow",
+      "registry_published_at": "2026-09-10T18:37:54.438789+00:00",
+      "source": "the published site",
       "codes": [
         "PM/FRM/DWM-01",
         "PM/FRM/DWM-02",
@@ -18,20 +19,17 @@
         "PM/FRM/MR-27",
         "PM/REG/DWM-01"
       ],
-      "source": "the published site",
-      "degraded": false,
+      "app": "taskflow",
       "stale": false,
-      "hours_since_seen": 8.5
+      "hours_since_seen": 8.8
     },
     {
-      "library_version": 2,
+      "last_seen": "2026-09-12T06:38:41.815Z",
+      "app": "5s",
       "unresolved": [],
       "documents": 6,
-      "app": "5s",
-      "last_seen": "2026-09-12T06:38:41.815Z",
-      "degraded": false,
+      "library_version": 2,
       "registry_published_at": "2026-09-10T18:37:54.438789+00:00",
-      "source": "the published site",
       "codes": [
         "PM/FRM/5S-01",
         "PM/FRM/5S-02",
@@ -40,8 +38,10 @@
         "PM/FRM/5S-05",
         "PM/REG/5S-01"
       ],
+      "degraded": false,
+      "source": "the published site",
       "stale": false,
-      "hours_since_seen": 8.5
+      "hours_since_seen": 8.8
     }
   ],
   "readers": {
