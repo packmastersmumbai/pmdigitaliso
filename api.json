@@ -1,5 +1,5 @@
 {
-  "published_at": "2026-09-12T15:09:01+00:00",
+  "published_at": "2026-09-12T15:11:58+00:00",
   "site": "https://packmastersmumbai.github.io/pmdigitaliso",
   "start_here": "https://packmastersmumbai.github.io/pmdigitaliso/register.json",
   "endpoints": {
@@ -15,6 +15,7 @@
       "count": 223,
       "example": "https://packmastersmumbai.github.io/pmdigitaliso/json/PM_FRM_5S-03.json  (PM/FRM/5S-03)",
       "code_to_url": "replace / with _",
+      "doc_code_warning": "the doc_code INSIDE these files uses underscores (PM_FRM_5S-03) while register.json uses slashes (PM/FRM/5S-03). Match on the normalised form - replace / and _ with the same character before comparing.",
       "missing": [
         "PICTO_HAZ_Electrical",
         "PICTO_HAZ_LidPress",
