@@ -1,0 +1,205 @@
+{
+ "source": "five_s/Zones",
+ "dataset": "zones",
+ "period": "",
+ "rows": [
+  {
+   "name": "Security + Meter Room",
+   "audit_day": "Monday",
+   "zone": "Z-01",
+   "department": "Production & Ops",
+   "leader": "Mr. Tarun"
+  },
+  {
+   "leader": "Mr. Anuj Pathak",
+   "audit_day": "Monday",
+   "zone": "Z-02",
+   "name": "Loading / Unloading",
+   "department": "Production & Ops"
+  },
+  {
+   "zone": "Z-03",
+   "leader": "Mr. Tarun",
+   "department": "Stores & Inventory",
+   "name": "Supervisor's Cabin (GF)",
+   "audit_day": "Tuesday"
+  },
+  {
+   "leader": "Mr. Anuj Pathak",
+   "audit_day": "Tuesday",
+   "zone": "Z-04",
+   "department": "Stores & Inventory",
+   "name": "Production Area (GF)"
+  },
+  {
+   "department": "Quality Assurance",
+   "audit_day": "Wednesday",
+   "name": "Buffer Area (GF)",
+   "leader": "Mr. Anuj Pathak",
+   "zone": "Z-05"
+  },
+  {
+   "zone": "Z-06",
+   "department": "Maintenance",
+   "leader": "Mr. Anuj Pathak",
+   "name": "Outdoor Storage (N/S/E)",
+   "audit_day": "Wednesday"
+  },
+  {
+   "name": "Pump Room",
+   "department": "Administration",
+   "zone": "Z-07",
+   "leader": "Mr. Santosh Maurya",
+   "audit_day": "Thursday"
+  },
+  {
+   "zone": "Z-08",
+   "audit_day": "Thursday",
+   "leader": "Mr. Anuj Pathak",
+   "department": "Logistics",
+   "name": "Wash Bays (GF)"
+  },
+  {
+   "audit_day": "Monday",
+   "name": "Scrap Area (Gate 1-2)",
+   "leader": "Mr. Anuj Pathak",
+   "zone": "Z-09",
+   "department": ""
+  },
+  {
+   "name": "Office + Storage (1F)",
+   "department": "",
+   "audit_day": "Monday",
+   "leader": "Mrs. Shikha",
+   "zone": "Z-10"
+  },
+  {
+   "name": "Owner's Cabin (1F)",
+   "department": "",
+   "audit_day": "Monday",
+   "zone": "Z-11",
+   "leader": "Mr. Balkrishna"
+  },
+  {
+   "leader": "Mr. Tarun",
+   "department": "",
+   "zone": "Z-12",
+   "audit_day": "Monday",
+   "name": "Conference Room (1F)"
+  },
+  {
+   "zone": "Z-13",
+   "leader": "Mrs. Shikha",
+   "audit_day": "Monday",
+   "name": "Office Amenities + Toilets",
+   "department": ""
+  },
+  {
+   "name": "Quality Lab (1F)",
+   "department": "",
+   "leader": "Mrs. Khushi Paswan",
+   "zone": "Z-14",
+   "audit_day": "Monday"
+  },
+  {
+   "leader": "Mr. Anuj Pathak",
+   "department": "",
+   "name": "Production Area (1F)",
+   "audit_day": "Monday",
+   "zone": "Z-15"
+  },
+  {
+   "audit_day": "Monday",
+   "name": "Raw Material Area (1F)",
+   "department": "",
+   "zone": "Z-16",
+   "leader": "Mrs. Khushi Paswan"
+  },
+  {
+   "zone": "Z-17",
+   "audit_day": "Monday",
+   "name": "PM Area + Front Mezzanine",
+   "leader": "Mr. Anuj Pathak",
+   "department": ""
+  },
+  {
+   "audit_day": "Monday",
+   "name": "Finished Goods Area (1F)",
+   "zone": "Z-18",
+   "department": "",
+   "leader": "Mrs. Khushi Paswan"
+  },
+  {
+   "leader": "Mr. Anuj Pathak",
+   "zone": "Z-19",
+   "audit_day": "Monday",
+   "name": "Scrap / Rework / Rejected (1F)",
+   "department": ""
+  },
+  {
+   "name": "Back Mezzanine",
+   "audit_day": "Monday",
+   "leader": "Mr. Tarun",
+   "department": "",
+   "zone": "Z-20"
+  },
+  {
+   "name": "Maintenance Area (1F)",
+   "leader": "Mr. Santosh Maurya",
+   "audit_day": "Monday",
+   "department": "",
+   "zone": "Z-21"
+  },
+  {
+   "name": "Buffer Area (1F)",
+   "leader": "Mr. Anuj Pathak",
+   "audit_day": "Monday",
+   "department": "",
+   "zone": "Z-22"
+  },
+  {
+   "zone": "Z-23",
+   "department": "",
+   "audit_day": "Monday",
+   "name": "Production Toilets (1F)",
+   "leader": "Mr. Anuj Pathak"
+  },
+  {
+   "department": "",
+   "zone": "Z-24",
+   "audit_day": "Monday",
+   "leader": "Mr. Anuj Pathak",
+   "name": "Printing Area (2F)"
+  },
+  {
+   "department": "",
+   "name": "FFS + Bottle Filling (2F)",
+   "audit_day": "Monday",
+   "leader": "Mr. Anuj Pathak",
+   "zone": "Z-25"
+  },
+  {
+   "name": "WIP + Job Work (2F)",
+   "department": "",
+   "zone": "Z-26",
+   "audit_day": "Monday",
+   "leader": "Mr. Anuj Pathak"
+  },
+  {
+   "leader": "Mrs. Khushi Paswan",
+   "audit_day": "Monday",
+   "zone": "Z-27",
+   "department": "",
+   "name": "Finished Goods Area (2F)"
+  },
+  {
+   "leader": "Mr. Anuj Pathak",
+   "zone": "Z-28",
+   "department": "",
+   "name": "Storage — PM + Bulk (2F)",
+   "audit_day": "Monday"
+  }
+ ],
+ "fetched_at": "2026-09-10T08:40:55.959Z",
+ "ran_as": "packmasters.mumbai@gmail.com"
+}

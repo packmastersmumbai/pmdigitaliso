@@ -1,0 +1,417 @@
+{
+ "fetched_at": "2026-09-10T06:40:16.406Z",
+ "ran_as": "packmasters.mumbai@gmail.com",
+ "source": "attendance/TrainingAttendance",
+ "period": "2024-01..2026-12",
+ "rows": [
+  {
+   "emp": "687",
+   "present": true,
+   "plan": "PLN-2025-016",
+   "score": null,
+   "date": "2026-09-06",
+   "name": "ANUJ PATHAK"
+  },
+  {
+   "name": "HARISH SINGH",
+   "present": true,
+   "date": "2026-09-06",
+   "score": null,
+   "emp": "825",
+   "plan": "PLN-2025-016"
+  },
+  {
+   "name": "SHIKHA KUMAR",
+   "score": null,
+   "date": "2026-09-06",
+   "emp": "278",
+   "present": true,
+   "plan": "PLN-2025-016"
+  },
+  {
+   "date": "2026-09-06",
+   "plan": "PLN-2025-016",
+   "score": null,
+   "present": true,
+   "name": "ANITA RAJBHAR",
+   "emp": "556"
+  },
+  {
+   "date": "2026-09-06",
+   "plan": "PLN-2025-016",
+   "present": true,
+   "name": "SUMAN RAJBHAR",
+   "emp": "444",
+   "score": null
+  },
+  {
+   "name": "DEEPAK NISHAD",
+   "score": null,
+   "emp": "235",
+   "date": "2026-09-06",
+   "present": true,
+   "plan": "PLN-2025-016"
+  },
+  {
+   "emp": "579",
+   "plan": "PLN-2025-016",
+   "date": "2026-09-06",
+   "present": true,
+   "score": null,
+   "name": "DILIP MAHALE"
+  },
+  {
+   "name": "ANITA RAJBHAR",
+   "emp": "556",
+   "present": true,
+   "score": null,
+   "plan": "PLN-2025-022",
+   "date": "2026-09-06"
+  },
+  {
+   "plan": "PLN-2025-022",
+   "emp": "444",
+   "date": "2026-09-06",
+   "score": null,
+   "present": true,
+   "name": "SUMAN RAJBHAR"
+  },
+  {
+   "score": null,
+   "emp": "235",
+   "present": true,
+   "name": "DEEPAK NISHAD",
+   "plan": "PLN-2025-022",
+   "date": "2026-09-06"
+  },
+  {
+   "date": "2026-09-06",
+   "plan": "PLN-2025-022",
+   "present": true,
+   "name": "DILIP MAHALE",
+   "emp": "579",
+   "score": null
+  },
+  {
+   "plan": "PLN-2025-022",
+   "date": "2026-09-06",
+   "emp": "687",
+   "present": true,
+   "score": null,
+   "name": "ANUJ PATHAK"
+  },
+  {
+   "name": "SHIKHA KUMAR",
+   "score": null,
+   "date": "2026-09-06",
+   "present": true,
+   "plan": "PLN-2025-022",
+   "emp": "278"
+  },
+  {
+   "score": null,
+   "name": "HARISH SINGH",
+   "date": "2026-09-06",
+   "present": true,
+   "plan": "PLN-2025-022",
+   "emp": "825"
+  },
+  {
+   "name": "ANITA RAJBHAR",
+   "emp": "556",
+   "date": "2026-09-06",
+   "score": null,
+   "plan": "PLN-2025-023",
+   "present": true
+  },
+  {
+   "date": "2026-09-06",
+   "plan": "PLN-2025-023",
+   "score": null,
+   "present": true,
+   "name": "SUMAN RAJBHAR",
+   "emp": "444"
+  },
+  {
+   "name": "ANUJ PATHAK",
+   "score": null,
+   "present": true,
+   "emp": "687",
+   "date": "2026-09-06",
+   "plan": "PLN-2025-023"
+  },
+  {
+   "name": "SHIKHA KUMAR",
+   "present": true,
+   "emp": "278",
+   "score": null,
+   "date": "2026-09-06",
+   "plan": "PLN-2025-023"
+  },
+  {
+   "present": true,
+   "emp": "206",
+   "plan": "PLN-2025-023",
+   "score": null,
+   "date": "2026-09-06",
+   "name": "KHUSHI PASWAN"
+  },
+  {
+   "plan": "PLN-2025-023",
+   "date": "2026-09-06",
+   "emp": "557",
+   "score": null,
+   "present": true,
+   "name": "SANTOSH MAURYA"
+  },
+  {
+   "name": "HARISH SINGH",
+   "date": "2026-09-06",
+   "score": null,
+   "present": true,
+   "emp": "825",
+   "plan": "PLN-2025-023"
+  },
+  {
+   "emp": "687",
+   "name": "ANUJ PATHAK",
+   "present": true,
+   "score": null,
+   "plan": "PLN-2025-017",
+   "date": "2026-09-06"
+  },
+  {
+   "name": "HARISH SINGH",
+   "score": null,
+   "present": true,
+   "date": "2026-09-06",
+   "plan": "PLN-2025-017",
+   "emp": "825"
+  },
+  {
+   "present": true,
+   "date": "2026-09-06",
+   "plan": "PLN-2025-017",
+   "name": "SHIKHA KUMAR",
+   "emp": "278",
+   "score": null
+  },
+  {
+   "emp": "556",
+   "plan": "PLN-2025-017",
+   "score": null,
+   "date": "2026-09-06",
+   "present": true,
+   "name": "ANITA RAJBHAR"
+  },
+  {
+   "name": "SUMAN RAJBHAR",
+   "score": null,
+   "date": "2026-09-06",
+   "emp": "444",
+   "plan": "PLN-2025-017",
+   "present": true
+  },
+  {
+   "plan": "PLN-2025-017",
+   "date": "2026-09-06",
+   "emp": "235",
+   "score": null,
+   "name": "DEEPAK NISHAD",
+   "present": true
+  },
+  {
+   "emp": "579",
+   "plan": "PLN-2025-017",
+   "present": true,
+   "date": "2026-09-06",
+   "name": "DILIP MAHALE",
+   "score": null
+  },
+  {
+   "emp": "687",
+   "name": "ANUJ PATHAK",
+   "present": true,
+   "score": null,
+   "plan": "PLN-2025-018",
+   "date": "2026-09-06"
+  },
+  {
+   "name": "HARISH SINGH",
+   "score": null,
+   "present": true,
+   "date": "2026-09-06",
+   "emp": "825",
+   "plan": "PLN-2025-018"
+  },
+  {
+   "present": true,
+   "name": "SHIKHA KUMAR",
+   "date": "2026-09-06",
+   "score": null,
+   "plan": "PLN-2025-018",
+   "emp": "278"
+  },
+  {
+   "date": "2026-09-06",
+   "present": true,
+   "score": null,
+   "plan": "PLN-2025-018",
+   "emp": "556",
+   "name": "ANITA RAJBHAR"
+  },
+  {
+   "score": null,
+   "present": true,
+   "emp": "444",
+   "name": "SUMAN RAJBHAR",
+   "plan": "PLN-2025-018",
+   "date": "2026-09-06"
+  },
+  {
+   "name": "ANITA RAJBHAR",
+   "present": true,
+   "emp": "556",
+   "date": "2026-09-06",
+   "score": null,
+   "plan": "PLN-2025-024"
+  },
+  {
+   "emp": "444",
+   "plan": "PLN-2025-024",
+   "present": true,
+   "score": null,
+   "date": "2026-09-06",
+   "name": "SUMAN RAJBHAR"
+  },
+  {
+   "name": "ANUJ PATHAK",
+   "score": null,
+   "emp": "687",
+   "date": "2026-09-06",
+   "present": true,
+   "plan": "PLN-2025-024"
+  },
+  {
+   "plan": "PLN-2025-024",
+   "present": true,
+   "date": "2026-09-06",
+   "emp": "278",
+   "score": null,
+   "name": "SHIKHA KUMAR"
+  },
+  {
+   "emp": "206",
+   "plan": "PLN-2025-024",
+   "date": "2026-09-06",
+   "present": true,
+   "name": "KHUSHI PASWAN",
+   "score": null
+  },
+  {
+   "present": true,
+   "name": "SANTOSH MAURYA",
+   "score": null,
+   "date": "2026-09-06",
+   "emp": "557",
+   "plan": "PLN-2025-024"
+  },
+  {
+   "date": "2026-09-06",
+   "plan": "PLN-2025-024",
+   "present": true,
+   "score": null,
+   "name": "HARISH SINGH",
+   "emp": "825"
+  },
+  {
+   "date": "2026-09-06",
+   "plan": "PLN-2025-019",
+   "present": true,
+   "name": "ANUJ PATHAK",
+   "emp": "687",
+   "score": null
+  },
+  {
+   "present": true,
+   "name": "HARISH SINGH",
+   "score": null,
+   "date": "2026-09-06",
+   "emp": "825",
+   "plan": "PLN-2025-019"
+  },
+  {
+   "plan": "PLN-2025-019",
+   "date": "2026-09-06",
+   "emp": "278",
+   "score": null,
+   "present": true,
+   "name": "SHIKHA KUMAR"
+  },
+  {
+   "present": true,
+   "date": "2026-09-06",
+   "score": null,
+   "plan": "PLN-2025-019",
+   "name": "ANITA RAJBHAR",
+   "emp": "556"
+  },
+  {
+   "date": "2026-09-06",
+   "present": true,
+   "plan": "PLN-2025-019",
+   "score": null,
+   "name": "SUMAN RAJBHAR",
+   "emp": "444"
+  },
+  {
+   "date": "2026-09-06",
+   "plan": "PLN-2025-019",
+   "present": true,
+   "name": "KHUSHI PASWAN",
+   "emp": "206",
+   "score": null
+  },
+  {
+   "date": "2026-09-06",
+   "plan": "PLN-2025-019",
+   "present": true,
+   "name": "ASHOK POTALE",
+   "emp": "486",
+   "score": null
+  },
+  {
+   "present": true,
+   "name": "DILIP MAHALE",
+   "score": null,
+   "date": "2026-09-06",
+   "emp": "579",
+   "plan": "PLN-2025-019"
+  },
+  {
+   "score": null,
+   "emp": "557",
+   "name": "SANTOSH MAURYA",
+   "plan": "PLN-2025-019",
+   "present": true,
+   "date": "2026-09-06"
+  },
+  {
+   "name": "ANITA RAJBHAR",
+   "date": "2026-09-07",
+   "present": true,
+   "score": 100,
+   "plan": "PLN-2026-016",
+   "emp": "556"
+  },
+  {
+   "name": "GEETA GOD",
+   "date": "2026-09-07",
+   "present": true,
+   "score": 100,
+   "plan": "PLN-TRN-IND-214-20260907",
+   "emp": "214"
+  }
+ ],
+ "dataset": "training_attendance"
+}

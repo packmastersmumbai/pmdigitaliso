@@ -1,0 +1,766 @@
+{
+ "company_name": "Pack Masters",
+ "company_address": "Rabale MIDC, Navi Mumbai, Maharashtra, India",
+ "company_info": {
+  "name": "Pack Masters",
+  "address": "Rabale MIDC, Navi Mumbai, Maharashtra, India",
+  "tagline": "Contract Packaging"
+ },
+ "logo_url": "data:image/png;base64,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",
+ "doc_type": "form",
+ "doc_code": "PM_REG_HR-04",
+ "title": "Competency dictionary",
+ "doc_title": "Competency dictionary",
+ "form_no": "PM/REG/HR-04",
+ "department": "Office, HR & Purchase",
+ "version": "1.0",
+ "company_code": "PM",
+ "effective_date": "01/10/2026",
+ "review_date": "30/09/2027",
+ "iso_standard": "ISO 9001:2015",
+ "iso_clause": "7.2",
+ "owner": "Khushi Paswan",
+ "owner_title": "Department In-charge",
+ "reviewer": "Tarun Mishra",
+ "reviewer_title": "Plant In-charge",
+ "approver": "Balkrishna Mishra",
+ "approver_title": "Proprietor",
+ "retention": "Life of the system",
+ "status": "APPROVED",
+ "orientation": "landscape",
+ "qr_target": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_REG_HR-04.html",
+ "approvals": {
+  "prepared_by": {
+   "name": "Ms. Khushi Paswan",
+   "title": "Department In-charge — Office, HR & Purchase",
+   "date": "01/10/2026"
+  },
+  "reviewed_by": {
+   "name": "Mr. Tarun Mishra",
+   "title": "Plant In-charge",
+   "date": "01/10/2026"
+  },
+  "approved_by": {
+   "name": "Mr. Balkrishna Mishra",
+   "title": "Proprietor",
+   "date": "01/10/2026"
+  }
+ },
+ "revision_history": [
+  {
+   "version": "1.0",
+   "date": "01/10/2026",
+   "description": "Initial issue. Definitions consolidated from the 39 ZED job clarity agreements, names normalised, mapped to the Pack Masters roles.",
+   "author": "Ms. Khushi Paswan",
+   "approved_by": "Balkrishna Mishra"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "fields",
+   "title": "Dictionary",
+   "cols": 3,
+   "items": [
+    {
+     "label": "Entries",
+     "value": "60"
+    },
+    {
+     "label": "Source",
+     "value": "39 ZED accountability agreements"
+    },
+    {
+     "label": "Raw names before normalising",
+     "value": "116"
+    },
+    {
+     "label": "Roles mapped",
+     "value": "11 of 13 job descriptions"
+    },
+    {
+     "label": "Groups",
+     "value": "8"
+    },
+    {
+     "label": "Purpose",
+     "value": "One definition per competency, used by every job clarity record"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "title": "How to use it",
+   "value": "A competency is named on a job clarity agreement by its code, and this is where the definition lives. That keeps one definition rather than a paraphrase on each record.\n\nThe names are normalised. The source pack carries Problem-Solving and Problem Solving, Communication and Communication Skills, Leadership and Leadership and Team Management as separate entries; importing that would put the same duplication into the skill matrix. The variants column shows what was merged.\n\nThe definitions come from another company's documents and are used as the meaning of a competency, which is generic. Nothing about that company's own operations has been carried across.",
+   "lines": 0
+  },
+  {
+   "type": "table",
+   "title": "Competencies",
+   "numbered": false,
+   "rows": 0,
+   "columns": [
+    {
+     "label": "S.No.",
+     "width": "4%"
+    },
+    {
+     "label": "Code",
+     "width": "6%"
+    },
+    {
+     "label": "Competency",
+     "width": "15%"
+    },
+    {
+     "label": "Group",
+     "width": "11%"
+    },
+    {
+     "label": "What it means",
+     "width": "38%"
+    },
+    {
+     "label": "Pack Masters roles",
+     "width": "14%"
+    },
+    {
+     "label": "ZED roles",
+     "width": "5%"
+    },
+    {
+     "label": "Merged from",
+     "width": "7%"
+    }
+   ],
+   "prefill": [
+    [
+     "1",
+     "CMP-01",
+     "Attention To Detail",
+     "Personal effectiveness",
+     "Given the importance of data accuracy and system reliability, having a keen eye for detail is crucial. You should pay attention to small details, ensure data integrity, and validate information. This competency helps you avoid errors and make informed decisions based on accurate and reliable data",
+     "Plant In-charge, Stores, Quality Assurance, Worker",
+     "15",
+     "—"
+    ],
+    [
+     "2",
+     "CMP-02",
+     "Planning And Organisation",
+     "Planning",
+     "Excellent planning and organizational skills to support the development of production plans, scheduling of resources, and coordination of activities. Ability to support the prioritization of tasks, allocation of resources effectively, and adaptation of plans to changing circumstances.",
+     "Plant In-charge, Production & Ops, Maintenance, Machine Operator",
+     "8",
+     "Planning and Organization; Planning and Organizing"
+    ],
+    [
+     "3",
+     "CMP-03",
+     "Leadership And Team Management",
+     "Leadership",
+     "Excellent leadership skills to support and motivate production teams. Ability to provide clear direction, set expectations, and foster a positive work culture. Competence in supporting team building, communication, conflict resolution, and performance management.",
+     "Proprietor, Plant In-charge, Production & Ops, Machine Operator",
+     "5",
+     "—"
+    ],
+    [
+     "4",
+     "CMP-04",
+     "Regulatory Compliance",
+     "Quality & compliance",
+     "Proficiency in understanding and interpreting product safety regulations and standards. This includes staying updated on regulatory changes, ensuring compliance with applicable laws and regulations, and effectively communicating regulatory requirements to stakeholders.",
+     "Plant In-charge, Manager / MR, Dispatch & Logistics, Quality Assurance",
+     "5",
+     "—"
+    ],
+    [
+     "5",
+     "CMP-05",
+     "Problem-Solving",
+     "Personal effectiveness",
+     "The ability to identify problems, evaluate alternative solutions, and implement effective resolutions is vital. You should be able to approach challenges analytically, think critically, and propose innovative solutions. Strong problem-solving skills enable you to address technical issues, optimize p",
+     "Stores, Maintenance, Worker",
+     "19",
+     "Problem Solving; Problem-Solving; Problem-Solving Abilities"
+    ],
+    [
+     "6",
+     "CMP-06",
+     "Financial Acumen",
+     "Commercial",
+     "Understanding and managing store finances is important for optimizing profitability. You should have basic financial literacy, be able to analyze financial reports, control costs, and make informed decisions regarding pricing, promotions, and budget management",
+     "Production & Ops, Stores, Dispatch & Logistics",
+     "6",
+     "—"
+    ],
+    [
+     "7",
+     "CMP-07",
+     "Leadership",
+     "Leadership",
+     "Ability to lead and inspire a sales team, providing clear direction, setting goals, and motivating team members to achieve targets. Effective leadership involves coaching, mentoring, and fostering a collaborative and high-performance sales culture.",
+     "Stores, Maintenance",
+     "8",
+     "Leadership; Leadership Skills"
+    ],
+    [
+     "8",
+     "CMP-08",
+     "Time Management",
+     "Planning",
+     "Good time management skills to prioritize packaging tasks, follow production schedules, and meet packaging targets. Ability to work efficiently under time constraints and maintain productivity throughout the shift. Teamwork and Collaboration: Competence in working collaboratively with team members t",
+     "Manager / MR, Worker",
+     "5",
+     "—"
+    ],
+    [
+     "9",
+     "CMP-09",
+     "Problem-Solving And Decision Making",
+     "Personal effectiveness",
+     "Strong analytical and problem-solving skills to support the identification of issues, assessment of options, and contribution to informed decision-making. Ability to support troubleshooting production problems, implementing effective solutions, and mitigating risks.",
+     "Production & Ops, Machine Operator",
+     "5",
+     "Problem-Solving and Decision-Making; Problem-solving and Decision-making"
+    ],
+    [
+     "10",
+     "CMP-10",
+     "Technical Expertise",
+     "Technical",
+     "A strong technical knowledge of maintenance principles, equipment, machinery, and facility systems is essential. This includes understanding maintenance best practices, troubleshooting techniques, and the ability to interpret technical manuals and specifications.",
+     "Plant In-charge, Maintenance",
+     "4",
+     "—"
+    ],
+    [
+     "11",
+     "CMP-11",
+     "Environmental Sustainability",
+     "Safety & environment",
+     "Awareness of sustainability practices and the ability to implement environmentally friendly initiatives in the product industry operations.",
+     "Proprietor, Manager / MR",
+     "3",
+     "Environmental Sustainability; Environmental Sustainability 30%; Environmental Sustainability:"
+    ],
+    [
+     "12",
+     "CMP-12",
+     "Quality Assurance",
+     "Quality & compliance",
+     "Understanding and implementing quality control procedures, adherence to regulatory requirements, and ensuring product quality are essential competencies. You should be familiar with quality management systems, testing methods, and quality assurance principles.",
+     "Manager / MR, Production & Ops",
+     "3",
+     "—"
+    ],
+    [
+     "13",
+     "CMP-13",
+     "Health And Safety",
+     "Safety & environment",
+     "Knowledge of health and safety regulations and practices in the product industry. Ability to support the implementation and enforcement of safety protocols, conduct risk assessments, and ensure a safe working environment for production staff.",
+     "Plant In-charge, Production & Ops",
+     "3",
+     "—"
+    ],
+    [
+     "14",
+     "CMP-14",
+     "Quality Management Systems",
+     "Quality & compliance",
+     "Proficiency in implementing and maintaining quality management systems such as ISO standards (e.g., ISO 9001, ISO 22000) and Hazard Analysis and Critical Control Points (HACCP). Understanding the principles and requirements of these systems is essential for ensuring consistent quality and compliance",
+     "Plant In-charge, Quality Assurance",
+     "3",
+     "—"
+    ],
+    [
+     "15",
+     "CMP-15",
+     "Quality Control",
+     "Quality & compliance",
+     "Knowledge of quality control principles and practices. Ability to perform quality checks on raw materials, in-process products, and finished goods. Understanding of quality specifications and the ability to identify and address any quality issues promptly.",
+     "Machine Operator, Worker",
+     "3",
+     "—"
+    ],
+    [
+     "16",
+     "CMP-16",
+     "Supply Chain Management",
+     "Commercial",
+     "Possess a strong understanding of supply chain concepts, including procurement, transportation, inventory management, and distribution. Familiarity with supply chain strategies, best practices, and industry trends is essential.",
+     "Manager / MR, Dispatch & Logistics",
+     "2",
+     "—"
+    ],
+    [
+     "17",
+     "CMP-17",
+     "Risk Assessment And Management",
+     "Quality & compliance",
+     "The ability to assess and manage risks associated with product safety and quality. This includes conducting risk assessments, identifying critical control points, implementing control measures, and continuously monitoring and mitigating potential risks.",
+     "Plant In-charge, Quality Assurance",
+     "2",
+     "—"
+    ],
+    [
+     "18",
+     "CMP-18",
+     "Auditing And Inspection",
+     "Quality & compliance",
+     "Proficiency in conducting internal and external audits and inspections. This includes knowledge of audit techniques, audit planning, conducting audits, and effectively communicating audit findings and recommendations.",
+     "Plant In-charge, Quality Assurance",
+     "2",
+     "—"
+    ],
+    [
+     "19",
+     "CMP-19",
+     "Problem-Solving And Root Cause Analysis",
+     "Personal effectiveness",
+     "The ability to identify and resolve maintenance , quality-related problems using systematic problem-solving techniques. This includes conducting root cause analysis, applying appropriate problem-solving tools (e.g., 5 Whys, Fishbone Diagrams), and implementing corrective and preventive actions.",
+     "Plant In-charge, Quality Assurance",
+     "2",
+     "—"
+    ],
+    [
+     "20",
+     "CMP-20",
+     "Communication",
+     "Personal effectiveness",
+     "Excellent communication skills are vital for effectively conveying information, providing clear instructions, and resolving conflicts. Effective communication ensures smooth coordination among team members and facilitates strong relationships with customers and stakeholders.",
+     "Stores",
+     "10",
+     "Communication; Communication Skills"
+    ],
+    [
+     "21",
+     "CMP-21",
+     "Business Acumen",
+     "Commercial",
+     "Understanding the product industry, its processes, and key business drivers is essential. You should possess knowledge of industry-specific challenges, regulations, and trends. This enables you to align information systems and data analysis with business objectives, identify opportunities for improv",
+     "Proprietor",
+     "6",
+     "—"
+    ],
+    [
+     "22",
+     "CMP-22",
+     "Technical Knowledge",
+     "Technical",
+     "Solid technical knowledge of production processes and equipment used in the product industry. Understanding of the principles behind the operation of different machinery, such as mixers, ovens, conveyors, or packaging machines. Familiarity with safety features, maintenance requirements, and troubles",
+     "Production & Ops",
+     "6",
+     "—"
+    ],
+    [
+     "23",
+     "CMP-23",
+     "Technology Proficiency",
+     "Quality & compliance",
+     "With the increasing reliance on technology in organizations, internal auditors should have a good understanding of relevant technologies and tools. This includes knowledge of data analytics, audit management software, and information security controls.",
+     "Manager / MR",
+     "2",
+     "—"
+    ],
+    [
+     "24",
+     "CMP-24",
+     "Budgeting And Cost Management",
+     "Commercial",
+     "Competence in budgeting and cost management is important to allocate resources effectively and optimize maintenance expenditures. This includes estimating costs, tracking expenses, identifying cost-saving opportunities, and managing maintenance budgets.",
+     "Maintenance",
+     "2",
+     "—"
+    ],
+    [
+     "25",
+     "CMP-25",
+     "Vendor And Contractor Management",
+     "Commercial",
+     "The ability to effectively manage relationships with external vendors, contractors, and service providers is essential. This includes sourcing vendors, negotiating contracts, monitoring performance, and ensuring timely and cost-effective delivery of maintenance services.",
+     "Maintenance",
+     "2",
+     "—"
+    ],
+    [
+     "26",
+     "CMP-26",
+     "Safety And Compliance",
+     "Quality & compliance",
+     "A strong understanding of safety protocols, regulations, and compliance requirements is necessary. This includes implementing and enforcing safety practices, conducting risk assessments, and ensuring compliance with relevant laws and regulations",
+     "Maintenance",
+     "2",
+     "—"
+    ],
+    [
+     "27",
+     "CMP-27",
+     "Communication And Collaboration",
+     "Personal effectiveness",
+     "Effective communication skills, both verbal and written, are crucial for interacting with stakeholders at various levels. You should be able to explain complex technical concepts to non-technical individuals, actively listen to understand requirements, and present information and insights in a clear",
+     "Dispatch & Logistics",
+     "2",
+     "—"
+    ],
+    [
+     "28",
+     "CMP-28",
+     "Equipment Operation",
+     "Technical",
+     "Competence in operating packaging machinery and equipment, understanding their functions, and following standard operating procedures. Ability to handle machine controls, adjust settings, and troubleshoot basic issues.",
+     "Worker",
+     "2",
+     "—"
+    ],
+    [
+     "29",
+     "CMP-29",
+     "Safety And Hygiene",
+     "Safety & environment",
+     "Strong commitment to safety and hygiene practices in the product industry. Competence in following safety protocols, wearing appropriate personal protective equipment (PPE), and maintaining a clean and sanitized work environment. Familiarity with product safety regulations and good manufacturing pra",
+     "Worker",
+     "2",
+     "—"
+    ],
+    [
+     "30",
+     "CMP-30",
+     "Production Management",
+     "Technical",
+     "Strong knowledge and understanding of production processes, manufacturing principles, and operations management. Competence in planning, organizing, and optimizing production activities to meet targets and timelines.",
+     "Production & Ops",
+     "2",
+     "—"
+    ],
+    [
+     "31",
+     "CMP-31",
+     "Organisation And Time Management",
+     "Planning",
+     "Store incharges need strong organizational skills to manage multiple tasks and priorities. This includes effectively scheduling staff, overseeing inventory management, planning promotions and displays, and ensuring smooth day-to-day operations.",
+     "Stores",
+     "2",
+     "—"
+    ],
+    [
+     "32",
+     "CMP-32",
+     "Time Management And Organisation",
+     "Planning",
+     "Possess excellent organizational and time management skills to handle multiple tasks, prioritize activities, and meet deadlines. Efficiently manage logistics operations while maintaining attention to detail and ensuring accuracy.",
+     "Dispatch & Logistics",
+     "2",
+     "Time Management and Organization; Time Management and Organizational Skills"
+    ],
+    [
+     "33",
+     "CMP-33",
+     "Strategic Vision",
+     "General",
+     "The ability to develop a clear and compelling vision for the organization's future and create a strategic roadmap to achieve long-term goals.",
+     "Proprietor",
+     "1",
+     "—"
+    ],
+    [
+     "34",
+     "CMP-34",
+     "Financial Management",
+     "Commercial",
+     "Proficiency in financial analysis, budgeting, and cost control to ensure the organization's financial health and sustainable growth.",
+     "Proprietor",
+     "1",
+     "—"
+    ],
+    [
+     "35",
+     "CMP-35",
+     "Innovation And Adaptability",
+     "Personal effectiveness",
+     "A mindset that embraces innovation, openness to change, and the ability to adapt to evolving market dynamics and consumer needs.",
+     "Proprietor",
+     "1",
+     "—"
+    ],
+    [
+     "36",
+     "CMP-36",
+     "Strategic Partnerships",
+     "Commercial",
+     "Building and maintaining strategic partnerships with suppliers, distributors, and other stakeholders to enhance the organization's capabilities and market reach.",
+     "Proprietor",
+     "1",
+     "—"
+    ],
+    [
+     "37",
+     "CMP-37",
+     "Quality And Safety Focus",
+     "Quality & compliance",
+     "A commitment to maintaining high standards of product quality and safety to ensure consumer satisfaction and regulatory compliance.",
+     "Proprietor",
+     "1",
+     "—"
+    ],
+    [
+     "38",
+     "CMP-38",
+     "Risk Management",
+     "General",
+     "The ability to identify potential risks and develop risk mitigation strategies to safeguard the organization from potential threats.",
+     "Proprietor",
+     "1",
+     "—"
+    ],
+    [
+     "39",
+     "CMP-39",
+     "Strategic Communication",
+     "Personal effectiveness",
+     "Proficiency in articulating the organization's vision, goals, and progress to stakeholders, employees, and investors.",
+     "Proprietor",
+     "1",
+     "—"
+    ],
+    [
+     "40",
+     "CMP-40",
+     "Food Industry Expertise",
+     "Technical",
+     "In-depth understanding of product production processes, safety standards, and regulations specific to the industry.",
+     "Manager / MR",
+     "1",
+     "—"
+    ],
+    [
+     "41",
+     "CMP-41",
+     "Cost Management",
+     "Commercial",
+     "Ability to manage budgets and control operational costs effectively.",
+     "Manager / MR",
+     "1",
+     "—"
+    ],
+    [
+     "42",
+     "CMP-42",
+     "Project Planning",
+     "Planning",
+     "Skills to plan and execute projects, such as process improvements or facility expansions.",
+     "Manager / MR",
+     "1",
+     "—"
+    ],
+    [
+     "43",
+     "CMP-43",
+     "Sustainability Awareness",
+     "Safety & environment",
+     "Understanding and promoting environmentally sustainable practices within the organization.",
+     "Manager / MR",
+     "1",
+     "—"
+    ],
+    [
+     "44",
+     "CMP-44",
+     "Emergency Response",
+     "Safety & environment",
+     "Ability to develop and execute contingency plans in response to crises or unexpected events.",
+     "Manager / MR",
+     "1",
+     "—"
+    ],
+    [
+     "45",
+     "CMP-45",
+     "Business Continuity",
+     "Commercial",
+     "Ensuring business operations continue smoothly during crises",
+     "Manager / MR",
+     "1",
+     "—"
+    ],
+    [
+     "46",
+     "CMP-46",
+     "Results Expected Kpis",
+     "General",
+     "",
+     "Manager / MR",
+     "1",
+     "—"
+    ],
+    [
+     "47",
+     "CMP-47",
+     "Food Safety Compliance",
+     "Quality & compliance",
+     "",
+     "Manager / MR",
+     "1",
+     "—"
+    ],
+    [
+     "48",
+     "CMP-48",
+     "Compliance And Regulatory Knowledge",
+     "Quality & compliance",
+     "Understanding of relevant product safety regulations, labeling requirements, and packaging specifications. Competence in adhering to regulatory and compliance standards specific to the product industry during packaging operations.",
+     "Worker",
+     "1",
+     "—"
+    ],
+    [
+     "49",
+     "CMP-49",
+     "Continuous Improvement",
+     "Technical",
+     "A mindset of continuous improvement to drive operational excellence. Competence in identifying process inefficiencies, waste reduction opportunities, and cost-saving initiatives. Familiarity with Lean manufacturing principles and tools.",
+     "Production & Ops",
+     "1",
+     "—"
+    ],
+    [
+     "50",
+     "CMP-50",
+     "Production Knowledge",
+     "Technical",
+     "Strong knowledge and understanding of production processes, equipment, and technologies relevant to the product industry. Familiarity with product safety regulations and quality standards.",
+     "Machine Operator",
+     "1",
+     "—"
+    ],
+    [
+     "51",
+     "CMP-51",
+     "Operational Efficiency",
+     "Technical",
+     "Competence in optimizing production processes and resource utilization to achieve production targets. Ability to identify areas for improvement, implement lean manufacturing principles, and eliminate waste. Experience in optimizing equipment and labor efficiency.",
+     "Machine Operator",
+     "1",
+     "—"
+    ],
+    [
+     "52",
+     "CMP-52",
+     "Food Safety And Quality Knowledge",
+     "Quality & compliance",
+     "A strong understanding of product safety principles, quality management systems, and regulatory requirements is essential. This includes knowledge of HACCP (Hazard Analysis and Critical Control Points), GMP (Good Manufacturing Practices), relevant product safety standards (e.g., ISO 22000), and regu",
+     "Quality Assurance",
+     "1",
+     "—"
+    ],
+    [
+     "53",
+     "CMP-53",
+     "Logistics Operations Knowledge",
+     "Technical",
+     "Have a comprehensive knowledge of logistics operations, including transportation management, warehouse operations, inventory control, and order fulfillment. Understanding logistics processes, systems, and technologies is important for optimizing logistics operations.",
+     "Dispatch & Logistics",
+     "1",
+     "—"
+    ],
+    [
+     "54",
+     "CMP-54",
+     "Technical Proficiency",
+     "Technical",
+     "Be adept at using logistics management software, transportation management systems (TMS), warehouse management systems (WMS), and other relevant technology tools. Familiarity with data analysis tools and proficiency in Microsoft Excel is also beneficial.",
+     "Dispatch & Logistics",
+     "1",
+     "—"
+    ],
+    [
+     "55",
+     "CMP-55",
+     "Customer Focus",
+     "Commercial",
+     "A Regional Sales Manager should have a strong customer-centric approach. This involves understanding customer needs, building relationships, and delivering exceptional customer experiences. Being able to anticipate customer requirements and provide solutions that address their pain points is crucial",
+     "—",
+     "5",
+     "—"
+    ],
+    [
+     "56",
+     "CMP-56",
+     "Organisation",
+     "Planning",
+     "Sales coordinators are responsible for managing multiple tasks simultaneously. Effective organization and time management skills are crucial to prioritize activities, meet deadlines, and ensure smooth coordination between different sales processes and departments.",
+     "—",
+     "3",
+     "—"
+    ],
+    [
+     "57",
+     "CMP-57",
+     "Negotiation",
+     "Commercial",
+     "Possess strong negotiation skills to secure favorable terms, pricing, and contracts with suppliers. Effective negotiation skills involve active listening, persuasive communication, and the ability to find win-win solutions.",
+     "—",
+     "3",
+     "—"
+    ],
+    [
+     "58",
+     "CMP-58",
+     "Safety Awareness",
+     "Safety & environment",
+     "A strong understanding of safety protocols and a commitment to safety is critical. This includes ensuring compliance with safety regulations, conducting risk assessments, and promoting a safe work environment for the maintenance team.",
+     "—",
+     "3",
+     "—"
+    ],
+    [
+     "59",
+     "CMP-59",
+     "Strategic Thinking",
+     "Commercial",
+     "Regional Sales Managers should have the ability to think strategically and develop sales strategies that align with overall business objectives. This involves analyzing market trends, identifying growth opportunities, and making informed decisions to drive revenue growth within the assigned region.",
+     "—",
+     "3",
+     "—"
+    ],
+    [
+     "60",
+     "CMP-60",
+     "Sales And Negotiation",
+     "Commercial",
+     "A Regional Sales Manager should have a solid foundation in sales techniques, negotiation skills, and the ability to close deals. This includes the ability to identify customer needs, present value propositions, overcome objections, and negotiate win-win outcomes to achieve sales targets.",
+     "—",
+     "3",
+     "—"
+    ]
+   ],
+   "note": "Ordered by how many Pack Masters roles need the competency, then by how widely the source pack uses it."
+  },
+  {
+   "type": "signoff",
+   "roles": [
+    {
+     "role": "Prepared by",
+     "name": "Ms. Khushi Paswan",
+     "date": "01-10-2026"
+    },
+    {
+     "role": "Reviewed by",
+     "name": "Mr. Tarun Mishra",
+     "date": "01-10-2026"
+    },
+    {
+     "role": "Approved by",
+     "name": "Mr. Balkrishna Mishra",
+     "date": "01-10-2026"
+    }
+   ]
+  }
+ ],
+ "related_docs": [
+  "PM/REG/HR-01",
+  "PM/FRM/HR-JC-01",
+  "PM/FRM/HR-04"
+ ],
+ "qr_b64": "iVBORw0KGgoAAAANSUhEUgAAAQIAAAECCAIAAACaLU4HAAAFW0lEQVR4nO3dO47jRhQF0G7DC2Do1Ptf1KQOuQMNRpGBSgpP71NSnxMP2RK7Lwa8qHr1/Xg8vuBn+2v6A8A8MQAxADEAMQAxgCevyCAGIAYgBiAG8OQVGcQAxADEAMQAnrwiw9ffsWdw/fPv4MO7//uVcp/1W+zcufOqmJ2fFfs3q9hVdWJP1f8GIAYgBiAGIAbwSlO06uw9sq6K9Sc7P2u9KvZ8OjufK/TE3vFvY6UpAjEAMQAxADGA3KYo6y2+s1GZ7U9i/VLsM2f1XVfSyqjOv40dmiIQAxADEAMQA6huik5TtxpnR1bH0vktrsYdc7M0RSAGIAYgBiAG8NOaotVO79E5uWhH1rqjnTv/nO5IUwRiAGIAYgBiANVN0WkdQt3am6xZ0KvYjrm6O3/q34amCMQAxADEAMQAcpui2ROv6nS2SbE1TlmTi67GXWyn0RSBGIAYgBiAGMDT9+Px+Hp/dV1E3flo77g+57L7DD6VwhTEAMQAxABeWFPUOQs6a1bP+Y1K3QlunV3W9YadmFdkEAMQAxADEAN4ZU1RrJ2o6zSy9lLVnXcfu+q02UFX0ueZ/X2tNEUgBiAGIAYgBtDfFMXU7fbK6oV2dHZHs43TqnMmUux3qikCMQAxADEAMYDcpqhuBdGsurUudetzYq7DVmrtyPpZmiIQAxADEAMQA8g9+2xVd3JW3RqVuobn/MZpNXsaWufKKE0RiAGIAYgBiAGcsPusbv3Jad3R+TOIdmR909mdiStNEYgBiAGIAYgBvLKmqHOqTKyd6FzRlOX8+Uu3NUXwqRSmIAYgBiAG8EJT1DmReHaWUWcvVHdO/c63uEd3usWes7PPII2mCMQAxADEAIonWseu6lzZMnveVl3b9hnnkV2N07O9IoMYgBiAGIAYQP+cos6dXKvZidanTebJch226zBGUwRiAGIAYgBiAK80RavTpkPXrVaabbc6Z1Of1qTVdUeaIhADEAMQAxADeN+zzzr3mtXtnIpx5/+z+wzSKExBDEAMQAyguCmqWwv0jrOXZxuerKdxN86V6ly75RUZxADEAMQAxABeOfvsHRuV2Xk+O2L9yeyOuTvpzLKd7173vTRFIAYgBiAGIAZQ3RRlrTapWzMze/pY1tPYuc+qbrLTqu4Z2n0GaRSmIAYgBiAGUNwUrep2ls2umYm1LqftCJu183nqPrNXZBADEAMQAxAD6D/77Pw2aXa60fnrfO7RCUiaIiikMAUxADEAMYDUidbnT1GO6TzzPWvi987n6dxVd1ovtPKKDGIAYgBiAGIA1U1R51XnT9Q5f4XVdfyetbpPqCkCMQAxADEAMYD+pijrPnWNwWe0UrPrqTpXEJloDWkUpiAGIAYgBtA+0Xp2t1fsZ9VNq65bLxT7N6u6M+ZO68S8IoMYgBiAGIAYQO5E61l1U2465+fUTX+qa9Lu0TtbUwRpFKYgBiAGIAbwwpqi0+Yhz/ZCdSuIZqde36H7xJ7h7Mxtr8ggBiAGIAYgBpC7+6xzpU3s39RNy+mcDl3X1WSZnRAVoykCMQAxADEAMYDqOUWd+6ROm1adtXOqs006f+r1zlUxmiIQAxADEAMQAzhzonWW2NzprP1WO5+nrgXa0bli5076XazMKYI0ClMQAxADEAP46KaocwfW+bOMYu6yribriWXxigxiAGIAYgBiANVN0WfMxoldNXvnrO7oGv0WnW2SpgjEAMQAxADEAHKbotnT0Ga7kVXnBKTO+Ut1TLSGYQpTEAMQAxAD+OP78Xh4EvxwXpFBDEAMQAxADODJKzKIAYgBiAGIATx5RQYxADEAMQAxgCevyCAGfPH1G1fL1xqlChdoAAAAAElFTkSuQmCC"
+}

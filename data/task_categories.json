@@ -1,0 +1,39 @@
+{
+ "ran_as": "packmasters.mumbai@gmail.com",
+ "fetched_at": "2026-09-10T07:24:12.022Z",
+ "rows": [
+  {
+   "id": "39890627-3020-4d7f-a374-f442331a991a",
+   "active": true,
+   "name": "Design"
+  },
+  {
+   "name": "Production",
+   "id": "f19ae8ff-92e1-47eb-b050-b834fbce63c9",
+   "active": true
+  },
+  {
+   "active": true,
+   "name": "QC Check",
+   "id": "8a61b595-63ee-4c42-ac50-3d29aa9989c7"
+  },
+  {
+   "id": "58833443-655e-4ff1-a20a-97690fb6cce0",
+   "active": true,
+   "name": "Dispatch"
+  },
+  {
+   "active": true,
+   "id": "f21deaaf-c752-43c5-9bd3-ba9947dc476f",
+   "name": "Client Call"
+  },
+  {
+   "name": "Admin",
+   "id": "833f5429-1e2b-4b8c-b9fb-372ebb7b3012",
+   "active": true
+  }
+ ],
+ "source": "taskflow/categories",
+ "period": "",
+ "dataset": "task_categories"
+}

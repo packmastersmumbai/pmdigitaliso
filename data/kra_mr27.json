@@ -1,0 +1,552 @@
+{
+ "MR. BALKRISHNA MISHRA": {
+  "designation": "PROPRIETOR",
+  "activities": [
+   {
+    "activity": "IMS Policy review and communication to all employees",
+    "target": "Annually & at MRM",
+    "record": "MRM minutes, Policy display"
+   },
+   {
+    "activity": "Organizational objectives and KPI review",
+    "target": "Monthly at MRM",
+    "record": "KPI tracking register F/MR/14"
+   },
+   {
+    "activity": "Resource allocation — manpower, machine, material, money",
+    "target": "As needed / quarterly",
+    "record": "Approval records, budget"
+   },
+   {
+    "activity": "Management Review Meeting (MRM) conducted as per plan",
+    "target": "Min. Quarterly",
+    "record": "MRM record signed"
+   },
+   {
+    "activity": "ZED Gold certification — progress tracking and approvals",
+    "target": "Quarterly",
+    "record": "ZED audit closure report"
+   },
+   {
+    "activity": "Customer satisfaction review and corrective actions",
+    "target": "Half-Yearly",
+    "record": "Customer feedback forms"
+   },
+   {
+    "activity": "Approval of new suppliers and disqualification of poor performers",
+    "target": "Quarterly",
+    "record": "Supplier rating sheet"
+   },
+   {
+    "activity": "CSR activities — planning and participation",
+    "target": "Annually",
+    "record": "CSR report and photos"
+   },
+   {
+    "activity": "CAPA review for major non-conformances",
+    "target": "Monthly",
+    "record": "CAPA register"
+   },
+   {
+    "activity": "Ensure legal & regulatory compliance",
+    "target": "Annually",
+    "record": "Legal register update"
+   }
+  ]
+ },
+ "MR. TARUN MISHRA": {
+  "designation": "PLANT IN-CHARGE",
+  "activities": [
+   {
+    "activity": "Maintain and update IMS documentation (Apex Manual, Procedures, Records)",
+    "target": "Continuous",
+    "record": "Document master list"
+   },
+   {
+    "activity": "Plan and conduct internal audits — all departments",
+    "target": "Bi-annually",
+    "record": "Internal audit schedule & reports"
+   },
+   {
+    "activity": "Coordinate Management Review Meeting (MRM) — agenda, minutes",
+    "target": "Quarterly",
+    "record": "MRM records"
+   },
+   {
+    "activity": "Monitor KPIs — all departments vs targets in F/MR/14",
+    "target": "Monthly by 7th",
+    "record": "KPI tracker filled"
+   },
+   {
+    "activity": "Maintain and review Risk Register — submit to MRM",
+    "target": "Quarterly",
+    "record": "Risk register"
+   },
+   {
+    "activity": "Schedule vs supply % — overall plant tracking and CAPA",
+    "target": "Monthly by 7th",
+    "record": "OTD data"
+   },
+   {
+    "activity": "Customer complaint tracking and CAPA coordination",
+    "target": "By 7th each month",
+    "record": "Complaint register + CAPA"
+   },
+   {
+    "activity": "5S zones — Z-01 Security+Meter, Z-03 Supervisor's Cabin, Z-12 Conference, Z-20 Back Mezzanine ≥ 80%",
+    "target": "Monthly",
+    "record": "5S audit records"
+   },
+   {
+    "activity": "Coordinate ZED Gold certification activities",
+    "target": "Monthly",
+    "record": "ZED checklist progress"
+   },
+   {
+    "activity": "Prepare and submit monthly report to Proprietor",
+    "target": "Monthly by 10th",
+    "record": "Monthly MIS report"
+   }
+  ]
+ },
+ "MR. ANUJ PATHAK": {
+  "designation": "MANAGER / MANAGEMENT REPRESENTATIVE",
+  "activities": [
+   {
+    "activity": "Schedule vs Supply % — customer-wise — report monthly",
+    "target": "By 7th each month",
+    "record": "OTD data with reasons for shortfall"
+   },
+   {
+    "activity": "On-Time Delivery (OTD) % ≥ 95% — track and CAPA on failures",
+    "target": "Monthly",
+    "record": "OTD record, CAPA form"
+   },
+   {
+    "activity": "Internal Rejection PPM — reduction toward target",
+    "target": "Monthly",
+    "record": "In-process rejection data"
+   },
+   {
+    "activity": "Rework PPM — reduction toward target",
+    "target": "Monthly",
+    "record": "Rework data sheet"
+   },
+   {
+    "activity": "Control Plan adherence — ensure SOP followed by all operators",
+    "target": "Daily",
+    "record": "Control plan audit checklist"
+   },
+   {
+    "activity": "Customer complaints related to production — CAPA submitted",
+    "target": "Within 5 working days",
+    "record": "CAPA form customer-wise"
+   },
+   {
+    "activity": "5S zones — 15 zones led (Z-02, 04, 05, 06, 08, 09, 15, 17, 19, 22, 23, 24, 25, 26, 28) ≥ 80%",
+    "target": "Weekly audit",
+    "record": "5S audit score sheet"
+   },
+   {
+    "activity": "Kaizen / Poka-Yoke implemented in production area",
+    "target": "Minimum 1 per month",
+    "record": "Kaizen list with before/after"
+   },
+   {
+    "activity": "Daily shift report — output, rejection, downtime, issues",
+    "target": "Daily",
+    "record": "Daily production report"
+   },
+   {
+    "activity": "Ensure operators trained on SOPs; skill matrix updated",
+    "target": "Bi-annually",
+    "record": "Skill matrix, training records"
+   }
+  ]
+ },
+ "MR. SANTOSH MAURYA": {
+  "designation": "DEPARTMENT IN-CHARGE",
+  "activities": [
+   {
+    "activity": "Preventive Maintenance (PM) schedule adherence %",
+    "target": "By 7th each month",
+    "record": "PM plan, PM record cards"
+   },
+   {
+    "activity": "Machine breakdown hours/month — ≤ 5 hrs target",
+    "target": "Monthly",
+    "record": "Breakdown register"
+   },
+   {
+    "activity": "MTTR (Mean Time to Repair) — track and reduce",
+    "target": "Monthly",
+    "record": "MTTR chart"
+   },
+   {
+    "activity": "MTBF (Mean Time Between Failures) — track and improve",
+    "target": "Monthly",
+    "record": "MTBF chart"
+   },
+   {
+    "activity": "List of machines under frequent breakdown — CAPA submitted",
+    "target": "By 7th each month",
+    "record": "Breakdown root cause list"
+   },
+   {
+    "activity": "Cost of parts repaired/replaced in the month",
+    "target": "Monthly",
+    "record": "Purchase order, maintenance log"
+   },
+   {
+    "activity": "Calibration of all instruments on schedule — stickers affixed",
+    "target": "As per calibration plan",
+    "record": "Calibration records, sticker check"
+   },
+   {
+    "activity": "Energy monitoring — daily electricity readings entered",
+    "target": "Daily",
+    "record": "Energy log sheet"
+   },
+   {
+    "activity": "5S zones — Z-07 Pump Room, Z-21 Maintenance Area (leader); Z-20 (supervisor) ≥ 80%",
+    "target": "Weekly",
+    "record": "5S score sheet"
+   },
+   {
+    "activity": "Kaizen implemented to reduce breakdown / energy loss",
+    "target": "Minimum 1 per month",
+    "record": "Kaizen register with before/after"
+   }
+  ]
+ },
+ "MR. HARISH SINGH": {
+  "designation": "DEPARTMENT IN-CHARGE",
+  "activities": [
+   {
+    "activity": "On-Time Dispatch — all deliveries on confirmed date",
+    "target": "Daily",
+    "record": "Dispatch log / OTD record"
+   },
+   {
+    "activity": "Schedule vs Dispatch data — customer-wise with shortfall reasons",
+    "target": "By 7th each month",
+    "record": "OTD data sheet (F/MR/14)"
+   },
+   {
+    "activity": "CAPA for every delayed dispatch — root cause + corrective action",
+    "target": "Within 5 days of delay",
+    "record": "CAPA form"
+   },
+   {
+    "activity": "Finished goods FIFO adherence in dispatch area",
+    "target": "Daily",
+    "record": "FIFO check log"
+   },
+   {
+    "activity": "Daily shortage report — any shortage vs customer schedule",
+    "target": "Daily",
+    "record": "Shortage report"
+   },
+   {
+    "activity": "Dispatch documentation accuracy — DC, invoice, packing list, e-way bill",
+    "target": "Every dispatch",
+    "record": "Document check register"
+   },
+   {
+    "activity": "Vehicle inspection before loading — cleanliness and fitness",
+    "target": "Every dispatch",
+    "record": "Vehicle inspection checklist"
+   },
+   {
+    "activity": "Logistics cost tracking vs budget",
+    "target": "Monthly",
+    "record": "Transport bill summary"
+   },
+   {
+    "activity": "Customer delivery performance feedback — collect and report",
+    "target": "Quarterly",
+    "record": "Feedback form"
+   },
+   {
+    "activity": "5S zones — Z-03, Z-04, Z-08 Wash Bays, Z-23, Z-24 (supervisor) ≥ 80%",
+    "target": "Weekly",
+    "record": "5S score sheet"
+   }
+  ]
+ },
+ "MRS. KHUSHI PASWAN": {
+  "designation": "DEPARTMENT IN-CHARGE",
+  "activities": [
+   {
+    "activity": "Induction training for all new joiners — within first week",
+    "target": "Every new hire",
+    "record": "Induction record form"
+   },
+   {
+    "activity": "Annual Training Plan — prepared and executed 100%",
+    "target": "Annually + monthly tracking",
+    "record": "Annual training plan, attendance sheets"
+   },
+   {
+    "activity": "Training effectiveness evaluation — done after each training",
+    "target": "Within 7 days of training",
+    "record": "Effectiveness evaluation form"
+   },
+   {
+    "activity": "Skill matrix — updated every 6 months for all employees",
+    "target": "April & October",
+    "record": "Skill matrix spreadsheet"
+   },
+   {
+    "activity": "Job Descriptions — maintained and reviewed annually for all roles",
+    "target": "Annually",
+    "record": "Job clarity documents"
+   },
+   {
+    "activity": "Leave management, payroll coordination, statutory compliance (PF/ESIC)",
+    "target": "Monthly",
+    "record": "Payroll records, compliance challan"
+   },
+   {
+    "activity": "Employee satisfaction survey — conduct and share results",
+    "target": "Annually",
+    "record": "Survey form, summary report"
+   },
+   {
+    "activity": "CSR activities — coordinate and document with photos",
+    "target": "Quarterly",
+    "record": "CSR photo report, PPT"
+   },
+   {
+    "activity": "Organization chart — updated within 1 month of any change",
+    "target": "On change / Quarterly review",
+    "record": "Updated org chart FRM/HR/017"
+   },
+   {
+    "activity": "5S zones — Z-14 Quality Lab, Z-16 RM, Z-18 FG, Z-27 FG-2F (leader); Z-10, Z-12, Z-13 (supervisor) ≥ 80%",
+    "target": "Weekly",
+    "record": "5S score sheet"
+   }
+  ]
+ },
+ "MR. DEEPAK NISHAD": {
+  "designation": "DEPARTMENT IN-CHARGE",
+  "activities": [
+   {
+    "activity": "Daily production output vs plan — shift-wise",
+    "target": "Daily",
+    "record": "Daily production report"
+   },
+   {
+    "activity": "In-process rejection PPM — record and reduce",
+    "target": "Daily / monthly summary",
+    "record": "In-process rejection sheet"
+   },
+   {
+    "activity": "Rework PPM — record, segregate and reduce",
+    "target": "Daily / monthly summary",
+    "record": "Rework register"
+   },
+   {
+    "activity": "SOP and Control Plan adherence at every station",
+    "target": "Daily",
+    "record": "Line audit checklist"
+   },
+   {
+    "activity": "Machine start-up and line clearance checks before each batch",
+    "target": "Every batch",
+    "record": "Line clearance record"
+   },
+   {
+    "activity": "Manpower deployment and shift handover",
+    "target": "Every shift",
+    "record": "Shift handover register"
+   },
+   {
+    "activity": "PPE compliance of all workers in the zone",
+    "target": "Daily",
+    "record": "PPE check record"
+   },
+   {
+    "activity": "Abnormality / breakdown reported to Maintenance within 15 min",
+    "target": "On occurrence",
+    "record": "Breakdown intimation log (MMT)"
+   },
+   {
+    "activity": "Kaizen / Poka-Yoke on the shop floor",
+    "target": "Minimum 1 per month",
+    "record": "Kaizen register"
+   },
+   {
+    "activity": "5S zones — Z-05, Z-06, Z-07, Z-16, Z-17, Z-18, Z-21, Z-22, Z-27, Z-28 (supervisor) ≥ 80%",
+    "target": "Weekly",
+    "record": "5S score sheet"
+   }
+  ]
+ },
+ "MR. DILIP MAHALE": {
+  "designation": "DEPARTMENT IN-CHARGE",
+  "activities": [
+   {
+    "activity": "Inventory management — Min-Max levels maintained for all materials",
+    "target": "Monthly",
+    "record": "Stock register / min-max sheet"
+   },
+   {
+    "activity": "FIFO adherence — no old stock consumed after new without approval",
+    "target": "Daily",
+    "record": "FIFO check log"
+   },
+   {
+    "activity": "Stock audit — physical vs system stock",
+    "target": "Monthly",
+    "record": "Stock audit report"
+   },
+   {
+    "activity": "MSDS displayed for all chemicals in store",
+    "target": "Continuous",
+    "record": "MSDS file / display board"
+   },
+   {
+    "activity": "Shelf-life materials — expiry tracking, no expired stock issued",
+    "target": "Weekly",
+    "record": "Shelf-life register"
+   },
+   {
+    "activity": "Supplier rating — monthly score compiled and submitted",
+    "target": "By 7th each month",
+    "record": "Supplier rating sheet (F/MR/14)"
+   },
+   {
+    "activity": "Approved Supplier List — maintained and reviewed",
+    "target": "Quarterly",
+    "record": "ASL register"
+   },
+   {
+    "activity": "GRN and incoming material documentation accuracy",
+    "target": "Every receipt",
+    "record": "GRN register (PM QMS)"
+   },
+   {
+    "activity": "CAPA for supplier quality failure — submitted to supplier",
+    "target": "Within 5 days of failure",
+    "record": "CAPA form"
+   },
+   {
+    "activity": "5S zones — Z-02 Loading/Unloading, Z-09 Scrap, Z-15, Z-19, Z-25, Z-26 (supervisor) ≥ 80%",
+    "target": "Weekly",
+    "record": "5S score sheet"
+   }
+  ]
+ },
+ "MS. SHIKHA KUMAR": {
+  "designation": "DEPARTMENT IN-CHARGE",
+  "activities": [
+   {
+    "activity": "Incoming inspection (IQC) — lot-wise records complete",
+    "target": "Every incoming lot",
+    "record": "IQC record (PM QMS)"
+   },
+   {
+    "activity": "Outgoing inspection (OQC) — batch-wise records before dispatch",
+    "target": "Every batch",
+    "record": "OQC record (PM QMS)"
+   },
+   {
+    "activity": "Gauge / instrument calibration adherence — all on schedule",
+    "target": "Monthly",
+    "record": "Calibration plan and certificates"
+   },
+   {
+    "activity": "Customer complaint registration and CAPA follow-up",
+    "target": "Within 5 working days",
+    "record": "CAPA form"
+   },
+   {
+    "activity": "Document control — issue, revision and withdrawal of QMS documents",
+    "target": "On every revision",
+    "record": "Master document list"
+   },
+   {
+    "activity": "Retention of quality records as per retention schedule",
+    "target": "Continuous",
+    "record": "Record register"
+   },
+   {
+    "activity": "Product test reports — in-house and third party",
+    "target": "Per product requirement",
+    "record": "Test report file"
+   },
+   {
+    "activity": "Internal quality audit support and NC closure tracking",
+    "target": "Bi-annually",
+    "record": "Internal audit report"
+   },
+   {
+    "activity": "Office administration, visitor and gate-pass control",
+    "target": "Daily",
+    "record": "Visitor / gate-pass log"
+   },
+   {
+    "activity": "5S zones — Z-10 Office+Storage, Z-13 Amenities (leader); Z-11, Z-14 (supervisor) ≥ 80%",
+    "target": "Weekly",
+    "record": "5S score sheet"
+   }
+  ]
+ },
+ "MR. RAJESH DUBEY": {
+  "designation": "SECURITY GUARD",
+  "activities": [
+   {
+    "activity": "Gate register — every visitor, vehicle and contractor entry and exit recorded",
+    "target": "Every entry / exit",
+    "record": "Gate register"
+   },
+   {
+    "activity": "Gate pass verified for all outgoing material; nothing leaves without one",
+    "target": "Every despatch",
+    "record": "Gate pass book"
+   },
+   {
+    "activity": "Incoming vehicle checked before entry to the loading area — condition, cleanliness, documents",
+    "target": "Every vehicle",
+    "record": "Vehicle inspection checklist"
+   },
+   {
+    "activity": "Visitor control — record, badge, safety briefing and PPE issued where the visitor enters the plant",
+    "target": "Every visitor",
+    "record": "Visitor log"
+   },
+   {
+    "activity": "Key control and shift handover — keys accounted for and handed over in person",
+    "target": "Every shift",
+    "record": "Key register / handover log"
+   },
+   {
+    "activity": "Emergency response — raise the alarm, follow the emergency plan, guide the assembly point head-count",
+    "target": "On occurrence + every drill",
+    "record": "PM/EP-001, mock drill report"
+   },
+   {
+    "activity": "Fire extinguishers and hydrant point in the gate and meter room area — visual check, seal and due date",
+    "target": "Weekly",
+    "record": "PM/FRM/ENV-05 equipment inspection log"
+   },
+   {
+    "activity": "Nil unauthorised movement of material, people or vehicles",
+    "target": "Daily",
+    "record": "Gate register / incident report"
+   },
+   {
+    "activity": "Contract manpower reporting at the gate — direct to attendance, no entry without a badge",
+    "target": "Daily",
+    "record": "AQRS attendance"
+   },
+   {
+    "activity": "5S zone Z-01 Security + Meter Room maintained at or above 80%",
+    "target": "Weekly",
+    "record": "PM/FRM/5S-02, PM/FRM/5S-03"
+   }
+  ]
+ }
+}

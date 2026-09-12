@@ -1,0 +1,79 @@
+{
+ "ran_as": "packmasters.mumbai@gmail.com",
+ "dataset": "task_users",
+ "source": "taskflow/users",
+ "rows": [
+  {
+   "active": true,
+   "name": "Admin",
+   "role": "admin",
+   "email": "",
+   "id": "023395f4-f5b4-47b6-9e99-f0d2600ff5c3"
+  },
+  {
+   "id": "d02ada01-046f-47dc-812d-464ecfa97a72",
+   "email": "khushi009810@gmail.com",
+   "active": true,
+   "role": "office",
+   "name": "Khushi"
+  },
+  {
+   "email": "pathakanuj142@gmail.com",
+   "role": "ops",
+   "name": "Anuj",
+   "id": "e17fbfca-dee3-4529-9018-8e2d04717608",
+   "active": true
+  },
+  {
+   "id": "bfab2496-0ad5-4db8-b2e8-0a9e709ce121",
+   "email": "",
+   "active": true,
+   "name": "Santosh",
+   "role": "ops"
+  },
+  {
+   "name": "Rajesh",
+   "role": "security",
+   "id": "6893d1fd-3e7a-4ef3-8e7a-9c48091c5b36",
+   "active": true,
+   "email": ""
+  },
+  {
+   "email": "tu55h4r@gmail.com",
+   "name": "TBM",
+   "role": "admin",
+   "active": true,
+   "id": "1459f62d-3e99-4e28-96fd-f1a46f21478d"
+  },
+  {
+   "email": "",
+   "name": "BBM",
+   "role": "owner",
+   "active": true,
+   "id": "53503b46-6123-4847-bab8-d414f464c139"
+  },
+  {
+   "name": "Shikha",
+   "role": "office",
+   "email": "",
+   "active": true,
+   "id": "af905759-da5c-422b-8fbb-cc2449ca794c"
+  },
+  {
+   "active": true,
+   "id": "afe0c57e-2429-4ca8-bb51-27477c26d127",
+   "role": "integration",
+   "name": "Integration",
+   "email": ""
+  },
+  {
+   "email": "",
+   "id": "9df47c57-5bf4-4113-8133-54e4050af8a5",
+   "active": true,
+   "role": "ops",
+   "name": "Harish"
+  }
+ ],
+ "fetched_at": "2026-09-10T07:24:19.260Z",
+ "period": ""
+}

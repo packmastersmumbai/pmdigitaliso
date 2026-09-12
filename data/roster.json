@@ -1,0 +1,558 @@
+{
+ "ran_as": "packmasters.mumbai@gmail.com",
+ "dataset": "roster",
+ "source": "attendance/Employees",
+ "period": "",
+ "fetched_at": "2026-09-10T06:39:39.898Z",
+ "rows": [
+  {
+   "emp": "556",
+   "engagement": "Direct",
+   "department": "Production & Operations",
+   "name": "ANITA RAJBHAR",
+   "status": "ACTIVE",
+   "gender": "Female",
+   "role": "Worker"
+  },
+  {
+   "role": "Manager",
+   "gender": "Male",
+   "status": "ACTIVE",
+   "engagement": "Office",
+   "name": "ANUJ PATHAK",
+   "emp": "687",
+   "department": "Management"
+  },
+  {
+   "emp": "486",
+   "role": "Worker",
+   "gender": "Male",
+   "status": "INACTIVE",
+   "name": "ASHOK POTALE",
+   "engagement": "Direct",
+   "department": "Production & Operations"
+  },
+  {
+   "role": "Department In-charge",
+   "engagement": "Direct",
+   "department": "Production & Operations",
+   "name": "DEEPAK NISHAD",
+   "gender": "Male",
+   "emp": "235",
+   "status": "ACTIVE"
+  },
+  {
+   "role": "Department In-charge",
+   "engagement": "Direct",
+   "department": "Stores",
+   "gender": "Male",
+   "status": "ACTIVE",
+   "emp": "579",
+   "name": "DILIP MAHALE"
+  },
+  {
+   "role": "Worker",
+   "department": "Production & Operations",
+   "engagement": "Direct",
+   "emp": "214",
+   "gender": "Female",
+   "name": "GEETA GOD",
+   "status": "ACTIVE"
+  },
+  {
+   "emp": "843",
+   "engagement": "Direct",
+   "department": "Production & Operations",
+   "role": "Worker",
+   "gender": "Female",
+   "status": "ACTIVE",
+   "name": "GEETA GUPTA"
+  },
+  {
+   "name": "HARISH SINGH",
+   "emp": "825",
+   "status": "ACTIVE",
+   "gender": "Male",
+   "engagement": "Direct",
+   "department": "Dispatch & Logistics",
+   "role": "Department In-charge"
+  },
+  {
+   "role": "Worker",
+   "emp": "762",
+   "gender": "Male",
+   "engagement": "Direct",
+   "department": "Production & Operations",
+   "status": "INACTIVE",
+   "name": "PRABHAT"
+  },
+  {
+   "status": "INACTIVE",
+   "name": "RAJANI PRASAD",
+   "gender": "Female",
+   "emp": "368",
+   "role": "Worker",
+   "department": "Production & Operations",
+   "engagement": "Direct"
+  },
+  {
+   "engagement": "Contract - NEEL",
+   "emp": "116",
+   "role": "Worker",
+   "department": "Production & Operations",
+   "name": "REEMA SHARMA",
+   "gender": "Female",
+   "status": "INACTIVE"
+  },
+  {
+   "name": "SHALU TIWARI",
+   "status": "INACTIVE",
+   "gender": "Female",
+   "role": "Worker",
+   "emp": "597",
+   "engagement": "Contract - NEEL",
+   "department": "Production & Operations"
+  },
+  {
+   "engagement": "Direct",
+   "gender": "Male",
+   "status": "ACTIVE",
+   "department": "Production & Operations",
+   "emp": "102",
+   "role": "Worker",
+   "name": "SHYAMLAL YADAV"
+  },
+  {
+   "emp": "444",
+   "role": "Worker",
+   "name": "SUMAN RAJBHAR",
+   "engagement": "Direct",
+   "department": "Production & Operations",
+   "gender": "Female",
+   "status": "ACTIVE"
+  },
+  {
+   "gender": "Male",
+   "status": "ACTIVE",
+   "role": "Worker",
+   "engagement": "Direct",
+   "department": "Production & Operations",
+   "name": "DAROGA NISHAD",
+   "emp": "131"
+  },
+  {
+   "emp": "133",
+   "name": "KANCHAN",
+   "engagement": "Contract - NEEL",
+   "department": "Production & Operations",
+   "role": "Worker",
+   "status": "INACTIVE",
+   "gender": "Female"
+  },
+  {
+   "name": "MANEETA CHAUHAN",
+   "status": "INACTIVE",
+   "engagement": "Contract - NEEL",
+   "gender": "Female",
+   "role": "Worker",
+   "department": "Production & Operations",
+   "emp": "134"
+  },
+  {
+   "status": "INACTIVE",
+   "name": "LALU NISHAD",
+   "gender": "Male",
+   "role": "Worker",
+   "department": "Production & Operations",
+   "emp": "178",
+   "engagement": "Direct"
+  },
+  {
+   "status": "INACTIVE",
+   "name": "AJAD RAJBHAR",
+   "gender": "Male",
+   "role": "Worker",
+   "engagement": "Contract - LAKSHMI",
+   "emp": "181",
+   "department": "Production & Operations"
+  },
+  {
+   "gender": "Male",
+   "role": "Worker",
+   "status": "ACTIVE",
+   "emp": "184",
+   "engagement": "Direct",
+   "name": "MANISH (V) KUMAR",
+   "department": "Production & Operations"
+  },
+  {
+   "emp": "197",
+   "role": "Worker",
+   "department": "Production & Operations",
+   "gender": "Male",
+   "engagement": "Direct",
+   "name": "MANISH PRASAD",
+   "status": "ACTIVE"
+  },
+  {
+   "role": "Department In-charge",
+   "department": "Office, HR & Purchase",
+   "engagement": "Office",
+   "gender": "Female",
+   "emp": "206",
+   "name": "KHUSHI PASWAN",
+   "status": "ACTIVE"
+  },
+  {
+   "role": "Worker",
+   "gender": "Male",
+   "status": "INACTIVE",
+   "emp": "205",
+   "engagement": "Contract - LAKSHMI",
+   "department": "Production & Operations",
+   "name": "MUNNA YADAV"
+  },
+  {
+   "engagement": "Direct",
+   "role": "Department In-charge",
+   "department": "Maintenance",
+   "gender": "Male",
+   "name": "SANTOSH MAURYA",
+   "emp": "557",
+   "status": "ACTIVE"
+  },
+  {
+   "emp": "355",
+   "status": "ACTIVE",
+   "engagement": "Contract - NEEL",
+   "gender": "Male",
+   "department": "Security",
+   "name": "RAJESH DUBEY",
+   "role": "Security Guard"
+  },
+  {
+   "gender": "Female",
+   "department": "Production & Operations",
+   "status": "ACTIVE",
+   "engagement": "Direct",
+   "emp": "189",
+   "role": "Worker",
+   "name": "SAMIKSHA YADAV"
+  },
+  {
+   "emp": "190",
+   "engagement": "Direct",
+   "department": "Production & Operations",
+   "name": "ANCHAL YADAV",
+   "status": "ACTIVE",
+   "gender": "Female",
+   "role": "Worker"
+  },
+  {
+   "name": "DHRUV RAJ NISHAD",
+   "engagement": "Direct",
+   "status": "INACTIVE",
+   "department": "Production & Operations",
+   "gender": "Male",
+   "emp": "217",
+   "role": "Worker"
+  },
+  {
+   "emp": "219",
+   "engagement": "Contract - NEEL",
+   "department": "Production & Operations",
+   "role": "Worker",
+   "gender": "Male",
+   "status": "INACTIVE",
+   "name": "VIKASH NISHAD"
+  },
+  {
+   "emp": "156",
+   "role": "Worker",
+   "gender": "Male",
+   "status": "INACTIVE",
+   "engagement": "Direct",
+   "name": "DILIP KUMAR KOTARYA",
+   "department": "Production & Operations"
+  },
+  {
+   "gender": "Female",
+   "status": "INACTIVE",
+   "role": "Worker",
+   "name": "SONALI JAISWAL",
+   "department": "Production & Operations",
+   "engagement": "Contract - NEEL",
+   "emp": "229"
+  },
+  {
+   "engagement": "Contract - LAKSHMI",
+   "department": "Production & Operations",
+   "name": "NEELU GAUTAM",
+   "status": "INACTIVE",
+   "role": "Worker",
+   "gender": "Female",
+   "emp": "230"
+  },
+  {
+   "role": "Worker",
+   "engagement": "Contract - LAKSHMI",
+   "department": "Production & Operations",
+   "gender": "Male",
+   "status": "ACTIVE",
+   "emp": "233",
+   "name": "SHIVAM GAUTAM"
+  },
+  {
+   "role": "Worker",
+   "gender": "Male",
+   "status": "ACTIVE",
+   "name": "PAWAN KUMAR",
+   "engagement": "Contract - NEEL",
+   "department": "Production & Operations",
+   "emp": "246"
+  },
+  {
+   "gender": "Female",
+   "role": "Worker",
+   "status": "ACTIVE",
+   "engagement": "Contract - LAKSHMI",
+   "emp": "167",
+   "name": "SUNITA CHAUDHARY",
+   "department": "Production & Operations"
+  },
+  {
+   "department": "Production & Operations",
+   "engagement": "Contract - NEEL",
+   "gender": "Male",
+   "emp": "254",
+   "role": "Worker",
+   "status": "INACTIVE",
+   "name": "VIKASH GAUTAM"
+  },
+  {
+   "role": "Worker",
+   "department": "Production & Operations",
+   "emp": "256",
+   "gender": "Male",
+   "engagement": "Direct",
+   "status": "INACTIVE",
+   "name": "SUSHIL KUMAR"
+  },
+  {
+   "emp": "262",
+   "name": "RAM NAND CHAUHAN",
+   "department": "Production & Operations",
+   "status": "ACTIVE",
+   "engagement": "Direct",
+   "gender": "Male",
+   "role": "Worker"
+  },
+  {
+   "department": "Production & Operations",
+   "engagement": "Contract - LAKSHMI",
+   "role": "Worker",
+   "emp": "263",
+   "name": "KIRAN GUPTA",
+   "gender": "Female",
+   "status": "INACTIVE"
+  },
+  {
+   "emp": "264",
+   "role": "Worker",
+   "gender": "Male",
+   "name": "SURAJ",
+   "status": "INACTIVE",
+   "department": "Production & Operations",
+   "engagement": "Direct"
+  },
+  {
+   "role": "Worker",
+   "gender": "Male",
+   "status": "INACTIVE",
+   "emp": "265",
+   "department": "Production & Operations",
+   "name": "VIVEK KUMAR",
+   "engagement": "Contract - NEEL"
+  },
+  {
+   "role": "Worker",
+   "engagement": "Direct",
+   "emp": "266",
+   "department": "Production & Operations",
+   "gender": "Male",
+   "status": "INACTIVE",
+   "name": "SUNIL KUMAR"
+  },
+  {
+   "gender": "Female",
+   "emp": "267",
+   "role": "Worker",
+   "status": "INACTIVE",
+   "name": "RANJANA KUMARI",
+   "engagement": "Contract - LAKSHMI",
+   "department": "Production & Operations"
+  },
+  {
+   "name": "ROSHANI",
+   "role": "Worker",
+   "status": "INACTIVE",
+   "emp": "268",
+   "gender": "Female",
+   "engagement": "Contract - LAKSHMI",
+   "department": "Production & Operations"
+  },
+  {
+   "name": "MUKESH RAJ",
+   "emp": "270",
+   "engagement": "Contract - NEEL",
+   "status": "INACTIVE",
+   "department": "Production & Operations",
+   "gender": "Male",
+   "role": "Worker"
+  },
+  {
+   "emp": "271",
+   "role": "Worker",
+   "gender": "Female",
+   "status": "INACTIVE",
+   "name": "SONAM JAISWAL",
+   "department": "Production & Operations",
+   "engagement": "Contract - NEEL"
+  },
+  {
+   "department": "Production & Operations",
+   "emp": "272",
+   "role": "Worker",
+   "engagement": "Contract - LAKSHMI",
+   "name": "REETA DUBEY",
+   "gender": "Female",
+   "status": "INACTIVE"
+  },
+  {
+   "status": "INACTIVE",
+   "name": "KUSUM YADAV",
+   "gender": "Female",
+   "emp": "273",
+   "engagement": "Contract - LAKSHMI",
+   "department": "Production & Operations",
+   "role": "Worker"
+  },
+  {
+   "name": "ASHISH NISHAD",
+   "engagement": "Direct",
+   "department": "Production & Operations",
+   "emp": "274",
+   "status": "ACTIVE",
+   "gender": "Male",
+   "role": "Worker"
+  },
+  {
+   "role": "Worker",
+   "emp": "275",
+   "gender": "Male",
+   "department": "Production & Operations",
+   "name": "FALGODHAR DUBEY",
+   "engagement": "Direct",
+   "status": "ACTIVE"
+  },
+  {
+   "status": "ACTIVE",
+   "name": "SAHANA KHATUN",
+   "gender": "Female",
+   "emp": "276",
+   "engagement": "Contract - LAKSHMI",
+   "department": "Production & Operations",
+   "role": "Worker"
+  },
+  {
+   "role": "Worker",
+   "emp": "277",
+   "department": "Production & Operations",
+   "engagement": "Contract - LAKSHMI",
+   "gender": "Female",
+   "name": "KHUSHBU",
+   "status": "INACTIVE"
+  },
+  {
+   "gender": "Female",
+   "status": "ACTIVE",
+   "role": "Department In-charge",
+   "engagement": "Office",
+   "department": "Quality Assurance & Admin",
+   "name": "SHIKHA KUMAR",
+   "emp": "278"
+  },
+  {
+   "name": "VISHAL PANDEY",
+   "role": "Worker",
+   "emp": "279",
+   "status": "ACTIVE",
+   "engagement": "Contract - LAKSHMI",
+   "gender": "Male",
+   "department": "Production & Operations"
+  },
+  {
+   "role": "Worker",
+   "engagement": "Contract - LAKSHMI",
+   "department": "Production & Operations",
+   "emp": "281",
+   "gender": "Female",
+   "name": "SAMBIDA KHATUN",
+   "status": "ACTIVE"
+  },
+  {
+   "name": "SAILESH MAURYA",
+   "emp": "282",
+   "department": "Production & Operations",
+   "status": "ACTIVE",
+   "engagement": "Contract - LAKSHMI",
+   "gender": "Male",
+   "role": "Worker"
+  },
+  {
+   "name": "SEEMA KUMARI",
+   "status": "INACTIVE",
+   "emp": "283",
+   "gender": "Female",
+   "engagement": "Contract - LAKSHMI",
+   "role": "Worker",
+   "department": "Production & Operations"
+  },
+  {
+   "engagement": "Contract - LAKSHMI",
+   "name": "RANJANA YADAV",
+   "department": "Production & Operations",
+   "emp": "285",
+   "role": "Worker",
+   "status": "ACTIVE",
+   "gender": "Female"
+  },
+  {
+   "emp": "004",
+   "gender": "Male",
+   "role": "Plant In-charge",
+   "status": "INACTIVE",
+   "engagement": "Office",
+   "department": "Management",
+   "name": "TARUN MISHRA"
+  },
+  {
+   "engagement": "Office",
+   "department": "Management",
+   "name": "BALKRISHNA MISHRA",
+   "status": "INACTIVE",
+   "gender": "Male",
+   "role": "Proprietor",
+   "emp": "007"
+  },
+  {
+   "role": "ISO Consultant",
+   "engagement": "External",
+   "department": "External",
+   "gender": "Male",
+   "status": "INACTIVE",
+   "name": "ANIL SWAMI",
+   "emp": "903"
+  }
+ ]
+}

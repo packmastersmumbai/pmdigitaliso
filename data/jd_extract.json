@@ -1,0 +1,502 @@
+{
+ "PM/FRM/HR-JD-01": {
+  "code": "PM/FRM/HR-JD-01",
+  "title": "Job Description — Proprietor",
+  "dept": "Management",
+  "purpose": "Provide strategic direction, approve the IMS and ZED policy, allocate resources and review organisational performance.",
+  "reports_to": "Self",
+  "appointment": "Zone Leader — Z-11 Owner's Cabin. Approving Authority for all QMS documents.",
+  "Key responsibilities": [
+   "Approve IMS / ZED policy and organisational objectives.",
+   "Chair the Management Review Meeting at the planned frequency.",
+   "Allocate manpower, machine, material and financial resources.",
+   "Approve new suppliers and disqualify poor performers.",
+   "Review customer satisfaction and major CAPA.",
+   "Ensure legal and statutory compliance of the establishment."
+  ],
+  "Authority": [
+   "Final approval of all QMS/EHS documents.",
+   "Capital expenditure and recruitment approval.",
+   "Stop-work authority on any safety or quality risk."
+  ],
+  "Competence required": [
+   "Business and manufacturing experience.",
+   "Working knowledge of ISO 9001 / 14001 / 45001 and ZED requirements."
+  ],
+  "Performance indicators": [
+   [
+    "MRM held as planned",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Objectives met vs plan",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "ZED certification progress",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-02": {
+  "code": "PM/FRM/HR-JD-02",
+  "title": "Job Description — Plant In-charge",
+  "dept": "Management",
+  "purpose": "Coordinate the integrated management system, internal audits, ZED activities and overall plant compliance.",
+  "reports_to": "Proprietor",
+  "appointment": "Zone Leader — Z-01, Z-03, Z-12, Z-20. Internal Auditor; Safety Officer.",
+  "Key responsibilities": [
+   "Maintain and revise IMS documentation — manual, procedures, formats, records.",
+   "Plan and conduct internal audits across all departments; track NC closure.",
+   "Convene the MRM — agenda, attendance, minutes, action tracking.",
+   "Monitor all KPIs in PM/FRM/MR-14 against target and escalate shortfalls.",
+   "Maintain the risk register and HIRA; review at defined frequency.",
+   "Coordinate ZED Gold certification evidence and submissions.",
+   "Act as Safety Officer, Compliance Officer and EHS Manager."
+  ],
+  "Authority": [
+   "Raise and close non-conformances.",
+   "Issue and withdraw controlled documents.",
+   "Stop-work authority on safety non-compliance."
+  ],
+  "Competence required": [
+   "Knowledge of ISO 9001 / 14001 / 45001, ZED parameters and internal auditing.",
+   "Legal register and statutory compliance awareness."
+  ],
+  "Performance indicators": [
+   [
+    "Internal audits completed vs plan",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "NC closure within due date",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "KPI review issued by 7th of each month",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-03": {
+  "code": "PM/FRM/HR-JD-03",
+  "title": "Job Description — Manager / Management Representative",
+  "dept": "Management",
+  "purpose": "Run production and operations to plan, and act as Management Representative for the quality management system.",
+  "reports_to": "Plant In-charge",
+  "appointment": "Zone Leader — 15 zones (Z-02, 04, 05, 06, 08, 09, 15, 17, 19, 22, 23, 24, 25, 26, 28).",
+  "Key responsibilities": [
+   "Plan and control production against the customer schedule.",
+   "Ensure SOP and control-plan adherence at every stage.",
+   "Drive reduction of in-process rejection and rework PPM.",
+   "Ensure operators are trained and the skill matrix is current.",
+   "Represent the QMS to top management and to external auditors.",
+   "Lead the 5S programme across the zones under his control.",
+   "Act as Chief Fire Warden."
+  ],
+  "Authority": [
+   "Release or hold production output.",
+   "Authorise rework and disposition of non-conforming product.",
+   "Deploy manpower across lines and shifts."
+  ],
+  "Competence required": [
+   "Packaging and filling process knowledge.",
+   "QMS awareness, problem solving, people management."
+  ],
+  "Performance indicators": [
+   [
+    "Output vs plan",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Rejection / rework PPM",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "5S zone scores ≥ 80",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-04": {
+  "code": "PM/FRM/HR-JD-04",
+  "title": "Job Description — Department In-charge — Production & Operations",
+  "dept": "Production & Operations",
+  "purpose": "Supervise shop-floor execution, output, quality and discipline on the line.",
+  "reports_to": "Manager / Management Representative",
+  "appointment": "Zone Supervisor — Z-05, Z-06, Z-07, Z-16, Z-17, Z-18, Z-21, Z-22, Z-27, Z-28.",
+  "Key responsibilities": [
+   "Achieve daily production output against plan, shift-wise.",
+   "Record in-process rejection and rework and act on trends.",
+   "Carry out line clearance before every batch changeover.",
+   "Conduct shift handover and manpower deployment.",
+   "Enforce PPE use and safe working practice on the floor.",
+   "Report any breakdown or abnormality to Maintenance immediately.",
+   "Raise at least one Kaizen per month."
+  ],
+  "Authority": [
+   "Halt the line on a quality or safety abnormality.",
+   "Reallocate operators between stations within the shift."
+  ],
+  "Competence required": [
+   "Machine and process knowledge, 5S, basic quality tools.",
+   "Ability to read the production plan and record data accurately."
+  ],
+  "Performance indicators": [
+   [
+    "Output vs plan",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "In-process rejection PPM",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Line clearance compliance",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-05": {
+  "code": "PM/FRM/HR-JD-05",
+  "title": "Job Description — Department In-charge — Stores",
+  "dept": "Stores",
+  "purpose": "Control receipt, storage, preservation and issue of all materials.",
+  "reports_to": "Plant In-charge",
+  "appointment": "Zone Supervisor — Z-02, Z-09, Z-15, Z-19, Z-25, Z-26.",
+  "Key responsibilities": [
+   "Maintain min-max levels and raise indents in time.",
+   "Enforce FIFO; prevent issue of expired or shelf-life-exceeded material.",
+   "Conduct monthly stock audit — physical against system.",
+   "Ensure GRN and incoming documentation is complete for every receipt.",
+   "Display MSDS for all chemicals stored.",
+   "Compile supplier rating monthly and maintain the Approved Supplier List.",
+   "Raise CAPA to suppliers on quality failure."
+  ],
+  "Authority": [
+   "Reject incoming material not meeting specification.",
+   "Hold and quarantine suspect stock."
+  ],
+  "Competence required": [
+   "Stores and inventory practice, FIFO, material identification.",
+   "Chemical handling and MSDS awareness."
+  ],
+  "Performance indicators": [
+   [
+    "Stock accuracy %",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Supplier rating submitted by 7th",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Nil expired stock issued",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-06": {
+  "code": "PM/FRM/HR-JD-06",
+  "title": "Job Description — Department In-charge — Dispatch & Logistics",
+  "dept": "Dispatch & Logistics",
+  "purpose": "Deliver finished goods on the confirmed date with complete and accurate documentation.",
+  "reports_to": "Plant In-charge",
+  "appointment": "Zone Supervisor — Z-03, Z-04, Z-08, Z-23, Z-24. KRAs transferred from the former Head — Dispatch & Logistics.",
+  "Key responsibilities": [
+   "Achieve on-time dispatch for every confirmed delivery date.",
+   "Compile schedule-versus-dispatch data customer-wise with reasons for shortfall.",
+   "Raise CAPA for every delayed dispatch.",
+   "Maintain FIFO in the finished goods and dispatch area.",
+   "Issue the daily shortage report against the customer schedule.",
+   "Verify DC, invoice, packing list and e-way bill on every dispatch.",
+   "Inspect the vehicle for cleanliness and fitness before loading.",
+   "Track logistics cost against budget."
+  ],
+  "Authority": [
+   "Hold a dispatch on incomplete documentation or an unfit vehicle.",
+   "Approve transporter selection within the approved panel."
+  ],
+  "Competence required": [
+   "Dispatch documentation, e-way bill and transport practice.",
+   "FIFO and finished goods handling."
+  ],
+  "Performance indicators": [
+   [
+    "On-time dispatch %",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Documentation error count",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Logistics cost vs budget",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-07": {
+  "code": "PM/FRM/HR-JD-07",
+  "title": "Job Description — Department In-charge — Maintenance",
+  "dept": "Maintenance",
+  "purpose": "Keep plant and utilities available, calibrated and energy-efficient.",
+  "reports_to": "Plant In-charge",
+  "appointment": "Zone Leader — Z-07 Pump Room, Z-21 Maintenance Area; Zone Supervisor — Z-20.",
+  "Key responsibilities": [
+   "Execute the preventive maintenance schedule and record adherence.",
+   "Keep machine breakdown hours within target; track MTTR and MTBF.",
+   "Raise CAPA for machines under frequent breakdown.",
+   "Maintain the calibration plan; ensure stickers and certificates are current.",
+   "Record daily electricity readings and monitor power factor.",
+   "Control maintenance spares and repair cost.",
+   "Raise at least one Kaizen per month on breakdown or energy loss."
+  ],
+  "Authority": [
+   "Take a machine out of service for safety or condition reasons.",
+   "Authorise emergency spare purchase within limit."
+  ],
+  "Competence required": [
+   "Mechanical and electrical maintenance of packaging / filling machinery.",
+   "Calibration practice; electrical safety."
+  ],
+  "Performance indicators": [
+   [
+    "PM adherence %",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Breakdown hours ≤ target",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Calibration on schedule %",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-08": {
+  "code": "PM/FRM/HR-JD-08",
+  "title": "Job Description — Department In-charge — Office, HR & Purchase",
+  "dept": "Office, HR & Purchase",
+  "purpose": "Run HR, training, statutory compliance and purchase support, and control QMS documents.",
+  "reports_to": "Plant In-charge",
+  "appointment": "Zone Leader — Z-14, Z-16, Z-18, Z-27; Zone Supervisor — Z-10, Z-12, Z-13. Document Controller.",
+  "Key responsibilities": [
+   "Conduct induction for every new joiner within the first week.",
+   "Prepare and execute the annual training plan; evaluate effectiveness.",
+   "Maintain the skill matrix and update it at the defined frequency.",
+   "Maintain job descriptions and the organisation chart; revise on any change.",
+   "Handle leave, payroll coordination and statutory compliance (PF / ESIC).",
+   "Raise and follow up purchase orders against approved indents.",
+   "Act as Document Controller for the QMS.",
+   "Coordinate and document CSR activity."
+  ],
+  "Authority": [
+   "Issue and withdraw controlled copies of QMS documents.",
+   "Release purchase orders within approved limit."
+  ],
+  "Competence required": [
+   "HR administration, statutory compliance, document control.",
+   "Purchase and vendor coordination."
+  ],
+  "Performance indicators": [
+   [
+    "Training plan vs actual %",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Induction completed for every joiner",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Document revision turnaround",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-09": {
+  "code": "PM/FRM/HR-JD-09",
+  "title": "Job Description — Department In-charge — Quality Assurance & Admin",
+  "dept": "Quality Assurance & Admin",
+  "purpose": "Assure incoming, in-process and outgoing product quality and maintain quality records.",
+  "reports_to": "Plant In-charge",
+  "appointment": "Zone Leader — Z-10, Z-13; Zone Supervisor — Z-11, Z-14.",
+  "Key responsibilities": [
+   "Complete incoming inspection (IQC) records lot-wise.",
+   "Complete outgoing inspection (OQC) records batch-wise before dispatch.",
+   "Track gauge and instrument calibration adherence.",
+   "Register customer complaints and drive CAPA to closure.",
+   "Control quality documents and retain records per the retention schedule.",
+   "Arrange in-house and third-party product test reports.",
+   "Support internal quality audits and track NC closure.",
+   "Control visitor entry and gate passes."
+  ],
+  "Authority": [
+   "Reject or hold non-conforming material or product.",
+   "Stop dispatch where OQC records are incomplete."
+  ],
+  "Competence required": [
+   "Inspection and testing methods, measuring instruments.",
+   "Documentation and record control."
+  ],
+  "Performance indicators": [
+   [
+    "IQC / OQC records complete %",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Complaint CAPA within 5 days",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Calibration adherence %",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-10": {
+  "code": "PM/FRM/HR-JD-10",
+  "title": "Job Description — Machine Operator",
+  "dept": "Production & Operations",
+  "purpose": "Operate an assigned machine safely and to specification, and record output accurately.",
+  "reports_to": "Department In-charge — Production & Operations",
+  "appointment": "Assigned to a machine by the Department In-charge; recorded in the skill matrix.",
+  "Key responsibilities": [
+   "Operate the assigned filling / packing / printing machine per the SOP.",
+   "Carry out start-up checks and line clearance before every batch.",
+   "Check weight, seal, coding and labelling at the defined frequency.",
+   "Segregate rejection and rework at source; never mix with good stock.",
+   "Record production, rejection and downtime on the shift record.",
+   "Stop the machine and inform the In-charge on any abnormality.",
+   "Keep the workstation to 5S standard and wear the specified PPE."
+  ],
+  "Authority": [
+   "Stop the machine on a quality or safety abnormality."
+  ],
+  "Competence required": [
+   "Trained on the specific machine and its SOP; able to record data.",
+   "5S and PPE awareness; basic quality checks."
+  ],
+  "Performance indicators": [
+   [
+    "Output vs plan",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Rejection at own station",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Nil unrecorded downtime",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-11": {
+  "code": "PM/FRM/HR-JD-11",
+  "title": "Job Description — Worker",
+  "dept": "Production & Operations",
+  "purpose": "Carry out assigned packing, filling and handling work to standard.",
+  "reports_to": "Department In-charge — Production & Operations",
+  "appointment": "Designation confirmed by the department head; recorded in the employee master.",
+  "Key responsibilities": [
+   "Perform the assigned packing / filling / labelling operation per the SOP.",
+   "Handle material without damage or contamination.",
+   "Segregate rejection and rework as instructed.",
+   "Follow FIFO in staging and buffer areas.",
+   "Keep the work area clean and to 5S standard; wear the specified PPE.",
+   "Report any unsafe condition or abnormality to the In-charge."
+  ],
+  "Authority": [
+   "Stop work and report any unsafe condition."
+  ],
+  "Competence required": [
+   "On-the-job trained for the assigned operation.",
+   "5S, hygiene and PPE awareness."
+  ],
+  "Performance indicators": [
+   [
+    "Output vs plan",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Adherence to work instruction",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Nil safety incident",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-12": {
+  "code": "PM/FRM/HR-JD-12",
+  "title": "Job Description — Helper",
+  "dept": "Production & Operations",
+  "purpose": "Support the line with material movement, cleaning and handling.",
+  "reports_to": "Department In-charge — Production & Operations",
+  "appointment": "Designation confirmed by the department head; recorded in the employee master.",
+  "Key responsibilities": [
+   "Move raw material, packing material and finished goods as instructed.",
+   "Support machine operators with feeding and stacking.",
+   "Carry out cleaning of the area and equipment as scheduled.",
+   "Assist in loading, unloading and scrap removal.",
+   "Follow safe manual handling practice and wear the specified PPE."
+  ],
+  "Authority": [
+   "Stop work and report any unsafe condition."
+  ],
+  "Competence required": [
+   "Safe manual handling; awareness of the material being handled.",
+   "5S and hygiene awareness."
+  ],
+  "Performance indicators": [
+   [
+    "Area cleanliness score",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Material moved without damage",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Nil safety incident",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ },
+ "PM/FRM/HR-JD-13": {
+  "code": "PM/FRM/HR-JD-13",
+  "title": "Job Description — Security Guard",
+  "dept": "Security",
+  "purpose": "Control entry and exit of people, vehicles and material at the gate.",
+  "reports_to": "Plant In-charge",
+  "appointment": "Zone Supervisor — Z-01 Security + Meter Room. Engaged through a labour contractor.",
+  "Key responsibilities": [
+   "Record every visitor, vehicle and contractor entry and exit.",
+   "Verify the gate pass for all outgoing material.",
+   "Check incoming vehicles before allowing entry to the loading area.",
+   "Maintain the keys and the gate register; hand over at shift change.",
+   "Raise alarm and follow the emergency plan on any incident.",
+   "Keep the gate and meter room area to 5S standard."
+  ],
+  "Authority": [
+   "Refuse entry where authorisation or documentation is absent."
+  ],
+  "Competence required": [
+   "Gate control, visitor and material movement recording.",
+   "Emergency response and fire alarm awareness."
+  ],
+  "Performance indicators": [
+   [
+    "Gate register completeness",
+    "PM/FRM/MR-14 KPI register"
+   ],
+   [
+    "Nil unauthorised material movement",
+    "PM/FRM/MR-14 KPI register"
+   ]
+  ]
+ }
+}

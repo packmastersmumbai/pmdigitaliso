@@ -1,0 +1,369 @@
+{
+ "rows": [
+  {
+   "type": "TRAIN",
+   "validity_months": 12,
+   "hours": 3,
+   "title": "SOP, Product Safety",
+   "topic": "TRN-01",
+   "method": "Classroom",
+   "active": true
+  },
+  {
+   "topic": "TRN-02",
+   "validity_months": 12,
+   "active": true,
+   "method": "Classroom + shop floor",
+   "title": "Quality Parameters, Do's & Don'ts",
+   "hours": 2,
+   "type": "TRAIN"
+  },
+  {
+   "title": "Importance of Housekeeping, Waste Management",
+   "validity_months": 12,
+   "hours": 1.5,
+   "type": "TRAIN",
+   "active": true,
+   "method": "Classroom + shop floor",
+   "topic": "TRN-03"
+  },
+  {
+   "type": "TRAIN",
+   "hours": 1.5,
+   "title": "SSOP, Best Practices, Cleanliness",
+   "topic": "TRN-04",
+   "method": "Classroom + shop floor",
+   "active": true,
+   "validity_months": 12
+  },
+  {
+   "type": "TRAIN",
+   "topic": "TRN-05",
+   "validity_months": 12,
+   "method": "Classroom + demonstration",
+   "active": true,
+   "hours": 1,
+   "title": "Electrical Safety"
+  },
+  {
+   "title": "Incident Reporting",
+   "hours": 0.5,
+   "validity_months": 12,
+   "type": "TRAIN",
+   "active": true,
+   "method": "Classroom",
+   "topic": "TRN-06"
+  },
+  {
+   "title": "Emergency Response, Fire Extinguisher, Hose",
+   "active": true,
+   "hours": 1,
+   "validity_months": 12,
+   "method": "Classroom + drill",
+   "topic": "TRN-07",
+   "type": "TRAIN"
+  },
+  {
+   "type": "TRAIN",
+   "hours": 1,
+   "validity_months": 12,
+   "title": "General Safety",
+   "topic": "TRN-08",
+   "method": "Classroom",
+   "active": true
+  },
+  {
+   "active": true,
+   "method": "Classroom",
+   "topic": "TRN-09",
+   "title": "Suspicious Behaviour & Transaction",
+   "validity_months": 12,
+   "hours": 1,
+   "type": "TRAIN"
+  },
+  {
+   "topic": "TRN-10",
+   "validity_months": 12,
+   "method": "Classroom + demonstration",
+   "active": true,
+   "type": "TRAIN",
+   "hours": 1,
+   "title": "Safety & PPE"
+  },
+  {
+   "title": "Mock Drill — First Aid",
+   "hours": 0.5,
+   "validity_months": 12,
+   "topic": "DRL-01",
+   "active": true,
+   "type": "DRILL",
+   "method": "Drill"
+  },
+  {
+   "type": "DRILL",
+   "hours": 0.5,
+   "validity_months": 12,
+   "method": "Drill",
+   "title": "Mock Drill — Suspicious Transaction",
+   "active": true,
+   "topic": "DRL-02"
+  },
+  {
+   "topic": "DRL-03",
+   "validity_months": 12,
+   "active": true,
+   "title": "Mock Drill — Fire Safety",
+   "method": "Drill",
+   "hours": 0.5,
+   "type": "DRILL"
+  },
+  {
+   "topic": "DRL-04",
+   "type": "DRILL",
+   "validity_months": 12,
+   "hours": 0.5,
+   "method": "Drill",
+   "active": true,
+   "title": "Mock Drill — Spill Control"
+  },
+  {
+   "hours": 3,
+   "type": "TRAIN",
+   "method": "Classroom",
+   "title": "Product Stewardship",
+   "active": true,
+   "topic": "TRN-11",
+   "validity_months": 12
+  },
+  {
+   "topic": "DRL-05",
+   "validity_months": 12,
+   "active": true,
+   "title": "Mock Drill — Earthquake",
+   "method": "Drill",
+   "type": "DRILL",
+   "hours": 0.5
+  },
+  {
+   "validity_months": 12,
+   "method": "Video",
+   "topic": "VID-01",
+   "active": true,
+   "type": "VIDEO",
+   "hours": 0.25,
+   "title": "Ribbon Printer Roll Change"
+  },
+  {
+   "topic": "VID-02",
+   "type": "VIDEO",
+   "hours": 0.25,
+   "method": "Video",
+   "active": true,
+   "validity_months": 12,
+   "title": "Henkel Filling Line Nozzle"
+  },
+  {
+   "topic": "VID-03",
+   "type": "VIDEO",
+   "validity_months": 12,
+   "method": "Video",
+   "active": true,
+   "hours": 0.25,
+   "title": "Winder Rewinder Roll Change"
+  },
+  {
+   "title": "Sachet Packing — Pack of 5",
+   "validity_months": 12,
+   "hours": 0.25,
+   "type": "VIDEO",
+   "active": true,
+   "topic": "VID-04",
+   "method": "Video"
+  },
+  {
+   "type": "VIDEO",
+   "hours": 0.25,
+   "method": "Video",
+   "title": "QR Labelling",
+   "validity_months": 12,
+   "active": true,
+   "topic": "VID-05"
+  },
+  {
+   "active": true,
+   "method": "Video",
+   "validity_months": 12,
+   "topic": "VID-06",
+   "title": "Weight and QR Stamp",
+   "type": "VIDEO",
+   "hours": 0.25
+  },
+  {
+   "active": true,
+   "method": "Video",
+   "topic": "VID-07",
+   "title": "Henkel Label Printing",
+   "type": "VIDEO",
+   "validity_months": 12,
+   "hours": 0.25
+  },
+  {
+   "validity_months": 12,
+   "topic": "VID-08",
+   "type": "VIDEO",
+   "title": "Leakage Testing",
+   "active": true,
+   "method": "Video",
+   "hours": 0.25
+  },
+  {
+   "method": "Video",
+   "topic": "VID-09",
+   "active": true,
+   "validity_months": 12,
+   "type": "VIDEO",
+   "hours": 0.25,
+   "title": "Wrap-around Labelling Setting"
+  },
+  {
+   "title": "Bottle Filling and Capping",
+   "hours": 0.25,
+   "validity_months": 12,
+   "topic": "VID-10",
+   "active": true,
+   "method": "Video",
+   "type": "VIDEO"
+  },
+  {
+   "active": true,
+   "method": "Video",
+   "topic": "VID-11",
+   "validity_months": 12,
+   "title": "Fire Training",
+   "hours": 0.5,
+   "type": "VIDEO"
+  },
+  {
+   "method": "Video",
+   "topic": "VID-12",
+   "active": true,
+   "type": "VIDEO",
+   "hours": 0.5,
+   "validity_months": 12,
+   "title": "Superprocure"
+  },
+  {
+   "title": "Daily Rejection & Rework, COPQ",
+   "validity_months": 24,
+   "hours": 2,
+   "type": "COURSE",
+   "active": true,
+   "method": "Classroom",
+   "topic": "QAC-01"
+  },
+  {
+   "title": "Skill Matrix",
+   "active": true,
+   "hours": 1,
+   "method": "Classroom",
+   "topic": "QAC-02",
+   "type": "COURSE",
+   "validity_months": 24
+  },
+  {
+   "topic": "QAC-03",
+   "type": "COURSE",
+   "method": "Classroom",
+   "validity_months": 24,
+   "hours": 1,
+   "active": true,
+   "title": "Office Filing & Storage System"
+  },
+  {
+   "method": "Classroom",
+   "type": "COURSE",
+   "active": true,
+   "topic": "QAC-04",
+   "hours": 1.5,
+   "title": "4M Change Management",
+   "validity_months": 24
+  },
+  {
+   "method": "Classroom",
+   "topic": "QAC-06",
+   "type": "COURSE",
+   "active": true,
+   "validity_months": 24,
+   "hours": 1.5,
+   "title": "Cause & Effect (Fishbone) Diagram"
+  },
+  {
+   "validity_months": 24,
+   "topic": "QAC-07",
+   "active": true,
+   "method": "Classroom",
+   "title": "Quality & NPD Department",
+   "type": "COURSE",
+   "hours": 1
+  },
+  {
+   "hours": 1.5,
+   "method": "Classroom",
+   "type": "COURSE",
+   "active": true,
+   "title": "PPM, DPU and DPMO",
+   "topic": "QAC-08",
+   "validity_months": 24
+  },
+  {
+   "topic": "QAC-09",
+   "active": true,
+   "title": "5S Champion Course",
+   "method": "Classroom",
+   "hours": 3,
+   "type": "COURSE",
+   "validity_months": 24
+  },
+  {
+   "type": "COURSE",
+   "hours": 1.5,
+   "title": "SOP, PCS, OPS and PCQT Formats",
+   "method": "Classroom",
+   "active": true,
+   "validity_months": 24,
+   "topic": "QAC-10"
+  },
+  {
+   "title": "Poison Test",
+   "active": true,
+   "hours": 1.5,
+   "method": "Classroom",
+   "validity_months": 24,
+   "type": "COURSE",
+   "topic": "QAC-11"
+  },
+  {
+   "type": "COURSE",
+   "validity_months": 24,
+   "method": "Classroom",
+   "topic": "QAC-12",
+   "active": true,
+   "hours": 1,
+   "title": "Pareto Analysis"
+  },
+  {
+   "title": "Worker Induction",
+   "validity_months": 12,
+   "hours": 0.5,
+   "type": "INDUCT",
+   "active": true,
+   "topic": "TRN-IND",
+   "method": "Phone or kiosk, spoken"
+  }
+ ],
+ "dataset": "training_topics",
+ "period": "",
+ "source": "attendance/TrainingTopics",
+ "fetched_at": "2026-09-10T06:39:56.052Z",
+ "ran_as": "packmasters.mumbai@gmail.com"
+}

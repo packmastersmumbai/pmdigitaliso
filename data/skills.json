@@ -1,0 +1,288 @@
+{
+ "period": "",
+ "dataset": "skills",
+ "rows": [
+  {
+   "name": "Filling",
+   "active": true,
+   "topics": [
+    "TRN-01",
+    "TRN-04",
+    "VID-02",
+    "VID-10"
+   ],
+   "group": "Packaging",
+   "skill": "SKL-01",
+   "name_hi": "भराई",
+   "min_required": "L3"
+  },
+  {
+   "active": true,
+   "topics": [
+    "TRN-01",
+    "TRN-02",
+    "VID-04"
+   ],
+   "skill": "SKL-02",
+   "min_required": "L3",
+   "group": "Packaging",
+   "name_hi": "पैकिंग",
+   "name": "Packing"
+  },
+  {
+   "name_hi": "अंशांकन",
+   "group": "Packaging",
+   "active": true,
+   "topics": [
+    "TRN-01",
+    "TRN-04",
+    "VID-06"
+   ],
+   "name": "Calibration",
+   "min_required": "L2",
+   "skill": "SKL-03"
+  },
+  {
+   "name_hi": "कैपिंग",
+   "min_required": "L3",
+   "group": "Packaging",
+   "topics": [
+    "TRN-02",
+    "VID-10"
+   ],
+   "active": true,
+   "name": "Capping",
+   "skill": "SKL-04"
+  },
+  {
+   "group": "Packaging",
+   "name_hi": "सीलिंग",
+   "name": "Sealing",
+   "min_required": "L3",
+   "skill": "SKL-05",
+   "active": true,
+   "topics": [
+    "TRN-02",
+    "VID-08"
+   ]
+  },
+  {
+   "group": "Labelling",
+   "min_required": "L3",
+   "name": "Coding & Numbering",
+   "name_hi": "कोडिंग एवं नंबरिंग",
+   "active": true,
+   "topics": [
+    "TRN-02",
+    "TRN-04",
+    "VID-01",
+    "VID-05",
+    "VID-06",
+    "VID-07"
+   ],
+   "skill": "SKL-06"
+  },
+  {
+   "active": true,
+   "topics": [
+    "TRN-02",
+    "VID-08",
+    "QAC-11"
+   ],
+   "skill": "SKL-07",
+   "min_required": "L3",
+   "name": "Visual Inspection",
+   "name_hi": "दृश्य निरीक्षण",
+   "group": "Labelling"
+  },
+  {
+   "name_hi": "अस्वीकृति एवं पुनःकार्य",
+   "name": "Rejection & Rework",
+   "topics": [
+    "TRN-04",
+    "QAC-01"
+   ],
+   "active": true,
+   "group": "Labelling",
+   "skill": "SKL-08",
+   "min_required": "L2"
+  },
+  {
+   "name_hi": "सामग्री सत्यापन",
+   "min_required": "L2",
+   "topics": [
+    "TRN-04",
+    "VID-05",
+    "VID-09"
+   ],
+   "group": "Labelling",
+   "active": true,
+   "name": "Material Verification",
+   "skill": "SKL-09"
+  },
+  {
+   "min_required": "L2",
+   "skill": "SKL-10",
+   "name": "Line Clearance & CLIT",
+   "group": "Packaging",
+   "topics": [
+    "TRN-04",
+    "VID-03",
+    "QAC-04"
+   ],
+   "active": true,
+   "name_hi": "लाइन क्लीयरेंस एवं CLIT"
+  },
+  {
+   "group": "Site-wide",
+   "name": "Emergency Response",
+   "min_required": "L2",
+   "skill": "SKL-11",
+   "active": true,
+   "topics": [
+    "TRN-07",
+    "DRL-01",
+    "DRL-02",
+    "DRL-03",
+    "DRL-04",
+    "DRL-05",
+    "VID-11"
+   ],
+   "name_hi": "आपातकालीन प्रतिक्रिया"
+  },
+  {
+   "group": "Site-wide",
+   "min_required": "L2",
+   "topics": [
+    "TRN-IND",
+    "TRN-05",
+    "TRN-08",
+    "TRN-09",
+    "TRN-10",
+    "DRL-02"
+   ],
+   "active": true,
+   "name": "Safety & Security",
+   "name_hi": "सुरक्षा एवं संरक्षा",
+   "skill": "SKL-12"
+  },
+  {
+   "topics": [
+    "TRN-03",
+    "TRN-04",
+    "QAC-09",
+    "QAC-03"
+   ],
+   "active": true,
+   "skill": "SKL-13",
+   "min_required": "L2",
+   "name": "Waste Handling",
+   "group": "Site-wide",
+   "name_hi": "अपशिष्ट प्रबंधन"
+  },
+  {
+   "name_hi": "रिपोर्टिंग एवं उत्तरदायित्व",
+   "group": "Site-wide",
+   "name": "Reporting & Responsibility",
+   "skill": "SKL-14",
+   "min_required": "L2",
+   "topics": [
+    "TRN-01",
+    "TRN-06",
+    "TRN-11",
+    "QAC-01",
+    "QAC-02",
+    "QAC-06",
+    "QAC-07",
+    "QAC-08",
+    "QAC-10",
+    "QAC-12",
+    "VID-12"
+   ],
+   "active": true
+  },
+  {
+   "skill": "SKL-15",
+   "min_required": "L2",
+   "name": "Incident Reporting",
+   "name_hi": "घटना रिपोर्टिंग",
+   "active": false,
+   "topics": [
+    "TRN-06"
+   ],
+   "group": "Common"
+  },
+  {
+   "min_required": "L2",
+   "group": "Security",
+   "name": "Security Awareness",
+   "skill": "SKL-16",
+   "name_hi": "सुरक्षा जागरूकता",
+   "active": false,
+   "topics": [
+    "TRN-09",
+    "DRL-02"
+   ]
+  },
+  {
+   "group": "Common",
+   "name_hi": "प्राथमिक चिकित्सा",
+   "name": "First Aid Response",
+   "skill": "SKL-17",
+   "min_required": "L1",
+   "topics": [
+    "DRL-01"
+   ],
+   "active": false
+  },
+  {
+   "topics": [
+    "DRL-04"
+   ],
+   "active": false,
+   "name_hi": "रिसाव नियंत्रण",
+   "skill": "SKL-18",
+   "group": "Engineering",
+   "min_required": "L2",
+   "name": "Spill Control"
+  },
+  {
+   "min_required": "L3",
+   "group": "Engineering",
+   "name": "Electrical Safety",
+   "name_hi": "विद्युत सुरक्षा",
+   "skill": "SKL-19",
+   "active": false,
+   "topics": [
+    "TRN-05"
+   ]
+  },
+  {
+   "name": "Product Stewardship",
+   "skill": "SKL-20",
+   "active": false,
+   "topics": [
+    "TRN-11"
+   ],
+   "group": "Common",
+   "min_required": "L2",
+   "name_hi": "उत्पाद प्रबंधन"
+  },
+  {
+   "name_hi": "आपातकालीन निकासी",
+   "group": "Common",
+   "active": false,
+   "topics": [
+    "DRL-05",
+    "DRL-03",
+    "TRN-07"
+   ],
+   "name": "Emergency Evacuation",
+   "skill": "SKL-21",
+   "min_required": "L2"
+  }
+ ],
+ "source": "attendance/Skills",
+ "ran_as": "packmasters.mumbai@gmail.com",
+ "fetched_at": "2026-09-10T06:39:47.893Z"
+}

@@ -1,0 +1,82 @@
+{
+  "published_at": "2026-09-12T15:09:14+00:00",
+  "count": 2,
+  "stale": 0,
+  "unresolved": 0,
+  "apps": [
+    {
+      "unresolved": [],
+      "last_seen": "2026-09-12T06:38:52.288Z",
+      "registry_published_at": "2026-09-10T18:37:54.438789+00:00",
+      "library_version": 2,
+      "documents": 5,
+      "app": "taskflow",
+      "codes": [
+        "PM/FRM/DWM-01",
+        "PM/FRM/DWM-02",
+        "PM/FRM/MR-14",
+        "PM/FRM/MR-27",
+        "PM/REG/DWM-01"
+      ],
+      "source": "the published site",
+      "degraded": false,
+      "stale": false,
+      "hours_since_seen": 8.5
+    },
+    {
+      "library_version": 2,
+      "unresolved": [],
+      "documents": 6,
+      "app": "5s",
+      "last_seen": "2026-09-12T06:38:41.815Z",
+      "degraded": false,
+      "registry_published_at": "2026-09-10T18:37:54.438789+00:00",
+      "source": "the published site",
+      "codes": [
+        "PM/FRM/5S-01",
+        "PM/FRM/5S-02",
+        "PM/FRM/5S-03",
+        "PM/FRM/5S-04",
+        "PM/FRM/5S-05",
+        "PM/REG/5S-01"
+      ],
+      "stale": false,
+      "hours_since_seen": 8.5
+    }
+  ],
+  "readers": {
+    "PM/FRM/5S-01": [
+      "5s"
+    ],
+    "PM/FRM/5S-02": [
+      "5s"
+    ],
+    "PM/FRM/5S-03": [
+      "5s"
+    ],
+    "PM/FRM/5S-04": [
+      "5s"
+    ],
+    "PM/FRM/5S-05": [
+      "5s"
+    ],
+    "PM/FRM/DWM-01": [
+      "taskflow"
+    ],
+    "PM/FRM/DWM-02": [
+      "taskflow"
+    ],
+    "PM/FRM/MR-14": [
+      "taskflow"
+    ],
+    "PM/FRM/MR-27": [
+      "taskflow"
+    ],
+    "PM/REG/5S-01": [
+      "5s"
+    ],
+    "PM/REG/DWM-01": [
+      "taskflow"
+    ]
+  }
+}

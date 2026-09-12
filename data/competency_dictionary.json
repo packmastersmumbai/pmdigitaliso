@@ -1,0 +1,561 @@
+{
+ "entries": [
+  {
+   "code": "CMP-01",
+   "name": "Attention To Detail",
+   "group": "Personal effectiveness",
+   "definition": "Given the importance of data accuracy and system reliability, having a keen eye for detail is crucial. You should pay attention to small details, ensure data integrity, and validate information. This competency helps you avoid errors and make informed decisions based on accurate and reliable data",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-05",
+    "PM/FRM/HR-JD-09",
+    "PM/FRM/HR-JD-11"
+   ]
+  },
+  {
+   "code": "CMP-02",
+   "name": "Planning And Organisation",
+   "group": "Planning",
+   "definition": "Excellent planning and organizational skills to support the development of production plans, scheduling of resources, and coordination of activities. Ability to support the prioritization of tasks, allocation of resources effectively, and adaptation of plans to changing circumstances.",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-04",
+    "PM/FRM/HR-JD-07",
+    "PM/FRM/HR-JD-10"
+   ]
+  },
+  {
+   "code": "CMP-03",
+   "name": "Leadership And Team Management",
+   "group": "Leadership",
+   "definition": "Excellent leadership skills to support and motivate production teams. Ability to provide clear direction, set expectations, and foster a positive work culture. Competence in supporting team building, communication, conflict resolution, and performance management.",
+   "jds": [
+    "PM/FRM/HR-JD-01",
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-04",
+    "PM/FRM/HR-JD-10"
+   ]
+  },
+  {
+   "code": "CMP-04",
+   "name": "Regulatory Compliance",
+   "group": "Quality & compliance",
+   "definition": "Proficiency in understanding and interpreting product safety regulations and standards. This includes staying updated on regulatory changes, ensuring compliance with applicable laws and regulations, and effectively communicating regulatory requirements to stakeholders.",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-03",
+    "PM/FRM/HR-JD-06",
+    "PM/FRM/HR-JD-09"
+   ]
+  },
+  {
+   "code": "CMP-05",
+   "name": "Problem-Solving",
+   "group": "Personal effectiveness",
+   "definition": "The ability to identify problems, evaluate alternative solutions, and implement effective resolutions is vital. You should be able to approach challenges analytically, think critically, and propose innovative solutions. Strong problem-solving skills enable you to address technical issues, optimize p",
+   "jds": [
+    "PM/FRM/HR-JD-05",
+    "PM/FRM/HR-JD-07",
+    "PM/FRM/HR-JD-11"
+   ]
+  },
+  {
+   "code": "CMP-06",
+   "name": "Financial Acumen",
+   "group": "Commercial",
+   "definition": "Understanding and managing store finances is important for optimizing profitability. You should have basic financial literacy, be able to analyze financial reports, control costs, and make informed decisions regarding pricing, promotions, and budget management",
+   "jds": [
+    "PM/FRM/HR-JD-04",
+    "PM/FRM/HR-JD-05",
+    "PM/FRM/HR-JD-06"
+   ]
+  },
+  {
+   "code": "CMP-07",
+   "name": "Leadership",
+   "group": "Leadership",
+   "definition": "Ability to lead and inspire a sales team, providing clear direction, setting goals, and motivating team members to achieve targets. Effective leadership involves coaching, mentoring, and fostering a collaborative and high-performance sales culture.",
+   "jds": [
+    "PM/FRM/HR-JD-05",
+    "PM/FRM/HR-JD-07"
+   ]
+  },
+  {
+   "code": "CMP-08",
+   "name": "Time Management",
+   "group": "Planning",
+   "definition": "Good time management skills to prioritize packaging tasks, follow production schedules, and meet packaging targets. Ability to work efficiently under time constraints and maintain productivity throughout the shift. Teamwork and Collaboration: Competence in working collaboratively with team members t",
+   "jds": [
+    "PM/FRM/HR-JD-03",
+    "PM/FRM/HR-JD-11"
+   ]
+  },
+  {
+   "code": "CMP-09",
+   "name": "Problem-Solving And Decision Making",
+   "group": "Personal effectiveness",
+   "definition": "Strong analytical and problem-solving skills to support the identification of issues, assessment of options, and contribution to informed decision-making. Ability to support troubleshooting production problems, implementing effective solutions, and mitigating risks.",
+   "jds": [
+    "PM/FRM/HR-JD-04",
+    "PM/FRM/HR-JD-10"
+   ]
+  },
+  {
+   "code": "CMP-10",
+   "name": "Technical Expertise",
+   "group": "Technical",
+   "definition": "A strong technical knowledge of maintenance principles, equipment, machinery, and facility systems is essential. This includes understanding maintenance best practices, troubleshooting techniques, and the ability to interpret technical manuals and specifications.",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-07"
+   ]
+  },
+  {
+   "code": "CMP-11",
+   "name": "Environmental Sustainability",
+   "group": "Safety & environment",
+   "definition": "Awareness of sustainability practices and the ability to implement environmentally friendly initiatives in the product industry operations.",
+   "jds": [
+    "PM/FRM/HR-JD-01",
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-12",
+   "name": "Quality Assurance",
+   "group": "Quality & compliance",
+   "definition": "Understanding and implementing quality control procedures, adherence to regulatory requirements, and ensuring product quality are essential competencies. You should be familiar with quality management systems, testing methods, and quality assurance principles.",
+   "jds": [
+    "PM/FRM/HR-JD-03",
+    "PM/FRM/HR-JD-04"
+   ]
+  },
+  {
+   "code": "CMP-13",
+   "name": "Health And Safety",
+   "group": "Safety & environment",
+   "definition": "Knowledge of health and safety regulations and practices in the product industry. Ability to support the implementation and enforcement of safety protocols, conduct risk assessments, and ensure a safe working environment for production staff.",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-04"
+   ]
+  },
+  {
+   "code": "CMP-14",
+   "name": "Quality Management Systems",
+   "group": "Quality & compliance",
+   "definition": "Proficiency in implementing and maintaining quality management systems such as ISO standards (e.g., ISO 9001, ISO 22000) and Hazard Analysis and Critical Control Points (HACCP). Understanding the principles and requirements of these systems is essential for ensuring consistent quality and compliance",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-09"
+   ]
+  },
+  {
+   "code": "CMP-15",
+   "name": "Quality Control",
+   "group": "Quality & compliance",
+   "definition": "Knowledge of quality control principles and practices. Ability to perform quality checks on raw materials, in-process products, and finished goods. Understanding of quality specifications and the ability to identify and address any quality issues promptly.",
+   "jds": [
+    "PM/FRM/HR-JD-10",
+    "PM/FRM/HR-JD-11"
+   ]
+  },
+  {
+   "code": "CMP-16",
+   "name": "Supply Chain Management",
+   "group": "Commercial",
+   "definition": "Possess a strong understanding of supply chain concepts, including procurement, transportation, inventory management, and distribution. Familiarity with supply chain strategies, best practices, and industry trends is essential.",
+   "jds": [
+    "PM/FRM/HR-JD-03",
+    "PM/FRM/HR-JD-06"
+   ]
+  },
+  {
+   "code": "CMP-17",
+   "name": "Risk Assessment And Management",
+   "group": "Quality & compliance",
+   "definition": "The ability to assess and manage risks associated with product safety and quality. This includes conducting risk assessments, identifying critical control points, implementing control measures, and continuously monitoring and mitigating potential risks.",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-09"
+   ]
+  },
+  {
+   "code": "CMP-18",
+   "name": "Auditing And Inspection",
+   "group": "Quality & compliance",
+   "definition": "Proficiency in conducting internal and external audits and inspections. This includes knowledge of audit techniques, audit planning, conducting audits, and effectively communicating audit findings and recommendations.",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-09"
+   ]
+  },
+  {
+   "code": "CMP-19",
+   "name": "Problem-Solving And Root Cause Analysis",
+   "group": "Personal effectiveness",
+   "definition": "The ability to identify and resolve maintenance , quality-related problems using systematic problem-solving techniques. This includes conducting root cause analysis, applying appropriate problem-solving tools (e.g., 5 Whys, Fishbone Diagrams), and implementing corrective and preventive actions.",
+   "jds": [
+    "PM/FRM/HR-JD-02",
+    "PM/FRM/HR-JD-09"
+   ]
+  },
+  {
+   "code": "CMP-20",
+   "name": "Communication",
+   "group": "Personal effectiveness",
+   "definition": "Excellent communication skills are vital for effectively conveying information, providing clear instructions, and resolving conflicts. Effective communication ensures smooth coordination among team members and facilitates strong relationships with customers and stakeholders.",
+   "jds": [
+    "PM/FRM/HR-JD-05"
+   ]
+  },
+  {
+   "code": "CMP-21",
+   "name": "Business Acumen",
+   "group": "Commercial",
+   "definition": "Understanding the product industry, its processes, and key business drivers is essential. You should possess knowledge of industry-specific challenges, regulations, and trends. This enables you to align information systems and data analysis with business objectives, identify opportunities for improv",
+   "jds": [
+    "PM/FRM/HR-JD-01"
+   ]
+  },
+  {
+   "code": "CMP-22",
+   "name": "Technical Knowledge",
+   "group": "Technical",
+   "definition": "Solid technical knowledge of production processes and equipment used in the product industry. Understanding of the principles behind the operation of different machinery, such as mixers, ovens, conveyors, or packaging machines. Familiarity with safety features, maintenance requirements, and troubles",
+   "jds": [
+    "PM/FRM/HR-JD-04"
+   ]
+  },
+  {
+   "code": "CMP-23",
+   "name": "Technology Proficiency",
+   "group": "Quality & compliance",
+   "definition": "With the increasing reliance on technology in organizations, internal auditors should have a good understanding of relevant technologies and tools. This includes knowledge of data analytics, audit management software, and information security controls.",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-24",
+   "name": "Budgeting And Cost Management",
+   "group": "Commercial",
+   "definition": "Competence in budgeting and cost management is important to allocate resources effectively and optimize maintenance expenditures. This includes estimating costs, tracking expenses, identifying cost-saving opportunities, and managing maintenance budgets.",
+   "jds": [
+    "PM/FRM/HR-JD-07"
+   ]
+  },
+  {
+   "code": "CMP-25",
+   "name": "Vendor And Contractor Management",
+   "group": "Commercial",
+   "definition": "The ability to effectively manage relationships with external vendors, contractors, and service providers is essential. This includes sourcing vendors, negotiating contracts, monitoring performance, and ensuring timely and cost-effective delivery of maintenance services.",
+   "jds": [
+    "PM/FRM/HR-JD-07"
+   ]
+  },
+  {
+   "code": "CMP-26",
+   "name": "Safety And Compliance",
+   "group": "Quality & compliance",
+   "definition": "A strong understanding of safety protocols, regulations, and compliance requirements is necessary. This includes implementing and enforcing safety practices, conducting risk assessments, and ensuring compliance with relevant laws and regulations",
+   "jds": [
+    "PM/FRM/HR-JD-07"
+   ]
+  },
+  {
+   "code": "CMP-27",
+   "name": "Communication And Collaboration",
+   "group": "Personal effectiveness",
+   "definition": "Effective communication skills, both verbal and written, are crucial for interacting with stakeholders at various levels. You should be able to explain complex technical concepts to non-technical individuals, actively listen to understand requirements, and present information and insights in a clear",
+   "jds": [
+    "PM/FRM/HR-JD-06"
+   ]
+  },
+  {
+   "code": "CMP-28",
+   "name": "Equipment Operation",
+   "group": "Technical",
+   "definition": "Competence in operating packaging machinery and equipment, understanding their functions, and following standard operating procedures. Ability to handle machine controls, adjust settings, and troubleshoot basic issues.",
+   "jds": [
+    "PM/FRM/HR-JD-11"
+   ]
+  },
+  {
+   "code": "CMP-29",
+   "name": "Safety And Hygiene",
+   "group": "Safety & environment",
+   "definition": "Strong commitment to safety and hygiene practices in the product industry. Competence in following safety protocols, wearing appropriate personal protective equipment (PPE), and maintaining a clean and sanitized work environment. Familiarity with product safety regulations and good manufacturing pra",
+   "jds": [
+    "PM/FRM/HR-JD-11"
+   ]
+  },
+  {
+   "code": "CMP-30",
+   "name": "Production Management",
+   "group": "Technical",
+   "definition": "Strong knowledge and understanding of production processes, manufacturing principles, and operations management. Competence in planning, organizing, and optimizing production activities to meet targets and timelines.",
+   "jds": [
+    "PM/FRM/HR-JD-04"
+   ]
+  },
+  {
+   "code": "CMP-31",
+   "name": "Organisation And Time Management",
+   "group": "Planning",
+   "definition": "Store incharges need strong organizational skills to manage multiple tasks and priorities. This includes effectively scheduling staff, overseeing inventory management, planning promotions and displays, and ensuring smooth day-to-day operations.",
+   "jds": [
+    "PM/FRM/HR-JD-05"
+   ]
+  },
+  {
+   "code": "CMP-32",
+   "name": "Time Management And Organisation",
+   "group": "Planning",
+   "definition": "Possess excellent organizational and time management skills to handle multiple tasks, prioritize activities, and meet deadlines. Efficiently manage logistics operations while maintaining attention to detail and ensuring accuracy.",
+   "jds": [
+    "PM/FRM/HR-JD-06"
+   ]
+  },
+  {
+   "code": "CMP-33",
+   "name": "Strategic Vision",
+   "group": "General",
+   "definition": "The ability to develop a clear and compelling vision for the organization's future and create a strategic roadmap to achieve long-term goals.",
+   "jds": [
+    "PM/FRM/HR-JD-01"
+   ]
+  },
+  {
+   "code": "CMP-34",
+   "name": "Financial Management",
+   "group": "Commercial",
+   "definition": "Proficiency in financial analysis, budgeting, and cost control to ensure the organization's financial health and sustainable growth.",
+   "jds": [
+    "PM/FRM/HR-JD-01"
+   ]
+  },
+  {
+   "code": "CMP-35",
+   "name": "Innovation And Adaptability",
+   "group": "Personal effectiveness",
+   "definition": "A mindset that embraces innovation, openness to change, and the ability to adapt to evolving market dynamics and consumer needs.",
+   "jds": [
+    "PM/FRM/HR-JD-01"
+   ]
+  },
+  {
+   "code": "CMP-36",
+   "name": "Strategic Partnerships",
+   "group": "Commercial",
+   "definition": "Building and maintaining strategic partnerships with suppliers, distributors, and other stakeholders to enhance the organization's capabilities and market reach.",
+   "jds": [
+    "PM/FRM/HR-JD-01"
+   ]
+  },
+  {
+   "code": "CMP-37",
+   "name": "Quality And Safety Focus",
+   "group": "Quality & compliance",
+   "definition": "A commitment to maintaining high standards of product quality and safety to ensure consumer satisfaction and regulatory compliance.",
+   "jds": [
+    "PM/FRM/HR-JD-01"
+   ]
+  },
+  {
+   "code": "CMP-38",
+   "name": "Risk Management",
+   "group": "General",
+   "definition": "The ability to identify potential risks and develop risk mitigation strategies to safeguard the organization from potential threats.",
+   "jds": [
+    "PM/FRM/HR-JD-01"
+   ]
+  },
+  {
+   "code": "CMP-39",
+   "name": "Strategic Communication",
+   "group": "Personal effectiveness",
+   "definition": "Proficiency in articulating the organization's vision, goals, and progress to stakeholders, employees, and investors.",
+   "jds": [
+    "PM/FRM/HR-JD-01"
+   ]
+  },
+  {
+   "code": "CMP-40",
+   "name": "Food Industry Expertise",
+   "group": "Technical",
+   "definition": "In-depth understanding of product production processes, safety standards, and regulations specific to the industry.",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-41",
+   "name": "Cost Management",
+   "group": "Commercial",
+   "definition": "Ability to manage budgets and control operational costs effectively.",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-42",
+   "name": "Project Planning",
+   "group": "Planning",
+   "definition": "Skills to plan and execute projects, such as process improvements or facility expansions.",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-43",
+   "name": "Sustainability Awareness",
+   "group": "Safety & environment",
+   "definition": "Understanding and promoting environmentally sustainable practices within the organization.",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-44",
+   "name": "Emergency Response",
+   "group": "Safety & environment",
+   "definition": "Ability to develop and execute contingency plans in response to crises or unexpected events.",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-45",
+   "name": "Business Continuity",
+   "group": "Commercial",
+   "definition": "Ensuring business operations continue smoothly during crises",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-46",
+   "name": "Results Expected Kpis",
+   "group": "General",
+   "definition": "",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-47",
+   "name": "Food Safety Compliance",
+   "group": "Quality & compliance",
+   "definition": "",
+   "jds": [
+    "PM/FRM/HR-JD-03"
+   ]
+  },
+  {
+   "code": "CMP-48",
+   "name": "Compliance And Regulatory Knowledge",
+   "group": "Quality & compliance",
+   "definition": "Understanding of relevant product safety regulations, labeling requirements, and packaging specifications. Competence in adhering to regulatory and compliance standards specific to the product industry during packaging operations.",
+   "jds": [
+    "PM/FRM/HR-JD-11"
+   ]
+  },
+  {
+   "code": "CMP-49",
+   "name": "Continuous Improvement",
+   "group": "Technical",
+   "definition": "A mindset of continuous improvement to drive operational excellence. Competence in identifying process inefficiencies, waste reduction opportunities, and cost-saving initiatives. Familiarity with Lean manufacturing principles and tools.",
+   "jds": [
+    "PM/FRM/HR-JD-04"
+   ]
+  },
+  {
+   "code": "CMP-50",
+   "name": "Production Knowledge",
+   "group": "Technical",
+   "definition": "Strong knowledge and understanding of production processes, equipment, and technologies relevant to the product industry. Familiarity with product safety regulations and quality standards.",
+   "jds": [
+    "PM/FRM/HR-JD-10"
+   ]
+  },
+  {
+   "code": "CMP-51",
+   "name": "Operational Efficiency",
+   "group": "Technical",
+   "definition": "Competence in optimizing production processes and resource utilization to achieve production targets. Ability to identify areas for improvement, implement lean manufacturing principles, and eliminate waste. Experience in optimizing equipment and labor efficiency.",
+   "jds": [
+    "PM/FRM/HR-JD-10"
+   ]
+  },
+  {
+   "code": "CMP-52",
+   "name": "Food Safety And Quality Knowledge",
+   "group": "Quality & compliance",
+   "definition": "A strong understanding of product safety principles, quality management systems, and regulatory requirements is essential. This includes knowledge of HACCP (Hazard Analysis and Critical Control Points), GMP (Good Manufacturing Practices), relevant product safety standards (e.g., ISO 22000), and regu",
+   "jds": [
+    "PM/FRM/HR-JD-09"
+   ]
+  },
+  {
+   "code": "CMP-53",
+   "name": "Logistics Operations Knowledge",
+   "group": "Technical",
+   "definition": "Have a comprehensive knowledge of logistics operations, including transportation management, warehouse operations, inventory control, and order fulfillment. Understanding logistics processes, systems, and technologies is important for optimizing logistics operations.",
+   "jds": [
+    "PM/FRM/HR-JD-06"
+   ]
+  },
+  {
+   "code": "CMP-54",
+   "name": "Technical Proficiency",
+   "group": "Technical",
+   "definition": "Be adept at using logistics management software, transportation management systems (TMS), warehouse management systems (WMS), and other relevant technology tools. Familiarity with data analysis tools and proficiency in Microsoft Excel is also beneficial.",
+   "jds": [
+    "PM/FRM/HR-JD-06"
+   ]
+  },
+  {
+   "code": "CMP-55",
+   "name": "Customer Focus",
+   "group": "Commercial",
+   "definition": "A Regional Sales Manager should have a strong customer-centric approach. This involves understanding customer needs, building relationships, and delivering exceptional customer experiences. Being able to anticipate customer requirements and provide solutions that address their pain points is crucial",
+   "jds": []
+  },
+  {
+   "code": "CMP-56",
+   "name": "Organisation",
+   "group": "Planning",
+   "definition": "Sales coordinators are responsible for managing multiple tasks simultaneously. Effective organization and time management skills are crucial to prioritize activities, meet deadlines, and ensure smooth coordination between different sales processes and departments.",
+   "jds": []
+  },
+  {
+   "code": "CMP-57",
+   "name": "Negotiation",
+   "group": "Commercial",
+   "definition": "Possess strong negotiation skills to secure favorable terms, pricing, and contracts with suppliers. Effective negotiation skills involve active listening, persuasive communication, and the ability to find win-win solutions.",
+   "jds": []
+  },
+  {
+   "code": "CMP-58",
+   "name": "Safety Awareness",
+   "group": "Safety & environment",
+   "definition": "A strong understanding of safety protocols and a commitment to safety is critical. This includes ensuring compliance with safety regulations, conducting risk assessments, and promoting a safe work environment for the maintenance team.",
+   "jds": []
+  },
+  {
+   "code": "CMP-59",
+   "name": "Strategic Thinking",
+   "group": "Commercial",
+   "definition": "Regional Sales Managers should have the ability to think strategically and develop sales strategies that align with overall business objectives. This involves analyzing market trends, identifying growth opportunities, and making informed decisions to drive revenue growth within the assigned region.",
+   "jds": []
+  },
+  {
+   "code": "CMP-60",
+   "name": "Sales And Negotiation",
+   "group": "Commercial",
+   "definition": "A Regional Sales Manager should have a solid foundation in sales techniques, negotiation skills, and the ability to close deals. This includes the ability to identify customer needs, present value propositions, overcome objections, and negotiate win-win outcomes to achieve sales targets.",
+   "jds": []
+  }
+ ]
+}

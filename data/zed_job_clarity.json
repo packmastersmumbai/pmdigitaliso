@@ -1,0 +1,3843 @@
+{
+ "_comment": "ZED reference job clarity documents, imported as a template. Another company's content — structure only.",
+ "source": "C:\\Users\\Appex\\My Drive (packmasters.mumbai@gmail.com)\\# TRAINING\\Courses & Content\\ZED - PM\\ZED Documentation - All Clauses Documents\\Clause - 1 - Leadership\\Job clarity Document_2023",
+ "roles": [
+  {
+   "file": "accounts/Account Asst. Manager.docx",
+   "department": "accounts",
+   "role": "Assistance Manager",
+   "reporting_to": "MD",
+   "scope": [],
+   "accountabilities": [
+    {
+     "area": "Financial Reporting",
+     "detail": "Prepare accurate and timely financial reports, including balance sheets, income statements, cash flow statements, and other financial statements. Ensure compliance with accounting principles, regulations, and company policies."
+    },
+    {
+     "area": "Budgeting and Forecasting",
+     "detail": "Collaborate with other departments to develop annual budgets and forecasts. Monitor actual performance against budgeted targets, identify variances, and provide explanations or recommendations for improvement."
+    },
+    {
+     "area": "Cost Control and Expense Management",
+     "detail": "Monitor and analyze costs and expenses, identify areas of inefficiency or potential cost savings, and propose strategies to optimize expenditure while maintaining operational effectiveness."
+    },
+    {
+     "area": "Stakeholder Satisfaction",
+     "detail": "Meeting the needs and expectations of key stakeholders, such as senior management, department heads, and external partners, is essential. KPIs may include stakeholder feedback surveys, satisfaction ratings, and feedback on the usefulness."
+    },
+    {
+     "area": "Process Improvement",
+     "detail": "Continuously evaluate existing accounting processes and systems, identify areas for improvement, and implement changes to enhance efficiency, accuracy, and timeliness of financial reporting."
+    },
+    {
+     "area": "Ad hoc Financial Projects",
+     "detail": "Participate in special financial projects, such as mergers and acquisitions, system implementations, or process reengineering initiatives."
+    }
+   ],
+   "delegation": [
+    "Assistance Manager (Sanchit Bansal)"
+   ],
+   "competencies": [
+    {
+     "competency": "Financial Acumen",
+     "description": "Demonstrated knowledge and understanding of accounting principles, financial analysis, budgeting, and forecasting. Proficiency in financial management software and tools."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Thoroughness and accuracy in financial reporting and analysis. Ability to spot errors, inconsistencies, or potential risks and take appropriate corrective actions."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "Strong problem-solving and critical thinking abilities to identify financial issues, analyze root causes, and develop innovative solutions"
+    },
+    {
+     "competency": "Continuous Learning",
+     "description": "Willingness to stay updated with the latest accounting principles, regulations, and industry trends. Commitment to ongoing professional development"
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Financial Accuracy: The accuracy of financial reports and statements is crucial. KPIs in this area may include the percentage of error-free financial reports, the accuracy of budgeting and forecasting, and the adherence to accounting standards and regulatory requirements.",
+     "weight": null
+    },
+    {
+     "result": "Financial Analysis and Insights: Providing meaningful financial analysis and insights to support decision-making is a key responsibility. KPIs may include the quality and relevance of financial analysis provided, the identification of cost-saving opportunities, and the effectiveness of recommendations made.",
+     "weight": null
+    },
+    {
+     "result": "Stakeholder Satisfaction: Meeting the needs and expectations of key stakeholders, such as senior management, department heads, and external partners, is essential. KPIs may include stakeholder feedback surveys, satisfaction ratings, and feedback on the usefulness.",
+     "weight": null
+    }
+   ],
+   "kpi_weight_total": 0
+  },
+  {
+   "file": "accounts/Account Executive.docx",
+   "department": "accounts",
+   "role": "Accounts Executive",
+   "reporting_to": "Manager",
+   "scope": [
+    "Reporting Structure",
+    "Goals and Objectives",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Project Management",
+     "detail": "Planning, organizing, and executing projects within defined timelines and budgets. This includes coordinating resources, managing stakeholders, and ensuring project goals are achieved."
+    },
+    {
+     "area": "Financial Management",
+     "detail": "Monitoring and managing financial resources, budgets, and financial reporting. This includes analyzing financial data, identifying cost-saving opportunities, and ensuring compliance with financial regulations."
+    },
+    {
+     "area": "Technical Expertise",
+     "detail": "Demonstrating proficiency in a specific technical field or domain. This may involve developing and implementing technical solutions, troubleshooting technical issues, and staying updated on industry trends and advancements."
+    },
+    {
+     "area": "Communication and Stakeholder Management",
+     "detail": "Effectively communicating with internal and external stakeholders, including clients, suppliers, and team members. This involves building relationships, managing expectations, and facilitating collaboration."
+    },
+    {
+     "area": "Continuous Improvement",
+     "detail": "Identifying opportunities for process improvement, efficiency enhancements, and innovation. This includes analyzing workflows, implementing best practices, and driving continuous learning and development"
+    }
+   ],
+   "delegation": [],
+   "competencies": [
+    {
+     "competency": "Communication",
+     "description": "Effective verbal and written communication skills, active listening, and the ability to convey information clearly and concisely."
+    },
+    {
+     "competency": "Problem Solving",
+     "description": "Analytical thinking, critical reasoning, and the ability to identify and evaluate alternative solutions to complex problems."
+    },
+    {
+     "competency": "Time Management",
+     "description": "The ability to prioritize tasks, manage deadlines, and efficiently allocate resources. Being organized and able to manage multiple projects or responsibilities simultaneously."
+    },
+    {
+     "competency": "Technical Expertise",
+     "description": "Proficiency in specific technical skills or knowledge relevant to the role. This can include industry-specific knowledge, software proficiency, or specialized certifications."
+    },
+    {
+     "competency": "Emotional Intelligence",
+     "description": "The ability to understand and manage one's emotions and to recognize and respond appropriately to the emotions of others. This includes self-awareness, empathy, and relationship management"
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Project Management Role:-",
+     "weight": null
+    },
+    {
+     "result": "Project Completion Rate: Percentage of projects completed within the agreed-upon timeframe.",
+     "weight": null
+    },
+    {
+     "result": "Budget Adherence: Percentage of projects completed within the allocated budget.",
+     "weight": null
+    },
+    {
+     "result": "Client Satisfaction: Feedback and ratings from clients regarding project delivery and satisfaction.",
+     "weight": null
+    },
+    {
+     "result": "Project Profitability: Measure of the project's financial performance, considering costs and revenues.",
+     "weight": null
+    },
+    {
+     "result": "Financial Role:-",
+     "weight": null
+    },
+    {
+     "result": "Revenue Growth: Year-over-year increase in company revenue.",
+     "weight": null
+    },
+    {
+     "result": "Cost Reduction: Percentage decrease in operating expenses or cost-saving initiatives.",
+     "weight": null
+    },
+    {
+     "result": "Financial Accuracy: Accuracy of financial reporting and adherence to accounting standards.",
+     "weight": null
+    },
+    {
+     "result": "Cash Flow Management: Effective management of cash flow to ensure sufficient liquidity",
+     "weight": null
+    }
+   ],
+   "kpi_weight_total": 0
+  },
+  {
+   "file": "accounts/Account Manager.docx",
+   "department": "accounts",
+   "role": "Accounts Manager",
+   "reporting_to": "MD",
+   "scope": [],
+   "accountabilities": [
+    {
+     "area": "Goal Achievement",
+     "detail": "Setting and achieving specific goals that align with the organization's objectives. This includes meeting targets, delivering results, and driving performance."
+    },
+    {
+     "area": "Customer Service",
+     "detail": "Providing exceptional service and building strong relationships with clients or customers. This involves understanding their needs, addressing inquiries or concerns, and ensuring customer satisfaction."
+    },
+    {
+     "area": "Ales and Revenue Generation",
+     "detail": "Driving sales growth and revenue generation through effective strategies and tactics. This may involve prospecting, lead generation, negotiation, and closing deals."
+    },
+    {
+     "area": "Financial Management",
+     "detail": "Managing financial resources, budgets, and financial performance. This involves tracking expenses, analyzing financial data, preparing reports, and making recommendations for cost savings or revenue enhancement."
+    },
+    {
+     "area": "Communication and Stakeholder Management",
+     "detail": "Effectively communicating with internal and external stakeholders to build relationships, gather feedback, and align objectives. This includes presenting information, facilitating meetings, and resolving conflicts."
+    },
+    {
+     "area": "It's important to note that these key accountabilities can vary depending on the specific role and organization. When defining key accountabilities, it is essential to consider the unique requirements and expectations of the position to ensure clarity and alignment with organizational goals",
+     "detail": ""
+    }
+   ],
+   "delegation": [
+    "Accounts Manager (Sumit Gupta)"
+   ],
+   "competencies": [
+    {
+     "competency": "Communication Skills",
+     "description": "The ability to effectively convey information, ideas, and instructions through verbal, written, and non-verbal means. This includes active listening, clarity in expression, and adapting communication style to different audiences."
+    },
+    {
+     "competency": "Problem Solving and Critical Thinking",
+     "description": "The capacity to analyze complex situations, identify problems, evaluate options, and develop innovative solutions. This competency involves logical reasoning, creativity, data analysis, and the ability to make informed decisions."
+    },
+    {
+     "competency": "Teamwork and Collaboration",
+     "description": "The aptitude to work effectively with others, contribute to a team's success, and build positive relationships. This competency includes active participation, cooperation, and the ability to communicate and share responsibilities within a team."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Financial Operations (30%)",
+     "weight": null
+    },
+    {
+     "result": "Financial reports and documentation (25%)",
+     "weight": null
+    },
+    {
+     "result": "Audit and Compliance (25%)",
+     "weight": null
+    },
+    {
+     "result": "Teamwork and Collaboration",
+     "weight": 20
+    }
+   ],
+   "kpi_weight_total": 20
+  },
+  {
+   "file": "accounts/Internal Auditor.docx",
+   "department": "accounts",
+   "role": "Internal Auditor",
+   "reporting_to": "Manager",
+   "scope": [
+    "Assessing Internal Controls",
+    "Financial Auditing",
+    "Operational Auditing",
+    "Compliance Monitoring",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Audit Planning and Execution",
+     "detail": "Develop audit plans, including determining audit objectives, scope, and methodologies. Conduct audits by gathering and analyzing data, examining financial statements, assessing internal controls, and testing compliance with policies and regulations."
+    },
+    {
+     "area": "Internal Control Evaluation",
+     "detail": "Assess the effectiveness of internal controls in safeguarding assets, ensuring the reliability of financial reporting, and compliance with laws and regulations. Identify control weaknesses and provide recommendations for improvement."
+    },
+    {
+     "area": "Compliance Monitoring",
+     "detail": "Monitor compliance with applicable laws, regulations, and internal policies. Conduct reviews to ensure adherence to regulatory requirements and recommend corrective actions when necessary."
+    },
+    {
+     "area": "Audit Reporting",
+     "detail": "Prepare clear, concise, and comprehensive audit reports summarizing audit findings, recommendations, and action plans. Present audit results to management and the board of directors, highlighting areas of concern and opportunities for improvement."
+    },
+    {
+     "area": "Follow-up and Monitoring",
+     "detail": "Track the implementation of audit recommendations and verify the effectiveness of corrective actions taken by management. Monitor ongoing compliance and risk management activities and provide feedback as necessary."
+    },
+    {
+     "area": "Professional Development",
+     "detail": "Stay updated with industry trends, regulatory changes, and best practices in internal auditing. Continuously enhance knowledge and skills through training, certifications, and professional networking."
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Audit Knowledge",
+     "description": "A strong understanding of auditing principles, practices, and methodologies is essential. This includes knowledge of internal control frameworks, risk assessment techniques, and generally accepted auditing standards (GAAS)."
+    },
+    {
+     "competency": "Financial Acumen",
+     "description": "Internal auditors should possess a solid understanding of financial concepts and be able to analyze financial statements, transactions, and data. They should be familiar with accounting principles, budgeting processes, and financial analysis techniques."
+    },
+    {
+     "competency": "Compliance Expertise",
+     "description": "Internal auditors should have a good understanding of relevant laws, regulations, and industry standards to ensure compliance. This includes knowledge of financial reporting regulations, data privacy laws, and industry-specific compliance requirements."
+    },
+    {
+     "competency": "Problem-Solving Abilities",
+     "description": "Internal auditors often encounter complex issues and challenges. They should be skilled in problem-solving, critical thinking, and decision-making to effectively address audit-related problems and recommend appropriate solutions."
+    },
+    {
+     "competency": "Technology Proficiency",
+     "description": "With the increasing reliance on technology in organizations, internal auditors should have a good understanding of relevant technologies and tools. This includes knowledge of data analytics, audit management software, and information security controls."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Audit Quality",
+     "weight": 30
+    },
+    {
+     "result": "Regulatory Compliance",
+     "weight": 30
+    },
+    {
+     "result": "Audit Coverage",
+     "weight": 10
+    },
+    {
+     "result": "Follow-up and Closure",
+     "weight": 15
+    },
+    {
+     "result": "Professional Development",
+     "weight": 5
+    }
+   ],
+   "kpi_weight_total": 90
+  },
+  {
+   "file": "Administrator/ADMINISTRATOR.docx",
+   "department": "Administrator",
+   "role": "ADMINISTRATOR",
+   "reporting_to": "MD",
+   "scope": [],
+   "accountabilities": [
+    {
+     "area": "Operations Management",
+     "detail": "Administrators are responsible for ensuring the smooth functioning of day-to-day operations within the food industry. This includes overseeing production processes, managing inventory levels, and optimizing resource allocation."
+    },
+    {
+     "area": "Regulatory Compliance",
+     "detail": "Ensuring the food industry operations comply with all relevant local, regional, and national regulations and standards related to food safety, labeling, packaging, and hygiene."
+    },
+    {
+     "area": "Supply Chain Management",
+     "detail": "Managing the sourcing of raw materials and ingredients, building relationships with suppliers, and ensuring an efficient and reliable supply chain."
+    },
+    {
+     "area": "Financial Management",
+     "detail": "Budgeting, cost control, and financial planning to ensure the food industry business operates within its financial means and achieves profitability."
+    },
+    {
+     "area": "Facilities and Equipment Maintenance",
+     "detail": "Overseeing the proper maintenance of production facilities and equipment to ensure efficient operations and avoid disruptions."
+    },
+    {
+     "area": "Crisis Preparedness and Management",
+     "detail": "Developing and implementing contingency plans to handle crises such as food recalls, contamination incidents, or natural disasters."
+    },
+    {
+     "area": "Reporting and Documentation",
+     "detail": "Maintaining accurate records, generating reports, and documenting processes to ensure transparency and accountability."
+    },
+    {
+     "area": "Health and Safety Compliance",
+     "detail": "Ensuring that all health and safety regulations are followed to maintain a safe working environment for employees and produce safe food products for consumers."
+    }
+   ],
+   "delegation": [
+    "Department heads"
+   ],
+   "competencies": [
+    {
+     "competency": "Knowledge of Food Regulations",
+     "description": "A strong understanding of food safety regulations, labeling requirements, and industry standards is crucial for ensuring compliance and producing safe products."
+    },
+    {
+     "competency": "Quality Management",
+     "description": "The ability to implement and maintain quality control measures to ensure consistent and high-quality food products."
+    },
+    {
+     "competency": "Supply Chain Expertise",
+     "description": "Competence in supply chain management, including sourcing, procurement, and logistics, to ensure a smooth flow of raw materials and finished products."
+    },
+    {
+     "competency": "Leadership Skills",
+     "description": "Strong leadership qualities to motivate and manage a team, delegate tasks, and foster a positive and productive work environment."
+    },
+    {
+     "competency": "Organizational Skills",
+     "description": "The ability to manage multiple tasks, prioritize activities, and meet deadlines in a fast-paced food industry environment."
+    },
+    {
+     "competency": "Negotiation Skills",
+     "description": "Proficiency in negotiation with suppliers, contractors, and other partners to achieve favorable terms and agreements."
+    },
+    {
+     "competency": "Crisis Management",
+     "description": "Preparedness to handle crises, make critical decisions, and effectively manage emergencies such as food recalls or contamination incidents."
+    },
+    {
+     "competency": "Innovation and Creativity",
+     "description": "A willingness to explore new ideas and innovative approaches to enhance products, processes, and overall business performance."
+    },
+    {
+     "competency": "Environmental Awareness",
+     "description": "An understanding of sustainability practices and their application to reduce the environmental impact of food industry operations."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Process Improveemnt",
+     "weight": 30
+    },
+    {
+     "result": "Efficiency in Administration",
+     "weight": 20
+    },
+    {
+     "result": "Accounts and expense monitoring",
+     "weight": 20
+    },
+    {
+     "result": "Supply Chain Efficiency",
+     "weight": 20
+    },
+    {
+     "result": "Management review meeting",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "EA/EA.docx",
+   "department": "EA",
+   "role": "EA",
+   "reporting_to": "MD",
+   "scope": [],
+   "accountabilities": [
+    {
+     "area": "Calendar Management",
+     "detail": "Managing the executives' calendars, scheduling appointments, meetings, and events, and ensuring effective time management."
+    },
+    {
+     "area": "Communication Management",
+     "detail": "Acting as a primary point of contact for internal and external communications, screening and handling emails, calls, and correspondence on behalf of the executives"
+    },
+    {
+     "area": "Meeting Coordination",
+     "detail": "Coordinating and organizing meetings, including preparing agendas, collating necessary materials, and taking meeting minutes."
+    },
+    {
+     "area": "Travel Arrangements",
+     "detail": "Managing travel arrangements for the executives, including booking flights, accommodations, and ground transportation."
+    },
+    {
+     "area": "Data and Information Management",
+     "detail": "Organizing and maintaining data, files, and documents related to the executives' activities and the organization's operations. Ensuring confidentiality and security of sensitive information."
+    },
+    {
+     "area": "Office Management",
+     "detail": "Overseeing the day-to-day operations of the executive office, ensuring it runs efficiently and smoothly."
+    },
+    {
+     "area": "Maintaining Confidentiality",
+     "detail": "Demonstrating discretion and maintaining confidentiality when dealing with sensitive information."
+    }
+   ],
+   "delegation": [
+    "Vacant (EA)"
+   ],
+   "competencies": [
+    {
+     "competency": "Organizational Skills",
+     "description": "The ability to manage multiple tasks, schedules, and priorities, ensuring that all administrative duties are completed efficiently and on time."
+    },
+    {
+     "competency": "Time Management",
+     "description": "Efficiently managing time and the executives' schedules to optimize productivity and meet deadlines."
+    },
+    {
+     "competency": "Communication Skills",
+     "description": "Excellent verbal and written communication skills to interact effectively with executives, staff, clients, and external stakeholders."
+    },
+    {
+     "competency": "Interpersonal Skills",
+     "description": "Building and maintaining positive working relationships with people at all levels within the organization and external contacts."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "Being proactive in identifying and addressing challenges and finding practical solutions to issues that may arise"
+    },
+    {
+     "competency": "Project Management",
+     "description": "Assisting with project coordination, tracking progress, and ensuring project timelines are met."
+    },
+    {
+     "competency": "Emotional Intelligence",
+     "description": "Understanding and managing emotions effectively, as well as empathizing with others' perspectives and need."
+    },
+    {
+     "competency": "Event Planning and Coordination",
+     "description": "If required, having the skills to plan and organize events, meetings, or conferences."
+    },
+    {
+     "competency": "Networking",
+     "description": "Building and maintaining a professional network within the food industry to stay informed and collaborate effectively."
+    },
+    {
+     "competency": "Business Acumen",
+     "description": "Having a good understanding of the food industry and the organization's operations to provide informed support."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Administrative Support",
+     "weight": 20
+    },
+    {
+     "result": "Meeting Coordination and follow up",
+     "weight": 20
+    },
+    {
+     "result": "Confidentiality and Discretion",
+     "weight": 20
+    },
+    {
+     "result": "Data Management- 20%Pre -Purchase Audit",
+     "weight": 20
+    }
+   ],
+   "kpi_weight_total": 80
+  },
+  {
+   "file": "HR/HR manager_UDFP.docx",
+   "department": "HR",
+   "role": "HR manager_UDFP",
+   "reporting_to": "",
+   "scope": [
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Recruiting all profiles when required with a focus on building a Sales team, managing end-to-end formalities",
+     "detail": ""
+    },
+    {
+     "area": "Employee Orientation, Development, and Training",
+     "detail": ""
+    },
+    {
+     "area": "Listening the issues of all the employees and resolving the same.",
+     "detail": ""
+    },
+    {
+     "area": "Following an effective Performance Management System, and ensuring proper review at regular intervals using a Monthly Performance Analysis sheet (KPI, KRA, AFP etc) for existing employees",
+     "detail": ""
+    },
+    {
+     "area": "Ensure and check the Daily monitoring sheet(TMA)",
+     "detail": ""
+    },
+    {
+     "area": "Ensuring the AFP reporting structure is on track and Analysing the DAFP/WAFP/MAFP",
+     "detail": ""
+    },
+    {
+     "area": "Managing repair, maintenance & replacement of office equipment, appliances, furniture and furnishings.",
+     "detail": ""
+    },
+    {
+     "area": "Monitoring and directing the housekeeping and security staff",
+     "detail": ""
+    },
+    {
+     "area": "Facilitating factory visits for guests, suppliers, and clients",
+     "detail": ""
+    },
+    {
+     "area": "Dealing with key stakeholders in the industry, ensuring and checking compliance",
+     "detail": ""
+    },
+    {
+     "area": "Managing all employees including shop floor employees.",
+     "detail": ""
+    },
+    {
+     "area": "Resolving all issues on shop floor, and facilitating problem-solving proactively. Speculating feuds and resolving them",
+     "detail": ""
+    },
+    {
+     "area": "Ensuring employee welfare for both staff and shop floor employees",
+     "detail": ""
+    },
+    {
+     "area": "Maintaining good relations with contract labor providers",
+     "detail": ""
+    }
+   ],
+   "delegation": [],
+   "competencies": [],
+   "kpis": [
+    {
+     "result": "1. HR Operations",
+     "weight": 40
+    },
+    {
+     "result": "2. Administration",
+     "weight": 25
+    },
+    {
+     "result": "3. Internal system Building & Strengthening",
+     "weight": 10
+    },
+    {
+     "result": "4. IR and ER",
+     "weight": 25
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "HR/Sr. HR executive.docx",
+   "department": "HR",
+   "role": "Sr. HR executive",
+   "reporting_to": "",
+   "scope": [
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Conducting regular audits of HR policies and procedures to ensure compliance with all applicable laws and regulations. This includes reviewing hiring, firing, compensation, benefits, workplace safety, discrimination, and harassment policies and procedures to make sure they are in line with the law.",
+     "detail": ""
+    },
+    {
+     "area": "Investigating and resolving compliance complaints from employees. This includes looking into allegations of discrimination, harassment, and other violations of HR policies and procedures.",
+     "detail": ""
+    },
+    {
+     "area": "Providing training to employees on HR compliance issues. This includes educating employees about their rights and responsibilities under the law, as well as the company's HR policies and procedures.",
+     "detail": ""
+    },
+    {
+     "area": "Representing the company in legal proceedings related to HR compliance. This may involve appearing in court or at an administrative hearing to defend the company against allegations of non-compliance.",
+     "detail": ""
+    },
+    {
+     "area": "Staying up-to-date on changes in HR compliance laws and regulations. This includes reading industry publications, attending conferences, and taking continuing education courses to stay ahead of the latest legal developments.",
+     "detail": ""
+    },
+    {
+     "area": "Processing salaries of in office staff , labour and outstation staff",
+     "detail": ""
+    },
+    {
+     "area": "Proving ESI, PF, EDLI and insurance as per the govt. compliance",
+     "detail": ""
+    },
+    {
+     "area": "Focussing on employee welfare by enrolling in government schemes to benefit labour and their families and staff.",
+     "detail": ""
+    },
+    {
+     "area": "Dealing with key stakeholders in the industry, ensuring and checking compliance",
+     "detail": ""
+    },
+    {
+     "area": "Managing all employees including shop floor employees.",
+     "detail": ""
+    },
+    {
+     "area": "Resolving all issues on shop floor, and facilitating problem-solving proactively. Speculating feuds and resolving them",
+     "detail": ""
+    },
+    {
+     "area": "Ensuring employee welfare for both staff and shop floor employees",
+     "detail": ""
+    },
+    {
+     "area": "Maintaining good relations with contract labor providers",
+     "detail": ""
+    }
+   ],
+   "delegation": [],
+   "competencies": [],
+   "kpis": [
+    {
+     "result": "1. HR Compliance",
+     "weight": 40
+    },
+    {
+     "result": "2. Payroll processing",
+     "weight": 25
+    },
+    {
+     "result": "3. Safety and risk management",
+     "weight": 25
+    },
+    {
+     "result": "4. IR and ER",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Maintenance/Maintenance Manager_electric.docx",
+   "department": "Maintenance",
+   "role": "Maintenance Manager (Electric)",
+   "reporting_to": "MD",
+   "scope": [
+    "Maintenance Planning and Strategy",
+    "Preventive and Corrective Maintenance",
+    "Equipment and Facility Management",
+    "Vendor and Contractor Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Maintenance Planning and Strategy",
+     "detail": "Developing and implementing maintenance plans and strategies to ensure the effective and efficient maintenance of equipment, machinery, and facilities. This includes determining maintenance requirements, setting maintenance priorities, and establishing maintenance schedules."
+    },
+    {
+     "area": "Preventive and Corrective Maintenance",
+     "detail": "Overseeing preventive maintenance activities to minimize equipment failures and breakdowns. This involves creating preventive maintenance schedules, conducting inspections, and ensuring timely servicing. Additionally, managing corrective maintenance by addressing breakdowns or malfunctions promptly and effectively."
+    },
+    {
+     "area": "Equipment and Facility Management",
+     "detail": "Managing the organization's equipment and facilities to ensure proper functioning and optimal utilization. This includes conducting regular equipment inspections, coordinating repairs and replacements, and implementing asset management strategies."
+    },
+    {
+     "area": "Budgeting and Resource Management",
+     "detail": "Collaborating with the management team to develop maintenance budgets and effectively allocate resources. This includes estimating costs, tracking expenditures, optimizing resource utilization, and making informed decisions to balance maintenance needs with financial constraints"
+    },
+    {
+     "area": "Vendor and Contractor Management",
+     "detail": "Managing relationships with external vendors, contractors, and service providers. This involves sourcing and selecting vendors, negotiating contracts, monitoring performance, and ensuring the timely and cost-effective delivery of maintenance services."
+    },
+    {
+     "area": "Asset Management",
+     "detail": "Managing the organization's assets throughout their lifecycle. This involves developing asset management strategies, conducting regular inspections, implementing maintenance plans, and making informed decisions regarding repair, replacement, or disposal of assets."
+    },
+    {
+     "area": "Reporting and Documentation",
+     "detail": "Maintaining accurate records and preparing reports related to maintenance activities, expenses, equipment history, and performance metrics. This includes providing regular updates to management on maintenance performance, identifying trends, and highlighting areas for improvement."
+    }
+   ],
+   "delegation": [
+    "Yogender"
+   ],
+   "competencies": [
+    {
+     "competency": "Technical Expertise",
+     "description": "A strong technical knowledge of maintenance principles, equipment, machinery, and facility systems is essential. This includes understanding maintenance best practices, troubleshooting techniques, and the ability to interpret technical manuals and specifications."
+    },
+    {
+     "competency": "Leadership",
+     "description": "Effective leadership skills are necessary to guide and motivate the maintenance team. This includes the ability to provide clear direction, delegate tasks, foster teamwork, and inspire others to achieve maintenance goals."
+    },
+    {
+     "competency": "Planning and Organization",
+     "description": "Strong planning and organizational skills are crucial for developing maintenance plans, setting priorities, and scheduling tasks. This includes creating maintenance schedules, coordinating resources, and ensuring efficient use of time and materials."
+    },
+    {
+     "competency": "Problem Solving",
+     "description": "The ability to identify and solve maintenance-related problems is vital. This involves analyzing issues, evaluating alternatives, and implementing effective solutions in a timely manner to minimize downtime and maximize equipment reliability."
+    },
+    {
+     "competency": "Budgeting and Cost Management",
+     "description": "Competence in budgeting and cost management is important to allocate resources effectively and optimize maintenance expenditures. This includes estimating costs, tracking expenses, identifying cost-saving opportunities, and managing maintenance budgets."
+    },
+    {
+     "competency": "Vendor and Contractor Management",
+     "description": "The ability to effectively manage relationships with external vendors, contractors, and service providers is essential. This includes sourcing vendors, negotiating contracts, monitoring performance, and ensuring timely and cost-effective delivery of maintenance services."
+    },
+    {
+     "competency": "Safety and Compliance",
+     "description": "A strong understanding of safety protocols, regulations, and compliance requirements is necessary. This includes implementing and enforcing safety practices, conducting risk assessments, and ensuring compliance with relevant laws and regulations"
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Equipment Downtime",
+     "weight": 20
+    },
+    {
+     "result": "Maintenance Cost as a Percentage of Asset Value",
+     "weight": 20
+    },
+    {
+     "result": "Safety Incident Rate",
+     "weight": 20
+    },
+    {
+     "result": "Mean Time Between Failures (MTBF)",
+     "weight": 10
+    },
+    {
+     "result": "Planned Maintenance Compliance",
+     "weight": 10
+    },
+    {
+     "result": "Reactive Maintenance Ratio",
+     "weight": 10
+    },
+    {
+     "result": "Work Order Completion Rate",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Maintenance/Maintenance Manager_plant.docx",
+   "department": "Maintenance",
+   "role": "Maintenance Manager Plant",
+   "reporting_to": "MD",
+   "scope": [
+    "Maintenance Planning and Strategy",
+    "Preventive and Corrective Maintenance",
+    "Equipment and Facility Management",
+    "Vendor and Contractor Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Maintenance Planning and Strategy",
+     "detail": "Developing and implementing maintenance plans and strategies to ensure the effective and efficient maintenance of equipment, machinery, and facilities. This includes determining maintenance requirements, setting maintenance priorities, and establishing maintenance schedules."
+    },
+    {
+     "area": "Preventive and Corrective Maintenance",
+     "detail": "Overseeing preventive maintenance activities to minimize equipment failures and breakdowns. This involves creating preventive maintenance schedules, conducting inspections, and ensuring timely servicing. Additionally, managing corrective maintenance by addressing breakdowns or malfunctions promptly and effectively."
+    },
+    {
+     "area": "Equipment and Facility Management",
+     "detail": "Managing the organization's equipment and facilities to ensure proper functioning and optimal utilization. This includes conducting regular equipment inspections, coordinating repairs and replacements, and implementing asset management strategies."
+    },
+    {
+     "area": "Budgeting and Resource Management",
+     "detail": "Collaborating with the management team to develop maintenance budgets and effectively allocate resources. This includes estimating costs, tracking expenditures, optimizing resource utilization, and making informed decisions to balance maintenance needs with financial constraints"
+    },
+    {
+     "area": "Vendor and Contractor Management",
+     "detail": "Managing relationships with external vendors, contractors, and service providers. This involves sourcing and selecting vendors, negotiating contracts, monitoring performance, and ensuring the timely and cost-effective delivery of maintenance services."
+    },
+    {
+     "area": "Asset Management",
+     "detail": "Managing the organization's assets throughout their lifecycle. This involves developing asset management strategies, conducting regular inspections, implementing maintenance plans, and making informed decisions regarding repair, replacement, or disposal of assets."
+    },
+    {
+     "area": "Reporting and Documentation",
+     "detail": "Maintaining accurate records and preparing reports related to maintenance activities, expenses, equipment history, and performance metrics. This includes providing regular updates to management on maintenance performance, identifying trends, and highlighting areas for improvement."
+    }
+   ],
+   "delegation": [
+    "Yogender"
+   ],
+   "competencies": [
+    {
+     "competency": "Technical Expertise",
+     "description": "A strong technical knowledge of maintenance principles, equipment, machinery, and facility systems is essential. This includes understanding maintenance best practices, troubleshooting techniques, and the ability to interpret technical manuals and specifications."
+    },
+    {
+     "competency": "Leadership",
+     "description": "Effective leadership skills are necessary to guide and motivate the maintenance team. This includes the ability to provide clear direction, delegate tasks, foster teamwork, and inspire others to achieve maintenance goals."
+    },
+    {
+     "competency": "Planning and Organization",
+     "description": "Strong planning and organizational skills are crucial for developing maintenance plans, setting priorities, and scheduling tasks. This includes creating maintenance schedules, coordinating resources, and ensuring efficient use of time and materials."
+    },
+    {
+     "competency": "Problem Solving",
+     "description": "The ability to identify and solve maintenance-related problems is vital. This involves analyzing issues, evaluating alternatives, and implementing effective solutions in a timely manner to minimize downtime and maximize equipment reliability."
+    },
+    {
+     "competency": "Budgeting and Cost Management",
+     "description": "Competence in budgeting and cost management is important to allocate resources effectively and optimize maintenance expenditures. This includes estimating costs, tracking expenses, identifying cost-saving opportunities, and managing maintenance budgets."
+    },
+    {
+     "competency": "Vendor and Contractor Management",
+     "description": "The ability to effectively manage relationships with external vendors, contractors, and service providers is essential. This includes sourcing vendors, negotiating contracts, monitoring performance, and ensuring timely and cost-effective delivery of maintenance services."
+    },
+    {
+     "competency": "Safety and Compliance",
+     "description": "A strong understanding of safety protocols, regulations, and compliance requirements is necessary. This includes implementing and enforcing safety practices, conducting risk assessments, and ensuring compliance with relevant laws and regulations"
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Maintenance Planning and Strategy",
+     "weight": 20
+    },
+    {
+     "result": "Preventive and Corrective Maintenance",
+     "weight": 30
+    },
+    {
+     "result": "Equipment and Facility Management",
+     "weight": 30
+    },
+    {
+     "result": "Vendor and Contractor Management",
+     "weight": 20
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Maintenance/Maintenance Supervisor Electrician.docx",
+   "department": "Maintenance",
+   "role": "Maintenance Executive_Electric",
+   "reporting_to": "Maintenance Manager",
+   "scope": [
+    "Team Management",
+    "Maintenance Planning and Scheduling",
+    "Preventive and Corrective Maintenance",
+    "Work Order Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Team Management",
+     "detail": "Accountable for managing and supervising the maintenance team. This includes assigning tasks, providing guidance and support, conducting performance evaluations, and fostering a positive and productive work environment."
+    },
+    {
+     "area": "Maintenance Planning and Scheduling",
+     "detail": "Accountable for planning and scheduling maintenance activities. This involves developing maintenance plans, setting priorities, coordinating resources, and ensuring timely completion of tasks."
+    },
+    {
+     "area": "Preventive and Corrective Maintenance",
+     "detail": "Accountable for overseeing preventive and corrective maintenance activities. This includes conducting regular inspections, coordinating servicing and repairs, and ensuring prompt resolution of breakdowns or malfunctions"
+    },
+    {
+     "area": "Work Order Management",
+     "detail": "Accountable for managing work orders and service requests. This includes receiving and prioritizing work orders, assigning tasks to team members, monitoring progress, and ensuring timely completion of maintenance tasks."
+    },
+    {
+     "area": "Reporting and Documentation",
+     "detail": "Accountable for maintaining accurate records and preparing reports related to maintenance activities, expenses, equipment history, and performance metrics. This includes providing regular updates to management on maintenance performance, identifying trends, and highlighting areas for improvement"
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Technical Knowledge",
+     "description": "A strong understanding of maintenance principles, procedures, and best practices is crucial. This includes knowledge of equipment and machinery maintenance, troubleshooting techniques, and familiarity with relevant industry standards"
+    },
+    {
+     "competency": "Planning and Organization",
+     "description": "Strong planning and organizational skills are necessary for coordinating maintenance activities. This includes developing maintenance plans, setting priorities, creating schedules, and ensuring resources are allocated effectively."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "The ability to identify and resolve maintenance-related issues is vital. This includes analyzing problems, evaluating alternatives, and implementing effective solutions in a timely manner to minimize downtime and maximize equipment reliability"
+    },
+    {
+     "competency": "Safety Awareness",
+     "description": "A strong understanding of safety protocols and a commitment to safety is critical. This includes ensuring compliance with safety regulations, conducting risk assessments, and promoting a safe work environment for the maintenance team."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Strong attention to detail is necessary for conducting thorough inspections, maintaining accurate records, and ensuring compliance with maintenance standards and procedures."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Equipment Downtime",
+     "weight": 20
+    },
+    {
+     "result": "Mean Time Between Failures (MTBF)",
+     "weight": 20
+    },
+    {
+     "result": "Preventive Maintenance Compliance",
+     "weight": 15
+    },
+    {
+     "result": "Work Order Completion Rate",
+     "weight": 15
+    },
+    {
+     "result": "Reactive Maintenance Ratio",
+     "weight": 20
+    },
+    {
+     "result": "Safety Incident Rate",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Maintenance/Maintenance Supervisor Plant.docx",
+   "department": "Maintenance",
+   "role": "Maintenance Executive_Plant",
+   "reporting_to": "Maintenance Manager",
+   "scope": [
+    "Team Management",
+    "Maintenance Planning and Scheduling",
+    "Preventive and Corrective Maintenance",
+    "Work Order Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Team Management",
+     "detail": "Accountable for managing and supervising the maintenance team. This includes assigning tasks, providing guidance and support, conducting performance evaluations, and fostering a positive and productive work environment."
+    },
+    {
+     "area": "Maintenance Planning and Scheduling",
+     "detail": "Accountable for planning and scheduling maintenance activities. This involves developing maintenance plans, setting priorities, coordinating resources, and ensuring timely completion of tasks."
+    },
+    {
+     "area": "Preventive and Corrective Maintenance",
+     "detail": "Accountable for overseeing preventive and corrective maintenance activities. This includes conducting regular inspections, coordinating servicing and repairs, and ensuring prompt resolution of breakdowns or malfunctions"
+    },
+    {
+     "area": "Work Order Management",
+     "detail": "Accountable for managing work orders and service requests. This includes receiving and prioritizing work orders, assigning tasks to team members, monitoring progress, and ensuring timely completion of maintenance tasks."
+    },
+    {
+     "area": "Reporting and Documentation",
+     "detail": "Accountable for maintaining accurate records and preparing reports related to maintenance activities, expenses, equipment history, and performance metrics. This includes providing regular updates to management on maintenance performance, identifying trends, and highlighting areas for improvement"
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Technical Knowledge",
+     "description": "A strong understanding of maintenance principles, procedures, and best practices is crucial. This includes knowledge of equipment and machinery maintenance, troubleshooting techniques, and familiarity with relevant industry standards"
+    },
+    {
+     "competency": "Planning and Organization",
+     "description": "Strong planning and organizational skills are necessary for coordinating maintenance activities. This includes developing maintenance plans, setting priorities, creating schedules, and ensuring resources are allocated effectively."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "The ability to identify and resolve maintenance-related issues is vital. This includes analyzing problems, evaluating alternatives, and implementing effective solutions in a timely manner to minimize downtime and maximize equipment reliability"
+    },
+    {
+     "competency": "Safety Awareness",
+     "description": "A strong understanding of safety protocols and a commitment to safety is critical. This includes ensuring compliance with safety regulations, conducting risk assessments, and promoting a safe work environment for the maintenance team."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Strong attention to detail is necessary for conducting thorough inspections, maintaining accurate records, and ensuring compliance with maintenance standards and procedures."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Preventive Maintenance",
+     "weight": 30
+    },
+    {
+     "result": "Corrective  Maintenance",
+     "weight": 20
+    },
+    {
+     "result": "Work Order Management",
+     "weight": 30
+    },
+    {
+     "result": ",Mean Time To Repair (MTTR)",
+     "weight": 15
+    },
+    {
+     "result": "Mean Time Between Failures (MTBF)",
+     "weight": 15
+    }
+   ],
+   "kpi_weight_total": 110
+  },
+  {
+   "file": "MD/MD.docx",
+   "department": "MD",
+   "role": "Director",
+   "reporting_to": "Self",
+   "scope": [],
+   "accountabilities": [
+    {
+     "area": "Strategic Planning",
+     "detail": "Developing and implementing the organization's overall strategic direction, setting clear objectives, and aligning business strategies with long-term goals."
+    },
+    {
+     "area": "Financial Management",
+     "detail": "Overseeing budgeting, financial planning, and financial performance of the food business, ensuring profitability and cost-effectiveness."
+    },
+    {
+     "area": "Operations Management",
+     "detail": "Managing the day-to-day operations of the food industry, optimizing processes, and ensuring efficient production and distribution."
+    },
+    {
+     "area": "Regulatory Compliance",
+     "detail": "Ensuring that the food industry operations comply with all relevant regulations, food safety standards, and legal requirements."
+    },
+    {
+     "area": "Sales and Marketing",
+     "detail": "Collaborating with the sales and marketing teams to develop effective strategies for product promotion and market expansion."
+    },
+    {
+     "area": "Product Development and Innovation",
+     "detail": "Leading efforts to develop new food products, improve existing ones, and stay ahead of industry trends and consumer demands."
+    },
+    {
+     "area": "Supply Chain Management",
+     "detail": "Managing the sourcing of raw materials and ingredients, ensuring a reliable supply chain, and building strong relationships with suppliers."
+    },
+    {
+     "area": "Risk Management",
+     "detail": "Identifying potential risks to the business and implementing strategies to mitigate them, such as crisis management planning and contingency plans."
+    },
+    {
+     "area": "Sustainability and Environmental Initiatives",
+     "detail": "Incorporating sustainable practices and environmentally friendly initiatives into the food industry operations."
+    },
+    {
+     "area": "Board and Stakeholder Relations",
+     "detail": "Reporting to the board of directors or senior management and communicating effectively with stakeholders, investors, and regulatory bodies."
+    },
+    {
+     "area": "Industry Research",
+     "detail": "Staying updated with the latest industry trends, technologies, and best practices to drive innovation and maintain a competitive edge."
+    }
+   ],
+   "delegation": [
+    "Production manager -Dheeraj",
+    "Qulaity manager -Rupesh",
+    "HR manager - Ranjit Jha",
+    "MIS- Amit",
+    "Sales - Anuj",
+    "RSM - sanjay sharma",
+    "Accounts - Sumit",
+    "Administrator- Rajeev",
+    "EA"
+   ],
+   "competencies": [
+    {
+     "competency": "Strategic Vision",
+     "description": "The ability to develop a clear and compelling vision for the organization's future and create a strategic roadmap to achieve long-term goals."
+    },
+    {
+     "competency": "Business Acumen",
+     "description": "A strong understanding of the food industry, including market trends, consumer preferences, and industry regulations, to make informed decisions and capitalize on opportunities."
+    },
+    {
+     "competency": "Financial Management",
+     "description": "Proficiency in financial analysis, budgeting, and cost control to ensure the organization's financial health and sustainable growth."
+    },
+    {
+     "competency": "Leadership and Team Management",
+     "description": "Strong leadership skills to inspire and motivate teams, delegate responsibilities, and foster a positive and collaborative work environment."
+    },
+    {
+     "competency": "Innovation and Adaptability",
+     "description": "A mindset that embraces innovation, openness to change, and the ability to adapt to evolving market dynamics and consumer needs."
+    },
+    {
+     "competency": "Strategic Partnerships",
+     "description": "Building and maintaining strategic partnerships with suppliers, distributors, and other stakeholders to enhance the organization's capabilities and market reach."
+    },
+    {
+     "competency": "Quality and Safety Focus",
+     "description": "A commitment to maintaining high standards of product quality and safety to ensure consumer satisfaction and regulatory compliance."
+    },
+    {
+     "competency": "Risk Management",
+     "description": "The ability to identify potential risks and develop risk mitigation strategies to safeguard the organization from potential threats."
+    },
+    {
+     "competency": "Environmental Sustainability",
+     "description": "Awareness of sustainability practices and the ability to implement environmentally friendly initiatives in the food industry operations."
+    },
+    {
+     "competency": "Strategic Communication",
+     "description": "Proficiency in articulating the organization's vision, goals, and progress to stakeholders, employees, and investors."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Revenue Growth: The percentage increase in overall revenue generated by the food industry business under your leadership, compared to previous periods or targets.",
+     "weight": null
+    },
+    {
+     "result": "Profit Margin: The ratio of net profit to revenue, reflecting your ability to manage costs and drive profitability in the food industry operations.",
+     "weight": null
+    },
+    {
+     "result": "Market Share: The percentage of the market share captured by the organization within the food industry segment, indicating your success in gaining a competitive advantage.",
+     "weight": null
+    },
+    {
+     "result": "Customer Satisfaction: Measured through surveys, feedback, and reviews, assessing the satisfaction levels of customers with the organization's products and services.",
+     "weight": null
+    },
+    {
+     "result": "Product Innovation: The number of new products introduced to the market under your leadership, demonstrating your ability to drive innovation and meet evolving consumer needs.",
+     "weight": null
+    },
+    {
+     "result": "Quality and Safety Metrics: Tracking indicators such as product recalls, safety incidents, and adherence to quality standards, reflecting your focus on product excellence and safety.",
+     "weight": null
+    },
+    {
+     "result": "Strategic Goal Achievement: Measuring the progress and achievement of strategic goals set for the organization under your leadership.",
+     "weight": null
+    },
+    {
+     "result": "Operational Efficiency: Indicators such as production output, wastage, and downtime, reflecting your success in optimizing operational processes.",
+     "weight": null
+    },
+    {
+     "result": "Business Expansion: Tracking the successful establishment of new branches, partnerships, or market expansion initiatives in the food industry.",
+     "weight": null
+    },
+    {
+     "result": "Environmental Impact: Indicators related to sustainability and environmental practices, such as waste reduction, energy consumption, and eco-friendly initiatives.",
+     "weight": null
+    },
+    {
+     "result": "Brand Awareness: Metrics related to brand recognition and awareness, indicating your success in positioning the organization in the food industry market.",
+     "weight": null
+    },
+    {
+     "result": "Employee Development: Tracking the progress of employee development and training programs to ensure a skilled and motivated workforce.",
+     "weight": null
+    },
+    {
+     "result": "Strategic Planning & Goal creation",
+     "weight": 20
+    },
+    {
+     "result": "New market and Product development",
+     "weight": 15
+    },
+    {
+     "result": "Sales Growth",
+     "weight": 20
+    },
+    {
+     "result": "Management Review meeting and annalysis",
+     "weight": 15
+    },
+    {
+     "result": "Action orientation",
+     "weight": 20
+    },
+    {
+     "result": "Improving system and process",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "MIS/Data Collector.docx",
+   "department": "MIS",
+   "role": "Data Collector",
+   "reporting_to": "MIS Executive",
+   "scope": [
+    "Data Collection",
+    "Data Entry and Management",
+    "Quality Control and Assurance",
+    "Data Validation and Verification",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Data Collection",
+     "detail": "Your primary responsibility is to collect data from various sources within the food industry. This includes production processes, quality control checkpoints, inventory systems, supplier information, customer feedback, and other relevant areas. You must ensure the accuracy, completeness, and timeliness of data collection."
+    },
+    {
+     "area": "Data Entry and Documentation",
+     "detail": "Accurately enter collected data into designated databases, spreadsheets, or information systems. Follow established protocols and guidelines for data entry to maintain data integrity. Maintain appropriate documentation, such as data collection forms, logbooks, or records, to ensure traceability and auditability."
+    },
+    {
+     "area": "Data Validation and Quality Control",
+     "detail": "Verify the accuracy and consistency of collected data through validation and quality control procedures. Conduct checks and audits to identify and resolve any discrepancies or errors. Collaborate with quality control teams to ensure data meets the required quality standards."
+    },
+    {
+     "area": "Data Analysis Support",
+     "detail": "Collaborate with data analysts or other stakeholders to provide support for data analysis activities. Assist in data preparation, cleaning, and transformation to ensure data is in a suitable format for analysis. Contribute to generating basic reports or visualizations based on collected data."
+    },
+    {
+     "area": "Data Organization and Management",
+     "detail": "Organize and manage collected data in a structured and accessible manner. Develop and maintain data organization practices, including naming conventions, folder structures, and version control. Ensure data is properly stored, archived, and secured."
+    }
+   ],
+   "delegation": [],
+   "competencies": [
+    {
+     "competency": "Data Collection Methods",
+     "description": "Familiarity with various data collection methods, such as manual data entry, automated data capture tools, and sensor technologies. Understanding when and how to use different methods based on the nature of the data and the specific requirements of the food industry."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Strong attention to detail is essential for accurate data collection. Being meticulous in capturing data, verifying information, and detecting any errors or inconsistencies. Paying close attention to ensure data accuracy and completeness."
+    },
+    {
+     "competency": "Data Management",
+     "description": "Competence in managing data, including organizing, storing, and maintaining data integrity. Familiarity with data management practices, such as data entry protocols, data validation techniques, and documentation standards."
+    },
+    {
+     "competency": "Data Validation and Quality Control",
+     "description": "Understanding data validation methods and quality control procedures to ensure the accuracy and consistency of collected data. Ability to identify and address data discrepancies, errors, or outliers."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "Strong problem-solving skills to identify and resolve issues related to data collection. Ability to troubleshoot data collection challenges, address technical issues, and find solutions to improve data collection processes."
+    },
+    {
+     "competency": "Continuous Learning",
+     "description": "A willingness to learn and stay updated with industry trends, best practices, and emerging technologies related to data collection. Being proactive in seeking opportunities for professional development and acquiring new skills."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Data Accuracy",
+     "weight": 35
+    },
+    {
+     "result": "Data Completeness",
+     "weight": 20
+    },
+    {
+     "result": "Data Management Efficiency",
+     "weight": 20
+    },
+    {
+     "result": "Data Quality Control",
+     "weight": 15
+    },
+    {
+     "result": "Coordination",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "MIS/MIS EXECUTIVE.docx",
+   "department": "MIS",
+   "role": "MIS Executive",
+   "reporting_to": "MD",
+   "scope": [
+    "Information Systems Management",
+    "Data Management and Analysis",
+    "Process Optimization",
+    "Training and Support",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Selecting, implementing, and managing appropriate information systems, such as ERP, inventory management, or quality control systems.",
+     "detail": ""
+    },
+    {
+     "area": "Ensuring the smooth operation of information systems and addressing any technical issues or challenges.",
+     "detail": ""
+    },
+    {
+     "area": "Overseeing system upgrades, maintenance, and integration with other systems.",
+     "detail": ""
+    },
+    {
+     "area": "Establishing and maintaining data governance frameworks, including data standards, data validation procedures, and data quality assurance.",
+     "detail": ""
+    },
+    {
+     "area": "Collecting, storing, and organizing data in databases or data warehouses",
+     "detail": ""
+    },
+    {
+     "area": "Conducting data analysis, identifying trends, patterns, and insights to support decision-making.",
+     "detail": ""
+    },
+    {
+     "area": "Developing and generating reports, dashboards, and visualizations to present data in a meaningful and actionable way.",
+     "detail": ""
+    },
+    {
+     "area": "Collaborating with cross-functional teams to identify process bottlenecks, inefficiencies, and areas for improvement.",
+     "detail": ""
+    },
+    {
+     "area": "Implementing process automation solutions to enhance productivity and reduce costs.",
+     "detail": ""
+    },
+    {
+     "area": "Streamlining workflows and procedures to improve operational efficiency.",
+     "detail": ""
+    },
+    {
+     "area": "Monitoring and analyzing key performance indicators (KPIs) to measure process effectiveness and identify opportunities for optimization.",
+     "detail": ""
+    },
+    {
+     "area": "Providing training and support to users on information systems, ensuring they understand and can effectively utilize the systems.",
+     "detail": ""
+    },
+    {
+     "area": "Creating user manuals, documentation, and training materials.",
+     "detail": ""
+    },
+    {
+     "area": "Addressing user queries or issues related to system usage and providing technical assistance.",
+     "detail": ""
+    }
+   ],
+   "delegation": [
+    "Vipin",
+    "Parvinder"
+   ],
+   "competencies": [
+    {
+     "competency": "Technical Knowledge",
+     "description": "A solid understanding of information systems, database management, data analysis, and relevant software and tools is crucial. Proficiency in technologies such as ERP systems, data analytics software, reporting tools, and database management systems is essential"
+    },
+    {
+     "competency": "Data Management",
+     "description": "Strong skills in data collection, organization, and analysis are necessary. This includes data validation, data cleansing, data modeling, and data visualization techniques. An ability to identify and work with relevant data sources, design effective data structures, and ensure data accuracy and integrity is vital"
+    },
+    {
+     "competency": "Business Acumen",
+     "description": "Understanding the food industry, its processes, and key business drivers is essential. You should possess knowledge of industry-specific challenges, regulations, and trends. This enables you to align information systems and data analysis with business objectives, identify opportunities for improvement, and provide valuable insights for decision-making"
+    },
+    {
+     "competency": "Communication and Collaboration",
+     "description": "Effective communication skills, both verbal and written, are crucial for interacting with stakeholders at various levels. You should be able to explain complex technical concepts to non-technical individuals, actively listen to understand requirements, and present information and insights in a clear and concise manner. Collaboration skills are important for working with cross-functional teams, IT personnel, vendors, and end-users."
+    },
+    {
+     "competency": "Problem Solving",
+     "description": "The ability to identify problems, evaluate alternative solutions, and implement effective resolutions is vital. You should be able to approach challenges analytically, think critically, and propose innovative solutions. Strong problem-solving skills enable you to address technical issues, optimize processes, and drive continuous improvement."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Given the importance of data accuracy and system reliability, having a keen eye for detail is crucial. You should pay attention to small details, ensure data integrity, and validate information. This competency helps you avoid errors and make informed decisions based on accurate and reliable data"
+    }
+   ],
+   "kpis": [
+    {
+     "result": "System Uptime and Reliability",
+     "weight": 30
+    },
+    {
+     "result": "Data Accuracy and Integrity",
+     "weight": 25
+    },
+    {
+     "result": "Dashboard and Data analysis",
+     "weight": 20
+    },
+    {
+     "result": "Process Efficiency and Optimization",
+     "weight": 15
+    },
+    {
+     "result": "Project Management",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "MIS/MIS PC.docx",
+   "department": "MIS",
+   "role": "Process Controller",
+   "reporting_to": "MIS Executive",
+   "scope": [
+    "Process Monitoring and Control",
+    "Quality Assurance",
+    "Process Optimization:",
+    "Data Analysis and Reporting",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Continuously monitor production processes, including variables such as temperature, pressure, and flow rates.",
+     "detail": ""
+    },
+    {
+     "area": "Ensure that processes are operating within specified parameters and make necessary adjustments to maintain optimal conditions.",
+     "detail": ""
+    },
+    {
+     "area": "Use control systems and tools to monitor and control process variables in real-time.",
+     "detail": ""
+    },
+    {
+     "area": "Implement and monitor quality control procedures to ensure compliance with quality standards and regulatory requirements.",
+     "detail": ""
+    },
+    {
+     "area": "Conduct regular inspections and tests to verify product quality and identify any deviations or non-conformities.",
+     "detail": ""
+    },
+    {
+     "area": "Collaborate with the Quality Assurance team to address quality issues, investigate root causes, and implement corrective actions.",
+     "detail": ""
+    },
+    {
+     "area": "Analyze process data to identify opportunities for process optimization and improvement",
+     "detail": ""
+    },
+    {
+     "area": "Propose and implement changes to enhance process efficiency, reduce waste, and increase productivity.",
+     "detail": ""
+    },
+    {
+     "area": "Collaborate with cross-functional teams to implement process optimization initiatives and monitor their effectiveness.",
+     "detail": ""
+    },
+    {
+     "area": "Collect and analyze process data to gain insights into process performance, identify trends, and monitor key metrics.",
+     "detail": ""
+    },
+    {
+     "area": "Generate reports, dashboards, and visualizations to communicate process performance and highlight areas for improvement.",
+     "detail": ""
+    },
+    {
+     "area": "Provide recommendations based on data analysis to enhance process efficiency and effectiveness.",
+     "detail": ""
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Process Knowledge",
+     "description": "A strong understanding of production processes, equipment, and operations in the food industry is crucial. This includes knowledge of process variables, control systems, and the interplay between different stages of production."
+    },
+    {
+     "competency": "Technical Aptitude",
+     "description": "Proficiency in using and troubleshooting production equipment, control systems, and data analysis tools is essential. You should have a solid grasp of technology, including automation systems, instrumentation, and data management software."
+    },
+    {
+     "competency": "Data Analysis",
+     "description": "The ability to collect, analyze, and interpret process data is vital for identifying trends, deviations, and opportunities for improvement. Competency in statistical analysis, data visualization, and using software tools for data analysis is valuable."
+    },
+    {
+     "competency": "Quality Assurance",
+     "description": "Understanding and implementing quality control procedures, adherence to regulatory requirements, and ensuring product quality are essential competencies. You should be familiar with quality management systems, testing methods, and quality assurance principles."
+    },
+    {
+     "competency": "Safety Awareness",
+     "description": "A strong commitment to safety is essential in the food industry. You should have a thorough understanding of safety protocols, hazard identification, and risk mitigation practices to maintain a safe working environment."
+    },
+    {
+     "competency": "Regulatory Compliance",
+     "description": "Familiarity with food safety regulations, quality standards, and compliance requirements specific to the food industry is crucial. This competency enables you to maintain regulatory compliance and implement best practices."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Process Efficiency",
+     "weight": 30
+    },
+    {
+     "result": "Process Variability",
+     "weight": 20
+    },
+    {
+     "result": "Data Analysis and Reporting",
+     "weight": 20
+    },
+    {
+     "result": "Data Accuracy",
+     "weight": 20
+    },
+    {
+     "result": "Continuous Improvement",
+     "weight": 20
+    }
+   ],
+   "kpi_weight_total": 110
+  },
+  {
+   "file": "Operation/Operation Head.docx",
+   "department": "Operation",
+   "role": "Operation Head",
+   "reporting_to": "MD",
+   "scope": [],
+   "accountabilities": [
+    {
+     "area": "Ensuring that production processes run efficiently and meet production targets.",
+     "detail": ""
+    },
+    {
+     "area": "Optimizing production schedules to maximize resource utilization.",
+     "detail": ""
+    },
+    {
+     "area": "Minimizing downtime and disruptions in production.",
+     "detail": ""
+    },
+    {
+     "area": "Ensuring that the facility complies with all relevant food safety regulations and standards.",
+     "detail": ""
+    },
+    {
+     "area": "Implementing and maintaining HACCP (Hazard Analysis Critical Control Points) and other food safety management systems.",
+     "detail": ""
+    },
+    {
+     "area": "Conducting internal and external food safety audits.",
+     "detail": ""
+    },
+    {
+     "area": "Leading and supervising production teams, including hiring, training, and performance management.",
+     "detail": ""
+    },
+    {
+     "area": "Fostering a culture of teamwork, safety, and continuous improvement.",
+     "detail": ""
+    },
+    {
+     "area": "Providing guidance and support to team members",
+     "detail": ""
+    },
+    {
+     "area": "Identifying opportunities for process optimization and efficiency improvements.",
+     "detail": ""
+    },
+    {
+     "area": "Implementing lean manufacturing principles and continuous improvement initiatives.",
+     "detail": ""
+    },
+    {
+     "area": "Measuring and reporting on key performance indicators (KPIs) to track progress.",
+     "detail": ""
+    },
+    {
+     "area": "Participating in strategic planning and decision-making processes.",
+     "detail": ""
+    },
+    {
+     "area": "Providing input on expansion plans, new product development, and market strategies.",
+     "detail": ""
+    },
+    {
+     "area": "Aligning operational goals with the company's overall business objectives.",
+     "detail": ""
+    },
+    {
+     "area": "Developing and executing contingency plans to address unexpected events or crises, such as product recalls or supply chain disruptions.",
+     "detail": ""
+    },
+    {
+     "area": "Ensuring business continuity during crises.",
+     "detail": ""
+    }
+   ],
+   "delegation": [
+    "Ashok Ray (Operation Head)"
+   ],
+   "competencies": [
+    {
+     "competency": "Food Industry Expertise",
+     "description": "In-depth understanding of food production processes, safety standards, and regulations specific to the industry."
+    },
+    {
+     "competency": "Quality Assurance",
+     "description": "Proficiency in quality control procedures, including HACCP, to ensure product quality and safety."
+    },
+    {
+     "competency": "Supply Chain Management",
+     "description": "Knowledge of procurement, inventory management, and logistics to optimize the supply chain."
+    },
+    {
+     "competency": "Cost Management",
+     "description": "Ability to manage budgets and control operational costs effectively."
+    },
+    {
+     "competency": "Technology Proficiency",
+     "description": "Familiarity with relevant software and technology used in production and inventory management."
+    },
+    {
+     "competency": "Project Planning",
+     "description": "Skills to plan and execute projects, such as process improvements or facility expansions."
+    },
+    {
+     "competency": "Time Management",
+     "description": "Effectively managing time and resources to meet project deadlines."
+    },
+    {
+     "competency": "Environmental Sustainability:",
+     "description": ""
+    },
+    {
+     "competency": "Sustainability Awareness",
+     "description": "Understanding and promoting environmentally sustainable practices within the organization."
+    },
+    {
+     "competency": "Regulatory Compliance",
+     "description": "Ensuring compliance with environmental regulations and certifications."
+    },
+    {
+     "competency": "Emergency Response",
+     "description": "Ability to develop and execute contingency plans in response to crises or unexpected events."
+    },
+    {
+     "competency": "Business Continuity",
+     "description": "Ensuring business operations continue smoothly during crises"
+    },
+    {
+     "competency": "419100165100RESULTS EXPECTED (KPIs)",
+     "description": ""
+    },
+    {
+     "competency": "Food Safety Compliance 10%",
+     "description": ""
+    },
+    {
+     "competency": "Environmental Sustainability 30%",
+     "description": ""
+    }
+   ],
+   "kpis": [],
+   "kpi_weight_total": 0
+  },
+  {
+   "file": "Plant Manager.docx",
+   "department": "(root)",
+   "role": "Plant Manager Annexure A",
+   "reporting_to": "MD/HR",
+   "scope": [
+    "Quality Management System (QMS)",
+    "Safety and Quality , Regulatory Compliance",
+    "Supplier and Vendor Management",
+    "Maintenance Planning and Strategy , Preventive and Corrective Maintenance",
+    "Equipment and Facility Management",
+    "Operations Management",
+    "Quality Assurance and Control",
+    "Supply Chain and Logistics",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Production Planning and Scheduling",
+     "detail": "Develop production plans and schedules to meet customer demands and optimize resource utilization. Coordinate with other departments, such as sales, procurement, and logistics, to ensure a smooth production flow and timely delivery of products."
+    },
+    {
+     "area": "Operations Management",
+     "detail": "Oversee all production operations, including manufacturing processes, equipment utilization, and inventory management. Ensure efficient workflow, monitor production metrics, and take proactive measures to optimize productivity and minimize downtime."
+    },
+    {
+     "area": "Development and Implementation of Quality Management Systems (QMS)",
+     "detail": "Designing, developing, and implementing a robust Quality Management System that aligns with regulatory requirements, industry standards, and best practices. This includes establishing quality policies, procedures, and guidelines."
+    },
+    {
+     "area": "Compliance with Regulatory Standards",
+     "detail": "Ensuring compliance with applicable food safety regulations, standards, and guidelines set by regulatory authorities such as the FDA (Food and Drug Administration) or local health departments. This includes monitoring changes in regulations, conducting internal audits, and ensuring adherence to food safety practices."
+    },
+    {
+     "area": "Quality Control and Assurance",
+     "detail": "Overseeing quality control and assurance activities throughout the production and processing stages. This involves establishing quality standards, conducting inspections, testing products, analyzing data, and monitoring critical control points to ensure product safety, consistency, and adherence to quality specifications."
+    },
+    {
+     "area": "Supplier and Vendor Management",
+     "detail": "Managing the quality performance of suppliers and vendors by implementing robust supplier quality management processes. This includes conducting supplier audits, assessing quality systems, and ensuring the consistent delivery of high-quality raw materials and ingredients."
+    },
+    {
+     "area": "Audits and Certifications",
+     "detail": "Coordinating and participating in internal and external audits to evaluate the effectiveness of the quality management system and ensure compliance with relevant certifications and standards. This includes preparing for audits, addressing findings, and implementing necessary corrective actions."
+    },
+    {
+     "area": "Documentation and Record Keeping",
+     "detail": "Maintaining accurate and up-to-date documentation and records related to quality management activities. This includes maintaining standard operating procedures, test results, corrective action reports, customer feedback, and audit records. It also involves ensuring proper record retention for traceability and compliance purposes."
+    },
+    {
+     "area": "Maintenance Planning and Strategy",
+     "detail": "Developing and implementing maintenance plans and strategies to ensure the effective and efficient maintenance of equipment, machinery, and facilities. This includes determining maintenance requirements, setting maintenance priorities, and establishing maintenance schedules."
+    },
+    {
+     "area": "Preventive and Corrective Maintenance",
+     "detail": "Overseeing preventive maintenance activities to minimize equipment failures and breakdowns. This involves creating preventive maintenance schedules, conducting inspections, and ensuring timely servicing. Additionally, managing corrective maintenance by addressing breakdowns or malfunctions promptly and effectively."
+    },
+    {
+     "area": "Equipment and Facility Management",
+     "detail": "Managing the organization's equipment and facilities to ensure proper functioning and optimal utilization. This includes conducting regular equipment inspections, coordinating repairs and replacements, and implementing asset management strategies."
+    },
+    {
+     "area": "Budgeting and Resource Management",
+     "detail": "Collaborating with the management team to develop maintenance budgets and effectively allocate resources. This includes estimating costs, tracking expenditures, optimizing resource utilization, and making informed decisions to balance maintenance needs with financial constraints"
+    },
+    {
+     "area": "Vendor and Contractor Management",
+     "detail": "Managing relationships with external vendors, contractors, and service providers. This involves sourcing and selecting vendors, negotiating contracts, monitoring performance, and ensuring the timely and cost-effective delivery of maintenance services."
+    },
+    {
+     "area": "Asset Management",
+     "detail": "Managing the organization's assets throughout their lifecycle. This involves developing asset management strategies, conducting regular inspections, implementing maintenance plans, and making informed decisions regarding repair, replacement, or disposal of assets."
+    },
+    {
+     "area": "Performance Monitoring and Reporting",
+     "detail": "Monitor production performance metrics, such as production output, efficiency, quality, and cost. Generate regular reports to assess performance against targets and identify areas for improvement. Analyze data to make informed decisions and implement strategies to enhance performance Optimizing production schedules to maximize resource utilization.Minimizing downtime and disruptions in production."
+    },
+    {
+     "area": "Inventory Management",
+     "detail": "Ensuring optimal inventory levels is a key accountability. The store incharge is responsible for maintaining accurate inventory records, monitoring stock levels, implementing inventory control measures, and minimizing stock losses or shortages"
+    },
+    {
+     "area": "Operational Efficiency",
+     "detail": "The store incharge is accountable for optimizing store operations to enhance efficiency and productivity. This includes streamlining processes, identifying areas for improvement, implementing cost-saving measures, and ensuring compliance with operational procedures."
+    }
+   ],
+   "delegation": [],
+   "competencies": [
+    {
+     "competency": "Health and Safety",
+     "description": "Knowledge of health and safety regulations and practices in the industry. Ability to implement and enforce safety     protocols, conduct risk assessments, and ensure a safe working environment for all."
+    },
+    {
+     "competency": "Regulatory Compliance",
+     "description": "Proficiency in understanding and interpreting food safety regulations and standards. This includes staying updated on regulatory changes, ensuring compliance with applicable laws and regulations, and effectively communicating regulatory requirements to stakeholders."
+    },
+    {
+     "competency": "Quality Management Systems",
+     "description": "Expertise in developing, implementing, and managing quality management systems (QMS). This includes knowledge of QMS frameworks (e.g., ISO 9001), establishing quality policies and procedures, conducting internal audits, and driving continuous improvement within the organization."
+    },
+    {
+     "competency": "Risk Assessment and Management",
+     "description": "The ability to assess and manage risks associated with food safety and quality. This includes conducting risk assessments, identifying critical control points, implementing control measures, and continuously monitoring and mitigating potential risks."
+    },
+    {
+     "competency": "Auditing and Inspection",
+     "description": "Proficiency in conducting internal and external audits and inspections. This includes knowledge of audit techniques, audit planning, conducting audits, and effectively communicating audit findings and recommendations."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Strong attention to detail is necessary for ensuring accuracy and precision in quality management activities. This includes meticulous documentation, record-keeping, and attention to critical control points to maintain product safety and quality"
+    },
+    {
+     "competency": "Problem-Solving and Root Cause Analysis",
+     "description": "The ability to identify and resolve maintenance , quality-related problems using systematic problem-solving techniques. This includes conducting root cause analysis, applying appropriate problem-solving tools (e.g., 5 Whys, Fishbone Diagrams), and implementing corrective and preventive actions."
+    },
+    {
+     "competency": "Technical Expertise",
+     "description": "A strong technical knowledge of maintenance principles, equipment, machinery, and facility systems is essential. This includes understanding maintenance best practices, troubleshooting techniques, and the ability to interpret technical manuals and specifications."
+    },
+    {
+     "competency": "Leadership and Team Management",
+     "description": "Excellent leadership skills to inspire and motivate production teams. Ability to provide clear direction, set expectations, and foster a positive work culture. Competence in team building, communication, conflict resolution, and performance management."
+    },
+    {
+     "competency": "Planning and Organization",
+     "description": "Strong planning and organizational skills are crucial for developing maintenance plans, setting priorities, and scheduling tasks. This includes creating maintenance schedules, coordinating resources, and ensuring efficient use of time and materials."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Compliance with Regulatory Standards",
+     "weight": 10
+    },
+    {
+     "result": "Audit Performance",
+     "weight": 10
+    },
+    {
+     "result": "Product Quality Indicators",
+     "weight": 20
+    },
+    {
+     "result": "Process Efficiency and Waste Reduction",
+     "weight": 10
+    },
+    {
+     "result": "Continuous Improvement Initiatives",
+     "weight": 5
+    },
+    {
+     "result": "Maintenance Planning and Strategy",
+     "weight": 10
+    },
+    {
+     "result": "Preventive and Corrective Maintenance",
+     "weight": 5
+    },
+    {
+     "result": "Equipment and Facility Management",
+     "weight": 10
+    },
+    {
+     "result": "Inventory Planning",
+     "weight": 5
+    },
+    {
+     "result": "Team Development",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 95
+  },
+  {
+   "file": "Production/Operator.docx",
+   "department": "Production",
+   "role": "Operator",
+   "reporting_to": "Asstt. Manager Production",
+   "scope": [
+    "Equipment Operation",
+    "Technical Knowledge",
+    "Quality Control",
+    "Problem-Solving",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Equipment Operation",
+     "detail": "Competence in operating production machinery and equipment according to standard operating procedures. Ability to handle equipment controls, make adjustments, and troubleshoot basic issues."
+    },
+    {
+     "area": "Technical Knowledge",
+     "detail": "Solid technical knowledge of production processes and equipment used in the food industry. Understanding of the principles behind the operation of different machinery, such as mixers, ovens, conveyors, or packaging machines. Familiarity with safety features, maintenance requirements, and troubleshooting techniques."
+    },
+    {
+     "area": "Quality Control",
+     "detail": "Knowledge of quality control principles and practices. Ability to perform quality checks on raw materials, in-process products, and finished goods. Understanding of quality specifications and the ability to identify and address any quality issues promptly."
+    },
+    {
+     "area": "Safety and Hygiene",
+     "detail": "Strong commitment to safety and hygiene practices in the food industry. Competence in following safety protocols, wearing appropriate personal protective equipment (PPE), and maintaining a clean and sanitized work environment. Familiarity with food safety regulations and good manufacturing practices (GMP)."
+    },
+    {
+     "area": "Time Management",
+     "detail": "Good time management skills to prioritize tasks, follow production schedules, and meet production targets. Ability to work efficiently under time constraints and maintain productivity throughout the shift."
+    },
+    {
+     "area": "Time Management",
+     "detail": "Good time management skills to prioritize tasks, follow production schedules, and meet production targets. Ability to work efficiently under time constraints and maintain productivity throughout the shift."
+    }
+   ],
+   "delegation": [
+    "Machine helpers"
+   ],
+   "competencies": [
+    {
+     "competency": "Equipment Operation",
+     "description": "Competence in operating production machinery and equipment according to standard operating procedures. Ability to handle equipment controls, make adjustments, and troubleshoot basic issues."
+    },
+    {
+     "competency": "Technical Knowledge",
+     "description": "Solid technical knowledge of production processes and equipment used in the food industry. Understanding of the principles behind the operation of different machinery, such as mixers, ovens, conveyors, or packaging machines. Familiarity with safety features, maintenance requirements, and troubleshooting techniques."
+    },
+    {
+     "competency": "Quality Control",
+     "description": "Knowledge of quality control principles and practices. Ability to perform quality checks on raw materials, in-process products, and finished goods. Understanding of quality specifications and the ability to identify and address any quality issues promptly."
+    },
+    {
+     "competency": "Safety and Hygiene",
+     "description": "Strong commitment to safety and hygiene practices in the food industry. Competence in following safety protocols, wearing appropriate personal protective equipment (PPE), and maintaining a clean and sanitized work environment. Familiarity with food safety regulations and good manufacturing practices (GMP)."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "Ability to identify and resolve equipment or process-related issues that may impact production efficiency or quality. Competence in troubleshooting basic equipment problems, making adjustments, and taking appropriate corrective actions."
+    },
+    {
+     "competency": "Time Management",
+     "description": "Good time management skills to prioritize tasks, follow production schedules, and meet production targets. Ability to work efficiently under time constraints and maintain productivity throughout the shift."
+    },
+    {
+     "competency": "Teamwork and Collaboration",
+     "description": "Competence in working collaboratively with team members to achieve production goals. Willingness to support and assist colleagues as needed, contribute to a positive team environment, and communicate effectively to ensure smooth production operations."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Production Output & Quality",
+     "weight": 30
+    },
+    {
+     "result": "Safety and hygiene in Operation",
+     "weight": 20
+    },
+    {
+     "result": "Waste Reduction",
+     "weight": 20
+    },
+    {
+     "result": "Productivity Improvement",
+     "weight": 20
+    },
+    {
+     "result": "Training and Development",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Production/Packing Operator.docx",
+   "department": "Production",
+   "role": "Packaging Operator",
+   "reporting_to": "Asstt. Manager",
+   "scope": [
+    "Equipment Operation",
+    "Packaging Quality Control",
+    "Packaging Process Monitoring",
+    "Safety and Hygiene Compliance",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Equipment Operation",
+     "detail": "Operate packaging machinery and equipment, such as filling machines, sealing machines, labeling machines, or wrapping machines. Ensure proper machine setup, adjust settings as required, and perform routine maintenance tasks."
+    },
+    {
+     "area": "Packaging Quality Control",
+     "detail": "Perform quality checks on packaging materials, labels, and finished products to ensure compliance with quality standards and specifications. Inspect packaging for proper seals, labels, and appearance. Address any packaging defects or issues promptly."
+    },
+    {
+     "area": "Packaging Process Monitoring",
+     "detail": "Monitor packaging processes to ensure smooth operation and adherence to production schedules. Check machine performance, product flow, and packaging line efficiency. Identify and address any issues or abnormalities to maintain optimal packaging operations."
+    },
+    {
+     "area": "Safety and Hygiene Compliance",
+     "detail": "Follow safety protocols and hygiene standards to maintain a safe and clean working environment. Adhere to personal protective equipment (PPE) requirements and good manufacturing practices (GMP) specific to packaging operations. Report any safety incidents or concerns promptly."
+    },
+    {
+     "area": "Material Handling",
+     "detail": "Handle and manage packaging materials, including bags, boxes, labels, and other packaging components. Ensure proper storage, stock rotation, and organization of packaging materials. Coordinate with the warehouse or supply chain team to maintain adequate packaging material inventory."
+    },
+    {
+     "area": "Documentation and Record Keeping",
+     "detail": "Maintain accurate records of packaging activities, including production output, downtime, quality checks, and any other relevant data. Complete necessary paperwork or use digital systems for recording packaging information."
+    }
+   ],
+   "delegation": [
+    "machine helper"
+   ],
+   "competencies": [
+    {
+     "competency": "Equipment Operation",
+     "description": "Competence in operating packaging machinery and equipment, understanding their functions, and following standard operating procedures. Ability to handle machine controls, adjust settings, and troubleshoot basic issues."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Strong attention to detail to ensure accurate and consistent packaging of food products. Ability to follow packaging specifications, ensure proper seals, labels, and appearance, and detect any deviations or anomalies during the packaging process."
+    },
+    {
+     "competency": "Quality Control",
+     "description": "Knowledge of quality control principles and practices specific to packaging operations. Ability to perform quality checks on packaging materials and finished products, ensuring compliance with quality standards and specifications."
+    },
+    {
+     "competency": "Safety and Hygiene",
+     "description": "Strong commitment to safety and hygiene practices in the food industry. Competence in following safety protocols, wearing appropriate personal protective equipment (PPE), and maintaining a clean and sanitized work environment during packaging operations."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "Ability to identify and resolve packaging-related issues or equipment malfunctions. Competence in troubleshooting basic machine problems, making adjustments, and taking appropriate corrective actions. Effective problem-solving skills to address packaging challenges and minimize downtime."
+    },
+    {
+     "competency": "Time Management",
+     "description": "Good time management skills to prioritize packaging tasks, follow production schedules, and meet packaging targets. Ability to work efficiently under time constraints and maintain productivity throughout the shift. Teamwork and Collaboration: Competence in working collaboratively with team members to achieve packaging goals. Willingness to support and assist colleagues as needed, contribute to a positive team environment, and communicate effectively to ensure smooth packaging operations."
+    },
+    {
+     "competency": "Compliance and Regulatory Knowledge",
+     "description": "Understanding of relevant food safety regulations, labeling requirements, and packaging specifications. Competence in adhering to regulatory and compliance standards specific to the food industry during packaging operations."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Production Output",
+     "weight": 30
+    },
+    {
+     "result": "Safety and hygiene in Operation",
+     "weight": 20
+    },
+    {
+     "result": "Waste Reduction",
+     "weight": 20
+    },
+    {
+     "result": "Productivity Improvement",
+     "weight": 20
+    },
+    {
+     "result": "Training and Development",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Production/Production Asstt. Manager.docx",
+   "department": "Production",
+   "role": "Asstt. Manager",
+   "reporting_to": "MD",
+   "scope": [
+    "Production Planning and Scheduling",
+    "Operations Management",
+    "Quality Assurance",
+    "Resource Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Production Planning and Scheduling",
+     "detail": "Assist in developing production plans and schedules to meet customer demands and optimize resource utilization. Collaborate with the production manager and other departments to ensure smooth production flow and timely delivery of products."
+    },
+    {
+     "area": "Operations Management",
+     "detail": "Support the production manager in overseeing all production operations, including manufacturing processes, equipment utilization, and inventory management. Monitor production performance metrics and assist in implementing measures to optimize productivity, minimize downtime, and ensure efficient workflow."
+    },
+    {
+     "area": "Resource Allocation and Management",
+     "detail": "Support the management of production resources, including manpower, equipment, and raw materials. Assist in optimizing resource allocation to meet production targets while minimizing waste and costs. Coordinate with procurement and supply chain teams to ensure timely availability of materials."
+    },
+    {
+     "area": "Health and Safety Management",
+     "detail": "Support the implementation and enforcement of health and safety protocols and procedures. Assist in conducting risk assessments, promoting safety awareness, and ensuring a safe working environment for production staff. Address any safety incidents or concerns promptly."
+    },
+    {
+     "area": "Team Leadership and Development",
+     "detail": "Provide support to the production teams, including setting performance expectations, providing guidance, and fostering a positive work culture. Assist in employee development through training, coaching, and performance evaluations. Foster teamwork and collaboration to achieve production goals."
+    },
+    {
+     "area": "Compliance and Regulatory Adherence",
+     "detail": "Support compliance with relevant regulatory requirements, including food safety, labeling, and environmental regulations. Stay updated on industry standards and changes in regulations. Assist in implementing and monitoring procedures to maintain compliance and mitigate risks."
+    }
+   ],
+   "delegation": [
+    "Surajbhan  (Sr. Operator)- Packaging",
+    "Sandeep     (Operator)- Packaging",
+    "Rohit           (Operator)- Packaging",
+    "Mahesh      (Operator)-Packaging",
+    "Mohit          (Operator)- Packaging",
+    "Suhial          (Operator)- Packaging",
+    "Davender    (Co- Operator)- Packaging Shakher",
+    "Suresh",
+    "Anirudh",
+    "Amit"
+   ],
+   "competencies": [
+    {
+     "competency": "Production Management",
+     "description": "Strong knowledge and understanding of production processes, manufacturing principles, and operations management. Competence in supporting the planning, organizing, and optimizing of production activities."
+    },
+    {
+     "competency": "Leadership and Team Management",
+     "description": "Excellent leadership skills to support and motivate production teams. Ability to provide clear direction, set expectations, and foster a positive work culture. Competence in supporting team building, communication, conflict resolution, and performance management."
+    },
+    {
+     "competency": "Problem-Solving and Decision-Making",
+     "description": "Strong analytical and problem-solving skills to support the identification of issues, assessment of options, and contribution to informed decision-making. Ability to support troubleshooting production problems, implementing effective solutions, and mitigating risks."
+    },
+    {
+     "competency": "Technical Knowledge",
+     "description": "Solid technical knowledge of food production processes, equipment, and technologies. Understanding of automation systems, data analysis tools, and production software. Ability to support the leverage of technology to optimize production efficiency and performance."
+    },
+    {
+     "competency": "Planning and Organizing",
+     "description": "Excellent planning and organizational skills to support the development of production plans, scheduling of resources, and coordination of activities. Ability to support the prioritization of tasks, allocation of resources effectively, and adaptation of plans to changing circumstances."
+    },
+    {
+     "competency": "Health and Safety",
+     "description": "Knowledge of health and safety regulations and practices in the food industry. Ability to support the implementation and enforcement of safety protocols, conduct risk assessments, and ensure a safe working environment for production staff."
+    },
+    {
+     "competency": "Compliance and Regulatory Adherence",
+     "description": "Support compliance with relevant regulatory requirements, including food safety, labeling, and environmental regulations. Stay updated on industry standards and changes in regulations. Assist in implementing and monitoring procedures to maintain compliance and mitigate risks."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Production Output",
+     "weight": 30
+    },
+    {
+     "result": "Compliance and Regulatory Adherence",
+     "weight": 25
+    },
+    {
+     "result": "On-Time Delivery",
+     "weight": 20
+    },
+    {
+     "result": "Inventory Management",
+     "weight": 15
+    },
+    {
+     "result": "Production Planning Accuracy",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Production/Production manager.docx",
+   "department": "Production",
+   "role": "Production Manager",
+   "reporting_to": "MD",
+   "scope": [
+    "Production Planning and Scheduling",
+    "Operations Management",
+    "Quality Assurance",
+    "Resource Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Production Planning and Scheduling",
+     "detail": "Develop production plans and schedules to meet customer demands and optimize resource utilization. Coordinate with other departments, such as sales, procurement, and logistics, to ensure a smooth production flow and timely delivery of products."
+    },
+    {
+     "area": "Operations Management",
+     "detail": "Oversee all production operations, including manufacturing processes, equipment utilization, and inventory management. Ensure efficient workflow, monitor production metrics, and take proactive measures to optimize productivity and minimize downtime."
+    },
+    {
+     "area": "Quality Control and Assurance",
+     "detail": "Implement and maintain quality control measures to ensure products meet established quality standards and regulatory requirements. Collaborate with the quality assurance team to conduct inspections, audits, and testing. Address any quality issues and drive continuous improvement in product quality."
+    },
+    {
+     "area": "Resource Allocation and Management",
+     "detail": "Manage production resources, including manpower, equipment, and raw materials. Ensure optimal utilization of resources to meet production targets while minimizing waste and costs. Coordinate with procurement and supply chain teams to ensure timely availability of materials"
+    },
+    {
+     "area": "Health and Safety Management",
+     "detail": "Ensure a safe working environment for production staff. Implement and enforce health and safety protocols and procedures. Conduct risk assessments, promote safety awareness, and provide training on safe work practices. Address any safety incidents or concerns promptly."
+    },
+    {
+     "area": "Continuous Improvement",
+     "detail": "Foster a culture of continuous improvement within the production department. Identify opportunities for process optimization, waste reduction, and efficiency gains. Lead or participate in improvement projects, implement best practices, and leverage technology to drive operational excellence."
+    },
+    {
+     "area": "Performance Monitoring and Reporting",
+     "detail": "Monitor production performance metrics, such as production output, efficiency, quality, and cost. Generate regular reports to assess performance against targets and identify areas for improvement. Analyze data to make informed decisions and implement strategies to enhance performance."
+    }
+   ],
+   "delegation": [
+    "Asst. Production Manager - Dheeraj",
+    "Sr. Supervisor- Harish All packaging and production operators"
+   ],
+   "competencies": [
+    {
+     "competency": "Production Management",
+     "description": "Strong knowledge and understanding of production processes, manufacturing principles, and operations management. Competence in planning, organizing, and optimizing production activities to meet targets and timelines."
+    },
+    {
+     "competency": "Leadership and Team Management",
+     "description": "Excellent leadership skills to inspire and motivate production teams. Ability to provide clear direction, set expectations, and foster a positive work culture. Competence in team building, communication, conflict resolution, and performance management."
+    },
+    {
+     "competency": "Quality Assurance",
+     "description": "Understanding of quality control principles, quality management systems, and regulatory requirements specific to the food industry. Competence in implementing and monitoring quality control measures to ensure adherence to standards and customer satisfaction."
+    },
+    {
+     "competency": "Problem-Solving and Decision-Making",
+     "description": "Strong analytical and problem-solving skills to identify issues, assess options, and make informed decisions. Ability to troubleshoot production problems, implement effective solutions, and mitigate risks."
+    },
+    {
+     "competency": "Continuous Improvement",
+     "description": "A mindset of continuous improvement to drive operational excellence. Competence in identifying process inefficiencies, waste reduction opportunities, and cost-saving initiatives. Familiarity with Lean manufacturing principles and tools."
+    },
+    {
+     "competency": "Technical Knowledge",
+     "description": "Solid technical knowledge of food production processes, equipment, and technologies. Understanding of automation systems, data analysis tools, and production software. Ability to leverage technology to optimize production efficiency and performance."
+    },
+    {
+     "competency": "Planning and Organizing",
+     "description": "Excellent planning and organizational skills to develop production plans, schedule resources, and coordinate activities. Ability to prioritize tasks, allocate resources effectively, and adapt plans to changing circumstances."
+    },
+    {
+     "competency": "Financial Acumen",
+     "description": "Understanding of financial principles and cost management in the production context. Competence in budgeting, cost control, and financial analysis to optimize production costs and contribute to overall profitability."
+    },
+    {
+     "competency": "Health and Safety",
+     "description": "Knowledge of health and safety regulations and practices in the food industry. Ability to implement and enforce safety protocols, conduct risk assessments, and ensure a safe working environment for production staff."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Production Output",
+     "weight": 20
+    },
+    {
+     "result": "R&D and Quality Performance",
+     "weight": 20
+    },
+    {
+     "result": "Compliance (FSSAI norms +5S)",
+     "weight": 20
+    },
+    {
+     "result": "Inventory Management",
+     "weight": 15
+    },
+    {
+     "result": "Cost Control",
+     "weight": 15
+    },
+    {
+     "result": "Safety and Hygiene in plant",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Production/Production Supervisor.docx",
+   "department": "Production",
+   "role": "Production Supervisor",
+   "reporting_to": "Asstt. Manager",
+   "scope": [
+    "Team Supervision",
+    "Production Planning and Execution",
+    "Quality Control and Assurance",
+    "Performance Monitoring and Reporting",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Team Supervision",
+     "detail": "Supervise and manage production teams, including assigning tasks, providing guidance, and ensuring adherence to production schedules. Foster a positive work culture, promote teamwork, and address any performance or behavioral issues."
+    },
+    {
+     "area": "Production Planning and Execution",
+     "detail": "Implement production plans and schedules to meet customer demands while optimizing resource utilization. Coordinate with other departments to ensure the availability of raw materials and equipment for efficient production."
+    },
+    {
+     "area": "Quality Control and Assurance",
+     "detail": "Implement quality control measures to ensure products meet established quality standards and regulatory requirements. Monitor production processes, conduct regular inspections, and address any quality issues promptly. Collaborate with the quality assurance team to drive continuous improvement in product quality."
+    },
+    {
+     "area": "Training and Development",
+     "detail": "Provide training and development opportunities to production staff to enhance their skills and knowledge. Ensure adequate training is provided on production processes, safety protocols, and quality control measures."
+    },
+    {
+     "area": "Performance Monitoring and Reporting",
+     "detail": "Monitor production performance indicators, such as production output, efficiency, quality, and cost. Generate reports and analyze data to assess performance against targets, identify areas for improvement, and support decision-making."
+    }
+   ],
+   "delegation": [
+    "Senior Operator"
+   ],
+   "competencies": [
+    {
+     "competency": "Production Knowledge",
+     "description": "Strong knowledge and understanding of production processes, equipment, and technologies relevant to the food industry. Familiarity with food safety regulations and quality standards."
+    },
+    {
+     "competency": "Leadership and Team Management",
+     "description": "Excellent leadership skills to supervise and motivate production teams. Ability to provide clear direction, set expectations, and foster a positive work culture. Competence in team building, communication, conflict resolution, and performance management."
+    },
+    {
+     "competency": "Quality Control",
+     "description": "Understanding of quality control principles and techniques. Ability to enforce quality standards, conduct inspections, and address quality issues promptly. Familiarity with quality management systems and continuous improvement methodologies."
+    },
+    {
+     "competency": "Operational Efficiency",
+     "description": "Competence in optimizing production processes and resource utilization to achieve production targets. Ability to identify areas for improvement, implement lean manufacturing principles, and eliminate waste. Experience in optimizing equipment and labor efficiency."
+    },
+    {
+     "competency": "Problem-Solving and Decision-Making",
+     "description": "Strong analytical and problem-solving skills to identify and resolve production-related issues. Ability to make informed decisions in a timely manner, considering available data and resources. Competence in troubleshooting and implementing effective solutions."
+    },
+    {
+     "competency": "Planning and Organization",
+     "description": "Strong planning and organizational skills to develop production schedules, allocate resources effectively, and manage multiple priorities. Ability to adapt plans to changing circumstances and ensure timely execution of production activities."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Production Output",
+     "weight": 30
+    },
+    {
+     "result": "Quality Performance",
+     "weight": 20
+    },
+    {
+     "result": "On-Time Delivery",
+     "weight": 20
+    },
+    {
+     "result": "Safety and hygiene in Plant",
+     "weight": 20
+    },
+    {
+     "result": "Continuous Improvement",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Purchase/Purchase Manager.docx",
+   "department": "Purchase",
+   "role": "Purchase Manager",
+   "reporting_to": "MD",
+   "scope": [
+    "Strategic Sourcing",
+    "Supplier Relationship Management",
+    "Procurement Process Management",
+    "Inventory Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Strategic Sourcing",
+     "detail": "Conduct strategic sourcing activities to identify, evaluate, and select suppliers for food ingredients, raw materials, packaging materials, equipment, and other goods or services required for food production or distribution."
+    },
+    {
+     "area": "Supplier Relationship Management",
+     "detail": "Develop and maintain strong relationships with suppliers, ensuring open communication, negotiating contracts, monitoring supplier performance, and addressing any issues or concerns that may arise."
+    },
+    {
+     "area": "Procurement Process Management",
+     "detail": "Oversee the end-to-end procurement process, including requisition management, supplier selection, contract negotiation, purchase order issuance, and supplier performance evaluation. Develop and implement procurement policies and procedures to streamline operations and ensure compliance."
+    },
+    {
+     "area": "Cost Management",
+     "detail": "Optimize costs associated with procurement by negotiating favorable pricing and terms with suppliers, identifying cost-saving opportunities, exploring alternative sourcing options, and implementing effective cost control measures."
+    },
+    {
+     "area": "Inventory Management",
+     "detail": "Manage inventory levels of food ingredients, raw materials, and packaging materials to meet production requirements while minimizing holding costs and waste. Implement inventory control techniques, such as just-in-time (JIT) or first-in, first-out (FIFO), to maintain optimal stock levels and minimize spoilage."
+    },
+    {
+     "area": "Market Research and Supplier Evaluation",
+     "detail": "Stay informed about market trends, pricing fluctuations, new suppliers, and emerging products or technologies in the food industry. Conduct market research, evaluate supplier capabilities, and assess potential risks and opportunities associated with suppliers."
+    }
+   ],
+   "delegation": [
+    "EA to MD"
+   ],
+   "competencies": [
+    {
+     "competency": "Procurement Expertise",
+     "description": "Possess a deep understanding of procurement principles, practices, and strategies, including strategic sourcing, supplier management, negotiation, and contract management. Knowledge of procurement regulations and standards specific to the food industry is valuable."
+    },
+    {
+     "competency": "Supplier Relationship Management",
+     "description": "Demonstrate strong skills in building and maintaining supplier relationships. This includes effective communication, negotiation, conflict resolution, and fostering collaborative partnerships with suppliers to ensure a reliable and high-quality supply chain."
+    },
+    {
+     "competency": "Analytical Skills",
+     "description": "Possess strong analytical abilities to evaluate supplier capabilities, analyze market trends, and assess cost and quality factors. Analytical skills are also important for conducting spend analysis, supplier performance evaluations, and identifying opportunities for cost savings or process improvements."
+    },
+    {
+     "competency": "Financial Acumen",
+     "description": "Understand financial principles and possess the ability to analyze pricing structures, budgets, and financial implications of procurement decisions. Financial acumen is essential for cost analysis, contract negotiation, and overall cost management."
+    },
+    {
+     "competency": "Negotiation Skills",
+     "description": "Possess strong negotiation skills to secure favorable terms, pricing, and contracts with suppliers. Effective negotiation skills involve active listening, persuasive communication, and the ability to find win-win solutions."
+    },
+    {
+     "competency": "Negotiation Skills",
+     "description": "Possess strong negotiation skills to secure favorable terms, pricing, and contracts with suppliers. Effective negotiation skills involve active listening, persuasive communication, and the ability to find win-win solutions."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Display meticulous attention to detail in managing procurement processes, reviewing contracts, ensuring accuracy in order specifications, and monitoring quality control. Attention to detail is crucial for maintaining product quality, minimizing errors, and avoiding compliance issues."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Cost Savings",
+     "weight": 20
+    },
+    {
+     "result": "Supplier Performance",
+     "weight": 20
+    },
+    {
+     "result": "Purchase Order Cycle Time",
+     "weight": 20
+    },
+    {
+     "result": "Purchase Requisition Accuracy",
+     "weight": 20
+    },
+    {
+     "result": "Supplier Evaluation and Development",
+     "weight": 10
+    },
+    {
+     "result": "Compliance with Regulations",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Quality/Quality Executive.docx",
+   "department": "Quality",
+   "role": "Quality Executive",
+   "reporting_to": "Quality",
+   "scope": [
+    "Quality Assurance",
+    "Compliance and Regulatory Requirements",
+    "Process Improvement",
+    "Risk Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Quality Assurance",
+     "detail": "Implement and maintain quality control processes and procedures to ensure that all food products meet the required quality standards and specifications."
+    },
+    {
+     "area": "Compliance and Regulatory Compliance",
+     "detail": "Ensure compliance with relevant food safety regulations, industry standards, and certifications. Stay up-to-date with changes in regulations and implement necessary changes to maintain compliance."
+    },
+    {
+     "area": "Auditing and Inspections",
+     "detail": "Conduct regular audits and inspections of production processes, facilities, and documentation to ensure adherence to quality standards, hygiene practices, and regulatory requirements. Identify areas for improvement and implement corrective actions."
+    },
+    {
+     "area": "Data Analysis and Reporting",
+     "detail": "Collect, analyze, and interpret quality data to identify trends, issues, and opportunities for improvement. Prepare reports and communicate findings to management and cross-functional teams."
+    },
+    {
+     "area": "Supplier and Vendor Management",
+     "detail": "Collaborate with suppliers and vendors to ensure the quality and safety of incoming materials, ingredients, and packaging. Conduct supplier audits, establish quality agreements, and maintain strong relationships to ensure consistent quality inputs."
+    },
+    {
+     "area": "Customer Satisfaction",
+     "detail": "Monitor customer feedback, complaints, and inquiries related to product quality. Address customer concerns promptly and implement measures to enhance customer satisfaction."
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Quality Management Systems",
+     "description": "Proficiency in implementing and maintaining quality management systems such as ISO standards (e.g., ISO 9001, ISO 22000) and Hazard Analysis and Critical Control Points (HACCP). Understanding the principles and requirements of these systems is essential for ensuring consistent quality and compliance."
+    },
+    {
+     "competency": "Food Safety and Regulatory Compliance",
+     "description": "Knowledge of food safety regulations, industry standards, and regulatory requirements is vital. Stay updated with changes in regulations, such as Good Manufacturing Practices (GMP), Good Agricultural Practices (GAP), and Food Safety Modernization Act (FSMA). Familiarity with labeling and packaging regulations is also beneficial."
+    },
+    {
+     "competency": "Quality Assurance Techniques",
+     "description": "Understanding and application of quality assurance techniques such as Statistical Process Control (SPC), Failure Mode and Effects Analysis (FMEA), root cause analysis, and corrective and preventive actions (CAPA). Proficiency in conducting inspections, audits, and product testing to ensure compliance with quality standards."
+    },
+    {
+     "competency": "Problem-solving and Decision-making",
+     "description": "Strong problem-solving skills to identify root causes of quality issues and implement effective corrective actions. The ability to make informed decisions based on data analysis and critical thinking"
+    },
+    {
+     "competency": "Continuous Improvement Mindset",
+     "description": "A proactive approach to seeking opportunities for improvement in quality processes, systems, and products. The ability to drive and champion a culture of continuous improvement throughout the organization."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Compliance Rate",
+     "weight": 30
+    },
+    {
+     "result": "Quality Control Metrics",
+     "weight": 10
+    },
+    {
+     "result": "Audit Findings and Corrective Actions",
+     "weight": 20
+    },
+    {
+     "result": "Recall Rate",
+     "weight": 10
+    },
+    {
+     "result": "Regulatory Compliance Audits",
+     "weight": 30
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Quality/Quality Manager.docx",
+   "department": "Quality",
+   "role": "Manager (Quality)",
+   "reporting_to": "MD/HR",
+   "scope": [
+    "Quality Management System (QMS)",
+    "Regulatory Compliance",
+    "Food Safety",
+    "Supplier and Vendor Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Development and Implementation of Quality Management Systems (QMS)",
+     "detail": "Designing, developing, and implementing a robust Quality Management System that aligns with regulatory requirements, industry standards, and best practices. This includes establishing quality policies, procedures, and guidelines."
+    },
+    {
+     "area": "Compliance with Regulatory Standards",
+     "detail": "Ensuring compliance with applicable food safety regulations, standards, and guidelines set by regulatory authorities such as the FDA (Food and Drug Administration) or local health departments. This includes monitoring changes in regulations, conducting internal audits, and ensuring adherence to food safety practices."
+    },
+    {
+     "area": "Quality Control and Assurance",
+     "detail": "Overseeing quality control and assurance activities throughout the production and processing stages. This involves establishing quality standards, conducting inspections, testing products, analyzing data, and monitoring critical control points to ensure product safety, consistency, and adherence to quality specifications."
+    },
+    {
+     "area": "Supplier and Vendor Management",
+     "detail": "Managing the quality performance of suppliers and vendors by implementing robust supplier quality management processes. This includes conducting supplier audits, assessing quality systems, and ensuring the consistent delivery of high-quality raw materials and ingredients."
+    },
+    {
+     "area": "Audits and Certifications",
+     "detail": "Coordinating and participating in internal and external audits to evaluate the effectiveness of the quality management system and ensure compliance with relevant certifications and standards. This includes preparing for audits, addressing findings, and implementing necessary corrective actions."
+    },
+    {
+     "area": "Documentation and Record Keeping",
+     "detail": "Maintaining accurate and up-to-date documentation and records related to quality management activities. This includes maintaining standard operating procedures, test results, corrective action reports, customer feedback, and audit records. It also involves ensuring proper record retention for traceability and compliance purposes."
+    }
+   ],
+   "delegation": [
+    "Divya",
+    "Sarun"
+   ],
+   "competencies": [
+    {
+     "competency": "Food Safety and Quality Knowledge",
+     "description": "A strong understanding of food safety principles, quality management systems, and regulatory requirements is essential. This includes knowledge of HACCP (Hazard Analysis and Critical Control Points), GMP (Good Manufacturing Practices), relevant food safety standards (e.g., ISO 22000), and regulatory frameworks (e.g., FDA regulations)."
+    },
+    {
+     "competency": "Regulatory Compliance",
+     "description": "Proficiency in understanding and interpreting food safety regulations and standards. This includes staying updated on regulatory changes, ensuring compliance with applicable laws and regulations, and effectively communicating regulatory requirements to stakeholders."
+    },
+    {
+     "competency": "Quality Management Systems",
+     "description": "Expertise in developing, implementing, and managing quality management systems (QMS). This includes knowledge of QMS frameworks (e.g., ISO 9001), establishing quality policies and procedures, conducting internal audits, and driving continuous improvement within the organization."
+    },
+    {
+     "competency": "Risk Assessment and Management",
+     "description": "The ability to assess and manage risks associated with food safety and quality. This includes conducting risk assessments, identifying critical control points, implementing control measures, and continuously monitoring and mitigating potential risks."
+    },
+    {
+     "competency": "Auditing and Inspection",
+     "description": "Proficiency in conducting internal and external audits and inspections. This includes knowledge of audit techniques, audit planning, conducting audits, and effectively communicating audit findings and recommendations."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Strong attention to detail is necessary for ensuring accuracy and precision in quality management activities. This includes meticulous documentation, record-keeping, and attention to critical control points to maintain product safety and quality"
+    },
+    {
+     "competency": "Problem-Solving and Root Cause Analysis",
+     "description": "The ability to identify and resolve quality-related problems using systematic problem-solving techniques. This includes conducting root cause analysis, applying appropriate problem-solving tools (e.g., 5 Whys, Fishbone Diagrams), and implementing corrective and preventive actions."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Compliance with Regulatory Standards",
+     "weight": 30
+    },
+    {
+     "result": "Audit Performance",
+     "weight": 20
+    },
+    {
+     "result": "Product Quality Indicators",
+     "weight": 25
+    },
+    {
+     "result": "Process Efficiency and Waste Reduction",
+     "weight": 15
+    },
+    {
+     "result": "Continuous Improvement Initiatives",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/ASM.docx",
+   "department": "sales",
+   "role": "ASM",
+   "reporting_to": "RSM",
+   "scope": [
+    "Sales Planning",
+    "Team Management",
+    "Sales Promotion",
+    "Market Research",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Achieving Sales Targets",
+     "detail": "The primary responsibility of an Area Sales Manager is to meet or exceed the assigned sales targets for their area. They are accountable for driving sales growth, increasing revenue, and achieving profitability objectives."
+    },
+    {
+     "area": "Territory Management",
+     "detail": "Effectively managing the assigned territory or geographical area is crucial. This includes identifying market potential, allocating resources, and ensuring proper coverage to maximize sales opportunities."
+    },
+    {
+     "area": "Customer Relationship Management",
+     "detail": "Building and maintaining strong relationships with key customers, distributors, and retailers is essential. The Area Sales Manager is accountable for customer satisfaction, resolving issues, and ensuring excellent customer service to drive customer loyalty and repeat business."
+    },
+    {
+     "area": "Market Analysis and Planning",
+     "detail": "Conducting market analysis, monitoring industry trends, and identifying opportunities and threats in the market. The Area Sales Manager is accountable for developing sales strategies, action plans, and promotional activities to capitalize on market potential."
+    },
+    {
+     "area": "Sales Forecasting and Reporting",
+     "detail": "Accurately forecasting sales volumes, revenue, and market share for the assigned area. The Area Sales Manager is accountable for providing regular sales reports, analyzing performance, and presenting insights to the management team."
+    },
+    {
+     "area": "Cross-functional Collaboration",
+     "detail": "Collaborating with other departments, such as marketing, product management, and operations, to ensure alignment and coordination of strategies and activities. The Area Sales Manager is accountable for effective communication and collaboration to drive overall business objectives."
+    },
+    {
+     "area": "Compliance and Ethics",
+     "detail": "Ensuring compliance with company policies, ethical standards, and legal regulations. The Area Sales Manager is accountable for conducting business ethically, promoting fair competition, and adhering to all applicable laws and regulations."
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Sales Expertise",
+     "description": "Strong knowledge and understanding of sales principles, techniques, and strategies. This includes proficiency in sales processes, negotiation skills, prospecting, closing deals, and account management."
+    },
+    {
+     "competency": "Leadership",
+     "description": "Ability to lead and inspire a sales team, providing clear direction, setting goals, and motivating team members to achieve targets. Effective leadership involves coaching, mentoring, and fostering a collaborative and high-performance sales culture."
+    },
+    {
+     "competency": "Relationship Building",
+     "description": "Strong interpersonal skills and the ability to build and maintain relationships with customers, partners, and internal stakeholders. Relationship building involves understanding customer needs, establishing trust, and delivering exceptional customer service."
+    },
+    {
+     "competency": "Strategic Planning",
+     "description": "The ability to develop and execute sales strategies aligned with overall business objectives. Strategic planning involves setting goals, prioritizing activities, allocating resources, and adapting strategies to changing market conditions."
+    },
+    {
+     "competency": "Problem Solving",
+     "description": "Strong problem-solving skills are necessary to identify and overcome sales challenges and obstacles. The Area Sales Manager should be able to think creatively, generate solutions, and make timely decisions to address sales-related issues."
+    },
+    {
+     "competency": "Business Acumen",
+     "description": "A good understanding of business principles, market dynamics, and industry trends. Business acumen enables the Area Sales Manager to align sales strategies with broader business objectives, identify opportunities for growth, and make informed business decisions."
+    },
+    {
+     "competency": "Ethical Conduct",
+     "description": "Upholding high ethical standards in all sales activities, maintaining integrity, and promoting fair business practices. Ethical conduct builds trust, enhances the company's reputation, and ensures compliance with legal and regulatory requirements."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Sales Revenue",
+     "weight": 10
+    },
+    {
+     "result": "Sales Target Achievement",
+     "weight": 10
+    },
+    {
+     "result": "Sales Growth",
+     "weight": 20
+    },
+    {
+     "result": "Market Share",
+     "weight": 10
+    },
+    {
+     "result": "Sales Activity Metrics",
+     "weight": 15
+    },
+    {
+     "result": "Territory Coverage",
+     "weight": 20
+    },
+    {
+     "result": "Customer Satisfaction",
+     "weight": 15
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/EA Sales _ Marketing.docx",
+   "department": "sales",
+   "role": "EA Sales _ Marketing",
+   "reporting_to": "MD",
+   "scope": [
+    "Calendar and Schedule Management",
+    "Communication and Correspondence",
+    "Sales and Marketing Support",
+    "Sales Target tracking",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Calendar and Schedule Management",
+     "detail": "Efficiently manage the calendars and schedules of sales and marketing executives. Coordinate and schedule meetings, appointments, and travel arrangements to optimize their time and ensure smooth operations."
+    },
+    {
+     "area": "Communication and Correspondence",
+     "detail": "Handle incoming and outgoing communications on behalf of sales and marketing executives. Draft and proofread emails, letters, memos, and other correspondence, maintaining professionalism and accuracy in all communications"
+    },
+    {
+     "area": "Meeting and Event Coordination",
+     "detail": "Coordinate and arrange meetings, conferences, and events for the sales and marketing teams. This includes booking venues, arranging logistics, preparing meeting materials, and ensuring everything is in place for successful events."
+    },
+    {
+     "area": "Data and Document Management",
+     "detail": "Organize and maintain sales and marketing documents, files, and databases. Manage customer databases, sales reports, marketing collateral, and other relevant materials. Ensure data accuracy, confidentiality, and easy access to information when needed."
+    },
+    {
+     "area": "Sales and Marketing Support",
+     "detail": "Provide administrative support to sales and marketing initiatives. Assist with lead generation activities, coordinate marketing campaigns, manage sales documentation, and update CRM systems. Support the execution of sales and marketing strategies."
+    },
+    {
+     "area": "Relationship Management",
+     "detail": "Build and maintain positive relationships with internal and external stakeholders. Serve as a point of contact, liaise with clients, customers, and vendors, and handle inquiries and requests in a professional and timely manner. Foster strong relationships to support business objectives."
+    }
+   ],
+   "delegation": [
+    "Megha",
+    "Tushar"
+   ],
+   "competencies": [
+    {
+     "competency": "Organization and Time Management",
+     "description": "Strong organizational skills to manage calendars, schedules, and multiple tasks simultaneously. The ability to prioritize effectively, meet deadlines, and ensure smooth operations is crucial."
+    },
+    {
+     "competency": "Communication Skills",
+     "description": "Excellent written and verbal communication skills to effectively correspond with internal and external stakeholders. Clear and concise communication is essential in handling emails, phone calls, and written correspondence on behalf of sales and marketing executives."
+    },
+    {
+     "competency": "Discretion and Confidentiality",
+     "description": "High level of professionalism and the ability to handle confidential and sensitive information with utmost discretion. Maintaining confidentiality in handling sales and marketing data, contracts, and client information is crucial."
+    },
+    {
+     "competency": "Problem-Solving and Decision-Making",
+     "description": "The ability to think critically, identify issues, and provide solutions. Being resourceful and proactive in addressing challenges that may arise in day-to-day operations is important"
+    },
+    {
+     "competency": "Collaboration and Teamwork",
+     "description": "The ability to work collaboratively with cross-functional teams, including sales, marketing, and other departments. Strong interpersonal skills to build relationships, foster teamwork, and effectively communicate and coordinate with team members."
+    },
+    {
+     "competency": "Professionalism and Ethics",
+     "description": "Demonstrating professionalism, integrity, and ethical behavior in all interactions and decision-making. Upholding a high standard of conduct and adhering to company policies and guidelines is essential"
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Calendar and Schedule Management",
+     "weight": 25
+    },
+    {
+     "result": "Customer and Stakeholder Satisfaction",
+     "weight": 25
+    },
+    {
+     "result": "Data and Document Management",
+     "weight": 20
+    },
+    {
+     "result": "Problem-solving and Decision-making",
+     "weight": 20
+    },
+    {
+     "result": "Meeting and Event Coordination",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/Logistic Manager.docx",
+   "department": "sales",
+   "role": "Logistics Manager",
+   "reporting_to": "MD",
+   "scope": [
+    "Supply Chain Management",
+    "Transportation and Freight Management",
+    "Warehouse and Distribution Management",
+    "Inventory Control",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Supply Chain Management",
+     "detail": "Oversee and manage the end-to-end supply chain process, including procurement, production planning, transportation, warehousing, and distribution."
+    },
+    {
+     "area": "Transportation Management",
+     "detail": "Coordinate and optimize the transportation of goods, selecting the appropriate modes of transportation, negotiating contracts with carriers, and ensuring timely and cost-effective delivery."
+    },
+    {
+     "area": "Inventory Control",
+     "detail": "Manage inventory levels to meet customer demand while minimizing holding costs, ensuring optimal stock levels, implementing inventory management techniques, and conducting regular inventory analysis."
+    },
+    {
+     "area": "Warehouse Management",
+     "detail": "Oversee warehouse operations, including receiving, storage, order fulfillment, and shipping. Ensure efficient utilization of warehouse space, proper inventory management, and adherence to safety and security protocols."
+    },
+    {
+     "area": "Supplier and Vendor Management",
+     "detail": "Develop and maintain relationships with suppliers and vendors, negotiate contracts and terms, monitor supplier performance, and ensure timely and reliable delivery of materials."
+    },
+    {
+     "area": "Compliance and Regulations",
+     "detail": "Ensure compliance with relevant laws, regulations, and industry standards related to logistics, including transportation regulations, customs requirements, and safety regulations."
+    },
+    {
+     "area": "Customer Service",
+     "detail": "Collaborate with other departments, such as sales and customer service, to ensure exceptional customer service. Address customer inquiries, resolve issues, and proactively communicate with customers to meet their logistics needs."
+    }
+   ],
+   "delegation": [
+    "All drivers"
+   ],
+   "competencies": [
+    {
+     "competency": "Supply Chain Management",
+     "description": "Possess a strong understanding of supply chain concepts, including procurement, transportation, inventory management, and distribution. Familiarity with supply chain strategies, best practices, and industry trends is essential."
+    },
+    {
+     "competency": "Logistics Operations Knowledge",
+     "description": "Have a comprehensive knowledge of logistics operations, including transportation management, warehouse operations, inventory control, and order fulfillment. Understanding logistics processes, systems, and technologies is important for optimizing logistics operations."
+    },
+    {
+     "competency": "Technical Proficiency",
+     "description": "Be adept at using logistics management software, transportation management systems (TMS), warehouse management systems (WMS), and other relevant technology tools. Familiarity with data analysis tools and proficiency in Microsoft Excel is also beneficial."
+    },
+    {
+     "competency": "Communication and Collaboration",
+     "description": "Possess excellent communication skills to effectively interact with internal stakeholders, external partners, and cross-functional teams. Collaborate with other departments, such as procurement, sales, production, and customer service, to ensure alignment and coordination of logistics activities."
+    },
+    {
+     "competency": "Time Management and Organization",
+     "description": "Possess excellent organizational and time management skills to handle multiple tasks, prioritize activities, and meet deadlines. Efficiently manage logistics operations while maintaining attention to detail and ensuring accuracy."
+    },
+    {
+     "competency": "Financial Acumen",
+     "description": "Possess basic financial knowledge to understand cost structures, analyze logistics budgets, and identify opportunities for cost optimization within the logistics function."
+    },
+    {
+     "competency": "Regulatory Compliance",
+     "description": "Stay updated with relevant laws, regulations, and industry standards related to logistics operations, including transportation regulations, customs requirements, and safety regulations. Ensure compliance in all logistics activities."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "On-time Delivery",
+     "weight": 20
+    },
+    {
+     "result": "Order Fulfillment Rate",
+     "weight": 20
+    },
+    {
+     "result": "Return on Investment (ROI) in Logistics",
+     "weight": 20
+    },
+    {
+     "result": "Transportation Cost per Unit",
+     "weight": 15
+    },
+    {
+     "result": "Supply Chain Cycle Time",
+     "weight": 15
+    },
+    {
+     "result": "Energy Management",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/Marketing Manager.docx",
+   "department": "sales",
+   "role": "Marketing Manager",
+   "reporting_to": "MD",
+   "scope": [
+    "Strategic Marketing Planning",
+    "Brand Development and Management",
+    "Product and Market Expansion",
+    "Digital Marketing and E-commerce",
+    "Advertising and Promotions",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Marketing Strategy Development",
+     "detail": "Develop comprehensive marketing strategies aligned with the company's goals and objectives. This involves analyzing market trends, identifying target markets, setting marketing objectives, and creating detailed marketing plans to drive brand awareness and achieve sales targets."
+    },
+    {
+     "area": "Brand Management",
+     "detail": "Manage and enhance the company's brand image and reputation. Develop brand guidelines, ensure consistent brand messaging across all marketing communications, and monitor brand perception. Implement strategies to strengthen brand equity and differentiation in the market."
+    },
+    {
+     "area": "Product Marketing",
+     "detail": "Develop and execute effective product marketing strategies for food products. This includes conducting market research, identifying product features and benefits, creating product positioning, and developing marketing campaigns to drive product awareness and sales"
+    },
+    {
+     "area": "Digital Marketing and Online Presence",
+     "detail": "Develop and implement digital marketing strategies to maximize online visibility and engagement. This includes managing the company's website, social media channels, email marketing, content marketing, and search engine optimization (SEO) efforts"
+    },
+    {
+     "area": "Budget Management",
+     "detail": "Develop and manage marketing budgets effectively, ensuring optimal allocation of resources to achieve marketing objectives. Monitor expenses, track return on investment (ROI), and make data-driven decisions to maximize the impact of marketing initiatives"
+    },
+    {
+     "area": "Performance Analysis and Reporting",
+     "detail": "Monitor and analyze marketing performance, including key performance indicators (KPIs) and metrics. Prepare regular reports to communicate results, provide insights, and make data-driven recommendations for continuous improvement."
+    },
+    {
+     "area": "Team Management and Development",
+     "detail": "If you manage a marketing team, provide leadership, guidance, and support to ensure the team's success. Set goals, assign responsibilities, provide feedback, and foster a collaborative and high-performing team culture."
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Strategic Thinking",
+     "description": "The ability to think strategically and develop marketing strategies that align with business goals and objectives. This includes analyzing market trends, identifying opportunities, and creating plans to effectively position and promote food products."
+    },
+    {
+     "competency": "Brand Management",
+     "description": "A strong understanding of brand management principles and the ability to develop and maintain a cohesive brand identity. This includes brand positioning, brand messaging, brand guidelines, and ensuring consistent brand representation across all marketing communications."
+    },
+    {
+     "competency": "Product Marketing",
+     "description": "Knowledge of product marketing principles and the ability to effectively communicate the unique features and benefits of food products. This includes creating compelling product messaging, developing product positioning strategies, and implementing successful product launch plans."
+    },
+    {
+     "competency": "Marketing Communications",
+     "description": "Strong communication skills and the ability to develop and execute impactful marketing communications across various channels. This includes creating persuasive marketing messages, managing advertising campaigns, and coordinating public relations activities."
+    },
+    {
+     "competency": "Creative Thinking",
+     "description": "The ability to think creatively and develop innovative marketing strategies and campaigns. This includes generating fresh ideas, developing engaging content, and finding unique ways to differentiate food products in a competitive market."
+    },
+    {
+     "competency": "Project Management",
+     "description": "Strong project management skills to plan, execute, and monitor marketing initiatives effectively. This includes setting timelines, coordinating cross-functional teams, managing budgets, and ensuring successful implementation of marketing campaigns."
+    },
+    {
+     "competency": "Adaptability and Agility",
+     "description": "The food industry is dynamic and ever-evolving, so adaptability and agility are crucial competencies. The ability to quickly adapt to changes, embrace new marketing technologies and trends, and adjust strategies as needed is essential for success."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Brand Awareness",
+     "weight": 30
+    },
+    {
+     "result": "Customer Acquisition",
+     "weight": 20
+    },
+    {
+     "result": "Sales Revenue",
+     "weight": 20
+    },
+    {
+     "result": "Customer Engagement",
+     "weight": 20
+    },
+    {
+     "result": "Conversion Rate",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/RSM.docx",
+   "department": "sales",
+   "role": "RSM",
+   "reporting_to": "MD",
+   "scope": [
+    "Sales Strategy",
+    "Team Management",
+    "Sales Planning and Forecasting",
+    "Territory Management",
+    "Reporting and Communication",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Sales Performance",
+     "detail": "The primary accountability of a Regional Sales Manager is achieving sales targets and driving revenue growth within the assigned region. This involves monitoring and analyzing sales performance, identifying areas for improvement, and implementing strategies to meet or exceed sales goals."
+    },
+    {
+     "area": "Team Management",
+     "detail": "Regional Sales Managers are accountable for effectively managing and leading their sales team. This includes recruiting and training sales representatives, setting performance expectations, providing coaching and feedback, and fostering a positive and motivated team environment."
+    },
+    {
+     "area": "Territory Management",
+     "detail": "Managing the assigned sales territory is an important accountability for Regional Sales Managers. This involves defining and optimizing sales territories, allocating resources appropriately, and ensuring maximum market coverage and customer penetration."
+    },
+    {
+     "area": "Customer Relationships",
+     "detail": "Regional Sales Managers are responsible for building and maintaining strong relationships with key customers within their region. This accountability involves understanding customer needs, addressing concerns or issues, and working closely with key accounts to drive customer satisfaction and loyalty."
+    },
+    {
+     "area": "Sales Strategy and Planning",
+     "detail": "Developing and implementing effective sales strategies and plans is a key accountability. This includes conducting market research, identifying target segments, setting sales objectives, and creating actionable plans to achieve sales targets within the region."
+    },
+    {
+     "area": "Sales Reporting and Analysis",
+     "detail": "Regional Sales Managers are responsible for generating accurate and timely sales reports, analyzing data, and providing insights to senior management. This accountability helps in tracking progress, identifying trends, and making informed decisions to drive sales performance."
+    },
+    {
+     "area": "Budget Management",
+     "detail": "Regional Sales Managers are accountable for managing the sales budget allocated to their region. This includes monitoring expenses, optimizing resource allocation, and ensuring cost-effective operations while achieving sales targets."
+    },
+    {
+     "area": "These key accountabilities may vary based on the specific organization, industry, and role requirements. However, they provide a general framework for the responsibilities and expectations of a Regional Sales Manager.",
+     "detail": ""
+    }
+   ],
+   "delegation": [
+    "Arshad Abbasi",
+    "Pradyumn Dixit",
+    "Sumit Kumar Singh",
+    "Samant Singh",
+    "Nitin Kumar",
+    "Sanjeev Kumar"
+   ],
+   "competencies": [
+    {
+     "competency": "Sales Leadership",
+     "description": "A Regional Sales Manager needs to possess strong leadership skills to effectively lead and motivate their sales team. This includes the ability to inspire and influence others, set clear goals and expectations, provide guidance and support, and foster a collaborative and high-performing sales culture."
+    },
+    {
+     "competency": "Strategic Thinking",
+     "description": "Regional Sales Managers should have the ability to think strategically and develop sales strategies that align with overall business objectives. This involves analyzing market trends, identifying growth opportunities, and making informed decisions to drive revenue growth within the assigned region."
+    },
+    {
+     "competency": "Business Acumen",
+     "description": "A strong understanding of the business environment, industry dynamics, and the organization's products or services is crucial. Regional Sales Managers need to grasp the competitive landscape, market conditions, and customer needs to effectively position their offerings and drive sales success."
+    },
+    {
+     "competency": "Relationship Building",
+     "description": "Building and maintaining relationships with key clients, partners, and stakeholders is essential for success. Regional Sales Managers should possess strong interpersonal and communication skills to establish trust, negotiate effectively, and collaborate with internal and external stakeholders to drive business growth."
+    },
+    {
+     "competency": "Sales and Negotiation Skills",
+     "description": "A Regional Sales Manager should have a solid foundation in sales techniques, negotiation skills, and the ability to close deals. This includes the ability to identify customer needs, present value propositions, overcome objections, and negotiate win-win outcomes to achieve sales targets."
+    },
+    {
+     "competency": "Analytical and Problem-Solving Skills",
+     "description": "Strong analytical and problem-solving skills are necessary to analyze sales data, identify trends, and make data-driven decisions. Regional Sales Managers should be able to troubleshoot issues, develop creative solutions, and adapt sales strategies to changing market conditions."
+    },
+    {
+     "competency": "Customer Focus",
+     "description": "A Regional Sales Manager should have a strong customer-centric approach. This involves understanding customer needs, building relationships, and delivering exceptional customer experiences. Being able to anticipate customer requirements and provide solutions that address their pain points is crucial."
+    },
+    {
+     "competency": "Communication and Presentation Skills",
+     "description": "Effective communication and presentation skills are vital for a Regional Sales Manager. They should be able to articulate sales strategies, influence others, deliver persuasive presentations, and effectively communicate with team members, clients, and senior management."
+    },
+    {
+     "competency": "Team Management and Development",
+     "description": "Regional Sales Managers need to have excellent people management skills. This includes the ability to recruit and onboard sales talent, provide coaching and feedback, foster teamwork, and develop the skills and capabilities of their sales team to drive performance."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Sales Target Achievement",
+     "weight": 30
+    },
+    {
+     "result": "Sales Team Building",
+     "weight": 20
+    },
+    {
+     "result": "Market Share Growth",
+     "weight": 20
+    },
+    {
+     "result": "Sales Pipeline and Conversion Rate",
+     "weight": 10
+    },
+    {
+     "result": "Customer Satisfaction",
+     "weight": 20
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/Sales Coodinator.docx",
+   "department": "sales",
+   "role": "Sales Coordinator",
+   "reporting_to": "Sales Manager/HR",
+   "scope": [
+    "Sales Support",
+    "Customer Interaction",
+    "Order Processing and Fulfillment",
+    "CRM Management",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Order Processing",
+     "detail": "Ensure accurate and timely processing of sales orders, including order entry, verification, and coordination with the relevant departments to fulfill customer requirements."
+    },
+    {
+     "area": "Customer Service",
+     "detail": "Provide excellent customer service by promptly addressing inquiries, resolving issues, and ensuring customer satisfaction throughout the sales process."
+    },
+    {
+     "area": "Sales Support",
+     "detail": "Assist the sales team in preparing sales proposals, contracts, and presentations. Provide administrative support and coordinate sales activities to help sales representatives focus on generating revenue."
+    },
+    {
+     "area": "Data Management",
+     "detail": "Maintain and update customer records, sales data, and other relevant information in the CRM system. Ensure the accuracy and completeness of data for reporting and analysis purposes."
+    },
+    {
+     "area": "Internal Coordination",
+     "detail": "Collaborate with internal teams such as marketing, production, logistics, and finance to coordinate activities related to sales. Ensure smooth communication and alignment between departments to meet customer requirements effectively."
+    },
+    {
+     "area": "Process Improvement",
+     "detail": "Identify opportunities for process improvement within the sales function and suggest strategies to enhance efficiency, productivity, and customer satisfaction."
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Communication Skills",
+     "description": "Strong verbal and written communication skills are crucial for effective interaction with customers, sales team members, and colleagues from various departments. Clear and concise communication helps convey information, address inquiries, and build positive relationships."
+    },
+    {
+     "competency": "Customer Focus",
+     "description": "A customer-centric approach is essential for understanding customer needs, providing excellent service, and building long-term relationships. Sales coordinators should have the ability to listen attentively, empathize with customers, and provide timely and appropriate solutions."
+    },
+    {
+     "competency": "Organizational Skills",
+     "description": "Sales coordinators are responsible for managing multiple tasks simultaneously. Effective organization and time management skills are crucial to prioritize activities, meet deadlines, and ensure smooth coordination between different sales processes and departments."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Accuracy and attention to detail are vital for order processing, maintaining customer records, and preparing documentation. Sales coordinators must ensure that information is entered correctly, contracts are accurate, and customer data is managed securely."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "Sales coordinators encounter various challenges and issues during the sales process. The ability to identify problems, analyze situations, and propose effective solutions is important for maintaining customer satisfaction and supporting the sales team"
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Order Accuracy",
+     "weight": 20
+    },
+    {
+     "result": "Servicing/ CRM",
+     "weight": 20
+    },
+    {
+     "result": "Sales Reporting and Analysis",
+     "weight": 20
+    },
+    {
+     "result": "Order Processing Time",
+     "weight": 15
+    },
+    {
+     "result": "Customer Satisfaction",
+     "weight": 15
+    },
+    {
+     "result": "Process Improvement",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/Sales Executive.docx",
+   "department": "sales",
+   "role": "Sales Executive",
+   "reporting_to": "RSM/SM/MD",
+   "scope": [
+    "Sales Leadership",
+    "Business Development",
+    "Market Expansion",
+    "Sales Strategy and Planning",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Sales Strategy Development",
+     "detail": "Develop and implement effective sales strategies aligned with the company's goals and objectives. This involves analyzing market trends, identifying target customer segments, setting sales targets, and determining the most suitable sales channels and approaches."
+    },
+    {
+     "area": "Key Account Management",
+     "detail": "Build and maintain strong relationships with key accounts and major customers. Understand their specific needs, provide personalized solutions, and ensure customer satisfaction. Develop strategies to retain and grow key accounts, maximizing their long-term value."
+    },
+    {
+     "area": "Sales Performance Analysis",
+     "detail": "Analyze sales data and key performance indicators to evaluate individual and team performance. Identify strengths, weaknesses, and areas for improvement. Utilize data-driven insights to make informed decisions and adjust sales strategies as needed."
+    },
+    {
+     "area": "Sales Forecasting and Planning",
+     "detail": "Utilize market insights, sales data, and customer feedback to forecast sales trends and plan accordingly. Develop sales budgets, set achievable sales targets, and allocate resources effectively. Monitor progress and adjust plans as necessary to achieve desired results."
+    },
+    {
+     "area": "Continuous Learning and Professional Development",
+     "detail": "Stay updated on industry trends, sales techniques, and emerging technologies. Attend training programs, conferences, and industry events to enhance knowledge and skills. Continuously seek opportunities for self-improvement and stay ahead in a dynamic market."
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Sales and Negotiation Skills",
+     "description": "Strong sales skills, including the ability to identify customer needs, present compelling solutions, handle objections, and negotiate favorable deals. Effective negotiation skills are crucial for securing profitable contracts and managing customer expectations."
+    },
+    {
+     "competency": "Strategic Thinking",
+     "description": "The ability to think strategically and develop sales strategies that align with business objectives. This includes analyzing market trends, identifying growth opportunities, and adapting sales approaches to meet changing market conditions."
+    },
+    {
+     "competency": "Business Acumen",
+     "description": "A solid understanding of the food industry, including knowledge of product offerings, market dynamics, customer preferences, and competitor activities. Being well-versed in industry trends, regulations, and market segmentation enables you to make informed business decisions."
+    },
+    {
+     "competency": "Analytical and Problem-Solving Skills",
+     "description": "Strong analytical skills to interpret sales data, identify trends, and derive insights. This enables you to make data-driven decisions, solve problems, and optimize sales strategies to drive results."
+    },
+    {
+     "competency": "Customer Focus",
+     "description": "A customer-centric mindset and the ability to understand customer needs, anticipate their requirements, and deliver exceptional customer service. Being responsive, empathetic, and committed to customer satisfaction are critical competencies for success."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Sales Growth",
+     "weight": 25
+    },
+    {
+     "result": "New Business Acquisition",
+     "weight": 15
+    },
+    {
+     "result": "Customer Retention Rate",
+     "weight": 20
+    },
+    {
+     "result": "Sales Conversion Rate",
+     "weight": 15
+    },
+    {
+     "result": "Market Share",
+     "weight": 15
+    },
+    {
+     "result": "Servicing",
+     "weight": 10
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/Sales Officer.docx",
+   "department": "sales",
+   "role": "Sales Officer",
+   "reporting_to": "Regional Sales Manager",
+   "scope": [
+    "Market Expansion",
+    "Product Portfolio Sales",
+    "Innovation and New Product Development",
+    "Professional Growth",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Sales Generation",
+     "detail": "Your primary responsibility is to achieve sales targets by generating revenue through the sale of food products. This involves identifying potential customers, conducting sales presentations, negotiating contracts, and closing deals."
+    },
+    {
+     "area": "Market Analysis and Planning",
+     "detail": "Conduct market research to identify market trends, customer demands, and competitor activities. Use this information to develop sales strategies and plans that maximize opportunities and give your company a competitive edge."
+    },
+    {
+     "area": "Product Knowledge and Promotion",
+     "detail": "Acquire in-depth knowledge about the food products you sell, including their features, benefits, and competitive advantages. Effectively communicate product information to customers and highlight their value proposition. Conduct product demonstrations and tastings to create interest and drive sales."
+    },
+    {
+     "area": "Order Processing and Management",
+     "detail": "Efficiently manage the order process, including order placement, tracking, and fulfillment. Coordinate with internal departments, such as production and logistics, to ensure timely delivery and resolve any issues that may arise during the order fulfillment process."
+    },
+    {
+     "area": "Customer Service and Support",
+     "detail": "Provide excellent customer service throughout the sales process. Respond to customer inquiries, resolve issues or complaints, and ensure customer satisfaction. Act as a point of contact for customers, addressing their concerns and providing support when needed."
+    }
+   ],
+   "delegation": [
+    "-"
+   ],
+   "competencies": [
+    {
+     "competency": "Sales and Negotiation Skills",
+     "description": "Strong sales skills, including the ability to identify customer needs, present product solutions, handle objections, and close deals. Effective negotiation skills are also essential for securing favorable terms and agreements with customers."
+    },
+    {
+     "competency": "Customer Focus",
+     "description": "A customer-centric approach is essential for understanding customer needs, providing personalized service, and building long-term relationships. Anticipating and exceeding customer expectations is key to achieving customer satisfaction and loyalty."
+    },
+    {
+     "competency": "Market Awareness",
+     "description": "Stay informed about market trends, consumer preferences, and competitor activities. This awareness allows you to identify opportunities, tailor sales strategies, and differentiate your products from competitors in the market."
+    },
+    {
+     "competency": "Analytical Skills",
+     "description": "The ability to analyze sales data, market trends, and customer feedback to derive insights and make data-driven decisions. This helps in identifying areas for improvement, refining sales strategies, and optimizing sales performance."
+    },
+    {
+     "competency": "Time Management and Organizational Skills",
+     "description": "Effective time management and organizational skills enable you to prioritize tasks, meet deadlines, and handle multiple customer accounts simultaneously. This ensures efficient sales operations and enhances productivity."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Meeting Sales Target",
+     "weight": 35
+    },
+    {
+     "result": "Sales Growth",
+     "weight": 25
+    },
+    {
+     "result": "Average Order Value",
+     "weight": 20
+    },
+    {
+     "result": "Servicing Proactiveness",
+     "weight": 15
+    },
+    {
+     "result": "Area Coverage",
+     "weight": 5
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "sales/Sales Support.docx",
+   "department": "sales",
+   "role": "Sales Support office",
+   "reporting_to": "Sales Manager",
+   "scope": [
+    "Sales Process Support",
+    "Order Management",
+    "Sales Reporting and Analytics",
+    "Sales Collateral and Documentation",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Sales Process Support",
+     "detail": "Provide comprehensive support to the sales team throughout the sales process, including lead generation, lead qualification, and assisting with sales activities."
+    },
+    {
+     "area": "Order Management",
+     "detail": "Ensure efficient and accurate order processing, including order entry, tracking, coordination with relevant departments, and timely delivery to customers."
+    },
+    {
+     "area": "Sales Reporting and Analytics",
+     "detail": "Generate sales reports, analyze sales data, and provide insights to sales management for evaluating performance, identifying trends, and making data-driven decisions."
+    },
+    {
+     "area": "Sales Collateral and Documentation",
+     "detail": "Create and maintain sales collateral, including presentations, proposals, contracts, and other sales documentation to support the sales team's efforts."
+    },
+    {
+     "area": "Sales Support and Communication",
+     "detail": "Serve as a central point of contact for the sales team, providing support, addressing inquiries, and facilitating effective communication between the sales team and other departments."
+    }
+   ],
+   "delegation": [
+    "-",
+    "`"
+   ],
+   "competencies": [
+    {
+     "competency": "Communication Skills",
+     "description": "Strong verbal and written communication skills are crucial for effectively interacting with the sales team, customers, and colleagues from various departments. Clear and concise communication helps convey information, address inquiries, and build positive relationships."
+    },
+    {
+     "competency": "Customer Focus",
+     "description": "A customer-centric approach is vital for understanding customer needs, providing excellent service, and building long-term relationships. Sales Support Office professionals should have the ability to listen attentively, empathize with customers, and provide timely and appropriate solutions."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Accuracy and attention to detail are critical for order processing, maintaining records, preparing documentation, and ensuring data integrity. Sales Support Office professionals must have a keen eye for detail to avoid errors and provide accurate information."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "The ability to identify and solve problems is crucial in a Sales Support Office role. Sales support professionals should be able to analyze situations, propose effective solutions, and resolve issues that arise during the sales process."
+    },
+    {
+     "competency": "Adaptability",
+     "description": "The sales environment is dynamic, and the ability to adapt to changing circumstances is essential. Sales Support Office professionals should be open to change, flexible in adjusting priorities, and able to handle unexpected situations with ease."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Order Accuracy",
+     "weight": 30
+    },
+    {
+     "result": "Sales Support Efficiency",
+     "weight": 30
+    },
+    {
+     "result": "Sales Reporting and Analysis",
+     "weight": 25
+    },
+    {
+     "result": "Process Improvement",
+     "weight": 15
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Store/Store Manager.docx",
+   "department": "Store",
+   "role": "Store Manager",
+   "reporting_to": "MD",
+   "scope": [],
+   "accountabilities": [
+    {
+     "area": "Store Performance",
+     "detail": "The store incharge is accountable for the overall performance of the store, including sales targets, profitability, and customer satisfaction. They set performance goals, monitor progress, and implement strategies to achieve or exceed targets."
+    },
+    {
+     "area": "Inventory Management",
+     "detail": "Ensuring optimal inventory levels is a key accountability. The store incharge is responsible for maintaining accurate inventory records, monitoring stock levels, implementing inventory control measures, and minimizing stock losses or shortages"
+    },
+    {
+     "area": "Operational Efficiency",
+     "detail": "The store incharge is accountable for optimizing store operations to enhance efficiency and productivity. This includes streamlining processes, identifying areas for improvement, implementing cost-saving measures, and ensuring compliance with operational procedures."
+    },
+    {
+     "area": "Vendor Review",
+     "detail": "They monitor supplier performance, ensure timely deliveries, and seek opportunities for cost savings and value-added partnerships."
+    },
+    {
+     "area": "Compliance and Safety",
+     "detail": "The store incharge is responsible for ensuring compliance with all applicable laws, regulations, and safety standards. They implement and enforce policies related to employee safety, product quality, pricing accuracy, and data protection."
+    },
+    {
+     "area": "Financial Management",
+     "detail": "Accountable for managing store finances within allocated budgets. This includes monitoring and controlling expenses, ensuring accurate cash handling procedures, and contributing to financial objectives such as profitability and cost control."
+    }
+   ],
+   "delegation": [
+    "Amit",
+    "Vishal",
+    "Sakib",
+    "Lokesh"
+   ],
+   "competencies": [
+    {
+     "competency": "Leadership",
+     "description": "As a store incharge, you need strong leadership skills to guide and motivate your team. This includes the ability to delegate tasks, provide clear direction, inspire and develop your staff, and foster a positive work environment."
+    },
+    {
+     "competency": "Communication",
+     "description": "Excellent communication skills are essential for effectively conveying information, providing instructions, and resolving conflicts. You should be able to communicate clearly and professionally with customers, staff, suppliers, and management."
+    },
+    {
+     "competency": "Problem Solving",
+     "description": "The ability to identify and solve problems efficiently is vital in managing store operations. You should be adept at analyzing situations, making informed decisions, and implementing effective solutions. This includes troubleshooting issues related to inventory, staffing, customer service, and other operational challenges."
+    },
+    {
+     "competency": "Organization and Time Management",
+     "description": "Store incharges need strong organizational skills to manage multiple tasks and priorities. This includes effectively scheduling staff, overseeing inventory management, planning promotions and displays, and ensuring smooth day-to-day operations."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Strong attention to detail is important for maintaining accurate inventory records, ensuring pricing accuracy, and implementing operational procedures. Being meticulous in tasks such as cash handling, visual merchandising, and compliance with regulations is vital."
+    },
+    {
+     "competency": "Financial Acumen",
+     "description": "Understanding and managing store finances is important for optimizing profitability. You should have basic financial literacy, be able to analyze financial reports, control costs, and make informed decisions regarding pricing, promotions, and budget management"
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Inventory Planning",
+     "weight": 25
+    },
+    {
+     "result": "Team Development",
+     "weight": 10
+    },
+    {
+     "result": "Inventory Turnover",
+     "weight": 10
+    },
+    {
+     "result": "Store Expenses and Cost Control",
+     "weight": 30
+    },
+    {
+     "result": "Compliance and Safety",
+     "weight": 25
+    }
+   ],
+   "kpi_weight_total": 100
+  },
+  {
+   "file": "Store/Store Supervisor_Dispatch.docx",
+   "department": "Store",
+   "role": "Supervisor Dispatch",
+   "reporting_to": "Store Incharge",
+   "scope": [
+    "Coordination",
+    "Time management",
+    "Dispatch Management",
+    "Compliance and Safety",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Store Operations",
+     "detail": "The store supervisor is accountable for the overall functioning of the store. This includes ensuring that daily operations run smoothly, opening and closing procedures are followed, and maintaining a clean and organized store environment."
+    },
+    {
+     "area": "Staff Management and Training",
+     "detail": "Accountable for managing and supervising the store staff. This includes assigning tasks, providing guidance and support, conducting performance evaluations, and facilitating training and development programs to enhance employee skills and performance."
+    },
+    {
+     "area": "Dispatch Management",
+     "detail": "Accountable for effective dispatch management to ensure the adequate stock level is maintained for delivery and minimize stock out. This includes monitoring inventory levels, coordinating with sales and production teams., conducting inventory counts, and ensuring timely delivery of goods."
+    },
+    {
+     "area": "Time management and delivery",
+     "detail": "Managing labor and goods for speedy loading and unloading of trucks and other vehicles."
+    }
+   ],
+   "delegation": [
+    "Rohit Anoop",
+    "Jitender",
+    "Suraj"
+   ],
+   "competencies": [
+    {
+     "competency": "Leadership",
+     "description": "Strong leadership skills are essential for effectively managing and supervising the store staff. This includes the ability to inspire, motivate, and guide the team toward achieving common goals."
+    },
+    {
+     "competency": "Communication",
+     "description": "Excellent communication skills are vital for effectively conveying information, providing clear instructions, and resolving conflicts. Effective communication ensures smooth coordination among team members and facilitates strong relationships with customers and stakeholders."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "Strong problem-solving skills are necessary to address challenges that arisein store operations. The ability to analyze situations, identify root causes, and implement effective solutions is important for maintaining smooth operations and meeting customer needs."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Having a keen eye for detail is essential for ensuring accurate inventory management, implementing visual merchandising standards, and maintaining compliance with operational procedures and policies."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Dispatch Management",
+     "weight": 30
+    },
+    {
+     "result": "Operations Efficiency",
+     "weight": 30
+    },
+    {
+     "result": "Reduction in damage of Finished goods",
+     "weight": 15
+    },
+    {
+     "result": "Communication and Collaboration with the Driver and Sales department:20%Staff Performance and Development",
+     "weight": 5
+    }
+   ],
+   "kpi_weight_total": 80
+  },
+  {
+   "file": "Store/Store Supervisor_Finished Goods.docx",
+   "department": "Store",
+   "role": "Store Supervisor- Finished Goods",
+   "reporting_to": "Store Manager",
+   "scope": [
+    "Store Operations",
+    "Inventory Management",
+    "Compliance and Safety",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Store Operations",
+     "detail": "The store supervisor is accountable for the overall functioning of the store. This includes ensuring that daily operations run smoothly, opening and closing procedures are followed, and maintaining a clean and organized store environment."
+    },
+    {
+     "area": "Staff Management and Training",
+     "detail": "Accountable for managing and supervising the store staff. This includes assigning tasks, providing guidance and support, conducting performance evaluations, and facilitating training and development programs to enhance employee skills and performance."
+    },
+    {
+     "area": "Inventory Management",
+     "detail": "Accountable for effective inventory management to ensure adequate stock levels and minimize stock outs or overstocking. This includes monitoring inventory levels, coordinating with suppliers, conducting inventory counts, and implementing inventory control measures."
+    },
+    {
+     "area": "Financial Management",
+     "detail": "Accountable for managing store finances within allocated budgets. This includes monitoring and controlling expenses, ensuring accurate cash handling procedures, and contributing to financial objectives such as profitability and cost control."
+    }
+   ],
+   "delegation": [
+    "Amit (Supervisor)",
+    "Vishal",
+    "Lokesh-dispatch"
+   ],
+   "competencies": [
+    {
+     "competency": "Leadership",
+     "description": "Strong leadership skills are essential for effectively managing and supervising the store staff. This includes the ability to inspire, motivate, and guide the team towards achieving common goals."
+    },
+    {
+     "competency": "Communication",
+     "description": "Excellent communication skills are vital for effectively conveying information, providing clear instructions, and resolving conflicts. Effective communication ensures smooth coordination among team members and facilitates strong relationships with customers and stakeholders."
+    },
+    {
+     "competency": "Problem Solving",
+     "description": "Strong problem-solving skills are necessary to address challenges that arise in store operations. The ability to analyze situations, identify root causes, and implement effective solutions is important for maintaining smooth operations and meeting customer needs."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Having a keen eye for detail is essential for ensuring accurate inventory management, implementing visual merchandising standards, and maintaining compliance with operational procedures and policies."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Inventory Management",
+     "weight": 30
+    },
+    {
+     "result": "Store Operations Efficiency",
+     "weight": 30
+    },
+    {
+     "result": "Reduction in damage of RM and PM",
+     "weight": 15
+    },
+    {
+     "result": "Communication and Collaboration with Production and Sales department :20%Staff Performance and Development",
+     "weight": 5
+    }
+   ],
+   "kpi_weight_total": 80
+  },
+  {
+   "file": "Store/Store Supervisor_RM-PM.docx",
+   "department": "Store",
+   "role": "Store Supervisor RM-PM",
+   "reporting_to": "Store Manager",
+   "scope": [
+    "Store Operations",
+    "Develop Employees",
+    "Inventory Management",
+    "Compliance and Safety",
+    "REPORTING POSITION AND KEY ACCOUNTABILITIES"
+   ],
+   "accountabilities": [
+    {
+     "area": "Store Operations",
+     "detail": "The store supervisor is accountable for the overall functioning of the store. This includes ensuring that daily operations run smoothly, opening and closing procedures are followed, and maintaining a clean and organized store environment."
+    },
+    {
+     "area": "Staff Management and Training",
+     "detail": "Accountable for managing and supervising the store staff. This includes assigning tasks, providing guidance and support, conducting performance evaluations, and facilitating training and development programs to enhance employee skills and performance."
+    },
+    {
+     "area": "Inventory Management",
+     "detail": "Accountable for effective inventory management to ensure adequate stock levels and minimize stock outs or overstocking. This includes monitoring inventory levels, coordinating with suppliers, conducting inventory counts, and implementing inventory control measures."
+    },
+    {
+     "area": "Financial Management",
+     "detail": "Accountable for managing store finances within allocated budgets. This includes monitoring and controlling expenses, ensuring accurate cash handling procedures, and contributing to financial objectives such as profitability and cost control."
+    }
+   ],
+   "delegation": [
+    "Gurmeet",
+    "Jishan",
+    "Mukesh"
+   ],
+   "competencies": [
+    {
+     "competency": "Leadership",
+     "description": "Strong leadership skills are essential for effectively managing and supervising the store staff. This includes the ability to inspire, motivate, and guide the team towards achieving common goals."
+    },
+    {
+     "competency": "Communication",
+     "description": "Excellent communication skills are vital for effectively conveying information, providing clear instructions, and resolving conflicts. Effective communication ensures smooth coordination among team members and facilitates strong relationships with customers and stakeholders."
+    },
+    {
+     "competency": "Problem-Solving",
+     "description": "Strong problem-solving skills are necessary to address challenges that arise in store operations. The ability to analyze situations, identify root causes, and implement effective solutions is important for maintaining smooth operations and meeting customer needs."
+    },
+    {
+     "competency": "Attention to Detail",
+     "description": "Having a keen eye for detail is essential for ensuring accurate inventory management, implementing visual merchandising standards, and maintaining compliance with operational procedures and policies."
+    }
+   ],
+   "kpis": [
+    {
+     "result": "Inventory Management",
+     "weight": 30
+    },
+    {
+     "result": "Store Operations Efficiency",
+     "weight": 30
+    },
+    {
+     "result": "Reduction in damage of RM and PM",
+     "weight": 15
+    },
+    {
+     "result": "Communication and Collaboration with the Production and Sales department:20%Staff Performance and Development",
+     "weight": 5
+    }
+   ],
+   "kpi_weight_total": 80
+  }
+ ]
+}

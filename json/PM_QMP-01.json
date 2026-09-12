@@ -1,0 +1,2591 @@
+{
+  "doc_type": "quality_manual",
+  "doc_code": "PM/QMP-01",
+  "title": "Integrated Management System — Apex Manual",
+  "version": "4.0",
+  "effective_date": "01/01/2024",
+  "iso_standard": "ISO 9001:2015",
+  "owner": "Ms. Khushi Paswan",
+  "owner_title": "Quality Management Representative",
+  "approver": "Balkrishna Mishra",
+  "approver_title": "CEO / Managing Director",
+  "company_name": "Pack Masters",
+  "company_logo_b64": "",
+  "scope_cards": [
+    {
+      "label": "Purpose",
+      "text": "This Integrated Management System (IMS) Manual defines the Quality, Environmental, and Occupational Health & Safety Management Systems of Pack Masters. It demonstrates compliance with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 requirements, and provides a framework for continual improvement of processes and customer satisfaction."
+    },
+    {
+      "label": "Scope",
+      "text": "Contract Packaging Services including Repacking of Industrial Chemicals, Adhesives, Lubricant Oils, Greases, Fuel Additives, Agro Chemicals & Solvents. Applicable to all departments, processes, and personnel at the Pack Masters facility in India."
+    },
+    {
+      "label": "Responsible",
+      "text": "Balkrishna Mishra (CEO / Managing Director) — overall accountability. Tarun Mishra (General Manager – Operations / ISO Document Approval Authority) — implementation and oversight. Ms. Khushi Paswan (Quality Management Representative) — maintenance and continual improvement of the IMS."
+    }
+  ],
+  "policy_statement": "Pack Masters is committed to providing high-quality contract packaging services while safeguarding the environment and ensuring the health & safety of all workers. Our Integrated Management System (IMS) is designed to meet the requirements of ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018. We pledge to continually improve our processes, prevent pollution, eliminate hazards and reduce OH&S risks, comply with applicable legal and regulatory requirements, and meet the needs and expectations of our interested parties.",
+  "document_hierarchy": [
+    {
+      "level": "Level 1 — Apex Manual",
+      "description": "Integrated Management System Manual defining scope, policy, objectives, and clause-by-clause compliance.",
+      "examples": "PM/QMP-01 (this document)"
+    },
+    {
+      "level": "Level 2 — Procedures",
+      "description": "Standard Operating Procedures (SOPs) and Quality System Procedures defining how processes are managed.",
+      "examples": "PM/QSP/QA-01 through PM/QSP/QA-10, PM/SOP/PD-01 through PM/SOP/PD-06"
+    },
+    {
+      "level": "Level 3 — Work Instructions",
+      "description": "Detailed step-by-step work instructions for specific tasks and operations on the shop floor.",
+      "examples": "PM/WI-01, PM/OH-WI-001"
+    },
+    {
+      "level": "Level 4 — Records & Forms",
+      "description": "Blank forms, filled records, registers, checklists — objective evidence of compliance.",
+      "examples": "PM/FRM/QA-01, PM/IAC-001, PM/RR-001"
+    }
+  ],
+  "clause_sections": [
+    {
+      "clause": "4.0",
+      "title": "CONTEXT OF THE ORGANIZATION",
+      "content": "",
+      "sub_sections": [
+        {
+          "clause": "4.1",
+          "title": "Understanding the Organization & its Context",
+          "content": "The Integrated Management System at Packmasters is realized through adoption of ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, ISO 50001:2018, and ISO 31000:2018. Packmasters determines external and internal issues relevant to its purpose and strategic direction through SWOT analysis, with continuous monitoring and review by Top Management."
+        },
+        {
+          "clause": "4.2",
+          "title": "Understanding the Needs & Expectations of Interested Parties",
+          "content": ""
+        },
+        {
+          "clause": "4.3",
+          "title": "Determining the Scope of the IMS",
+          "content": "The scope of the Integrated Management System of Packmasters encompasses all quality, environmental, occupational health & safety, energy management, and risk management activities conducted at the Rabale facility, covering all stages from receipt of raw materials through production, quality control, and dispatch of finished packaged goods."
+        },
+        {
+          "clause": "4.4",
+          "title": "IMS & its Processes",
+          "content": "Packmasters has established, documented, implemented, maintained, and continually improves its IMS in accordance with all five referenced standards. Processes are identified in Annexure I and their interactions depicted in Annexure IV. The EnMS processes (energy review, energy planning, energy monitoring) and the Risk Management processes (risk identification, RPN scoring, risk register maintenance) are integrated into the existing process map as support processes."
+        }
+      ]
+    },
+    {
+      "clause": "5.0",
+      "title": "LEADERSHIP",
+      "content": "",
+      "sub_sections": [
+        {
+          "clause": "5.1",
+          "title": "Leadership & Commitment",
+          "content": "Top Management of Packmasters demonstrates commitment to the IMS (including EnMS and Risk Management) by:\nCommunicating the importance of meeting customer, statutory, regulatory, and energy compliance requirements.\nEstablishing and communicating IMS Policy including Quality, Environment, OH&S, and Energy policies.\nAppointing the Management Coordinator and allocating responsibilities across all five system dimensions.\nEnsuring integration of QMS, EMS, OHSMS, EnMS, and Risk Management into business processes.\nPromoting risk-based thinking, process approach, and energy performance improvement culture.\nConducting Management Review Meetings at prescribed intervals with agenda covering all systems.\nEnsuring availability of resources — human, financial, technological — for the complete IMS.\nChampioning energy conservation goals and risk mitigation across all functions."
+        },
+        {
+          "clause": "5.2",
+          "title": "Customer Focus",
+          "content": "Management ensures customer and applicable statutory requirements are determined and consistently met. Risks and opportunities affecting service conformity and customer satisfaction are addressed through the Risk Register (ML-30). Customer feedback is collected through visits, interface meetings, and satisfaction surveys on a half-yearly basis."
+        },
+        {
+          "clause": "5.3",
+          "title": "IMS Policy",
+          "content": "Pack Masters maintains an integrated policy covering Quality, Environment, OH&S, and Energy commitments. The policy is approved by the Proprietor, documented in English and Hindi, communicated at all levels, displayed at strategic locations, and reviewed at every MRM for continuing suitability. The Quality Policy is documented as a standalone controlled document (PM-QP-001) and the Environmental Policy as PM-EP-001. Both are displayed at the factory premises and available to relevant interested parties.\nThe Energy Policy specifically commits to:\nAchieving energy performance improvement through the systematic EnMS process.\nEnsuring availability of information and resources to achieve energy objectives and targets.\nComplying with applicable energy-related legal requirements.\nSupporting procurement of energy-efficient products and services."
+        },
+        {
+          "clause": "5.4",
+          "title": "Organizational Roles, Responsibilities & Authorities",
+          "content": "Top Management has defined roles and responsibilities communicated through the organizational chart (Annexure II) and Responsibility Matrix (Annexure III). Additional responsibilities for EnMS and Risk Management are:"
+        }
+      ]
+    },
+    {
+      "clause": "6.0",
+      "title": "PLANNING",
+      "content": "",
+      "sub_sections": [
+        {
+          "clause": "6.1",
+          "title": "Actions to Address Risks & Opportunities (ISO 31000:2018)",
+          "content": "Packmasters has established a formal Risk Management framework in accordance with ISO 31000:2018, operationalized through Risk Analysis Procedure Pr-02 and Risk Register ML-30. This framework addresses risks and opportunities across all IMS processes."
+        },
+        {
+          "clause": "6.1.1",
+          "title": "Risk Identification Methodology",
+          "content": "Risks and opportunities are identified by respective Heads of Departments (HODs) for each process by collecting information from:\nPrevious customer complaints and non-conformances\nLessons learnt from past incidents and near-misses\nLegal and regulatory requirements\nCustomer-specific requirements (CSR)\nProcess monitoring data and historical performance\nSWOT analysis outputs (Cl. 4.1)\nEnergy performance deviations (for EnMS-related risks)"
+        },
+        {
+          "clause": "6.1.2",
+          "title": "RPN Scoring & Categorization (Ref: Pr-02)",
+          "content": "Risk Priority Number (RPN) = Severity × Occurrence × Detection"
+        },
+        {
+          "clause": "6.1.3",
+          "title": "Risk Register Summary (Ref: ML-30) — Top Significant Risks",
+          "content": "The following processes have been identified with significant risks (RPN > 30) from the Risk Register ML-30. Full details are provided in Annexure VII."
+        },
+        {
+          "clause": "6.2",
+          "title": "Quality / Environmental / OH&S Objectives & Planning",
+          "content": "Objectives are established annually by Top Management and MC, consistent with IMS policy, and reviewed at every MRM. Objectives are measurable, practical, and linked to KPIs.\nQuality Objectives: Customer satisfaction, on-time delivery, reduction in NCRs, new product development.\nEnvironmental Objectives: Reduction of waste, reduction of energy consumption (linked to EnMS), compliance with environmental regulations.\nOH&S Objectives: Zero lost-time incidents, 100% PPE compliance, completion of safety training programs.\nEnergy Objectives: Reduce energy consumption per unit by defined targets; complete energy audit annually."
+        },
+        {
+          "clause": "6.3",
+          "title": "Planning of Changes",
+          "content": "Changes to the IMS are planned considering: purpose and potential consequences, integrity of the management system, resource availability, and reallocation of responsibilities. Changes to EnMS processes (e.g., modification of SEUs) or Risk Register updates (RPN re-assessment) are managed through the same change control mechanism."
+        },
+        {
+          "clause": "6.4",
+          "title": "OH&S Planning — Hazard Identification & Risk Assessment (HIRA)",
+          "content": "HIRA is conducted for all key operational processes. Controls are identified and implemented in a planned manner, documented in DP 09. The HIRA process is aligned with the ISO 31000:2018 risk framework, using consistent terminology for hazard identification, risk evaluation, and control hierarchy."
+        },
+        {
+          "clause": "6.5",
+          "title": "Energy Management Planning (ISO 50001:2018)",
+          "content": "Packmasters has established an Energy Management System in accordance with ISO 50001:2018 to systematically improve energy performance across all production and support processes."
+        },
+        {
+          "clause": "6.5.1",
+          "title": "Energy Policy",
+          "content": "The Energy Policy of Packmasters commits to:\nContinual improvement of energy performance, energy efficiency, and reduction of energy intensity.\nEnsuring availability of information and resources to achieve energy objectives and targets.\nCompliance with all applicable energy-related legal and regulatory requirements.\nSupporting procurement of energy-efficient products, equipment, and services.\nDesign of facilities and processes with energy performance improvement in mind.\nThe Energy Policy is approved by the Proprietor, communicated to all personnel, and reviewed annually at MRM."
+        },
+        {
+          "clause": "6.5.2",
+          "title": "Energy Review & Baseline (EnB)",
+          "content": "An Energy Review is conducted annually (DP 18) to:\nAnalyze energy sources, past and present energy consumption data.\nIdentify Significant Energy Uses (SEUs) — processes/equipment with highest energy consumption.\nIdentify variables affecting energy consumption (production volume, ambient temperature, shift patterns).\nEstimate future energy use and consumption trends.\nThe Energy Baseline (EnB) is established using 12 months of historical data as the reference period and is updated when significant changes in operations, facilities, or equipment occur."
+        },
+        {
+          "clause": "6.5.3",
+          "title": "Energy Performance Indicators (EnPIs)",
+          "content": ""
+        },
+        {
+          "clause": "6.5.4",
+          "title": "Energy Objectives, Targets & Action Plans",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "clause": "7.0",
+      "title": "SUPPORT",
+      "content": "",
+      "sub_sections": [
+        {
+          "clause": "7.1",
+          "title": "Resources",
+          "content": "Packmasters provides resources for establishment, implementation, maintenance, and continual improvement of the IMS including QMS, EMS, OHSMS, EnMS, and Risk Management. Additional resources for EnMS include energy metering equipment, sub-meters, and energy monitoring software/log sheets. Resources for Risk Management include ML-30 documentation, RPN tracking tools, and training on Pr-02."
+        },
+        {
+          "clause": "7.2",
+          "title": "Competence",
+          "content": "Personnel assigned IMS responsibilities are competent based on education, training, skills, and experience. Competency requirements now include: understanding of energy performance monitoring and EnPI reporting; ability to conduct or participate in risk assessment using the RPN methodology (Pr-02); and awareness of the Risk Register (ML-30) relevant to their function."
+        },
+        {
+          "clause": "7.3",
+          "title": "Awareness",
+          "content": "All employees are made aware of the IMS policy including the Energy Policy; their contribution to energy performance improvement; the risks associated with their work activities and the RPN-based framework; consequences of departure from IMS requirements; and their role in emergency preparedness."
+        },
+        {
+          "clause": "7.4",
+          "title": "Communication",
+          "content": "Internal communication on EnMS includes monthly EnPI reports shared at MRM, energy conservation notices displayed at SEU locations, and training programs. External communication on EnMS includes regulatory submissions to BEE (if applicable) and energy audit reports. Risk-related communication includes RPN trend reports at MRM and updated Risk Register (ML-30) distribution to all HODs."
+        },
+        {
+          "clause": "7.5",
+          "title": "Documented Information",
+          "content": "The IMS documentation structure follows a four-level hierarchy:"
+        }
+      ]
+    },
+    {
+      "clause": "8.0",
+      "title": "OPERATION",
+      "content": "",
+      "sub_sections": [
+        {
+          "clause": "8.1",
+          "title": "Operational Planning & Control",
+          "content": "Packmasters plans, implements, and controls all processes needed for product/service provision. Operational controls are established for significant environmental aspects, OH&S risks, and Significant Energy Uses (SEUs). Risk controls identified in ML-30 for RPN > 30 are embedded as operational controls within relevant DPMs."
+        },
+        {
+          "clause": "8.2",
+          "title": "Requirements of Products & Services",
+          "content": "Customer communication, requirement determination, and review processes are conducted as per established procedures. Emergency Preparedness and Response procedures cover potential environmental and OH&S emergencies and are reviewed at least annually."
+        },
+        {
+          "clause": "8.3",
+          "title": "Production & Service Provision",
+          "content": "Production is executed under controlled conditions per production plans, process sheets, and work instructions. Identification and traceability are maintained for finished products. Post-delivery activities and control of changes are managed per documented procedures.\nProduction Standard Operating Procedures (PM/SOP/PD-01 to PM/SOP/PD-06) cover Downfilling, Labelling, Lid Press, Acetone Primer Downfilling, Acetone Storage & Handling, and Stirrer operations. These SOPs define process parameters, quality checkpoints, PPE requirements (where applicable), and responsible personnel for each production step."
+        },
+        {
+          "clause": "8.4",
+          "title": "Release of Products & Services",
+          "content": "Products are released only upon satisfactory completion of all planned inspection and test arrangements. Evidence of conformity is retained as documented information."
+        },
+        {
+          "clause": "8.5",
+          "title": "Control of Non-Conforming Products",
+          "content": "Non-conforming products are identified, segregated, and dispositioned per documented procedures. Corrective actions are initiated and tracked. Non-conformances with RPN implications are escalated through the Risk Register (ML-30) update process."
+        }
+      ]
+    },
+    {
+      "clause": "9.0",
+      "title": "PERFORMANCE EVALUATION",
+      "content": "",
+      "sub_sections": [
+        {
+          "clause": "9.1",
+          "title": "Monitoring, Measurement, Analysis & Evaluation",
+          "content": "Packmasters monitors and measures performance across all IMS dimensions. The Management Review agenda includes EnPI performance vs targets, RPN trend analysis from ML-30, and energy audit findings. Customer satisfaction is measured half-yearly. Compliance evaluations cover legal, regulatory, and energy-related requirements."
+        },
+        {
+          "clause": "9.2",
+          "title": "Internal Audit",
+          "content": "Internal Audits are conducted at least twice per year covering all departments and all five IMS standards. The audit programme (planned by MC) now includes: QMS audit per ISO 9001:2015; EMS audit per ISO 14001:2015; OHSMS audit per ISO 45001:2018; EnMS audit per ISO 50001:2018 (DP 19); and Risk Management process audit verifying ML-30 currency and RPN review frequency. Auditors must be trained and independent of the area being audited. The Internal Audit Checklist (PM-IAC-001) provides a comprehensive clause-by-clause checklist covering ISO 9001:2015 and ISO 14001:2015 requirements (Clauses 4–10) with evidence references mapped to this Apex Manual, procedures, and registers."
+        },
+        {
+          "clause": "9.3",
+          "title": "Management Review",
+          "content": "MRM inputs include all standard agenda items plus: EnPI performance vs baseline and targets; status of energy objectives and action plans; significant energy uses and any changes; results of energy audits (DP 19); RPN trends and status of significant risk mitigation actions; and changes in legal requirements affecting energy or risk.\nMRM outputs include decisions on: resource allocation for energy improvements; updates to EnPIs, EnB, and energy objectives; updates to Risk Register (ML-30); and approval of new documented procedures arising from risk assessment."
+        }
+      ]
+    },
+    {
+      "clause": "10.0",
+      "title": "IMPROVEMENT",
+      "content": "",
+      "sub_sections": [
+        {
+          "clause": "10.1",
+          "title": "General",
+          "content": "Packmasters continually improves the effectiveness of the IMS through: audit results, analysis of data, corrective actions, MRM outputs, and management of risks and opportunities. Energy performance improvement is a specific continual improvement dimension tracked through EnPI trends."
+        },
+        {
+          "clause": "10.2",
+          "title": "Non-Conformity & Corrective Action",
+          "content": "All non-conformances — including energy performance deviations and risk events — are addressed through corrective action (DP 04). When a risk event occurs that was not captured in ML-30, the Risk Register is updated with the new risk, severity, occurrence, and detection scores. If RPN > 30, a documented procedure or work instruction is established within the defined timeframe."
+        },
+        {
+          "clause": "10.3",
+          "title": "Continual Improvement",
+          "content": "Continual improvement is pursued across all five IMS dimensions — QMS, EMS, OHSMS, EnMS, and Risk Management — through use of IMS Policy, objectives, audit results, data analysis, corrective actions, management review, and energy performance trends. Breakthrough improvements and innovation are encouraged, particularly in energy conservation and risk elimination.\nANNEXURE I — List of Procedures Referenced for Processes\nANNEXURE II — Organization Chart\nANNEXURE III — Roles, Responsibilities & Authorities\nDetailed roles and responsibilities are defined in the Integrated Procedure Manual. Key responsibilities for EnMS and Risk Management are described in Sections 5.4 and 6.1 of this manual.\nANNEXURE IV — Sequence & Interaction of Processes\nThe process map and interactions follow the PDCA cycle: Plan (Context, Leadership, Planning) → Do (Support, Operations) → Check (Performance Evaluation) → Act (Improvement). EnMS processes (Energy Review, EnPI monitoring, Energy Audit) and Risk processes (Risk Register maintenance, RPN review) are integrated as support and check-phase activities.\nANNEXURE V — Correspondence: QMS, EMS, OHSMS, EnMS & Risk\nANNEXURE VI — Process Flow\nANNEXURE VII — Risk Register Summary (ML-30)\nDocument No: ML-30  |  Rev: 00  |  Review Frequency: 1 Year  |  Reference Procedure: Pr-02\nRPN = Severity × Occurrence × Detection. Significant Risk: RPN > 30 (shown in bold/shaded rows).\nNote: Yellow rows indicate Significant Risks (RPN > 30) requiring documented procedures and training. All risks are reviewed annually and after any incident, audit finding, or change in process.\nANNEXURE VIII — Energy Management Framework (ISO 50001:2018)\nEnergy Management PDCA Cycle at Packmasters\nSignificant Energy Uses (SEUs) — Control Framework"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "objective": "Maintain customer complaint rate below 2%",
+      "target": "< 2%",
+      "measure": "Complaints per 100 orders",
+      "responsible": "Ms. Khushi Paswan",
+      "timeframe": "Quarterly"
+    },
+    {
+      "objective": "Achieve on-time delivery rate of 95%+",
+      "target": ">= 95%",
+      "measure": "Deliveries on time / Total deliveries",
+      "responsible": "Rajesh Mehta",
+      "timeframe": "Monthly"
+    },
+    {
+      "objective": "Reduce packaging material waste by 10%",
+      "target": "10% reduction",
+      "measure": "Waste kg / Total material kg",
+      "responsible": "Sanjay Patil",
+      "timeframe": "Annual"
+    },
+    {
+      "objective": "Zero reportable safety incidents",
+      "target": "0 incidents",
+      "measure": "LTIFR (Lost Time Injury Frequency Rate)",
+      "responsible": "Tarun Mishra",
+      "timeframe": "Annual"
+    },
+    {
+      "objective": "100% compliance with environmental permits",
+      "target": "100%",
+      "measure": "Permit compliance audit score",
+      "responsible": "Ms. Khushi Paswan",
+      "timeframe": "Semi-annual"
+    },
+    {
+      "objective": "Complete all planned internal audits",
+      "target": "100% completion",
+      "measure": "Audits completed / Audits planned",
+      "responsible": "Ms. Khushi Paswan",
+      "timeframe": "Annual"
+    },
+    {
+      "objective": "Close CAPA within 30 days",
+      "target": "< 30 days avg",
+      "measure": "Average CAPA closure time",
+      "responsible": "Ms. Khushi Paswan",
+      "timeframe": "Monthly"
+    },
+    {
+      "objective": "Training effectiveness score above 80%",
+      "target": "> 80%",
+      "measure": "Post-training assessment scores",
+      "responsible": "Khushi Paswan",
+      "timeframe": "Quarterly"
+    },
+    {
+      "objective": "Supplier quality rating above 90%",
+      "target": "> 90%",
+      "measure": "Supplier evaluation score",
+      "responsible": "Sanjay Patil",
+      "timeframe": "Semi-annual"
+    },
+    {
+      "objective": "Reduce energy consumption by 5%",
+      "target": "5% reduction",
+      "measure": "kWh per unit produced",
+      "responsible": "Ms. Khushi Paswan",
+      "timeframe": "Annual"
+    }
+  ],
+  "annexures": [
+    {
+      "number": "Annexure I",
+      "title": "List of Applicable Standards",
+      "table": {
+        "headers": [
+          "Standard",
+          "Title",
+          "Scope of Application"
+        ],
+        "rows": [
+          [
+            "ISO 9001:2015",
+            "Quality Management Systems — Requirements",
+            "Full (excl. Cl.8.3)"
+          ],
+          [
+            "ISO 14001:2015",
+            "Environmental Management Systems — Requirements",
+            "Full"
+          ],
+          [
+            "ISO 45001:2018",
+            "OH&S Management Systems — Requirements",
+            "Full"
+          ]
+        ]
+      }
+    },
+    {
+      "number": "Annexure II",
+      "title": "Process Interaction Map",
+      "items": [
+        {
+          "title": "Management Processes",
+          "description": "Strategic Planning, Management Review, Continual Improvement — provide direction and resources to all other processes."
+        },
+        {
+          "title": "Core Processes",
+          "description": "Order Receipt → Material Receipt & Inspection → Repacking Operations → Quality Control → Labelling & Packaging → Storage → Dispatch — the value chain."
+        },
+        {
+          "title": "Support Processes",
+          "description": "Procurement, Maintenance, HR & Training, Document Control, Calibration, IT — enable core processes."
+        },
+        {
+          "title": "Measurement Processes",
+          "description": "Internal Audit, Customer Feedback, NC & CAPA, Performance Monitoring — evaluate and improve."
+        }
+      ]
+    },
+    {
+      "number": "Annexure III",
+      "title": "Certification Details",
+      "table": {
+        "headers": [
+          "Parameter",
+          "ISO 9001:2015",
+          "ISO 14001:2015",
+          "ISO 45001:2018"
+        ],
+        "rows": [
+          [
+            "Certificate No.",
+            "US-PKMT-24-218216",
+            "US-PKMT-24-218217",
+            "In Progress"
+          ],
+          [
+            "Certification Body",
+            "URS Certification",
+            "URS Certification",
+            "URS Certification"
+          ],
+          [
+            "Initial Certification",
+            "2024",
+            "2024",
+            "Target 2027"
+          ],
+          [
+            "Current Validity",
+            "2024–2027",
+            "2024–2027",
+            "—"
+          ],
+          [
+            "Scope",
+            "Contract Packaging Services",
+            "Contract Packaging Services",
+            "Contract Packaging Services"
+          ],
+          [
+            "Site",
+            "Rabale MIDC, Navi Mumbai",
+            "Rabale MIDC, Navi Mumbai",
+            "Rabale MIDC, Navi Mumbai"
+          ]
+        ]
+      }
+    },
+    {
+      "number": "Annexure IV",
+      "title": "Master List of IMS Documents",
+      "content": "The IMS comprises 111 documents across policies, procedures, work instructions, forms, registers, and plans.",
+      "table": {
+        "headers": [
+          "Doc Code",
+          "Title",
+          "Tier",
+          "Standard",
+          "Status"
+        ],
+        "rows": [
+          [
+            "PM/FRM/8D-01",
+            "8D Problem Solving Report",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/AUD-02",
+            "Internal Audit Plan",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/AUD-04",
+            "Internal Audit Report",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CAL-01",
+            "Instrument Master List",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CAL-02",
+            "Calibration Schedule",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CAL-03",
+            "Daily Instrument Verification Log",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CAL-04",
+            "Out-of-Tolerance Instrument Report",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CAPA-01",
+            "Corrective & Preventive Action Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CHG-01",
+            "Change Request Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CHG-02",
+            "Change Impact Assessment Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CHG-03",
+            "OHS Management of Change Assessment",
+            "T5",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/FRM/COC-01",
+            "Certificate of Conformance - Customer Copy",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CPR-01",
+            "Customer Property Register",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CPR-02",
+            "Customer Property Inspection Report",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CPR-03",
+            "Material Return Note",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CST-01",
+            "Customer Satisfaction Survey",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/CST-02",
+            "Customer Complaint Register",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ENV-01",
+            "Environmental Inspection Checklist",
+            "T5",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ENV-02",
+            "Compliance Evaluation Record",
+            "T5",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ENV-03",
+            "Waste Disposal Register",
+            "T5",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ENV-04",
+            "Environmental Performance Report",
+            "T5",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ENV-05",
+            "Emergency Equipment Inspection Log",
+            "T5",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ENV-06",
+            "Environmental Incident Report",
+            "T5",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ENV-07",
+            "Spill Response Report",
+            "T5",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ENV-08",
+            "Mock Emergency Drill Record",
+            "T5",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/FQC-01",
+            "Final Quality Control Release Inspection Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/FQC-02",
+            "Certificate of Conformance",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/IPQC-01",
+            "In-Process Quality Control Check Sheet",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/IQC-01",
+            "Incoming Quality Control Checklist",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/LBL-01",
+            "Label Requisition Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/LBL-02",
+            "Artwork Verification Checklist",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/LBL-03",
+            "Overprint Setup Verification Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/LBL-04",
+            "First-Off Label Inspection Report",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/LBL-05",
+            "Label Reconciliation Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/MNT-01",
+            "Preventive Maintenance Record",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/NCR-01",
+            "Non-Conformance Report",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/ORD-01",
+            "Customer Order & Contract Review Checklist",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/PRD-01",
+            "Production Batch Traveller & Traceability Record",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/PRD-02",
+            "Line Clearance & Product Changeover Checklist",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/QA-01",
+            "Management Review Minutes Template",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/QA-02",
+            "Customer Feedback & Satisfaction Record",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/QA-03",
+            "Management Review Action Tracker",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/QA-04",
+            "Internal Audit Checklist",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/SUP-01",
+            "New Supplier Registration Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/SUP-02",
+            "Supplier Evaluation Form",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/SUP-03",
+            "Approved Supplier List",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/FRM/SUP-04",
+            "Supplier Performance Scorecard",
+            "T5",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/OH-POL-001",
+            "Occupational Health, Safety & Environmental (OH&S) Policy",
+            "T1",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-PRO-001",
+            "Hazard Identification and Risk Assessment Procedure",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-PRO-002",
+            "Legal and Other Requirements Procedure",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-PRO-003",
+            "Emergency Preparedness and Response Procedure",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-PRO-004",
+            "Incident Investigation and Corrective Action Procedure",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-PRO-005",
+            "Contractor and Visitor Safety Procedure",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-PRO-006",
+            "Personal Protective Equipment Procedure",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-PRO-007",
+            "Permit to Work Procedure",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-PRO-008",
+            "Toolbox Talk & Safety Communication Procedure",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-REC-001",
+            "HIRA Register",
+            "T4",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-REC-002",
+            "Legal Compliance Register",
+            "T4",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-REC-003",
+            "Incident and Near-Miss Report",
+            "T4",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-REC-004",
+            "OHS Objectives and Targets Register",
+            "T4",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-REC-005",
+            "Safety Committee Meeting Minutes",
+            "T4",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-REC-006",
+            "Competency and Training Register (Safety)",
+            "T4",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/OH-WI-001",
+            "Job Safety Analysis Work Instruction",
+            "T3",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/PLN/ENV-01",
+            "Environmental Objectives & Targets Plan",
+            "T7",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/PLN/OHS-01",
+            "OHS Objectives, Targets & Programme Plan",
+            "T2",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/PLN/QA-01",
+            "Annual Audit Program",
+            "T4",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/POL/ENV-01",
+            "Environmental Policy",
+            "T1",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/POL/QA-01",
+            "Quality Policy",
+            "T1",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QMP-01",
+            "Integrated Management System — Apex Manual",
+            "T1",
+            "IMS — ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/QSP/CHG-01",
+            "Management of Change Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/ENV-01",
+            "Waste Management Procedure",
+            "T3",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/ENV-02",
+            "Environmental Emergency Response",
+            "T3",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/ENV-03",
+            "Environmental Monitoring & Measurement",
+            "T3",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/ENV-04",
+            "Environmental Monitoring Measurement & Evaluation Procedure",
+            "T3",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/IMS-01",
+            "Competence Training & Awareness Procedure",
+            "T3",
+            "ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/QSP/IMS-02",
+            "Internal & External Communication Procedure",
+            "T3",
+            "ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-01",
+            "Document & Record Control Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-02",
+            "Nonconformance & CAPA Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-03",
+            "Calibration & Measurement Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-04",
+            "Internal Audit Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-05",
+            "Customer Complaint Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-06",
+            "Supplier Evaluation & Approval",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-07",
+            "Risk & Opportunity Management Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-08",
+            "Control of Nonconforming Product Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/QSP/QA-09",
+            "Customer Property & External Provider Control Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/CAL-01",
+            "Calibration & Test Equipment Register",
+            "T6",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/CHG-01",
+            "Change Register & Tracking Log",
+            "T6",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/ENV-01",
+            "Environmental Aspects & Impacts Register",
+            "T6",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/ENV-02",
+            "Legal & Other Requirements Register",
+            "T6",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/ENV-03",
+            "Environmental Performance KPI Register",
+            "T6",
+            "ISO 14001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/HR-01",
+            "Competence & Training Matrix",
+            "T4",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/MNT-01",
+            "Equipment & Infrastructure Maintenance Register",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/OHS-01",
+            "Toolbox Talk & Safety Training Register",
+            "T6",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/REG/OHS-02",
+            "PPE Issue & Inspection Register",
+            "T6",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/REG/OHS-03",
+            "First Aid, Emergency Contacts & First Aider Register",
+            "T3",
+            "ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/REG/QA-01",
+            "Context Analysis & Interested Parties Register",
+            "T6",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/QA-02",
+            "Process Performance KPI Register",
+            "T6",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/QA-03",
+            "Customer & Contract Register",
+            "T6",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/REG/SUP-01",
+            "Approved Vendor & Supplier Register",
+            "T6",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/SOP/LBL-01",
+            "Labelling & Identification Procedure",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/SOP/PD-01",
+            "SOP for Downfilling",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/SOP/PD-02",
+            "SOP for Labelling (Label Printing & Pasting)",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/SOP/PD-03",
+            "SOP for Pneumatic Lid Press Machine",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/SOP/PD-04",
+            "SOP for Downfilling Acetone Primer (1kg Jerry Can)",
+            "T3",
+            "ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/SOP/PD-05",
+            "SOP for Storage and Handling of Acetone",
+            "T3",
+            "ISO 14001:2015 / ISO 45001:2018",
+            "Published"
+          ],
+          [
+            "PM/SOP/PD-06",
+            "SOP for Stirrer (Closed Drum Stirrer)",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/WI/PRD-01",
+            "Production Work Instructions - Downfilling",
+            "T4",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/WI/PRD-02",
+            "Production Work Instructions - Stirring/Mixing",
+            "T4",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/WI/PRD-03",
+            "Production Work Instructions - Sealing & Packing",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/WI/PRD-04",
+            "Production Work Instructions - Dispatch & Loading",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ],
+          [
+            "PM/WI/STR-01",
+            "Stores Receiving, Storage & Issue Work Instruction",
+            "T3",
+            "ISO 9001:2015",
+            "Published"
+          ]
+        ]
+      }
+    },
+    {
+      "number": "Annexure V",
+      "title": "Clause Correspondence Matrix",
+      "table": {
+        "headers": [
+          "Clause",
+          "ISO 9001:2015",
+          "ISO 14001:2015",
+          "ISO 45001:2018",
+          "IMS Document"
+        ],
+        "rows": [
+          [
+            "4.1",
+            "Context of organization",
+            "Context of organization",
+            "Context of organization",
+            "PM/QMP-01 S4.1"
+          ],
+          [
+            "4.2",
+            "Interested parties",
+            "Interested parties",
+            "Interested parties",
+            "PM/REG/QA-01"
+          ],
+          [
+            "4.3",
+            "Scope of QMS",
+            "Scope of EMS",
+            "Scope of OH&S",
+            "PM/QMP-01 S4.3"
+          ],
+          [
+            "4.4",
+            "QMS & its processes",
+            "EMS & its processes",
+            "OH&S & its processes",
+            "PM/QMP-01 S4.4"
+          ],
+          [
+            "5.1",
+            "Leadership & commitment",
+            "Leadership & commitment",
+            "Leadership & commitment",
+            "PM/QMP-01 S5.1"
+          ],
+          [
+            "5.2",
+            "Policy",
+            "Policy",
+            "Policy",
+            "PM/POL/QA-01, PM/POL/ENV-01, PM/OH-POL-001"
+          ],
+          [
+            "5.3",
+            "Roles & responsibilities",
+            "Roles & responsibilities",
+            "Roles & responsibilities",
+            "PM/QMP-01 S5.3"
+          ],
+          [
+            "5.4",
+            "—",
+            "—",
+            "Worker participation",
+            "PM/OH-REC-005"
+          ],
+          [
+            "6.1",
+            "Risks & opportunities",
+            "Risks & opportunities",
+            "Hazard ID & risk assessment",
+            "PM/QSP/QA-07, PM/OH-PRO-001"
+          ],
+          [
+            "6.2",
+            "Quality objectives",
+            "Environmental objectives",
+            "OH&S objectives",
+            "PM/QMP-01 S6.2, PM/PLN/ENV-01"
+          ],
+          [
+            "6.3",
+            "Planning of changes",
+            "Planning of changes",
+            "—",
+            "PM/QSP/CHG-01"
+          ],
+          [
+            "7.1",
+            "Resources",
+            "Resources",
+            "Resources",
+            "PM/QMP-01 S7.1"
+          ],
+          [
+            "7.2",
+            "Competence",
+            "Competence",
+            "Competence",
+            "PM/REG/HR-01"
+          ],
+          [
+            "7.3",
+            "Awareness",
+            "Awareness",
+            "Awareness",
+            "PM/QMP-01 S7.3"
+          ],
+          [
+            "7.4",
+            "Communication",
+            "Communication",
+            "Communication",
+            "PM/QMP-01 S7.4"
+          ],
+          [
+            "7.5",
+            "Documented information",
+            "Documented information",
+            "Documented information",
+            "PM/QSP/QA-01"
+          ],
+          [
+            "8.1",
+            "Operational planning",
+            "Operational planning",
+            "Operational planning",
+            "PM/QMP-01 S8.1"
+          ],
+          [
+            "8.2",
+            "Product requirements",
+            "Emergency preparedness",
+            "Emergency preparedness",
+            "PM/QSP/ENV-02, PM/OH-PRO-003"
+          ],
+          [
+            "8.3",
+            "Design (EXCLUDED)",
+            "—",
+            "—",
+            "N/A — Exclusion justified"
+          ],
+          [
+            "8.4",
+            "External providers",
+            "—",
+            "—",
+            "PM/QSP/QA-06"
+          ],
+          [
+            "8.5",
+            "Production & service",
+            "—",
+            "—",
+            "PM/WI/PRD-01 to 04"
+          ],
+          [
+            "8.6",
+            "Release of products",
+            "—",
+            "—",
+            "PM/QSP/QA-03"
+          ],
+          [
+            "8.7",
+            "Nonconforming outputs",
+            "—",
+            "—",
+            "PM/QSP/QA-08"
+          ],
+          [
+            "9.1",
+            "Monitoring & measurement",
+            "Monitoring & measurement",
+            "Monitoring & measurement",
+            "PM/REG/QA-02, PM/QSP/ENV-03"
+          ],
+          [
+            "9.2",
+            "Internal audit",
+            "Internal audit",
+            "Internal audit",
+            "PM/QSP/QA-04, PM/FRM/QA-04"
+          ],
+          [
+            "9.3",
+            "Management review",
+            "Management review",
+            "Management review",
+            "PM/FRM/QA-01"
+          ],
+          [
+            "10.1",
+            "General improvement",
+            "General improvement",
+            "General improvement",
+            "PM/QMP-01 S10.1"
+          ],
+          [
+            "10.2",
+            "Nonconformity & CAPA",
+            "Nonconformity & CAPA",
+            "Incident investigation",
+            "PM/QSP/QA-02, PM/OH-PRO-004"
+          ],
+          [
+            "10.3",
+            "Continual improvement",
+            "Continual improvement",
+            "Continual improvement",
+            "PM/QMP-01 S10.3"
+          ]
+        ]
+      }
+    },
+    {
+      "number": "Annexure VI",
+      "title": "Organization Structure",
+      "content": "The following table represents the organizational structure of Pack Masters relevant to IMS roles and responsibilities.",
+      "table": {
+        "headers": [
+          "Name",
+          "Designation",
+          "Department"
+        ],
+        "rows": [
+          [
+            "Khushi Paswan",
+            "HR & Admin Officer",
+            "Administration"
+          ],
+          [
+            "Balkrishna Mishra",
+            "Finance Manager",
+            "Finance"
+          ],
+          [
+            "Anuj Pathak",
+            "Fire Warden (Chief)",
+            "Health & Safety"
+          ],
+          [
+            "Tarun Mishra",
+            "EHS Manager",
+            "Health & Safety"
+          ],
+          [
+            "Tarun Mishra",
+            "Safety Officer",
+            "Health & Safety"
+          ],
+          [
+            "Balkrishna Mishra",
+            "CEO / Managing Director",
+            "Management"
+          ],
+          [
+            "Tarun Mishra",
+            "General Manager – Operations",
+            "Management"
+          ],
+          [
+            "Tarun Mishra",
+            "Procurement Officer",
+            "Procurement"
+          ],
+          [
+            "Anuj Pathak",
+            "Production Manager",
+            "Production"
+          ],
+          [
+            "Khushi Paswan",
+            "Production Supervisor",
+            "Production"
+          ],
+          [
+            "Santosh Maurya",
+            "Downfilling Machine Operator",
+            "Production"
+          ],
+          [
+            "Santosh Maurya",
+            "Packaging Line Operator",
+            "Production"
+          ],
+          [
+            "Ms. Khushi Paswan",
+            "Quality Management Representative",
+            "Quality"
+          ],
+          [
+            "Ms. Khushi Paswan",
+            "Quality Manager",
+            "Quality"
+          ],
+          [
+            "Ms. Khushi Paswan",
+            "QC Inspector",
+            "Quality"
+          ],
+          [
+            "Khushi Paswan",
+            "Document Controller",
+            "Quality"
+          ],
+          [
+            "Tarun Mishra",
+            "Internal Auditor",
+            "Quality"
+          ],
+          [
+            "Anil Swami",
+            "ISO Consultant",
+            "Quality Assurance"
+          ],
+          [
+            "Anuj Pathak",
+            "Warehouse Supervisor",
+            "Warehouse"
+          ],
+          [
+            "Ms. Khushi Paswan",
+            "Dispatch Coordinator",
+            "Warehouse"
+          ]
+        ]
+      }
+    }
+  ],
+  "related_docs": [
+    {
+      "code": "PM/QP-001",
+      "title": "IMS Policy Statement",
+      "clause": "5.2",
+      "location": "Level 1"
+    },
+    {
+      "code": "PM/QSP/QA-01",
+      "title": "Document Control Procedure",
+      "clause": "7.5",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/QSP/QA-02",
+      "title": "NCR & CAPA Procedure",
+      "clause": "10.2",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/QSP/QA-04",
+      "title": "Supplier Evaluation Procedure",
+      "clause": "8.4",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/QSP/QA-07",
+      "title": "Internal Audit Procedure",
+      "clause": "9.2",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/FRM/QA-01",
+      "title": "Training & Competence Matrix",
+      "clause": "7.2",
+      "location": "Level 4"
+    },
+    {
+      "code": "PM/FRM/QA-05",
+      "title": "Calibration Register",
+      "clause": "7.1.5",
+      "location": "Level 4"
+    },
+    {
+      "code": "PM/RR-001",
+      "title": "Risk Register",
+      "clause": "6.1",
+      "location": "Level 4"
+    },
+    {
+      "code": "PM/IAC-001",
+      "title": "Internal Audit Checklist",
+      "clause": "9.2",
+      "location": "Level 4"
+    },
+    {
+      "code": "PM/EP-001",
+      "title": "Environmental Aspects Register",
+      "clause": "6.1.2",
+      "location": "Level 4"
+    },
+    {
+      "code": "PM/SOP/PD-01",
+      "title": "SOP for Downfilling",
+      "clause": "8.5.1",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/SOP/PD-02",
+      "title": "SOP for Labelling (Label Printing & Pasting)",
+      "clause": "8.5.1",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/SOP/PD-03",
+      "title": "SOP for Pneumatic Lid Press Machine",
+      "clause": "8.5.1",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/SOP/PD-04",
+      "title": "SOP for Downfilling Acetone Primer (1kg Jerry Can)",
+      "clause": "8.5.1",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/SOP/PD-05",
+      "title": "SOP for Storage and Handling of Acetone",
+      "clause": "8.5.4",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/SOP/PD-06",
+      "title": "SOP for Stirrer (Closed Drum Stirrer)",
+      "clause": "8.5.1",
+      "location": "Level 2"
+    },
+    {
+      "code": "PM/FRM/IQC-02",
+      "title": "Incoming Material Inspection Record",
+      "clause": "8.4.2",
+      "version": "1.1",
+      "doc_type": "inspection_checklist"
+    },
+    {
+      "code": "PM/FRM/OQC-01",
+      "title": "Outgoing / Dispatch Inspection Record",
+      "clause": "8.6",
+      "version": "1.1",
+      "doc_type": "inspection_checklist"
+    },
+    {
+      "code": "PM/FRM/QA-06",
+      "title": "Sampling Plan",
+      "clause": "8.6",
+      "version": "1.1",
+      "doc_type": "inspection_checklist"
+    }
+  ],
+  "history": [
+    {
+      "version": "1.0",
+      "date": "01/01/2024",
+      "description": "Initial issue",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra"
+    },
+    {
+      "version": "2.0",
+      "date": "20/06/2025",
+      "description": "Revised post 1st surveillance audit",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra"
+    },
+    {
+      "version": "3.0",
+      "date": "12/01/2026",
+      "description": "Annual review and update",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra"
+    },
+    {
+      "version": "3.1",
+      "date": "12/03/2026",
+      "description": "Minor amendment — scope clarification",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra"
+    },
+    {
+      "version": "4.0",
+      "date": "12/03/2026",
+      "description": "Description pending — entry reconstructed during data repair 07/09/2026",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra",
+      "_reconstructed": true
+    }
+  ],
+  "qr_b64": "iVBORw0KGgoAAAANSUhEUgAAAKQAAACkAQAAAAAxzrjsAAABoElEQVR4nNVXMW7EMAyjgu7UD/L/Z/kH9AtY0Bk6tFeghYY2CQ6QB4ZHk7JSxudrX18sAn9jtaq6e9fO051yBJc21oLuNqFTDuC+AUUQ5XVv3OuUM7gACsQN9mr3TxGub1aJhYW9iAM7g2thg8C67+1TDuCWK3Q/rg1wTejro6+B3XCfciAXME0EjaYPqqkJXEg2aUFSsOERXNkUQtUyZHEGF4kYqRSk5Cm+Eo8ODCxozOjLY1mJjMDZuxm+DM/QthWFMaLvBa2j7Y3CDbQSkpF9Y6wr+7EyxSF96ScRYkQ2p/yA/PVYjUoyPOdfZddC94Rkii+ftEl5Q9gP8XXMJcW3eQmH/KvzayUgfGI9gms7NkiAlcjN6HuhajdQwk4i2AsT8wPSGn26I4T03xl93+ByY7V2hN57/xThesHX6ZROPNLbcg/5jIE7WmTvgjzlB5+2zmTitKChHIM5g+PhHBxTuWDOzSe/z1k/1NdRjUaGVBC96xcIL1cFoVZn+IOGckEkxcdgyTE9qi+ffkme43lunlwAmso0WRPzZP2z76x3btBVg+o/ekUAAAAASUVORK5CYII=",
+  "logo_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAAtCAIAAAAMZWbpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAGL+SURBVHhe7b0JjBzV2TZaUkkllVRSqVQqtbo1o7Etm8UkARK45rdG4zuasWYfZsvMncWzeLzvLIaENRAgQEIIW9ghGDC7MWAwxizGYMCADXjFG5uN98x8rb7d6uWbrvs876nuaS/hS/78V1f313d0pqaWc97znve86zmnqjU/SJmsn8a/WNwf8Zl9XiYk/y9LI35qxM8AeDSWxGUqkQkaQ87iBv5wh2dIgkNBwm2VT0hZAMQxk/ZTyax6ivN4LJWIpaQAnqIjaT+b9kcAPMMbAeg8RNxSGSXz58j5Air/RDqp5EkQcumEK1VM4SZ0wBW6AAqBAvmcSuP+CEeGKZnKpkf8ZO6yICnQOYBB07nEhyCOeipUUgSXIulMIpNNZEaSqUwaNzLZZDodD8rki7Gk/EunsiPpLKBJGyqTnII/HhIg/vvpaCYWH4mrmjkISAqHzMiInz5NLwRKrmiQRq/Uo4KnJ1zhTAGX7ivkkYMC6mk+56rh/2gBqZh/dJqERwEExcZI6Xw3MDCj0NAyGC6b9DMJP5tSd3HIo1SYR5O6BnzVi1F8UCloWLJqmknVYJH8Wb4U76pDcOQ/wIREp1J+BhKoGggSHir0VB6tciLAXMorDpbIZNN4rlBO+SMYfjkGlf7NrCArFKTnmSxZmQRmGslmUvGRTDKT4k1WQKnC+iqrLjGr/ilkBR4SZA1XeHpqCmpBbERyTlvmpxIqKNyRVaOFWd0P2jhdVqnwzkmg5HIkNZKEsMk5R1aVPE1SnS/MufQPq+SaO6H7yVQ8PRId8RMpP47hBhxoYClWCFvlAM//HAFiAJVNZsgtyIlkxk+KAoc+8DOpbCLtq1soiQyAkB1knKN3MTmOIplMJRIp3FToBa1ILkwK6XxWqfCOqpKvXlDqNE9Hn+WTcBs1Ap4WdvuUhGKBuULOpMGx6RFQAoALEgnBxtBtHlXh4NnpU74M6uUzqyhQyHnskU9ErBCyAnJiOuEGCwAOBkNBC0CperhQWV2OJtXsaAoURyIeT6ZgavyEjLYa3mgu4xJqCubw3zyqDFdAnAHgAcyz6VEDSkxpreSxFFDo5zuRP56U/RRcGAJTV3LMkzZ/szCpm/985p+iHZpBFmEIsrqjsA0OBUnVz2cFpDDnqyOjQIB3WilQXI+MJBIJHOUKai9wydT4njaf9JSJjedbl0tJUBm5TK2BZ2gJR6kI8QhEqCBlU/BHBGH4QsFTYq10NuGnR1LRZAyaT6RL5XzTKAMWSCWTcbBcPEF9QR+HvkkqMRID9wkmEERUp2E5FYETswJbmBUahSlfrJDOJyTVivgRbF1y0DuVCxKhAecCUALtZJCoRQJmAi1TWDif8+mk+8j58mwdZ0A9n3GZQ+mEkv9kQl0AUYxbAEqSavw0wBQKow/yHkeQLKfU8qpMr8YMVRnhSj2CjMva/xW5xvSqnOI60yk3rAuBSCHaUFw4g7AU9ASnQSfUncLjyQl2FBFKNJWBq4+aqTTyaNHTEOJfTQABfJDV2CnKn6I1fiqpvpCZCo+S/WgiEU1QVQAWjDVOGLLgEiwMAc1kRXGgCotAMgOQkvBAgFBQkYVTA1xVxmUuqRuFKR1PR6HJlb5A69GkH0dImeueyqqTqp/IKA+8FCjgxATqp2LpRDydobTT9mT9GMMshV6QcRlUkwQPV5rCPQBMiuKg7QYBJH4bbfF0iQREPi09CzOSeiqQ1MnJCcWkIVAP5I9LRiCNc6KBnIMG4MAZ/UslUxy0VCoOpwMjgvCtAK5qC+iza9I7pYmY8Ugdc8icBp8cBJQMEFCwVJY7wETdVgTEeR7aafNoQkdAXvGG0N9/BhmkkxoqCFVo50d82+01ndmGs0B352veTC3Ur4V7NG+67s7897MVWazb03W7XzcbIddBw3JUI/fj0SzCZPq4yMpJyR/zWWxW/iYtFKNrAXFCr7MZkOWUhFJSDvmniZV/VFggf4m6+Zx/Kkk9P33iM+G/0Yz6akyOxoJ+ReH34UREajimEGZKxGOI5sT5LWyaJ4qHFHcK95/AbXkIuVqFCZEFxIPFDh9nuKLInvc3cRKDChjhEdT+5iC0gYJJUBQYBT2IaBnzQA8BAlwI+q1qyHJeDUEJzMPHcEDK+y8ULQQ4gn+AfD4X4H9SOj09CyuelP9RwiOpgtaBAzQneywnYK5CfHCOMkBYgf9HSY0L+yVDSodORJTSXphVF4JKJyfVO2ZpN585xDLWCj4yTvJw1EkOXz7K53xzCqbCofBpPitQhQkFVENBybziwF2W1o0q052maa2a1W2EZ+vhmXrJXM0b0Lx+zf33ju5MzV2s2YsNb7Fhd0uj7CGc3EQqC8ZZu377hHPqbLdS0yebbqWB7FUZbo3u1ulug+426V6DZFzWGV6tgSOy02A6tbPn3b98+afffZ+ly4zOZRSB0MPRpFhHMh6dRCxVvjCr+/li/0pC7X8i5fFBA5dd+4BTUm5Fyr1xF6PjZqhat8ssb0qoqPTK3/7lh++HgzoEnR7h9IfCLY9hPituCMRJ9QEnuaS6dkKCpoZtffDxNWef22k6Uw27itmr0r1KZDUEkitNr+yOB1bRK2DsCYbJjOSmbWFu0QrM9JLf/rXkZy12ca3mlOcgKCC1HEeMnYexm3LzHx8+PhRNpWG3IVcYLUJLJKFNAswLszSg/v1UOqlWPv+TKVeeFBZpV6qPMg+SisQWUHm0vD80HMzLnZgUHPQLoIRWQdfUEKiRQVaXBenEK0mUc8mBqJ8i7afWUU0oBPI5X0U1qrKCoArnC+TLqKSK5QswB4ojm8WYAaHswKw/OZE6p6jVirRpdq1mN2p2FyXf6/23j4MavBhnvuEt0J0uaRYYcCKeXoPvr9+433RLDQtBTafutmteh+ah6WmidGYwe9NFhfWNZj6CNzRNt+o07UKw/pPPfgSbiV6KKTyp/2qk1QCgs2w2NxhqYPIFVJn8IAHOv5hOaPa/SGjgvsc2GF61ppeZkQ7NadNJgWaMgmFNvv7GJylcUIjJbCaZEgYGaBxPm1XDo82jRwVp9L5KpEKGY/Cnu1bbbr1m1Fpuj2536C4oz6PkbhwNt8NwG9v6bx+WKao4RAniRA/IT8Q4IYObR+J+ac1lmnaB5jRqbrsega/KcSQ0WCOaEMmh5htvXaYQAKmBUiIFdQQAJ+A2mhTW/+Dh/zsJvQM+dBaUyAFP3CK/5nIs5W/dGX/gkdevv+GBl1d++B9Dp2KIazUoyPkOqJP8/cJHktRVwY2CpB7kq5y+UC6pkgplHFXOtXgyAHWhnkqBEx4XPg1oECiOeAL9ZgNQsDBnu3/0H31+U0P3jXZxvVk0XXOV5P+bGUwzR3Pn6t4scKFgBSQS8BEgwWh745Zh063Q7RYDzbmdWqRXs9o1t18LzdUs+CyztfA8LTyb6sOCUuvQwqJK3EHdm6FZHabbYXqNVqhi6XUPAxq6GE8llUFDzq0FMGeyif/0k8iZrGqZqOCP3gpP/bwlBIYohjIqfoU6iQervIjIGYirxEVe+jhIOKKsal8yvAOW433JJyQ1DYyqN935tuG1otdGaFBzpmt2nxGaobttpl15x12rKaRKDaojwECnIeWh5tWDdCCrnuYeJ5Pou0q4RP3RhHJAAfnG21437EbT6dXMabozS/eg4mdpZo/mzNa9eZo1gEjT8LrhONAKy8gpaKLLaJejI/7H29PuhE7NqNdCMzV7mhaexeGDvnDgbM7WnHmau0Bz52le5133r1ZUkTlfhZWikiRiLcipE1IfGSFCkrE5rkfgdgFrEQAU5DpyQMzczHowOrQGKuVOMgDCQgHAdDIGaLlHAlKukjF0FFiBF3gST3EQdu6Jv7Z695PP7yivvs72GtxIve2W286k1W9sZ1k0obLAVh3KIyBcgQs8UM/SssyEE3UHdXI5f6qK52/jXACdcJST/AqDmuNDEh7IcqYvKMoFEHUStK8YHEgpvFRWAJG5PUNp9aASUopCIZj7yUBxjEgfoPjxD3CG4ozw/p7yn3r5M82o1Nwese3/XobH4YGTZuIEQs5mQAmKLscLVxu3xUxvqma36y5KinNhdWmheXrkUs2GvpjP6g68jD4tPN0omaNBxswOzUZhaBZwdr/udmjW1HNLZ9z/t3cg4IrOqqsjWVAN/JWUoBq+ZTwn3iQMQhvODSIFrMgEP1wmz1E9UyB7J6QkvHxJKMztD9JWBmwGrzuYjMAdGZCRbCohQIQDFBMojgfsG+9Yq8PDAp1Ds6FbNXumEZ4LPWJ5DY8/uRHSRWCkWJDJFnlEcaKGPJcyKXFMshky/UhKZEwltIo8WhT18AxoXfm7Fwy72YCcm32QcN1bonmLNQdR6iLNXahZ8PjmGSHojuYdPwQzFwIHrfA/OonO//GBD8Vj6uOgQO/YGHe4mTgXreFAa4jicLseeGw9CY6OAAOCgIMILOQW/Tw5TYH8SlNIJgl4FDln9wN6oqySFukWSUr3AJ1OgeYiOUygR668YCykGMkkVLujM5vqCY6oCBVD8gACfCL/7fd3nnlOs26UWm6rExnU9DrDbnFCTZZdunr1rmTcR07HTxE2GI6gj7mOAG4iqtpVWxBy44cMRkxytjWVTSeAvLoHZ1MQwTmOasyIvtAGJ0HK6VMSiiySjEPO1RNmxWy8ArlI3gAITigcUgn0SMczAeeiIY6FTIaMJlCK2ORCFfQGSICHcntncC8mKqr+4qsokIoD/s3sQWtA+AdNbxqnyNAih1z+oDi2D5uhSjjqiEr0CDhsjmbCm1iiOWBcsOwCzerR7G7NbNacdt0TXWb166HFmtGvWdNpqOGq2C2aOeWCsrl7v2ffE0m1cgbwICKOqWgsiq4lElGIt2BAkaa/oIgDdkyC+IoAiq7peHwYRymRlU0HqMihyIj1wyAgOBfZGc3iy7AMRlImXJgC3TSacJ/w8XfNrSt1rwUSpYUgonMpdWF4Z526XfHMS19BcQTcpTJrsi/SFqCnRO8TPZpTwiRYyfliKqn7OOZQkmtogcEl9xhOvQHNBSK70O/ztdAiLTRfDy8kPibIO9cIwftoe2LFbpBSHC/BH+yaIpBo2i+rAau0ophmdOmhOZrVzRFBduB0QH3A7wAbwIQ0L1u+UfAVZwKMmYX8JMQCZyHzZHHexx+kN5pIHI/GjqeUPEBDxZN5kqqktLDQN9/xfKYoqooqpTLpaCwmK8G4CZlQ08MsGZQAQSlyafgZMpObQhU8++CTg04Y4WSlYXdaRYvgOCOIszBqxi/XrvsmwCjQNSk4MozjcCOAmvZHYiMp8J4aDnYyv3kMVZWri9Oc4mHOrcHnb6C2LLYJ6U5M6UQSXAq0E0PRH9NpoI2GWWjU52LCHekp+DWaysYkwsQN0eDRYSAvVMwDH4Eukg7gDtSK4JuIU3Tzk6OB4lBVYvDIxUMD6rv2pQ23jjyt3E419nld8K9lmNM5YCDT682orpH/yBBoHIrDCE9FbAzFoTmQnzlwmM3QAk3v0MxOt2imZlSZTp3hVNlFLbrboFmNmtHqjL+CHgcysRrQvT7NrDfd2lVrvo3G/SjUJwmDJhLwMtAY2jyBkvkkpEkgZs9TDdXgoJLwfCZaGic4BhnaAVngswBKJlK4w9HGLbg0nFiTczCm0sjwdwNmwCPl+I3ASPlX3vC07jVrXqe4WrDJiMugZOFAlb702lbGUCSSoA48uMwJMVIzdsRPgUSKU9cLkqAoJY0d5/bFoIwihUKYCTdxEc34tZ2Q+Vrd69bsHg2hH/S7By8Pul4GDmLP4ZihO20zLn0CbaB3IIE0lEVTAPLB5iErBNXTqTlwW6YZRXM0KnewTZfu9Oq4iUw90qW7dS+s2AQUcjxNxSF2LI3YMriVBhMiYCSqkCWFt1qgQTk0jTtwINBdDFkSd5nQqXQmFY1HD0NEcSIUQFl2FhqCZJRrVR1wUA8lkBXMeCoFRY/ysZiK3CmHeDIcT0VT/qtvfWt5YL8OzWjXDFGvTrdVgvCt/NOtUJvcTACDBDBSC0fcg8dD+56mysBNqKBEGr0CbEmF+BBCrkmc5zUI4uZkIp6FAyUdwSEWRRHGWwhQlEETtKEQjwoM5PRwFF0QVgGsXIrFo1mFHoiKatKCCt1GMVHTXuBPZGkQiWqWHBtcomB+cjQocsJqtCTAQvha3XGN7kBW22gJHTVhiQxWQIYlyRmTn8ooAH91ruHN1d12gFXxuPSTnPHRluMGPA56N8p36NTsDt1qdsIdS69++fgw5/DQJQQHQyl/1fpvexf+VTNKNate86bJ0g9qzdDsXmgl3aq99oaVcC+FrOCZZDQ5BF1Iuvj+sShZUBEYrIO4bDhO4EH2/eMxfygWFMBTVImlRqLxRIJMQA0iC4ckrAAn/wM0jsxZH8OKgT2W9ofSARMNp3gTyECNIaMYUjo9Ajc1kRgClEt++5jhNXIyGPQMzad6RSDmtZrhyvc++k6Kk1TkX+EDMDogYzTViimVFJ4KM+QSCIvuogdxsZwUP+k97uAYjDLK4wIx6Xll03WvQQt1c3ChOIAGThxogQ5OQocwvhInOm3nli5Ci4AC6DwwLOLldbev1KxKM9KvGW3BQj6UCOOvDt3pge7QkKFHvDbDq1r1xhdoW0IooiBagw6xGiDcViKNu8hHEkFncVT0HEr4R4dPoGfONqsuowgKAlIGKZniQzxQwAGZW2Vz0IZwKYvEqDaMgZPdP2AYMeAIbmCU+QglH3luh2bXWiUzzRIM0KBehIgSPW02I7Ubd9AIoBhboS1BxeEMbSMaVBkPoQHiSvbQBLQeTDVsGzgJdRU+qJDvJisIQNBJAYFfCcjwU6gEc92B65dXf6qlY/FYLM1wTmUUQFZsDGOS8KOxzHHUJhMjjMrZVdA5Bo5NjiKjeoSn8SSjMLSH8aJHxZQd9Tj+UQJ+AHHZ758yI62a3a6FYIvyukDZkH9NcejubKU4hHkZjKlW3v/8sO5BcYC3ZmpWB9oyw9MMu8F0Kq+57mnOTYFLOFHJzmCwV33wXejsds2cao6BhQS7Q+Rma2aP5Q1C3ZRXLiVjCd0xNPBFUQsK4sej/ktvfP/YC5sefXHjHx9a27fw7rMu7NftUs2cpFtlulMOA4Lz8ed1X3XrSy+9ve/TXXS9UBdDFU9CfcRFicMUQt1TjwzB703yKdhz967Ua6/seOrZzRXNv4n8ol13AXAKYCKPPbuzqvGaF1/Ztebtb9d/uC/nmqJP4Bx/wSUPGi7cKMjqoAYnC9FBCK5Hq1VU+fm2Y0FR9D2GmF8wEZXx96x/DGo0Q0mA1wDMgCc4MidFQDSRTjDOAp7im2DYwQwkuEooiOujCT90RgNkgDQEAgwnEZuIv+C0Q53pEZmcsqE44KU3b9wBncy6QD8j8ez+IX9y/ZWaU69HBqg4ihcyqGRd6I5OUUOIVsADvVAlhlf5zrtbUX+EVhQoAz1Qkme43nfIX/nWN488++XjL23786Mftg7e7J5Zo7mT7bFwiMrhgpmhasOt/MWkWdfd/NqK1/Z8vUd0h9CTm1GTKhxAZgTKiQ7pMET0483HHn5qQ8+s28PorHWR7pQCoO5VGKEKhIr3P/Hh8pUbP/h09w9HhlE+OZJKAoDv/3ic1D6e8h98/gdnwmwqdGva6CS91x45d8aqDdGjcH+k1SNRdIdJ1qrhXsQkKM7RXFDduy/zwkvbnnp2uxOqsbwqzSrTjAvBKudOmb/kxueXvbr1011DP0aDGDs2kokmY4in8lYKsH44RBXETTdgbvAQdB8cELAENJFogUPD/guvfjH2zDonVFYyvqqte+n+oZQ8wtgl/h6jQgR+h4b8TduiT7ywuWPGn+ziWjCqFanFAEEiIAKzl9z/4JMfv/jqti82xY4ckIalb1BeJyiOU90NJBSG4vjjI29aJW1iQ+BCw7YrXZBXHIhB/hnFgYBiju7MgOKAVEsSfYqep/23Pz6kO1XCW/DVZyFCNr1+w2607Iqbb34OZUgzTh+g5wxboZsb+u7QnGZaReh+p0OHYXRQpd+028JF9UpxQGXEs9FoOn407te2Xj72LJjESs2u1iMtJvzMCMKBZs1s1r1eexzYvctETIRumvWa3aA5taFfzPz1rLs//vwIxhvts22hHmesRuhJ8zLrDw35992z9tyJ0wyt1LYbuERiA0IjF1bh/1utaMJ0W3WjwnYrzzynZc07X9MhYo8IYfb8h03gz/UUcORlmrtIwoQWI1S2bS8kASoAPRZKZf193ybcse1m0TQ91KGjjNdihposr9aC2tXGVUyduWLlx8f+DtSYoDvEF4HiANsBCCVKPUICRFwfjvm6WyGL3xhHmNOFmjPbCM22x8/VIxjfDmoxB7SdqePErr3joXdQS3AHbJz6z7yx1RzTBG+CU9dgBk5R9Wljof5kPU4tqXBVBczTq3u1H328B7VGAp2cTmVJSbDZRZXTiyf+2nBqQT0j0mmOmaaF2mAbNKdOC7fJ5oAWI9yrmY2aXhuZMKhpF5x/4axrfrd89dod6AvHgr1jB9HbGKI0aeDV1dv+r94b7XClU9yk29UEiKEJdenhbh3GCV6S2WbYbaZb4xaVX1TeruwzOvb40++ESiqtcIMZ7jQigwiNyZlFi7SiBVw2whjBL9aqnLGDVqRNtysMuzQypuKe+1/9Dw6aSsRHvf4H9N57f/elSx+YcFa7bpTZXptutZhutxnu5Yq11UT32W00ilqgH6fUL3nixU/hDGLMQJm8EwEbuG9/6oyfXexF6kxuYmrXrTbLa3OL2jV9UnhCK3TcEy/tHH9ur+FU2qEWzazUrcrS6iXwrSAyUT8dk8AX+fW1e+rarrZDtXAVdbuJs4dWhxEaMMIYZVAbDm+HCSTN8qJIbXX5nKEjEhoI+5ygOEYnYwoSSA8i3Lv8XbO4gRIFq07mgCJQWuNfVRxw8OAVtyHokBTEWjDab60/BHlWisMILdSMbgTGECcnVH/HX15DGZkhBw2hZDmtA6brmfegGYFhRFgOpxpcO6BjXM0uy+007TKUk93TaQTCIBPMsh0q1/Ryu3iGBuaDnMAV50KGhPSwtFz0RWQOl2pQK5rD8MfpAgWhX5yi2ldX7wy8Yrg8sJWyDgOwwOmjz450dN9iWpWGUet5PZYiC0wTZzohcjN0bw4QQ3cs+BTmVMMqXbVmFzuTIn8DzvQ5DxkO+jtDs9C6KA6SqwUex/eHSSmZaeOIxWL+/Y++bxXJKrUN12wA0ZnudBpOExilZHzdXx9arXScuOjkWhEiZKgpRlhC9iChGLrwY8zXzDLZGgOtIdmZa49dVHzeYmvsNLqZEBILWmOBCf/cqu+dfx+GQQaQKIEsC69/WjMr6KFY3fqYS+ibRPq8Xy7lFh50xAElF0iG7hjUvbpNmxF/cZ1DaqcTI2RlOE1WqEyzKtCEHoLKkPV4+J6QWAQ+IfgsgAa2XgB6alaf7vY5RTM0swrq4+e/mvbO+9+g48SHjoIfS3JaD2Bffn37Wed3a/qFZrhZc6HdYGD6dM7dgHToXZ9mD+j2oG73WV6PblVYoUmgNTA7FPOfWrFFt+AwQnkx/jJKLtVCCNUHtchcOFbGmEvMsZeSYUgfeFKwN9VOpPlvT30aREdoXqEE7Tzk3/rnFUXj6zRjMqfqbEhpm+HC2+0nDu50PTKbnh3ceafNKpmm6ZPt4vqlv39++34iozhNZagSK1SuW9W63WlFuFhugMhapTd+3uTq2556dThy1ixNKweT6G63AYYs6prScK0Kgo6moE4J4dmXd51zAWpdpNuNBmyb06+jI+BS8ioUPfcEKMnV4Tlqk8KhKewGIvFo4mSP47R7tHELLT304nojVE3bDhQZfkPGlOKA3P6TimOAE9Gkci8MMkUZiYaQrAymXrX2R8NtpHH2MK4QIfDNdITHhlW9/MUviUYCHVc2Uzg+61/cdatdAje4wxg7XdOrrPGXaDp05ExNn/rzC/pyExmZWJZO2pZvUnZkqunCEWihlomAufs5PxIC63TS7UQoHpmhl8zWiqBEYFugXFBmQCOfdYz52cCub9AsRBeKFPhS+YIyb3ywf/LUKzSrhvumHHSN/K1H5muGxFywTtCV3gLNW6yHFtGnMBt0u2z5y5vpZAoRAGva3AetEmgZiK4Y59Aize43vHYnXL7/CK0V/Cy0jRY/3ZLQ7ami+ED2+SwJkXanOyXdmnnBX+596chxUMn/zxGgRk0Bh0uWDEgJ0R3itxUkPPj6kG9EmhibAD3gH5Z9HEbTDXevozNPh26GWbyUxtZs18Mdulv9Y5QVqfSy/tGor4cbNYi626eXzNNDMwyca798fu2wsIespzizNZuBKrhFdxu+/GKfTNmS39KpFPQZoG3aFbXClWYEPFALR0CzWjQcGTFhiOEUQODhh/aCjJoxoJmDVsnlRmQOxo6b05z6CyfN2bObEy4CFiaDjPXdUb/knA5G2fABaVo6zPHiDUHUocL4GsR8zYL4QU7aTQS5drPuTDqYpLFEjPfg8i91pwHeKKyRDmUBNqa73UtdxrAOcr5IL76UHSQmsorkNC1/fqdaMoaRScS5xQJCO/2yJ+yx4LFa2AP2zoYogcPRqRlARudcOMwAzNgcKhHoNavVGou4r7xt5l2H1AwFqcXhg9U0vCl6qF221YETwHJ9DKAsyr8o9w7eZEbw3mYUdU6u+w1wkCGDQcn+eMwfOxHCBde4gwXCNJyUTbMH+kJHNwHKgpcwQ4sAq2b4gKFI5VBUTTJCmE5UHCpBfcD1yHsfYFuM8GMvbzTCdfTquUwIXPOKAxkcjPxfKw7hoT4T8aFdTyIwZdVqGcKKV978wXCb6Y5609h5moKZtAORtuUrt4ERBKGMyC3N/o69fnj8r6FZaZ3sVn3MLM1od8ZfDi3uFHW19FwPtKEyEPSBXmjjlbU7dOtCt6Te9GqNIk5r6eFW3QPt6g23Dq0YISiLJk2bQv8lBC8GdEcfoXfBDX1mpOvZFV8SBfIlYlfivfeoP7XjejC6VTLTgAsAl4HDD3afQW8fthedxaXy1bmoCfPSYoWmPv/al2QF6RJUwtS2mxkRQH8h2kKkRnXQAyY2nUkIX8mBKMzu+OUN1ykSccogvFgzYYFRuANWd9rgH7ZDBzBBFo+L8EDXJmTCCzSg4lCrMJIgYRQyqNePt6c0LpyJl+Sh431m0WJEWI++9NV5ZdMNu1230Z15cBW1olka46PGz77ODCFU81PowjMrPhOxFJawewxUd1uKz2jZss/X4bLBPstyrI4ozFaKo+nrnYfobqj+o2sI0dP+a+9u04yJMoVRY0HUzXLNRlBZi5hFAtImqwguPVR8tzfharNoqWbIhhEbpnIm3PWisV0vvcSpE0WqtJ9E1+59/D2rWOwEneUBrYSKBiJhFM+jcJoITxARw1mA1W2xwv103LyLvhlWXr1/21/XQbqs4hkUb6gM7huCKwT12kOJgja0QBkIOSQWdEPwAm5pXf7CdhH0YP4OfHL5Da/b46H1WmilYJ/Cg8gIkRAumeFuIySzyFAl3oA+7hIqaFr+GTqasFtC5wzc+JfV8gUbJAIUxVEODS5OIkZNvM7QPD28RFQzvDC40rwpxO/Vi7vGT5oOhw5IyZStf8/9H9oI0xAdY8jIn1BeGD7w5zSnZDa3X9hNRjFQxSjU6sU9mlVuOZNhIQBBXOTcPo5T00mKY+bSv2p2TTDHwYl3pTiQxRf9VxSHAbth1+UVh1q9B5FfeHWvAbmFO6C2mTvTuYkArq/b9PAzmw4L0vn8/WFO4xuhOsbVDMk6Nbh5RodZDAPSin4+8swHgCsqgxHOgWOxh5e9/n9Wz7jv4bXPv7bt8Wc+W/XON8djMtUKrk1yeglNXHP7Wqu40yqB3zidGpfrO9Np6Lig0PDb658Qn4weAE4g8EtvXKbZZZpRaY+Fx9hL0eI8S681Xuyz1aWZ3A9qjZlllcw1QnAiemAbTbfs4WXvAZIicSrjT665KlAcXAqF4kAI3aM7jeFxtUASJaMS697x0FtwdIVjYBmm0a8BlTAKeuWYszo2fHpYAYQuTiaHRCOd5HEQ/WBcc4oDEvbKez9odhW5kGuoXEwR37BjzcZjC69+TDaGgQJzuNwTgSfYqHstT638Oiovv8Jpau68loINzkPfIYoQP6u2Z8YfhxI+5Ry8y9FEOCCSxqnx1u9+4FwR4xNJQCmaGHnj3c/KawbvfGD1Uyu+euKFza+u23c4QQFG0A4najjt7/nRv+OBDQg2Nb2Bu8sot+DAOQYQQ6Rg1111/dMcbPYXeKUgYBdWzDJCYKp2hjlwGbhU1A23iC6bVQ9r4RY361apZl1ohSptr95yqqzQBRu++hY6Opr1/3T/ariHnCaAuw6BpzsAwwBr3CGu0Gy95BK6qCHY7UotAtZtsoobn3+Zi82kDmyw7696a68JU6TV6QpVQ+2Ra4dMOkWtdriW8/FWmRlq5IwbV2rAbANGZCHkSy8a0LTJY8/t+XSzMgkyZIHikDU4FKZSw8DJVj0TmhRMOMMct1BmplSI12AVVYOGwEiN/6SyRbAH3KIN8wx3ifqXy15muAfMbLi1dkmTBrLYk82SOrO4xolUmdb5n3zxPZgwSWf2HysOlWC5EBItveZZ00U8BlmCQgWW3aI4aEaELVQ+SUecNqPWNB2RiDvqcaiNbhjqJ5/fIYqDoQrlBwacDNFphNtWrT+Cbh+RZU7k9z8/vuC3T1rFiBKnmmPArBAkunlwJjmDpZWGJ7Ts/pGLfWl+JQICQ2qhxa/3HFc8hWY5Kw0TDKvE2RO6MNE41/nOnrQI5NPhbpidJiVT1DmcWK9l3pK7aa/JE1Srew9kvPE1eqiW8yzcrA2zI3ZJLABVBoxkMeLVFs2u0MwpVhEksAZcYjoX3nTrE+J5MsWTVBwGt/aDPhhsMCIYdBo8oCk1lx6LBXL/9sc/2sVVulsrL4BgvBmC2mNma8bU0LiOZc9sggZkKIJjOi47ZZWLoWZRAOD0igMEWLZyu+bAKkC0INjwt7uIv9Xw5Xf+c2/u1K06A2LvzdMji6id+SpN28KrnomjId/f813CDldwAQU8AK3twqOcplvlDy37CIqYtiunOIKAhYqj7ccjAQrAlkgIVt8fPMqvCYnc8xXbINIM/CU0h+NQ3L+gdL5bAre8UzPB62CShZoHGRswnMYZi+5GXTUNjBNwuWb+0irq4HQJcIggYJzFjfBQjnrlBZW/WfHWAQR2FAZRoJ9uji976tOrf3fv3u+OKTQu++2dTugiu6gqNKFb06rA/DracmbRlmCwENnR1yt3zuzSwxV6ZIpmTwqfWbP8hffYH+nbgSMjNS1XmxhNZ4E79mrNhDvQa0Vm6VajHWnqnXnna2v2wHrBbm3d68+7Yrnu1HKuBPR34RwNGGPma1qlblfefufLuYHLKY6Q2loFYYEbCK8TUQn1u+7B1MH0dmhGjVk8aISh5qD4JoOkCkI05ps2tAMYDLID9SeeMt/56tb0iosqf/v8G99ATXOdDgTP+u9vOvToU+9fefVf9/4QTaQhARiH04UqSMrdgFVF/Llr71DRuA4dxtOCayfbkyjbwBhaA6ygfI1/XnFACJEbMCqSqDiysu718LLNBj3Sdg3uHEpSeDDG06E4nnr9uzWf/OiOhWU4z45Uw9HATShsGF5aD24Yg4c/BzxB/8oqu/X+N/9DNsWJzKATiXTOK8a/KDQE/kGlINrIxLm2LWOckcWt80uXciqHQWO3ibgMQwjj7w0YobZFl/8VxRKoLmrorofWaHapPRaUaYNzAfeeCNsIU8FkpcVn9nXM+PMTK784JAEzLCeM2DufHHjlzS233/XUiyvXAg1ZK+E68TmT5nFuH9oKVEJf2PdOI9Rc2/47iM0w4o2sP7XlenE34HUjwzWFaoPqrHWLL77+puehNaD7xCFS2JHzU9kkIlLxDHh5WsUBKt3/9KcwldR9dJcYpoH5YJD3x/wdB3wr1KwZrZwwQ8DCF6ZhnVrPL7t0CL6c7698fbtuIbiTqa7IHD0yw3BawmOatu1J7TtUoDjYL8Uwc3HzwDEZAcFAttgpDINdtvF4CrIEHRhPxeA4QBEg2oqnub0/DieibKbN0W8jSnzzBcodlnym4bUNLr4PBEUIlBaqUnEY55th6FkwHpCHipkrc5kd7lkz7nr8cypXaRiOGfFB4yN+LFpAIUiO7Pr54PN48dkINrtlNzMiRKjXAZLLaomcO/DVfg7xUdge3z+Y/xICiJ313/5gnzuuRTyU2TrD1Wn2mMWcAzLLGzp/DwyBAHI0QWz37Pc7Bu6GJRD2G6ThhEV0e8xQS2n5HOE7AoeOM7yKnOJAQA0uhfM1aISWWCXArVnTp+j2VKcEbFmpcbq3smhC1Y59w2pOLR73odkNF0EltZjMhUMPwm51WUXtjzyzDYoJXeZ4gJhpfukCJweP5ERIBu30cxxwNJTWwOX1N96n6WUG/B/oM1u1AW9KIhQYENqQf1px0Ej28G1Lrx7YSKLigJ4CZvc+vFEUByM9BtucLobQIkiuf2X90I6DvlU0xYrUmlyWk3kyGmcEKdO1MLCChwIt06Vpkypbr9lzVMxINqM+LcU+pZLpFPrEVnHBeQ8oDvVFyEQMWCQl4n5t7dHis9ApDAkgo48I2uF3oKfwJuqvuOYR0C4ZT6P88SH//5gyw3CrOUdlNMInpBcKywy5clrgAD/42Icwj0RDbGaeRcimXCnEDXQaN5KJtG9x/qiVSgdUogYEVTs0t+7inlvQAdiKm/70juHClUUsA9sOLqTjxgUF46J5S+49Kq9mckIuSBxaqAmZwVWERlu8xL+C4ecjYPCH+97WvBYqDnASIu0QHChEiI1HU/5QChZ+iWY2ciM5FAfiYTjGVhuc/L0H2a/FV/zN9BoMhDCiIBjDm5VNHTcA7L6DUBzQcYo3YJ+V7ggUh8IERzkAEjoK/Y6jQhgpm0xxjpPrYmmGIID57oZvi89o0a1auqIh2DBoMbDlDCM8S3ebF/zmb0JnsBP9OQjYLyajQI3MRMLmQQ4RBs7T9Hpr7LS/Pv2lYo7DQ9xkSRZkm7AmsDmibOmKpqBN0PSWPWkLjIcow5plhpfKyg6UYB/djTG1IBRADY1IHwSM+NFMV/3hOa5Ygas5D8LYwSyZg1ruhM4NW9MorBwrKERu5cr6jz23U6ZjobgHjLFXyAREvxmG5b7o2+85wCcoDgIcFMUB+s+xEDe50yACkTN+Pe+yh5568SsARIY7893BgOBIsbj/8/8BRdPEqWvOTM1hHIpI0+k2vKb7n9wErMilUB98axkmLw2NoxxkkSDkkxVHfsyY0Ayy7U0ynFYzcolmge6Xw+nQi9AZiJaaesl7HPksd8AlVIcqiwSyfKfMkoDpmyE8ktBiGgINrP583wdoKFAciEWpGuDzg+KVL7516FDcb51+B0XFQrQJ2V4gvZ3Ft1TgbkHR2K3OGf3jLhxY8fYuuBvouVgRDAq1Q5avBrBJtJeQtsGPyrZEYVKS/roPD93/+ObIxFnwDCX2maHTb5fFSC7cdulO/U13vIgKKlr5cmvMQPRr1wFhWdtTynvQKAZu9Zdc8ciBg+wUmDg+AsHn9hww41AsKpKcFQmBxsSocH4RFgAmVCJw+B1wp0FDiFzt4KWPIkB79a1jsLE6px7QhOzmhJA7HYhFa1t+u3nLMYDkuhF7A+eJgyhb24O4ShIbPVVx4A8EuvT65+RF+H6NoRn3eiLSDp3ROyTO6oLLnjDdFhP6ghYeR4QtA7rbuvaj2N4f/XET+xDLkAJ8pQ25A371w4+vB/2/peJoFZbIMQN1B+fejkQDNMTvpdZIjwxl+G2HTDyejMXp8QJV2FjA+XuML8K89+nR6//08s8mY4AQe4NWfFNJOJDMBuUOebvhtpWULfaNcgsX5fa73zCcKk7ykalgDOAWLeTck9NW0XzjS2/uQNsiEblJY8gHqAIdCwB8wDAimkx+uuWQ6dZaoZn8wJU1V9aDe6Do7ZKuyZVzQXu0myJP4QRExRUR+f5AfCI1V5VeAq0hi0RgJ5qEtkn1N+0bpoeCiEB5o1FxWJa9ctiIdHO/jNOvl1wiOMPWIu6Y9MHHBxRZAsUBL4+KA6zC1zjgmzC+Nqa6kdpb73zx8BAxgE3CEVWQUTcF/StycPNdq2G8NbtZlhQxQPPlvUScN0+u/u2Lq7ejI0IP1I5nMlEMCq+CNAItm1McBAzjT+eKLrwQ/ss9qStvedmagMh2pjYOfUA8eSnasEINllfN2e9Qsx5u10MdhtfhjqW9lYn3S2CljVC36bVZXjOnfEL1ZqjO4tcDK0NnQSPWauEeNMgX26VhpTj+ePc6Kg5qFggP9Ci3memhHmdcx7pN/JrtI89t56KjAY9jju4u5honmNUb1MO9cOB1r/rsybNWfXAArADk4/RVARVuBqpSfLgRV90CQUf83fv9Fat33PfYe064zAlXg710p0n2AnJFnUSEMnLgtPcYEYSR3XAX7330LVRHSsSpaLjhh0tivWYRtBjDJbNkgcavV9Rv+OSQtAntDmtGxhDxIEpC2nSC3zFIqpeRhoZ9i1+4QSvgA5kYRtOhdj1SD8UB13dS2RWaWQf3mJNzYA54QChjtbglbS+/vhODFYdzCdgcvOC7Z+gpMjz/WDQhmoRPT1EcwUAPLHpIM2sA0yhZQuVutxnhngvKr1D2894H37PAZAzHEMvM5cKkLBY+/Ozej7b49Iqpa+CaDRjF8Cba3HDtl9uiGNpd36dOVBxiP6g42qLkQwpYhi4hFQfEh86FxJZACc7a7u/919/99o771oTG11mRJjgOsIecugv3EwFa2tmc75T1DjMy3XDq73lgnRqgDG05e7pzb8otqTMjLTpDfQwWg2ujaJFVMhuWuWhiyzOvbaRbDl1BAsKWDJNHQCeSD3cxQPHESGrr3iEoRG6ct+CUMYjW4cJYHXBDyqrmoGosyY3ssRSOqgdE5KPPvtf0C/SSLo1ft6nRxoAO7ZyXLerXtDJzTLtmTbZLqnV3su6UGt5UI9RolkC5AFv45oxEjOJ5YEXIl1dc/9Irm4EU4BYoDgnSORsC8gJ4p+HVN3dcfeAQWf3I0WE19DQqTLjI8CVCkGV/1jsTJK2E8EKNcvYKZphLOb0IL8af3/Pocx+QLAiTo8elO0zqO7gjAJcdySkOaFjZzoygG4B/PO7fv2x9ae2legjhFthChNnqA6J6ZNaGz4a37Ih+tTO6eWfis68zm75OfrYzW9F0M18MR2QRAk0bJ1ddvnlHBgU2fR3/bFds867hzV9HP/ri+BsbhqwJkIrmODdl0Hkeycj2e9+/5MpnDC6bQXJkohjZhEs8zQrVbtrBHV9f7YFlroBStIrmWFw9QZ8bjXCbEapzx9fe9tc3DscYEaC3yIAsRMYp/E1yBfJQzF//+aGnX92ueVMRCPB7Ym6j7rZoRp0zbq6mw3mTSUfac9gT2CVEVb2cNLLbDa9x+cufA2JSNpg//cIXUKCaBdUJXiQfm6C+PU0zGsCmcH4538uEf6A7OYnbI4EUMt1iZBnVEf/IEd906mTLg0xzUGnipE0L1d587zt/efRj7gUK90iADZekV4vM4h5Zu72l5054oVBFsjGR71ELTAF7uqTYDkdJLKYUx88nzzGLQXbZOwPFF+6CbJc3XAfhA9m/2BaHubMYUQM3BCxw8TrNUN8VN6+7+a7PzBA8IDyC+p4L99CKdFTXX4lAEDy2aesR2UGrSMphlf0CMzVLranBuVBMmYxzAYSUQosbvjj6/Bt7NQuCVAvfjZNZEDYL3tagEYac9OkImuDAe3N0xPOwzGH62PAKrVDzi6/sUh41gclrFRCgp57/fNy5PZp2IfsYglWAKMp+EHi+br3pVcxacs8PRxg/FlAmOwLbQgpRqcX91Mq3P9cd8B44HESYK+s4PWZ4ENqqoXXpMW5SxziQpeFLZlMJ2QqLpj/UQ7Ua2sVoRropR7DwXMcFd8Gr7UB4xdlQ5BDXqrg45XZyJcVu4NoZHCuzCXaR0zTGBa+v2YHeoaVDQ77hVFBfO/Ay5JVIu98omcvowyz9cOMhbkDgHAC1Zy6hM4rGdK3w4O5layMTL+ZXl9wOswhAkGEVOs0SePoIvUvnXHHPD0MyPEIZedOL/mwGUf2p76q8u/7H+Zc+QkIbF3ALvVfH6QxOWCIAphegu13gNqEpEQFcJRnX/WGFZteKFpymO+V3/HV1/pE6UeeHEr4eaYGqk9aIChSH8jjmLn48pzjACmLwuTOny3DKP93KZWyoM6+kil69Xq4Z5fBiyhuuuukvb7zwxraD0UBlIB6AncglQM0cPQaPm02vemd356zbImdieKZqYQRN3UbJbGv8QvI0w4Qea8x8noT6OcM3Zq7E7ehOL3c9cQq6ccWbWwGKrwaN+Pc9tE6zoH06xT2ho06GhlcZ6TuvfCm1On03ZcjASzBInDTLwLIq6kF3ABYeZv1vvs0aTgMbgk0eVRyIgGpve+C9nfv9M34x3Q4hBOg34WajACnTY0UGIhO6P/0yxuFAIj8AooJ++qRK4CiJxfAHf754Inga5kGkmtOc7RDX7ln3gqSg23cH/OLxF1tgfRCKgf2gzmi058LKW8ouvkN2yknIQJ+iE2b5z3dz6yrSVzuOGlDK8EPZoz6qYHrgA7pdT59e+g/SRGMUO9x4++M9DV1Xhc9stYrbNK3cHj/fhL0lSWeDtvI+AVixl5Ifnsf5Y0Qc4QEqDho2GP/mlau/p6lFGkGMiBCVPYS1ePLFzy6snK9p5/M9AC6jzmLMAmELwRzWOiVtk6de/sa7+wMWQuzIOE9RCj4QBGXkxTWf6m5lECQilgQEbhToM93m6bNukzbh6wW+LYMdafr+x9bqoUYt0qcXwbR0gpFkkxh8xpk6MLdbqThsKg6T38RsZuTLTTpNultjhGqNSKsR6dBD3F5gOZM3fXFYKQ6oOVEcUNlQHPAU0JcBvQh82BaZ0Llrn9gnUIAT/8JvgpMSB5wBW0RGUHJPvLwxMrFFs5TzAocFQcMcTYfTDRI1QvwnVS9YtpJTHqiGAJ9cHYAqUBx4djTqU1nApzKr4PybY3s0qj0QC7YXsDgFZRdPl4pBLQFFbJ5/ZbOmX2SCHOY00y3bthueZ5BkEMAYmVgyu+OHFJtwK1OJZIov9oPh0xn5NHZn3118Z5kbriAY0+Ql7m4LHrt10catx1EfGUML0YOZRYa7qxbtcAfV0VwCtMLIS8qk+EEUnuB+1n/oyfUTftWnWVO43s75RRgfMCI4fpqm19olg5pRDUtoRmDZOjQd55AT+KVAAAzaa3hgssa3P/oW0KANwJ23372GU9ZgWXgcnKaVGN5qt8bOLm++mcorIBH0ByoJJ6EDGC4gynPucUyLHvniyyEDURI9ebWzDtILYQMmdXc8vA41brljDfxqp4gI6zDaJiw8Zyjhl/bO/jOVj1JShKvy6RNaVoSSFBQ7cNS3I4hEYOvQ7lwuVdpNZrht6e9eAr4ADqq29/zOdBu4m4v+ea+h3pAG38u+Q84i0+eCXmi3I7X7vgtgb956iKEK3OnILEi4bPRGyT6nuINI0DfIxmIgAX3vex5fEzkHzvMUru8gVqKLDvmUj7+FZ/GVGasebIkYSvawdDGsCw9ScXANju8cIJZ88/3jwaQ7QxVQGIqbTaEjz732eUXz5YZXxR1N3qBdspRbHqwBDhzGWis7t3TJspe3oBq6HKPJ5iwRCIYRws2nXvuEvoMHe4OIEnYCPpTsdnMa519yn1KU2ZGkVBESw4VP+Hfdv5qKg70G/j1mZC73GZkd/Eia02oXdTB+d8stt9wOV9gRhCqV3KobglEs1Z0LuT3UqwDTGs6U8WdXb/hoN+AD9q5vfcOdKpvr+DaDBCyz4KEbXndV8y38dBnw4et9yOCM/FBLknPqR4ys77+xfm9Z3VKaQNm8wxlDqA+oRcatfZoxpej8gRfW7AU5ACaRQKSjQOSWY8l4Aog9DEnAYyN0nMUhR8gAFxFHrjL0QpWoRR0kwMKoqwOqt/Zcq5uNVmj+nm+IsKRA9bIosu9/+uVB7toypwTfSsLgjkDBE8TU+utEcUDzYUT7DW+24UCjtxv2RZt3DaFNNIFi+axAIqdguEYk3pFFE7bJn0cA/VgMte57eK03pgHBGzxGvkobGeQGYa7atDtnwj2baoUb7HDt1KYbnnnt0OCSZ9yxA6Y3zQAmZpcJP9BA6Ig4s37TNjovaBEw//LQuxBsOpOw/zIdQ5biGw3d4y9cAO8uT6VEPCZhodRU9UkT/JOU9T/fdIzLSbTYecUBA96FSOq+ZRugHPft98dP7NDNenk5HfzabxYv1PRmK9JpR2rWrNtHguCPvSdodXZqyrdfWGbnvriJoIBrOmofESxEk+7U3fzn1XmC3/fQm4ZTzW9tAEmuRPbTd7DgOXJKiNOE3K0HE1pd3XYd40+o8pT/4cZvc4pjNl824b6+LqiPCb+aI7OIIygWg1Pv+3+4e2Xxz6CvJ2teqwFX2ZBakOrQfL69rk+F8Djjm1oG77r/uT19l63wzlksqh+6Q3bN0Nh0GaHW9ZtlIRCJgSIML7z1FNgdXQBv7/g+3jHjltAEyG2dVbLQjFzKXRUS29O10crGnN//3qajyu9QCTRCXdx56Nn13DkdQkwEKeiD4jC48tULF2bOwntIJZJVPtkMewBFKC/i3PvQW3DDEVObYYQ2feqNGM3uLP7Zomv+8N5wkp+VB58g07ERs6JW7nGOjuDyP0Z8IDSc8r/fTz8C8NHC51tiplujM94Z1PmOwgyZH51ueN2Lf/Ny4O3yLWmxqMhyJ0hyAlhDXB1kK1v2Jrtn32lCX1utJqdjQZCF3IIYgh5p0/RKq6Tpk6+iCoysMGRTyVje4+Bbu6I4MAZzg4CHHqnMbMEAQsdDwUPxh5sBQn7aIxtPqRVAYgc98OxrG3W72nCm8fMWivayGsifegS6rOG/8/5uM9JohJp5iTKoyi/g0PycN2m+wWUXCCF85tmGOx+EhioxvUr4KULKtFBYqT0kIiJwcQxu0XUJZhCQ6Rps3538+YUzwRb2WJAYPhRsBdRTr3XWIk2fotllRWfX3f3g67u/S0fjXE6/7KoVtP9mi46AH96TN1fn7kzEw7Vff5ckeGnv4Wc/00OIL6A4hHcZXIBKjEuNUMPhqKyjoF9ELDOSSaY5kKByhi8ZcRotKp9mYdqw8UCgOCC05EuQHblXd5uWvfiF4uOnntuoab8MoQvQZdwwIpugrWb4QeX1S5XPlUvS9xyNgiRXwFzhL9dBgU1bh0yvnkabX1GDqcFAt8F5vvOB99CubPjxP/7sgGGXazaQBN/zhS66D8z9FGx6HAP8Nq0+6YFlH8FmQBkgr1m7zXDhnMtKOf0pBvlGpH9yzVW0K2BuyBjEYEd0/HndGAvnzPmykgV6zuXWW2hPrcIs6XDPbH3zkx8+2HLohyjlav7VL9J7N5v1YvXVEhAfmHebXsuWPQSYS9JRdBn+rFgmPPrhaPbqW593x7Rz7YyGEPLG1VzNm2eWQENNqem4/oC8hhPjDjIZPOGwO6E64XGEOqkBob7lnTQoL91pnL3kfhRVjSWVw4MKuM5i1D7myynhfgMeotEFC8TNQd40K9w+OP8heM3gT+qCDLedKN2BqsiJFN8B54lkniBApiYk+HUbfjRdBDgYCDjCEBbE9ehIr+503HbPJ0pxZFABwoBzNeRqtIXsSGnKHNca1fNDQ/7VN75oheVNMbB95BLld+glCzlqVs2ve/9w4DAJyL00QpITFAfwFsUBisiMC9lX7D/GxukWz7BHCzWiHrQBMlqVcQKqlKiPv/xeM0tNtw1w8Ail1OR2LIZOB0ivXruNy/5eI0uojO4h9Ej5ReM6copjju4sMJyFuj1Ltzvsoro9R9SyRFxCM5BR9m7hJJuAICIk4QfqgyZ9mSMEXul4PInRv/3O1xmeQOsXwUq3GePn6WNm8vU2rXTCpMHlq774ezygLTLA9A3eo5k1utXJF9I4HyyMwn0Ntd8dlqGV71WteOcbHYY61MW34LiPE85zH60uXzSsvfuRdYIlAmxQAD3PxOFB4j/ussvMMbWhh1uSt52iOED8fiiO5a98gRpAD2UvKp1n2I30g+xBUR/z4ODo8KFCNY8s38hiMhgsTpKKss4nOUfLqqcBBpLe/2g/FAd33HK9ABa4U49AWTc8+vTngBdPcZQPHMmGx1zMtXAGBZBSNSEK3wRmH+yBitP4fnq4etu3Wc56Sx9XvvoZFQf0EQow1AVlOoxI99S2G4BGIhEHF4KeN9/9KmWSLAvPZaamd3PjE/x5rWrseXOWr9qDoVdfuwApcWzo/L1mVcu6JiBDbGSd2O4xnebvD6reMUE2chOlSFzMUi/vH40hLPq4eOJ0xAvcLhGazQDN6HUmXq0ZNdaYi196m8o6miDrgkYAiFo3/OlFw0OMIy+8UEZkTgdcEWrtm3+XGiPkYH5NUTfrr1qzE2xjFs+k7bEGeOS2bnimNZX1V0GEctiiKr+6Cv2GO3ITChuXND/RNKmU6wsfrlqzC04iN4xbfdz9Cf6EkgWFraYHn9wBHDD4EguLUCArfFTKncuyPTRHOiG/hQY+veuhD6wIIvRubiww+/WSy7jX1oAb0mc4FavXfoNuyitjhD6qONAe8CM3cIFHaQ1FHeAEzoA842YPZZ5JvpHi+++995mgxj3YMCCz5t9jupXoLTQovZGs//FHm3ft3S+fNvNTyezzKz7WnRpQkzCAOenAP+hHy4W3ohQHjNgC3V6s2zJ3HWncdZSmBlB5oL6ANk6QyBBijK/4xvntT4l4NCsbrvF8KOqXli/RNECewzfWYWFCvZpeobmteqju+TVfS23UZHn4M0CjofkGw241+X3NWcKXsJNiKr2GI/K+TDLD3epffedb49o4yQplKgUg9mKEp2lec3hC66tr94KeQ0mMPftOqUZ/cTrif7dbGFwNYdZ/YeVmWYeG4oD2ATShvwNvq3n5y58nhL2gWFes3GG7jRZ43aCPKusC0CBNZqT155Nn7vmBzimTogUIDuD5JOccJ0XuoG1asFdXb9OtSioOm46eUhwQkude4Rcu1MDB+pVVX0avmwOEDkKTdlJ0qQ7ghEJuoTi6a7puAZdzLl+aef6Fj02QBfoIigPFGFN0IFqsaLuWFJf3uxH7nVMKAQAC3PuoeUs0Zx7XLOz2yIT+Ve8cjMkOYPRMBp72Y2rjFabXaMLymz2M8O1ZhjNXt3osu2loOOgpSI4moJggFOqzejLEiSNDR3nf9xf+5mmTS/gIPaZREXA/9HR4MWZJ6033vhATV0i2tIrKyfpXXLdMPhYDV0vF7NxeId5HwwUVs77cRbCswt+aiibQM6Ax4n+xLeqMgxMKHdevOzO4Y41OB4KyqnFn97782o4o2JoJ9YSrKfGSuKUFzxKQUtxKpMFzoAHGlC7s8y9/wY8YUnH0ykIVBgW6o0uz655csScROCYoDKcjN1cgQJnVpboDaGKAuT9SHJxLrnvB5CuFvebYpVzCswf4pj+3ApT/5T5+hAU5we8SFbyrgm4Dhg5fFIqD79hBTWAgEXKTpXRrju7CaZ9muo1Bw+hQ1r/3nieDmQXhymee+UwzzuUbB0qdjvg3XH/H1u3f4xSFIHDPvLQBWkOj4pBaPNBfgq7RzQqGbZyYgb6Yp8HjcBfIBsG6nYeV4kBUw+HnKeiIainOHPMEWg/xEZw/JmBG5CCrx6O+E6rWzFYrslgzpxsll2PYDL6nWGOPufg/RFdGE8PJ1DESRBR+TcO1lttlcqKonz42RoVTYu1mpOHvorrQGo5odtwFII5sdYXiAKGg+G1+7pDxi1427vzB39/1xtcHA1OJDg4N+a+8sumxx96YM/u3Q0PkgCSah/Pyypc64HDswYs4gvLK42hYvvIz9ERWk2lC6hqu081GOzKPcxwmDHiwUVUzy+55dB24LJeUx6GoISl3iiJQs3INwHQan3rpU80oNSjViCkQ33bx2zlW5crX92AcVULRGQvusSIt7KzVzuhM3oUTXQCpgxHusoq7bn/gHXQIibPSI/7Tz240wM1QHBAYb4ZM+4M49eVNV4o2pP7ddzRjhMogflyvgdaAwQhdyn1NVrMdaYDaRc8h/0AA9CIZM3557VLEkhYXpBHhL9TsufzhQavbsquDL65KFVQU0rHLOElmKZS4CaVwJO4PLnmEbot6a5aUn8+oHp6jPXXJdQ/AoxRaEhaqwdovvvIR3eaqCrfSQMXQD+0xGDlWam7Z/cs3HJKtAN8dST+74u0PN3wafBbU9y+aeilXlG2QtFMWkrvNyCy+jaJNvqBs7s7dKW5bFZwxyKKlOW780IBUH04G+5F4kE9SQ5s9/dxm22uSObhp8sooRL2Hv2Lj1Dy7anc0pZBHz0EOVFXDrbIchAmoiNQNUU4oNxT3W/tv5ycI4P3BPin96A3AzzKd6kuWPjwk71vKV6Nzk6MARV1CxQGigGslVIFBCxTHDN2ZYzizdbvbdOsFB6outHf5lbcGoTroG/U/33jQDV3IS5TJ+Ilhv3xKy95vjhE+kMv4T7+wgd+2dOvwmEMpqh352yM+919x+9ocrehy7m3nOwjgzkbdK98voyITjGhMSSJOhJ6nJiEHj+JxOKEaTa90xnF2ioYFHuP4xRpfhG/6ah8BgYmBwNFhbiWIxnzbrTKsNt0EDyndAdqB3ev0UOUxcRpVqyj5yBMbDQfuLpQd2AhBL+zkgKa18CMRtNtwaFuJfxgGp5VzHx5CgDrTK+uZffVQQswZOhPLPvTYGjPcwH1B4Rnc0cR3yebi0ojUr3hrC1cdVBqB3tkeKW7VrWZwITfah7gdi+xuVI49d+Dtj45wEMEwUMUcXdEdoAO6h8ZIFvwBHCJryAInKI+n/D898g70ODmbE+HTxYFqNJyate8eys1wU7WvfH27yTVCWY2KIAPVfs55RXoZpITadbt8yz7ygpoWQZt/e+5LvkjO76QvRCwgr110GV5ref1lMnOcHY7xM59OSZ0ZphKUzxdhaGbKW+FtJb/o+3Qn2Rs6FwCPDXEyD4bYK2nVjGZZEoabIAbGXojQMjKmlh2j8GWisfTNf3jk2msff+DBDatWH/jhCJkGtgd5x0H/pvs+cMf1wFnjKljJHBpt2BWOda/uVv/h7pXBO+wZsdjiSi9c+pDOvTZgSOhWtAtTAYvSqoVbtBCUPn9pEMzA37tzJ313JBVLZ2NwTfkuz1bdmiyaEeVRXTSvbB4FE0bO6B6c/+Bb649Ek2Qt9BSdxMln21MvrP72iRVf3fnQm17J+Xt+OBpLQ5eQsAh57773Q8NqMux+/qAqg5ReeQMDwePUV9Z9DxKhXVF9+J/IZOi5ZPhN7CwC3uuuf/iK3zy+/LltK1755pvvOQ0HewMR+PqA/6eHPzRC1XqoSd51buMSMkwCw+EO26287dbnaQ9yLBEoDrSAoUST/IIO3A3+BMZcMQLwnyEV/Qa/eoKTVsObmuM/1pq9iNuEmHAj7h/aH+/pXSjAuNn1o3e+LA7/DEEvOyHcuuzZT7jRxWuUSIlWN5pKQoo270rqbhu/0YKmoTVCiykVXq8eaTdCleJuSJM8UNjVDYBVOYcScs4ZkwdQVWUVSyCuXDh0+8wJv9VMMNwcjqJZcc1t7+w8QJb6fOexZ19Z/83BzMHjvmlXWXSsFuhgd/g+kBOv0yhpHz95OujDhhXtsv4P+/1wSQu0ku71m2MW006G5nIbGFgQ1huUNNsoA7S3CzQHehD+S4fuVt6zbA2GIJ6ShXF4bfe9ZjjVHHjuhhC+ZJDYpnkVq9Z9jUFFSsOVlA8UXn7Fo/xQBSKLksVUMdaAwc/YoTtV1R03/ofMGiA4UrPX/KgnqgfeHyiDC5IdhMED9AXW7rI/vGggsoXhhRNOjQBFCQet8b0PjnCrm4SBSJ9tHrI9+ZITJVxYihoTOCNDJzZVt103LA6CGgY0/8BTn8tU8ULNu0Sz5K18Z5rhtlXWLqWTKUMEv7ry4mu5Fs4v68zVi5bKq64zuGRjVdzwl7W7DrJHu/ZEV6x877sj0QNRXzOnGKEZpLPezQ982HA6FhnOtHETmxjXCFGBwO9uesILVTuQZ6tRtxrMUJPuVWlepVnSbBbzV6MMOEE0k/38arneoY+B2oJrUP7Mis/gQ/PHRxgX0HVJJPyFl92v2VVGZDojf+iO4vkcAu5k7+B0O+d9oO+6NLPeG9+8f4g4K1Js2Xq4tGI2N4l68NS69BIwCZx6aEZuSqZ80pkFk9fz27T2ZMOdbEamWtwhXQXNUjyxY+KFLWBR0DOe5YQtTm6/Y50FFw+G3JrFr8bBXHHbeKfuVL76/jfgUpThmDN6JzsgJ9N8vQL4XHfjM6HiJt2qko+VddpFHRAE+LbuBES+TXqolYHqmAGxH12yaAW3rl3TJq547uNgaIUhRz0O9ToLQ3ryBDgDqDBm4WcUQBeqD9zpsdypspOB22LQH90ug15FiCQwCBSkTnLjrb/x04PjJ9Rb1oUYySzYn2vq/l0Pr7LcJtOqJwr8lBBvon+fb49rVgNnZbifd4EWvkS+iwembNbMyWBxZXYkobjKVMAqS29Ut6RnuEIWfwx+XcnZ3fzMpNujGd1a6BKteCmtK+ILmFm30RmHwbto4dUPQD39GPXpRPBrbnM1Y5DTIpwJg9KpP79yMegDJxaJv/wxwh2FDzz6wYTz4ZjUco8w1ITRTkvIaBkUgzEEP4GScHbQF7D4TMObZnq1K9/ewZe3CIlIXnv130y+mQJHbxHdde9STteFEKNVvbFuF4wzmovHhhOIHLL+uvf3WaFKvvXA0ZnFHrlzuJpo1ZuRusde4HYd8A39DtAIKkIlRZDcmcgElSB6VNfzBzpECLy5LRVjPQP9hSLbuCma9zhQ6dAh341czB9eoSsK9JRdgTkZNEBJoxSxEoYTTQN4PJUB497859U0BtwbciliEAPGADG50zm1/poAqIzi357bYsAJpXuMHsH5h9qFlpnB18kh9m6dbpWecU79Zb/505GY/2Pc595zKDhzGmXYRvizwPAuc0rmT6pcoMQVGSfPvLzVcmvtUI8dQmgAywxPvpk+AjoLH82dbqI6+kKuHtAis/Vifvli3LldW3djcACFjDmSjPMdTFnRhzehOU3GmPmcp+BCDOgAnwtEkKAJlgbOrNXS0HELCAsEjsbi8RR/zPjt9T9AH2l2kwbHiot60NHwT2XzPpdmwGzg8w4t1GFE2nW4MG4LnSC+j96M+GjWZfeIj41ABdLP5YZ5l/4NTrFJWs3h2/T2bHAdOgjV8+q6fShMuZKUTsUzmVgasQA8fmG5x56At1JuFXVzqZX8L03LMjmtGvcKgQ2Qe4LeccNO49jxDXt2MlAJfo4mrziQ4LGgyaACdIdaT3Fm6tz518dolmFPW9GENioOWaaGNjC9SpCVezFAaPIkJVdZqWuuX+Z4FbYzmZG8MBRu/u6PT5h2re02yC1k3gS8t97/RrfrNQtqGIyrdFafEeqlMnamJBH1QT2hKJO0wcweoPUC4VD3g0c4QKkdPOr/avJMTbvAO3MOX0XnZuF+TW83ShZw6t7p1rlpveZvK7eBul99A4NWgUDADC2B/tLhwYb6Nb6PU1/Zes3xBLcqAS5/PUgSOnDlTc/o7lTwnB7uNIsgRWqFbKYRhgUb1DjJOhdxPhnLmaHDw3QqN3/NEBho0+6n/BnTbzMxhGpqyYG7gQziw7krX/P+DukdeoSiOFJbzb7kXr6TZnXoJcAQ7swsvnDpwkSXnz9lcOd+ce+5k4BNCCHy/1QKQgkUg4Iff36vbsMgTzdCc3U4R2jaAVNW7PpmhPOCScgOFRYigI6uO7jRBvzA6XNknAzo9gBuemMavtxN2gxxmoGfr0HrN9++0gCe8OppA+DJDmpmu2G3V9VdxekNFqE92L3fP78MY1HFj0cUQRLA04xr4IRzuRfRjVNvOZOXv/ghEN68N6G7NRa/9tZEZ5BT6aD2XNPrq7j4SowKcIByPxj139t4HK6ZbrUaaJdT+/2UDX6LsIPzmrDSoDO/2Ere5kdxtFJnfMvt968haiqpcI8n/vpPfvDG1WraL42IzGdx6RpKB9ENcICBmW6FFjN2MGtvvO11VAMayIozj0b9Wx/6ZMzkS+X1vCbGdwh5uKo9je9ncuVOxI1yBzNAngSL6u4sM4yGyh974TNw5vERxE+QOfqJLd036Vad5c0x3IWGt8gIzUNAAFdOt0tffWcXWudKGBL9JmABwUSlTCLB31VYv/4A4g5+MYgOo3gJ7AKHUhR37qOBbi9/LBFsqdeEJw4++rcPCEbNfAN+avR7HFxVgSLILTXlMrkZFgDQue1Xs5qau24GiEyMM/e7f+BrneqH5lAd2JIjZcZx/aa/y1Jz7bmT53APKRhXlnsHF95iWJWwXRhfyWoqyH/plc/tUB2cDsNjTMUvZXld/JKgWWZYF8Bw0vqNcv/ohWq0IOE+BhtZCgArWU4/87wu7i/ix6PqrHELuAXA6dW0etnU3ARHcd0XCQzPJzsydqRWM+vkdSaMIsxUo+bCr7uooeta0EfayshvDvDHmjAsR+L+nx99+4z/gWiQnwKjV+z2GPwsynTNgC8zjW80eNMt7vhsNr1mK1R+VH3US+bPcFZeOt206w0bribYGvRHu6hYbXiTVr7BbREi4yicVh862LT9uD2Wr3tBwrkuYCIibTbcRitcq9u/vOWuZ1gUFUR3JFJZftwCKSAYEhUHHqHMsZgfHgt5mAxTqUMTwfTZ7Va43bAu+na/iidYXhH1zr+8bdqNBj+t2k2F63TgHBnIVzdfelzeZJWfuVNvYPoDs26yQzWG02ygPL8M2m3YLW6oo7ZuqSCT4b494YoHn/pw3K8wHL/kBrCifjgUfAMIogXN7vY7JX2WU/rFVm4C3PDVEc0s1Z0GEzYTVApP0z0pZtZWNS9V6hJmBkh8uj3K37uwZBrVBJU6oIaUdeXQw87zPfde3nFAzNKxv+q99b7V4FX0Ypgr5dwLwdc9hG5DMX/xb+4PT2ig7wA/iG/NwK/sQJSqu9CefZY3i4t3VuULK3cAgooOVcJAgLVu+Ov73kTEMmWaVc33QiNABkZrph6ZoxfNl2l4sfPQYrjjzTDACQyyKj7ZSkaJjsRj3ClN331qw6W6VUk2o+JGRzBwbYZdY3plr6xl62waYsVpDcEgk8yO8Gclcfn1zoRhTeacLj8H1ckFMvUbzBRz6ZQ7YBbDH++EH61ZNcW/mrP0xhWcoZX4VgFMJkdXVWjOgR8JOqo4xOlQdzxZnrSbF135GGQdIFB+086Mbpdv21UwnS8cGcv61//xFcRRdqS9sesmyofoKrTbP+9m06l2QghVMDbwe4hKIp597vl3x01sATTEPnzzzyo37HLLK3dDZRPOqv5hf4rmFkgrQhScoenC1iWhqMrC8XK28vUtk8vnOsX8IX7Z1lFLhzw04NB2Vfx88ryjcSL0xAsfjTkLMlxuuvW6VcsPdoWnmpEpkbNre+f8ft/+GB1YwqNaz6STMfnyKCo+tWpzedPS0LgmJ9ygGVPAx4bbTksebuPHI3T0BUNbazpTplTNABcCZ6h/oDd0KHnOWVMdtxwhjOxwaTBCdUao0gxPtsK/eH/DZvRvJBVNxY+AiHEwD5pL+82915Wc2wVNYXrVXI0Cuawym7/1P/G8SXXvfPCF6v8plFGJ1CMCvv/2+9snTKwxzEm2W2M6NcAQHGmHqs4+t+mrHUfiyRH5QT9wDStt2jQMY2W6dSaCTQ/6sY6xgFsL5O9/9HUUknJCHAhcwr/62rudUKnpVnDTgV0FQ2J71V6ourS0hwWlOErjH2j4xIufTGm4RPcqrBJYi0ouV2GAwghd26EiL5jUCycFhV97a5NXXKEZF8DVtSK1ujMVsYzptoSKW/pn/v7QURRRkbS/eefh8Wc3csHIbrLDfMFU5+s2DQgH4DXwo20M7jrMcLPuTulbePebH3w7DC4VlDg0+I+xpWngJW7u+ja+5Ld/dUvKdadM3o1EWNpqFfXwlzT0qS5g2tWRkrpXV2+DixanqSedZXaVP3mFkdtxwL/ipme8CRfLK3zwryGZyPLxKq7Ew/53iceBIKKFPwzi1k48v3fzduAFBIAF50e/OzBU17TQtEs57nDT3EbTAQUQlFUXn1G97Nl1x4dFmNE4SkP2SBL2Cf8Scf/D9bsnnod4rdwY12aMQ3zEj7myUa8bKtigHaq1IrANVaZX1TF4xxsfHAQMWC86icJPaQQ9I/m3Y6kWZY4D+psuUy5Td0A9Qx3KrIfXfNM9q0RsODaf70rpXvmzr2whUhRR/OF26vuDI5PLZhsWqNk8OP8vLI1ey8APzPuj7dWDTammuLY6yt0H5ZdvgAOOwJX76uC8pPyDh2U5hX6XKooLRQjexa0cgMKkCrAMNA48GpQ5cMR/dfX2W/60wi2uxNjzm0Dc/F5aPL756hueAN4gAYr9fSg7BNJzfp52AzzN2R+iT3Ccsw/2BaRlZsePJrlKBoTBHB9sOvzwEx8Mzr/bCVc7RRDCi3T7IsOeNPGC7htuW7l8xZaXV311eIitwDIrLYCLwz+S+ICgug/rhCMu0WKCbyLy4UhKXveWhOq8leWmnWRGpjpxTMvQZv0j/MoiEywM93PITeYgKeoBAKUDZ0NR//Bx9lR1lmARPnwfLOak07GREfULycI9YF7xTDlAwBBWGa1nuT8N5XmKklwFBHz/78OIsIMv0B1PykYm+bwr8acJIw6JVPLQUQoG0IQj9sRLG665/ZmSn7WYYSj3UqukRffgRpXefOPjgCrvHnG+FowB5fv3GAGCKWJx/8ghny/Eq56iAWGMb76Nvrfu29dWfffw45t/3XO7V1LLXxVwJmvGeaZXPubs1kW/eeTlN3dt+yZ5UF4DBRpDsVSCbCZU4sBmYB4ScgsdPB7117y3/cU3vrKLyy1ieJHhlOrW5F9MmvnHu999+bVdO3YHe4uhLv6TFJLpVbmjOoz8w5GRdR999+iTG264bYUVglatMBA7eNUG32qrNWAMQlVPPLvl5Ve+fvOt77Zuy7/ECDioTdD/9zB/JYODLlyayFCjYNQOHCWSQcLQgO5w1clcGeU6cZlnhKR7bs3WJ9/cftuj7zb23+KMrYdDbTgVdA+tsnFntF3zu+Wvvfn1l9uGOb4YGpklIEElYewgVHnFQQ0pigOuMqKdXM4rDr5wPWCE2+5a9q4sj5AhPt4R0+zJ197+EpAmqfkHMKmvtg8Z5oXQiJZbPW/J3XhIpoPOzHI7gBNug25mSfYMZpR0RgLJQWnggExkEpAuYsYkQ8G/YF1AZZzz7unSCcWCH5EWMLgGVDRE1hc+BuszMMejTCYRh9iKnwJ8U7LPQqqA+DgiScCPZ1AkOCFY/KEUYCIrKcfJUJzn8LxwRMYlG8XoytSG+PO4kY7HogquwoplpDwyzmXSKJ2IHeNVAl6KeJ44AGFSXCpCHeMU/CEVVAiKYsEvlQPTxIhYzXwizFxrmah8y0hltb8XGQOBIzqKSEK8fgwIjvy+I4qNVpZaKuGEl5zGT6fjQ5lULMkNpKOF0S+cE2yS3CMlSW/BB6zMcJaVpfDhqBBNrPSQLE+yJmQQmEF54VoGCFXAVtwnzDPJqZHEMCrJ1gBAAv1joBUphxHDIBI+bqJr8g03ioTAAfhYMhNLQgxxEw3w7XilOFJC01g8gWdByZT8dJ7QhXjG/cPDRBv3SQR0VmYWAOE/RxLyY/TEXubF8JAJFgfjAxyAEukjKns4xU/eIhqBXuayjhpNaVImWwBEcYTAAw3Bn0SNxjUBqopaR8sx+diJIhGrK2QYiJPU4BbcG4IezzEnWgQCyNC/oNLxv0stQUDKo20SEAm+htpvihwoDpTBcwwBv/HPzRT5LPMl7iwjMg8xS+Rn89/6nCyJPJTxn3qD267HnTfzk218ywMRC3BErm35naaVGk6HFe5cct1L3w8RFbR99Li/5Irlltusm+XSJfZEdYeUlbroBXIuOMsnQRdIq6wuR/PpEosJgZlPSGhI3SU1RgHgn6IBMnguNz65LChJUfWfp3JZABBZnQMQRg9HZEWT/FNJuA0S4oh7KoEvqDm5dU6ymJMCGBjG0XaR8A915SK4g6RuqgaRc09HCyChgGpdIZBHLZ9ZEXgKqrgENZSMoDAB5TubK6wg5JPCQWWWV2colOu7KoDjSXk0qSZQRXUe57lSJ5dkUvcU9IBDUFVwBtFwX+WT6qlaKgfXClOVVb+Q1WVQSCUAy+OGnC+n2pGE8uq2eoIjqA1KnjToJyRVvQBIDr0go1/SHZyrxnDCRIAnV0TKV6TQpxFVCxqsQ1c0V/70VVhKXaOK6mVwK/c453Eol/bbw0nNLEfQaLgS3vOI8zrdrDesDicyw3Q63XC769XZTq1hVhpWjW7X86conFqdP3RUZfJb75UMk0Lc+mFybrxTc3BZY3sof55hXYAQ+mcX9KLzSWU2iRIoQeRg6uRLUBh11cmCXHg1mk6+PiEFbJSv9hOFcV/RCKMLEiOrYVYjrXJA9wJI6h+Qz2fewWDgDKWRIe7iIhQmPDwRIBPO4XpxM47SICdoDYIpoAAT/sn9IONcFVY4/wSDFhZGxrm6zFcUvRkkPMIdRRCc4FJhoICowopQAVpMoxgGWSigzhW2yDhXKShTkH8i4amqrnDGEef5pB6pp/AXkCX4RA6gquq5JvBfZd5U1FAZ1fNZAcwXDbIa4nxWjSDnEu7l66pzgAWV8vBxE3B+IqmGcqc84t9JbIA/gFJDU5iCx0EisgqBdBquLgCIY/iTmODOSWirYirjPKc44KfA/8UNOnIqSw2cgH+RYxleKl6GU6SggtNxB/eVtCHGVI0oBwweU/4RjwJB3dl3MIcDEvpFogAeugjdqdhUPStIqvxJOUgn3UX+n0uoqHqWzzJUvMl+B5BHW8C/EwvnMuREVAZO8jfzSQFEJpQCblNw/1H+iYSngAYESPtchtcGn4Vck88FhfMIFNZVWXVEJZzkYar7CpOTauFE3c+BzF39C+nUiqfeYcJ1vumCdoP7CkM5P1nVIsn9gmueBnTJd1OBRS6EdmoepWqOsIUJBU6q+1+mwsKnlscdAMxjlU84L6SDKqaygpMVNZFKJKMj2SRy7n5hH/OFT03qPnK+ZJDzcxwxPzPMaS3cDCDgTIFOZfGIoR9jOAgEScUy+GPz8RSnPID+sHKBcIErfiSUZ0i4mcjE4yOcHlBaATn/NEAsuMSZGr+CpAr8RGZC9TwhRu8GKV/ylCf/OJ1UVBFa0uht1ehJrMbzE1WGyqdJoAweBJz3L+B2akJNQGJ0k8/ivnG4VBNBK0HJk1pSN0+9jzuqa8h4VPhUXRbm09z47/S/aRpVHOCMFH89POBlRFMJZk5kxWWqKS2fjc9xVxaxDfQAr1FE8Vfu9/3xVE18ktsyGZpsnECQELejTlTASNAlT1CJ//OMptj0J5MgEEjDaHVgUZhVoVPSP7j9XyUF8KSEmwrbfHPI6iadjoKbknL/VVLlFEWZCovn8z+dhBKBj3Nixs08IJwoVH8yqaaZCwO9n04FBU4t/s8A+O/0/6d0yjdH/z9IgeTneQv//ivmxkNkpTVQFscgqQfICoLKuaSuVHMFt/NJwTs1S+nTooSbea2RT+qmEleVJRWcIgEsykFryFYBeaYKnJT/5xMqo4V8Vumky9Ml1WiAgFIcuZunpBNJlCt0auGCh/+d/ndIfvb/Afch9fh+2btlAAAAAElFTkSuQmCC",
+  "normative_references": [
+    {
+      "standard": "ISO 9001:2015",
+      "title": "Quality management systems — Requirements"
+    },
+    {
+      "standard": "ISO 14001:2015",
+      "title": "Environmental management systems — Requirements with guidance for use"
+    },
+    {
+      "standard": "ISO 45001:2018",
+      "title": "Occupational health and safety management systems — Requirements with guidance for use"
+    },
+    {
+      "standard": "ISO 19011:2018",
+      "title": "Guidelines for auditing management systems"
+    },
+    {
+      "standard": "ISO 9000:2015",
+      "title": "Quality management systems — Fundamentals and vocabulary"
+    },
+    {
+      "standard": "ISO 14050:2020",
+      "title": "Environmental management — Vocabulary"
+    },
+    {
+      "standard": "ISO 31000:2018",
+      "title": "Risk management — Guidelines"
+    }
+  ],
+  "abbreviations": [
+    {
+      "abbr": "IMS",
+      "full": "Integrated Management System"
+    },
+    {
+      "abbr": "QMS",
+      "full": "Quality Management System"
+    },
+    {
+      "abbr": "EMS",
+      "full": "Environmental Management System"
+    },
+    {
+      "abbr": "OH&S",
+      "full": "Occupational Health & Safety"
+    },
+    {
+      "abbr": "QMR",
+      "full": "Quality Management Representative"
+    },
+    {
+      "abbr": "MRM",
+      "full": "Management Review Meeting"
+    },
+    {
+      "abbr": "SOP",
+      "full": "Standard Operating Procedure"
+    },
+    {
+      "abbr": "QSP",
+      "full": "Quality System Procedure"
+    },
+    {
+      "abbr": "WI",
+      "full": "Work Instruction"
+    },
+    {
+      "abbr": "NCR",
+      "full": "Nonconformance Report"
+    },
+    {
+      "abbr": "CAPA",
+      "full": "Corrective and Preventive Action"
+    },
+    {
+      "abbr": "HIRA",
+      "full": "Hazard Identification & Risk Assessment"
+    },
+    {
+      "abbr": "PPE",
+      "full": "Personal Protective Equipment"
+    },
+    {
+      "abbr": "KPI",
+      "full": "Key Performance Indicator"
+    },
+    {
+      "abbr": "PDCA",
+      "full": "Plan-Do-Check-Act"
+    },
+    {
+      "abbr": "FMEA",
+      "full": "Failure Mode and Effects Analysis"
+    },
+    {
+      "abbr": "MOC",
+      "full": "Management of Change"
+    },
+    {
+      "abbr": "JSA",
+      "full": "Job Safety Analysis"
+    },
+    {
+      "abbr": "MSDS",
+      "full": "Material Safety Data Sheet"
+    },
+    {
+      "abbr": "MPCB",
+      "full": "Maharashtra Pollution Control Board"
+    },
+    {
+      "abbr": "MIDC",
+      "full": "Maharashtra Industrial Development Corporation"
+    },
+    {
+      "abbr": "REG",
+      "full": "Register"
+    },
+    {
+      "abbr": "FRM",
+      "full": "Form / Template"
+    },
+    {
+      "abbr": "PLN",
+      "full": "Plan"
+    },
+    {
+      "abbr": "POL",
+      "full": "Policy"
+    }
+  ],
+  "doc_numbering": {
+    "description": "All IMS documents follow a structured coding convention to ensure traceability and easy identification.",
+    "format": "PM / [Category] / [Standard] - [Serial]",
+    "prefix": "PM",
+    "prefix_meaning": "Pack Masters (company prefix)",
+    "categories": [
+      {
+        "code": "QMP",
+        "meaning": "Quality Manual / Apex Manual",
+        "example": "PM/QMP-01"
+      },
+      {
+        "code": "POL",
+        "meaning": "Policy",
+        "example": "PM/POL/QA-01"
+      },
+      {
+        "code": "QSP",
+        "meaning": "Quality System Procedure",
+        "example": "PM/QSP/QA-01"
+      },
+      {
+        "code": "SOP",
+        "meaning": "Standard Operating Procedure",
+        "example": "PM/SOP/LBL-01"
+      },
+      {
+        "code": "WI",
+        "meaning": "Work Instruction",
+        "example": "PM/WI/PRD-01"
+      },
+      {
+        "code": "FRM",
+        "meaning": "Form / Template",
+        "example": "PM/FRM/QA-01"
+      },
+      {
+        "code": "REG",
+        "meaning": "Register",
+        "example": "PM/REG/QA-01"
+      },
+      {
+        "code": "PLN",
+        "meaning": "Plan",
+        "example": "PM/PLN/ENV-01"
+      },
+      {
+        "code": "OH",
+        "meaning": "Occupational Health & Safety",
+        "example": "PM/OH-POL-001"
+      }
+    ],
+    "standard_codes": [
+      {
+        "code": "QA",
+        "meaning": "Quality Assurance (ISO 9001)"
+      },
+      {
+        "code": "ENV",
+        "meaning": "Environmental (ISO 14001)"
+      },
+      {
+        "code": "OH",
+        "meaning": "OH&S (ISO 45001)"
+      },
+      {
+        "code": "PRD",
+        "meaning": "Production"
+      },
+      {
+        "code": "LBL",
+        "meaning": "Labelling"
+      },
+      {
+        "code": "CHG",
+        "meaning": "Change Management"
+      }
+    ],
+    "versioning": "Documents use major.minor versioning (e.g., v3.1). Major versions indicate significant revisions; minor versions indicate editorial changes."
+  },
+  "distribution_control": {
+    "description": "This manual is a controlled document. Distribution, access, and obsolescence are managed as follows:",
+    "items": [
+      {
+        "title": "Controlled Copies",
+        "text": "Electronic controlled copies are maintained on the company digital QMS platform. Hard copies are uncontrolled unless stamped CONTROLLED COPY with a distribution number."
+      },
+      {
+        "title": "Access",
+        "text": "All employees can access the current version via the QMS platform. External parties (auditors, customers) may access read-only versions upon approval by the QMR."
+      },
+      {
+        "title": "Obsolete Versions",
+        "text": "Superseded versions are archived in the QMS platform with OBSOLETE watermark. Physical copies are retrieved and destroyed by the Document Controller."
+      },
+      {
+        "title": "Revision Authority",
+        "text": "Only the ISO Document Approval Authority (Tarun Mishra) can approve revisions. The Document Controller (Khushi Paswan) manages distribution."
+      }
+    ]
+  },
+  "change_management": {
+    "description": "Changes to IMS documents follow a structured amendment process to maintain system integrity:",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Change Request",
+        "text": "Any employee can initiate a change request using the Change Request Form (PM/FRM/CHG-01), specifying the reason and proposed change."
+      },
+      {
+        "step": "2",
+        "title": "Impact Assessment",
+        "text": "The QMR evaluates the impact on other documents, processes, and standards compliance using the Change Impact Assessment Form (PM/FRM/CHG-02)."
+      },
+      {
+        "step": "3",
+        "title": "Review & Approval",
+        "text": "Changes are reviewed by relevant process owners and approved by the ISO Document Approval Authority."
+      },
+      {
+        "step": "4",
+        "title": "Implementation",
+        "text": "The Document Controller updates the document, increments the version, updates the revision history, and distributes the new version."
+      },
+      {
+        "step": "5",
+        "title": "Communication",
+        "text": "Affected personnel are notified of changes through departmental briefings, training sessions, or QMS platform notifications."
+      },
+      {
+        "step": "6",
+        "title": "Tracking",
+        "text": "All changes are logged in the Change Register (PM/REG/CHG-01) with traceability to the original request."
+      }
+    ]
+  },
+  "management_representative": {
+    "name": "Ms. Khushi Paswan",
+    "title": "Quality Management Representative",
+    "responsibilities": [
+      "Ensuring that IMS processes are established, implemented, and maintained",
+      "Reporting to Top Management on IMS performance and opportunities for improvement",
+      "Ensuring promotion of awareness of customer, environmental, and safety requirements",
+      "Serving as the liaison with external certification bodies and auditors",
+      "Coordinating internal audits and management review meetings",
+      "Overseeing CAPA effectiveness and closure"
+    ],
+    "reporting_to": "Balkrishna Mishra (CEO / Managing Director)"
+  },
+  "process_approach": {
+    "description": "Pack Masters adopts the Process Approach as required by ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018. All activities are managed as interrelated processes within the PDCA (Plan-Do-Check-Act) cycle to achieve intended outcomes effectively.",
+    "pdca": [
+      {
+        "phase": "Plan",
+        "icon": "📋",
+        "description": "Establish objectives, identify risks & opportunities, determine resources, and plan processes to deliver results aligned with customer requirements, environmental obligations, and OH&S commitments."
+      },
+      {
+        "phase": "Do",
+        "icon": "⚙️",
+        "description": "Implement the planned processes. Execute operations according to SOPs, work instructions, and operational controls. Provide training and ensure competence."
+      },
+      {
+        "phase": "Check",
+        "icon": "📊",
+        "description": "Monitor, measure, and evaluate process performance against objectives and KPIs. Conduct internal audits, management reviews, and compliance evaluations."
+      },
+      {
+        "phase": "Act",
+        "icon": "🔄",
+        "description": "Take corrective actions on nonconformities, implement improvements, update risk assessments, and drive continual improvement of IMS effectiveness."
+      }
+    ]
+  },
+  "revision_history": [
+    {
+      "version": "1.0",
+      "date": "01/01/2024",
+      "description": "Initial issue",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra"
+    },
+    {
+      "version": "2.0",
+      "date": "20/06/2025",
+      "description": "Revised post 1st surveillance audit",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra"
+    },
+    {
+      "version": "3.0",
+      "date": "12/01/2026",
+      "description": "Annual review and update",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra"
+    },
+    {
+      "version": "3.1",
+      "date": "12/03/2026",
+      "description": "Minor amendment — scope clarification",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra"
+    },
+    {
+      "version": "4.0",
+      "date": "12/03/2026",
+      "description": "Description pending — entry reconstructed during data repair 07/09/2026",
+      "author": "Tarun Mishra",
+      "approved_by": "Balkrishna Mishra",
+      "_reconstructed": true
+    }
+  ],
+  "approvals": {
+    "prepared_by": {
+      "name": "Ms. Khushi Paswan",
+      "title": "Document Controller",
+      "date": "13/03/2026"
+    },
+    "reviewed_by": {
+      "name": "Tarun Mishra",
+      "title": "General Manager – Operations",
+      "date": "13/03/2026"
+    },
+    "approved_by": {
+      "name": "Balkrishna Mishra",
+      "title": "CEO / Managing Director",
+      "date": "13/03/2026"
+    }
+  },
+  "iso_clause": "4.4",
+  "scope_purpose": "This Integrated Management System (IMS) Manual defines the Quality, Environmental, and Occupational Health & Safety Management Systems of Pack Masters. It demonstrates compliance with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 requirements, and provides a framework for continual improvement of processes and customer satisfaction.",
+  "scope_applies_to": "Contract Packaging Services including Repacking of Industrial Chemicals, Adhesives, Lubricants, Greases, Fuel Additives, Agro Chemicals & Solvents. Applicable to all departments, processes, and personnel at the Pack Masters facility in Mumbai, India.",
+  "scope_responsible": "Balkrishna Mishra (CEO / Managing Director) — overall accountability. Ms. Khushi Paswan (Quality Management Representative) — maintenance and continual improvement.",
+  "scope_detail": "\nGENERAL\nPackmasters has adopted an Integrated Management System (IMS) based on the following standards:\n",
+  "prepared_by": "Khushi Paswan",
+  "approved_by": "Tarun Mishra",
+  "ims_master_list": [
+    {
+      "tier": "T1",
+      "tier_label": "Level 1 — Apex Manual & Policies",
+      "documents": [
+        {
+          "code": "PM/OH-POL-001",
+          "title": "Occupational Health, Safety & Environmental (OH&S) Policy",
+          "safe_name": "PM_OH-POL-001",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "5.2"
+        },
+        {
+          "code": "PM/POL/ENV-01",
+          "title": "Environmental Policy",
+          "safe_name": "PM_POL_ENV-01",
+          "has_file": true,
+          "standard": "ISO 14001:2015",
+          "clause": "5.2"
+        },
+        {
+          "code": "PM/POL/QA-01",
+          "title": "Quality Policy",
+          "safe_name": "PM_POL_QA-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "5.2"
+        },
+        {
+          "code": "PM/QMP-01",
+          "title": "Integrated Management System — Apex Manual",
+          "safe_name": "PM_QMP-01",
+          "has_file": true,
+          "standard": "IMS — ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018",
+          "clause": "4.4"
+        }
+      ]
+    },
+    {
+      "tier": "T2",
+      "tier_label": "Level 2 — Procedures",
+      "documents": [
+        {
+          "code": "PM/OH-PRO-001",
+          "title": "Hazard Identification and Risk Assessment Procedure",
+          "safe_name": "PM_OH-PRO-001",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "6.1"
+        },
+        {
+          "code": "PM/OH-PRO-002",
+          "title": "Legal and Other Requirements Procedure",
+          "safe_name": "PM_OH-PRO-002",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "6.1.3"
+        },
+        {
+          "code": "PM/OH-PRO-003",
+          "title": "Emergency Preparedness and Response Procedure",
+          "safe_name": "PM_OH-PRO-003",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "8.2"
+        },
+        {
+          "code": "PM/OH-PRO-004",
+          "title": "Incident Investigation and Corrective Action Procedure",
+          "safe_name": "PM_OH-PRO-004",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "10.2"
+        },
+        {
+          "code": "PM/OH-PRO-005",
+          "title": "Contractor and Visitor Safety Procedure",
+          "safe_name": "PM_OH-PRO-005",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "8.1.4"
+        },
+        {
+          "code": "PM/OH-PRO-006",
+          "title": "Personal Protective Equipment Procedure",
+          "safe_name": "PM_OH-PRO-006",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "8.1"
+        },
+        {
+          "code": "PM/OH-PRO-007",
+          "title": "Permit to Work Procedure",
+          "safe_name": "PM_OH-PRO-007",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "8.1.3"
+        },
+        {
+          "code": "PM/OH-PRO-008",
+          "title": "Toolbox Talk & Safety Communication Procedure",
+          "safe_name": "PM_OH-PRO-008",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "7.4"
+        },
+        {
+          "code": "PM/PLN/OHS-01",
+          "title": "OHS Objectives, Targets & Programme Plan",
+          "safe_name": "PM_PLN_OHS-01",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "6.2"
+        }
+      ]
+    },
+    {
+      "tier": "T3",
+      "tier_label": "Level 3 — Work Instructions & SOPs",
+      "documents": [
+        {
+          "code": "PM/FRM/MNT-01",
+          "title": "Preventive Maintenance Record",
+          "safe_name": "PM_FRM_MNT-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "7.1.3"
+        },
+        {
+          "code": "PM/FRM/ORD-01",
+          "title": "Customer Order & Contract Review Checklist",
+          "safe_name": "PM_FRM_ORD-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.2.3"
+        },
+        {
+          "code": "PM/FRM/PRD-01",
+          "title": "Production Batch Traveller & Traceability Record",
+          "safe_name": "PM_FRM_PRD-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.5.2"
+        },
+        {
+          "code": "PM/FRM/PRD-02",
+          "title": "Line Clearance & Product Changeover Checklist",
+          "safe_name": "PM_FRM_PRD-02",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.5.1"
+        },
+        {
+          "code": "PM/OH-WI-001",
+          "title": "Job Safety Analysis Work Instruction",
+          "safe_name": "PM_OH-WI-001",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "6.1"
+        },
+        {
+          "code": "PM/QSP/CHG-01",
+          "title": "Management of Change Procedure",
+          "safe_name": "PM_QSP_CHG-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "6.3"
+        },
+        {
+          "code": "PM/QSP/ENV-01",
+          "title": "Waste Management Procedure",
+          "safe_name": "PM_QSP_ENV-01",
+          "has_file": true,
+          "standard": "ISO 14001:2015",
+          "clause": "6.1.2"
+        },
+        {
+          "code": "PM/QSP/ENV-02",
+          "title": "Environmental Emergency Response",
+          "safe_name": "PM_QSP_ENV-02",
+          "has_file": true,
+          "standard": "ISO 14001:2015",
+          "clause": "8.2"
+        },
+        {
+          "code": "PM/QSP/ENV-03",
+          "title": "Environmental Monitoring & Measurement",
+          "safe_name": "PM_QSP_ENV-03",
+          "has_file": true,
+          "standard": "ISO 14001:2015",
+          "clause": "9.1"
+        },
+        {
+          "code": "PM/QSP/ENV-04",
+          "title": "Environmental Monitoring Measurement & Evaluation Procedure",
+          "safe_name": "PM_QSP_ENV-04",
+          "has_file": true,
+          "standard": "ISO 14001:2015",
+          "clause": "9.1"
+        },
+        {
+          "code": "PM/QSP/IMS-01",
+          "title": "Competence Training & Awareness Procedure",
+          "safe_name": "PM_QSP_IMS-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018",
+          "clause": "7.2"
+        },
+        {
+          "code": "PM/QSP/IMS-02",
+          "title": "Internal & External Communication Procedure",
+          "safe_name": "PM_QSP_IMS-02",
+          "has_file": true,
+          "standard": "ISO 9001:2015 / ISO 14001:2015 / ISO 45001:2018",
+          "clause": "7.4"
+        },
+        {
+          "code": "PM/QSP/QA-01",
+          "title": "Document & Record Control Procedure",
+          "safe_name": "PM_QSP_QA-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "7.5"
+        },
+        {
+          "code": "PM/QSP/QA-02",
+          "title": "Nonconformance & CAPA Procedure",
+          "safe_name": "PM_QSP_QA-02",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "10.2"
+        },
+        {
+          "code": "PM/QSP/QA-03",
+          "title": "Calibration & Measurement Procedure",
+          "safe_name": "PM_QSP_QA-03",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "7.1.5"
+        },
+        {
+          "code": "PM/QSP/QA-04",
+          "title": "Internal Audit Procedure",
+          "safe_name": "PM_QSP_QA-04",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "9.2"
+        },
+        {
+          "code": "PM/QSP/QA-05",
+          "title": "Customer Complaint Procedure",
+          "safe_name": "PM_QSP_QA-05",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.2.1"
+        },
+        {
+          "code": "PM/QSP/QA-06",
+          "title": "Supplier Evaluation & Approval",
+          "safe_name": "PM_QSP_QA-06",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.4"
+        },
+        {
+          "code": "PM/QSP/QA-07",
+          "title": "Risk & Opportunity Management Procedure",
+          "safe_name": "PM_QSP_QA-07",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "6.1"
+        },
+        {
+          "code": "PM/QSP/QA-08",
+          "title": "Control of Nonconforming Product Procedure",
+          "safe_name": "PM_QSP_QA-08",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.7"
+        },
+        {
+          "code": "PM/QSP/QA-09",
+          "title": "Customer Property & External Provider Control Procedure",
+          "safe_name": "PM_QSP_QA-09",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.4"
+        },
+        {
+          "code": "PM/REG/MNT-01",
+          "title": "Equipment & Infrastructure Maintenance Register",
+          "safe_name": "PM_REG_MNT-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "7.1.3"
+        },
+        {
+          "code": "PM/REG/OHS-03",
+          "title": "First Aid, Emergency Contacts & First Aider Register",
+          "safe_name": "PM_REG_OHS-03",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "8.2"
+        },
+        {
+          "code": "PM/SOP/LBL-01",
+          "title": "Labelling & Identification Procedure",
+          "safe_name": "PM_SOP_LBL-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.5.2"
+        },
+        {
+          "code": "PM/WI/PRD-03",
+          "title": "Production Work Instructions - Sealing & Packing",
+          "safe_name": "PM_WI_PRD-03",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.5.1"
+        },
+        {
+          "code": "PM/WI/PRD-04",
+          "title": "Production Work Instructions - Dispatch & Loading",
+          "safe_name": "PM_WI_PRD-04",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.5.4"
+        },
+        {
+          "code": "PM/WI/STR-01",
+          "title": "Stores Receiving, Storage & Issue Work Instruction",
+          "safe_name": "PM_WI_STR-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.5.4"
+        }
+      ]
+    },
+    {
+      "tier": "T4",
+      "tier_label": "Level 4 — Records, Forms & Plans",
+      "documents": [
+        {
+          "code": "PM/OH-REC-001",
+          "title": "HIRA Register",
+          "safe_name": "PM_OH-REC-001",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "6.1"
+        },
+        {
+          "code": "PM/OH-REC-002",
+          "title": "Legal Compliance Register",
+          "safe_name": "PM_OH-REC-002",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "6.1.3"
+        },
+        {
+          "code": "PM/OH-REC-003",
+          "title": "Incident and Near-Miss Report",
+          "safe_name": "PM_OH-REC-003",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "10.2"
+        },
+        {
+          "code": "PM/OH-REC-004",
+          "title": "OHS Objectives and Targets Register",
+          "safe_name": "PM_OH-REC-004",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "6.2"
+        },
+        {
+          "code": "PM/OH-REC-005",
+          "title": "Safety Committee Meeting Minutes",
+          "safe_name": "PM_OH-REC-005",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "5.4"
+        },
+        {
+          "code": "PM/OH-REC-006",
+          "title": "Competency and Training Register (Safety)",
+          "safe_name": "PM_OH-REC-006",
+          "has_file": true,
+          "standard": "ISO 45001:2018",
+          "clause": "7.2"
+        },
+        {
+          "code": "PM/PLN/QA-01",
+          "title": "Annual Audit Program",
+          "safe_name": "PM_PLN_QA-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "9.2"
+        },
+        {
+          "code": "PM/REG/HR-01",
+          "title": "Competence & Training Matrix",
+          "safe_name": "PM_REG_HR-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "7.2"
+        },
+        {
+          "code": "PM/WI/PRD-01",
+          "title": "Production Work Instructions - Downfilling",
+          "safe_name": "PM_WI_PRD-01",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.5.1"
+        },
+        {
+          "code": "PM/WI/PRD-02",
+          "title": "Production Work Instructions - Stirring/Mixing",
+          "safe_name": "PM_WI_PRD-02",
+          "has_file": true,
+          "standard": "ISO 9001:2015",
+          "clause": "8.5.1"
+        }
+      ]
+    }
+  ],
+  "scope_purpose_hi": "Pack Masters का IMS मैनुअल — Quality, Environment और OHS के लिए नीतियाँ, प्रक्रियाएँ और संरचना बताता है।",
+  "scope_applies_to_hi": "औद्योगिक, कृषि, विशेष केमिकल, चिपकाने वाले पदार्थ, स्नेहक और ग्रीस की Contract Packaging Services।",
+  "scope_responsible_hi": "Balkrishna Mishra (CEO) — समग्र जिम्मेदारी। आज़ाद राजभर (QMR) — IMS। तरूण मिश्रा (MR) — ISO अनुपालन।",
+  "policy_statement_hi": "Pack Masters उच्च गुणवत्ता की Contract Packaging सेवाएँ देने, पर्यावरण की रक्षा करने और सभी कर्मचारियों को सुरक्षित रखने के लिए प्रतिबद्ध है।",
+  "scope_cards_hi": [
+    "Pack Masters का IMS मैनुअल — Quality, Environment और OHS के लिए नीतियाँ, प्रक्रियाएँ और संरचना बताता है।",
+    "औद्योगिक, कृषि, विशेष केमिकल, चिपकाने वाले पदार्थ, स्नेहक और ग्रीस की Contract Packaging Services।",
+    "Balkrishna Mishra (CEO) — समग्र जिम्मेदारी। आज़ाद राजभर (QMR) — IMS। तरूण मिश्रा (MR) — ISO अनुपालन।"
+  ],
+  "review_date": "01/01/2027",
+  "department": "Top Management / IMS",
+  "dept_key": "MGT",
+  "reviewer": "Tarun Mishra",
+  "reviewer_title": "General Manager – Operations",
+  "print_class": "ELECTRONIC",
+  "print_rule": "Maintained and read on the portal. Not issued in print. Any printout is uncontrolled and must be destroyed after use.",
+  "print_label": "Electronic only",
+  "author_rule": "safety-process-quality-procedures",
+  "covers_clauses": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "6.1",
+    "6.1.1",
+    "6.1.2",
+    "6.1.3",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5",
+    "6.5.1",
+    "6.5.2",
+    "6.5.3",
+    "6.5.4",
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5",
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5",
+    "9.1",
+    "9.2",
+    "9.3",
+    "10.1",
+    "10.2",
+    "10.3"
+  ],
+  "qr_target": "https://packmastersmumbai.github.io/pmdigitaliso/html/PM_QMP-01.html",
+  "status": "APPROVED"
+}
