@@ -228,7 +228,7 @@ scripts
   ISO data sync      1SSn9UeChCxEy9kta31kbik5bLjigUjJp4XEaB4kAX9xD_gnkG7sWmlup
   Cloud project      883421378799   (both must be attached to it)
 
-project   C:\Users\Appex\My Drive (packmasters.mumbai@gmail.com)\Pack Masters Digital ISO\qms_app
+project   <Drive>\Pack Masters Digital ISO\qms_app        (on the build machine)
   registry     _gh_tmp\register.json        <- the one registry
   documents    data\projects\pack-masters\generated\{json,html}\
   records      _hr_src\
